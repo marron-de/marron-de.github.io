@@ -484,22 +484,21 @@ $(".list_area .align_btn").click(function () {
 
 // 모바일 전환
 $(".template_wrap .devicebox .item").click(function () {
-	if ($(this).find(".device_btn.mob").length > 0) {
-		$(".template_wrap .template_cont .content").addClass("mob_view"); 
-	}
-	if ($(this).find(".device_btn.pc").length > 0) {
-		$(".template_wrap .template_cont .content").removeClass("mob_view"); 
-	}
-})
+  if ($(this).find(".device_btn.mob").length > 0) {
+    $(".template_wrap .template_cont .content").addClass("mob_view");
+  } else if ($(this).find(".device_btn.pc").length > 0) {
+    $(".template_wrap .template_cont .content").removeClass("mob_view");
+  }
+});
 
 
 // 모바일 필터
-$(".content.mob_view .filter_title").click(function () {
-	$(".content.mob_view .acc_filter").toggleClass("show")
-})
+$(document).on("click", ".content.mob_view .filter_title", function () {
+	$(".content.mob_view .filterbox").toggleClass("show");
+});
 
 $(document).mouseup(function (e) {
 	if ($(".content.mob_view .filterbox").has(e.target).length === 0 ) {
-		$(".content.mob_view .acc_filter").removeClass("show")
+		$(".content.mob_view .filterbox").removeClass("show")
 	}
 });
