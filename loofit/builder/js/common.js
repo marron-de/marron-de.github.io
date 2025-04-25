@@ -502,3 +502,21 @@ $(document).mouseup(function (e) {
 		$(".content.mob_view .filterbox").removeClass("show")
 	}
 });
+
+
+// 채용공고 공유하기
+$(document).on("click", ".board2 .conditionbox .condi_list > .item .copy_btn", function () {
+	$("#conditionPopup").addClass("show")
+});
+
+
+// 모바일 채용조건
+$(document).on("click", ".content.mob_view .condi_title", function () {
+	$(".content.mob_view .conditionbox").toggleClass("show");
+});
+
+$(document).mouseup(function (e) {
+	if ($(".content.mob_view .conditionbox").has(e.target).length === 0 ) {
+		$(".content.mob_view .conditionbox").removeClass("show")
+	}
+});
