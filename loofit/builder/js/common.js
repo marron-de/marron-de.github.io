@@ -480,3 +480,26 @@ $(document).mouseup(function (e) {
 $(".list_area .align_btn").click(function () {
 	$(".list_area .align_popup").addClass("show")
 })
+
+
+// 모바일 전환
+$(".template_wrap .devicebox .item").click(function () {
+	if ($(this).find(".device_btn.mob").length > 0) {
+		$(".template_wrap .template_cont .content").addClass("mob_view"); 
+	}
+	if ($(this).find(".device_btn.pc").length > 0) {
+		$(".template_wrap .template_cont .content").removeClass("mob_view"); 
+	}
+})
+
+
+// 모바일 필터
+$(".content.mob_view .filter_title").click(function () {
+	$(".content.mob_view .acc_filter").toggleClass("show")
+})
+
+$(document).mouseup(function (e) {
+	if ($(".content.mob_view .filterbox").has(e.target).length === 0 ) {
+		$(".content.mob_view .acc_filter").removeClass("show")
+	}
+});
