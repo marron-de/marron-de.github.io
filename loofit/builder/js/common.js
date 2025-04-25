@@ -389,3 +389,94 @@ $(document).ready(function () {
         conent.removeClass('show');
     });
 });
+
+
+/* 250424 추가작업 */
+// 팝업 공통
+$(document).ready(function () {
+
+	$(".popup .pop_close").click(function () {
+		$(this).closest(".popup").removeClass("show")
+	})
+
+	$(".opt_popup .opt_popbtn").click(function () {
+		const popup = $(this).closest(".opt_popup");
+		popup.find(".opt_popbtn").removeClass("selected");
+		$(this).addClass("selected");
+	
+		const input = $(this).find('input[type="radio"]');
+		if (input.length) {
+			input.prop("checked", true).trigger("change");
+		}
+	});
+
+	$(".opt_popup .opt_close").click(function () {
+		$(".opt_popup").removeClass("show");
+	});
+});
+
+$(document).mouseup(function (e) {
+	if ($(".popup").has(e.target).length === 0 ) {
+		$(".popup").removeClass("show")
+	}
+});
+
+
+/* 02템플릿_15채용공고 */
+// 필터
+(function ($) {
+    const lnbUI = {
+        click: function (target, speed) {
+            let _self = this,
+                $target = $(target);
+            _self.speed = speed || 400;
+
+            $target.each(function () {
+                if (findChildren($(this))) {
+                    return;
+                }
+                $(this).addClass('noDepth');
+            });
+
+            function findChildren(obj) {
+                return obj.find('> ul').length > 0;
+            }
+
+            $target.on('click', '.acc_tit', function (e) {
+                e.stopPropagation();
+                let $this = $(this),
+                    $depthTarget = $this.next(),
+                    $siblings = $this.parent().siblings();
+
+                $this.parent('li').find('ul li').removeClass('show');
+
+                if ($depthTarget.css('display') == 'none') {
+                    _self.activeOn($this);
+                    $depthTarget.slideDown(_self.speed);
+                } else {
+                    $depthTarget.slideUp(_self.speed);
+                    _self.activeOff($this);
+                }
+
+            })
+
+        },
+        activeOff: function ($target) {
+            $target.parent().removeClass('show');
+        },
+        activeOn: function ($target) {
+            $target.parent().addClass('show');
+        },
+
+    };
+
+    // navbox
+    $(function () {
+        lnbUI.click('.acc_filter li', 400)
+    });
+}(jQuery));
+
+// 정렬
+$(".list_area .align_btn").click(function () {
+	$(".list_area .align_popup").addClass("show")
+})
