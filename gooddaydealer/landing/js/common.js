@@ -50,11 +50,13 @@ const sec3_swiper = new Swiper(".sec3_swiper", {
 	grabCursor: true,
 	slidesPerView: 1.5,
 	spaceBetween: 24,
-	speed: 500,
+	speed: 500,	
+    centeredSlides: true,
 	breakpoints: {
 		1080: {
 			slidesPerView: 'auto',
-			spaceBetween: 40,
+			spaceBetween: 40,			
+			centeredSlides: false,
 		},
 	},
 });
