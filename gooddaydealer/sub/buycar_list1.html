@@ -1,0 +1,2957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>굿바이딜러</title>
+
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- nouislider -->
+    <link rel="stylesheet" href="css/nouislider.css">
+    <script src="js/nouislider.min.js"></script>
+
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mob.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="css/Pretendard.css">
+    <link rel="stylesheet" href="css/Paperlogy.css">
+
+</head>
+
+<body>
+
+
+    <div class="wrap buycar_list_wrap">
+
+        <!-- header -->
+        <header class="header" id="header">
+            <div class="inner h_inner">
+                <div class="h_logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="" />
+                    </a>
+                </div>
+                <ul id="h_nav" class="h_nav">
+                    <li class="active">
+                        <a href="buycar_list1.html" class="link">
+                            <span>내차사기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="link">
+                            <span>내차팔기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact1.html" class="link">
+                            <span>차량문의하기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="review1.html" class="link">
+                            <span>후기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dealer.html" class="link">
+                            <span>굿바이딜러란?</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="h_search">
+                    <input type="text" class="input_sch" placeholder="차량을 검색해보세요">
+                    <button class="sch_btn"></button>
+                </div>
+                <div class="h_back">
+                    <button class="icon_btn back_btn"></button>
+                </div>
+                <div class="h_search2">
+                    <button type="button" class="sch_btn"></button>
+                    <input type="text" class="input_sch" placeholder="제조사 및 모델명으로 차량을 검색해보세요">
+                </div>
+                <div class="h_side">
+                    <button class="icon_btn sch_btn"></button>
+                    <button class="icon_btn menu_btn" onclick="m_menu_ope()"></button>
+                </div>
+            </div>
+        </header>
+
+        <!-- menu box -->
+        <div class="menu_box">
+            <div class="menu_head">
+                <a href="#none" class="login_btn">로그인</a>
+                <div class="menu_close" onclick="m_menu_clo();">
+                    <i class="xi-close"></i>
+                </div>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="buycar_list1.html" class="link acc_tit">
+                        <span class="txt">내차사기</span>
+                        <span class="icon"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="link acc_tit">
+                        <span class="txt">내차팔기</span>
+                        <span class="icon"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact1.html" class="link acc_tit">
+                        <span class="txt">차량문의하기</span>
+                        <span class="icon"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="review1.html" class="link acc_tit">
+                        <span class="txt">후기</span>
+                        <span class="icon"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dealer.html" class="link acc_tit">
+                        <span class="txt">굿바이딜러란?</span>
+                        <span class="icon"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main section -->
+        <div class="container">
+
+            <!-- serach box -->
+            <div class="sch_box">
+                <div class="input_box">
+                    <input type="text" class="sch_input" placeholder="제조사 및 모델명으로 차량을 검색해보세요">
+                    <button type="button" class="sch_btn"></button>
+                </div>
+                <button type="button" class="reset_btn"></button>
+            </div>
+
+            <div class="carlist_box inner">
+                <div class="car_filter">
+                    <div class="category">
+                        <button type="button" class="cate_btn on">전체</button>
+                        <button type="button" class="cate_btn">국산</button>
+                        <button type="button" class="cate_btn">수입</button>
+                    </div>
+                    <ul class="filter_box accordion">
+                        <li class="item" id="filter1">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">차종</span>
+                                    <span class="small">중복선택 가능</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox">                     
+                                        <div class="radio_wrap">
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-1" class="input_radio">
+                                                <label for="filter1-1" class="label_radio">경차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-2" class="input_radio">
+                                                <label for="filter1-2" class="label_radio">소형차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-3" class="input_radio">
+                                                <label for="filter1-3" class="label_radio">준중형차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-4" class="input_radio">
+                                                <label for="filter1-4" class="label_radio">중형차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-5" class="input_radio">
+                                                <label for="filter1-5" class="label_radio">대형차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-6" class="input_radio">
+                                                <label for="filter1-6" class="label_radio">스포츠카</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-7" class="input_radio">
+                                                <label for="filter1-7" class="label_radio">SUV</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-8" class="input_radio">
+                                                <label for="filter1-8" class="label_radio">RV</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-9" class="input_radio">
+                                                <label for="filter1-9" class="label_radio">경승합차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-10" class="input_radio">
+                                                <label for="filter1-10" class="label_radio">승합차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-11" class="input_radio">
+                                                <label for="filter1-11" class="label_radio">화물차</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" id="filter1-12" class="input_radio">
+                                                <label for="filter1-12" class="label_radio">버스</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter2">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">제조사/모델</span>
+                                    <span class="small">중복선택 가능</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">                                
+                                <li class="no_padding">
+                                    <div class="titbox">
+                                        <p class="tit">국산차</p>
+                                    </div>
+                                    <div class="contbox filter_check check1">
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-1-1" class="input_check">
+                                                <label for="filter2-1-1" class="label_check">
+                                                    <span class="tit">현대</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_box substep substep1">
+                                                <div class="check_item">
+                                                    <input type="checkbox" id="filter2-1-1-1" class="input_check">
+                                                    <label for="filter2-1-1-1" class="label_check">
+                                                        <span class="tit">ST1</span>
+                                                        <span class="number">12</span>
+                                                    </label>
+                                                </div>
+                                                <div class="check_box substep substep2">
+                                                    <div class="check_item">
+                                                        <input type="checkbox" id="filter2-1-1-1-1" class="input_check">
+                                                        <label for="filter2-1-1-1-1" class="label_check">
+                                                            <span class="tit">ST1 (24년~현재)</span>
+                                                            <span class="number">12</span>
+                                                        </label>
+                                                    </div> 
+                                                    <div class="check_box substep substep3">
+                                                        <div class="check_item">
+                                                            <input type="checkbox" id="filter2-1-1-1-1-1" class="input_check">
+                                                            <label for="filter2-1-1-1-1-1" class="label_check">
+                                                                <span class="tit">전기 카고</span>
+                                                                <span class="number">12</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="check_box substep substep4">
+                                                            <div class="check_item">
+                                                                <input type="checkbox" id="filter2-1-1-1-1-1-1" class="input_check">
+                                                                <label for="filter2-1-1-1-1-1-1" class="label_check">
+                                                                    <span class="tit">스마트</span>
+                                                                    <span class="number">8</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_item">
+                                                                <input type="checkbox" id="filter2-1-1-1-1-1-2" class="input_check">
+                                                                <label for="filter2-1-1-1-1-1-2" class="label_check">
+                                                                    <span class="tit">프리미엄</span>
+                                                                    <span class="number">4</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                                <div class="check_item">
+                                                    <input type="checkbox" id="filter2-1-1-2" class="input_check">
+                                                    <label for="filter2-1-1-2" class="label_check">
+                                                        <span class="tit">i30</span>
+                                                        <span class="number">31</span>
+                                                    </label>
+                                                </div>
+                                                <div class="check_item">
+                                                    <input type="checkbox" id="filter2-1-1-3" class="input_check">
+                                                    <label for="filter2-1-1-3" class="label_check">
+                                                        <span class="tit">i30</span>
+                                                        <span class="number">10</span>
+                                                    </label>
+                                                </div>
+                                                <div class="check_item">
+                                                    <input type="checkbox" id="filter2-1-1-4" class="input_check">
+                                                    <label for="filter2-1-1-4" class="label_check">
+                                                        <span class="tit">그랜저</span>
+                                                        <span class="number">750</span>
+                                                    </label>
+                                                </div>
+                                                <div class="check_item">
+                                                    <input type="checkbox" id="filter2-1-1-5" class="input_check">
+                                                    <label for="filter2-1-1-5" class="label_check">
+                                                        <span class="tit">넥쏘</span>
+                                                        <span class="number">36</span>
+                                                    </label>
+                                                </div>                                                   
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-1-2" class="input_check">
+                                                <label for="filter2-1-2" class="label_check">
+                                                    <span class="tit">기아</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-1-3" class="input_check">
+                                                <label for="filter2-1-3" class="label_check">
+                                                    <span class="tit">한국GM</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-1-4" class="input_check">
+                                                <label for="filter2-1-4" class="label_check">
+                                                    <span class="tit">르노코리아</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-1-5" class="input_check">
+                                                <label for="filter2-1-5" class="label_check">
+                                                    <span class="tit">KG모빌리티</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-1-6" class="input_check">
+                                                <label for="filter2-1-6" class="label_check">
+                                                    <span class="tit">제네시스</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-1-7" class="input_check">
+                                                <label for="filter2-1-7" class="label_check">
+                                                    <span class="tit">기타</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>                              
+                                    </div>
+                                </li>
+                                <li class="no_padding">
+                                    <div class="titbox">
+                                        <p class="tit">수입차</p>
+                                    </div>
+                                    <div class="contbox filter_check check2">
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-1" class="input_check">
+                                                <label for="filter2-2-1" class="label_check">
+                                                    <span class="tit">벤츠</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-2" class="input_check">
+                                                <label for="filter2-2-2" class="label_check">
+                                                    <span class="tit">BMW</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-3" class="input_check">
+                                                <label for="filter2-2-3" class="label_check">
+                                                    <span class="tit">아우디</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-4" class="input_check">
+                                                <label for="filter2-2-4" class="label_check">
+                                                    <span class="tit">미니</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-5" class="input_check">
+                                                <label for="filter2-2-5" class="label_check">
+                                                    <span class="tit">폭스바겐</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-6" class="input_check">
+                                                <label for="filter2-2-6" class="label_check">
+                                                    <span class="tit">랜드로버</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-7" class="input_check">
+                                                <label for="filter2-7" class="label_check">
+                                                    <span class="tit">포르쉐</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-8" class="input_check">
+                                                <label for="filter2-8" class="label_check">
+                                                    <span class="tit">지프</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="check_box">
+                                            <div class="check_item">
+                                                <input type="checkbox" id="filter2-2-9" class="input_check">
+                                                <label for="filter2-9" class="label_check">
+                                                    <span class="tit">볼보</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>                              
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter3">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">연식</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox range_box">
+                                        <div class="select_box">
+                                            <select class="select2 select" data-id="filter">
+                                                <option value="최소">최소</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2000">2000</option>
+                                            </select>
+                                        </div>
+                                        <div class="range_icon">~</div>
+                                        <div class="select_box">
+                                            <select class="select2 select" data-id="filter">
+                                                <option value="최대">최대</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2000">2000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter4">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">주행거리</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox range_box">
+                                        <div class="select_box">
+                                            <select class="select2 select" data-id="filter">
+                                                <option value="최소">최소</option>
+                                                <option value="10,000km">10,000km</option>
+                                                <option value="20,000km">20,000km</option>
+                                                <option value="30,000km">30,000km</option>
+                                                <option value="40,000km">40,000km</option>
+                                                <option value="50,000km">50,000km</option>
+                                                <option value="60,000km">60,000km</option>
+                                                <option value="70,000km">70,000km</option>
+                                                <option value="80,000km">80,000km</option>
+                                                <option value="90,000km">90,000km</option>
+                                                <option value="100,000km">100,000km</option>
+                                                <option value="110,000km">110,000km</option>
+                                                <option value="120,000km">120,000km</option>
+                                                <option value="130,000km">130,000km</option>
+                                                <option value="140,000km">140,000km</option>
+                                                <option value="150,000km">150,000km</option>
+                                                <option value="160,000km">160,000km</option>
+                                                <option value="170,000km">170,000km</option>
+                                                <option value="180,000km">180,000km</option>
+                                                <option value="190,000km">190,000km</option>
+                                                <option value="200,000km">200,000km</option>
+                                            </select>
+                                        </div>
+                                        <div class="range_icon">~</div>
+                                        <div class="select_box">
+                                            <select class="select2 select" data-id="filter">
+                                                <option value="최대">최대</option>
+                                                <option value="10,000km">10,000km</option>
+                                                <option value="20,000km">20,000km</option>
+                                                <option value="30,000km">30,000km</option>
+                                                <option value="40,000km">40,000km</option>
+                                                <option value="50,000km">50,000km</option>
+                                                <option value="60,000km">60,000km</option>
+                                                <option value="70,000km">70,000km</option>
+                                                <option value="80,000km">80,000km</option>
+                                                <option value="90,000km">90,000km</option>
+                                                <option value="100,000km">100,000km</option>
+                                                <option value="110,000km">110,000km</option>
+                                                <option value="120,000km">120,000km</option>
+                                                <option value="130,000km">130,000km</option>
+                                                <option value="140,000km">140,000km</option>
+                                                <option value="150,000km">150,000km</option>
+                                                <option value="160,000km">160,000km</option>
+                                                <option value="170,000km">170,000km</option>
+                                                <option value="180,000km">180,000km</option>
+                                                <option value="190,000km">190,000km</option>
+                                                <option value="200,000km">200,000km</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>                        
+                        <li class="item" id="filter5">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">가격</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox range_box">
+                                        <div class="select_box">
+                                            <select class="select2 select" data-id="filter">
+                                                <option value="최소">최소</option>
+                                                <option value="0원">0원</option>
+                                                <option value="100만원">100만원</option>
+                                                <option value="200만원">200만원</option>
+                                                <option value="300만원">300만원</option>
+                                                <option value="400만원">400만원</option>
+                                                <option value="500만원">500만원</option>
+                                                <option value="600만원">600만원</option>
+                                                <option value="700만원">700만원</option>
+                                                <option value="800만원">800만원</option>
+                                                <option value="900만원">900만원</option>
+                                                <option value="1,000만원">1,000만원</option>
+                                                <option value="1,100만원">1,100만원</option>
+                                                <option value="1,200만원">1,200만원</option>
+                                                <option value="1,300만원">1,300만원</option>
+                                                <option value="1,400만원">1,400만원</option>
+                                                <option value="1,500만원">1,500만원</option>
+                                                <option value="2,000만원">2,000만원</option>
+                                                <option value="2,500만원">2,500만원</option>
+                                                <option value="3,000만원">3,000만원</option>
+                                                <option value="3,500만원">3,500만원</option>
+                                            </select>
+                                        </div>
+                                        <div class="range_icon">~</div>
+                                        <div class="select_box">
+                                            <select class="select2 select" data-id="filter">
+                                                <option value="최대">최대</option>
+                                                <option value="0원">0원</option>
+                                                <option value="100만원">100만원</option>
+                                                <option value="200만원">200만원</option>
+                                                <option value="300만원">300만원</option>
+                                                <option value="400만원">400만원</option>
+                                                <option value="500만원">500만원</option>
+                                                <option value="600만원">600만원</option>
+                                                <option value="700만원">700만원</option>
+                                                <option value="800만원">800만원</option>
+                                                <option value="900만원">900만원</option>
+                                                <option value="1,000만원">1,000만원</option>
+                                                <option value="1,100만원">1,100만원</option>
+                                                <option value="1,200만원">1,200만원</option>
+                                                <option value="1,300만원">1,300만원</option>
+                                                <option value="1,400만원">1,400만원</option>
+                                                <option value="1,500만원">1,500만원</option>
+                                                <option value="2,000만원">2,000만원</option>
+                                                <option value="2,500만원">2,500만원</option>
+                                                <option value="3,000만원">3,000만원</option>
+                                                <option value="3,500만원">3,500만원</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter6">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">연료</span>
+                                    <span class="small">중복선택 가능</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox">   
+                                        <div class="radio_wrap">
+                                            <div class="radio_box all_checked">
+                                                <input type="checkbox" name="filter6" id="filter6-1" class="input_radio" checked>
+                                                <label for="filter6-1" class="label_radio">모두 포함</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-2" class="input_radio">
+                                                <label for="filter6-2" class="label_radio">가솔린</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-3" class="input_radio">
+                                                <label for="filter6-3" class="label_radio">디젤</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-4" class="input_radio">
+                                                <label for="filter6-4" class="label_radio">LPG</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-5" class="input_radio">
+                                                <label for="filter6-5" class="label_radio">가솔린+LPG</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-7" class="input_radio">
+                                                <label for="filter6-7" class="label_radio">가솔린+전기</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-8" class="input_radio">
+                                                <label for="filter6-8" class="label_radio">디젤+전기</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-9" class="input_radio">
+                                                <label for="filter6-9" class="label_radio">LPG+전기</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-10" class="input_radio">
+                                                <label for="filter6-10" class="label_radio">LNG</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-11" class="input_radio">
+                                                <label for="filter6-11" class="label_radio">CNG</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter6" id="filter6-12" class="input_radio">
+                                                <label for="filter6-12" class="label_radio">기타</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter7">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">색상</span>
+                                    <span class="small">중복선택 가능</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox color_box">   
+                                        <div class="radio_wrap">
+                                            <div class="radio_box all_checked">
+                                                <input type="checkbox" name="filter7" id="filter7-1" class="input_radio" checked>
+                                                <label for="filter7-1" class="label_radio">모두 포함</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-2" class="input_radio">
+                                                <label for="filter7-2" class="label_radio">
+                                                    <span class="color" style="background-color: #111111;"></span>
+                                                    <span class="txt">검정색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-3" class="input_radio">
+                                                <label for="filter7-3" class="label_radio">
+                                                    <span class="color" style="background-color: #F1F1F8;"></span>
+                                                    <span class="txt">흰색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-4" class="input_radio">
+                                                <label for="filter7-4" class="label_radio">
+                                                    <span class="color" style="background-color: #E5E5E5;"></span>
+                                                    <span class="txt">은색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-5" class="input_radio">
+                                                <label for="filter7-5" class="label_radio">
+                                                    <span class="color" style="background-color: #BCBCBC;"></span>
+                                                    <span class="txt">진주색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-6" class="input_radio">
+                                                <label for="filter7-6" class="label_radio">
+                                                    <span class="color" style="background-color: #BCBCBC;"></span>
+                                                    <span class="txt">회색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-7" class="input_radio">
+                                                <label for="filter7-7" class="label_radio">
+                                                    <span class="color" style="background-color: #EB2B2A;"></span>
+                                                    <span class="txt">빨간색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-8" class="input_radio">
+                                                <label for="filter7-8" class="label_radio">
+                                                    <span class="color" style="background-color: #324DF4;"></span>
+                                                    <span class="txt">파란색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-9" class="input_radio">
+                                                <label for="filter7-9" class="label_radio">
+                                                    <span class="color" style="background-color: #E36600;"></span>
+                                                    <span class="txt">주황색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-10" class="input_radio">
+                                                <label for="filter7-10" class="label_radio">
+                                                    <span class="color" style="background-color: #A74200;"></span>
+                                                    <span class="txt">갈색</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-11" class="input_radio">
+                                                <label for="filter7-11" class="label_radio">
+                                                    <span class="color" style="background-color: #009A44;"></span>
+                                                    <span class="txt">초록</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-12" class="input_radio">
+                                                <label for="filter7-12" class="label_radio">
+                                                    <span class="color" style="background-color: #9F32B1;"></span>
+                                                    <span class="txt">보라</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter7" id="filter7-13" class="input_radio">
+                                                <label for="filter7-13" class="label_radio">
+                                                    <span class="color"></span>
+                                                    <span class="txt">기타</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter8">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">지역 및 매매단지</span>
+                                    <span class="small">중복선택 가능</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox filter_check check3">
+                                        <div class="check_box">
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-1" class="input_check" checked>
+                                                <label for="filter8-1" class="label_check">
+                                                    <span class="tit">서울</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-2" class="input_check">
+                                                <label for="filter8-2" class="label_check">
+                                                    <span class="tit">경기/인천</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-3" class="input_check">
+                                                <label for="filter8-3" class="label_check">
+                                                    <span class="tit">경남</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-4" class="input_check">
+                                                <label for="filter8-4" class="label_check">
+                                                    <span class="tit">경북</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2 no_value">
+                                                <input type="checkbox" id="filter8-5" class="input_check">
+                                                <label for="filter8-5" class="label_check">
+                                                    <span class="tit">전남</span>
+                                                    <span class="number">0</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-6" class="input_check">
+                                                <label for="filter8-6" class="label_check">
+                                                    <span class="tit">전북</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-7" class="input_check">
+                                                <label for="filter8-7" class="label_check">
+                                                    <span class="tit">충남</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-8" class="input_check">
+                                                <label for="filter8-8" class="label_check">
+                                                    <span class="tit">충북</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-9" class="input_check">
+                                                <label for="filter8-9" class="label_check">
+                                                    <span class="tit">강원</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                            <div class="check_item ver2">
+                                                <input type="checkbox" id="filter8-10" class="input_check">
+                                                <label for="filter8-10" class="label_check">
+                                                    <span class="tit">제주</span>
+                                                    <span class="number">10,000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter9">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">변속기</span>
+                                    <span class="small">중복선택 가능</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox">         
+                                        <div class="radio_wrap">
+                                            <div class="radio_box all_checked">
+                                                <input type="checkbox" name="filter9" id="filter9-1" class="input_radio" checked>
+                                                <label for="filter9-1" class="label_radio">모두 포함</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter9" id="filter9-2" class="input_radio">
+                                                <label for="filter9-2" class="label_radio">오토</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter9" id="filter9-3" class="input_radio">
+                                                <label for="filter9-3" class="label_radio">수동</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter9" id="filter9-4" class="input_radio">
+                                                <label for="filter9-4" class="label_radio">세미오토</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter9" id="filter9-5" class="input_radio">
+                                                <label for="filter9-5" class="label_radio">CVT</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter9" id="filter9-6" class="input_radio">
+                                                <label for="filter9-6" class="label_radio">기타</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter10">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">승차정원</span>
+                                    <span class="small">중복선택 가능</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox">              
+                                        <div class="radio_wrap">
+                                            <div class="radio_box all_checked">
+                                                <input type="checkbox" name="filter10" id="filter10-1" class="input_radio" checked>
+                                                <label for="filter10-1" class="label_radio">모두 포함</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-2" class="input_radio">
+                                                <label for="filter10-2" class="label_radio">4인승</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-3" class="input_radio">
+                                                <label for="filter10-3" class="label_radio">5인승</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-4" class="input_radio">
+                                                <label for="filter10-4" class="label_radio">7인승</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-5" class="input_radio">
+                                                <label for="filter10-5" class="label_radio">8인승</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-6" class="input_radio">
+                                                <label for="filter10-6" class="label_radio">9인승</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-7" class="input_radio">
+                                                <label for="filter10-7" class="label_radio">11인승</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-8" class="input_radio">
+                                                <label for="filter10-8" class="label_radio">15인승</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="checkbox" name="filter10" id="filter10-9" class="input_radio">
+                                                <label for="filter10-9" class="label_radio">기타</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li class="item" id="filter11">
+                            <div class="acc_tit">
+                                <div class="title">
+                                    <span class="tit">판매구분</span>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="contbox">                 
+                                        <div class="radio_wrap">
+                                            <div class="radio_box all_checked">
+                                                <input type="radio" name="filter11" id="filter11-1" class="input_radio" checked>
+                                                <label for="filter11-1" class="label_radio">모두 포함</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="radio" name="filter11" id="filter11-2" class="input_radio">
+                                                <label for="filter11-2" class="label_radio">일반</label>
+                                            </div>
+                                            <div class="radio_box">
+                                                <input type="radio" name="filter11" id="filter11-3" class="input_radio">
+                                                <label for="filter11-3" class="label_radio">리스승계</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="car_list">
+                    <div class="list_top">
+                        <div class="total">
+                            총 <span class="number">8,421</span>대
+                        </div>
+                        <div class="sorting">                            
+                            <div class="radio_wrap">
+                                <div class="radio_box">
+                                    <input type="radio" name="sorting1" id="sorting1-1" class="input_radio" checked>
+                                    <label for="sorting1-1" class="label_radio">전체</label>
+                                </div>
+                                <div class="radio_box">
+                                    <input type="radio" name="sorting1" id="sorting1-2" class="input_radio">
+                                    <label for="sorting1-2" class="label_radio">GB인증만</label>
+                                </div>
+                            </div>
+                            <div class="select_box">
+                                <select class="select2 select" data-id="sort">
+                                    <option value="인기순" selected>인기순</option>
+                                    <option value="최근 연식순">최근 연식순</option>
+                                    <option value="낮은 가격순">낮은 가격순</option>
+                                    <option value="높은 가격순">높은 가격순</option>
+                                    <option value="최근 등록순">최근 등록순</option>
+                                    <option value="짧은 주행거리순">짧은 주행거리순</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_box">
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    현대 코나 하이브리드 가솔린 1.6 하이브리드 코나 하이브리드
+                                </p>
+                                <p class="price">
+                                    <span class="num">1,560</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월25만원</span>
+                                </p>
+                                <p class="desc">
+                                    20년 4월식 · 130,000km · 가솔린+전기
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">정비완료</span>
+                                    <span class="badge">주행보조</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="imgbox">
+                                <img src="img/car_sample.png" alt="">
+                            </div>
+                            <div class="txtbox">
+                                <p class="tit">
+                                    제네시스 GV70 디젤 2.2 GV70
+                                </p>
+                                <p class="price">
+                                    <span class="num">4,750</span>만원
+                                </p>
+                                <p class="installment">
+                                    할부 <span class="point">월77만원</span>
+                                </p>
+                                <p class="desc">
+                                    21년 5월식 · 81,000km · 디젤
+                                </p>
+                                <div class="feature">
+                                    <span class="badge">특옵션</span>
+                                    <span class="badge">1인소유</span>
+                                    <span class="badge">GB인증</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="pagination_box">
+                        <button class="page_btn prev_btn"></button>
+                        <div class="page">
+                            <a href="#none" class="page_link">1</a>
+                            <div class="ellipsis">...</div>
+                            <a href="#none" class="page_link">6</a>
+                            <a href="#none" class="page_link">7</a>
+                            <a href="#none" class="page_link active">8</a>
+                            <a href="#none" class="page_link">9</a>
+                            <div class="ellipsis">...</div>
+                            <a href="#none" class="page_link">40</a>
+                        </div>
+                        <button class="page_btn next_btn"></button>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="inner f_inner">
+                <div class="f_contbox">
+                    <div class="f_left">
+                        <ul class="f_nav">
+                            <li><a href="" class="link">서비스이용약관</a></li>
+                            <li class="bar"></li>
+                            <li><a href="" class="link">개인정보처리방침</a></li>
+                        </ul>
+                        <div class="f_logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                        <div class="f_copyright">Copyright © goodbyedealer. All rights reserved.</div>
+                    </div>
+                    <div class="f_right">
+                        <div class="call_box">
+                            <p class="call_tit">대표번호</p>
+                            <p class="call_num">1577-3854</p>
+                            <p class="call_info">
+                                월~금 AM 10:00 ~ PM 16:00 <br>
+                                주말 및 공휴일 휴무
+                            </p>
+                        </div>
+                        <div class="sns_box">
+                            <a href="" class="link" target="_blank">
+                                <img src="img/sns_insta.png" alt="">
+                            </a>
+                            <a href="" class="link" target="_blank">
+                                <img src="img/sns_youtube.png" alt="">
+                            </a>
+                        </div>                        
+                        <div class="f_logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                        <div class="f_copyright">Copyright © goodbyedealer. All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- fix nav -->
+        <div class="fix_nav">
+            <div class="btn talk_btn">
+                <img src="img/fix_talk.png" alt="" class="icon">
+            </div>
+            <div id="top_btn" class="btn top_btn">
+                <img src="img/fix_arrow.png" alt="" class="icon">
+            </div>
+        </div>
+
+        <!-- mobile car filter popup -->
+        <div class="car_filter_popup show">
+            <div class="condition_box">
+                <div class="switch_box">
+                    <input type="checkbox" id="searchSave" class="input_switch">
+                    <label for="searchSave" class="label_switch">검색한 조건 저장</label>
+                </div>
+            </div>
+            <ul class="filter_box accordion">
+                <li class="item show" id="mobfilter1">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">국산 · 수입 제조사/모델</span>
+                            <span class="small">중복선택가능</span>
+                        </div>
+                        <div class="result"></div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont" style="display: block;">
+                        <li>
+                            <div class="contbox">                     
+                                <div class="result_list">
+                                </div>
+                                <button type="button" class="select_btn">국산 · 수입 제조사/모델 선택 +</button>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter2">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">차종</span>
+                            <span class="small">중복선택 가능</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">                     
+                                <div class="radio_wrap wid4">
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-1" class="input_radio">
+                                        <label for="mobfilter2-1" class="label_radio">경차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-2" class="input_radio">
+                                        <label for="mobfilter2-2" class="label_radio">소형차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-3" class="input_radio">
+                                        <label for="mobfilter2-3" class="label_radio">준중형차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-4" class="input_radio">
+                                        <label for="mobfilter2-4" class="label_radio">중형차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-5" class="input_radio">
+                                        <label for="mobfilter2-5" class="label_radio">대형차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-6" class="input_radio">
+                                        <label for="mobfilter2-6" class="label_radio">스포츠카</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-7" class="input_radio">
+                                        <label for="mobfilter2-7" class="label_radio">SUV</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-8" class="input_radio">
+                                        <label for="mobfilter2-8" class="label_radio">RV</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-9" class="input_radio">
+                                        <label for="mobfilter2-9" class="label_radio">경승합차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-10" class="input_radio">
+                                        <label for="mobfilter2-10" class="label_radio">승합차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-11" class="input_radio">
+                                        <label for="mobfilter2-11" class="label_radio">화물차</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter2-12" class="input_radio">
+                                        <label for="mobfilter2-12" class="label_radio">버스</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter3">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">연식</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">                 
+                                <div class="radio_wrap wid5">
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-1" class="input_radio">
+                                        <label for="mobfilter3-1" class="label_radio">~1년</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-2" class="input_radio">
+                                        <label for="mobfilter3-2" class="label_radio">~2년</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-3" class="input_radio">
+                                        <label for="mobfilter3-3" class="label_radio">~3년</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-4" class="input_radio">
+                                        <label for="mobfilter3-4" class="label_radio">~4년</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-5" class="input_radio">
+                                        <label for="mobfilter3-5" class="label_radio">~5년</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-6" class="input_radio">
+                                        <label for="mobfilter3-6" class="label_radio">~6년</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-7" class="input_radio" >
+                                        <label for="mobfilter3-7" class="label_radio">~7년</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter3" id="mobfilter3-8" class="input_radio">
+                                        <label for="mobfilter3-8" class="label_radio">7년~</label>
+                                    </div>
+                                </div>
+                                <div class="range_wrap">
+                                    <div id="rangeslider1" class="rangeslider"></div>
+                                    <div class="range_bar">
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="range_scale">
+                                        <div class="txt">2007년</div>
+                                        <div class="txt">2007년</div>
+                                        <div class="txt">2013년</div>
+                                        <div class="txt">2019년</div>
+                                        <div class="txt">현재</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter4">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">주행거리</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">                 
+                                <div class="radio_wrap wid5">
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-1" class="input_radio">
+                                        <label for="mobfilter4-1" class="label_radio">~5천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-2" class="input_radio">
+                                        <label for="mobfilter4-2" class="label_radio">~1만</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-3" class="input_radio">
+                                        <label for="mobfilter4-3" class="label_radio">~2만</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-4" class="input_radio">
+                                        <label for="mobfilter4-4" class="label_radio">~3만</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-5" class="input_radio">
+                                        <label for="mobfilter4-5" class="label_radio">~5만</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-6" class="input_radio">
+                                        <label for="mobfilter4-6" class="label_radio">~10만</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-7" class="input_radio">
+                                        <label for="mobfilter4-7" class="label_radio">~20만</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter4" id="mobfilter4-8" class="input_radio" >
+                                        <label for="mobfilter4-8" class="label_radio">20만~</label>
+                                    </div>
+                                </div>
+                                <div class="range_wrap">
+                                    <div id="rangeslider2" class="rangeslider"></div>
+                                    <div class="range_bar">
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="range_scale">
+                                        <div class="txt">최소</div>
+                                        <div class="txt">5천km</div>
+                                        <div class="txt">1만km</div>
+                                        <div class="txt">15만km</div>
+                                        <div class="txt">최대</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>                        
+                <li class="item" id="mobfilter5">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">가격</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox range_box">                  
+                                <div class="radio_wrap wid5">
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-1" class="input_radio">
+                                        <label for="mobfilter5-1" class="label_radio">5백</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-2" class="input_radio">
+                                        <label for="mobfilter5-2" class="label_radio">1천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-3" class="input_radio">
+                                        <label for="mobfilter5-3" class="label_radio">1천5백</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-4" class="input_radio">
+                                        <label for="mobfilter5-4" class="label_radio">2천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-5" class="input_radio">
+                                        <label for="mobfilter5-5" class="label_radio">2천5백</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-6" class="input_radio">
+                                        <label for="mobfilter5-6" class="label_radio">3천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-7" class="input_radio">
+                                        <label for="mobfilter5-7" class="label_radio">4천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-8" class="input_radio">
+                                        <label for="mobfilter5-8" class="label_radio">5천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-9" class="input_radio">
+                                        <label for="mobfilter5-9" class="label_radio">6천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-10" class="input_radio">
+                                        <label for="mobfilter5-10" class="label_radio">7천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-11" class="input_radio">
+                                        <label for="mobfilter5-11" class="label_radio">8천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-12" class="input_radio">
+                                        <label for="mobfilter5-12" class="label_radio">9천</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter5-13" class="input_radio">
+                                        <label for="mobfilter5-13" class="label_radio">1억~</label>
+                                    </div>
+                                </div>
+                                <div class="result_box">
+                                    <div class="input_item">
+                                        <input type="text" class="input_range" value="0">
+                                        <span class="input_txt">만원</span>
+                                    </div>
+                                    <div class="tilde">~</div>
+                                    <div class="input_item">
+                                        <input type="text" class="input_range" value="0">
+                                        <span class="input_txt">만원</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter6">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">연료</span>
+                            <span class="small">중복선택 가능</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">   
+                                <div class="radio_wrap wid4">
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-2" class="input_radio">
+                                        <label for="mobfilter6-2" class="label_radio">가솔린</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-3" class="input_radio">
+                                        <label for="mobfilter6-3" class="label_radio">디젤</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-4" class="input_radio">
+                                        <label for="mobfilter6-4" class="label_radio">LPG</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-5" class="input_radio">
+                                        <label for="mobfilter6-5" class="label_radio">가솔린+LPG</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-7" class="input_radio">
+                                        <label for="mobfilter6-7" class="label_radio">가솔린+전기</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-8" class="input_radio">
+                                        <label for="mobfilter6-8" class="label_radio">디젤+전기</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-9" class="input_radio">
+                                        <label for="mobfilter6-9" class="label_radio">LPG+전기</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-10" class="input_radio">
+                                        <label for="mobfilter6-10" class="label_radio">LNG</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-11" class="input_radio">
+                                        <label for="mobfilter6-11" class="label_radio">CNG</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter6-12" class="input_radio">
+                                        <label for="mobfilter6-12" class="label_radio">기타</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter7">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">색상</span>
+                            <span class="small">중복선택 가능</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox color_box">   
+                                <div class="radio_wrap wid4">
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-2" class="input_radio">
+                                        <label for="mobfilter7-2" class="label_radio">
+                                            <span class="color" style="background-color: #111111;"></span>
+                                            <span class="txt">검정색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-3" class="input_radio">
+                                        <label for="mobfilter7-3" class="label_radio">
+                                            <span class="color" style="background-color: #F1F1F8;"></span>
+                                            <span class="txt">흰색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-4" class="input_radio">
+                                        <label for="mobfilter7-4" class="label_radio">
+                                            <span class="color" style="background-color: #E5E5E5;"></span>
+                                            <span class="txt">은색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-5" class="input_radio">
+                                        <label for="mobfilter7-5" class="label_radio">
+                                            <span class="color" style="background-color: #BCBCBC;"></span>
+                                            <span class="txt">진주색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-6" class="input_radio">
+                                        <label for="mobfilter7-6" class="label_radio">
+                                            <span class="color" style="background-color: #BCBCBC;"></span>
+                                            <span class="txt">회색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-7" class="input_radio">
+                                        <label for="mobfilter7-7" class="label_radio">
+                                            <span class="color" style="background-color: #EB2B2A;"></span>
+                                            <span class="txt">빨간색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-8" class="input_radio">
+                                        <label for="mobfilter7-8" class="label_radio">
+                                            <span class="color" style="background-color: #324DF4;"></span>
+                                            <span class="txt">파란색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-9" class="input_radio">
+                                        <label for="mobfilter7-9" class="label_radio">
+                                            <span class="color" style="background-color: #E36600;"></span>
+                                            <span class="txt">주황색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-10" class="input_radio">
+                                        <label for="mobfilter7-10" class="label_radio">
+                                            <span class="color" style="background-color: #A74200;"></span>
+                                            <span class="txt">갈색</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-11" class="input_radio">
+                                        <label for="mobfilter7-11" class="label_radio">
+                                            <span class="color" style="background-color: #009A44;"></span>
+                                            <span class="txt">초록</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-12" class="input_radio">
+                                        <label for="mobfilter7-12" class="label_radio">
+                                            <span class="color" style="background-color: #9F32B1;"></span>
+                                            <span class="txt">보라</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter7-13" class="input_radio">
+                                        <label for="mobfilter7-13" class="label_radio">
+                                            <span class="color"></span>
+                                            <span class="txt">기타</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter8">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">지역 및 매매단지</span>
+                            <span class="small"></span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">
+                                <div class="radio_wrap wid4">
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-1" class="input_radio">
+                                        <label for="mobfilter8-1" class="label_radio">
+                                            <span class="txt">서울</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-2" class="input_radio">
+                                        <label for="mobfilter8-2" class="label_radio">
+                                            <span class="txt">경기/인천</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-3" class="input_radio">
+                                        <label for="mobfilter8-3" class="label_radio">
+                                            <span class="txt">경남</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-4" class="input_radio">
+                                        <label for="mobfilter8-4" class="label_radio">
+                                            <span class="txt">경북</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-5" class="input_radio">
+                                        <label for="mobfilter8-5" class="label_radio">
+                                            <span class="txt">전남</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-6" class="input_radio">
+                                        <label for="mobfilter8-6" class="label_radio">
+                                            <span class="txt">전북</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-7" class="input_radio">
+                                        <label for="mobfilter8-7" class="label_radio">
+                                            <span class="txt">충남</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-8" class="input_radio">
+                                        <label for="mobfilter8-8" class="label_radio">
+                                            <span class="txt">충북</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-9" class="input_radio">
+                                        <label for="mobfilter8-9" class="label_radio">
+                                            <span class="txt">강원</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter8-10" class="input_radio">
+                                        <label for="mobfilter8-10" class="label_radio">
+                                            <span class="txt">제주</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter9">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">변속기</span>
+                            <span class="small">중복선택 가능</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">         
+                                <div class="radio_wrap wid5">
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter9-2" class="input_radio">
+                                        <label for="mobfilter9-2" class="label_radio">오토</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter9-3" class="input_radio">
+                                        <label for="mobfilter9-3" class="label_radio">수동</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter9-4" class="input_radio">
+                                        <label for="mobfilter9-4" class="label_radio">세미오토</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter9-5" class="input_radio">
+                                        <label for="mobfilter9-5" class="label_radio">CVT</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter9-6" class="input_radio">
+                                        <label for="mobfilter9-6" class="label_radio">기타</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter10">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">승차정원</span>
+                            <span class="small">중복선택 가능</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">              
+                                <div class="radio_wrap wid4">
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-2" class="input_radio">
+                                        <label for="mobfilter10-2" class="label_radio">4인승</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-3" class="input_radio">
+                                        <label for="mobfilter10-3" class="label_radio">5인승</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-4" class="input_radio">
+                                        <label for="mobfilter10-4" class="label_radio">7인승</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-5" class="input_radio">
+                                        <label for="mobfilter10-5" class="label_radio">8인승</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-6" class="input_radio">
+                                        <label for="mobfilter10-6" class="label_radio">9인승</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-7" class="input_radio">
+                                        <label for="mobfilter10-7" class="label_radio">11인승</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-8" class="input_radio">
+                                        <label for="mobfilter10-8" class="label_radio">15인승</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="checkbox" id="mobfilter10-9" class="input_radio">
+                                        <label for="mobfilter10-9" class="label_radio">기타</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+                <li class="item" id="mobfilter11">
+                    <div class="acc_tit">
+                        <div class="title">
+                            <span class="tit">판매구분</span>
+                        </div>
+                        <div class="result">모두포함</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="acc_cont">
+                        <li>
+                            <div class="contbox">                 
+                                <div class="radio_wrap wid4">
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter11" id="mobfilter11-2" class="input_radio">
+                                        <label for="mobfilter11-2" class="label_radio">일반</label>
+                                    </div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="mobfilter11" id="mobfilter11-3" class="input_radio">
+                                        <label for="mobfilter11-3" class="label_radio">리스승계</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>   
+                </li>
+            </ul>
+            <div class="btnbox">
+                <button type="button" class="reset_btn"></button>
+                <button type="button" class="submit_btn">차량보기(0대)</button>
+            </div>
+        </div>
+
+        <!-- mobile car detail popup -->
+        <div class="car_detail_popup popup1">
+            <div class="headbox">
+                <button type="button" class="back_btn"></button>
+                <p class="title">제조사 선택</p>
+            </div>
+            <div class="pathbox">
+                <div class="path_txt on">제조사</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">세부모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">등급</div>
+            </div>
+            <div class="contbox">
+                <div class="item">
+                    <p class="cont_tit">국산차</p>
+                    <div class="radio_wrap">
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-1" class="input_radio">
+                            <label for="select1-1" class="label_radio">
+                                <p class="tit">현대</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-2" class="input_radio">
+                            <label for="select1-2" class="label_radio">
+                                <p class="tit">기아</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-3" class="input_radio">
+                            <label for="select1-3" class="label_radio">
+                                <p class="tit">한국GM</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-4" class="input_radio">
+                            <label for="select1-4" class="label_radio">
+                                <p class="tit">르노코리아</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-5" class="input_radio">
+                            <label for="select1-5" class="label_radio">
+                                <p class="tit">KG모빌리티</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-6" class="input_radio">
+                            <label for="select1-6" class="label_radio">
+                                <p class="tit">제네시스</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-7" class="input_radio">
+                            <label for="select1-7" class="label_radio">
+                                <p class="tit">기타</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="cont_tit">수입차</p>
+                    <div class="radio_wrap">
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-8" class="input_radio">
+                            <label for="select1-8" class="label_radio">
+                                <p class="tit">벤츠</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-9" class="input_radio">
+                            <label for="select1-9" class="label_radio">
+                                <p class="tit">BMW</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-10" class="input_radio">
+                            <label for="select1-10" class="label_radio">
+                                <p class="tit">아우디</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-11" class="input_radio">
+                            <label for="select1-11" class="label_radio">
+                                <p class="tit">미니</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-12" class="input_radio">
+                            <label for="select1-12" class="label_radio">
+                                <p class="tit">폭스바겐</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-13" class="input_radio">
+                            <label for="select1-13" class="label_radio">
+                                <p class="tit">랜드로버</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select1" id="select1-14" class="input_radio">
+                            <label for="select1-14" class="label_radio">
+                                <p class="tit">포르쉐</p>
+                                <p class="desc">3,332대</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="btnbox">
+                <button type="button" class="reset_btn"></button>
+                <button type="button" class="submit_btn" onclick="nextStep(2)">10,302대 선택</button>
+            </div>
+        </div>
+
+        <div class="car_detail_popup popup2">
+            <div class="headbox">
+                <button type="button" class="back_btn"></button>
+                <p class="title">모델 선택</p>
+            </div>
+            <div class="pathbox">
+                <div class="path_txt">제조사</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt on">모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">세부모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">등급</div>
+            </div>
+            <div class="contbox">
+                <div class="item">
+                    <p class="cont_tit">현대</p>
+                    <div class="radio_wrap">
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-1" class="input_radio">
+                            <label for="select2-1" class="label_radio">
+                                <p class="tit">그랜저</p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-2" class="input_radio">
+                            <label for="select2-2" class="label_radio">
+                                <p class="tit">베뉴</p>
+                                <p class="desc">500대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-3" class="input_radio">
+                            <label for="select2-3" class="label_radio">
+                                <p class="tit">스타리아</p>
+                                <p class="desc">241대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-4" class="input_radio">
+                            <label for="select2-4" class="label_radio">
+                                <p class="tit">싼타페</p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-5" class="input_radio">
+                            <label for="select2-5" class="label_radio">
+                                <p class="tit">쏘나타</p>
+                                <p class="desc">500대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-6" class="input_radio">
+                            <label for="select2-6" class="label_radio">
+                                <p class="tit">아반떼</p>
+                                <p class="desc">241대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-7" class="input_radio">
+                            <label for="select2-7" class="label_radio">
+                                <p class="tit">캐스퍼</p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-7" class="input_radio">
+                            <label for="select2-7" class="label_radio">
+                                <p class="tit">코나</p>
+                                <p class="desc">500대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-8" class="input_radio">
+                            <label for="select2-8" class="label_radio">
+                                <p class="tit">펠리세이드</p>
+                                <p class="desc">241대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select2" id="select2-9" class="input_radio">
+                            <label for="select2-9" class="label_radio">
+                                <p class="tit">포터</p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnbox">
+                <button type="button" class="reset_btn"></button>
+                <button type="button" class="submit_btn" onclick="nextStep(3)">5,210대 선택</button>
+            </div>
+        </div>
+
+        <div class="car_detail_popup popup3">
+            <div class="headbox">
+                <button type="button" class="back_btn"></button>
+                <p class="title">세부모델 선택</p>
+            </div>
+            <div class="pathbox">
+                <div class="path_txt">제조사</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt on">세부모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">등급</div>
+            </div>
+            <div class="contbox">
+                <div class="item">
+                    <p class="cont_tit">그랜저</p>
+                    <div class="radio_wrap">
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-1" class="input_radio">
+                            <label for="select3-1" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 (GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-2" class="input_radio">
+                            <label for="select3-2" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 하이브리드(GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">500대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-3" class="input_radio">
+                            <label for="select3-3" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 (GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">241대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-4" class="input_radio">
+                            <label for="select3-4" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 하이브리드(GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-5" class="input_radio">
+                            <label for="select3-5" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 (GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">500대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-6" class="input_radio">
+                            <label for="select3-6" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 하이브리드(GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">241대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-7" class="input_radio">
+                            <label for="select3-7" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 (GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-7" class="input_radio">
+                            <label for="select3-7" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 하이브리드(GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">500대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-8" class="input_radio">
+                            <label for="select3-8" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 (GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">241대</p>
+                            </label>
+                        </div>
+                        <div class="radio_box">
+                            <input type="radio" name="select3" id="select3-9" class="input_radio">
+                            <label for="select3-9" class="label_radio">
+                                <p class="tit">
+                                    <span class="txt">그랜저 하이브리드(GN7)</span>
+                                    <span class="small">(22년~현재)</span>
+                                </p>
+                                <p class="desc">0대</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnbox">
+                <button type="button" class="reset_btn"></button>
+                <button type="button" class="submit_btn" onclick="nextStep(4)">621대 선택</button>
+            </div>
+        </div>
+
+        <div class="car_detail_popup popup4">
+            <div class="headbox">
+                <button type="button" class="back_btn"></button>
+                <p class="title">등급 선택</p>
+            </div>
+            <div class="pathbox">
+                <div class="path_txt">제조사</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt ">모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt">세부모델</div>
+                <div class="path_arrow"></div>
+                <div class="path_txt on">등급</div>
+            </div>
+            <div class="contbox">
+                <div class="item">
+                    <p class="cont_tit">
+                        <span class="left">그랜저 (GN7)(22년~현재)</span>
+                        <span class="right sub">중복선택 가능</span>
+                    </p>
+                    <ul class="check_wrap accordion">
+                        <li class="check_box show">
+                            <div class="check_item acc_tit">
+                                <input type="checkbox" id="select4-1" class="input_check" checked>
+                                <label for="select4-1" class="label_check">
+                                    <p class="tit">가솔린 2.5</p>
+                                    <p class="desc">17대</p>
+                                </label>
+                            </div>
+                            <ul class="acc_cont" style="display: block;">
+                                <li>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-2" class="input_check">
+                                        <label for="select4-2" class="label_check">
+                                            <p class="tit">프리미엄</p>
+                                            <p class="desc">3대</p>
+                                        </label>
+                                    </div>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-3" class="input_check">
+                                        <label for="select4-3" class="label_check">
+                                            <p class="tit">익스클루시브</p>
+                                            <p class="desc">9대</p>
+                                        </label>
+                                    </div>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-4" class="input_check">
+                                        <label for="select4-4" class="label_check">
+                                            <p class="tit">캘리그래피</p>
+                                            <p class="desc">5대</p>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="check_box">
+                            <div class="check_item acc_tit">
+                                <input type="checkbox" id="select4-5" class="input_check">
+                                <label for="select4-5" class="label_check">
+                                    <p class="tit">가솔린 3.5 2WD</p>
+                                    <p class="desc">2대</p>
+                                </label>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-6" class="input_check">
+                                        <label for="select4-6" class="label_check">
+                                            <p class="tit">프리미엄</p>
+                                            <p class="desc">3대</p>
+                                        </label>
+                                    </div>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-7" class="input_check">
+                                        <label for="select4-7" class="label_check">
+                                            <p class="tit">익스클루시브</p>
+                                            <p class="desc">9대</p>
+                                        </label>
+                                    </div>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-8" class="input_check">
+                                        <label for="select4-8" class="label_check">
+                                            <p class="tit">캘리그래피</p>
+                                            <p class="desc">5대</p>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="check_box">
+                            <div class="check_item acc_tit">
+                                <input type="checkbox" id="select4-9" class="input_check">
+                                <label for="select4-9" class="label_check">
+                                    <p class="tit">가솔린 3.5 4WD</p>
+                                    <p class="desc">1대</p>
+                                </label>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-10" class="input_check">
+                                        <label for="select4-10" class="label_check">
+                                            <p class="tit">프리미엄</p>
+                                            <p class="desc">3대</p>
+                                        </label>
+                                    </div>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-11" class="input_check">
+                                        <label for="select4-11" class="label_check">
+                                            <p class="tit">익스클루시브</p>
+                                            <p class="desc">9대</p>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="check_box">
+                            <div class="check_item acc_tit no_data">
+                                <input type="checkbox" id="select4-12" class="input_check">
+                                <label for="select4-12" class="label_check">
+                                    <p class="tit">LPG 3.5 (장애인)</p>
+                                    <p class="desc">0대</p>
+                                </label>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-13" class="input_check">
+                                        <label for="select4-13" class="label_check">
+                                            <p class="tit">프리미엄</p>
+                                            <p class="desc">3대</p>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="check_box">
+                            <div class="check_item acc_tit">
+                                <input type="checkbox" id="select4-14" class="input_check">
+                                <label for="select4-14" class="label_check">
+                                    <p class="tit">LPG 3.5 (일반인)</p>
+                                    <p class="desc">4대</p>
+                                </label>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-15" class="input_check">
+                                        <label for="select4-15" class="label_check">
+                                            <p class="tit">프리미엄</p>
+                                            <p class="desc">3대</p>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="check_box">
+                            <div class="check_item acc_tit no_data">
+                                <input type="checkbox" id="select4-16" class="input_check">
+                                <label for="select4-16" class="label_check">
+                                    <p class="tit">LPG 3.5 (택시형)</p>
+                                    <p class="desc">0대</p>
+                                </label>
+                            </div>
+                            <ul class="acc_cont">
+                                <li>
+                                    <div class="check_item">
+                                        <input type="checkbox" id="select4-17" class="input_check">
+                                        <label for="select4-17" class="label_check">
+                                            <p class="tit">프리미엄</p>
+                                            <p class="desc">3대</p>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btnbox">
+                <button type="button" class="reset_btn"></button>
+                <button type="button" class="submit_btn">17대 선택</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>
