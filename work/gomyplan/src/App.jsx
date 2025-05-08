@@ -49,16 +49,16 @@ function App() {
         <Routes>
 
           {/* 이메일 */}
-          <Route path="/work/gomyplan/emailTemplate" element={<EmailTemplate />} />
-          <Route path="/work/gomyplan/emailWelcome" element={<EmailWelcome />} />
-          <Route path="/work/gomyplan/emailPassword" element={<EmailPassword />} />
-          <Route path="/work/gomyplan/emailBooking" element={<EmailBooking />} />
+          <Route path="./emailTemplate" element={<EmailTemplate />} />
+          <Route path="./emailWelcome" element={<EmailWelcome />} />
+          <Route path="./emailPassword" element={<EmailPassword />} />
+          <Route path="./emailBooking" element={<EmailBooking />} />
 
 
           {/* 1~3.메인 */}
-          <Route path="/work/gomyplan/" element={<Main />} /> 
+          <Route path="./" element={<Main />} /> 
           {/* 4.비공개플랜 */}
-          <Route path="/work/gomyplan/privatePlans" element={<PrivatePlans />} />
+          <Route path="./privatePlans" element={<PrivatePlans />} />
           {/* 4.비공개플랜&공개플랜 약관 */}
           <Route path="/plangPolicies" element={<PlanPolicies />} />
           {/* 5.공개플랜 */}
