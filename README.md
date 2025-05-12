@@ -11,6 +11,7 @@
 - **Pretendard**  
 - **Paperlogy**  
 - **GmarketSans**
+- **S-CoreDream**
 
 <br><br><br><br>
 
