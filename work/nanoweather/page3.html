@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>나노웨더</title>
+
+	<!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="stylesheet" href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+
+	<div class="wrap">
+
+		<!-- map -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css" type="text/css">
+		<script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+		<div class="map-box">
+			<div id="map" class="map"></div>
+			<!-- <div class="map__pointer" id="map__pointer1" style="background: #fb737c; left: 25%; top: 62%;">
+				<span class="map__pointer-text">상하이</span>
+				<span class="map__pointer-icon"></span>
+			</div>
+			<div class="map__pointer" id="map__pointer2" style="background: #DE53EA; left: 43%; top: 63.5%;">
+				<span class="map__pointer-text">인천</span>
+				<span class="map__pointer-icon"></span>
+			</div>
+			<div class="map__pointer" id="map__pointer3" style="background: #6AC449; left: 46%; top: 76.5%;">
+				<span class="map__pointer-text">제주</span>
+				<span class="map__pointer-icon"></span>
+			</div>
+			<div class="map__pointer" id="map__pointer4" style="background: #628FE9; right: 36%; bottom: 25%;">
+				<span class="map__pointer-text">오사카</span>
+				<span class="map__pointer-icon"></span>
+			</div> -->
+		</div>
+		<script>
+			const nano = new ol.layer.Tile({
+				visible: true,
+				source: new ol.source.TileWMS({
+					url: 'http://narae.nano-clim.com/geoserver/narae/wms',
+					params: {
+						'FORMAT': 'image/png',
+						'VERSION': '1.1.0',
+						tiled: true,
+						"STYLES": '',
+						"LAYERS": 'narae:narae_grp',
+						"SRS": "EPSG:3857",
+					}
+				})
+			});
+			
+			var map = new ol.Map({
+				target: 'map',
+				layers: [nano],
+				controls: [], // 기본 컨트롤 제거
+				view: new ol.View({
+					center: ol.proj.transform([127.8505, 39.4602], 'EPSG:4326', 'EPSG:3857'),
+					zoom: 5.5, // zoom 수치 변경
+					projection: 'EPSG:3857',
+				})
+			});
+
+			// 여기서부터 마커 추가
+			const locations = [
+				{ name: '상하이', coords: [121.4737, 31.2304], color: '#fb737c' },
+				{ name: '인천', coords: [126.7052, 37.4563], color: '#DE53EA' },
+				{ name: '제주', coords: [126.5312, 33.4996], color: '#6AC449' },
+				{ name: '오사카', coords: [135.5023, 34.6937], color: '#628FE9' }
+			];
+
+			locations.forEach(loc => {
+				const element = document.createElement('div');
+				element.className = 'map__pointer';
+				element.innerHTML = `
+					<span class="map__pointer-txt">${loc.name}</span>
+					<span class="map__pointer-icon"></span>
+				`;
+				
+				// 배경색만 JS 처리, 나머지 스타일은 CSS로 설정
+				element.style.background = loc.color;
+				element.style.userSelect = 'none';
+
+				// 좌표 변환
+				const coord = ol.proj.transform(loc.coords, 'EPSG:4326', 'EPSG:3857');
+
+				// Overlay 생성
+				const overlay = new ol.Overlay({
+					position: coord,
+					positioning: 'top-center',  // 마커 div가 위치 좌표의 위 가운데 정렬
+					element: element,
+					stopEvent: false,  // 마커 클릭 이벤트가 지도 이벤트에 영향을 안 주도록
+					offset: [0, 0],
+				});
+
+				map.addOverlay(overlay);
+
+				// 렌더링 후 마커 크기 읽고 offset 조정
+				setTimeout(() => {
+					const width = element.offsetWidth - 5;
+					const height = element.offsetHeight;
+
+					overlay.setOffset([-width, -height]);
+				}, 0);
+			});
+		</script>
+
+
+		<!-- layout -->
+		<div class="layout">
+
+			<div class="layout__left-box">
+
+				<!-- header -->
+				<div class="header">
+					<div class="header__logo">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="header__input-box input-box input-box--search">
+						<input type="text" class="input-box__input" placeholder="공항을 검색해주세요">
+						<!-- <button type="button" class="input-box__delete-button"></button> -->
+						<button type="button" class="input-box__search-button"></button>
+						<div class="input-box__dropdown">
+							<div class="dropdown dropdown--favorites">
+								<div class="dropdown__list">
+									<div class="dropdown__item dropdown__item--selected">
+										<span class="dropdown__star"></span>
+										<span class="dropdown__text">김포 RKSS</span>
+									</div>
+									<div class="dropdown__item dropdown__item--selected">
+										<span class="dropdown__star"></span>
+										<span class="dropdown__text">인천 RKSI</span>
+									</div>
+									<div class="dropdown__item dropdown__item--selected">
+										<span class="dropdown__star"></span>
+										<span class="dropdown__text">나리타 VVVV</span>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown">
+								<p class="dropdown__title">국내공항</p>
+								<div class="dropdown__list">
+									<div class="dropdown__item">
+										<span class="dropdown__star"></span>
+										<span class="dropdown__text">청주공항</span>
+									</div>
+									<div class="dropdown__item dropdown__item--selected">
+										<span class="dropdown__star"></span>
+										<span class="dropdown__text">김포 RKSS</span>
+									</div>
+									<div class="dropdown__item">
+										<span class="dropdown__star"></span>
+										<span class="dropdown__text">청주공항</span>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown">
+								<p class="dropdown__title">국제공항</p>
+								<div class="dropdown__group">
+									<button type="button" class="dropdown__toggle">
+										<span class="dropdown__arrow"></span>
+										<span class="dropdown__text">중국</span>
+									</button>
+									<div class="dropdown__list">
+										<div class="dropdown__item">
+											<span class="dropdown__star"></span>
+											<span class="dropdown__text">베이징</span>
+										</div>
+										<div class="dropdown__item">
+											<span class="dropdown__star"></span>
+											<span class="dropdown__text">상하이</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="dropdown__group dropdown__group--opened">
+									<button type="button" class="dropdown__toggle">
+										<span class="dropdown__arrow"></span>
+										<span class="dropdown__text">일본</span>
+									</button>
+									<div class="dropdown__list">
+										<div class="dropdown__item">
+											<span class="dropdown__star"></span>
+											<span class="dropdown__text">나리타</span>
+										</div>
+										<div class="dropdown__item">
+											<span class="dropdown__star"></span>
+											<span class="dropdown__text">하네다</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="header__scale-button"></button>
+				</div>
+
+				<!-- quick panel -->
+				<div class="quick-panel">
+					<div class="quick-panel__menu-list">
+						<button type="button" class="quick-panel__menu-item" id="btn-impact-info">
+							<img src="img/quick_menu1.png" alt="" class="quick-panel__icon" />
+							<span class="quick-panel__txt">항공기상 영향정보</span>
+						</button>
+
+						<button type="button" class="quick-panel__menu-item" id="btn-weather-chart">
+							<img src="img/quick_menu2.png" alt="" class="quick-panel__icon" />
+							<span class="quick-panel__txt">항공기상 일기도</span>
+						</button>
+
+						<button type="button" class="quick-panel__menu-item" id="btn-airport-dashboard">
+							<img src="img/quick_menu3.png" alt="" class="quick-panel__icon" />
+							<span class="quick-panel__txt">공항날씨 대시보드</span>
+						</button>
+
+						<button type="button" class="quick-panel__menu-item" id="btn-symbol-info">
+							<img src="img/quick_menu4.png" alt="" class="quick-panel__icon" />
+							<span class="quick-panel__txt">기호정보</span>
+						</button>
+
+						<button type="button" class="quick-panel__menu-item" id="btn-quick-manual">
+							<img src="img/quick_menu5.png" alt="" class="quick-panel__icon" />
+							<span class="quick-panel__txt">퀵메뉴얼</span>
+						</button>
+					</div>
+					<div class="quick-panel__button-box">
+						<button type="button" class="quick-panel__open-button" id="quick-open"></button>
+						<button type="button" class="quick-panel__close-button" id="quick-close"></button>
+					</div>
+				</div>
+
+				<!-- screen controls -->
+				<div class="screen-controls">
+					<div class="screen-controls__buttons">
+						<div class="screen-controls__zoom">
+							<button type="button" class="screen-controls__zoom-in" id="zoom-in"></button>
+							<button type="button" class="screen-controls__zoom-out" id="zoom-out"></button>
+						</div>
+						<button type="button" class="screen-controls__position"></button>
+					</div>
+				</div>
+
+				<!-- time controls -->
+				<div class="time-controls">
+					<button type="button" class="time-controls__play-button"></button>
+					<div class="time-controls__time-line">
+						<div class="time-controls__gage-bar">
+							<div class="time-controls__spot-bar" style="width: 29%;"></div>
+							<div class="time-controls__spots">
+								<div class="time-controls__spot time-controls__spot--first">
+									<span class="time-controls__spot-dot time-controls__spot-dot--active"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot time-controls__spot-dot--active"></span>
+									<span class="time-controls__spot-number">4.24</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot time-controls__spot-dot--active"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot time-controls__spot-dot--active"></span>
+									<span class="time-controls__spot-number">4.25</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot time-controls__spot-dot--active"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot time-controls__spot-dot--active"></span>
+									<span class="time-controls__spot-number">4.26</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number">4.27</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number">4.28</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number">4.29</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number">4.30</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number"></span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number">5.1</span>
+								</div>
+								<div class="time-controls__spot">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number">5.2</span>
+								</div>
+								<div class="time-controls__spot time-controls__spot--end">
+									<span class="time-controls__spot-dot"></span>
+									<span class="time-controls__spot-number">5.3</span>
+								</div>
+							</div>
+
+							<span class="time-controls__spot-pointer" style="left: 28%"></span>
+						</div>
+						<div class="time-controls__date" style="left: 23%;">4.25 오후</div>
+					</div>
+
+					<div class="time-controls__controls">
+						<button type="button" class="time-controls__prev-button"></button>
+						<button type="button" class="time-controls__next-button"></button>
+					</div>
+				</div>
+
+				<!-- layer controls -->
+				<div class="layer-controls">
+					<div class="switch-box">
+						<label for="chk-pressure" class="switch-box__label">지상기압</label>
+						<input type="checkbox" name="pressure" id="chk-pressure" class="switch-box__input">
+					</div>
+					<div class="switch-box">
+						<label for="chk-metar" class="switch-box__label">METAR</label>
+						<input type="checkbox" name="metar" id="chk-metar" class="switch-box__input" checked>
+					</div>
+					<div class="switch-box">
+						<label for="chk-airport-alert" class="switch-box__label">공항경보</label>
+						<input type="checkbox" name="airport-alert" id="chk-airport-alert" class="switch-box__input"
+							checked>
+					</div>
+					<div class="switch-box">
+						<label for="chk-sigmet" class="switch-box__label">SIGMET</label>
+						<input type="checkbox" name="sigmet" id="chk-sigmet" class="switch-box__input" checked>
+					</div>
+					<div class="switch-box">
+						<label for="chk-fir" class="switch-box__label">FIR</label>
+						<input type="checkbox" name="fir" id="chk-fir" class="switch-box__input" checked>
+					</div>
+					<div class="switch-box">
+						<label for="chk-sector" class="switch-box__label">섹터</label>
+						<input type="checkbox" name="sector" id="chk-sector" class="switch-box__input" checked>
+					</div>
+					<div class="switch-box">
+						<label for="chk-airport" class="switch-box__label">공항</label>
+						<input type="checkbox" name="airport" id="chk-airport" class="switch-box__input" checked>
+					</div>
+				</div>
+
+				<!-- quick manual -->
+				<div class="quick-manual">
+					<div class="quick-manual__top-box">
+						<p class="quick-manual__title">
+							<img src="img/ico_satellite.png" alt="" class="quick-manual__icon">
+							<span class="quick-manual__txt">위성</span>
+						</p>
+						<p class="quick-manual__desc">
+							클릭 시 해당하는 아이콘 내용을 넣을 예정입니다. <br>
+							각각의 아이콘 설명 작성하여 주심 감사드리겠습니다
+						</p>
+					</div>
+					<div class="quick-manual__bottom-box">
+						<p class="quick-manual__desc">표출할 컨텐츠 레이어를 선택합니다.</p>
+						<button type="button" class="quick-manual__button-close" id="quick-manual-close"></button>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="layout__right-box">
+
+				<!-- menu button -->
+				<div class="menu-buttons">
+					<button type="button" class="menu-button--open" id="menu-open"></button>
+					<button type="button" class="menu-button--close" id="menu-close"></button>
+				</div>
+
+				<!-- menu box -->
+				<div class="menu-box">
+					<div class="menu-box__mymenu">
+						<p class="menu-box__title">마이메뉴</p>
+						<div class="menu-box__buttons">
+							<div class="menu-box__button">
+								<input type="radio" name="mymenu" id="radio-incheon">
+								<label for="radio-incheon">인천공항</label>
+							</div>
+							<div class="menu-box__button">
+								<input type="radio" name="mymenu" id="radio-satellite">
+								<label for="radio-satellite">위성-운고</label>
+							</div>
+							<div class="menu-box__button">
+								<input type="radio" name="mymenu" id="radio-metar">
+								<label for="radio-metar">METAR</label>
+							</div>
+							<div class="menu-box__button">
+								<input type="radio" name="mymenu" id="radio-rain">
+								<label for="radio-rain">강수</label>
+							</div>
+						</div>
+						<button type="button" class="menu-box__edit-button" id="mymenu-open">
+							<img src="img/ico_setting.png" alt="" class="menu-box__icon">
+							<span class="menu-box__txt">편집</span>
+						</button>
+					</div>
+					<div class="menu-box__list">
+						<div class="menu-box__tabs">
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon1.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">위성</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">운전고도</div>
+									<div class="menu-box__tab-item">착빙</div>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon2.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">레이더</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">강수</div>
+									<div class="menu-box__tab-item">낙뢰</div>
+								</div>
+							</div>
+							<div class="menu-box__tab menu-box__tab--selected">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon3.png" alt="" class="menu-box__icon ver2">
+									<span class="menu-box__txt">착빙</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">미강도</div>
+									<div class="menu-box__tab-item">약강도</div>
+									<div class="menu-box__tab-item">중강도</div>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon4.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">난류</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">약강도</div>
+									<div class="menu-box__tab-item">중강도</div>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon5.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">운고</span>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon6.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">기온</span>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon7.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">강수</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">강수유형</div>
+									<div class="menu-box__tab-item">강수량</div>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon8.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">시정</span>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon9.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">급변풍</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">수직급변풍</div>
+									<div class="menu-box__tab-item">연직급변풍</div>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon10.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">대류영역</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">FL250</div>
+									<div class="menu-box__tab-item">FL350</div>
+								</div>
+							</div>
+							<div class="menu-box__tab">
+								<div class="menu-box__tab-title">
+									<img src="img/menu_icon4.png" alt="" class="menu-box__icon">
+									<span class="menu-box__txt">빙결고도</span>
+								</div>
+								<div class="menu-box__tab-items">
+									<div class="menu-box__tab-item menu-box__tab-item--selected">FL250</div>
+									<div class="menu-box__tab-item">FL350</div>
+								</div>
+							</div>
+						</div>
+						<div class="menu-box__layer-button switch-box">
+							<label for="chk-layer-nesting" class="switch-box__label">레이어 중첩</label>
+							<input type="checkbox" name="airport-alert" id="chk-layer-nesting" class="switch-box__input"
+								checked>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- mymenu modal -->
+		<div class="modal mymenu-modal" id="mymenu-modal">
+			<div class="modal__box">
+				<div class="modal__head">
+					<p class="modal__title">My menu 설정</p>
+					<button type="button" class="modal__close-button"></button>
+				</div>
+				<div class="modal__body">
+					<div class="modal__content modal__content--mymenu1">
+						<div class="mymenu__title">
+							<p class="input-box__title">선택 레이어</p>
+							<div class="input-box">
+								<input type="text" class="input-box__input" placeholder="별칭 입력하기">
+							</div>
+						</div>
+						<div class="mymenu__select">
+							<div class="table-wrap">
+								<table class="table">
+									<colgroup>
+										<col width="50">
+										<col width="*">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>
+												<div class="check-box">
+													<input type="checkbox"
+														class="check-box__input check-box__input--all">
+												</div>
+											</th>
+											<th>레이어 명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="table__tr--selected">
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input" checked>
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="mymenu__select-buttons">
+								<button type="button" class="mymenu__select-button--next"></button>
+								<button type="button" class="mymenu__select-button--prev"></button>
+							</div>
+							<div class="table-wrap">
+								<table class="table">
+									<colgroup>
+										<col width="50">
+										<col width="*">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>
+												<div class="check-box">
+													<input type="checkbox"
+														class="check-box__input check-box__input--all">
+												</div>
+											</th>
+											<th>레이어 명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="check-box">
+													<input type="checkbox" class="check-box__input">
+												</div>
+											</td>
+											<td>착빙운고</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="modal__content modal__content--mymenu2">
+						<div class="table-wrap">
+							<p class="table-title">맞춤레이어</p>
+							<table class="table">
+								<colgroup>
+									<col width="50">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input check-box__input--all">
+											</div>
+										</th>
+										<th>별칭</th>
+										<th>레이어1</th>
+										<th>레이어2</th>
+										<th>레이어3</th>
+										<th>레이어4</th>
+										<th>레이어5</th>
+										<th>관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="table__tr--selected">
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input" checked>
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button type="button" class="table-add-button">
+								<img src="img/ico_small_plus.png" alt="">
+								<span>추가</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal__button-box">
+					<button class="modal__button modal__button--typeA modal__confirm-button">닫기</button>
+					<button class="modal__button modal__button--typeB" id="mymenu__save-button">저장</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- mymenu popup -->
+		<div class="popup" id="mymenu-popup">
+			<p class="popup__title">My menu 는 5개를 초과할 수 없습니다.</p>
+			<div class="popup__button-box">
+				<button class="popup__button popup__close-button">닫기</button>
+			</div>
+		</div>
+
+
+		<!-- symbol-modal -->
+		<div class="modal" id="symbol-modal">
+			<div class="modal__box">
+				<div class="modal__head">
+					<p class="modal__title">기호 정보</p>
+					<button type="button" class="modal__close-button"></button>
+				</div>
+				<div class="modal__body">
+					<div class="modal__content">
+						<div class="tabs">
+							<div class="tabs__nav">
+								<div class="tabs__nav-item tabs__nav-item--active">
+									<span class="tabs__link">SIGMET</span>
+								</div>
+								<div class="tabs__nav-item">
+									<span class="tabs__link">Flight Category</span>
+								</div>
+								<div class="tabs__nav-item">
+									<span class="tabs__link">공항 기호</span>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="tabs__content-item tabs__content--sigmet tabs__content-item--active">
+									<div class="sigmet__box">
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon1.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">뇌우</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon2.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">지상강풍</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon3.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">착빙</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon4.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">안개비/비/눈</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon5.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">우박</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon6.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">모래/먼지 폭풍</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon7.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">태풍/열대 저기압</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon8.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">난류</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon9.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">안개</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon10.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">소낙성 비/눈</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon11.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">심한 모래, 먼지</span>
+										</div>
+
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon12.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">광범위 <br>
+												연무,연기,박무</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon13.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">방사성 물질</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon14.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">산악파</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon15.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">화산 분출</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon16.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">심한 스콜라인</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon17.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">강풍 구역</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon18.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">착빙 구역</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon19.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">저기압/고기압</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon20.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">산악차폐</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon21.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">어는 강수</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon22.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">광범위한 <br>날린 눈</span>
+										</div>
+
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon23.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">난류 구역</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon24.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">구름 구역</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon25.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">강수 구역</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon26.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">먼지,모래,폭풍,
+												연무구역</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon27.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">한랭전선</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon28.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">폐색전선</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon29.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">수렴선</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon30.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">권계면 최고 고도</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon31.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">권계면 고도</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon32.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">저시정 구역</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon33.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">빙결 고도</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon34.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">온난전선</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon35.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">정체전선</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon36.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">최대풍 위치, <br>풍속 및 고도</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon37.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">권계면 최저 고도</span>
+										</div>
+										<div class="sigmet__item">
+											<img src="img/symbol_tab_icon38.png" alt="" class="sigmet__icon">
+											<span class="sigmet__txt">빙결 고도</span>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content-item tabs__content--flight">
+									<div class="flight__box">
+										<div class="flight__item flight__item--color1">
+											<div class="flight__circle"></div>
+											<p class="flight__title">
+												<span class="flight__title-text">저고도 계기비행 규칙</span>
+												<span class="flight__badge">LIFR</span>
+											</p>
+											<div class="flight__descbox">
+												<div class="flight__descitem">
+													<p class="flight__desc-title">구름 천정(고도)</p>
+													<p class="flight__desc-text">지상 500피트 미만</p>
+												</div>
+												<div class="flight__descitem">
+													<p class="flight__desc-title">가시거리</p>
+													<p class="flight__desc-text">1마일 미만</p>
+												</div>
+											</div>
+										</div>
+										<div class="flight__item flight__item--color2">
+											<div class="flight__circle"></div>
+											<p class="flight__title">
+												<span class="flight__title-text">계기비행 규칙</span>
+												<span class="flight__badge">IFR</span>
+											</p>
+											<div class="flight__descbox">
+												<div class="flight__descitem">
+													<p class="flight__desc-title">구름 천정(고도)</p>
+													<p class="flight__desc-text">지상 500 ~ 1,000피트</p>
+												</div>
+												<div class="flight__descitem">
+													<p class="flight__desc-title">가시거리</p>
+													<p class="flight__desc-text">1 ~ 3마일</p>
+												</div>
+											</div>
+										</div>
+										<div class="flight__item flight__item--color3">
+											<div class="flight__circle"></div>
+											<p class="flight__title">
+												<span class="flight__title-text">한계 시각비행 규칙</span>
+												<span class="flight__badge">MVFR</span>
+											</p>
+											<div class="flight__descbox">
+												<div class="flight__descitem">
+													<p class="flight__desc-title">구름 천정(고도)</p>
+													<p class="flight__desc-text">지상 1,000 ~ 3,000피트</p>
+												</div>
+												<div class="flight__descitem">
+													<p class="flight__desc-title">가시거리</p>
+													<p class="flight__desc-text">3~ 5마일</p>
+												</div>
+											</div>
+										</div>
+										<div class="flight__item flight__item--color4">
+											<div class="flight__circle"></div>
+											<p class="flight__title">
+												<span class="flight__title-text">시각비행 규칙</span>
+												<span class="flight__badge">VFR</span>
+											</p>
+											<div class="flight__descbox">
+												<div class="flight__descitem">
+													<p class="flight__desc-title">구름 천정(고도)</p>
+													<p class="flight__desc-text">지상 3,000피트 초과</p>
+												</div>
+												<div class="flight__descitem">
+													<p class="flight__desc-title">가시거리</p>
+													<p class="flight__desc-text">5마일 초과</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content-item tabs__content--airplane">
+									<div class="airplane__box">
+										<div class="airplane__item">
+											<img src="img/symbol_tab_icon39.png" alt="" class="airplane__icon">
+											<span class="airplane__txt">공항 위치</span>
+										</div>
+										<div class="airplane__item">
+											<img src="img/symbol_tab_icon40.png" alt="" class="airplane__icon">
+											<span class="airplane__txt">낙뢰 위치</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- dashboard modal -->
+		<div class="modal dashboard-modal" id="dashboard-modal1">
+			<div class="dashboard__head">
+				<img src="img/logo.png" alt="" class="dashboard__logo">
+				<button type="button" class="dashboard__close modal__close-button"></button>
+			</div>
+			<div class="dashboard__body">
+				<div class="dashboard__title-box">
+					<p class="dashboard__title">공항 날씨 대시보드</p>
+				</div>
+				<div class="dashboard__content-box">
+					<div class="dashboard__top-box">
+						<div class="dashboard__input-wrap">
+							<div class="input-wrap">
+								<p class="input-box__title">조회 공항</p>
+								<div class="input-box input-box--search">
+									<input type="text" class="input-box__input" placeholder="ICAO code">
+									<button type="button" class="input-box__search-button"></button>
+								</div>
+								<button type="button" class="dashboard__serach-toggle">
+									<span class="dashboard__serach-toggle-txt">공항 ICAO 코드 검색</span>
+									<span class="dashboard__serach-toggle-icon"></span>
+								</button>
+							</div>
+							<div class="radio-wrap">
+								<div class="radio-box">
+									<input type="radio" class="radio-box__input" name="dashboard-weather" id="dashboard-weather2">
+									<label for="dashboard-weather2" class="radio-box__label">공항날씨</label>
+								</div>
+								<div class="radio-box">
+									<input type="radio" class="radio-box__input" name="dashboard-weather" id="dashboard-weather1" checked>
+									<label for="dashboard-weather1" class="radio-box__label">활주로 날씨</label>
+								</div>
+							</div>
+						</div>
+						<div class="dashboard__search-wrap">
+							<p class="dashboard__search-title">공항 ICAO 코드 검색</p>
+							<div class="dashboard__serach-condition">
+								<div class="dashboard__left-condition">
+									<div class="select-box">
+										<p class="select-box__title">국가</p>
+										<select class="select select--width1">
+											<option value="대한민국">대한민국</option>
+										</select>
+									</div>
+									<div class="select-box">
+										<p class="select-box__title">공항</p>
+										<select class="select select--width2">
+											<option value="인천국제공항(Incheon International airport)">인천국제공항(Incheon International airport)</option>
+										</select>
+									</div>
+									<div class="input-wrap">
+										<p class="input-box__title">조회결과</p>
+										<div class="input-box">
+											<input type="text" class="input-box__input input-box__input--width1" placeholder=""
+												value="RKSI">
+										</div>
+										<button type="button" class="button button--typeC">조회</button>
+									</div>
+								</div>
+								<div class="dashboard__right-condition button-box">
+									<button type="button" class="button button--typeB dashboard__serach-hide">접기</button>
+									<button type="button" class="button button--typeA">조회</button>
+								</div>
+							</div>
+						</div>
+						<div class="dashboard__top-line"></div>
+					</div>
+					<div class="dashboard__subtop-box">
+						<p class="dashboard__subtop-title"></p>
+						<div class="swtich-wrap">
+							<div class="switch-box">
+								<label for="chk-decoded" class="switch-box__label">decoded</label>
+								<input type="checkbox" name="decoded" id="chk-decoded" class="switch-box__input">
+							</div>
+							<div class="switch-box">
+								<label for="chk-TAF" class="switch-box__label">Auto-TAF</label>
+								<input type="checkbox" name="decoded" id="chk-TAF" class="switch-box__input" checked>
+							</div>
+						</div>
+					</div>
+					<div class="dashboard__cont-box">
+						<p class="dashboard__no-result">공항을 검색해주세요</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- JS -->
+		<script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>
