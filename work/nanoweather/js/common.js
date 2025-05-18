@@ -7,19 +7,19 @@ document.querySelectorAll(".modal .modal__close-button").forEach(function (btn) 
 		});
 	});
 });
-document.querySelectorAll(".modal .modal__confirm-button").forEach(function (btn) {
-	btn.addEventListener("click", function () {
-		document.body.classList.remove("hidden");
-		document.querySelectorAll(".modal").forEach(function (modal) {
-			modal.classList.remove("modal--show");
-		});
-	});
-});
 document.addEventListener("mouseup", function (e) {
 	const modal = document.querySelector(".modal.modal--show");
 	const modalBox = modal?.querySelector(".modal__box");
+	const popup = document.querySelector(".popup");
 
-	if (modal && modalBox && !modalBox.contains(e.target)) {
+	const clickedInsidePopup = popup?.contains(e.target);
+
+	if (
+		modal &&
+		modalBox &&
+		!modalBox.contains(e.target) &&
+		!clickedInsidePopup // popup 안쪽 클릭은 모달 닫기 제외
+	) {
 		document.body.classList.remove("hidden");
 		modal.classList.remove("modal--show");
 	}
@@ -48,39 +48,55 @@ document.addEventListener("mouseup", function (e) {
 
 // table checkbox 
 document.addEventListener("DOMContentLoaded", function () {
-	document.querySelectorAll(".table").forEach(function (table) {
-		const checkAll = table.querySelector(".check-box__input--all");
-		const rows = table.querySelectorAll("tbody tr");
+  document.querySelectorAll(".table").forEach(function (table) {
+    const checkAll = table.querySelector(".check-box__input--all");
+    const rows = table.querySelectorAll("tbody tr");
 
-		if (!checkAll) return;
+    if (checkAll) {
+      checkAll.addEventListener("change", function () {
+        const isChecked = checkAll.checked;
+        rows.forEach(row => {
+          const checkbox = row.querySelector(".check-box__input");
+          if (checkbox) {
+            checkbox.checked = isChecked;
+            row.classList.toggle("table__tr--selected", isChecked);
+          }
+        });
+      });
+    }
 
-		checkAll.addEventListener("change", function () {
-			const isChecked = checkAll.checked;
-			rows.forEach(row => {
-				const checkbox = row.querySelector(".check-box__input");
-				if (checkbox) {
-					checkbox.checked = isChecked;
-					row.classList.toggle("table__tr--selected", isChecked);
-				}
-			});
-		});
+    rows.forEach(row => {
+      const checkbox = row.querySelector(".check-box__input");
 
-		rows.forEach(row => {
-			const checkbox = row.querySelector(".check-box__input");
-			if (!checkbox) return;
+      if (checkbox) {
+        checkbox.addEventListener("change", function (e) {
+          e.stopPropagation();
+          row.classList.toggle("table__tr--selected", checkbox.checked);
 
-			checkbox.addEventListener("change", function () {
-				row.classList.toggle("table__tr--selected", checkbox.checked);
+          if (checkAll) {
+            const allChecked = Array.from(rows).every(r => {
+              const cb = r.querySelector(".check-box__input");
+              return cb && cb.checked;
+            });
+            checkAll.checked = allChecked;
+          }
+        });
 
-				const allChecked = Array.from(rows).every(r => {
-					const cb = r.querySelector(".check-box__input");
-					return cb && cb.checked;
-				});
-				checkAll.checked = allChecked;
-			});
-		});
-	});
+        row.addEventListener("click", function (e) {
+          if (e.target.closest(".check-box__input")) return;
+
+          checkbox.checked = !checkbox.checked;
+          checkbox.dispatchEvent(new Event('change'));
+        });
+      } else {
+        row.addEventListener("click", function () {
+          row.classList.toggle("table__tr--selected");
+        });
+      }
+    });
+  });
 });
+
 
 
 // tabs 
@@ -114,6 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const input = inputBox.querySelector(".input-box__input");
 	const dropdown = inputBox.querySelector(".input-box__dropdown");
 
+	const favoritesDropdown = dropdown.querySelector(".dropdown--favorites .dropdown__list");
+
 	input.addEventListener("focus", () => {
 		dropdown.classList.add("input-box__dropdown--show");
 	});
@@ -125,8 +143,36 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	document.querySelectorAll(".dropdown__item").forEach(item => {
-		item.addEventListener("click", () => {
-			item.classList.toggle("dropdown__item--selected");
+		if (favoritesDropdown.contains(item)) return;
+
+		item.addEventListener("click", (e) => {
+			e.stopPropagation();
+
+			const itemText = item.querySelector(".dropdown__text").textContent;
+
+			const favorites = Array.from(favoritesDropdown.children);
+			const exists = favorites.some(favItem => {
+			return favItem.querySelector(".dropdown__text")?.textContent === itemText;
+			});
+
+			const isSelected = item.classList.contains("dropdown__item--selected");
+
+			if (isSelected && exists) {
+			item.classList.remove("dropdown__item--selected");
+
+			favorites.forEach(favItem => {
+				if (favItem.querySelector(".dropdown__text")?.textContent === itemText) {
+				favItem.remove();
+				}
+			});
+			}
+
+			if (!isSelected && !exists) {
+			item.classList.add("dropdown__item--selected");
+
+			const clone = item.cloneNode(true);
+			favoritesDropdown.appendChild(clone);
+			}
 		});
 	});
 
@@ -137,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
 
 
 // quick panel
@@ -151,15 +198,18 @@ document.addEventListener("mouseup", function (e) {
 	const quickManual = document.querySelector(".quick-manual");
 	const myMenu = document.querySelector("#mymenu-open");
 	const modals = document.querySelectorAll(".modal");
+	const popup = document.querySelector(".popup");
 
 	const clickedInsideModal = Array.from(modals).some(modal => modal.contains(e.target));
+	const clickedInsidePopup = popup?.contains(e.target);
 
 	if (
 		quickPanel &&
 		!quickPanel.contains(e.target) &&
 		!(quickManual && quickManual.contains(e.target)) &&
 		!(myMenu && myMenu.contains(e.target)) &&
-		!clickedInsideModal
+		!clickedInsideModal &&
+		!clickedInsidePopup // ✅ popup 영역도 제외
 	) {
 		quickPanel.classList.remove("quick-panel--active");
 	}
@@ -239,6 +289,44 @@ document.addEventListener("DOMContentLoaded", () => {
 // mymenu modal
 document.getElementById('mymenu-open').addEventListener('click', () => {
 	document.querySelector("#mymenu-modal").classList.add("modal--show");
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const openButton = document.querySelector('.mymenu2-modal .modal__content--mymenu1 .table-add-button');
+  const closeButton = document.querySelector('.mymenu2-modal .modal__confirm-button');
+  const editButtons = document.querySelectorAll('.mymenu2-modal .table__button--edit');
+  const deleteButtons = document.querySelectorAll('.mymenu2-modal .table__button--delete');
+
+  if (openButton) {
+    openButton.addEventListener('click', () => {
+      document.querySelector(".mymenu2-modal .modal__content--mymenu2").classList.add("modal__content--open");
+      document.querySelector(".mymenu2-modal .modal__button-box").classList.add("modal__button-box--show");
+    });
+  }
+
+  if (closeButton) {
+    closeButton.addEventListener('click', () => {
+      document.querySelector(".mymenu2-modal .modal__content--mymenu2").classList.remove("modal__content--open");
+      document.querySelector(".mymenu2-modal .modal__button-box").classList.remove("modal__button-box--show");
+    });
+  }
+
+  if (editButtons.length) {
+    editButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelector(".mymenu2-modal .modal__content--mymenu2").classList.add("modal__content--open");
+        document.querySelector(".mymenu2-modal .modal__button-box").classList.add("modal__button-box--show");
+      });
+    });
+  }
+
+  if (deleteButtons.length) {
+    deleteButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const tr = e.target.closest('tr');
+        if (tr) tr.remove();
+      });
+    });
+  }
 });
 document.addEventListener("DOMContentLoaded", () => {
 	const saveButton = document.getElementById('mymenu__save-button');
