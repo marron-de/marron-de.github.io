@@ -29,25 +29,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css" type="text/css">
 		<script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
-		<div class="map-box">
-			<div id="map" class="map"></div>
-			<!-- <div class="map__pointer" id="map__pointer1" style="background: #fb737c; left: 25%; top: 62%;">
-				<span class="map__pointer-text">상하이</span>
-				<span class="map__pointer-icon"></span>
-			</div>
-			<div class="map__pointer" id="map__pointer2" style="background: #DE53EA; left: 43%; top: 63.5%;">
-				<span class="map__pointer-text">인천</span>
-				<span class="map__pointer-icon"></span>
-			</div>
-			<div class="map__pointer" id="map__pointer3" style="background: #6AC449; left: 46%; top: 76.5%;">
-				<span class="map__pointer-text">제주</span>
-				<span class="map__pointer-icon"></span>
-			</div>
-			<div class="map__pointer" id="map__pointer4" style="background: #628FE9; right: 36%; bottom: 25%;">
-				<span class="map__pointer-text">오사카</span>
-				<span class="map__pointer-icon"></span>
-			</div> -->
-		</div>
+		<div id="map" class="map"></div>
 		<script>
 			const nano = new ol.layer.Tile({
 				visible: true,
@@ -63,7 +45,6 @@
 					}
 				})
 			});
-			
 			var map = new ol.Map({
 				target: 'map',
 				layers: [nano],
@@ -73,49 +54,6 @@
 					zoom: 5.5, // zoom 수치 변경
 					projection: 'EPSG:3857',
 				})
-			});
-
-			// 여기서부터 마커 추가
-			const locations = [
-				{ name: '상하이', coords: [121.4737, 31.2304], color: '#fb737c' },
-				{ name: '인천', coords: [126.7052, 37.4563], color: '#DE53EA' },
-				{ name: '제주', coords: [126.5312, 33.4996], color: '#6AC449' },
-				{ name: '오사카', coords: [135.5023, 34.6937], color: '#628FE9' }
-			];
-
-			locations.forEach(loc => {
-				const element = document.createElement('div');
-				element.className = 'map__pointer';
-				element.innerHTML = `
-					<span class="map__pointer-txt">${loc.name}</span>
-					<span class="map__pointer-icon"></span>
-				`;
-				
-				// 배경색만 JS 처리, 나머지 스타일은 CSS로 설정
-				element.style.background = loc.color;
-				element.style.userSelect = 'none';
-
-				// 좌표 변환
-				const coord = ol.proj.transform(loc.coords, 'EPSG:4326', 'EPSG:3857');
-
-				// Overlay 생성
-				const overlay = new ol.Overlay({
-					position: coord,
-					positioning: 'top-center',  // 마커 div가 위치 좌표의 위 가운데 정렬
-					element: element,
-					stopEvent: false,  // 마커 클릭 이벤트가 지도 이벤트에 영향을 안 주도록
-					offset: [0, 0],
-				});
-
-				map.addOverlay(overlay);
-
-				// 렌더링 후 마커 크기 읽고 offset 조정
-				setTimeout(() => {
-					const width = element.offsetWidth - 5;
-					const height = element.offsetHeight;
-
-					overlay.setOffset([-width, -height]);
-				}, 0);
 			});
 		</script>
 
@@ -209,8 +147,50 @@
 					<button class="header__scale-button"></button>
 				</div>
 
+				<!-- legend -->
+				<div class="legend">
+					<div class="legend__info-box">
+						<div class="legend__title-box">
+							<p class="legend__title">범례</p>
+							<button type="button" class="legend__info-button"></button>
+						</div>
+						<div class="legend__gage-bar legend__gage-bar--color2">
+							<span class="legend__spot legend__spot--first"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot"></span>
+							<span class="legend__spot legend__spot--end"></span>
+						</div>
+						<div class="legend__gage-number">
+							<span class="legend__number legend__number--first">0</span>
+							<span class="legend__number">10</span>
+							<span class="legend__number">20</span>
+							<span class="legend__number">30</span>
+							<span class="legend__number">40</span>
+							<span class="legend__number">50</span>
+							<span class="legend__number">60</span>
+							<span class="legend__number">70</span>
+							<span class="legend__number">80</span>
+							<span class="legend__number">90</span>
+							<span class="legend__number legend__number--end">100</span>
+						</div>
+					</div>
+					<div class="legend__tooltip">
+						<p class="legend__tooltip-title">범례</p>
+						<p class="legend__tooltip-desc">
+							범례 테스트 설명입니다. 범례 테스트 설명입니다.<br>
+							범례 테스트 설명입니다. 범례 테스트 설명입니다.
+						</p>
+					</div>
+				</div>
+
 				<!-- quick panel -->
-				<div class="quick-panel quick-panel--active">
+				<div class="quick-panel">
 					<div class="quick-panel__menu-list">
 						<button type="button" class="quick-panel__menu-item" id="btn-impact-info">
 							<img src="img/quick_menu1.png" alt="" class="quick-panel__icon" />
@@ -245,6 +225,55 @@
 
 				<!-- screen controls -->
 				<div class="screen-controls">
+					<div class="screen-controls__altitude">
+						<p class="screen-controls__altitude-title">고도</p>
+						<div class="screen-controls__altitude-controls">
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-100" value="100" checked>
+								<label for="altitude-100">100</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-90" value="90">
+								<label for="altitude-90">90</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-80" value="80">
+								<label for="altitude-80">80</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-70" value="70">
+								<label for="altitude-70">70</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-60" value="60">
+								<label for="altitude-60">60</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-50" value="50">
+								<label for="altitude-50">50</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-40" value="40">
+								<label for="altitude-40">40</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-30" value="30">
+								<label for="altitude-30">30</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-20" value="20">
+								<label for="altitude-20">20</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-10" value="10">
+								<label for="altitude-10">10</label>
+							</div>
+							<div class="screen-controls__altitude-button">
+								<input type="radio" name="altitude" id="altitude-0" value="0">
+								<label for="altitude-0">0</label>
+							</div>
+						</div>
+					</div>
 					<div class="screen-controls__buttons">
 						<div class="screen-controls__zoom">
 							<button type="button" class="screen-controls__zoom-in" id="zoom-in"></button>
@@ -549,7 +578,7 @@
 
 
 		<!-- mymenu modal -->
-		<div class="modal modal--show mymenu2-modal" id="mymenu-modal">
+		<div class="modal mymenu-modal" id="mymenu-modal">
 			<div class="modal__box">
 				<div class="modal__head">
 					<p class="modal__title">My menu 설정</p>
@@ -557,129 +586,14 @@
 				</div>
 				<div class="modal__body">
 					<div class="modal__content modal__content--mymenu1">
-							<div class="mymenu__title">
-							<p class="input-box__title">맞춤 레이어</p>
-						</div>
-						<div class="table-wrap table-wrap--ver2">
-							<table class="table">
-								<colgroup>
-									<col width="*">
-									<col width="*">
-									<col width="*">
-									<col width="*">
-									<col width="*">
-									<col width="*">
-									<col width="*">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>별칭</th>
-										<th>레이어1</th>
-										<th>레이어2</th>
-										<th>레이어3</th>
-										<th>레이어4</th>
-										<th>레이어5</th>
-										<th>관리</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="table__tr--selected">
-										<td><span class="bold">착빙운고</span></td>
-										<td>위성-착빙</td>
-										<td>위성-운고</td>
-										<td>METAR</td>
-										<td></td>
-										<td></td>
-										<td>
-											<div class="table__buttons">
-												<button type="button" class="table__button table__button--edit">
-													<img src="img/ico_edit.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">수정</span>
-												</button>
-												<button type="button" class="table__button table__button--delete">
-													<img src="img/ico_trash.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">삭제</span>
-												</button>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><span class="bold">착빙운고</span></td>
-										<td>위성-착빙</td>
-										<td>위성-운고</td>
-										<td>METAR</td>
-										<td></td>
-										<td></td>
-										<td>
-											<div class="table__buttons">
-												<button type="button" class="table__button table__button--edit">
-													<img src="img/ico_edit.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">수정</span>
-												</button>
-												<button type="button" class="table__button table__button--delete">
-													<img src="img/ico_trash.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">삭제</span>
-												</button>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><span class="bold">착빙운고</span></td>
-										<td>위성-착빙</td>
-										<td>위성-운고</td>
-										<td>METAR</td>
-										<td></td>
-										<td></td>
-										<td>
-											<div class="table__buttons">
-												<button type="button" class="table__button table__button--edit">
-													<img src="img/ico_edit.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">수정</span>
-												</button>
-												<button type="button" class="table__button table__button--delete">
-													<img src="img/ico_trash.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">삭제</span>
-												</button>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><span class="bold">착빙운고</span></td>
-										<td>위성-착빙</td>
-										<td>위성-운고</td>
-										<td>METAR</td>
-										<td></td>
-										<td></td>
-										<td>
-											<div class="table__buttons">
-												<button type="button" class="table__button table__button--edit">
-													<img src="img/ico_edit.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">수정</span>
-												</button>
-												<button type="button" class="table__button table__button--delete">
-													<img src="img/ico_trash.png" alt="" class="table__button-icon">
-													<span class="table__button-txt">삭제</span>
-												</button>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<button type="button" class="table-add-button">
-								<img src="img/ico_small_plus2.png" alt="">
-								<span>추가</span>
-							</button>
-						</div>
-					</div>
-					<div class="modal__content modal__content--mymenu2">
 						<div class="mymenu__title">
-							<p class="input-box__title">별칭 입력</p>
+							<p class="input-box__title">선택 레이어</p>
 							<div class="input-box">
 								<input type="text" class="input-box__input" placeholder="별칭 입력하기">
 							</div>
-						</div>						
+						</div>
 						<div class="mymenu__select">
-							<div class="table-wrap table-wrap--ver2">
+							<div class="table-wrap">
 								<table class="table">
 									<colgroup>
 										<col width="50">
@@ -693,7 +607,7 @@
 														class="check-box__input check-box__input--all">
 												</div>
 											</th>
-											<th>전체 레이어</th>
+											<th>레이어 명</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -744,7 +658,7 @@
 								<button type="button" class="mymenu__select-button--next"></button>
 								<button type="button" class="mymenu__select-button--prev"></button>
 							</div>
-							<div class="table-wrap table-wrap--ver2">
+							<div class="table-wrap">
 								<table class="table">
 									<colgroup>
 										<col width="50">
@@ -758,7 +672,7 @@
 														class="check-box__input check-box__input--all">
 												</div>
 											</th>
-											<th>선택 레이어</th>
+											<th>레이어 명</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -807,10 +721,174 @@
 							</div>
 						</div>
 					</div>
-					<div class="modal__button-box">
-						<button class="modal__button modal__button--typeA modal__confirm-button">닫기</button>
-						<button class="modal__button modal__button--typeB" id="mymenu__save-button">저장</button>
+					<div class="modal__content modal__content--mymenu2">
+						<div class="table-wrap">
+							<p class="table-title">맞춤레이어</p>
+							<table class="table">
+								<colgroup>
+									<col width="50">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+									<col width="*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input check-box__input--all">
+											</div>
+										</th>
+										<th>별칭</th>
+										<th>레이어1</th>
+										<th>레이어2</th>
+										<th>레이어3</th>
+										<th>레이어4</th>
+										<th>레이어5</th>
+										<th>관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="table__tr--selected">
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input" checked>
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button table__button--edit">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button table__button--delete">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button table__button--edit">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button table__button--delete">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button table__button--edit">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button table__button--delete">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button table__button--edit">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button table__button--delete">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="check-box">
+												<input type="checkbox" class="check-box__input">
+											</div>
+										</td>
+										<td>착빙운고</td>
+										<td>위성-착빙</td>
+										<td>위성-운고</td>
+										<td>METAR</td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="table__buttons">
+												<button type="button" class="table__button table__button--edit">
+													<img src="img/ico_edit.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">수정</span>
+												</button>
+												<button type="button" class="table__button table__button--delete">
+													<img src="img/ico_trash.png" alt="" class="table__button-icon">
+													<span class="table__button-txt">삭제</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button type="button" class="table-add-button">
+								<img src="img/ico_small_plus.png" alt="">
+								<span>추가</span>
+							</button>
+						</div>
 					</div>
+				</div>
+				<div class="modal__button-box">
+					<button class="modal__button modal__button--typeA modal__confirm-button">닫기</button>
+					<button class="modal__button modal__button--typeB" id="mymenu__save-button">저장</button>
 				</div>
 			</div>
 		</div>
@@ -1100,7 +1178,7 @@
 
 
 		<!-- dashboard modal -->
-		<div class="modal dashboard-modal" id="dashboard-modal1">
+		<div class="modal dashboard-modal modal--show" id="dashboard-modal1">
 			<div class="dashboard__head">
 				<img src="img/logo.png" alt="" class="dashboard__logo">
 				<button type="button" class="dashboard__close modal__close-button"></button>
@@ -1168,20 +1246,613 @@
 						<div class="dashboard__top-line"></div>
 					</div>
 					<div class="dashboard__subtop-box">
-						<p class="dashboard__subtop-title"></p>
-						<div class="swtich-wrap">
-							<div class="switch-box">
-								<label for="chk-decoded" class="switch-box__label">decoded</label>
-								<input type="checkbox" name="decoded" id="chk-decoded" class="switch-box__input">
-							</div>
-							<div class="switch-box">
-								<label for="chk-TAF" class="switch-box__label">Auto-TAF</label>
-								<input type="checkbox" name="decoded" id="chk-TAF" class="switch-box__input" checked>
-							</div>
-						</div>
+						<p class="dashboard__subtop-title">RKSI</p>
 					</div>
 					<div class="dashboard__cont-box">
-						<p class="dashboard__no-result">공항을 검색해주세요</p>
+						<div class="dashboard__amos">
+							<div class="dashboard__runway-wrap tabs">
+								<div class="dashboard-tabs__nav">
+									<div class="dashboard-tabs__nav-item dashboard-tabs__nav-item--active">15L</div>
+									<div class="dashboard-tabs__nav-item">33R</div>
+									<div class="dashboard-tabs__nav-item">33R</div>
+									<div class="dashboard-tabs__nav-item">33R</div>
+								</div>
+								<div class="dashboard-tabs__content">
+									<div class="dashboard-tabs__content-item dashboard-tabs__content-item--active">
+										<div class="dashboard__runway">
+											<div class="dashboard__runway-img">
+												<img src="img/runway.png" alt="">
+												<span class="dashboard__runway-img-txt">30</span>
+											</div>
+											<div class="dashboard__runway-text">
+												<p class="dashboard__runway-big">172°</p>
+												<div class="dashboard__runway-text-inner">
+													<p class="dashboard__runway-medium">
+														<span class="dashboard__runway-big">7</span>kt
+													</p>
+													<p class="dashboard__runway-small">
+														gust: <span class="dashboard__runway-color">8kt</span>
+													</p>
+												</div>
+											</div>
+											<div class="dashboard__runway-info">
+												<p class="dashboard__runway-info-top">6kt</p>
+												<p class="dashboard__runway-info-bottm">3kt</p>
+											</div>												
+										</div>
+										<div class="dashboard__amos1">
+											<div class="dashboard__info-box table-wrap">
+												<p class="dashboard__amos-title">바람</p>
+												<table class="table">
+													<thead>
+														<tr>
+															<th></th>
+															<th>평균</th>
+															<th>최소</th>
+															<th>최대</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>풍향</td>
+															<td>150</td>
+															<td>110</td>
+															<td>180</td>
+														</tr>
+														<tr>
+															<td>풍속</td>
+															<td>6.3</td>
+															<td>4.2</td>
+															<td>9.0</td>
+														</tr>
+														<tr>
+															<td>측풍(R/L)</td>
+															<td></td>
+															<td>L1</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>정풍배풍(+/-)</td>
+															<td></td>
+															<td>+7</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">MOR/RVR</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">MOR</p>
+														<p class="dashboard__info-item-dsec">100000</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">RVR</p>
+														<p class="dashboard__info-item-dsec">P20000</p>
+													</div>
+												</div>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">운고</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">1</p>
+														<p class="dashboard__info-item-dsec">2200</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">2</p>
+														<p class="dashboard__info-item-dsec">NCD</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="dashboard__amos2">
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													기온
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													이슬점 온도
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													강수량
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													신적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(hPa)
+												</p>
+												<p class="dashboard__weather-desc">
+													1023.4
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(inHg)
+												</p>
+												<p class="dashboard__weather-desc">
+													30.22
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-tabs__content-item">
+										<div class="dashboard__runway">
+											<div class="dashboard__runway-img">
+												<img src="img/runway.png" alt="">
+												<span class="dashboard__runway-img-txt">25</span>
+											</div>
+											<div class="dashboard__runway-text">
+												<p class="dashboard__runway-big">172°</p>
+												<div class="dashboard__runway-text-inner">
+													<p class="dashboard__runway-medium">
+														<span class="dashboard__runway-big">7</span>kt
+													</p>
+													<p class="dashboard__runway-small">
+														gust: <span class="dashboard__runway-color">8kt</span>
+													</p>
+												</div>
+											</div>
+											<div class="dashboard__runway-info">
+												<p class="dashboard__runway-info-top">6kt</p>
+												<p class="dashboard__runway-info-bottm">3kt</p>
+											</div>												
+										</div>
+										<div class="dashboard__amos1">
+											<div class="dashboard__info-box table-wrap">
+												<p class="dashboard__amos-title">바람</p>
+												<table class="table">
+													<thead>
+														<tr>
+															<th></th>
+															<th>평균</th>
+															<th>최소</th>
+															<th>최대</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>풍향</td>
+															<td>150</td>
+															<td>110</td>
+															<td>180</td>
+														</tr>
+														<tr>
+															<td>풍속</td>
+															<td>6.3</td>
+															<td>4.2</td>
+															<td>9.0</td>
+														</tr>
+														<tr>
+															<td>측풍(R/L)</td>
+															<td></td>
+															<td>L1</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>정풍배풍(+/-)</td>
+															<td></td>
+															<td>+7</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">MOR/RVR</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">MOR</p>
+														<p class="dashboard__info-item-dsec">100000</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">RVR</p>
+														<p class="dashboard__info-item-dsec">P20000</p>
+													</div>
+												</div>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">운고</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">1</p>
+														<p class="dashboard__info-item-dsec">2200</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">2</p>
+														<p class="dashboard__info-item-dsec">NCD</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="dashboard__amos2">
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													기온
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													이슬점 온도
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													강수량
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													신적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(hPa)
+												</p>
+												<p class="dashboard__weather-desc">
+													1023.4
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(inHg)
+												</p>
+												<p class="dashboard__weather-desc">
+													30.22
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-tabs__content-item">
+										<div class="dashboard__runway">
+											<div class="dashboard__runway-img">
+												<img src="img/runway.png" alt="">
+												<span class="dashboard__runway-img-txt">20</span>
+											</div>
+											<div class="dashboard__runway-text">
+												<p class="dashboard__runway-big">172°</p>
+												<div class="dashboard__runway-text-inner">
+													<p class="dashboard__runway-medium">
+														<span class="dashboard__runway-big">7</span>kt
+													</p>
+													<p class="dashboard__runway-small">
+														gust: <span class="dashboard__runway-color">8kt</span>
+													</p>
+												</div>
+											</div>
+											<div class="dashboard__runway-info">
+												<p class="dashboard__runway-info-top">6kt</p>
+												<p class="dashboard__runway-info-bottm">3kt</p>
+											</div>												
+										</div>
+										<div class="dashboard__amos1">
+											<div class="dashboard__info-box table-wrap">
+												<p class="dashboard__amos-title">바람</p>
+												<table class="table">
+													<thead>
+														<tr>
+															<th></th>
+															<th>평균</th>
+															<th>최소</th>
+															<th>최대</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>풍향</td>
+															<td>150</td>
+															<td>110</td>
+															<td>180</td>
+														</tr>
+														<tr>
+															<td>풍속</td>
+															<td>6.3</td>
+															<td>4.2</td>
+															<td>9.0</td>
+														</tr>
+														<tr>
+															<td>측풍(R/L)</td>
+															<td></td>
+															<td>L1</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>정풍배풍(+/-)</td>
+															<td></td>
+															<td>+7</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">MOR/RVR</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">MOR</p>
+														<p class="dashboard__info-item-dsec">100000</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">RVR</p>
+														<p class="dashboard__info-item-dsec">P20000</p>
+													</div>
+												</div>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">운고</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">1</p>
+														<p class="dashboard__info-item-dsec">2200</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">2</p>
+														<p class="dashboard__info-item-dsec">NCD</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="dashboard__amos2">
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													기온
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													이슬점 온도
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													강수량
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													신적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(hPa)
+												</p>
+												<p class="dashboard__weather-desc">
+													1023.4
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(inHg)
+												</p>
+												<p class="dashboard__weather-desc">
+													30.22
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-tabs__content-item">
+										<div class="dashboard__runway">
+											<div class="dashboard__runway-img">
+												<img src="img/runway.png" alt="">
+												<span class="dashboard__runway-img-txt">10</span>
+											</div>
+											<div class="dashboard__runway-text">
+												<p class="dashboard__runway-big">172°</p>
+												<div class="dashboard__runway-text-inner">
+													<p class="dashboard__runway-medium">
+														<span class="dashboard__runway-big">7</span>kt
+													</p>
+													<p class="dashboard__runway-small">
+														gust: <span class="dashboard__runway-color">8kt</span>
+													</p>
+												</div>
+											</div>
+											<div class="dashboard__runway-info">
+												<p class="dashboard__runway-info-top">6kt</p>
+												<p class="dashboard__runway-info-bottm">3kt</p>
+											</div>												
+										</div>
+										<div class="dashboard__amos1">
+											<div class="dashboard__info-box table-wrap">
+												<p class="dashboard__amos-title">바람</p>
+												<table class="table">
+													<thead>
+														<tr>
+															<th></th>
+															<th>평균</th>
+															<th>최소</th>
+															<th>최대</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>풍향</td>
+															<td>150</td>
+															<td>110</td>
+															<td>180</td>
+														</tr>
+														<tr>
+															<td>풍속</td>
+															<td>6.3</td>
+															<td>4.2</td>
+															<td>9.0</td>
+														</tr>
+														<tr>
+															<td>측풍(R/L)</td>
+															<td></td>
+															<td>L1</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>정풍배풍(+/-)</td>
+															<td></td>
+															<td>+7</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">MOR/RVR</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">MOR</p>
+														<p class="dashboard__info-item-dsec">100000</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">RVR</p>
+														<p class="dashboard__info-item-dsec">P20000</p>
+													</div>
+												</div>
+											</div>
+											<div class="dashboard__info-box">
+												<p class="dashboard__amos-title">운고</p>
+												<div class="dashboard__info-items">
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">1</p>
+														<p class="dashboard__info-item-dsec">2200</p>
+													</div>
+													<div class="dashboard__info-item">
+														<p class="dashboard__info-item-title">2</p>
+														<p class="dashboard__info-item-dsec">NCD</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="dashboard__amos2">
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													기온
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													이슬점 온도
+												</p>
+												<p class="dashboard__weather-desc">
+													14.7
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													강수량
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													신적설
+												</p>
+												<p class="dashboard__weather-desc">
+													-
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(hPa)
+												</p>
+												<p class="dashboard__weather-desc">
+													1023.4
+												</p>
+											</div>
+											<div class="dashboard__weather-box">
+												<p class="dashboard__weather-title">
+													QNH(inHg)
+												</p>
+												<p class="dashboard__weather-desc">
+													30.22
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>
 					</div>
 				</div>
 			</div>
