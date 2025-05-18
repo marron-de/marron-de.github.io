@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const isChecked = checkAll.checked;
         rows.forEach(row => {
           const checkbox = row.querySelector(".check-box__input");
-          if (checkbox) {
+          if (checkbox && checkbox.name === checkAll.name) {  // 같은 name 체크
             checkbox.checked = isChecked;
             row.classList.toggle("table__tr--selected", isChecked);
           }
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (checkAll) {
             const allChecked = Array.from(rows).every(r => {
               const cb = r.querySelector(".check-box__input");
-              return cb && cb.checked;
+              return cb && cb.checked && cb.name === checkAll.name;  // 같은 name 체크
             });
             checkAll.checked = allChecked;
           }
@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 
 
 // tabs 
@@ -183,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
-
 
 
 // quick panel
@@ -336,6 +334,135 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const selectWrap = document.querySelector(".mymenu__select");
+  if (!selectWrap) return;
+
+  const tables = selectWrap.querySelectorAll("table.table");
+  if (tables.length < 2) return;
+
+  const leftTable = tables[0];
+  const rightTable = tables[1];
+
+  const btnNext = selectWrap.querySelector(".mymenu__select-button--next");
+  const btnPrev = selectWrap.querySelector(".mymenu__select-button--prev");
+
+  // 체크박스 name 세팅 함수
+  function setCheckboxNames(table, name) {
+    const checkAll = table.querySelector(".check-box__input--all");
+    if (checkAll) checkAll.name = name;
+
+    const checkboxes = table.querySelectorAll("tbody input[type='checkbox']");
+    checkboxes.forEach(cb => {
+      if (!cb.classList.contains("check-box__input--all")) {
+        cb.name = name;
+      }
+    });
+  }
+
+  // 전체 선택 체크박스 업데이트
+  function updateCheckAll(table) {
+    const checkAll = table.querySelector(".check-box__input--all");
+    if (!checkAll) return;
+
+    const name = checkAll.name;
+    const rows = table.querySelectorAll("tbody tr");
+    const allChecked = Array.from(rows).every(row => {
+      const cb = row.querySelector(`input[type='checkbox'][name="${name}"]`);
+      return cb && cb.checked;
+    });
+    checkAll.checked = allChecked;
+  }
+
+  // 행 이동 함수
+  function moveRows(fromTable, toTable) {
+    const selectedRows = fromTable.querySelectorAll("tbody tr.table__tr--selected");
+    if (selectedRows.length === 0) return;
+
+    const fromName = fromTable.querySelector(".check-box__input--all").name;
+    const toName = toTable.querySelector(".check-box__input--all").name;
+
+    selectedRows.forEach(row => {
+      row.classList.remove("table__tr--selected");
+      const checkbox = row.querySelector(`input[type='checkbox'][name="${fromName}"]`);
+      if (checkbox) {
+        checkbox.checked = false;
+        checkbox.name = toName;  // 이름 변경
+      }
+      toTable.querySelector("tbody").appendChild(row);
+    });
+
+    updateCheckAll(fromTable);
+    updateCheckAll(toTable);
+  }
+
+  // 이벤트 위임 세팅
+  function setupDelegatedEvents(table) {
+    const checkAll = table.querySelector(".check-box__input--all");
+    if (!checkAll) return;
+
+    const name = checkAll.name;
+
+    // 전체선택 클릭 시
+    checkAll.addEventListener("change", () => {
+      const isChecked = checkAll.checked;
+      const rows = table.querySelectorAll("tbody tr");
+      rows.forEach(row => {
+        const cb = row.querySelector(`input[type='checkbox'][name="${name}"]`);
+        if (cb) {
+          cb.checked = isChecked;
+          row.classList.toggle("table__tr--selected", isChecked);
+        }
+      });
+    });
+
+    const tbody = table.querySelector("tbody");
+
+    // 체크박스 클릭 이벤트 (이벤트 위임)
+    tbody.addEventListener("change", e => {
+      const target = e.target;
+      if (target.matches(`input[type='checkbox'][name="${name}"]`)) {
+        const row = target.closest("tr");
+        if (!row) return;
+        row.classList.toggle("table__tr--selected", target.checked);
+        updateCheckAll(table);
+      }
+    });
+
+    // 행 클릭시 체크박스 토글
+    tbody.addEventListener("click", e => {
+      const target = e.target;
+      const row = target.closest("tr");
+      if (!row) return;
+      if (!target.matches(`input[type='checkbox'][name="${name}"]`)) {
+        const cb = row.querySelector(`input[type='checkbox'][name="${name}"]`);
+        if (cb) {
+          cb.checked = !cb.checked;
+          row.classList.toggle("table__tr--selected", cb.checked);
+          updateCheckAll(table);
+        }
+      }
+    });
+  }
+
+  // 초기 name 세팅
+  setCheckboxNames(leftTable, "leftGroup");
+  setCheckboxNames(rightTable, "rightGroup");
+
+  // 이벤트 세팅
+  setupDelegatedEvents(leftTable);
+  setupDelegatedEvents(rightTable);
+
+  // 버튼 클릭 이벤트
+  btnNext?.addEventListener("click", () => {
+    moveRows(leftTable, rightTable);
+  });
+
+  btnPrev?.addEventListener("click", () => {
+    moveRows(rightTable, leftTable);
+  });
+});
+
 
 
 // symbol modal
