@@ -171,7 +171,8 @@
 .layout--metar .time-controls {right: -1.313rem;}
 .layout--metar.layout--collapsed .time-controls { right: 7.719rem;}
 .layout__right-box--metar { width: 27.75rem;}
-.menu-box__metar { width: 19.375rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; background: rgba(0, 0, 0, 0.25);}
+.menu-box__metar { width: 19.375rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; background: rgba(0, 0, 0, 0.25); overflow: auto;}
+.menu-box__metar::-webkit-scrollbar {display: none;}
 .menu-box__metar-top { width: 100%;  border-bottom: 1px solid #e8e8e8;  padding: 1.875rem 1.25rem 0.938rem; display: flex;  align-items: flex-end;  justify-content: space-between;}
 .menu-box__metar-title { display: flex; flex-direction: column;  gap: 0.156rem;}
 .menu-box__metar-title--kr { font-size: 1.156rem; font-weight: 700;  color: #fff;  line-height: 1.2;}
@@ -427,13 +428,8 @@ color: var(--color);}
 
 
 
-/* 태블릿 가로 모드 (1024px 이하) */
-@media screen and (orientation: landscape) {
-  
-}
 
-
-/* 태블릿 세로 모드 (1024px 이하) */
+/* 태블릿 세로 모드 */
 @media screen and (orientation: portrait) {
 
 	/* 레이아웃 */
@@ -442,19 +438,15 @@ color: var(--color);}
 	.layout__right-box { width: 100%; height: unset; flex-direction: column;}
 	.layout--collapsed .layout__right-box {  width: 100%;}
 
-
 	/* 헤더 */
 	.header {  top: 1.375rem; left: 1.563rem;}
-
 
 	/* 범례 */
 	.legend { left: 1.219rem}
 
-
 	/* 고도 */
 	.screen-controls {bottom: 1.875rem; left: 1.188rem;  gap: 4.156rem;}
 	.screen-controls__buttons {  gap: 0.969rem;}
-
 
 	/* 시간 컨트롤 */
 	.time-controls { right: 2.844rem; bottom: 1.875rem;}
@@ -462,14 +454,11 @@ color: var(--color);}
 	.layout--metar .time-controls { right: 2.844rem;}
 	.layout--metar.layout--collapsed .time-controls { right: 2.844rem;}
 
-
 	/* 레이어 컨트롤 */
 	.layer-controls { width: 9.156rem;  right: 2.844rem;}
-
   
 	/* 퀵매뉴얼*/
 	.quick-manual { width: 100%; height: calc(100% + 2.75rem + 4.188rem);  padding: 22.469rem 0 6.969rem;}
-
 
 	/* 메뉴 */
 	.menu-buttons { margin-top: 0;  margin-right: 1.25rem;  transform: rotate(-90deg);   min-height: 2.75rem;  align-self: flex-end;  border-radius: 0 0.313rem 0.313rem 0;  border-right: 1px solid #202020;  border-left: 0;}
@@ -505,7 +494,6 @@ color: var(--color);}
 	
 	.layout--collapsed .layout__right-box .menu-box__list {max-height: 0;}
 	.layout--collapsed .layout__right-box .menu-box__layer-button {opacity: 0; transform: translateY(100%);}
-
 	
 	/* METAR-METAR/TAF탭 메뉴 */
 	.menu-box__metar { width: 100%; height: auto; max-height: 33.594rem; transition: all 0.4s ease;}
@@ -522,13 +510,11 @@ color: var(--color);}
 	.metar__runway { min-height: 14.219rem;}
 	.layout--metar.layout--collapsed .menu-box__metar {max-height: 0;}
 
-
 	/* My menu 설정 */
 	.mymenu2-modal .modal__head { padding: 1rem 1.25rem;}
 	.mymenu2-modal .modal__content--mymenu1 .table-wrap { padding: 0 1.25rem;}
 	.mymenu2-modal .mymenu__title {  padding: 1rem 1.25rem;}
 	.mymenu2-modal .mymenu__select { padding: 0 1.25rem;}
-
 	
 	/* 기호 정보 모달 */
 	#symbol-modal .tabs__content--sigmet .sigmet__item { width: calc(100% / 8);}
@@ -538,7 +524,6 @@ color: var(--color);}
 	#symbol-modal .tabs__content--flight .flight__item { padding-right: 0;}
 	#symbol-modal .tabs__content--flight .flight__title { flex-direction: column;   align-items: flex-start;  gap: 0.313rem;}
 	#symbol-modal .tabs__content--airplane .airplane__item { width: 10.813rem;}
-
 
 	/* 대시보드 모달 */
 	.dashboard-modal { padding: 1.75rem 1.25rem 1.25rem; gap: 1.594rem;}
@@ -560,4 +545,12 @@ color: var(--color);}
 	.dashboard__weather-box:nth-child(4n) {  border-top: 1px solid #dadada;}
 	.dashboard__weather-box:nth-child(even) { border-right: 0;}
   	
+}
+
+/* 태블릿 세로 모드 (820px 이하) */
+@media screen and (max-width: 820px) and (orientation: portrait) {
+
+    .screen-controls {bottom: 1rem;  gap: 2rem; }
+	.time-controls {bottom: 1rem;}
+
 }
