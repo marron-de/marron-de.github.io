@@ -13,7 +13,6 @@ $(document).ready(function () {
 		$(".nav_box").removeClass("open");
 	})
 });
-
 $(document).mouseup(function (e) {
 	if ($(".nav_box").has(e.target).length === 0) {
 		$("body").removeClass("hidden");
@@ -75,7 +74,7 @@ $(document).mouseup(function (e) {
 
 	// navbox
 	$(function () {
-		lnbUI.click('#nav li', 400)
+		lnbUI.click('.accordion li', 400)
 	});
 
 }(jQuery));
@@ -102,15 +101,69 @@ $(document).ready(function () {
 });
 
 
-/* modal */
+// modal
 $(".modal .modal_close").click(function () {
 	$("body").removeClass("hidden")
 	$(".modal").removeClass("show")
 })
-
 $(document).mouseup(function (e) {
 	if ($(".modal .modal_box").has(e.target).length === 0) {
 		$("body").removeClass("hidden")
 		$(".modal").removeClass("show")
+	}
+});
+
+
+
+// 공연예매 필터
+$(document).ready(function () {
+  $(".tk_list_wrap .filter .ft_btn").click(function () {
+	$(".tk_list_wrap .filter").removeClass("selected");
+    $(this).closest(".filter").toggleClass("selected");
+  });
+});
+$(document).mouseup(function (e) {
+	if ($(".tk_list_wrap .filter").has(e.target).length === 0) {
+		$(".tk_list_wrap .filter").removeClass("selected");
+	}
+});
+
+
+
+// 좌석선택
+$(document).ready(function () {
+  $(".seat_modal .seat_list .titbox").click(function () {
+	$(".seat_modal .seat_list").toggleClass("show");
+  });
+});
+
+
+
+// 예매취소_카드
+$(document).ready(function () {
+  $('#seatAll').on('change', function () {
+    const isChecked = $(this).is(':checked');
+    $('input[name="seat"]').not(this).prop('checked', isChecked);
+  });
+
+  $('input[name="seat"]').not('#seatAll').on('change', function () {
+    const total = $('input[name="seat"]').not('#seatAll').length;
+    const checked = $('input[name="seat"]:checked').not('#seatAll').length;
+
+    $('#seatAll').prop('checked', total === checked);
+  });
+});
+
+
+
+// 감상하기
+$(document).ready(function() {
+	$(".tk_watch_wrap .opt_btn").click(function () {
+		$(this).siblings(".opt_popup").addClass("show")
+	})
+});
+$(document).mouseup(function (e) {
+	if ($(".opt_popup").has(e.target).length === 0 ) {
+		$(".opt_popup").removeClass("show")
 	}
 });
