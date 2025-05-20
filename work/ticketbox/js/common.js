@@ -1,16 +1,18 @@
 
-// header navbox button 
-function m_menu_ope() {
-	$("body").addClass("hidden");
-	$(".header").addClass("open");
-	$(".nav_box").addClass("open");
-}
+// navbox button 
+$(document).ready(function () {
+	$(".header .menu_btn").click(function () {
+		$("body").addClass("hidden");
+		$(".header").addClass("open");
+		$(".nav_box").addClass("open");
+	})
 
-function m_menu_clo() {
-	$("body").removeClass("hidden");
-	$(".header").removeClass("open");
-	$(".nav_box").removeClass("open");
-}
+	$(".nav_box .nav_close").click(function () {
+		$("body").removeClass("hidden");
+		$(".header").removeClass("open");
+		$(".nav_box").removeClass("open");
+	})
+});
 
 $(document).mouseup(function (e) {
 	if ($(".nav_box").has(e.target).length === 0) {
@@ -81,9 +83,7 @@ $(document).mouseup(function (e) {
 
 // tab function
 $(document).ready(function () {
-
 	$(".tab_nav").click(function () {
-
 		let target = $(this);
 		let tabNavbox = target.closest('ul')
 		let tabNav = tabNavbox.find(".tab_nav")
@@ -98,59 +98,7 @@ $(document).ready(function () {
 
 		tabCont.removeClass("on")
 		tabCont.eq(idx).addClass("on")
-
 	})
-
-});
-
-
-// datepicker 설정
-$(document).ready(function () {
-	if ($(".datepicker").length) {
-		$.datepicker.setDefaults({
-			closeText: "닫기",
-			prevText: "이전달",
-			nextText: "다음달",
-			currentText: "오늘",
-			monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-			monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-			dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
-			dayNamesShort: ["S", "M", "T", "W", "T", "F", "S"],
-			dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
-			weekHeader: "주",
-			dateFormat: "yy-mm-dd",
-			firstDay: 0,
-			isRTL: false,
-			showMonthAfterYear: true,
-			yearSuffix: "년"
-		});
-
-		$(".datepicker").datepicker({
-			maxDate: 'today'
-		});
-	}
-});
-
-
-// layout
-$(window).on('resize', function() {
-    const windowWidth = $(window).width();
-    const maxWidth = 1280;
-    const widthPercentage = 0.9;
-
-    let calculatedWidth = windowWidth * widthPercentage;
-    if (calculatedWidth > maxWidth) {
-        calculatedWidth = maxWidth;
-    }
-
-    const marginLeft = (windowWidth - calculatedWidth) / 2;
-
-    $('body').css('--margin-left', marginLeft + 'px');
-    $('body').css('--margin-right', marginLeft + 'px');
-});
-
-$(document).ready(function() {
-    $(window).trigger('resize');
 });
 
 
