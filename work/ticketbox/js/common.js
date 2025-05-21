@@ -3,12 +3,14 @@
 $(document).ready(function () {
 	$(".header .menu_btn").click(function () {
 		$("body").addClass("hidden");
+		$("body").addClass("shadow");
 		$(".header").addClass("open");
 		$(".nav_box").addClass("open");
 	})
 
 	$(".nav_box .nav_close").click(function () {
 		$("body").removeClass("hidden");
+		$("body").removeClass("shadow");
 		$(".header").removeClass("open");
 		$(".nav_box").removeClass("open");
 	})
