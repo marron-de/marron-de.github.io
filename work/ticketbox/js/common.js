@@ -127,7 +127,10 @@ $(document).mouseup(function (e) {
 		$(".tk_list_wrap .filter").removeClass("selected");
 	}
 });
-
+$(".tk_list_wrap .mob_filter .ft_btn").click(function () {
+	$("body").addClass("hidden")
+	$(".filter_modal").addClass("show")
+})
 
 
 // 좌석선택
@@ -156,14 +159,39 @@ $(document).ready(function () {
 
 
 
+// FAQ
+const faq_tabs = new Swiper(".tk_faq_wrap .faq_tabs", {
+	slidesPerView: 'auto',
+	spaceBetween: 24,
+	breakpoints: {
+		1080: {
+			spaceBetween: 50
+		},
+	}
+});
+
+
+
 // 감상하기
 $(document).ready(function() {
-	$(".tk_watch_wrap .opt_btn").click(function () {
+	$(".tk_watch_wrap .opt_btn").click(function () {		
+		$("body").addClass("shadow")
 		$(this).siblings(".opt_popup").addClass("show")
 	})
 });
 $(document).mouseup(function (e) {
 	if ($(".opt_popup").has(e.target).length === 0 ) {
+		$("body").removeClass("shadow")
 		$(".opt_popup").removeClass("show")
+	}
+});
+
+const stage_box = new Swiper(".tk_watch_wrap .slide_box", {
+	slidesPerView: 'auto',
+	spaceBetween: 18,
+	breakpoints: {
+		1080: {
+			spaceBetween: 42
+		},
 	}
 });
