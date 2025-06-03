@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>샘플</title>
+    <title>RAMBLE</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -16,8 +19,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <!-- jquery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
+	<!-- gsap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/common.css">
@@ -25,11 +29,10 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="css/Pretendard.css">
+	<link rel="stylesheet" href="https://use.typekit.net/cwp0tvg.css">	
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"/>
+
 
 </head>
 
@@ -39,33 +42,23 @@
     <div class="wrap">
 
         <!-- header -->
-        <header class="header" id="header">
+        <header class="header">
             <div class="inner h_inner">
                 <div class="h_logo">
-                    <a href="index.php">
+                    <a href="index.html">
                         <img src="img/logo.png" alt="" />
                     </a>
                 </div>
                 <ul class="h_nav">
-                    <li>
-                        <a href="" class="link">
-                            <span>메뉴</span>
-                        </a>
-                        <ul class="h_nav_ul">
-                            <li>
-                                <a href="" class="link">메뉴</a>
-                            </li>
-                            <li>
-                                <a href="" class="link">메뉴</a>
-                            </li>
-                            <li>
-                                <a href="" class="link">메뉴</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><a href="#none" class="link">key benefits</a></li>
+                    <li><a href="#none" class="link">products</a></li>  
+                    <li><a href="#none" class="link">faq</a></li>
                 </ul>
                 <div class="h_side">
-
+					<a href="#none" class="more_btn shop_btn">shop now</a>
+                	<div class="nav_open" onclick="m_menu_ope();">
+						<i class="ph-bold ph-list"></i>
+					</div>
                 </div>
             </div>
         </header>
@@ -73,82 +66,663 @@
         <!-- nav box -->
         <div class="nav_box">
             <div class="nav_head">
-                <div class="nav_close" onclick="m_menu_clo();">
-                    <i class="xi-close"></i>
-                </div>
-                <ul class="top_nav">
-                    <li class="lang_box">
-                        <a href="#none">
-                            한국어
-                        </a>
-                        <a href="">
-                            English
-                        </a>
-                    </li>
-                </ul>
+				<div class="nav_logo">
+					<img src="img/logo.png" alt="">
+				</div>
+				<div class="nav_close" onclick="m_menu_clo();">
+					<i class="ph-bold ph-x"></i>
+				</div>
             </div>
             <ul id="nav" class="nav">
-                <li>
-                    <a href="" class="link acc_tit">
-                        메뉴 <div class="plus"></div>
-                    </a>
-                    <ul class="nav_ul">
-                        <li>
-                            <a href="">메뉴</a>
-                        </li>
-                        <li>
-                            <a href="">메뉴</a>
-                        </li>
-                        <li>
-                            <a href="">메뉴</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+				<li><a href="#none" class="link">key benefits</a></li>
+				<li><a href="#none" class="link">products</a></li>  
+				<li><a href="#none" class="link">faq</a></li>
+            </ul>			
+			<div class="more_box">
+				<a href="#none" class="more_btn shop_btn ver3">shop now</a>
+			</div>
         </div>
 
         <!-- main section -->
         <div class="container">
 
-            <section class="main_section ms1 customScrollbar">
-                <div class="inner">
-                    <div class="select_box">
-                        <select class="select2 select" data-th="선택해주세요">
-                            <option value="" data-hidden="true">선택해주세요</option>
-                            <option value="선택1">선택1</option>
-                            <option value="선택2">선택2</option>
-                            <option value="선택3">선택3</option>
-                        </select>
-                    </div>
-                    <div class="input_box">
-                        <input type="text" class="input_text datepicker">
-                    </div>
+            <section class="main_section sequence ms1">
+				<video id="ms1_video" class="ms1_video" src="video/ms1_video.mp4" loop  muted autoplay playsinline></video>
+				<div class="bg"></div>
+				<div class="txtbox">
+					<p class="tit" data-aos="fade-down" data-aos-anchor=".ms1">
+						Embrace the freedom <br class="tablet">
+						to work & <br class="pc"> travel <br class="tablet">
+						 without limitations
+					</p>
+					<p class="desc" data-aos="fade-down" data-aos-delay="400" data-aos-anchor=".ms1">
+						With the first no-compromise portable office solution—keeping you productive while <br class="pc">
+						on the move, giving you more time to soak in breathtaking views, <br class="pc">
+						recharge, and unwind.
+					</p>
+					<div class="more_box" data-aos="fade-down" data-aos-delay="800" data-aos-anchor=".ms1">
+						<a href="#none" class="more_btn">shop now</a>
+					</div>
+				</div>
+            </section>
+
+            <section class="main_section sequence ms2" data-progress-in="1">
+				<div class="ms2_visual">
+					<div class="img img1">
+						<img src="img/ms2_blue.png" alt="">
+					</div>
+					<div class="img img2">
+						<img src="img/ms2_black.png" alt="">
+					</div>
+					<div class="txtbox">
+						<p class="tit">RAMBLE</p>
+						<p class="desc">Your Office, Anywhere</p>
+					</div>
+				</div>
+				<div class="pinbox"></div>
+            </section>
+
+            <section class="main_section sequence ms3" data-progress-in="1">
+                <div class="inner contwrap">
+					<div class="contbox">
+						<div class="txtbox" data-aos="fade-right">
+							<p class="sub">Key benefits 01</p>
+							<p class="tit">
+								Your Office Anywhere <br class="tablet">
+								in minutes
+							</p>
+							<p class="desc">
+								The Destination allows you to be flexible in where you work without having to sacrifice productivity. Set your office up anywhere in under 5 minutes. Giving you the freedom to work from where you want.
+							</p>
+						</div>
+						<div class="imgbox" data-aos="fade-left">
+							<img src="img/ms3_img1.png" alt="">
+						</div>
+					</div>
+					<div class="contbox">
+						<div class="txtbox" data-aos="fade-left">
+							<p class="sub">Key benefits 02</p>
+							<p class="tit">
+								Full no compromise<br class="tablet">
+								 office setup
+							</p>
+							<p class="desc">
+								Bring your full office setup wherever you go with the Ramble Destination Travel Trunk. The Destination comes equipped with dual 24-inch monitors, a high-definition webcam, and a versatile USB C hub, this trunk ensures you have all the tools you need to maintain peak productivity, no matter where your journey takes you.
+							</p>
+						</div>
+						<div class="imgbox" data-aos="fade-right">
+							<img src="img/ms3_img2.png" alt="">
+						</div>
+					</div>
+					<div class="contbox">
+						<div class="txtbox" data-aos="fade-right">
+							<p class="sub">Key benefits 03</p>
+							<p class="tit">Patent Pending Slide pack</p>
+							<p class="desc">
+								The patent-pending SlidePack is a modular foam insert that secures all your office essentials in custom compartments—minimizing movement, cushioning impacts, and keeping everything perfectly organized. It smoothly slides out for rapid setup and locks inside a TSA-approved, secure shell, so your mobile workspace always travels protected and ready to go.
+							</p>
+						</div>
+						<div class="imgbox" data-aos="fade-left">
+							<img src="img/ms3_img3.png" alt="">
+						</div>
+					</div>
+					<div class="contbox">
+						<div class="txtbox" data-aos="fade-left">
+							<p class="sub">Key benefits 04</p>
+							<p class="tit">High Quality Components meet innovative Design</p>
+							<p class="desc">
+								Bring your full office setup wherever you go with the Ramble Destination Travel Trunk. The Destination comes equipped with dual 24-inch monitors, a high-definition webcam, and a versatile USB C hub, this trunk ensures you have all the tools you need to maintain peak productivity, no matter where your journey takes you.
+							</p>
+						</div>
+						<div class="imgbox" data-aos="fade-right">
+							<img src="img/ms3_img4.png" alt="">
+						</div>
+					</div>
+					<div class="contbox">
+						<div class="txtbox" data-aos="fade-right">
+							<p class="sub">Key benefits 05</p>
+							<p class="tit">Built with durability in mind</p>
+							<p class="desc">
+								Featuring a scratch-resistant polycarbonate shell and a sturdy aluminum trolley, the Ramble Destination Travel Trunk offers a durable yet elegant solution for modern travelers, ensuring productivity on the go.
+							</p>
+						</div>
+						<div class="imgbox" data-aos="fade-left">
+							<img src="img/ms3_img5.png" alt="">
+						</div>
+					</div>
+					<div class="contbox">
+						<div class="txtbox" data-aos="fade-left">
+							<p class="sub">Key benefits 06</p>
+							<p class="tit">Abundant Storage Space</p>
+							<p class="desc">
+								With over 3,600 cubic inches or 59 liters of storage, the Ramble Destination Travel Trunk offers you more storage than your average carryon. giving you ample space for your personal items, keeping everything organized and ready for your journey.
+							</p>
+						</div>
+						<div class="imgbox" data-aos="fade-right">
+							<img src="img/ms3_img6.png" alt="">
+						</div>
+					</div>
                 </div>
             </section>
 
-            <section class="main_section ms2">
+            <section class="main_section sequence ms4" data-progress-in="1">
                 <div class="inner">
+					<div class="titbox" data-aos="fade-down">
+						<p class="tit">Package Contents</p>
+					</div>
+					<div class="contbox">
+						<div class="item" data-aos="fade-down">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img1.png" alt="">
+									<div class="colorchip">
+										<span class="color color1"></span>
+										<span class="color color2"></span>
+									</div>
+								</div>
+								<div class="txtbox">
+									<p class="tit">Destination Travel Trunk</p>
+									<p class="desc">
+										Our Flagship luggage with a full office setup
+										for productive travel anywhere.
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down" data-aos-delay="200">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img2.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit">Patent Pending Slidepack</p>
+									<p class="desc">
+										Our patent pending insert system that <br>
+										safely stores and deploys your full mobile office.
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down" data-aos-delay="400">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img3.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit">Dual Monitors</p>
+									<p class="desc">
+										Two portable 24" displays for a full, <br>
+										high-efficiency remote workspace.
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img4.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit">1080p Webcam</p>
+									<p class="desc">
+										A compact 1080p webcam, so you <br>
+										can meet effectively
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down" data-aos-delay="200">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img5.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit">13 in 1 USB C hub</p>
+									<p class="desc">
+										All-in-one USB-C hub connecting monitors, <br>
+										devices, and accessories.
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down" data-aos-delay="400">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img6.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit">Wireless Silent Touch Keyboard</p>
+									<p class="desc">
+										Quiet, wireless keyboard designed for <br>
+										smooth typing anywhere.
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img7.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit">Wireless mouse</p>
+									<p class="desc">
+										Precision wireless mouse for easy, <br>
+										on-the-go navigation.
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down" data-aos-delay="200">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img8.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit">Power outlet</p>
+									<p class="desc">
+										Compact hub with 6 and 4 USB ports,<br>
+										to keep your gear charged and ready 
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="item" data-aos="fade-down" data-aos-delay="400">
+							<a href="#none" class="link">
+								<div class="imgbox">
+									<img src="img/ms4_img9.png" alt="">
+								</div>
+								<div class="txtbox">
+									<p class="tit ver2">Power supply and <br class="tablet">connectivity cords</p>
+									<p class="desc">
+										Making sure that all of your gear is powered, <br>
+										connected and ready to go
+									</p>
+								</div>
+							</a>
+						</div>
+					</div>
                 </div>
             </section>
 
-        </div>
-
-        <!-- footer -->
-        <footer class="footer">
-            <div class="inner f_inner">
-
-            </div>
-        </footer>
-
-        <!-- modal -->
-        <div class="modal">
-            <div class="modal_box">
-                <p class="modal_tit">타이틀</p>
-                <p class="modal_desc">설명 텍스트입니다.</p>
-                <div class="modal_btnbox">
-                    <button class="modal_btn typeB modal_close">확인</button>
+            <section class="main_section sequence ms5" data-progress-in="1">
+                <div class="inner">
+					<div class="contbox">
+						<div class="imgbox" data-aos="fade-right">
+							<img src="img/ms5_img1.png" alt="" class="img on">
+							<img src="img/ms5_img2.png" alt="" class="img">
+						</div>
+						<div class="txtbox" data-aos="fade-left">
+							<span class="badge">RAMBLE</span>
+							<p class="name">The Destination Travel Trunk</p>
+							<p class="price">$1,325.00</p>
+							<div class="thumbox">
+								<li class="on"><img src="img/ms5_thum1.png" alt=""></li>
+								<li><img src="img/ms5_thum2.png" alt=""></li>
+							</div>
+							<div class="more_box">
+								<a href="#none" class="more_btn ver3">shop now</a>
+							</div>
+							<ul class="accordion">
+								<li class="show">
+									<div class="acc_tit">
+										<p class="tit">Product Description</p>
+										<div class="arrow"></div>
+									</div>
+									<ul class="acc_cont" style="display: block;">
+										The Ramble Destination Travel Trunk is the ultimate travel companion for mobile professionals, combining secure luggage with a complete office setup in a sleek, durable case. It supports executives, sales teams, remote workers, digital nomads and creative professionals who demand efficiency, security and mobility. The Patent pending SlidePack organizes dual 24inch monitors, HD webcam and USB-C hub in custom compartments for a quick setup. It is built to endure frequent travel and protect your gear, So when you get to your destination you can get your work done and have more time to soak in breathtaking views, recharge, and unwind.
+									</ul>
+								</li>
+								<li>
+									<div class="acc_tit">
+										<p class="tit">Dimensions & Weight</p>
+										<div class="arrow"></div>
+									</div>
+									<ul class="acc_cont">
+										Dimensions: (65cm x 45cm x 42cm) or (25.5in x 17.7in x 16.5in) <br>
+										Packed Weight: 30 lbs. (13.6 kg) <br>
+										Unpacked Weight: 21 lbs. (9.5 kg) <br>
+										Compliant with 70 major airline size requirements for checked baggage.
+									</ul>
+								</li>
+								<li>
+									<div class="acc_tit">
+										<p class="tit">Material and Construction</p>
+										<div class="arrow"></div>
+									</div>
+									<ul class="acc_cont">
+										Frame: Aluminum frame, providing a sturdy exterior with enhanced security. <br>
+										Shell: Full polycarbonate; tough and scratch-resistant, protecting contents from impact and environmental factors. <br>
+										Aluminum corner protectors to help reduce damage to the shell in transit to your destination 
+									</ul>
+								</li>
+								<li>
+									<div class="acc_tit">
+										<p class="tit">Security Features</p>
+										<div class="arrow"></div>
+									</div>
+									<ul class="acc_cont">
+										Locks: TSA-approved security latches for hassle-free travel through airport security.
+										<br>
+										Structure: Aluminum frame complements the polycarbonate shell, fortifying the trunk against physical damage while securing contents with integrated combination locks.
+									</ul>
+								</li>
+								<li>
+									<div class="acc_tit">
+										<p class="tit">Storage and Organization</p>
+										<div class="arrow"></div>
+									</div>
+									<ul class="acc_cont">
+										Capacity: 3600 cubic inches of internal space for personal items. <br>
+										Design: Modern sleek look with a customized trolley to accommodate our patent pending Slidepack for office equipment. <br>
+										Protection: Internally padded to safeguard electronic and delicate equipment.
+									</ul>
+								</li>
+								<li>
+									<div class="acc_tit">
+										<p class="tit">Slidepack</p>
+										<div class="arrow"></div>
+									</div>
+									<ul class="acc_cont">
+										Made of heavy-duty EVA foam lined with thick PP sheets for rigidity and additional protection for components <br>
+										Covered in a Tear resistant 700D nylon fabric Tote
+										<br>
+										Features: External pockets for equipment cables; internal compartments structured for organizing included office equipment:
+									</ul>
+								</li>
+								<li>
+									<div class="acc_tit">
+										<p class="tit">Included Office Equipment</p>
+										<div class="arrow"></div>
+									</div>
+									<ul class="acc_cont">
+										Monitors: Two 24-inch screens with 1920x1080 resolution, 75Hz refresh rate, 300 nit brightness. Interface options include HDMI, DP, and USB. <br>
+										Webcam: 1080p resolution, autofocus capability, and background noise elimination features. <br>
+										USB C Hub: 13-in-1 functionality with USB-C PD charging (up to 100W), data transmission, dual HDMI supporting 1080p at 75Hz, Ethernet (1000MB/s), SD and micro-SD slots, and multiple USB ports for comprehensive connectivity. <br>
+										Keyboard & Mouse: Silent wireless keyboard and mouse combo. <br>
+										Power Outlet: Includes three-prong outlets and USB ports for versatile charging solutions.
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
                 </div>
-            </div>
+            </section>
+
+            <section class="main_section sequence ms6" data-progress-in="1">
+                <div class="inner">
+					<div class="titbox" data-aos="fade-down">
+						<p class="tit">Feel the Freedom to Work Anywhere with RAMBLE</p>
+						<p class="desc">
+							Set up your personal office instantly in cafés, hotels, airport lounges, and more. RAMBLE revolutionizes mobility and expands your workspace wherever you go. By simply following us, you’ll get early access to product launches, limited-time events, helpful usage tips, and much more. Stay connected with RAMBLE through our official account!
+						</p>
+					</div>
+					<div class="snsbox" data-aos="fade-down">
+						<a href="https://www.facebook.com/profile.php?id=61558512230591" class="snsimg" target="_blank">
+							<img src="img/ms6_sns1.png" alt="">
+						</a>
+						<a href="https://www.instagram.com/rambleofficeanywhere/" class="snsimg" target="_blank">
+							<img src="img/ms6_sns2.png" alt="">
+						</a>
+						<a href="https://www.tiktok.com/@rambleofficeanywhere" class="snsimg" target="_blank">
+							<img src="img/ms6_sns3.png" alt="">
+						</a>
+					</div>
+					<div class="bottombox" data-aos="fade-down">
+						<div class="bar"></div>
+						<p class="tit">Explore More Stories</p>
+						<p class="desc">
+							Discover real stories from travel, business trips, and remote work. <br class="pc">
+							See how RAMBLE is changing the way people live and work!
+						</p>
+						<div class="more_box">
+							<a href="#none" class="more_btn ver2">
+								<span class="txt">watch more video</span>
+								<div class="arrow"></div>
+							</a>
+						</div>
+					</div>
+                </div>
+            </section>
+
+            <section class="main_section sequence ms7" data-progress-in="1">
+                <div class="inner">
+					<div class="contbox">
+						<div class="left">
+							<div class="titbox" data-aos="fade-right">
+								<p class="tit">
+									Take a Closer Look at <br>
+									RAMBLE's Fine 				
+									<span class="bold">Details</span>
+								</p>
+								<p class="desc">
+									Explore every carefully designed aspect of RAMBLE through detailed photos. Experience the perfect blend of style and functionality up close.
+								</p>
+							</div>
+							<div class="imgbox">
+								<img src="img/ms7_img1.png" alt="" class="img" data-aos="fade-right">
+								<img src="img/ms7_img2.png" alt="" class="img" data-aos="fade-right">
+								<img src="img/ms7_img3.png" alt="" class="img" data-aos="fade-right">
+								<img src="img/ms7_img4.png" alt="" class="img" data-aos="fade-right">
+							</div>
+						</div>
+						<div class="right">
+							<div class="imgbox">
+								<img src="img/ms7_img5.png" alt="" class="img" data-aos="fade-left">
+								<img src="img/ms7_img6.png" alt="" class="img" data-aos="fade-left">
+								<img src="img/ms7_img7.png" alt="" class="img" data-aos="fade-left">
+								<img src="img/ms7_img8.png" alt="" class="img" data-aos="fade-left">
+								<img src="img/ms7_img9.png" alt="" class="img" data-aos="fade-left">
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="imgbox">
+								<img src="img/ms7_img10.png" alt="" class="img" data-aos="fade-up">
+							</div>
+
+						</div>
+					</div>
+                </div>
+            </section>
+
+            <section class="main_section sequence ms8" data-progress-in="1">
+                <div class="inner">
+					<div class="titbox" data-aos="fade-down">
+						<p class="title">Setup Guide</p>
+					</div>
+					<div class="vidbox" data-aos="fade-down">
+						<video id="ms8_video" class="ms8_video" poster="img/ms8_vidthum.png" src="video/ms8_video.mp4" playsinline></video>
+						<button type="button" class="play_btn">
+							<img src="img/ms8_play.png" alt="">
+						</button>
+					</div>
+                </div>
+            </section>
+
+            <section class="main_section sequence ms9" data-progress-in="1">
+                <div class="inner">
+					<div class="tab_wrap">
+						<div class="tab_navbox" data-aos="fade-right">
+							<p class="title">FAQ</p>
+							<div class="tab_nav on">
+								Product <br class="tablet">Questions
+							</div>
+							<div class="tab_nav">
+								Shipping <br class="tablet">Questions
+							</div>
+							<div class="tab_nav">
+								Returns & <br class="tablet">Warranty Questions
+							</div>
+						</div>
+						<div class="tab_contbox" data-aos="fade-left">
+							<div class="tab_cont on">
+								<ul class="accordion">
+									<li class="show">
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">Where can I use RAMBLE?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont" style="display: block;">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">Is the PC tower included?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.											
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">How much does it weigh?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.											
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">Can I carry it on an airplane?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.		
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">What resolution do the monitors support?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">Does installation require technical skills?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">How is the power supplied?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">What is the product warranty period?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="tab_cont">
+								<ul class="accordion">
+									<li class="show">
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">Where can I use RAMBLE?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont" style="display: block;">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.
+										</ul>
+									</li>
+									<li>
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">Is the PC tower included?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.											
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="tab_cont">
+								<ul class="accordion">
+									<li class="show">
+										<div class="acc_tit">
+											<div class="q_icon">Q.</div>
+											<p class="tit">Where can I use RAMBLE?</p>
+											<div class="arrow"></div>
+										</div>
+										<ul class="acc_cont" style="display: block;">
+											RAMBLE can be used indoors and outdoors wherever electricity is available, such as hotels, cafes, offices, and airport lounges.
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                </div>
+            </section>
+
+            <section class="main_section sequence ms10" data-progress-in="1">
+				<video id="ms10_video" class="ms10_video" src="video/ms1_video.mp4" loop  muted autoplay playsinline></video>
+                <div class="inner">
+					<div class="txtbox">
+						<p class="tit" data-aos="fade-down" data-aos-anchor=".ms10">
+							Take Your Office Anywhere. <br>
+							Experience RAMBLE Now.
+						</p>
+						<p class="desc" data-aos="fade-down" data-aos-delay="400" data-aos-anchor=".ms10">
+							Achieve peak performance anywhere you go. <br>
+							Redefine mobility and accelerate your business with RAMBLE.
+						</p>
+						<div class="more_box" data-aos="fade-down" data-aos-delay="800" data-aos-anchor=".ms10">
+							<a href="#none" class="more_btn ver2">shop now</a>
+						</div>
+					</div>
+                </div>
+
+				<!-- footer -->
+				<footer class="footer">
+					<div class="inner f_inner">
+						<div class="f_logo">
+							<img src="img/logo.png" alt="">
+						</div>
+						<p class="f_copy">Copyright Ⓒ 2025 ramble. all rights reserved.</p>
+						<div class="f_snsbox">
+							<a href="https://www.facebook.com/profile.php?id=61558512230591" class="link" target="_blank">
+								<img src="img/f_sns1.png" alt="">
+							</a>
+							<a href="https://www.instagram.com/rambleofficeanywhere/" class="link" target="_blank">
+								<img src="img/f_sns2.png" alt="">
+							</a>
+							<a href="https://www.tiktok.com/@rambleofficeanywhere" class="link" target="_blank">
+								<img src="img/f_sns3.png" alt="">
+							</a>
+						</div>
+					</div>
+				</footer>
+
+            </section>
+
         </div>
 
     </div>

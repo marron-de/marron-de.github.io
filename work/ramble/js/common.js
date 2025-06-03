@@ -1,8 +1,8 @@
 
 // AOS
 AOS.init({
-	duration: 800,
-	// disable: 'tablet',
+	duration: 500,
+	easing: "linear",
 })
 
 window.addEventListener('load', function () {
@@ -29,17 +29,6 @@ $(document).mouseup(function (e) {
 		$(".header").removeClass("open");
 		$(".nav_box").removeClass("open");
 	}
-});
-
-
-// top button
-$(document).ready(function () {
-	$('#top_btn').click(function () {
-		$('html, body').animate({
-			scrollTop: 0
-		}, 400);
-		return false;
-	});
 });
 
 
@@ -95,66 +84,10 @@ $(document).ready(function () {
 
 	// navbox
 	$(function () {
-		lnbUI.click('#nav li', 400)
+		lnbUI.click('.accordion li', 400)
 	});
 
 }(jQuery));
-
-
-// scroll nav
-$(function () {
-	let didScroll;
-	let lastScrollTop = 0;
-	let delta = 5; // 이벤트를 발생시킬 스크롤의 이동 범위
-	let navbarHeight = $("#header").outerHeight();
-
-	$(window).scroll(function (event) {
-		didScroll = true;
-	});
-
-	hasScrolled();
-
-	setInterval(function () {
-		if (didScroll) {
-			hasScrolled();
-			didScroll = false;
-		}
-	}, 250); // 스크롤이 멈춘 후 동작이 실행되기 까지의 딜레이
-
-	function hasScrolled() {
-		let st = $(this).scrollTop(); // 현재 window의 scrollTop 값
-
-		// delta로 설정한 값보다 많이 스크롤 되어야 실행된다.
-		if (Math.abs(lastScrollTop - st) <= delta)
-			return;
-
-		if (st > 0) {
-			$("body").addClass("down")
-		} else {
-			$("body").removeClass("down")
-		}
-
-		if (st > navbarHeight) {
-			$("#header").addClass("down")
-		}
-
-		if (st < navbarHeight) {
-			$("#header").removeClass("down")
-		}
-
-		// if (st > lastScrollTop && st > navbarHeight) {
-		// 	// 스크롤을 내렸을 때                
-		// 	$("#header").addClass("hide")
-
-		// } else {
-		// 	// 스크롤을 올렸을 때 
-		// 	$("#header").removeClass("hide")
-
-		// }
-
-		lastScrollTop = st; // 현재 멈춘 위치를 기준점으로 재설정
-	}
-})
 
 
 // scroll animation
@@ -193,24 +126,21 @@ $(window).on('scroll resize', function (e) {
 // tab function
 $(document).ready(function () {
 
-	$(".tab_nav").click(function () {
+  $(".tab_nav").on("click", function () {
+    const clicked = $(this);
+	
+    const tabWrap = clicked.closest(".tab_wrap");
+    const tabNavs = tabWrap.find(".tab_nav");
+    const tabConts = tabWrap.find(".tab_cont");
 
-		let target = $(this);
-		let tabNavbox = target.closest('ul')
-		let tabNav = tabNavbox.find(".tab_nav")
-		let idx = tabNav.index(this);
+    const index = tabNavs.index(clicked);
 
-		let tabWrap = tabNavbox.closest("div");
-		let tabContbox = tabWrap.find(".tab_contbox");
-		let tabCont = tabContbox.find(".tab_cont");
+    tabNavs.removeClass("on");
+    clicked.addClass("on");
 
-		tabNav.removeClass("on")
-		tabNav.eq(idx).addClass("on")
-
-		tabCont.removeClass("on")
-		tabCont.eq(idx).addClass("on")
-
-	})
+    tabConts.removeClass("on");
+    tabConts.eq(index).addClass("on");
+  });
 
 });
 
@@ -232,20 +162,67 @@ $(window).on('resize', function() {
     $('body').css('--margin-right', marginLeft + 'px');
 });
 
-$(document).ready(function() {
-    $(window).trigger('resize');
-});
 
-
-/* modal */
-$(".modal .modal_close").click(function () {
-	$("body").removeClass("hidden")
-	$(".modal").removeClass("show")
-})
-
-$(document).mouseup(function (e) {
-	if ($(".modal .modal_box").has(e.target).length === 0) {
-		$("body").removeClass("hidden")
-		$(".modal").removeClass("show")
+// main section2 (gsap)
+gsap.registerPlugin(ScrollTrigger);
+// gsap.set(".ms2 .img1", { left: "-2.5%" });
+// gsap.set(".ms2 .img2", { left: "81%" });
+// gsap.set(".ms2 .txtbox .tit", { scale: 0.2 });
+// gsap.set(".ms2 .txtbox .desc", { opacity: 0 });
+gsap.timeline({
+	scrollTrigger: {
+		trigger: ".ms2",
+		pin: ".ms2 .pinbox",
+		start: "top top",
+		end: "+=200%",
+		scrub: 1,
+		anticipatePin: 1
 	}
+})
+// .to(".ms2 .img1", { left: "28%", ease: "power1.out" }, 0.2)
+// .to(".ms2 .img2", { left: "50.5%", ease: "power1.out" }, 0.2)
+// .to(".ms2 .txtbox .tit", { scale: 1, ease: "power2.out" }, 0.3)
+// .to(".ms2 .txtbox .desc", { opacity: 1, ease: "power2.out" }, 0.4);
+
+
+// main section5
+$('.ms5 .thumbox li').on('click', function(e) {
+  e.preventDefault();
+  const ms5_index = $(this).index();
+  $(this).addClass('on').siblings().removeClass('on');
+  const ms5_imgs = $('.ms5 .imgbox .img');
+  ms5_imgs.removeClass('on').eq(ms5_index).addClass('on');
 });
+
+
+// main section8
+const video = document.querySelector('.ms8_video');
+const vidbox = document.querySelector('.ms8 .vidbox');
+const playBtn = document.querySelector('.ms8 .play_btn');
+
+playBtn.addEventListener('click', function (e) {
+  e.stopPropagation();
+
+  if (!video.paused && !video.ended) {
+    video.pause();
+    vidbox.classList.remove('on');
+    return;
+  }
+
+  vidbox.classList.add('on');
+  video.play().catch(function (e) {
+    console.warn('Play error:', e);
+  });
+});
+
+vidbox.addEventListener('click', function () {
+  if (!video.paused && !video.ended) {
+    video.pause();
+    vidbox.classList.remove('on');
+  }
+});
+
+video.addEventListener('ended', function () {
+  vidbox.classList.remove('on');
+});
+
