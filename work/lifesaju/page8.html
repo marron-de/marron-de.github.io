@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인생사주</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- chart.js -->
+    <script src="js/chart.js"></script>
+    <script src="js/chartjs-plugin-datalabels.js"></script>
+
+    <!-- phosphor-icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mob.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="font/Pretendard/Pretendard.css">
+    <link rel="stylesheet" href="font/GapyeongHanseokbong/GapyeongHanseokbong.css">
+
+</head>
+
+<body class="hidden">
+
+
+    <div class="wrap list_wrap">
+
+        <!-- mobile top_banner -->
+        <div class="mob_top_banner">
+            <div class="banner_inner">
+                <div class="title">
+                    <span class="point1">EVENT</span>
+                    회원가입 시
+                    <span class="point2">30분 무료</span>
+                    통화!
+                </div>
+                <a href="" class="join_btn">
+                    <span class="txt">3초 회원가입</span>
+                    <i class="ph ph-caret-right"></i>
+                </a>
+                <button type="button" class="close_btn"><i class="ph ph-x"></i></button>
+            </div>
+        </div>
+
+        <!-- header -->		 
+		<!-- 25.06.06 작업: 비회원일 경우 nonmember_ver 클래스 추가 -->
+        <header class="header nonmember_ver">
+            <div class="inner h_inner">
+                <div class="h_logo">
+                    <a href="">
+                        <img src="img/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="h_selbox">
+                    <select class="h_select">
+                        <option value="">고민을 선택해보세요</option>
+                        <option value="고민1">고민1</option>
+                        <option value="고민2">고민2</option>
+                        <option value="고민3">고민3</option>
+                    </select>
+                </div>
+                <div class="h_schbox">
+                    <input type="text" class="input_sch" placeholder="선생님, 상담주제, 고민, 지역, 상품 등 ">
+                    <button class="sch_btn"></button>
+                </div>
+				<!-- 25.06.06 작업 start -->
+                <div class="h_side2">
+                    <!-- <button class="side_btn coin_btn">
+                        <img src="img/h_coin.png" alt="" class="icon">
+                        <span class="txt">코인충전</span>
+                    </button>
+                    <div class="bar"></div>
+                    <button class="side_btn cart_btn">
+                        <img src="img/h_cart.png" alt="" class="icon">
+                        <span class="txt">장바구니</span>
+                    </button>
+                    <div class="bar"></div>
+                    <button class="side_btn login_btn">
+                        <span class="txt">로그인</span>
+                    </button> -->					
+                    <button class="side_btn2 login_btn">로그인</button>
+                    <button class="side_btn2 free_btn">무료로 시작하기</button>
+                </div>
+				<!-- 25.06.06 작업 end -->
+            </div>
+        </header>
+
+        <!-- category -->
+        <div class="category">
+            <div class="inner">
+                <ul class="catebox">
+                    <li><a href="" class="link">홈</a></li>
+                    <li><a href="" class="link">인기 선생님</a></li>
+                    <li class="active"><a href="" class="link">신규 선생님</a></li>
+                    <li><a href="" class="link">사주상점</a></li>
+                </ul>
+            </div>            
+        </div>
+
+        <!-- container -->
+        <div class="container">
+            <div class="inner">
+                <div class="list_banner swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="" class="link">
+                                <img src="img/main_banner.jpg" alt="" class="pc">
+                                <img src="img/mob_main_banner.jpg" alt="" class="tablet">
+                            </a>                            
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="link">
+                                <img src="img/main_banner.jpg" alt="" class="pc">
+                                <img src="img/mob_main_banner.jpg" alt="" class="tablet">
+                            </a>                 
+                        </div>
+                    </div>                    
+                    <div class="swiper-button-next next_btn"></div>
+                    <div class="swiper-button-prev prev_btn"></div>
+                </div>
+
+                <!-- mobile path -->
+                <div class="mobile_path">
+                    <div class="title">카테고리 선택</div>
+                </div>
+
+                <div class="list_category">
+                    <p class="title">카테고리</p>
+                    <!-- 기능 : 활성화 여부 active 클래스 추가 -->
+                    <ul class="catebox">
+                        <li class="cate1 active">
+                            <a href="" class="link">
+                                <img src="img/cate_icon1.png" alt="" class="icon">
+                                <span class="txt">전체</span>
+                            </a>
+                        </li>
+                        <li><div class="bar"></div></li>
+                        <li class="cate2 active">
+                            <a href="" class="link">
+                                <img src="img/cate_icon2.png" alt="" class="icon">
+                                <span class="txt">신점</span>
+                            </a>
+                        </li>
+                        <li><div class="bar"></div></li>
+                        <li class="cate3 active">
+                            <a href="" class="link">
+                                <img src="img/cate_icon3.png" alt="" class="icon">
+                                <span class="txt">사주</span>
+                            </a>
+                        </li>
+                        <li><div class="bar"></div></li>
+                        <li class="cate4 active">
+                            <a href="" class="link">
+                                <img src="img/cate_icon4.png" alt="" class="icon">
+                                <span class="txt">타로</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="list_box last">
+                    <div class="list_titbox">
+                        <p class="tit">
+                            <img src="img/tit_icon1.png" alt="" class="icon">
+                            <span class="txt">인기 선생님</span>
+                        </p>
+                        <!-- 기능 : 활성화 여부 active 클래스 추가 -->
+                        <div class="sortbox">
+                            <button type="button" class="sortbtn active">추천</button>
+                            <button type="button" class="sortbtn">인기</button>
+                            <button type="button" class="sortbtn">신규</button>
+                            <button type="button" class="sortbtn">상담가능</button>
+                        </div>
+                    </div>
+                    <div class="list_contbox">                    
+                        <!-- 기능 
+                            date-pc : PC 노출개수
+                            date-mob : 모바일 노출 개수
+                            data-pcmore="scroll" : 스크롤시 노출 (PC버전)
+                            data-pcmore="click" : 더보기 클릭시 노출 (PC버전)
+                        -->
+                        <div class="listbox" date-pc="12" date-mob="4" data-pcmore="scroll">
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeA tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher1.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeA">전체</span>
+                                            <span class="name">명운도령</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher2.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 써니 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji3">
+                                                <img src="img/ico_emoji3.png" alt="" class="icon">
+                                                <span class="txt">현실적이에요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji4">
+                                                <img src="img/ico_emoji4.png" alt="" class="icon">
+                                                <span class="txt">편안해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeB" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">상담중</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeB" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">상담중</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeC tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher3.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeC">사주</span>
+                                            <span class="name">안산 설화</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji5">
+                                                <img src="img/ico_emoji5.png" alt="" class="icon">
+                                                <span class="txt">용해요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeB" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">상담중</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeB" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">상담중</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeB">
+                                                    <img src="img/logo_icon2.png" alt="" class="icon">
+                                                    <span class="txt">신규 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeD tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher4.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeD">타로</span>
+                                            <span class="name">양산 혜주 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeB" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">상담중</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeB" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">상담중</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher4.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 혜주 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher2.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 써니 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher3.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">안산 설화</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher4.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 혜주 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher2.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 써니 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher3.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">안산 설화</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher4.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 혜주 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher1.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">명운도령</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher2.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 써니 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher3.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">안산 설화</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher4.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">양산 혜주 선생님</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <div class="img_badge typeB tablet">전화신점</div>
+                                    <div class="imgbox">
+                                        <img src="img/teacher1.jpg" alt="">
+                                    </div>
+                                    <div class="txtbox pc">
+                                        <p class="tit">
+                                            <span class="cate typeB">신점</span>
+                                            <span class="name">명운도령</span>
+                                        </p>
+                                        <div class="info">
+                                            <div class="info_item">
+                                                <img src="img/ico_talk.png" alt="" class="icon">
+                                                <span class="txt">후기</span>
+                                                <span class="num">(143)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_rate.png" alt="" class="icon">
+                                                <span class="txt">4.7</span>
+                                                <span class="num">(256)</span>
+                                            </div>
+                                            <div class="info_item">
+                                                <img src="img/ico_point.png" alt="" class="icon">
+                                                <span class="txt">800포인트</span>
+                                                <span class="num">(30초당)</span>
+                                            </div>
+                                        </div>
+                                        <div class="emoji">
+                                            <div class="emoji_badge emoji1">
+                                                <img src="img/ico_emoji1.png" alt="" class="icon">
+                                                <span class="txt">소름돋아요</span>
+                                            </div>
+                                            <div class="emoji_badge emoji2">
+                                                <img src="img/ico_emoji2.png" alt="" class="icon">
+                                                <span class="txt">친절해요</span>
+                                            </div>
+                                        </div>                                        
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob_txtbox tablet">
+                                        <p class="title">
+                                            <span class="name">천화당혜령</span>
+                                            <span class="bar"></span>
+                                            <span class="num">372번</span>
+                                        </p>
+                                        <p class="desc">
+                                            소문난 실력의 신점 사주
+                                        </p>                       
+                                        <div class="point">
+                                            <img src="img/ico_point2.png" alt="" class="icon">
+                                            <span class="txt">800포인트</span>
+                                            <span class="num"> /30초</span>
+                                        </div>           
+                                        <button type="button" class="counsel_btn typeA" onclick="counselPopup()">
+                                            <span class="icon"></span>
+                                            <span class="txt">전화상담</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="bottom accordion tablet">
+                                    <li>
+                                        <div class="acc_tit">
+                                            <div class="title">
+                                                <span class="teacher_badge typeA">
+                                                    <img src="img/logo_icon1.png" alt="" class="icon">
+                                                    <span class="txt">파트너 선생님</span>
+                                                </span>
+                                                <div class="infobox">
+                                                    <div class="info_item">
+                                                        <img src="img/ico_rate3.png" alt="" class="icon">
+                                                        <span class="txt">4.7</span>
+                                                        <span class="num">(256)</span>
+                                                    </div>
+                                                    <div class="info_item">
+                                                        <img src="img/ico_talk2.png" alt="" class="icon">
+                                                        <span class="txt">후기</span>
+                                                        <span class="num">(143)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="acc_cont">
+                                            <li>
+                                                <div class="rv_lsit">
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">짱구엄마</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            너무 좋은 말씀 많이 해주셔서 감사해요....ㅠㅠ 역시 짱짱!!
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">곰탱이v</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            진짜 소름돋았어요.....아니 말도 안헀는데 수술을 앞둔 사실이라던
+                                                        </div>
+                                                    </div>
+                                                    <div class="rv_item">
+                                                        <div class="name">
+                                                            <img src="img/ico_check.png" alt="" class="icon">
+                                                            <span class="txt">dksldlrp90</span>
+                                                        </div>
+                                                        <div class="desc">
+                                                            사주 매니아로서 14년간 재밌게 사주를 즐기고 있지만 이번만큰
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="rv_btnbox">
+                                                    <a href="" class="rv_more">상담후기 더보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="more_box">
+                            <button type="button" class="more">
+                                <span class="txt">더보기</span>
+                                <span class="arrow"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="inner f_inner">
+                <div class="f_logo">
+                    <img src="img/f_logo.png" alt="">
+                </div>
+                <div class="f_cont">
+                    <p class="f_copyright">
+                        Copyright © 인생사주. All Rights Reserved.
+                    </p>
+                    <ul class="f_sns">
+                        <li><a href="" class="link" target="_blank">인스타그램</a></li>
+                        <li><div class="bar">|</div></li>
+                        <li><a href="" class="link" target="_blank">페이스북</a></li>
+                        <li><div class="bar">|</div></li>
+                        <li><a href="" class="link" target="_blank">블로그</a></li>
+                        <li><div class="bar">|</div></li>
+                        <li><a href="" class="link" target="_blank">카카오톡</a></li>
+                    </ul>
+                    <p class="f_info">
+                        상호명: 주식회사우주개발연구소 | 대표자명: 김우준 | 대표번호: 070-5234-8700  | 사업장 주소: 03980 서울특별시 마포구 <br class="tablet">
+                        성미산로29길 30-3 3층 (연남동)
+                        사업자 등록번호: 3278602722 <br class="tablet">
+                        | 통신판매업 신고번호: 2024-서울마포-0319 | 개인정보보호책임자: 김우준
+                    </p>
+                </div>
+                <div class="f_more_info">
+                    <div class="title">
+                        <span class="txt">사업자 정보</span>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- navigaion -->
+        <div class="navigaion">
+            <ul class="nav">
+                <li class="home">
+                    <a href="" class="link">
+                        <img src="img/nav_home.png" alt="" class="icon">
+                        <span class="txt">홈</span>
+                    </a>
+                </li>
+                <li class="sbookmark">
+                    <a href="" class="link">
+                        <img src="img/nav_bookmark.png" alt="" class="icon">
+                        <span class="txt">단골</span>
+                    </a>
+                </li>
+                <li class="popular">
+                    <a href="" class="link">
+                        <img src="img/nav_popular.png" alt="" class="icon">
+                        <span class="txt">인기</span>
+                    </a>
+                </li>
+                <li class="mymenu">
+                    <a href="" class="link">
+                        <img src="img/nav_mymenu.png" alt="" class="icon">
+                        <span class="txt">마이메뉴</span>
+                    </a>
+                </li>
+                <li class="coin">
+                    <a href="" class="link">
+                        <img src="img/nav_coin.png" alt="" class="icon">
+                        <span class="txt">코인충전</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- counsel popup -->
+        <div class="counsel_modal" id="counselPopup">
+            <div class="modal_head">
+                <p class="title">상담하기</p>
+            </div>
+            <div class="modal_body">
+                <div class="profile_box">
+                    <div class="thum">
+                        <img src="img/counsel_profile.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <span class="name">명운도령</span>
+                        <span class="num">[366번]</span>
+                    </div>
+                    <div class="cate typeB">
+                        <img src="img/counsel_icon.png" alt="" class="icon">
+                        <span class="txt">신점</span>
+                    </div>
+                </div>
+                <div class="login_box">
+                    <p class="info">전화상담은 로그인 후 이용 가능합니다.</p>
+                    <button type="button" class="login_btn">
+                        <span class="txt">로그인하기</span>
+                        <img src="img/counsel_login_arrow.png" alt="" class="icon">
+                    </button>
+                </div>
+                <div class="coin_box">
+                    <div class="item">
+                        <div class="titbox">
+                            <div class="left">
+                                <p class="tit">
+                                    <span class="txt">코인상담 (선불)</span>
+                                    <span class="icon"></span>
+                                </p>
+                            </div>
+                            <div class="right">
+                                <p class="coin">
+                                    1,600코인 <span class="time">(30초)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <button type="button" class="counsel_btn typeA">
+                            <span class="bold">코인 전화상담</span> ( 070-234-6578 )
+                        </button>
+                    </div>
+                    <div class="item">
+                        <div class="titbox">
+                            <div class="left">
+                                <p class="tit">
+                                    <span class="txt">코인상담 (후불)</span>
+                                    <span class="icon"></span>
+                                </p>
+                            </div>
+                            <div class="right">
+                                <p class="coin">
+                                    1,900원 <span class="time">(30초)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <button type="button" class="counsel_btn typeB">
+                            <span class="bold">060 전화상담</span> ( 070-234-6578 )
+                        </button>
+                        <div class="notice_txt">
+                            전화연결 후 상담사 고유번호 <span class="color">[366]</span>을 입력 하세요.
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="close_btn" onclick="counselPopupClose()">닫기</button>
+            </div>
+        </div>
+
+		<!-- main popup / 25.06.06 작업 -->
+		<div class="modal main_popup show" id="mainPopup">
+			<div class="modal_box popup_inner">
+				<div class="btnbox">
+					<button type="button" class="btn today_btn">
+						다시 보지 않기 
+					</button>
+					<button type="button" class="btn close_btn" onclick="mainPopupClose()"></button>
+				</div>
+				<div class="mainpop_slider swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide imgbox">
+							<a href="https://www.naver.com/" class="link">
+								<img src="img/popup_img1.png" alt="">
+							</a>                            
+						</div>
+						<!-- <div class="swiper-slide">
+							<a href="" class="link">
+								<img src="img/popup_img1.png" alt="">
+							</a>                            
+						</div> -->
+					</div>                          
+					<div class="swiper-pagination pagination"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- mobile timer banner / 25.06.06 작업 -->
+		<div class="timer_banner show" id="timerBanner">
+			<div id="time_progress" class="time_progress"></div>
+			<div class="left">
+				<p class="tit">
+					지금 가입하면 <span class="bold">30분 통화 무료</span>
+				</p>
+				<p class="timer">
+					[<span class="time">00:00:00</span> 남음]
+				</p>
+			</div>
+			<div class="right">
+				<button type="button" class="btn">
+					<span class="txt">혜택받기</span>
+					<span class="arrow"></span>
+				</button>
+			</div>
+		</div>
+
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>
