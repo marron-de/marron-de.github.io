@@ -474,7 +474,7 @@ const mainpop_slider = new Swiper(".mainpop_slider", {
 
 
 /* 모바일 타이머 배너 */
-let timeLeft = 300; // 타이머 시간 (초)
+let timeLeft = 279; // 타이머 시간 (초)
 let barLeft = 20;   // 프로그레스바 시간 (초)
 let barInterval;
 const totalBar = barLeft;
