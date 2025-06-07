@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="main">
+    
+    <div class="main">
+        <div id="sequence_01" class="sequence">
+            <div class="bg">
+                <video src="http://marronde.com/sample/Aqarakorea/img/bg_video_03.mp4" autoplay loop muted playsinline preload="auto" poster="./img/bg_video_03_poster.jpg"></video>
+            </div>
+            <div class="scene">
+                <div class="shot shot_01">
+                    <p class="logo">Aqara</p>
+                </div>
+                <div class="shot shot_02">
+                    <p>Continuous<br>Connection</p>
+                </div>
+                <div class="shot shot_03">
+                    <p>Aqara는<br>스마트홈과 IoT 솔루션을</p>
+                    <p>선도하고 있는<br>글로벌 기업입니다</p>
+                </div>
+            </div>
+        </div>
+        <div id="sequence_02" class="sequence" data-progress-in="1">
+            <!-- data-progress-in 값이 높을수록 빨리 나타나고 낮을수록 지연된다. -->
+            <div class="scene">
+                <div class="shot shot_01">
+                    <p>나만의<br>스마트 홈</p>
+                </div>
+                <div class="shot shot_02">
+                    <div class="p p_01">
+                        <p>심플한 디자인에 담긴<br>최신 기술</p>
+                    </div>
+                    <div class="p p_02">
+                        <p>복잡한 설치 과정 없이<br>손쉬운 설치 방법</p>
+                    </div>
+                    <div class="p p_03">
+                        <p>다양하고<br>놀라운 확장성과 연결성</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sequence_03" class="sequence" data-progress-in="1">
+            <div class="scene">
+                <div class="shot shot_01">
+                    <p>가장 쉽고 편리한<br>스마트 홈</p>
+                    <div class="video">
+                        <video src="./img/bg_video_02.mp4" loop="" muted="" autoplay="" playsinline=""
+                            preload="auto" poster="./img/bg_video_02_poster.jpg"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sequence_04" class="sequence" data-progress-in="1">
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(window).on('scroll resize', function (e) {
+
+            let scroll_top = $(window).scrollTop(),
+                page_progress = scroll_top / ($(document).height() - $(window).height());
+                page_progress = isFinite(page_progress) ? page_progress : 0;
+
+            $('html').attr('style', '--progress: ' + page_progress);
+
+            $('.sequence').each(function (i) {
+                let $sequence = $(this);
+                let trigger_top = scroll_top,
+                    sequence_top = $sequence.offset().top,
+                    sequence_bottom = sequence_top + $sequence.outerHeight() - $(window).height(),
+                    sequence_progress;
+                let progress_in = $sequence.data('progress-in') || 0;
+                
+                sequence_top = sequence_top - ($(window).height() * progress_in);
+
+                if (trigger_top <= sequence_top) {
+                    sequence_progress = 0;
+                } else if (trigger_top > sequence_top && trigger_top <= sequence_bottom) {
+                    sequence_progress = (trigger_top - sequence_top) / (sequence_bottom -
+                        sequence_top);
+                } else {
+                    sequence_progress = 1;
+                }
+
+                $sequence.attr('style', '--progress: ' + sequence_progress);
+            });
+        }).resize();
+    </script>
+
+
+</body>
+
+</html>
