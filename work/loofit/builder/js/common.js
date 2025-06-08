@@ -520,3 +520,33 @@ $(document).mouseup(function (e) {
 		$(".content.mob_view .conditionbox").removeClass("show")
 	}
 });
+
+
+
+
+/* 250609 추가작업 */
+
+/* 09_채용공고 페이지 분리 */
+// 모바일 필터
+$(document).on("click", ".empboard_wrap .filter_title", function () {
+	if ($(window).width() <= 1024) {
+		$(".empboard_wrap .filterbox").toggleClass("show");
+	}
+});
+$(document).mouseup(function (e) {
+	if ($(window).width() <= 1024 && $(".empboard_wrap .filterbox").has(e.target).length === 0) {
+		$(".empboard_wrap .filterbox").removeClass("show");
+	}
+});
+
+// 모바일 채용조건
+$(document).on("click", ".empboard_wrap .condi_title", function () {
+	if ($(window).width() <= 1024) {
+		$(".empboard_wrap .conditionbox").toggleClass("show");
+	}
+});
+$(document).mouseup(function (e) {
+	if ($(window).width() <= 1024 && $(".empboard_wrap .conditionbox").has(e.target).length === 0) {
+		$(".empboard_wrap .conditionbox").removeClass("show");
+	}
+});
