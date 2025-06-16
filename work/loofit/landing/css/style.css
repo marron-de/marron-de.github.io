@@ -41,7 +41,12 @@
 .ms3 .paging_box .paging {  display: flex; flex-direction: column; gap: 0.5rem; }
 .ms3 .paging_box .paging .dot {width: 8px; aspect-ratio: 1/1; background: #dfdfdf;  transition: var(--transition); border-radius: 50%;}
 .ms3 .paging_box .paging .dot.active {background: #131720;}
-.ms3 .paging_box .mouse_icon {background: url(../img/ic_mouse.png) no-repeat center/contain; width: 4rem; aspect-ratio: 1/1; position: absolute; left: 50%;  bottom: 1.5rem; transform: translateX(-50%);}
+.ms3 .paging_box .mouse_icon {background: url(../img/ic_mouse.png) no-repeat center/contain; width: 4rem; aspect-ratio: 1/1; position: absolute; left: 50%;  bottom: 2rem; transform: translate(-50%, 0); animation: mouseAni 1.5s ease-in-out infinite;}
+ @keyframes mouseAni {
+	0% {transform: translate(-50%, 0); opacity: 0;  }
+  	50% {opacity: 1;}
+  	100% { transform: translate(-50%, 1.5rem);opacity: 0; }
+}
 .ms3 .ms3_swiper{position: relative; width: 100%; margin-top: -35rem;}
 .ms3 .ms3_swiper .swiper-wrapper { gap: 3.563rem;}
 .ms3 .ms3_swiper .item {position: sticky; top: 8rem; height: 35rem; border-radius: 1.5rem; padding: 4.375rem 4rem 4.375rem 5rem;  display: flex; align-items: center; gap: 1.25rem;}
@@ -70,7 +75,8 @@ gap: 1.5rem; text-align: center;}
 .ms4 .contbox .item .tit{font-weight: 700;font-size: 1.125rem;line-height: 156%;color: #131720;}
 
 .ms5 {margin-bottom: 11.25rem;}
-.ms5 .contbox{display: flex; flex-wrap: wrap; gap: 1.875rem 0;}
+/* .ms5 .contbox{display: flex; flex-wrap: wrap; gap: 1.875rem 0;} */
+.ms5 .contbox {display: flex; flex-wrap: wrap; gap: 1.375rem 0;max-width: 1024px;  margin: 0 auto;}
 .ms5 .contbox .item{width: calc(100%/7); display: flex;}
 
 .ms6 {background: url(../img/ms6_bg.jpg) no-repeat center/cover; padding: 6.25rem 0;}
@@ -88,7 +94,7 @@ gap: 1.5rem; text-align: center;}
 .fs1 .m_titbox .tit{color: #000;}
 .fs1 .m_titbox .desc{color: #383838;}
 .fs1 .fs_swiper {position: relative; width: 100%; height: 37.5rem; padding: 3.75rem 0; margin-top: -3.75rem;}
-.fs1 .fs_swiper::after {content: ""; background: url(../img/ic_mouse.png) no-repeat center/contain; width: 4rem; aspect-ratio: 1/1; position: absolute; left: 50%;  bottom: 5.25rem; transform: translateX(-50%); z-index: 10;}
+.fs1 .fs_swiper::after {content: ""; background: url(../img/ic_mouse.png) no-repeat center/contain; width: 4rem; aspect-ratio: 1/1; position: absolute; left: 50%;  bottom: 5.75rem; transform: translateX(-50%); z-index: 10; animation: mouseAni 1.5s ease-in-out infinite;}
 .fs1 .fs_swiper .item {height: 100%; border-radius: 1.5rem; padding: 1.875rem 4rem 1.875rem 5rem;  display: flex; align-items: center; gap: 1.25rem; position: absolute; left: 0; top: 0; width: 100%;  height: 100%;}
 .fs1 .fs_swiper .color1{background: rgb(255, 227, 216, 60%);}
 .fs1 .fs_swiper .color2{background: rgb(255, 213, 207, 60%);}
@@ -125,7 +131,8 @@ gap: 1.5rem; text-align: center;}
 .inquiry_wrap .container {padding-top: 12.5rem;} 
 .is1 { margin-bottom: 5rem;}
 .is1 .contbox{display: flex;gap: 2.5rem; padding-bottom: 5rem; border-bottom: 1px solid #e5e8ec;}
-.is1 .contbox .item{width: calc((100% - 2.5rem*2)/3); display: flex;flex-direction: column; align-items: center; gap: 1.5rem; padding: 2.5rem 1rem; border-radius: 1.5rem; box-shadow: 0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.08); background: #fff;}
+.is1 .contbox .item{width: calc((100% - 2.5rem*2)/3); display: flex;flex-direction: column; align-items: center; gap: 1.5rem; padding: 2.5rem 1rem; border-radius: 1.5rem; box-shadow: 0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.08); background: #fff; border: 2px solid transparent; transition: var(--transition);}
+.is1 .contbox .item:hover { border-color: #000;}
 .is1 .contbox .item .imgbox{display: flex; width: 8.75rem;}
 .is1 .contbox .item .tit{font-weight: 700;font-size: 1.25rem;line-height: 150%;text-align: center;color: #131720;}
 
@@ -165,6 +172,7 @@ color: #383838;}
 .ps2 .contbox .item .top .tit{font-size: 1rem;line-height: 150%;color: #131720; margin-bottom: 0.125rem;}
 .ps2 .contbox .item .top .price{font-weight: 700;font-size: 1.5rem;line-height: 133%;color: #131720; display: flex; align-items: baseline; gap: 0.5rem;}
 .ps2 .contbox .item .top .price .txt{ font-weight: 400; font-size: 0.875rem;}
+.ps2 .contbox .item .top .price .line{ text-decoration: line-through; font-weight: 400;  margin-right: 0.5em; opacity: 0.3;  display: inline-block;}
 .ps2 .contbox .item .list{display: flex; flex-direction: column; gap: 0.75rem;}
 .ps2 .contbox .item .list .listitem{font-size: 0.875rem;line-height: 157%;color: #131720;display: flex; align-items: center; gap: 0.5rem;}
 .ps2 .contbox .item .list .listitem .icon{background: url(../img/ic_check.png) no-repeat center/contain; width: 1.125rem; aspect-ratio: 1/1;}
