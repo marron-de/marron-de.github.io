@@ -526,3 +526,60 @@ $(document).ready(function () {
   startTimer();
 //   startProgressBar(); // CSS 애니메이션으로 구현
 });
+
+
+
+
+// 25.06.19 작업
+// 회원가입 안내 
+$(function() {
+  const allCheck = $('.joinGuide_modal #joinTerms_0');
+  const checkboxes = $('.joinGuide_modal .input_check').not('#joinTerms_0');
+  const required = $('.input_check[required]');
+  const button = $('.joinGuide_modal .join_btn');
+
+  allCheck.on('change', function() {
+    const checked = $(this).is(':checked');
+    checkboxes.prop('checked', checked);
+    toggleButton();
+  });
+
+  checkboxes.on('change', function() {
+    const allChecked = checkboxes.length === checkboxes.filter(':checked').length;
+    allCheck.prop('checked', allChecked);
+    toggleButton();
+  });
+
+  function toggleButton() {
+    const requiredChecked = required.filter(':checked').length === required.length;
+    button.prop('disabled', !requiredChecked);
+  }
+
+  toggleButton();
+});
+
+
+// 전화팝업 이용안내
+function callInfoPopup() {
+  $(".call_modal .top_box").addClass("info_show");
+}
+function callInfoPopupClose() {
+  $(".call_modal .top_box").removeClass("info_show");
+}
+
+// 결제수단 팝업
+$(function() {
+  const inputs = $('.paymentMethod_modal .input_text[required]');
+  const button = $('.paymentMethod_modal .register_btn');
+
+  inputs.on('input', function() {
+    const allFilled = inputs.toArray().every(input => $(input).val().trim() !== '');
+    button.prop('disabled', !allFilled);
+  });
+});
+
+$(function() {
+  $('.reviewWrite_modal .emoji_badge').on('click', function() {
+    $(this).toggleClass('on');
+  });
+});
