@@ -1,0 +1,983 @@
+/* 20240710 온라인모의테스트 페이지 추가 */
+/* 온라인 모의테스트 */
+.test_wrap {
+  height: 100%;
+  background: url(https://image.educe.co.kr/educe/exam/bg_test.jpg) repeat left top;
+}
+/* test header */
+.test_hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 72px;
+  background-color: var(--white);
+  box-shadow: 0px 10px 20px 0px rgba(48, 52, 154, 0.08);z-index: 1;
+}
+.test_hd_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  height: 72px;
+  margin: 0 auto;
+}
+.test_nm {
+  display: flex;
+}
+.test_part {
+  position: relative;
+  margin-right: 40px;
+}
+.test_part:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--black-10);
+}
+.test_tit {
+  color: var(--black-60);
+  font-size: 1.3rem;
+}
+.test_nm {
+  margin-top: 6px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.test_btn {
+  display: flex;
+}
+.test_btn button {
+  margin-left: 10px;
+}
+.btn_test_top {
+  height: 40px;
+  padding: 0 16px;
+  background-color: var(--white);
+  border: 1px solid var(--black-10);
+  border-radius: 20px;
+  color: var(--black-80);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.btn_test_top span {
+  position: relative;
+  padding-left: 32px;
+}
+.btn_test_top span:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.btn_test_refresh span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_refresh.png) no-repeat left top/100%;
+}
+.btn_test_refresh:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_refresh_white.png);
+}
+.btn_test_stop span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_exit.png) no-repeat left top/100%;
+}
+.btn_test_stop:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_exit_white.png);
+}
+.btn_test_top:hover {
+  background-color: var(--black-80);
+  border-color: var(--black-80);
+  color: var(--white);
+}
+.timer_box {
+  display: flex;
+  align-items: center;
+}
+.timer_desc {
+  position: relative;
+  margin-right: 5px;
+  padding-left: 26px;
+  color: var(--black-60);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.timer_desc:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_timer.png) no-repeat left top/100%;
+}
+.timer_num {
+  display: inline-block;
+  min-width: 96px;
+  margin-left: 10px;
+  color: var(--notice-em);
+  font-size: 3.8rem;
+  font-weight: 600;
+  letter-spacing: 0px;  
+}
+.test_pause {
+  margin-left: 15px;
+}
+.btn_pause {
+  width: 40px;
+  height: 40px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_pause.png) no-repeat left top/100%;
+}
+.btn_pause:hover {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_pause_black.png);
+}
+
+.btn_pause.on {
+  width: 40px;
+  height: 40px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_play.png) no-repeat left top/100%;
+}
+
+.btn_pause.on:hover {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_play.png);
+}
+
+
+
+.mistake_tit {
+  color: var(--black-80);
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+
+/* 모의테스트 content */
+.test_conts {
+  width: 1280px;
+  margin: 0 auto;
+  padding-top: 92px;
+}
+.test_conts_inner {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 2px 2px 0 0;
+}
+.test_box {
+  width: 980px;
+  height: calc(100vh - 92px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.test_box::-webkit-scrollbar {
+  display: none; 
+}
+.test_check_wrap {
+  width: 300px;
+  height: calc(100vh - 92px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 20px 0;
+  border-left: 1px solid var(--light-gray);
+}
+.answer_scroll {
+  padding-bottom: 50px;
+}
+.test_info_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 16px;
+  background-color: var(--light-blue);
+  border-radius: 2px;
+  color: var(--black-80);
+}
+.test_date,
+.test_num,
+.test_remain {
+  position: relative;
+  text-align: center;
+}
+.test_num {
+  width: 68px;
+  border-right: 1px solid var(--black-10);
+  border-left: 1px solid var(--black-10);
+}
+.test_info_tit {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.test_info_desc {
+  margin-top: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.test_progress_box {
+  margin-bottom: 10px;
+  padding: 16px;
+  background-color: var(--light-blue);
+  border-radius: 2px;
+  color: var(--black-80);
+}
+.progress_num_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.progress_tit {
+  color: var(--black-80);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.progress_num {
+  color: var(--black-40);
+  font-size: 1.2rem;
+}
+.progress_num span {
+  color: var(--notice-em);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.progress_bar_row {
+  margin-top: 26px;
+}
+.progress_bar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: var(--white);
+  border-radius: 3px;
+}
+.progress_state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--notice-em);
+  border-radius: 4px 0 0 4px;
+}
+.progress_point {
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  border: 4px solid var(--notice-em);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.progress_point_num {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  color: var(--notice-em);
+  font-size: 1rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.percent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  color: var(--black-40);
+  font-size: 1rem;
+}
+.answer_tit {
+  margin-top: 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.answer_wrap {
+  margin-top: 9px;
+  border-top: 2px solid var(--black-80);
+  border-bottom: 2px solid var(--black-80);
+}
+.answer_list li {
+  display: flex;
+  height: 30px;
+  border-bottom: 1px solid #D8DCED;
+}
+.answer_list li:last-child {
+  border-bottom: none;
+}
+.test_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  background-color: var(--light-blue);
+  color: var(--black-80);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.answer_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  border-left: 1px solid #D8DCED;
+  color: #959EBE;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.answer_number span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #959EBE;
+  border-radius: 50%;
+}
+.answer_number.selected span {
+  background-color: var(--black-80);
+  border-color: var(--black-80);
+  color: var(--white);
+}
+.answer_list li.check_row {
+  background-color: var(--light-blue);
+}
+.answer_btn_row {
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0px 0px 0px;
+  background-color: var(--white);
+}
+.btn_answer {
+  width: 100%;
+  height: 68px;
+  background-color: var(--black-80);
+  border-radius: 4px;
+  color: var(--white);
+  font-weight: 500;
+}
+.btn_answer span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.btn_answer:hover {
+  background-color: var(--black-100);
+}
+
+/* 테스트 결과보기 */
+.test_select_wrap {
+  display: flex;
+  align-items: center;
+}
+.test_select_tit {
+  margin-right: 20px;
+  font-weight: 600;
+}
+.test_select {
+  width: 200px;
+}
+.test_score {
+  display: flex;
+  align-items: center;
+  color: var(--black-80);
+  font-size: 1.4rem;
+}
+.test_score>div {
+  display: flex;
+  align-items: center;
+}
+.score {
+  margin-left: 8px;
+  color: var(--notice-em);
+}
+.score span {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.score_average {
+  position: relative;
+  margin-left: 40px;
+}
+.score_average:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -20px;
+  width: 1px;
+  height: 14px;
+  background-color: var(--black-20);
+}
+.result_hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  margin-bottom: 1px;
+  padding: 0 24px;
+  background-color: var(--white);
+  border-radius: 2px 2px 0 0;
+}
+.result_test_part {
+  display: flex;
+  align-items: center;
+}
+.part_tit {
+  margin-right: 40px;
+  padding: 2px 0 2px 34px;
+  background: url(https://image.educe.co.kr/educe/exam/bullet3.png) no-repeat left top/24px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.part_nm {
+  position: relative;
+  color: var(--notice-em);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.part_nm:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -20px;
+  width: 1px;
+  height: 15px;
+  background-color: var(--black-20);
+}
+.btn_test_print {
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--black-10);
+  border-radius: 4px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.btn_test_print span {
+  position: relative;
+  padding-left: 26px;
+}
+.btn_test_print span:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.btn_test_print:hover {
+  background-color: var(--black-100);
+  color: var(--white);
+}
+.btn_print_q span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_print_q.png) no-repeat left top/100%;
+}
+.btn_print_q:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_print_q_white.png);
+}
+.btn_print_a span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_print_a.png) no-repeat left top/100%;
+}
+.btn_print_a:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_print_a_white.png);
+}
+.result_conts .test_box,
+.result_conts .test_check_wrap {
+  height: calc(100vh - 157px);
+}
+.wrong_num {
+  position: relative;
+  margin-left: 12px;
+  color: #FF1515;
+}
+/*
+.wrong:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -7px;
+  width: 1px;
+  height: 12px;
+  background-color: var(--black-60);
+}
+*/
+.result_tit {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.result_tit li {
+  color: var(--black-60);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+.result_tit li:nth-child(1) {
+  width: 50px;
+}
+.result_tit li:nth-child(2),
+.result_tit li:nth-child(3),
+.result_tit li:nth-child(4) {
+  width: 70px;
+} 
+.result_list li p {
+  position: relative;
+}
+.result_wrap {
+  border-top: 2px solid var(--black-80);
+  border-bottom: 2px solid var(--black-80);
+}
+.result_list li {
+  display: flex;
+  height: 30px;
+  border-bottom: 1px solid #D8DCED;
+}
+.result_list li:last-child {
+  border-bottom: none;
+}
+.my_answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border-right: 1px solid #D8DCED;
+  color: #959EBE;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.my_answer span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #959EBE;
+  border-radius: 50%;  
+}
+.correct_answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border-right: 1px solid #D8DCED;
+  color: var(--black-80);
+  font-size: 1.2rem;
+  cursor: pointer;  
+}
+.correct_answer span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--black-80);
+  border-radius: 50%;  
+}
+.accuracy_rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  color: var(--notice-alert);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.result_list li.correct .test_number {
+  color: var(--notice-em);
+}
+.result_list li.correct .test_number:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_correct.png) no-repeat left top/100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.result_list li.correct .my_answer {
+  color: var(--notice-em);
+}
+.result_list li.correct .my_answer span {
+  border-color: var(--notice-em);
+}
+.result_list li.wrong .test_number {
+  background-color: #FFEAEA;
+  color: #FF1515;
+}
+.result_list li.wrong .test_number:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_wrong.png) no-repeat left top/100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.result_list li.wrong .my_answer {
+  color: #FF1515;
+}
+.result_list li.wrong .my_answer span {
+  border-color: #FF1515;
+}
+.btn_desc {
+  margin-bottom: 10px;
+  color: var(--black-60);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* modal : 응시정보 */
+.user_exam_wrap {
+  margin-top: 30px;
+}
+.user_nm {
+  color: var(--black-80);
+  font-weight: 600;
+}
+.user_nm span {
+  color: var(--notice-em);
+}
+.user_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding: 20px 0;
+  border-top: 2px solid var(--black-80);
+  border-bottom: 2px solid var(--black-80);
+}
+.user_info>div {
+  display: flex;
+  position: relative;
+}
+.user_info>div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 40px;
+  border-left: 1px dotted var(--black-20);
+} 
+.user_info>div:last-child:after {
+  display: none;
+}
+.user_info01 {
+  width: 226px;
+}
+.user_info02,
+.user_info03 {
+  justify-content: center;
+  width: 170px;
+}
+.user_info04 {
+  justify-content: flex-end;
+  width: 162px;
+}
+.user_info_tit {
+  font-weight: 600;
+}
+.user_info_desc {
+  color: var(--black-60);
+  font-size: 1.3rem;
+}
+.user_info_desc span {
+  margin-left: 12px;
+  color: var(--notice-em);
+  font-size: 4rem;
+  font-weight: 600;
+}
+.user_test_info {
+  display: flex;
+  margin-top: 32px;
+  border-top: 2px solid var(--black-80);
+  border-bottom: 2px solid var(--black-80);
+  text-align: center;
+}
+.user_test_info>div {
+  width: 50%;
+}
+.user_test_info>div:first-child {
+  border-right: 1px solid var(--black-80);
+}
+.user_test_box01 {
+  padding: 20px 0;
+}
+.user_test_part {
+  color: var(--black-80);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.user_test_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.user_test_item p {
+  margin: 0 10px;
+  color: var(--black-60);
+  font-size: 1.4rem;
+}
+.user_test_item p span {
+  color: var(--notice-em);
+  font-weight: 700;
+}
+.user_test_box02 {
+  padding: 20px 0;
+  background-color: var(--light-blue);
+}
+.ques_btn_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ques_btn_list li {
+  width: 152px;
+  margin: 0 5px 10px;
+}
+.btn_test_func {
+  height: 40px;
+  width: 152px;
+  background: #FFF;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.btn_test_func:hover {
+  color: var(--white);
+}
+.btn_test_func.blue {
+  border: 1px solid #8EA7FF;
+}
+.btn_test_func.blue:hover {
+  background-color: var(--notice-em);
+  border-color: var(--notice-em);
+}
+.btn_test_func.purple {
+  border: 1px solid #D095FF;
+}
+.btn_test_func.purple:hover {
+  background-color: #B560F8;
+  border-color: #B560F8;
+}
+.btn_test_func.gray {
+  border: 1px solid #BFBAD3;
+}
+.btn_test_func.gray:hover {
+  background-color: var(--black-80);
+  border-color: var(--black-80);
+}
+.btn_test_func span {
+  position: relative;
+  padding-left: 26px;
+}
+.btn_test_func span:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.btn_correct span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_check_correct.png) no-repeat left top/100%;
+}
+.btn_correct:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_check_correct_white.png);
+}
+.btn_wrong span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_check_wrong.png) no-repeat left top/100%;
+}
+.btn_wrong:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_check_wrong_white.png);
+}
+.btn_ques_print span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_print_q.png) no-repeat left top/100%;
+}
+.btn_ques_print:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_print_q_white.png);
+}
+.btn_answ_print span:before {
+  background: url(https://image.educe.co.kr/educe/exam/ico_print_a.png) no-repeat left top/100%;
+}
+.btn_answ_print:hover span:before {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_print_a_white.png);
+}
+.btn_blue {
+  width: 146px;
+  height: 40px;
+  background-color: var(--notice-em);
+  border: 1.5px solid var(--notice-em);
+  border-radius: 2px;
+  color: var(--white);
+}
+.btn_blue span {
+  position: relative;
+  padding-right: 26px;
+}
+.btn_blue span:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: url(/images/main/ico_plus_white.png) no-repeat left top/100%;
+}
+.btn_blue:hover {
+  background-color: var(--white);
+  color: var(--notice-em);
+}
+.btn_blue:hover span:after {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_plus_blue.png);
+}
+.modal_btn_single {
+  margin-top: 32px;
+  text-align: center;
+}
+.survey_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding: 16px 20px;
+  border: 1.5px solid #8EA7FF;
+  background: var(--light-blue);  
+}
+.survey_desc {
+  color: var(--notice-em);
+  font-size: 1.4rem;
+}
+.btn_survey {
+  height: 24px;
+  padding-right: 34px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_arrow_blue.png) no-repeat right top/24px;
+  color: var(--black-80);
+  font-weight: 600;
+}
+.btn_survey:hover {
+  background-image: url(https://image.educe.co.kr/educe/exam/ico_arrow_dblue.png);
+}
+
+/* modal : 모의테스트 시작 */
+.modal_test {
+  padding-top: 16px;
+  text-align: center;
+}
+.modal_test_tit {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.modal_test_box {
+  margin-top: 20px;
+  padding: 20px 0;
+  background-color: var(--light-gray);
+}
+.modal_test_part {
+  font-weight: 600;
+}
+.modal_test_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.modal_test_info p {
+  margin: 0 16px;
+  color: var(--black-60);
+  font-size: 1.4rem;
+}
+.modal_test_info p span {
+  color: var(--notice-em);
+  font-size: 2.2rem;
+  font-weight: 600;
+  vertical-align: -2px;
+}
+.test_time {
+  position: relative;
+}
+.test_time:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -16px;
+  width: 1px;
+  height: 14px;
+  background-color: var(--black-20);
+}
+.double_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.double_btn button {
+  width: 130px;
+}
+.modal_ft {
+  position: relative;
+  top: 24px;
+  width: calc(100% + 48px);
+  padding: 16px 24px;
+  background-color: var(--light-gray);
+  color: var(--black-60);
+  font-size: 1.3rem;
+  line-height: 150%;
+  -webkit-transform: translateX(-24px);
+  transform: translateX(-24px);
+}
+
+
+
+
+
+
+
+
+
+/* modal : 이어서 진행하기 */
+.modal_test_desc {
+  font-weight: 600;
+}
+.ani_timer {
+  width: 96px;
+  margin: 0 auto;
+}
+.modal_test_desc02 {
+  margin-top: 20px;
+  color: var(--black-60);
+  line-height: 150%;
+}
+.submit_incomplete {
+  padding-top: 90px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_incomplete.png) no-repeat center top/80px;
+}
+.submit_complete {
+  padding-top: 90px;
+  background: url(https://image.educe.co.kr/educe/exam/ico_complete.png) no-repeat center top/80px;
+}
+.clr_red {
+  color: var(--notice-alert);
+}
+.single_btn {
+  margin-top: 40px;
+}
+.single_btn button {
+  width: 100%;
+}
+
+.btn_black_smaller.w100p{width:100%}
+
+.exam button.vainilla.not{ opacity: 0.4;cursor:default}
+.exam button.vainilla.not:hover{opacity:0.4}
