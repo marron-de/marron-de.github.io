@@ -165,10 +165,7 @@ $(window).on('resize', function() {
 
 // main section2 (gsap)
 gsap.registerPlugin(ScrollTrigger);
-// gsap.set(".ms2 .img1", { left: "-2.5%" });
-// gsap.set(".ms2 .img2", { left: "81%" });
-// gsap.set(".ms2 .txtbox .tit", { scale: 0.2 });
-// gsap.set(".ms2 .txtbox .desc", { opacity: 0 });
+
 gsap.timeline({
 	scrollTrigger: {
 		trigger: ".ms2",
@@ -179,10 +176,6 @@ gsap.timeline({
 		anticipatePin: 1
 	}
 })
-// .to(".ms2 .img1", { left: "28%", ease: "power1.out" }, 0.2)
-// .to(".ms2 .img2", { left: "50.5%", ease: "power1.out" }, 0.2)
-// .to(".ms2 .txtbox .tit", { scale: 1, ease: "power2.out" }, 0.3)
-// .to(".ms2 .txtbox .desc", { opacity: 1, ease: "power2.out" }, 0.4);
 
 
 // main section5
@@ -226,3 +219,44 @@ video.addEventListener('ended', function () {
   vidbox.classList.remove('on');
 });
 
+
+// modal
+$(".modal .modal_close").click(function () {
+	$("body").removeClass("hidden")
+	$(".modal").removeClass("show")
+})
+$(document).mouseup(function (e) {
+	if ($(".modal .modal_box").has(e.target).length === 0) {
+		$("body").removeClass("hidden")
+		$(".modal").removeClass("show")
+	}
+});
+
+// prdView modal
+$(function () {
+  $('.main_section .item[data-modal]').on('click', function () {
+    const modalIndex = $(this).data('modal'); 
+    const targetModal = $('.prdView_modal_' + modalIndex);
+    targetModal.addClass('show');
+	$("body").addClass("hidden")
+  });
+});
+
+$('.prdView_modal').each(function (i, modalEl) {
+  const modal = $(modalEl);
+  const swiperEl = modal.find('.prdView_swiper')[0];
+  const nextBtn = modal.find('.next_btn')[0];
+  const prevBtn = modal.find('.prev_btn')[0];
+
+  new Swiper(swiperEl, {
+    observer: true,
+    observeParents: true,
+    loop: true,
+    speed: 500,
+	spaceBetween: 1,
+    navigation: {
+      nextEl: nextBtn,
+      prevEl: prevBtn,
+    },
+  });
+});

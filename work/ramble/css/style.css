@@ -42,17 +42,19 @@
 .ms4 {background: #f5f6f7; padding: 7.25rem 0 9.75rem;}
 .ms4 .titbox {margin-bottom: 4.375rem;}
 .ms4 .titbox .tit{font-size: 3.125rem; font-weight: 500; color: #000000;}
-.ms4 .contbox{display: flex; flex-wrap: wrap; gap: 5.313rem 2.5rem;}
+.ms4 .contbox{display: flex; align-items: flex-end; flex-wrap: wrap; gap: 5.313rem 2.5rem;}
 .ms4 .contbox > .item{width: calc((100% - 2.5rem*2)/3); }
 .ms4 .contbox > .item > .link{width: 100%; display: flex; flex-direction: column-reverse; gap: 1.875rem;}
 .ms4 .contbox > .item .imgbox{position: relative; display: flex; overflow: hidden;}
+.ms4 .contbox > .item .imgbox::after{content: ""; position: absolute; left: 0; top: 0; width: calc(100% - 4px); height: calc(100% - 4px); border: 2px solid #173477; transition: all 0.4s ease; opacity: 0; pointer-events: none;}
 .ms4 .contbox > .item .imgbox img {width: 100%; transition: all 0.4s ease;}
+.ms4 .contbox > .item .imgbox:hover::after {opacity: 1;}
 .ms4 .contbox > .item .imgbox:hover img {transform: scale(1.1);}
 .ms4 .contbox > .item .imgbox .colorchip {position: absolute; left: 0.875rem; bottom: 1.063rem; display: flex; align-items: center; gap: 0.438rem;}
 .ms4 .contbox > .item .imgbox .colorchip .color{width: 0.875rem; aspect-ratio: 1/1; border-radius: 50%;}
 .ms4 .contbox > .item .imgbox .colorchip .color1{background: #173477;}
 .ms4 .contbox > .item .imgbox .colorchip .color2{background: #000000;}
-.ms4 .contbox > .item .txtbox{display: flex; flex-direction: column; gap: 1.5rem; text-align: center;}
+.ms4 .contbox > .item .txtbox{display: flex; flex-direction: column; gap: 1rem; text-align: center;}
 .ms4 .contbox > .item .txtbox .tit{font-size: 1.5rem; font-weight: 600; color: #333333;}
 .ms4 .contbox > .item .txtbox .tit.ver2 {letter-spacing: -0.02em;}
 .ms4 .contbox > .item .txtbox .desc{font-size: 1rem; line-height: 1.5; color: #666666; font-weight: 500; opacity: 0.8;}
@@ -124,7 +126,6 @@
 .ms8 .vidbox.on .play_btn{opacity: 0; pointer-events: none;}
 
 
-
 .ms9 {padding-top: 5rem; margin-top: -5rem; margin-bottom: 12.5rem;}
 .ms9 .tab_wrap {position: relative; display: flex;}
 .ms9 .tab_navbox {width: calc(50% - 2.5rem);}
@@ -155,4 +156,18 @@
 .ms10 .txtbox .tit{font-size: 2.5rem; line-height: 1.18; font-weight: 500; color: #fff; margin-bottom: 2.75rem;}
 .ms10 .txtbox .desc{font-size: 1.25rem; line-height: 1.5; color: rgba(255,255,255,0.8); margin-bottom: 1.875rem;}
 .ms10 .txtbox .more_btn{padding: 1.5rem 3.938rem;}
+
+
+.prdView_modal .modal_box{width: 50rem;}
+.prdView_modal .slidebox{position: relative; width: 100%; max-width: 37.125rem; padding: 5.25rem 4.813rem 4.375rem;}
+.prdView_modal .slidebox .prdView_swiper{width: 100%;}
+.prdView_modal .slidebox .prdView_swiper .item{display: flex; width: 100%; aspect-ratio: 1/1;}
+.prdView_modal .slidebox .prdView_swiper .item img {width: 100%; height: 100%; object-fit: cover;}
+.prdView_modal .slidebox .prev_btn, 
+.prdView_modal .slidebox .next_btn { background: no-repeat center / contain;  width: 1.063rem; height: unset;  aspect-ratio: 1 / 1.5294; top: 50%; margin: 0; transform: translateY(-50%);}
+.prdView_modal .slidebox .prev_btn{background-image: url(../img/prev_btn.png); left: 0;}
+.prdView_modal .slidebox .next_btn{background-image: url(../img/next_btn.png); right: 0;}
+.prdView_modal .txtbox { display: flex;  flex-direction: column;  align-items: center;  text-align: center; gap: 0.875rem;}
+.prdView_modal .txtbox .tit{font-size: 1.5rem; font-weight: 600; color: #333333;} 
+.prdView_modal .txtbox .desc{font-size: 1rem; line-height: 1.5; font-weight: 500; color: #666666;}
 

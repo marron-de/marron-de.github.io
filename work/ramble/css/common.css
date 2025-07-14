@@ -14,7 +14,6 @@ input,textarea,button,select {font-family: inherit;}
 
 body.hidden { overflow: hidden;}
 body::before { content: "";  position: fixed;  left: 0;  top: 0;  width: 100%;  height: 100%; background-color: rgba(0,0,0,0.25); z-index: 99;  transition: all 0.4s ease; opacity: 0; pointer-events: none;cursor: pointer;}
-body.hidden::before { opacity: 1;  pointer-events: auto;}
   
 .wrap {width: 100%; position: relative;}
 .pc {display: block;}
@@ -22,6 +21,8 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 .mobile { display: none !important;}
 .container {position: relative; width: 100%;} 
 .inner {position: relative; width: 90%; max-width: 1280px;  margin-left: auto; margin-right: auto;}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display: none;}
 
 [data-aos=fade-down] { transform: translate3d(0, -3.125rem, 0);}
 [data-aos=fade-up] { transform: translate3d(0, 3.125rem, 0);}
@@ -72,6 +73,13 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 .footer .f_snsbox .link:hover {opacity: 0.5;}
 
 
+/* modal */
+.modal { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; background: rgba(0, 0, 0, 0.5); transition: all 0.4s ease; pointer-events: none; opacity: 0;}
+.modal.show { pointer-events: auto; opacity: 1;}
+.modal .modal_box { position: absolute; left: 50%;  top: 50%; transform: translate(-50%, -50%); border-radius: 0.625rem;  background: #fff;  box-shadow: 0 0.25rem 1.25rem 0 rgba(0, 0, 0, 0.06); padding: 3rem;  min-width: 400px; max-width: 90%;  max-height: 90%;  display: flex; flex-direction: column;  align-items: center; transition: all 0.4s ease;  margin-top: 2.5rem; opacity: 0; overflow: hidden;}
+.modal.show .modal_box { margin-top: 0; opacity: 1;}
+.modal .modal_box .modal_close {background: url(../img/modal_close.png) no-repeat center/contain; width: 1.375rem; aspect-ratio: 1/1; position: absolute; top: 2rem; right: 1.625rem;}
+
 /* element */
 .more_box {position: relative;}
 .more_btn { font-family: "Pretendard", sans-serif; text-transform: uppercase;   font-size: 1.25rem;  line-height: 1;  font-weight: 600;  color: #000000;  border: 1px solid rgba(255, 255, 255, 0.8);   background: rgba(255, 255, 255, 0.8); border-radius: 0.438rem;  padding: 1.125rem 1.5rem;  display: flex; align-items: center;  justify-content: center; transition: all 0.4s ease;}
@@ -80,3 +88,5 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 .more_btn.ver2:hover {color: #000000;  background: rgba(255, 255, 255, 0.8);}
 .more_btn.ver3 {border: 1px solid #173477; color: #fff; background: #173477;}
 .more_btn.ver3:hover {color: #173477;  background: rgba(255, 255, 255, 0.8);}
+
+
