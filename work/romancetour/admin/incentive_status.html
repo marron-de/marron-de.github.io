@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로망스투어 ERP</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+	
+    <!-- datepicker -->
+    <link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/admin_style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+
+
+    <div class="wrap">
+
+		<div class="section">
+			<div class="tbl_titbox">
+				<p class="tbl_tit">인센티브현황</p>
+			</div>
+			<div class="tbl_filter">
+				<div class="filter_top">
+					<div class="input_box">
+						<div class="input_item">
+							<input type="text" class="input datepicker" value="2025-05-01">
+							<span class="txt">~</span>
+							<input type="text" class="input datepicker" value="2025-05-31">
+						</div>
+						<select class="select">
+							<option value="">인센티브대상</option>
+							<option value="대상">대상</option>
+							<option value="비대상">비대상</option>
+						</select>
+						<select class="select">
+							<option value="">입금여부</option>
+							<option value="미입금">미입금</option>
+							<option value="입금완료">입금완료</option>
+							<option value="비대상">비대상</option>
+						</select>
+						<input type="text" id="managerSch" class="input" placeholder="상품담당자 검색">
+						<input type="text" id="prdSch2" class="input" placeholder="상품명 검색">
+						<button type="button" class="sch_btn">검색</button>
+					</div>
+					<p class="total">
+						TOTAL : <span class="red">3,271</span>
+					</p>
+				</div>
+				<div class="filter_btn">
+					<button type="button" class="btn excel_btn">
+						<span class="icon"></span>
+						<span class="txt">엑셀내려받기</span>
+					</button>
+				</div>
+			</div>
+			<div class="tbl_wrap">
+				<table class="tbl">
+					<thead>
+						<tr>
+							<th rowspan="2" class="td_chk"><input type="checkbox" class="check"></th>
+							<th rowspan="2" class="td_num">순서</th>
+							<th rowspan="2">인센티브대상</th>
+							<th rowspan="2">출발일자</th>
+							<th rowspan="2">상품담당자</th>
+							<th rowspan="2" class="td_nowrap1">상품명</th>
+							<th rowspan="2">투어종류</th>
+							<th rowspan="2">탑승인원</th>
+							<th rowspan="2">사전인센티브<br>신청여부</th>
+							<th colspan="13">인센티브 신청내역 (부가세포함)</th>
+							<th rowspan="2">인센티브<br>신청일자</th>
+							<th rowspan="2">입금여부</th>
+							<th rowspan="2">비고</th>
+						</tr>
+						<tr>
+							<th class="th_region td_region1">1지역</th>
+							<th>금액</th>
+							<th class="th_region">2지역</th>
+							<th>금액</th>
+							<th class="th_region">3지역</th>
+							<th>금액</th>
+							<th class="th_region">4지역</th>
+							<th>금액</th>
+							<th class="th_region">5지역</th>
+							<th>금액</th>
+							<th class="th_region">6지역</th>
+							<th>금액</th>
+							<th>합계</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2" class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td rowspan="2" class="td_num">1</td>
+							<td rowspan="2">
+								<select class="select">
+									<option value="">인센티브대상</option>
+									<option value="대상" selected>대상</option>
+									<option value="비대상">비대상</option>
+								</select>
+							</td>
+							<td rowspan="2">2025.05.01</td>
+							<td>이주현</td>
+							<td class="td_nowrap1">문경시장투어</td>
+							<td>당일</td>
+							<td>30</td>
+							<td></td>
+							<td class="td_region td_region1">문경상권활성화재단</td>
+							<td>300,000</td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td>300,000</td>
+							<td>2025.05.06</td>
+							<td>입금완료</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>** 입금내역 **</td>
+							<td></td>
+							<td></td>
+							<td>신청없음</td>
+							<td class="td_region">2025.05.15</td>
+							<td>300,000</td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td>300,000</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td rowspan="2" class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td rowspan="2" class="td_num">2</td>
+							<td rowspan="2">
+								<select class="select">
+									<option value="">인센티브대상</option>
+									<option value="대상">대상</option>
+									<option value="비대상" selected>비대상</option>
+								</select>
+							</td>
+							<td rowspan="2">2025.05.01</td>
+							<td>이주현</td>
+							<td class="td_nowrap1">문경봉암사</td>
+							<td>당일</td>
+							<td>26</td>
+							<td></td>
+							<td class="td_region td_region1"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td>-</td>
+							<td>2025.04.25</td>
+							<td>비대상</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>** 입금내역 **</td>
+							<td></td>
+							<td></td>
+							<td>비대상</td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td>-</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td rowspan="2" class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td rowspan="2" class="td_num">3</td>
+							<td rowspan="2">
+								<select class="select">
+									<option value="">인센티브대상</option>
+									<option value="대상" selected>대상</option>
+									<option value="비대상">비대상</option>
+								</select>
+							</td>
+							<td rowspan="2">2025.05.01</td>
+							<td>김도희</td>
+							<td class="td_nowrap1">청산도해남투어</td>
+							<td>1박2일</td>
+							<td>90</td>
+							<td>2025.04.15</td>
+							<td class="td_region td_region1">해남문화관광재단</td>
+							<td>900,000</td>
+							<td class="td_region">완도군</td>
+							<td>1,800,000</td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td>2,700,000</td>
+							<td>2025.04.21</td>
+							<td>미입금</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>** 입금내역 **</td>
+							<td></td>
+							<td></td>
+							<td>신청완료</td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td class="td_region"></td>
+							<td></td>
+							<td>-</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

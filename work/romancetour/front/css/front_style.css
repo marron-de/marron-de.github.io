@@ -1,0 +1,391 @@
+  
+/* reset */
+* { margin: 0; padding: 0; outline: none; box-sizing: border-box;}
+body {margin: 0; padding: 0; -ms-overflow-style: none; scrollbar-width: none; }
+body::-webkit-scrollbar {display: none;}
+html { scroll-behavior: smooth; }
+html, body {font: 400 16px/1.3 'Pretendard', sans-serif;  color: #000000; width: 100%; position: relative;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent;}
+img {max-width: 100%;}
+button { font-family: inherit; border: none; background-color: transparent; outline: 0;  cursor: pointer; }
+input,textarea,button,select {font-family: inherit;}
+
+  
+.wrap {width: 100%; position: relative; min-width: 1200px;}
+.pc {display: block;}
+.tablet {display: none !important;}
+.mobile { display: none !important;}
+.container {position: relative; width: 100%;} 
+.section {position: relative; width: 100%;} 
+.inner {position: relative; width: 90%; max-width: 1200px;  margin-left: auto; margin-right: auto;}
+
+  
+
+/* 기존 레이아웃 임시추가 */
+.temp_header {font-size: 0;}
+.temp_footer {font-size: 0;}
+.temp_navigation {font-size: 0; display: none;}
+.temp_imgbox {font-size: 0;}
+.temp_subimg {position: relative; width: 100%; height: 350px; background: url(../img/subtop_img.jpg) no-repeat center/cover;}
+
+
+/* 버스 좌석보기 버튼 */
+.seat_box {border: 1px solid #ccc;padding: 20px 40px; margin-top: 50px; display: flex; align-items: center; justify-content: space-between;}
+.seat_box .left{display: flex; align-items: center; gap: 10px;}
+.seat_box .left .tit{ background: #ef7898; width: 50px; height: 26px;  display: inline-flex; align-items: center; justify-content: center; color: #fff;  font-size: 14px;  font-weight: 500; text-align: center; line-height: 1;}
+.seat_box .left .desc{font-size: 17px; font-weight: 500; color: #333;}
+.seat_box .right {display: flex; align-items: center; gap: 10px;}
+.seat_box .right .seat_btn{border-radius: 5px;width: 170px;height: 50px;font-weight: 600;
+font-size: 16px;line-height: 130%;text-align: center; display: flex; align-items: center; justify-content: center; color: #fff;}
+.seat_box .right .seat_btn.typeA{background: #74A1EC;}
+.seat_box .right .seat_btn.typeB{background:#EF7898}
+
+
+/* 버스 좌석보기 팝업 */
+.busSeat_modal { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; background: rgba(0, 0, 0, 0.5); transition: all 0.4s ease; pointer-events: none; opacity: 0;}
+.busSeat_modal.show { pointer-events: auto; opacity: 1;}
+.busSeat_modal .modal_box {  position: absolute;  left: 50%;  top: 50%;  transform: translate(-50%, -50%);  border-radius: 16px;  background: #fff;  box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.2); padding: 24px 25px 40px; width: 365px; max-width: 90%;   max-height: 90%; display: flex; flex-direction: column; gap: 20px;  transition: all 0.4s ease; margin-top: 40px;  opacity: 0; overflow: hidden;}
+.busSeat_modal.show .modal_box { margin-top: 0; opacity: 1;}
+.busSeat_modal .modal_head {display: flex; align-items: center; justify-content: space-between;}
+.busSeat_modal .modal_head .modal_tit { flex: 1; font-weight: 700;font-size: 20px;line-height: 130%;color: #333333;}
+.busSeat_modal .modal_head .modal_close {background: url(../img/modal_close.png) no-repeat center/contain; width: 20px; aspect-ratio: 1/1;}
+.busSeat_modal .modal_body {display: flex; flex-direction: column; gap: 20px;}
+.busSeat_modal .modal_body .alert_txt{display: flex; align-items: flex-start; gap: 8px;}
+.busSeat_modal .modal_body .alert_txt .icon{background: url(../img/ic_alert.png) no-repeat center/contain; width: 14px; aspect-ratio: 1/1; margin-top: 2px;}
+.busSeat_modal .modal_body .alert_txt .txt{flex: 1;font-weight: 400;font-size: 13px;line-height: 130%;color: #555555; word-break: keep-all	;}
+.busSeat_modal .modal_body .seat_area {display: flex; flex-direction: column; gap: 20px;}
+.busSeat_modal .modal_body .seat_area .seat_picbox{display: flex; flex-direction: column; align-items: center; gap: 10px; max-height: 360px; overflow: auto;}
+.busSeat_modal .modal_body .seat_area .seat_picbox::-webkit-scrollbar {display: none}
+.busSeat_modal .modal_body .seat_area .seat_tit{font-weight: 600;font-size: 16px;line-height: 140%;text-align: center;color: #333333;}
+.busSeat_modal .modal_body .seat_area .seat_pic {  border-radius: 40px 40px 16px 16px;   padding: 20px 16px;  background: #F5F5F5; display: flex; flex-direction: column;  gap: 4px;}
+.busSeat_modal .modal_body .seat_area .seat_pic .top_row { display: flex;justify-content: space-between;}
+.busSeat_modal .modal_body .seat_area .seat_pic .top_row .driver {  border-radius: 16px 6px 6px 6px;  width: 84px;  height: 32px;  background: #e6e6e6;  padding: 6px 0;  display: flex;  align-items: center; justify-content: center;}
+.busSeat_modal .modal_body .seat_area .seat_pic .top_row .driver::before{content: ""; background: url(../img/seat_wheel.png) no-repeat center/contain; width: 20px; aspect-ratio: 1/1;}
+.busSeat_modal .modal_body .seat_area .seat_pic .top_row .exit { border-radius: 6px 16px 6px 6px;  padding: 6px 0px;  width: 40px;  height: 32px;  background: #e6e6e6;   display: flex; align-items: center; justify-content: center;}
+.busSeat_modal .modal_body .seat_area .seat_pic .top_row .exit::before{content: ""; background: url(../img/seat_exit.png) no-repeat center/contain; width: 20px; aspect-ratio: 1/1;}
+.busSeat_modal .modal_body .seat_area .seat_pic .top_txt {display: flex;padding: 4px 0px;} 
+.busSeat_modal .modal_body .seat_area .seat_pic .top_txt .txt{flex: 1; font-weight: 600;font-size: 11px;line-height: 130%;text-align: center;color: #555555;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row{display: flex;gap: 4px;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item{position: relative; width: 40px; aspect-ratio: 1/1;padding: 2px;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.seat .num {background: #fff; border: 3px solid #c4c4c4;font-weight: 500;font-size: 14px;line-height: 100%;text-align: center;color: #434343;border-radius: 6px; width: 100%; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.seat.guide .num{background: #d8e6ff;border: 3px solid #9ec2ff; font-size: 0;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.seat.guide .num::after{content: "G";font-size: 14px;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.seat.selected .num{background: #EF7898; border: 3px solid #ffd7e1; color: #fff;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.seat.disabled::after{content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: url(../img/seat_disabled.png) no-repeat center/contain; width: 18px; aspect-ratio: 1/1}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.seat.disabled .num{font-size: 0; background: #7B7B7B;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.arrow{position: relative;}
+.busSeat_modal .modal_body .seat_area .seat_pic .row .item.arrow::before{content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: url(../img/seat_arrow.png) no-repeat center/contain; width: 18px; aspect-ratio: 1/1;}
+.busSeat_modal .modal_body .seat_area .seat_label{display: flex; align-items: center; justify-content: center; gap: 10px;}
+.busSeat_modal .modal_body .seat_area .seat_label > .item{display: flex; align-items: center; gap: 4px;}
+.busSeat_modal .modal_body .seat_area .seat_label > .item .color{border-radius: 4px;width: 14px; aspect-ratio: 1/1;}
+.busSeat_modal .modal_body .seat_area .seat_label > .item .color1{background: #fff; border: 2px solid #c4c4c4;}
+.busSeat_modal .modal_body .seat_area .seat_label > .item .color2{background: #7b7b7b; border: 2px solid #ccc;}
+.busSeat_modal .modal_body .seat_area .seat_label > .item .color3{background: #EF7898;border: 2px solid #ffd7e1;}
+.busSeat_modal .modal_body .seat_area .seat_label > .item .color4{background: #d8e6ff; border: 2px solid #9ec2ff;}
+.busSeat_modal .modal_body .seat_area .seat_label > .item .txt{font-weight: 500;font-size: 10px;line-height: 100%;text-align: center;color: #555;}
+
+
+/* 버스 좌석선택 */
+.sub_headbox {display: none;}
+
+.seat_section {margin: 80px 0 120px;}
+
+.seat_section .reservation_number {font-weight: 500;font-size: 22px;line-height: 140%;color: #333; margin-bottom: 20px;}
+.seat_section .reservation_number .num {color: #ef7898;}
+
+.seat_section .select_cont {border-top: 2px solid #333;}
+.seat_section .select_cont .top_box{width: 100%; height: 160px; display: flex; align-items: center; justify-content: center; gap: 40px;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;}
+.seat_section .select_cont .top_box .txt{font-weight: 700;font-size: 24px;line-height: 140%;text-align: center;color: #222;}
+.seat_section .select_cont .top_box .line { width: 122px; height: 1.5px;  background: url(../img/ic_line.png) no-repeat center / 100% 100%;}
+.seat_section .select_cont .top_box .icon{background: url(../img/ic_bus.png) no-repeat center/contain; width: 40px; aspect-ratio: 1/1;}
+.seat_section .select_cont .bottom_box { border-bottom: 1px solid #ccc;   padding: 50px 40px; display: flex; gap: 40px;}
+.seat_section .select_cont .seat_select { flex: 1; min-width: 220px; display: flex;  flex-direction: column; gap: 30px;}
+.seat_section .select_cont .seat_select .infobox { display: flex; flex-direction: column; gap: 16px;border-bottom: 1px solid #ccc; padding-bottom: 20px;}
+.seat_section .select_cont .seat_select .infobox .title {font-weight: 700;font-size: 24px;line-height: 140%;color: #333;display: flex; gap: 12px;} 
+.seat_section .select_cont .seat_select .infobox .title .small {font-weight: 500;font-size: 16px;color: #555;} 
+.seat_section .select_cont .seat_select .infobox .descbox {display: flex; flex-direction: column; gap: 8px;} 
+.seat_section .select_cont .seat_select .infobox .descbox > li{display: flex; align-items: center; gap: 8px;} 
+.seat_section .select_cont .seat_select .infobox .descbox > li .icon{width: 20px;} 
+.seat_section .select_cont .seat_select .infobox .descbox > li .txt{ font-size: 16px;line-height: 140%;color: #555; flex: 1;} 
+.seat_section .select_cont .seat_select .selectbox { display: flex;  flex-direction: column;  gap: 10px;  overflow: auto;  height: 246px;}
+.seat_section .select_cont .seat_select .selectbox.has_scroll {padding-right: 14px;}
+.seat_section .select_cont .seat_select .selectbox::-webkit-scrollbar{ width: 4px; height: 4px; } 
+.seat_section .select_cont .seat_select .selectbox::-webkit-scrollbar-thumb{background: #222; border-radius: 100px;} 
+.seat_section .select_cont .seat_select .selectbox::-webkit-scrollbar-track{background: #ccc; border-radius: 100px;} 
+.seat_section .select_cont .seat_select .selectbox .item {position: relative;  min-height: 54px; border-radius: 10px; padding: 16px 20px;  font-weight: 500;  font-size: 16px;  line-height: 100%; color: #222; display: flex; align-items: center; gap: 10px; cursor: pointer;}
+.seat_section .select_cont .seat_select .selectbox .item::after {content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width:calc(100% - 2px); height: calc(100% - 2px); border-radius: 10px; border: 1px solid #ccc; pointer-events: none;}
+.seat_section .select_cont .seat_select .selectbox .item .num{font-weight: 700;} 
+.seat_section .select_cont .seat_select .selectbox .item .name{flex: 1;} 
+.seat_section .select_cont .seat_select .selectbox .item .state{color: #7b7b7b;} 
+.seat_section .select_cont .seat_select .selectbox .item.active { background: #f5f5f5;}
+.seat_section .select_cont .seat_select .selectbox .item.active::after {border: 2px solid #222;  width:calc(100% - 4px); height: calc(100% - 4px);}
+.seat_section .select_cont .seat_select .selectbox .item.selected .state{color: #222;} 
+.seat_section .select_cont .seat_area {width: 800px; display: flex; flex-direction: column; gap: 20px;} 
+.seat_section .select_cont .seat_area .seat_desc{font-weight: 500;font-size: 16px;
+line-height: 140%;color: #555;}
+.seat_section .select_cont .seat_area .seat_pic { width: 100%;  border-radius: 60px 30px 30px 60px; padding: 30px 24px; background: #F5F5F5; display: flex; gap: 8px;}
+.seat_section .select_cont .seat_area .seat_pic .top_row { width: 54px; display: flex;  flex-direction: column-reverse;  justify-content: space-between;}
+.seat_section .select_cont .seat_area .seat_pic .top_row .driver { border-radius: 6px 6px 6px 20px; padding: 6px 0px; width: 100%; height: 128px; background: #e6e6e6;  display: flex; align-items: center; justify-content: center;}
+.seat_section .select_cont .seat_area .seat_pic .top_row .driver::before{content: ""; background: url(../img/seat_wheel.png) no-repeat center/contain; width: 28px; aspect-ratio: 1/1; transform: rotate(-90deg);}
+.seat_section .select_cont .seat_area .seat_pic .top_row .exit { border-radius: 20px 6px 6px 6px; padding: 6px 0px;  width: 100%;  height: 54px;  background: #e6e6e6;   display: flex; align-items: center; justify-content: center;}
+.seat_section .select_cont .seat_area .seat_pic .top_row .exit::before{content: ""; background: url(../img/seat_exit.png) no-repeat center/contain; width: 28px; aspect-ratio: 1/1; transform: rotate(-90deg);}
+.seat_section .select_cont .seat_area .seat_pic .row_cont { flex: 1; display: flex; justify-content: space-between;}
+.seat_section .select_cont .seat_area .seat_pic .top_txt { width: 40px; display: flex; flex-direction: column-reverse; gap: 8px;}
+.seat_section .select_cont .seat_area .seat_pic .top_txt .txt { flex: 1;  font-weight: 600;  font-size: 15px; line-height: 130%; text-align: center; color: #222; writing-mode: sideways-lr; display: flex; align-items: center; justify-content: center;}
+.seat_section .select_cont .seat_area .seat_pic .row { display: flex;  flex-direction: column-reverse; gap: 8px;}
+.seat_section .select_cont .seat_area .seat_pic .row .item{position: relative; width: 54px; aspect-ratio: 1/1;padding: 2px;}
+.seat_section .select_cont .seat_area .seat_pic .row .item.seat .num {background: #fff; border: 4px solid #c4c4c4;font-weight: 600;font-size: 18px;line-height: 100%;text-align: center;color: #434343;border-radius: 6px; width: 100%; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;}
+.seat_section .select_cont .seat_area .seat_pic .row .item.seat.guide .num{background: #d8e6ff;border: 4px solid #9ec2ff; font-size: 0;}
+.seat_section .select_cont .seat_area .seat_pic .row .item.seat.guide .num::after{content: "G";font-size: 18px;}
+.seat_section .select_cont .seat_area .seat_pic .row .item.seat.selected .num{ font-size: 0; background: #EF7898; border: 4px solid #ffd7e1;}
+.seat_section .select_cont .seat_area .seat_pic .row .item.seat.selected::after {content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: url(../img/seat_check.png) no-repeat center/contain; width: 24px; aspect-ratio: 1/1}
+.seat_section .select_cont .seat_area .seat_pic .row .item.seat.disabled::after{content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: url(../img/seat_disabled.png) no-repeat center/contain; width: 24px; aspect-ratio: 1/1}
+.seat_section .select_cont .seat_area .seat_pic .row .item.seat.disabled .num{font-size: 0; background: #7B7B7B;}
+.seat_section .select_cont .seat_area .seat_pic .row .item.arrow{position: relative;}
+.seat_section .select_cont .seat_area .seat_pic .row .item.arrow::before{content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-90deg); background: url(../img/seat_arrow.png) no-repeat center/contain; width: 24px; aspect-ratio: 1/1;}
+.seat_section .select_cont .seat_area .seat_label{display: flex; align-items: center; justify-content: center; gap: 16px;}
+.seat_section .select_cont .seat_area .seat_label > .item{display: flex; align-items: center; gap: 6px;}
+.seat_section .select_cont .seat_area .seat_label > .item .color{border-radius: 6px;width: 18px; aspect-ratio: 1/1;}
+.seat_section .select_cont .seat_area .seat_label > .item .color1{background: #fff; border: 2px solid #c4c4c4;}
+.seat_section .select_cont .seat_area .seat_label > .item .color2{background: #7b7b7b; border: 2px solid #ccc;}
+.seat_section .select_cont .seat_area .seat_label > .item .color3{background: #EF7898;border: 2px solid #ffd7e1;}
+.seat_section .select_cont .seat_area .seat_label > .item .color4{background: #d8e6ff; border: 2px solid #9ec2ff;}
+.seat_section .select_cont .seat_area .seat_label > .item .txt{font-weight: 500;font-size: 14px;line-height: 100%;text-align: center;color: #555;}
+
+.seat_section .info_cont {position: relative; margin-top: 80px;}
+.seat_section .info_cont .info_tit{font-weight: 500;font-size: 22px;line-height: 140%;color: #333; margin-bottom: 12px;}
+.seat_section .info_cont .info_tblwrap{position: relative;}
+.seat_section .info_cont .info_tbl { width: 100%; border-collapse: collapse;  font-size: 15px;  line-height: 140%; color: #222;    table-layout: fixed;}
+.seat_section .info_cont .info_tbl thead tr{background: #f2f2f2; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc;}
+.seat_section .info_cont .info_tbl thead tr th{font-weight: 500; height: 45px; padding: 12px 10px; border-right: 1px solid #ccc;}
+.seat_section .info_cont .info_tbl thead tr th:last-child {border-right: 0;}
+.seat_section .info_cont .info_tbl tbody tr{ border-bottom: 1px solid #ccc;}
+.seat_section .info_cont .info_tbl tbody tr td{height: 45px; padding: 12px 10px; border-right: 1px solid #ccc;text-align: center;}
+.seat_section .info_cont .info_tbl tbody tr td:last-child {border-right: 0;}
+.seat_section .info_cont .info_tbl tbody tr td::before { content: attr(data-th); display: none;}
+.seat_section .info_cont .info_tbl tbody tr td .btnbox {display: flex; gap: 10px;}
+.seat_section .info_cont .info_tbl tbody tr td .btnbox .tbl_btn{border: 1px solid #333;
+border-radius: 5px; padding: 6px 14px; background: #333; font-size: 14px;line-height: 100%; color: #fff; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 400;}
+.seat_section .info_cont .info_tbl tbody tr td .btnbox .tbl_btn .icon{ width: 20px;}
+
+.seat_section .seat_btnbox {display: flex; align-items: center; justify-content: center; gap: 50px; margin-top: 80px;}
+.seat_section .seat_btnbox .seat_btn{font-weight: 600;font-size: 17px;line-height: 130%;text-align: center; width: 200px; height: 60px; display: flex; align-items: center; justify-content: center;border-radius: 10px;}
+.seat_section .seat_btnbox .seat_btn.typeA{border: 1px solid #EF7898; background: #EF7898; color: #fff;}
+.seat_section .seat_btnbox .seat_btn.typeB{border: 1px solid #d4d4cd; background: #fff;  color: #333;}
+
+
+/* 버스 탑승권 발권 */
+.seat_section .complete_cont {border-top: 2px solid #333; border-bottom: 1px solid #ccc; padding: 30px 40px; display: flex; flex-direction: column; gap: 20px;} 
+.seat_section .complete_cont .topbox {display: flex; flex-direction: column; gap: 10px;}
+.seat_section .complete_cont .topbox .sub{font-weight: 500;font-size: 16px;line-height: 140%;color: #555;} 
+.seat_section .complete_cont .topbox .tit{font-weight: 600;font-size: 24px;line-height: 140%;color: #222;} 
+.seat_section .complete_cont .topbox .tit .color{color: #e4597e;} 
+.seat_section .complete_cont .infobox{display: flex; align-items: center; gap: 40px;} 
+.seat_section .complete_cont .infobox .item{flex: 1; display: flex; flex-direction: column; gap: 8px;} 
+.seat_section .complete_cont .infobox .item.mob_show {display: none;}
+.seat_section .complete_cont .infobox .item .tit{font-size: 16px;line-height: 140%;color: #333;} 
+.seat_section .complete_cont .infobox .item .desc{font-weight: 500;font-size: 18px;line-height: 140%;color: #000;} 
+.seat_section .complete_cont .infobox .item .desc .small {font-size: 14px;color: #555;}
+.seat_section .complete_cont .infobox .line{width: 1px;height: 50px;background: #ccc;} 
+
+
+/* 버스 탑승권 확인 */
+.seat_section .ticket_cont {display: flex; flex-direction: column; gap: 20px;}
+.seat_section .ticket_cont .ticket_tit{font-weight: 500;font-size: 22px;line-height: 140%;color: #333;}
+.seat_section .ticket_cont .ticket_areawrap{border-top: 2px solid #333; border-bottom: 1px solid #ccc; padding: 60px 40px;}
+.seat_section .ticket_cont .ticket_area {border-radius: 24px;padding: 0px 20px;background: #f5f5f5; display: flex; gap: 24px;}
+.seat_section .ticket_cont .ticket_area .contbox { flex: 1;  padding: 34px 32px;  display: flex; flex-direction: column;  gap: 16px;}
+.seat_section .ticket_cont .ticket_area .contbox .topbox {display: flex; align-items: center; justify-content: space-between;}
+.seat_section .ticket_cont .ticket_area .contbox .topbox .left{display: flex; flex-direction: column; gap: 6px;}
+.seat_section .ticket_cont .ticket_area .contbox .topbox .left .tit{font-weight: 600;font-size: 30px;line-height: 140%;color: #333;}
+.seat_section .ticket_cont .ticket_area .contbox .topbox .left .desc{font-weight: 500;font-size: 16px;line-height: 140%;color: #555;}
+.seat_section .ticket_cont .ticket_area .contbox .topbox .right{display: flex; justify-content: flex-end;}
+.seat_section .ticket_cont .ticket_area .contbox .topbox .right .seat_label{font-weight: 500;font-size: 18px;color: #fff; border-radius: 12px; padding: 14px 16px; background: #3b3b3b; display: flex; align-items: center; gap: 16px;}
+.seat_section .ticket_cont .ticket_area .contbox .topbox .right .seat_label .icon{background: url(../img/ic_seat.png) no-repeat center/contain; width: 24px; aspect-ratio: 1/1;}
+.seat_section .ticket_cont .ticket_area .contbox .infobox {border-radius: 24px;padding: 32px;background: #fff; display: flex; flex-direction: column; gap: 20px;} 
+.seat_section .ticket_cont .ticket_area .contbox .infobox .item{font-weight: 500;font-size: 18px;color: #555;  display: flex; align-items: center; justify-content: space-between;}
+.seat_section .ticket_cont .ticket_area .contbox .infobox .item .desc{color: #333; display: flex; align-items: center; gap: 10px;}
+.seat_section .ticket_cont .ticket_area .contbox .infobox .item .desc .arrow{background: url(../img/ic_arrow.png) no-repeat center/contain; width: 18px; aspect-ratio: 1/1;}
+.seat_section .ticket_cont .ticket_area .contbox .infobox .line {width: 100%; height: 1px; background: url(../img/ic_tkline2.png) no-repeat center/100% 100%;}
+.seat_section .ticket_cont .ticket_area .contbox .note_txt {font-weight: 500;font-size: 14px;line-height: 160%;text-align: right;color: #e6463f;}
+.seat_section .ticket_cont .ticket_area .linebox { display: flex;  flex-direction: column; align-items: center; justify-content: space-between; gap: 50px;}
+.seat_section .ticket_cont .ticket_area .linebox .deco { width: 80px; height: 40px;  background: #fff;}
+.seat_section .ticket_cont .ticket_area .linebox .deco1 { border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;}
+.seat_section .ticket_cont .ticket_area .linebox .deco2 { border-top-left-radius: 100px; border-top-right-radius: 100px;}
+.seat_section .ticket_cont .ticket_area .linebox .line{ flex: 1; width: 2px; background: url(../img/ic_tkline.png) no-repeat center/100% 100%;}
+.seat_section .ticket_cont .ticket_area .qrbox{padding-right: 40px; width: 240px; display: flex; align-items: center; justify-content: center;}
+.seat_section .ticket_cont .ticket_area .qrbox .qr_img{width: 150px;}
+
+
+
+
+
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+
+  	.pc {display: none !important;}
+  	.tablet {display: block !important;}
+	.wrap {min-width: unset; padding-bottom: 76px;}
+	.inner { width: 94%;}
+
+
+	/* 기존 레이아웃 임시추가 */
+	.temp_subimg {display: none;}
+	.temp_navigation { position: fixed; z-index: 100;  left: 0;  bottom: 0;  width: 100%; display: flex;}
+
+
+	/* 버스 좌석보기 버튼 */
+	.seat_box { margin-top: 0; padding: 5vw; justify-content: center;}
+	.seat_box .right {  gap: 0; position: fixed; left: 0; bottom: 0; z-index: 50;    width: 100%;}
+	.seat_box .right .seat_btn { width: auto; flex: 1; border-radius: 0;}
+
+
+	/* 버스 좌석보기 팝업 */
+	.busSeat_modal .modal_box { width: 320px; max-width: calc(100% - 20px * 2); padding: 20px 20px 32px;}
+	.busSeat_modal .modal_body .seat_area .seat_picbox {  max-height: 320px;}
+
+
+	/* 버스 좌석선택 */
+	.sub_headbox {position: relative; display: block; padding: 5vw 3vw; background: #eee; border-top: 1px solid #ccc;} 
+	.sub_headbox .back_btn {position: absolute; left: 3vw; top: 50%; transform: translateY(-50%);display: flex;}
+	.sub_headbox .back_btn img {height: 5.3vw;}
+	.sub_headbox .title { font-size: 6.5vw; line-height: 100%; color: #000; font-weight: 500; text-align: center;}
+
+	.seat_section { margin: 36px 0 80px;}
+	.seat_section .reservation_number { font-size: 16px; margin-bottom: 12px;}
+	.seat_section .select_cont { border: 1px solid #ccc;}
+	.seat_section .select_cont .top_box {height: auto; padding: 20px 40px; gap: 20px; border-top: 0;}
+	.seat_section .select_cont .top_box .txt { font-size: 16px; line-height: 120%;}
+	.seat_section .select_cont .top_box .icon { width: 24px;}
+	.seat_section .select_cont .top_box .line { width: 40px; height: 1px;  background-image: url(../img/ic_line_mob.png);}
+	.seat_section .select_cont .bottom_box { padding: 0; gap: 40px; flex-direction: column;}
+	.seat_section .select_cont .seat_select { min-width: unset; gap: 20px;}
+	.seat_section .select_cont .seat_select .infobox { gap: 12px; padding: 20px 14px;}
+	.seat_section .select_cont .seat_select .infobox .title { font-size: 20px; gap: 8px;}
+	.seat_section .select_cont .seat_select .infobox .title .small { font-size: 14px;}
+	.seat_section .select_cont .seat_select .infobox .descbox > li { gap: 4px;}
+	.seat_section .select_cont .seat_select .infobox .descbox > li .icon { width: 16px;}
+	.seat_section .select_cont .seat_select .infobox .descbox > li .txt { font-size: 13px;}
+	.seat_section .select_cont .seat_select .selectbox { gap: 8px; height: auto;  flex-direction: row; padding: 0 14px 12px;}
+	.seat_section .select_cont .seat_select .selectbox.has_scroll { padding-right: 0;}
+	.seat_section .select_cont .seat_select .selectbox::-webkit-scrollbar-track {margin: 0 14px;}
+	.seat_section .select_cont .seat_select .selectbox .item {  min-width: 150px;  min-height: 38px; border-radius: 8px; padding: 10px;  font-size: 12px; white-space: nowrap;}
+	.seat_section .select_cont .seat_select .selectbox .item::after { border-radius: 8px;}
+	.seat_section .select_cont .seat_area { width: 100%; align-items: center; gap: 12px; padding: 0 14px 20px;}
+	.seat_section .select_cont .seat_area .seat_desc { font-size: 14px;}
+	.seat_section .select_cont .seat_area .seat_pic { width: auto;  border-radius: 40px 40px 16px 16px;  padding: 20px; flex-direction: column; gap: 4px;}
+	.seat_section .select_cont .seat_area .seat_pic .top_row { width: 100%;    flex-direction: row;}
+	.seat_section .select_cont .seat_area .seat_pic .top_row .driver {  border-radius: 16px 6px 6px 6px;  padding: 8px 0px;  width: 92px;  height: 36px;}
+	.seat_section .select_cont .seat_area .seat_pic .top_row .driver::before { width: 20px; transform: none;}
+	.seat_section .select_cont .seat_area .seat_pic .top_row .exit {  border-radius: 6px 16px 6px 6px;  padding: 8px 0px; width: 44px; height: 36px;}
+	.seat_section .select_cont .seat_area .seat_pic .top_row .exit::before { width: 20px; transform: none;}
+	.seat_section .select_cont .seat_area .seat_pic .row_cont { flex-direction: column; gap: 4px;}
+	.seat_section .select_cont .seat_area .seat_pic .top_txt { width: 100%; flex-direction: row; gap: 4px; padding: 4px 0px;}
+	.seat_section .select_cont .seat_area .seat_pic .top_txt .txt { font-size: 11px;  writing-mode: unset;color: #555;}
+	.seat_section .select_cont .seat_area .seat_pic .row { flex-direction: row; gap: 4px;}
+	.seat_section .select_cont .seat_area .seat_pic .row .item { width: 44px;}
+	.seat_section .select_cont .seat_area .seat_pic .row .item.seat .num { font-weight: 500; font-size: 14px; border-width: 3px;}
+	.seat_section .select_cont .seat_area .seat_pic .row .item.seat.disabled::after {  width: 18px;}
+	.seat_section .select_cont .seat_area .seat_pic .row .item.seat.guide .num { border-width: 3px; }
+	.seat_section .select_cont .seat_area .seat_pic .row .item.seat.guide .num::after {font-size: 14px;}
+	.seat_section .select_cont .seat_area .seat_pic .row .item.seat.selected .num { border-width: 3px; }
+	.seat_section .select_cont .seat_area .seat_pic .row .item.seat.selected::after {  width: 18px;}
+	.seat_section .select_cont .seat_area .seat_pic .row .item.arrow::before { transform: translate(-50%, -50%) ;  width: 18px;}
+	.seat_section .select_cont .seat_area .seat_label { gap: 10px;}
+	.seat_section .select_cont .seat_area .seat_label > .item { gap: 4px;}
+	.seat_section .select_cont .seat_area .seat_label > .item .color { border-radius: 4px;  width: 14px;}
+	.seat_section .select_cont .seat_area .seat_label > .item .txt { font-size: 12px; line-height: 130%;}
+
+	.seat_section .info_cont { margin-top: 70px;}
+	.seat_section .info_cont .info_tit { font-size: 16px;}
+	.seat_section .info_cont .info_tbl {  table-layout: unset; display: block;  font-size: 12px; line-height: 130%;}
+	.seat_section .info_cont .info_tbl thead {display: none;}
+	.seat_section .info_cont .info_tbl tbody { display: flex; flex-direction: column;  gap: 10px; }
+	.seat_section .info_cont .info_tbl tbody tr { display: flex; flex-direction: column; border-bottom: 0;}
+	.seat_section .info_cont .info_tbl tbody tr td { height: auto; padding: 0;  border-right: 0; text-align: left;  display: flex; border-bottom: 1px solid #ccc;}
+	.seat_section .info_cont .info_tbl tbody tr td:nth-child(1) {border-top: 1px solid #ccc;}
+	.seat_section .info_cont .info_tbl tbody tr td::before { display: flex; align-items: center;  padding: 6px 14px; width: 90px;  background: #f2f2f2; font-weight: 500; box-sizing: border-box;}
+	.seat_section .info_cont .info_tbl tbody tr td .text { flex: 1; padding: 6px 14px; }
+	.seat_section .info_cont .info_tbl tbody tr td .btnbox {padding: 10px 14px; flex: 1; flex-wrap: wrap; gap: 5px 10px;}
+	.seat_section .info_cont .info_tbl tbody tr td .btnbox .tbl_btn { font-size: 12px;  border-radius: 3px; padding: 4px 10px;}
+	.seat_section .info_cont .info_tbl tbody tr td .btnbox .tbl_btn .icon { width: 14px;}
+
+	.seat_section .seat_btnbox { gap: 12px; margin-top: 40px;}
+	.seat_section .seat_btnbox .seat_btn { font-size: 14px;  width: 140px; height: 40px; border-radius: 5px;}
+	.seat_section .seat_btnbox .seat_btn.mob_full {width: 100%;}
+
+
+	/* 버스 탑승권 발권 */
+	.seat_section .complete_cont { padding: 20px 14px; border: 1px solid #ccc;   border-top: 2px solid #333;}
+	.seat_section .complete_cont .topbox .sub { font-size: 14px;}
+	.seat_section .complete_cont .topbox .tit { font-size: 18px;}
+	.seat_section .complete_cont .infobox {  flex-direction: column; align-items: unset; gap: 14px;}
+	.seat_section .complete_cont .infobox .item { gap: 4px;}
+	.seat_section .complete_cont .infobox .item.pc_show {display: none;}
+	.seat_section .complete_cont .infobox .item.mob_show {display: flex;}
+	.seat_section .complete_cont .infobox .item .tit { font-size: 13px;}
+	.seat_section .complete_cont .infobox .item .desc { font-size: 14px;}
+	.seat_section .complete_cont .infobox .item .desc .small { font-size: 12px;}
+	.seat_section .complete_cont .infobox .line {display: none;}
+
+
+	/* 버스 탑승권 확인 */
+	.seat_section .ticket_cont { gap: 12px;}
+	.seat_section .ticket_cont .ticket_tit { font-size: 16px;}
+	.seat_section .ticket_cont .ticket_areawrap { padding: 40px 0px;}
+	.seat_section .ticket_cont .ticket_area {  padding: 0; flex-direction: column;  gap: 12px;}
+	.seat_section .ticket_cont .ticket_area .contbox { padding: 24px 14px;  gap: 24px;}
+	.seat_section .ticket_cont .ticket_area .contbox .topbox {  flex-direction: column-reverse;  align-items: unset; gap: 16px;}
+	.seat_section .ticket_cont .ticket_area .contbox .topbox .left { gap: 4px;}
+	.seat_section .ticket_cont .ticket_area .contbox .topbox .left .tit {  font-size: 20px;}
+	.seat_section .ticket_cont .ticket_area .contbox .topbox .left .desc {  font-size: 14px;}
+	.seat_section .ticket_cont .ticket_area .contbox .topbox .right { justify-content: flex-start;}
+	.seat_section .ticket_cont .ticket_area .contbox .topbox .right .seat_label {  font-size: 14px;  border-radius: 6px; padding: 7px 10px; gap: 10px;}
+	.seat_section .ticket_cont .ticket_area .contbox .topbox .right .seat_label .icon {  width: 18px;}
+	.seat_section .ticket_cont .ticket_area .contbox .infobox { border-radius: 18px;   padding: 20px; gap: 16px;}
+	.seat_section .ticket_cont .ticket_area .contbox .infobox .item {  font-size: 14px;}
+	.seat_section .ticket_cont .ticket_area .contbox .infobox .item .desc { gap: 6px;}
+	.seat_section .ticket_cont .ticket_area .contbox .infobox .item .desc .arrow {  width: 14px;}
+	.seat_section .ticket_cont .ticket_area .contbox .infobox .line { background-image: url(../img/ic_tkline2_mob.png);}
+	.seat_section .ticket_cont .ticket_area .contbox .note_txt {  font-size: 13px;}
+	.seat_section .ticket_cont .ticket_area .linebox {  gap: 20px; flex-direction: row;}
+	.seat_section .ticket_cont .ticket_area .linebox .deco { width: 25px; height: 50px;}
+	.seat_section .ticket_cont .ticket_area .linebox .deco1 { border-bottom-left-radius: 0; border-top-right-radius: 100px;}
+	.seat_section .ticket_cont .ticket_area .linebox .deco2 { border-top-right-radius: 0; border-bottom-left-radius: 100px;}
+	.seat_section .ticket_cont .ticket_area .linebox .line { background-image: url(../img/ic_tkline_mob.png); height: 2px; width: unset;}
+	.seat_section .ticket_cont .ticket_area .qrbox {  padding: 0 0 30px;  width: 100%;}
+	.seat_section .ticket_cont .ticket_area .qrbox .qr_img { width: 120px;}
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+}
+
+
+
+
+/* Mobile */
+@media screen and (max-width: 599px) {
+	
+  	.mobile {display: block !important;}  
+
+}
+  
+      
+@media screen and (max-width: 480px) {  
+
+}
+
+
+@media screen and (max-width: 320px) {
+
+}

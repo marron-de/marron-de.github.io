@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로망스투어 ERP</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+	
+    <!-- datepicker -->
+    <link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/admin_style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+
+
+    <div class="wrap">
+
+		<div class="section">
+			<div class="tbl_titbox">
+				<p class="tbl_tit">차량비정산현황</p>
+			</div>
+			<div class="tbl_filter">
+				<div class="filter_top">
+					<div class="input_box">
+						<div class="input_item">
+							<input type="text" class="input datepicker" value="2025-05-01">
+							<span class="txt">~</span>
+							<input type="text" class="input datepicker" value="2025-05-31">
+						</div>
+						<select class="select">
+							<option value="">투어종류</option>
+							<option value="기초환경설정">기초환경설정</option>
+							<option value="상품옥션관리">상품옥션관리</option>
+							<option value="투어종류2">투어종류2</option>
+						</select>
+						<input type="text" id="busSch" class="input" placeholder="버스회사 검색">
+						<input type="text" id="prdSch" class="input" placeholder="상품명 검색">
+						<button type="button" class="sch_btn">검색</button>
+					</div>
+					<p class="total">
+						TOTAL : <span class="red">3,271</span>
+					</p>
+				</div>
+				<div class="filter_btn">
+					<button type="button" class="btn excel_btn">
+						<span class="icon"></span>
+						<span class="txt">엑셀내려받기</span>
+					</button>
+				</div>
+			</div>
+			<div class="tbl_wrap">
+				<table class="tbl">
+					<thead>
+						<tr>
+							<th class="td_chk"><input type="checkbox" class="check"></th>
+							<th class="td_num">순서</th>
+							<th>출발일자</th>
+							<th>상품명</th>
+							<th>버스회사</th>
+							<th>차량종류</th>
+							<th>차량번호</th>
+							<th>기사명</th>
+							<th>기사전화번호</th>
+							<th>예상차량비</th>
+							<th>확정차량비</th>
+							<th>선입금</th>
+							<th>선입금지급일자</th>
+							<th>차인지급액</th>
+							<th>지급방법</th>
+							<th>수고비</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">1</td>
+							<td>2025.05.01</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">2</td>
+							<td>2025.05.02</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">3</td>
+							<td>2025.05.03</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">4</td>
+							<td>2025.05.04</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">5</td>
+							<td>2025.05.05</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">6</td>
+							<td>2025.05.06</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">7</td>
+							<td>2025.05.07</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">8</td>
+							<td>2025.05.08</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">9</td>
+							<td>2025.05.09</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_chk">
+								<input type="checkbox" class="check">
+							</td>
+							<td class="td_num">10</td>
+							<td>2025.05.10</td>
+							<td>문경시장투어</td>
+							<td>드림관광</td>
+							<td>31인승</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+							<td>
+								<input type="text" class="input input_phone" placeholder="000-0000-0000">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input datepicker" placeholder="2025-04-30">
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<select class="select">
+									<option value="">지급방법</option>
+									<option value="직불">직불</option>
+									<option value="후불">후불</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="input input_price" placeholder="###,###">
+							</td>
+							<td>
+								<input type="text" class="input">
+							</td>
+						</tr>
+						<tr class="tr_total">
+							<td>월계</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="td_price">123,456원</td>							
+							<td class="td_price">123,456원</td>							
+							<td class="td_price">123,456원</td>	
+							<td></td>				
+							<td class="td_price">123,456원</td>
+							<td></td>							
+							<td class="td_price">123,456원</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>
