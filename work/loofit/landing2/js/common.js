@@ -259,6 +259,30 @@ $(document).ready(function() {
   });
 });
 
+$(function () {
+  const video = $('#ms9_video').get(0);
+  const vidbox = $('.vidbox');
+  
+  if (!video) return;
+
+  $('.ms9 .play_btn, .ms9 .control_btn.play').on('click', function () {
+    if (video.paused) {
+      video.play();
+      vidbox.addClass('play');
+    } else {
+      video.pause();
+      vidbox.removeClass('play');
+    }
+  });
+
+  video.addEventListener('ended', function () {
+    vidbox.removeClass('play');
+  });
+});
+
+
+
+
 
 
 // 기능 소개
@@ -282,34 +306,37 @@ const fs_swiper = new Swiper('.fs_swiper', {
 	},
 })
 $(document).ready(function () {
-  if (window.innerWidth < 1081) return;
+	if (window.innerWidth < 1081) return;
+
+	const trigger = $('.fs1.pinbox');  
+	if (trigger.length === 0) return; 
   
-  const items = $('.fs_swiper .swiper-slide');
+	const items = $('.fs_swiper .swiper-slide');
 
-  // 초기 상태 설정
-  items.each(function (index) {
-    gsap.set(this, {
-      autoAlpha: index === 0 ? 1 : 0,
-      y: index === 0 ? 0 : 30
-    });
-  });
+	// 초기 상태 설정
+	items.each(function (index) {
+		gsap.set(this, {
+		autoAlpha: index === 0 ? 1 : 0,
+		y: index === 0 ? 0 : 30
+		});
+	});
 
-  const appear = 0.5;
-  const stay = 1.0;
-  const disappear = 0.5;
-  const step = appear + stay;
+	const appear = 0.5;
+	const stay = 1.0;
+	const disappear = 0.5;
+	const step = appear + stay;
 
-  const timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.fs1.pinbox',
-      pin: '.fs1.pinbox',
-      anticipatePin: 1,
-      start: 'top top',
-      end: function () {
-        return $('.fs1.pinbox').outerHeight() * 2;
-      },
-      scrub: 2
-    }
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+		trigger: '.fs1.pinbox',
+		pin: '.fs1.pinbox',
+		anticipatePin: 1,
+		start: 'top top',
+		end: function () {
+			return $('.fs1.pinbox').outerHeight() * 2;
+		},
+		scrub: 2
+		}
   });
 
   // 순차 전환: 등장 → 유지 → 다음 등장
