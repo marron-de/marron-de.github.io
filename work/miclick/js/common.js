@@ -1,22 +1,36 @@
-// navbox button 
-$(document).ready(function () {
-	$(".header .menu_open").on("click", function () {
-		$("body").addClass("hidden");
-		$(".header").addClass("open");
-		$(".navbox").addClass("open");
+// 기존 - gnb 관련 코드 분리
+$(document).ready(function() {
+	let posY;
+
+	// GNB 열기 버튼 클릭 시
+	$('.btn-gnb').on('click', function() {
+		posY = $(window).scrollTop();
+		$('html, body').addClass('not-scroll');
+		$('nav').addClass('active');
+		$('#container').css('top', -posY);
+		$('.md_overlay_gnb').addClass('active');
+		return false;
 	});
-	$(".navbox .menu_close").on("click", function () {
-		$("body").removeClass("hidden");
-		$(".header").removeClass("open");
-		$(".navbox").removeClass("open");
+
+	// GNB 닫기 (뒤로가기 버튼)
+	$('nav .btn-back').on('click', function() {
+		$('html, body').removeClass('not-scroll');
+		$('nav').removeClass('active');
+		$('#container').css('top', 'auto');
+		posY = $(window).scrollTop(posY);
+		$('.md_overlay_gnb').removeClass('active');
+		return false;
 	});
-});
-$(document).mouseup(function (e) {
-	if ($(".navbox").has(e.target).length === 0) {
-		$("body").removeClass("hidden");
-		$(".header").removeClass("open");
-		$(".navbox").removeClass("open");
-	}
+
+	// 오버레이 클릭 시 GNB 닫기
+	$('.md_overlay_gnb').on('click', function() {
+		$('html, body').removeClass('not-scroll');
+		$('nav').removeClass('active');
+		$('#container').css('top', 'auto');
+		posY = $(window).scrollTop(posY);
+		$('.md_overlay_gnb').removeClass('active');
+		return false;
+	});
 });
 
 
@@ -135,29 +149,47 @@ const ms1_swiper = new Swiper('.ms1_swiper', {
 const ms3_swiper = new Swiper('.ms3_swiper', {
 	observer: true,
 	observeParents: true,
-	loop: true,
 	speed:500,	
 	slidesPerView: 'auto',
 	spaceBetween: 20,
 	centeredSlides: true,
-	pagination: {
-		el: '.ms3_swiper .pagination',
-		type: 'custom',
-	 	clickable: true,
-	 	renderCustom: function (swiper, current, total) {
-	 		return '<span class="current">' + current + '</span><span class="bar"></span><span class="total">' + total + '</span>';
-	 	}
-	 },
-	 navigation: {
-      nextEl: ".ms3_swiper .next_btn",
-      prevEl: ".ms3_swiper .prev_btn",
-    },
+	initialSlide: 1,
 	breakpoints: {
 		720: {
 			spaceBetween: 40,
 		},
 	},
 })
+
+$('.ms3card_slidebox').each(function () {
+	const el = this;
+	const slideEl = $(el).find('.ms3card_swiper')[0];
+	const nextBtn = $(el).find('.next_btn')[0];
+	const prevBtn = $(el).find('.prev_btn')[0];
+	const pagination = $(el).find('.pagination')[0];
+	new Swiper(slideEl, {
+		observer: true,
+		observeParents: true,          
+		freeMode: true,
+        direction: 'vertical',
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+		speed: 500,
+		slidesPerView: 'auto',
+		pagination: {
+			el: pagination,
+			type: 'custom',
+			clickable: true,
+			renderCustom: function (swiper, current, total) {
+				return '<span class="current">' + current + '</span><span class="bar"></span><span class="total">' + total  + '</span>';
+			}
+		},
+		navigation: {
+			nextEl: nextBtn,
+			prevEl: prevBtn,
+		},
+	});
+});
 
 const ms4_swiper = new Swiper('.ms4_swiper', {
 	observer: true,
