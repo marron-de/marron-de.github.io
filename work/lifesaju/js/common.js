@@ -59,8 +59,9 @@
 // 레이아웃 여백
 $(window).on('resize', function () {
 	const windowWidth = $(window).width();
-	const maxWidth = 1120;
-	const widthPercentage = 0.9;
+	// const maxWidth = 1120;
+	const maxWidth = 1010;
+	const widthPercentage = 0.94;
 
 	let calculatedWidth = windowWidth * widthPercentage;
 	if (calculatedWidth > maxWidth) {
@@ -81,6 +82,7 @@ $(document).ready(function () {
 // 모달 기본
 $(".modal .modal_close").click(function () {
 	$("body").removeClass("hidden")
+	$("body").removeClass("main_pop")
 	$(".modal").removeClass("show")
 })
 
@@ -131,7 +133,7 @@ $(document).ready(function () {
 //         let items = listbox.find(".item");
 //         let pcCount = listbox.attr("date-pc");
 //         let mobCount = listbox.attr("date-mob");
-//         let isMobile = window.innerWidth <= 1080; 
+//         let isMobile = window.innerWidth <= 1024; 
 //         let itemsToShow = isMobile ? mobCount : pcCount;
 //         let itemsTotal = items.length;
 //         let itemsVisible = parseInt(itemsToShow);
@@ -178,16 +180,16 @@ $(document).ready(function () {
 const review_slider = new Swiper(".review_slider", {
 	speed: 500,
 	slidesPerView: 'auto',
-	spaceBetween: 16,
+	// spaceBetween: 16,
 	// grabCursor: true,
 	freeMode: true,		
 	observer: true,  
 	observeParents: true,  
-	breakpoints: {
-		1080: {
-			spaceBetween: 20,
-		},
-	},
+	// breakpoints: {
+	// 	1024: {
+	// 		spaceBetween: 20,
+	// 	},
+	// },
 });
 
 $(document).ready(function () {
@@ -266,6 +268,7 @@ $(document).mouseup(function (e) {
 		$("#calculatePopup").has(e.target).length === 0
 	) {
 		$("body").removeClass("hidden")
+		$("body").removeClass("main_pop")
 		$(".modal").removeClass("show")
         $("#counselPopup, #calculatePopup").removeClass("show");
 	}
@@ -302,7 +305,7 @@ $(document).ready(function () {
 // 상세 카테고리탭(모바일)
 function detail_tab(num) {
 
-	if ($(window).width() > 1080) return; 
+	if ($(window).width() > 1024) return; 
 
 	event.preventDefault();
 
@@ -447,12 +450,12 @@ function makeCall() {
 // 25.06.06 작업
 // 메인 팝업
 function mainPopup() {
-	$("body").addClass("hidden")
+	$("body").addClass("main_pop")
 	$("#mainPopup").addClass("show");
 }
 
 function mainPopupClose() {
-	$("body").removeClass("hidden")
+	$("body").removeClass("main_pop")
 	$("#mainPopup").removeClass("show")
 }
 
@@ -582,4 +585,25 @@ $(function() {
   $('.reviewWrite_modal .emoji_badge').on('click', function() {
     $(this).toggleClass('on');
   });
+});
+
+
+
+
+// 25.07.29 작업
+// PC 사이드 배너
+const webright_slider = new Swiper(".webright_slider", {
+	loop: true,
+	speed: 500,		
+	observer: true,  
+	observeParents: true,  
+	spaceBetween: 20,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: '.webright_slider .pagination',
+		clickable: true,
+	},
 });
