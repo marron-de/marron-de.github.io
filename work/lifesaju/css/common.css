@@ -106,8 +106,13 @@ body.hidden::before {opacity: 1;}
 .navigaion .nav { display: flex; justify-content: space-between; padding: 0 2.5rem;}
 .navigaion .nav > li { padding: 0.9rem 0;}
 .navigaion .nav > li > .link { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; font-size: 1rem; text-align: center; color: #535353;}
-.navigaion .nav > li.home > .link { color: var(--primary);}
-.navigaion .nav > li > .link .icon { background: no-repeat center / contain; width: 2.2rem; aspect-ratio: 1 / 1;}
+.navigaion .nav > li.active > .link { color: var(--primary);font-weight: 600;}
+.navigaion .nav > li > .link .icon { position: relative; background: no-repeat center / contain; width: 2.2rem; aspect-ratio: 1 / 1;}
+.navigaion .nav > li > .link .icon .off,
+.navigaion .nav > li > .link .icon .on {position: absolute; left: 50%; top: 50%;transform: translate(-50%,-50%); width: 100%; transition: all 0.4s ease;}
+.navigaion .nav > li > .link .icon .on {opacity: 0;}
+.navigaion .nav > li.active > .link .icon .off {opacity: 0;}
+.navigaion .nav > li.active > .link .icon .on {opacity: 1;}
 
 
 /* 모달 */

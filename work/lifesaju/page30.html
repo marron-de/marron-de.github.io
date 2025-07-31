@@ -37,7 +37,7 @@
 
 	<div class="web_wrap">
 
-		<div class="web_left">
+		<div class="web_left fortune_wrap">
 
 			<!-- header -->
 			<!-- 비회원일 경우 nonmember_ver 클래스 추가 -->
@@ -84,7 +84,688 @@
 
 			<!-- container -->
 			<div class="container">
-				<div class="inner">
+				<div class="swiper fortune_slider inner" 
+					style="
+						--bg1: #7A7A7A; 
+						--bg2: linear-gradient(180deg, #ffbd2f 0%, #fff 27.88%, #35c2ff 73.08%);;
+						--bg3: linear-gradient(180deg, #7dfaaf 0%, #00d89b 100%); 
+						--bg4: #007db8;
+						--bg5: linear-gradient(180deg, #ff8000 0%, rgba(255, 128, 0, 0.3) 100%);
+						--bg6: linear-gradient(180deg, #00b95d 0%, #004e4b 100%);
+						--bg7: linear-gradient(180deg, #ee555a 0%, #ffcdce 100%);
+						--bg8: linear-gradient(180deg, #ee555a 0%, #ffcdce 100%);
+					">
+					<!-- 배경 -->
+					<div class="fortune_slider_bg">
+						<div class="bg bg1"></div>
+						<div class="bg bg2"></div>
+						<div class="bg bg3"></div>
+						<div class="bg bg4"></div>
+						<div class="bg bg5"></div>
+						<div class="bg bg6"></div>
+						<div class="bg bg7"></div>
+						<div class="bg bg8"></div>
+					</div>
+
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slideitem slideitem1">
+							<div class="contwrap">
+								<div class="titbox">
+									<p class="tit">
+										오늘의 운세가 <br>
+										궁금하다면? 
+									</p>
+									<p class="desc">
+										사주 정보를 입력하고 <br>
+										오늘의 운세를 알아보세요!
+									</p>
+								</div>
+								<img src="img/fortune_img1-1.png" alt="" class="img">
+								<button type="button" class="saju_btn" onclick="sajuInfoModal()">사주 정보 입력하기</button>
+							</div>
+						</div>
+						<div class="swiper-slide slideitem slideitem2 state_high">
+							<!-- 상태변화
+								.state_low
+								.state_medium
+								.state_high 
+							-->
+							<button type="button" class="add_info">
+								<p class="txt">사주정보 추가하기</p>
+								<span class="plus"></span>
+							</button>
+							<div class="contwrap">
+								<div class="slidetitbox">
+									<p class="sub">김우준 님 오늘의 이야기</p>
+									<p class="tit">오늘의<br>총 운세 점수</p>
+									<button type="button" class="share_btn">
+										<span class="icon"></span>
+										<span class="txt">공유하기</span>
+									</button>
+								</div>
+								<div class="slidecontbox">
+									<div class="graphbox">
+										<div class="graph">
+											<div class="bar"></div>
+											<canvas id="totalchart_bg" class="totalchart" width="720" height="360"></canvas>
+											<canvas id="totalchart_bar" class="totalchart" width="720" height="360"></canvas>
+										</div>
+									</div>								
+									<div id="total_fortunebox" class="totalbox">
+										<p class="number">85</p>
+										<p class="cmt">
+											<span class="icon"></span>
+											<span class="txt"></span>
+										</p>
+									</div>
+									<div class="daybtnbox">
+										<button type="button" class="day_btn day_btn1" data-total="30" data-state="low">
+											<div class="circle">30</div>
+											<p class="txt">14일</p>
+										</button>
+										<button type="button" class="day_btn day_btn2" data-total="60" data-state="medium">
+											<div class="circle">60</div>
+											<p class="txt">15일</p>
+										</button>
+										<button type="button" class="day_btn day_btn3 on">
+											<div class="circle">85</div>
+											<p class="txt">16일</p>
+										</button>
+									</div>
+									<div class="morebox">
+										<button type="button" class="more_btn" onclick="sajuMoreviewModal()">총 운세 자세히 보기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide slideitem slideitem3">
+							<div class="arrow_icon">
+								<i class="ph ph-caret-double-down"></i>
+							</div>
+							<div class="contwrap">
+								<div class="slidetitbox">
+									<p class="sub">김우준 님 오늘의 이야기</p>
+									<p class="tit">오늘의 운세<br>흐름 보기</p>
+									<button type="button" class="share_btn">
+										<span class="icon"></span>
+										<span class="txt">공유하기</span>
+									</button>
+								</div>
+								<div class="slidecontbox">
+									<div class="cardbox">
+										<div class="item color1">
+											<img src="img/fortune_icon1.png" alt="" class="icon">
+											<p class="tit">재물운</p>
+											<p class="score">49점</p>
+											<button type="button" class="view_btn" onclick="sajuViewModal()">보기</button>
+										</div>
+										<div class="item color2">
+											<img src="img/fortune_icon2.png" alt="" class="icon">
+											<p class="tit">학업운</p>
+											<p class="score">49점</p>
+											<button type="button" class="view_btn" onclick="sajuViewModal()">보기</button>
+										</div>
+										<div class="item color3">
+											<img src="img/fortune_icon3.png" alt="" class="icon">
+											<p class="tit">관계운</p>
+											<p class="score">49점</p>
+											<button type="button" class="view_btn" onclick="sajuViewModal()">보기</button>
+										</div>
+										<div class="item color4">
+											<img src="img/fortune_icon4.png" alt="" class="icon">
+											<p class="tit">애정운</p>
+											<p class="score">49점</p>
+											<button type="button" class="view_btn" onclick="sajuViewModal()">보기</button>
+										</div>
+										<div class="item color5">
+											<img src="img/fortune_icon5.png" alt="" class="icon">
+											<p class="tit">업무운</p>
+											<p class="score">49점</p>
+											<button type="button" class="view_btn" onclick="sajuViewModal()">보기</button>
+										</div>
+										<div class="item color6">
+											<img src="img/fortune_icon6.png" alt="" class="icon">
+											<p class="tit">건강운</p>
+											<p class="score">49점</p>
+											<button type="button" class="view_btn" onclick="sajuViewModal()">보기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide slideitem slideitem4">
+							<div class="arrow_icon">
+								<i class="ph ph-caret-double-down"></i>
+							</div>
+							<div class="contwrap">
+								<div class="slidetitbox">
+									<p class="sub">김우준 님 오늘의 이야기</p>
+									<p class="tit">과감히 버릴줄도 <br>알아야 해요</p>
+									<button type="button" class="share_btn ver2">
+										<span class="icon"></span>
+										<span class="txt">공유하기</span>
+									</button>
+								</div>
+								<div class="slidecontbox">
+									<div class="imgbox">
+										<img src="img/fortune_img4-1.png" alt="" class="img">
+									</div>
+									<p class="msg">
+										그간 고민만 하고 있었다면, <br>
+										오늘 정리해 보세요.
+									</p>
+								</div>								
+							</div>
+						</div>
+						<div class="swiper-slide slideitem slideitem5 state_evening">
+							<!-- 상태변화
+								.state_morning 
+								.state_afternoon 
+								.state_evening  
+							-->
+							<div class="arrow_icon">
+								<i class="ph ph-caret-double-down"></i>
+							</div>
+							<div class="contwrap">
+								<div class="slidetitbox">
+									<p class="sub">김우준 님 오늘의 이야기</p>
+									<p class="tit">오늘의<br>시간대 별 운세</p>
+									<button type="button" class="share_btn">
+										<span class="icon"></span>
+										<span class="txt">공유하기</span>
+									</button>
+								</div>
+								<div class="slidecontbox">
+									<div class="titbox">
+										<p class="score">68</p>
+										<p class="msg"></p>
+									</div>
+									<div class="graphbox">
+										<canvas id="time_graph_bg" class="time_graph time_graph_bg" width="560" height="240"></canvas>
+										<canvas id="time_graph_line" class="time_graph time_graph_line" width="560" height="240"></canvas>
+										<button type="button" class="graphbtn prev"></button>
+										<button type="button" class="graphbtn next"></button>
+									</div>
+									<div class="progressbox">
+										<div class="progress">
+											<div class="ativebar">
+												<span class="icon"></span>
+											</div>
+											<div class="txtbox">
+												<button class="timebtn morning_btn">07:00 AM</button>
+												<button class="timebtn afternoon_btn">12:00 PM</button>
+												<button class="timebtn evening_btn">08:00 PM</button>
+											</div>
+										</div>
+										<div class="note_txt">
+											슬라이드를 밀어 시간대 별 운세를 확인해보세요
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="swiper-slide slideitem slideitem6">
+							<div class="arrow_icon">
+								<i class="ph ph-caret-double-down"></i>
+							</div>
+							<div class="contwrap">
+								<div class="slidetitbox">
+									<p class="sub">김우준 님 오늘의 이야기</p>
+									<p class="tit">오늘의<br>행운 아이템</p>
+									<button type="button" class="share_btn ver2">
+										<span class="icon"></span>
+										<span class="txt">공유하기</span>
+									</button>
+								</div>
+								<div class="slidecontbox">
+									<div class="item">
+										<p class="sub">행운의 숫자</p>
+										<p class="tit">8, 20</p>
+									</div>
+									<div class="item">
+										<p class="sub">행운의 컬러</p>
+										<p class="tit">보라색</p>
+									</div>
+									<div class="item">
+										<p class="sub">행운의 방향</p>
+										<p class="tit">북동</p>
+									</div>
+									<div class="item">
+										<p class="sub">행운의 물건</p>
+										<p class="tit">안경</p>
+									</div>
+									<div class="item">
+										<p class="sub">행운의 음식</p>
+										<p class="tit">우유</p>
+									</div>
+									<div class="item">
+										<p class="sub">행운의 인물</p>
+										<p class="tit">닭띠, 후배</p>
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="swiper-slide slideitem slideitem7">
+							<div class="arrow_icon">
+								<i class="ph ph-caret-double-down"></i>
+							</div>
+							<div class="contwrap">
+								<div class="slidecontbox">
+									<div class="cardbox">
+										<div class="item" data-type="type1">
+											<div class="imgbox">
+												<img src="img/person_img1.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="title">
+													<span class="badge">점사</span>
+													<span class="name">시연궁주</span>
+												</p>
+												<div class="bottom">
+													<p class="desc">
+														진실을 마주할 수 있도록 <br>
+														돕는 길잡이
+													</p>
+													<button type="button" class="call_btn"></button>
+												</div>
+											</div>
+										</div>
+										<div class="item" data-type="type2">
+											<div class="imgbox">
+												<img src="img/person_img2.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="title">
+													<span class="badge">타로</span>
+													<span class="name">다율</span>
+												</p>
+												<div class="bottom">
+													<p class="desc">
+														점성술과 타로를 결합한<br>
+														입체적 해석
+													</p>
+													<button type="button" class="call_btn"></button>
+												</div>
+											</div>
+										</div>
+										<div class="item" data-type="type2">
+											<div class="imgbox">
+												<img src="img/person_img3.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="title">
+													<span class="badge">타로</span>
+													<span class="name">지온</span>
+												</p>
+												<div class="bottom">
+													<p class="desc">
+														현실적인 조언과 <br>
+														따뜻한 리딩
+													</p>
+													<button type="button" class="call_btn"></button>
+												</div>
+											</div>
+										</div>
+										<div class="item" data-type="type3">
+											<div class="imgbox">
+												<img src="img/person_img4.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="title">
+													<span class="badge">사주</span>
+													<span class="name">넛지</span>
+												</p>
+												<div class="bottom">
+													<p class="desc">
+														나만의 타고난 <br>
+														감각을 찾아드립니다
+													</p>
+													<button type="button" class="call_btn"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="swiper-slide slideitem slideitem8">
+							<div class="arrow_icon">
+								<i class="ph ph-caret-double-down"></i>
+							</div>
+							<div class="contwrap">
+								<div class="slidecontbox">
+									<div class="cardview" data-type="type1">
+										<div class="imgbox">
+											<img src="img/person_img1.jpg" alt="" id="cardview_img" class="img">
+										</div>
+										<div class="txtbox">
+											<p class="title">
+												<span class="badge">점사</span>
+												<span class="name">시연궁주</span>
+											</p>
+											<p class="desc">
+												진실을 마주할 수 있도록 <br>
+												돕는 길잡이
+											</p>
+										</div>
+										<a href="tel:+8201012345678" class="call_btn">
+											<span class="icon"></span>
+											<span class="txt">통화하기</span>
+										</a>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 오늘의 운세 사주정보 -->
+				<div class="saju_modal sajuInfo_modal">
+					<div class="headbox">
+						<button type="button" class="back_btn2" onclick="sajuInfoModalClose()"></button>
+						<p class="title">사주정보</p>
+					</div>
+					<div class="bodybox">
+						<div class="infobox">
+							<div class="item">
+								<p class="title">내 사주정보</p>
+								<div class="contbox">
+									<div class="imgbox">
+										<img src="img/profile_basic.png" alt="" class="img">
+										<span class="check"></span>
+									</div>
+									<div class="txtbox">
+										<p class="namebox">
+											<span class="type">木</span>
+											<span class="name">김우준</span>
+											<span class="small">(본인)</span>
+										</p>
+										<p class="birth">1995.05.23 (양력)</p>
+										<button type="button" class="opt_btn"></button>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<p class="title">등록된 사주정보</p>
+								<div class="contbox">
+									<div class="imgbox">
+										<img src="img/profile_basic.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="namebox">
+											<span class="type">木</span>
+											<span class="name">홍길동</span>
+											<span class="small">(형제)</span>
+										</p>
+										<p class="birth">1995.05.23 (양력)</p>
+										<button type="button" class="opt_btn"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btnbox">
+						<!-- disabled 추가시 버튼 UI 변화 -->
+						<button type="button" class="btn add_btn" onclick="sajuInfoInputModal()">사주정보 추가</button>
+					</div>
+				</div>
+
+				<!-- 오늘의 운세 사주정보 입력-->
+				<div class="saju_modal sajuInfoInput_modal">
+					<div class="headbox">
+						<button type="button" class="back_btn2" onclick="sajuInfoInputModalClose()"></button>
+						<p class="title">사주정보 입력</p>
+					</div>
+					<div class="bodybox">
+						<div class="form_box">
+							<div class="form_item input_box">
+								<label class="label_text">이름</label>
+								<input class="input_text" placeholder="한글 최대 6글자">
+							</div>
+							<div class="form_item input_box">
+								<label class="label_text">성별</label>
+								<div class="radio_wrap">
+									<div class="radio_box">
+										<input type="radio" name="gender" id="gender1" class="input_radio">
+										<label for="gender1" class="label_radio">남자</label>
+									</div>
+									<div class="radio_box">
+										<input type="radio" name="gender" id="gender2" class="input_radio">
+										<label for="gender2" class="label_radio">여자</label>
+									</div>
+								</div>
+							</div>
+							<div class="form_item input_box">
+								<label for="" class="label_text">생년월일</label>
+								<div class="input_item padding1">
+									<input class="input_text" placeholder="생년월일 6자리">
+									<div class="badgebox">
+										<span class="badge">양력</span>
+										<span class="badge">음력</span>
+									</div>
+								</div>
+							</div>
+							<div class="form_item input_box">
+								<label for="" class="label_text">태어난 시간</label>
+								<div class="input_item padding2">
+									<input class="input_text" placeholder="00:00">
+									<div class="badgebox">
+										<span class="badge">시간 모름</span>
+									</div>
+								</div>
+							</div>
+							<div class="form_item input_box">
+								<label for="" class="label_text">관계</label>
+								<input class="input_text">
+							</div>
+						</div>
+					</div>
+					<div class="btnbox">
+						<!-- disabled 추가시 버튼 UI 변화 -->
+						<button type="button" class="btn add_btn" disabled>등록하기</button>
+					</div>
+				</div>
+
+				<!-- 오늘의 운세1 자세히 보기 팝업-->
+				<div class="saju_modal sajuMoreview_modal">
+					<div class="headbox">
+						<button type="button" class="back_btn2" onclick="sajuMoreviewModalClose()"></button>
+						<p class="title">오늘의 총 운세 </p>
+					</div>
+					<div class="bodybox">
+						<div class="saju_cont saju_cont1">
+							<div class="imgbox">
+								<img src="img/profile_basic.png" alt="" class="img">
+							</div>
+							<div class="txtbox">
+								<p class="namebox">
+									<span class="type">木</span>
+									<span class="name">김우준</span>
+									<span class="small">(본인)</span>
+								</p>
+								<div class="descbox">
+									<p class="txt">1995.05.23 (양력)</p>
+									<p class="txt">00시 00분</p>
+									<p class="txt">남자</p>
+								</div>
+							</div>
+						</div>
+						<div class="saju_cont saju_cont2">
+							<div class="textbox textbox1">
+								<div class="item">시주</div>
+								<div class="bar"></div>
+								<div class="item">일주</div>
+								<div class="bar"></div>
+								<div class="item">월주</div>
+								<div class="bar"></div>
+								<div class="item">년주</div>
+							</div>
+							<div class="iconbox">
+								<div class="item">
+									<img src="img/ic_word1.png" alt="" class="icon">
+									<p class="txt">비견</p>
+								</div>
+								<div class="item">
+									<img src="img/ic_word1.png" alt="" class="icon">
+									<p class="txt">일원</p>
+								</div>
+								<div class="item">
+									<img src="img/ic_word2.png" alt="" class="icon">
+									<p class="txt">정관</p>
+								</div>
+								<div class="item">
+									<img src="img/ic_word3.png" alt="" class="icon">
+									<p class="txt">겁재</p>
+								</div>
+								<div class="item">
+									<img src="img/ic_word4.png" alt="" class="icon">
+									<p class="txt">정인</p>
+								</div>
+								<div class="item">
+									<img src="img/ic_word5.png" alt="" class="icon">
+									<p class="txt">비견</p>
+								</div>
+								<div class="item">
+									<img src="img/ic_word6.png" alt="" class="icon">
+									<p class="txt">식신</p>
+								</div>
+								<div class="item">
+									<img src="img/ic_word7.png" alt="" class="icon">
+									<p class="txt">편인</p>
+								</div>
+							</div>
+							<div class="textbox textbox2">
+								<div class="item">목욕</div>
+								<div class="item">비견</div>
+								<div class="item">병</div>
+								<div class="item">장생</div>
+							</div>
+						</div>
+						<div class="saju_cont saju_cont3">
+							<div class="textwrap">
+								<div class="textbox">
+									<p class="title">
+										<img src="img/ic_tit_icon1.png" alt="" class="icon">
+										<span class="txt">오늘의 총 운세</span>
+									</p>
+									<p class="desc">
+										대체적으로 좋은 날이어서 모든 일에 보람이 나타나고 뜻한 바를무난히 성취할 수 있겠습니다.하지만 자기 재능만 믿고 경거망동하다가는 오히려 일을 망치게 될 수 있음으로 너무 과시하거나 오만을 떠는 일이 없기를 바랍니다.오늘 당신은 무언가 준비를 끝내 놓고 크게 약동 할 만반에 태세를 갖추고 있다 할 수 있겠습니다. 지금이바로 자신의 능력을 최대한 발휘 할 수 있는 호기입니다. 중용의 도를 지켜가면서 남에게 응답을 베풀고 봉사 적인 일을 행하게되면 아주 좋은 결과가 나타나게 됩니다. 크게 번창하는 계기를 마련 할 수 있습니다.따라서 당신은 포부를 크게 갔고 살아가면서 덕을 쌓는다면 그 시간들이 헛되지 않을 것 입니다. 큰 성공으로 이어지게 될 것입니다. 다만 한 가지 언동을 주의하고 도장과 문서를 함부로 내돌리지 않도록 조심한다면 문제 될 것이 없는 좋은 하루가 될 것입니다.
+									</p>
+								</div>
+								<div class="textline"></div>
+								<div class="textbox">
+									<p class="title">
+										<img src="img/ic_tit_icon2.png" alt="" class="icon">
+										<span class="txt">오늘의 방위운 </span>
+									</p>
+									<p class="desc">
+										당신에게 대길한 방위는 신방(申方)으로 동북방향에운이 따르겠습니다. 선천팔괘(先天八卦)의 손괘방향(巽卦方)에 해당하며재물이 풍성해 지며 자손의 기운을 북돋는 방향에 해당합니다.이사 방위로 북쪽은 길신 신후(神后)가 임하는 자리입니다
+									</p>
+								</div>
+								<div class="textline"></div>
+								<div class="textbox">
+									<p class="title">
+										<img src="img/ic_tit_icon3.png" alt="" class="icon">
+										<span class="txt">오늘의 사업운 </span>
+									</p>
+									<p class="desc">
+										당신에게 대길한 방위는 신방(申方)으로 동북방향에운이 따르겠습니다. 선천팔괘(先天八卦)의 손괘방향(巽卦方)에 해당하며재물이 풍성해 지며 자손의 기운을 북돋는 방향에 해당합니다.이사 방위로 북쪽은 길신 신후(神后)가 임하는 자리입니다.
+									</p>
+								</div>
+								<div class="textline"></div>
+								<div class="textbox">
+									<p class="title">
+										<img src="img/ic_tit_icon4.png" alt="" class="icon">
+										<span class="txt">오늘의 금전운 </span>
+									</p>
+									<p class="desc">
+										당신에게 대길한 방위는 신방(申方)으로 동북방향에운이 따르겠습니다. 선천팔괘(先天八卦)의 손괘방향(巽卦方)에 해당하며 재물이 풍성해 지며 자손의 기운을 북돋는 방향에 해당합니다.
+									</p>
+								</div>
+								<div class="textline"></div>
+								<div class="textbox">
+									<p class="title">
+										<img src="img/ic_tit_icon5.png" alt="" class="icon">
+										<span class="txt">오늘의 소망운 </span>
+									</p>
+									<p class="desc">
+										당신에게 대길한 방위는 신방(申方)으로 동북방향에운이 따르겠습니다. 선천팔괘(先天八卦)의 손괘방향(巽卦方)에 해당하며 재물이 풍성해 지며 자손의 기운을 북돋는 방향에 해당합니다.
+									</p>
+								</div>
+								<div class="textline"></div>
+								<div class="textbox">
+									<p class="title">
+										<img src="img/ic_tit_icon6.png" alt="" class="icon">
+										<span class="txt">오늘의 애정운 </span>
+									</p>
+									<p class="desc">
+										당신에게 대길한 방위는 신방(申方)으로 동북방향에운이 따르겠습니다. 선천팔괘(先天八卦)의 손괘방향(巽卦方)에 해당하며 재물이 풍성해 지며 자손의 기운을 북돋는 방향에 해당합니다.
+									</p>
+								</div>
+							</div>
+							<div class="saju_banner">
+								<div class="txtbox">
+									<p class="sub">오늘의 운세가 더 궁금하다면?</p>
+									<p class="tit">
+										오늘의 운세 자세한 상담 <br>전화 상담 받으러 가기
+									</p>
+								</div>
+								<div class="imgbox">
+									<img src="img/ic_3d_msg.png" alt="" class="img img1">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 오늘의 운세2 보기 팝업 -->
+				<div class="sajuView_modal modal ver3">			
+					<div class="modal_box">
+						<div class="modal_body">
+							<button type="button" class="close_btn" onclick="sajuViewModalClose()"></button>
+							<div class="txtbox">
+								<div class="icon">
+									<img src="img/fortune_icon4.png" alt="" class="img">
+								</div>
+								<p class="tit">연애운</p>
+								<p class="desc">
+									굴곡도 많고 고민도 많게 됩니다. 자신의 생각과 가치관을 상대에게 강요하여 나타나는 결과이므로 문제가 생기면 먼저 스스로 변화함이 옳겠습니다. 또한 대화의 시간을 많이 만들어야 하며 적당한 애정표현도 필요합니다.
+									<br><br>
+									굴곡도 많고 고민도 많게 됩니다. 자신의 생각과 가치관을 상대에게 강요하여 나타나는 결과이므로 문제가 생기면 먼저 스스로 변화함이 옳겠습니다. 또한 대화의 시간을 많이 만들어야 하며 적당한 애정표현도 필요합니다.
+								</p>
+							</div>
+							<div class="saju_banner">
+								<div class="txtbox">
+									<p class="sub">설레고 싶어지는 요즘! </p>
+									<p class="tit">
+										내 사랑도 시작될까요?<br>연애 사주 콘텐츠 보러가기
+									</p>
+								</div>
+								<div class="imgbox">
+									<img src="img/ic_3d_letter.png" alt="" class="img img2">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sajuAlarm_modal modal ver3">			
+					<div class="modal_box">
+						<div class="modal_body">		
+							<img src="img/ic_clock.png" alt="" class="img">
+							<p class="tit">
+								알림을 받아보시겠어요?
+							</p>
+							<p class="desc">
+								이후의 사주가 궁금하다면? <br>
+								알림 설정을 해보세요!
+							</p>
+						</div>
+						<div class="modal_btnbox">
+							<button type="button" class="btn typeB modal_close">닫기</button>
+							<button type="button" class="btn">알림 받기</button>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -93,32 +774,47 @@
 				<ul class="nav">
 					<li class="home">
 						<a href="" class="link">
-							<img src="img/nav_home.png" alt="" class="icon">
+							<div class="icon">
+								<img src="img/nav_home_off.png" alt="" class="off">
+								<img src="img/nav_home_on.png" alt="" class="on">
+							</div>
 							<span class="txt">홈</span>
 						</a>
 					</li>
-					<li class="sbookmark">
+					<li class="content">
 						<a href="" class="link">
-							<img src="img/nav_bookmark.png" alt="" class="icon">
-							<span class="txt">단골</span>
+							<div class="icon">
+								<img src="img/nav_content_off.png" alt="" class="off">
+								<img src="img/nav_content_on.png" alt="" class="on">
+							</div>
+							<span class="txt">콘텐츠</span>
+						</a>
+					</li>
+					<li class="fortune active">
+						<a href="" class="link">
+							<div class="icon">
+								<img src="img/nav_fortune_off.png" alt="" class="off">
+								<img src="img/nav_fortune_on.png" alt="" class="on">
+							</div>
+							<span class="txt">오늘의 운세</span>
 						</a>
 					</li>
 					<li class="popular">
 						<a href="" class="link">
-							<img src="img/nav_popular.png" alt="" class="icon">
-							<span class="txt">인기</span>
+							<div class="icon">
+								<img src="img/nav_popular_off.png" alt="" class="off">
+								<img src="img/nav_popular_on.png" alt="" class="on">
+							</div>
+							<span class="txt">단골</span>
 						</a>
 					</li>
 					<li class="mymenu">
 						<a href="" class="link">
-							<img src="img/nav_mymenu.png" alt="" class="icon">
+							<div class="icon">
+								<img src="img/nav_mymenu_off.png" alt="" class="off">
+								<img src="img/nav_mymenu_on.png" alt="" class="on">
+							</div>
 							<span class="txt">마이메뉴</span>
-						</a>
-					</li>
-					<li class="coin">
-						<a href="" class="link">
-							<img src="img/nav_coin.png" alt="" class="icon">
-							<span class="txt">코인충전</span>
 						</a>
 					</li>
 				</ul>
@@ -128,21 +824,6 @@
 
 		<div class="web_right">
 			<div class="topbox">
-				<div class="imgbox">
-					<img src="img/ic_qr.png" alt="" class="qr">
-				</div>
-				<div class="txtbox">
-					<p class="tit">
-						<span class="color">인생사주 앱 설치</span>하고 <br>
-						<span class="color">웰컴 쿠폰</span> 바로 받기!
-					</p>
-					<a href="" class="link">
-						<span class="icon"></span>
-						<span class="txt">지금 설치하기</span>
-					</a>
-				</div>
-			</div>
-			<div class="bottombox">
 				<div class="swiper webright_slider">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide item">
@@ -150,13 +831,23 @@
 								<img src="img/web_sidebannner1.png" alt="" class="img">
 							</a>
 						</div>
-						<div class="swiper-slide item">
-							<a href="" class="banner">
-								<img src="img/web_sidebannner1.png" alt="" class="img">
-							</a>
-						</div>
 					</div>
 					<div class="swiper-pagination pagination"></div>
+				</div>
+			</div>
+			<div class="bottombox">
+				<div class="txtbox">
+					<p class="tit">
+						<span class="color">인생사주 앱 설치</span>하고 <br>
+						<span class="color">웰컴 쿠폰</span> 바로 받기!
+					</p>
+					<a href="" class="link">
+						<span class="txt">지금 설치하기</span>
+						<span class="icon"></span>
+					</a>
+				</div>
+				<div class="imgbox">
+					<img src="img/ic_qr.png" alt="" class="qr">
 				</div>
 			</div>
 		</div>
@@ -167,7 +858,286 @@
 
     <!-- JS -->
     <script src="js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	
+	<!-- 총 운세 점수 차트 -->
+    <script>
+    	const chart_bg = document.getElementById('totalchart_bg');
+    	const chart_bar = document.getElementById('totalchart_bar');
+    	const totalNumber = document.querySelector('#total_fortunebox .number');
+    	const slideItem2 = document.querySelector('.fortune_wrap .slideitem2');
 
+    	const ctxBar = chart_bar.getContext('2d');
+    	const ctxBg = chart_bg.getContext('2d');
+
+    	const stateDataMap = {
+			state_low: {
+				bgColor: function (ctx, val) {
+				const width = ctx.canvas.width;
+				const xEnd = (val / 100) * width;
+				const gradient = ctx.createLinearGradient(0, 0, xEnd, 0);
+				gradient.addColorStop(0, '#FFB4B7');
+				gradient.addColorStop(1, '#FF0009');
+				return gradient;
+				}
+			},
+			state_medium: {
+				bgColor: function (ctx, val) {
+				const width = ctx.canvas.width;
+				const xEnd = (val / 100) * width;
+				const gradient = ctx.createLinearGradient(0, 0, xEnd, 0);
+				gradient.addColorStop(0, '#FFF2BC');
+				gradient.addColorStop(1, '#FFCC00');
+				return gradient;
+				}
+			},
+			state_high: {
+				bgColor: function (ctx, val) {
+				const width = ctx.canvas.width;
+				const xEnd = (val / 100) * width;
+				const gradient = ctx.createLinearGradient(0, 0, xEnd, 0);
+				gradient.addColorStop(0, '#8FFFB2');
+				gradient.addColorStop(1, '#00D89B');
+				return gradient;
+				}
+			}
+		};
+
+    	const options = {
+    		responsive: true,
+    		maintainAspectRatio: false,
+    		rotation: -90,
+    		circumference: 180,
+    		cutout: '90%',
+    		layout: {
+    			padding: 0
+    		},
+    		plugins: {
+    			legend: {
+    				display: false
+    			},
+    			tooltip: {
+    				enabled: false
+    			}
+    		}
+    	};
+
+    	new Chart(chart_bg, {
+    		type: 'doughnut',
+    		data: {
+    			labels: ['background'],
+    			datasets: [{
+    				data: [100],
+    				backgroundColor: ['#e0e0e0'],
+    				borderWidth: 0,
+    				borderRadius: 100,
+    			}]
+    		},
+    		options,
+    	});
+
+    	let chartBar = new Chart(chart_bar, {
+    		type: "doughnut",
+    		data: {
+    			datasets: [{
+    				data: [0, 100],
+    				backgroundColor: ['transparent', 'transparent'],
+    				borderWidth: 0,
+    				borderRadius: 100,
+    			}]
+    		},
+    		options,
+    	});
+
+    	const buttons = [...document.querySelectorAll('.daybtnbox button')];
+
+    	function getStateByValue(val) {
+    		if (val >= 80) return 'state_high';
+    		if (val >= 50) return 'state_medium';
+    		return 'state_low';
+    	}
+
+    	function updateChartAndState(btn) {
+			const val = parseInt(btn.dataset.total || btn.querySelector('.circle').textContent, 10);
+			const stateKey = getStateByValue(val);
+			const stateInfo = stateDataMap[stateKey];
+
+			chartBar.data.datasets[0].data = [val, 100 - val];
+			chartBar.data.datasets[0].backgroundColor = [stateInfo.bgColor(ctxBar, val), 'transparent'];
+			chartBar.update();
+
+			totalNumber.textContent = val;
+
+			slideItem2.classList.remove('state_low', 'state_medium', 'state_high');
+			slideItem2.classList.add(stateKey);
+
+			buttons.forEach(b => b.classList.remove('on'));
+			btn.classList.add('on');
+
+			const container = document.querySelector('.fortune_slider');
+			let bg3Value = '';
+
+			if(stateKey === 'state_low') {
+				bg3Value = 'linear-gradient(180deg, #FFB4B7 0%, #FF0009 100%)';
+			} else if(stateKey === 'state_medium') {
+				bg3Value = 'linear-gradient(180deg, #FFF2BC 0%, #FFCC00 100%)';
+			} else if(stateKey === 'state_high') {
+				bg3Value = 'linear-gradient(180deg, #8FFFB2 0%, #00D89B 100%)';
+			}
+
+			container.style.setProperty('--bg3', bg3Value);
+		}
+
+    	const defaultBtn = document.querySelector('.daybtnbox button.on') || buttons[0];
+    	updateChartAndState(defaultBtn);
+
+    	buttons.forEach(btn => {
+    		btn.addEventListener('click', () => {
+    			updateChartAndState(btn);
+    		});
+    	});
+    </script>
+	
+	<!-- 시간대 별 운세 그래프 -->
+    <script>
+		const graph_bg = document.getElementById('time_graph_bg');
+		const graph_line = document.getElementById('time_graph_line');
+		const slideItem5 = document.querySelector('.slideitem5');
+		const scoreText = slideItem5.querySelector('.score');
+
+		const ctxGraphBg = graph_bg.getContext('2d');
+		const ctxGraphLine = graph_line.getContext('2d');
+
+		const gradientFill = ctxGraphBg.createLinearGradient(0, 0, 0, graph_bg.clientHeight);
+		gradientFill.addColorStop(0, 'rgba(255, 128, 0, 0.8)');
+		gradientFill.addColorStop(1, 'rgba(255, 128, 0, 0)');
+
+		const chartDataBg = {
+			labels: ['아침', '오후', '저녁'],
+			datasets: [{
+				data: [80, 60, 68],
+				backgroundColor: gradientFill,
+				borderColor: '#FF8000',
+				borderWidth: 3,
+				fill: true,
+				tension: 0.4,
+				pointRadius: 0,
+				pointBackgroundColor: 'transparent',
+				borderCapStyle: 'butt',
+			}]
+		};
+
+		const chartDataLine = {
+			labels: ['아침', '오후', '저녁'],
+			datasets: [{
+				data: [80, 60, 68],
+				backgroundColor: 'transparent',
+				borderColor: 'transparent',
+				borderWidth: 0,
+				fill: false,
+				tension: 0.4,
+				pointRadius: 5,
+				pointBackgroundColor: '#FF8000',
+				borderCapStyle: 'butt',
+			}]
+		};
+
+		const chartOptions = {
+		responsive: true,
+		maintainAspectRatio: false,
+		layout: {
+			padding: { left: 5, right: 5, top: 0, bottom: 0 }
+		},
+		plugins: {
+			legend: { display: false },
+			tooltip: { enabled: false }
+		},
+		scales: {
+			x: {
+			display: false,
+			min: 0,
+			max: 2,
+			grid: { display: false },
+			ticks: { display: false, padding: 0 }
+			},
+			y: {
+			display: false,
+			min: 0,
+			max: 100,
+			grid: { display: false },
+			ticks: { display: false, stepSize: 25, padding: 0 }
+			}
+		},
+		elements: {
+			line: { borderCapStyle: 'butt' }
+		},
+		clip: 5,
+		};
+
+		const graphChartBg = new Chart(ctxGraphBg, {
+		type: 'line',
+		data: chartDataBg,
+		options: chartOptions
+		});
+
+		const graphChartLine = new Chart(ctxGraphLine, {
+		type: 'line',
+		data: chartDataLine,
+		options: chartOptions
+		});
+
+		function updateFortune(state, index) {
+			const alarModal = document.querySelector('.sajuAlarm_modal');
+			const currentState = [...slideItem5.classList].find(cls => cls.startsWith('state_'));
+			const clickedState = state;
+
+			// 임시조건
+			const showModal =
+				(currentState === 'state_morning' && (clickedState === 'state_afternoon' || clickedState === 'state_evening')) ||
+				(currentState === 'state_afternoon' && clickedState === 'state_evening');
+
+			if (showModal) {
+				alarModal.classList.add('show');
+				return;
+			} else {
+				alarModal.classList.remove('show');
+				if (currentState) {
+					slideItem5.classList.remove(currentState);
+				}
+				slideItem5.classList.add(clickedState);
+				scoreText.textContent = chartDataLine.datasets[0].data[index];
+
+				const visibleColor = '#FF8000';
+				const transparent = 'rgba(255, 128, 0, 0)';
+
+				let pointColors;
+
+				if (index === 0) {
+					pointColors = [visibleColor, transparent, transparent]; // 아침
+				} else if (index === 1) {
+					pointColors = [visibleColor, visibleColor, transparent]; // 오후
+				} else {
+					pointColors = [visibleColor, visibleColor, visibleColor]; // 저녁
+				}
+
+				chartDataLine.datasets[0].pointBackgroundColor = pointColors;
+				graphChartLine.update({
+					duration: 200,
+					easing: 'easeOutCubic'
+				});
+			}
+		}
+
+		document.querySelector('.morning_btn').addEventListener('click', () => {
+		updateFortune('state_morning', 0);
+		});
+		document.querySelector('.afternoon_btn').addEventListener('click', () => {
+		updateFortune('state_afternoon', 1);
+		});
+		document.querySelector('.evening_btn').addEventListener('click', () => {
+		updateFortune('state_evening', 2);
+		});
+    </script>
 
 
 </body>

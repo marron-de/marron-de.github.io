@@ -60,8 +60,8 @@
 $(window).on('resize', function () {
 	const windowWidth = $(window).width();
 	// const maxWidth = 1120;
-	const maxWidth = 1010;
-	const widthPercentage = 0.94;
+	const maxWidth = 1040;
+	const widthPercentage = 0.98;
 
 	let calculatedWidth = windowWidth * widthPercentage;
 	if (calculatedWidth > maxWidth) {
@@ -606,4 +606,105 @@ const webright_slider = new Swiper(".webright_slider", {
 		el: '.webright_slider .pagination',
 		clickable: true,
 	},
+});
+
+const fortune_slider = new Swiper(".fortune_slider", {
+	speed: 500,
+	observer: true,
+	observeParents: true,
+	direction: 'vertical',
+	slidesPerView: 1.3,
+	spaceBetween: 30,
+	centeredSlides: true,
+	on: {
+		init: function () {
+			updateBg(this.activeIndex);
+		},
+		slideChange: function () {
+			updateBg(this.activeIndex);
+		}
+	}
+});
+
+function updateBg(index) {
+	const bgElements = document.querySelectorAll('.fortune_wrap .fortune_slider_bg .bg');
+	bgElements.forEach((el, i) => {
+		if (i === index) {
+			el.classList.add('active');
+		} else {
+			el.classList.remove('active');
+		}
+	});
+}
+
+// 오늘의 운세 사주정보
+function sajuInfoModal() {
+  $(".sajuInfo_modal").addClass("show");
+}
+function sajuInfoModalClose() {
+  $(".sajuInfo_modal").removeClass("show");
+}
+
+// 오늘의 운세 사주정보
+function sajuInfoInputModal() {
+  $(".sajuInfoInput_modal").addClass("show");
+}
+function sajuInfoInputModalClose() {
+  $(".sajuInfoInput_modal").removeClass("show");
+}
+
+// 오늘의 운세1 자세히 보기 팝업
+function sajuMoreviewModal() {
+  $(".sajuMoreview_modal").addClass("show");
+}
+function sajuMoreviewModalClose() {
+  $(".sajuMoreview_modal").removeClass("show");
+}
+
+// 오늘의 운세2 보기 팝업
+function sajuViewModal() {
+  $(".sajuView_modal").addClass("show");
+}
+function sajuViewModalClose() {
+  $(".sajuView_modal").removeClass("show");
+}
+
+// 오늘의 운세7 전화번튼 클릭
+$('.slideitem7 .call_btn').on('click', function () {
+  const item = $(this).closest('.item');
+  const type = item.data('type');
+  const imgSrc = item.find('.img').attr('src');
+  const name = item.find('.name').text().trim();
+  const badge = item.find('.badge').text().trim();
+  const desc = item.find('.desc').html();
+
+  const cardView = $('.slideitem8 .cardview');
+  cardView.attr('data-type', type);
+  cardView.find('#cardview_img').attr('src', imgSrc);
+  cardView.find('.name').text(name);
+  cardView.find('.badge').text(badge);
+  cardView.find('.desc').html(desc);
+
+  const bgMap = {
+    '시연궁주': 'linear-gradient(180deg, #ee555a 0%, #ffcdce 100%)',
+    '다율': 'linear-gradient(180deg, #884dac 0%, #e4befb 100%)',
+    '지온': 'linear-gradient(180deg, #884dac 0%, #e4befb 100%)',
+    '넛지': 'linear-gradient(180deg, #e5a604 0%, #fff0c8 100%)'
+  };
+  
+  const phoneMap = {
+    '시연궁주': 'tel:+8201012345678',
+    '다율': 'tel:+8201023456789',
+    '지온': 'tel:+8201034567890',
+    '넛지': 'tel:+8201045678901'
+  };
+
+  const phoneNumber = phoneMap[name] || 'tel:+8201000000000';
+  cardView.find('.call_btn').attr('href', phoneNumber);
+
+  // ✅ --bg8 CSS 변수 변경
+  const bg = bgMap[name] || 'linear-gradient(180deg, #000, #333)';
+  document.querySelector('.fortune_slider').style.setProperty('--bg8', bg);
+
+  fortune_slider.slideTo(7);
 });
