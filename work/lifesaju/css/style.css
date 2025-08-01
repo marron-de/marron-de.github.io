@@ -1107,15 +1107,14 @@ line-height: 150%;letter-spacing: -0.02em;text-align: center;color: var(--text-2
 
 	
 
-
   
 
 /* 25.07.29 작업*/
 /* 오늘의 운세 */
-.fortune_wrap {height: 100vh;}
+.fortune_wrap {height: 100%;}
 .fortune_wrap .container {overflow: hidden;}
 .fortune_wrap .navigaion { margin-top: 0;}
-.fortune_wrap .fortune_slider{width: 100%; height:100%;}
+.fortune_wrap .fortune_slider{width: 100%; height: calc(var(--vh) * 100 - 5.4rem - 6rem);}
 .fortune_wrap .fortune_slider .fortune_slider_bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden;}
 .fortune_wrap .fortune_slider .fortune_slider_bg .bg { position: absolute;  left: 0; top: 50%; width: 100%; height: 100vh; transform: translateY(-50%);  transition: all 0.4s ease;  opacity: 0;}
 .fortune_wrap .fortune_slider .fortune_slider_bg .bg.active{opacity: 1;}
@@ -1131,7 +1130,7 @@ line-height: 150%;letter-spacing: -0.02em;text-align: center;color: var(--text-2
 .fortune_wrap .fortune_slider .slideitem.swiper-slide-active {background: var(--white);}
 .fortune_wrap .fortune_slider .slideitem .contwrap {transition: all 0.4s ease; opacity: 0; position: relative; width: 100%; height: 100%;}
 .fortune_wrap .fortune_slider .slideitem.swiper-slide-active  .contwrap { opacity: 1;}
-.fortune_wrap .fortune_slider .slideitem .arrow_icon { position: absolute;  top: 1.5vh;  left: 50%;  transform: translate(-50%, -5px); font-size: 2rem; color: var(--white); transition: all 0.4s ease; animation: floatArrow 2s ease-in-out infinite;}
+.fortune_wrap .fortune_slider .slideitem .arrow_icon { position: absolute;  top: 3rem;  left: 50%;  transform: translate(-50%, -5px); font-size: 2rem; color: var(--white); transition: all 0.4s ease; animation: floatArrow 2s ease-in-out infinite;}
 @keyframes floatArrow {
   0% { transform: translate(-50%, -5px);}
   50% { transform: translate(-50%, 5px);}
@@ -1221,14 +1220,22 @@ font-size: 0.9rem;line-height: 100%;text-align: center;color: var(--text-2);}
 .fortune_wrap .fortune_slider .slideitem5.state_afternoon .titbox .msg::before {content: "보다 신중해야 하는\A오후입니다";white-space: pre-line;}
 .fortune_wrap .fortune_slider .slideitem5.state_evening .titbox .msg::before {content: "모든게 정리된 \A저녁입니다";white-space: pre-line;}
 .fortune_wrap .fortune_slider .slideitem5 .graphbox { position: relative; width: 100%; aspect-ratio: 1/0.42857; background: url(../img/graph_bg.png) no-repeat center/100% 100%; height: 11rem;}
+.fortune_wrap .fortune_slider .slideitem5 .graphbox .canvasbox {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
 .fortune_wrap .fortune_slider .slideitem5 .graphbox .time_graph {position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 100% !important; height: 100% !important; transition: all 0.4s ease;}
-.fortune_wrap .fortune_slider .slideitem5 .graphbox .time_graph_bg { width: 102% !important;}
+.fortune_wrap .fortune_slider .slideitem5 .graphbox .time_graph { width: 102% !important;}
+.fortune_wrap .fortune_slider .slideitem5 .graphbox .time_graph_line0 {opacity: 0;}
 .fortune_wrap .fortune_slider .slideitem5.state_morning .graphbox .time_graph_bg {clip-path: polygon(0 0, 3% 0, 3% 100%, 0% 100%);}
 .fortune_wrap .fortune_slider .slideitem5.state_afternoon .graphbox .time_graph_bg {clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);}
 .fortune_wrap .fortune_slider .slideitem5.state_evening .graphbox .time_graph_bg {clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
-.fortune_wrap .fortune_slider .slideitem5 .graphbox .graphbtn {background: no-repeat center/contain; width: 1rem; aspect-ratio: 1 / 1.52; position: absolute; top: 50%; transform: translateY(-50%);}
+.fortune_wrap .fortune_slider .slideitem5 .graphbox .graphbtn {background: no-repeat center/contain; width: 1rem; aspect-ratio: 1 / 1.52; position: absolute; top: 50%; transform: translateY(-50%); opacity: 0;}
 .fortune_wrap .fortune_slider .slideitem5 .graphbox .graphbtn.prev {background-image: url(../img/ic_slide_prev.png); left: -1.8rem;}
 .fortune_wrap .fortune_slider .slideitem5 .graphbox .graphbtn.next {background-image: url(../img/ic_slide_next.png); right: -1.8rem;}
+.fortune_wrap .fortune_slider .slideitem5 .graphbox .graph_slider {width: 100%; height: 100%;}
+.fortune_wrap .fortune_slider .slideitem5 .graphbox .graph_slider .time_graph { width: 100% !important;}
+.fortune_wrap .fortune_slider .slideitem5 .graph_prev_btn, 
+.fortune_wrap .fortune_slider .slideitem5 .graph_next_btn {background: no-repeat center/contain; width: 1rem; aspect-ratio: 1 / 1.52; height: auto; height: auto; margin: 0;  top: 50%; transform: translateY(-50%);}
+.fortune_wrap .fortune_slider .slideitem5 .graph_prev_btn {background-image: url(../img/ic_slide_prev.png); left: -1.8rem;}
+.fortune_wrap .fortune_slider .slideitem5 .graph_next_btn {background-image: url(../img/ic_slide_next.png); right: -1.8rem;}
 .fortune_wrap .fortune_slider .slideitem5 .progressbox { display: flex;  flex-direction: column;  align-items: center; gap: 1.8rem; margin-top: -0.5rem;}
 .fortune_wrap .fortune_slider .slideitem5 .progressbox .progress { position: relative;  width: 110%;  height: 3.4rem;  background: var(--grey);  border-radius: 10rem; overflow: hidden;}
 .fortune_wrap .fortune_slider .slideitem5 .progressbox .progress .ativebar {  position: absolute;  left: 0;  top: 0;  height: 100%; background: #ff8000;  border-radius: 10rem; transition: all 0.4s ease;}
@@ -1237,7 +1244,7 @@ font-size: 0.9rem;line-height: 100%;text-align: center;color: var(--text-2);}
 .fortune_wrap .fortune_slider .slideitem5.state_evening .progressbox .progress .ativebar{width: 100%;}
 .fortune_wrap .fortune_slider .slideitem5 .progressbox .progress .ativebar .icon {  background: url(../img/ic_sun.png) no-repeat center / contain; width: 2rem;  aspect-ratio: 1 / 1;  position: absolute; left: calc(100% - 2rem - 0.8rem); top: 50%;  transform: translate(0, -50%);  transition: all 0.4s ease;}
 .fortune_wrap .fortune_slider .slideitem5 .txtbox { display: flex; align-items: center;  justify-content: space-between;  font-weight: 500; font-size: 1rem; line-height: 100%;  text-align: center;  color: var(--white); position: absolute; left: 0;  top: 50%;  transform: translateY(-50%);  width: 100%; padding: 0 0.8rem;}
-.fortune_wrap .fortune_slider .slideitem5 .txtbox .timebtn {transition: all 0.4s ease; font: inherit;color: inherit;}
+.fortune_wrap .fortune_slider .slideitem5 .txtbox .timebtn {transition: all 0.4s ease; font: inherit;color: inherit; pointer-events: none; }
 .fortune_wrap .fortune_slider .slideitem5.state_morning .txtbox .timebtn:nth-child(1) {opacity: 0;}
 .fortune_wrap .fortune_slider .slideitem5.state_morning .progressbox .progress .ativebar .icon { left: 50%; transform: translate(-50%, -50%);}
 .fortune_wrap .fortune_slider .slideitem5 .txtbox .timebtn:nth-child(2) {opacity: 0;}

@@ -56,29 +56,6 @@
 }(jQuery));
 
 
-// 레이아웃 여백
-$(window).on('resize', function () {
-	const windowWidth = $(window).width();
-	// const maxWidth = 1120;
-	const maxWidth = 1040;
-	const widthPercentage = 0.98;
-
-	let calculatedWidth = windowWidth * widthPercentage;
-	if (calculatedWidth > maxWidth) {
-		calculatedWidth = maxWidth;
-	}
-
-	const marginLeft = (windowWidth - calculatedWidth) / 2;
-
-	$('body').css('--margin-left', marginLeft + 'px');
-	$('body').css('--margin-right', marginLeft + 'px');
-});
-
-$(document).ready(function () {
-	$(window).trigger('resize');
-});
-
-
 // 모달 기본
 $(".modal .modal_close").click(function () {
 	$("body").removeClass("hidden")
@@ -616,6 +593,12 @@ const fortune_slider = new Swiper(".fortune_slider", {
 	slidesPerView: 1.3,
 	spaceBetween: 30,
 	centeredSlides: true,
+	breakpoints: { 
+		900: {
+			slidesPerView: 1.5,
+			spaceBetween: 40,
+		}
+	},
 	on: {
 		init: function () {
 			updateBg(this.activeIndex);
@@ -707,4 +690,50 @@ $('.slideitem7 .call_btn').on('click', function () {
   document.querySelector('.fortune_slider').style.setProperty('--bg8', bg);
 
   fortune_slider.slideTo(7);
+});
+
+
+/* 비율 수정 */
+// 레이아웃 여백 
+$(window).on('resize', function () {
+	const windowWidth = $(window).width();
+	// const maxWidth = 1120;
+	const maxWidth = 900;
+	const widthPercentage = 0.90;
+
+	let calculatedWidth = windowWidth * widthPercentage;
+	if (calculatedWidth > maxWidth) {
+		calculatedWidth = maxWidth;
+	}
+
+	const marginLeft = (windowWidth - calculatedWidth) / 2;
+
+	$('body').css('--margin-left', marginLeft + 'px');
+	$('body').css('--margin-right', marginLeft + 'px');
+});
+$(document).ready(function () {
+	$(window).trigger('resize');
+});
+
+
+$(function () {
+  function checkUIBars() {
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    const currentHeight = window.innerHeight;
+    const screenHeight = window.screen.height;
+    const diff = screenHeight - currentHeight;
+
+    if (screenWidth <= 900 && diff > 160) {
+      if (!$('body').hasClass('uiBar_ver')) {
+        $('body').addClass('uiBar_ver');
+      }
+    } else {
+      if ($('body').hasClass('uiBar_ver')) {
+        $('body').removeClass('uiBar_ver');
+      }
+    }
+  }
+
+  $(window).on('resize orientationchange scroll', checkUIBars);
+  checkUIBars();
 });

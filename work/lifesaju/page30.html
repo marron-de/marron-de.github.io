@@ -257,7 +257,7 @@
 								</div>								
 							</div>
 						</div>
-						<div class="swiper-slide slideitem slideitem5 state_evening">
+						<div class="swiper-slide slideitem slideitem5 state_morning">
 							<!-- 상태변화
 								.state_morning 
 								.state_afternoon 
@@ -281,11 +281,30 @@
 										<p class="msg"></p>
 									</div>
 									<div class="graphbox">
-										<canvas id="time_graph_bg" class="time_graph time_graph_bg" width="560" height="240"></canvas>
-										<canvas id="time_graph_line" class="time_graph time_graph_line" width="560" height="240"></canvas>
-										<button type="button" class="graphbtn prev"></button>
-										<button type="button" class="graphbtn next"></button>
-									</div>
+										<!-- css로 숨김처리함 -->
+										<div class="canvasbox">
+											<canvas id="time_graph_bg" class="time_graph time_graph_bg " width="560" height="240"></canvas>
+											<canvas id="time_graph_line" class="time_graph time_graph_line time_graph_line0" width="560" height="240"></canvas>
+											<button type="button" class="graphbtn prev"></button>
+											<button type="button" class="graphbtn next"></button>
+										</div>
+										
+										<div class="swiper graph_slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide item" data-state="state_morning" data-score="80"> 	
+													<canvas id="time_graph_line1" class="time_graph time_graph_line" width="560" height="240"></canvas>
+												</div>
+												<div class="swiper-slide item" data-state="state_afternoon" data-score="60">	
+													<canvas id="time_graph_line2" class="time_graph time_graph_line" width="560" height="240"></canvas>
+												</div>
+												<div class="swiper-slide item" data-state="state_evening" data-score="68">	
+													<canvas id="time_graph_line3" class="time_graph time_graph_line" width="560" height="240"></canvas>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button-prev graph_prev_btn"></div>
+										<div class="swiper-button-next graph_next_btn"></div>										
+									</div>									
 									<div class="progressbox">
 										<div class="progress">
 											<div class="ativebar">
@@ -1003,7 +1022,7 @@
 		const graph_bg = document.getElementById('time_graph_bg');
 		const graph_line = document.getElementById('time_graph_line');
 		const slideItem5 = document.querySelector('.slideitem5');
-		const scoreText = slideItem5.querySelector('.score');
+		const scoreText = slideItem5.querySelector('.slideitem5 .score');
 
 		const ctxGraphBg = graph_bg.getContext('2d');
 		const ctxGraphLine = graph_line.getContext('2d');
@@ -1075,15 +1094,15 @@
 		};
 
 		const graphChartBg = new Chart(ctxGraphBg, {
-		type: 'line',
-		data: chartDataBg,
-		options: chartOptions
+			type: 'line',
+			data: chartDataBg,
+			options: chartOptions
 		});
 
 		const graphChartLine = new Chart(ctxGraphLine, {
-		type: 'line',
-		data: chartDataLine,
-		options: chartOptions
+			type: 'line',
+			data: chartDataLine,
+			options: chartOptions
 		});
 
 		function updateFortune(state, index) {
@@ -1137,6 +1156,105 @@
 		document.querySelector('.evening_btn').addEventListener('click', () => {
 		updateFortune('state_evening', 2);
 		});
+
+
+
+		// swiper_ver
+		const graph_slider = new Swiper(".graph_slider", {
+			loop:true,
+			speed: 500,		
+			observer: true,  
+			observeParents: true,  
+			effect : 'fade',
+			fadeEffect: { 
+				crossFade: true 
+			},
+			navigation: {
+				nextEl: '.graph_next_btn',
+				prevEl: '.graph_prev_btn',
+			},
+		});
+				
+		const graph_line1 = document.getElementById('time_graph_line1');	
+		const ctxGraphLine1 = graph_line1.getContext('2d');
+		const graphChartLine1 = new Chart(ctxGraphLine1, {
+			type: 'line',
+			data: {
+				labels: ['아침', '오후', '저녁'],
+				datasets: [{
+					data: [80, 60, 68],
+					backgroundColor: 'transparent',
+					borderColor: 'transparent',
+					borderWidth: 0,
+					fill: false,
+					tension: 0.4,
+					pointRadius: 5,
+					pointBackgroundColor: ['#FF8000','transparent','transparent'],
+					borderCapStyle: 'butt',
+				}]
+			},
+			options: chartOptions
+		});
+		
+		const graph_line2 = document.getElementById('time_graph_line2');	
+		const ctxGraphLine2 = graph_line2.getContext('2d');
+		const graphChartLine2 = new Chart(ctxGraphLine2, {
+			type: 'line',
+			data: {
+				labels: ['아침', '오후', '저녁'],
+				datasets: [{
+					data: [80, 60, 68],
+					backgroundColor: 'transparent',
+					borderColor: 'transparent',
+					borderWidth: 0,
+					fill: false,
+					tension: 0.4,
+					pointRadius: 5,
+					pointBackgroundColor:  ['#FF8000','#FF8000','transparent'],
+					borderCapStyle: 'butt',
+				}]
+			},
+			options: chartOptions
+		});
+		
+		const graph_line3 = document.getElementById('time_graph_line3');	
+		const ctxGraphLine3 = graph_line3.getContext('2d');
+		const graphChartLine3 = new Chart(ctxGraphLine3, {
+			type: 'line',
+			data: {
+				labels: ['아침', '오후', '저녁'],
+				datasets: [{
+					data: [80, 60, 68],
+					backgroundColor: 'transparent',
+					borderColor: 'transparent',
+					borderWidth: 0,
+					fill: false,
+					tension: 0.4,
+					pointRadius: 5,
+					pointBackgroundColor: ['#FF8000','#FF8000','#FF8000'],
+					borderCapStyle: 'butt',
+				}]
+			},
+			options: chartOptions
+		});
+
+		graph_slider.on('slideChange', function () {
+			const swiper = this;
+			const activeSlide = swiper.slides[swiper.activeIndex];
+			const slideState = activeSlide.getAttribute('data-state');
+			const slideScore = activeSlide.getAttribute('data-score');
+			const slideContainer = document.querySelector('.slideitem5');
+			const slideScoreText = slideContainer.querySelector('.score');
+
+			if (slideState && slideContainer && slideScoreText) {
+				slideContainer.classList.remove('state_morning', 'state_afternoon', 'state_evening');
+				slideContainer.classList.add(slideState);
+				slideScoreText.textContent = slideScore || '';
+			}
+		});
+
+
+
     </script>
 
 
