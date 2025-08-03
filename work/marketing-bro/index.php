@@ -8,19 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>마케팅브로</title>
 
-
-	<!-- Swiper -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-	<!-- jquery -->
-	<script src="js/jquery-3.4.1.min.js"></script>
-
-	<!-- CSS -->
-	<link rel="stylesheet" href="css/landing.css">
-
-	<!-- Font -->
-	<link rel="stylesheet" href="css/Pretendard.css">
+    <?php include "script.php" ?>
 
 
 </head>
@@ -28,32 +16,14 @@
 <body>
 
 
-	<div class="wrap landing_wrap">
+	<div class="wrap main_wrap">
 
-		<!-- header -->
-		<header class="header" id="header">
-			<div class="inner h_inner">
-				<div class="h_logo">
-					<a href="#MARKETINGBRO">
-						<img src="img/logo.png" alt="" />
-					</a>
-				</div>
-				<ul class="h_nav">
-					<li><a href="#PROLOGUE" class="link">마케팅브로</a></li>
-					<li><a href="#SERVICE" class="link">서비스</a></li>
-					<li><a href="#DATA01" class="link">DATA01</a></li>
-					<li><a href="#SOLUTION" class="link">솔루션</a></li>
-					<li><a href="#DATA02" class="link">DATA02</a></li>
-					<li><a href="#STRATEGY" class="link">전략</a></li>
-					<li><a href="#CONTACT" class="link">CONTACT</a></li>
-				</ul>
-			</div>
-		</header>
+		<?php include "header.php" ?>
 
 		<!-- container-->
 		<div class="container">
 
-			<section class="landing_section sec1" id="MARKETINGBRO">
+			<section class="main_section sec1" id="MARKETINGBRO">
 				<div class="vidbox">
 					<video class="video" src="video/ls1_video.mp4" loop playsinline autoplay muted></video>
 				</div>
@@ -71,18 +41,18 @@
 							as a growth partner walking <br class="tablet">
 							alongside our clients.
 						</p>
-						<div class="ls_morebox">
-							<a href="#none" class="ls_more">무료상담</a>
+						<div class="ms_morebox">
+							<a href="contact.php" class="ms_more">무료상담</a>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="landing_section sec2" id="PROLOGUE">
+			<section class="main_section sec2" id="PROLOGUE">
 				<div class="inner">
-					<div class="ls_titbox center">
-						<p class="ls_txt1">PROLOGUE</p>
-						<p class="ls_txt3">
+					<div class="ms_titbox center">
+						<p class="ms_txt1">PROLOGUE</p>
+						<p class="ms_txt3">
 							마케팅브로는 8년간 실행사 경력을 바탕으로, <br class="tablet">
 							2022년 11월, 테이블 20개의 <br class="mobile">
 							매장을 첫 오픈 월평균 2억원에서 <br class="tablet">
@@ -113,7 +83,7 @@
 					<div class="contbox">
 						<div class="left">
 							<div class="txtbox tablet">
-								<p class="ls_txt3">
+								<p class="ms_txt3">
 									마케팅브로는 당신의 비즈니스 여정에 깊이 뿌리내리며,
 									함께 지속 가능한 성장을 만들어가는 신뢰의 파트너가
 									되겠습니다.
@@ -123,7 +93,7 @@
 								<img src="img/ls2_img1.jpg" alt="" class="img">
 							</div>
 							<div class="txtbox">
-								<p class="ls_txt3">
+								<p class="ms_txt3">
 									이후, 해당 매장을 매각하고, 현재는 정다운식당 이라는
 									게장집을 인수하여 1,000평대의 대형 건물로 확장 이전하여 운영중입니다.
 									<br><br>
@@ -139,7 +109,7 @@
 								<img src="img/ls2_img2.jpg" alt="" class="img">
 							</div>
 							<div class="txtbox pc">
-								<p class="ls_txt3">
+								<p class="ms_txt3">
 									마케팅브로는 당신의 비즈니스 여정에 깊이 뿌리내리며,
 									함께 지속 가능한 성장을 만들어가는 신뢰의 파트너가
 									되겠습니다.
@@ -150,11 +120,11 @@
 				</div>
 			</section>
 
-			<section class="landing_section sec3" id="SERVICE">
+			<section class="main_section sec3" id="SERVICE">
 				<div class="inner">
-					<div class="ls_titbox center">
-						<p class="ls_txt1">SERVICE</p>
-						<p class="ls_txt2"><span class="bold">네이버 플레이스 마케팅</span></p>
+					<div class="ms_titbox center">
+						<p class="ms_txt1">SERVICE</p>
+						<p class="ms_txt2"><span class="bold">네이버 플레이스 마케팅</span></p>
 					</div>
 					<div class="phonebox">
 						<img src="img/ls3_phone_pc.png" alt="" class="pc">
@@ -163,7 +133,7 @@
 				</div>
 				<div class="contbox">
 					<div class="txtbox inner">
-						<p class="ls_txt3">
+						<p class="ms_txt3">
 							네이버 플레이스는 사용자들이 검색할 때 가장 많이 이용하는 플랫폼 중 하나입니다. <br>
 							오프라인 마케팅에 있어 높은 구매 전환율을 자랑하며, 지역 상권에서의 경쟁력을 높이는데 필수적인 역할을
 							하고 있습니다.
@@ -175,13 +145,13 @@
 							이끌어내는 중요한 요소입니다. 지역 내에서의 가시성을 높이고, 더 많은 고객을 유치하기 위해서는 이러한
 							플랫폼을 적극적으로 활용하는 것이 필요합니다.
 						</p>
-						<p class="ls_txt2">
+						<p class="ms_txt2">
 							<span class="bold">
 								마케팅브로에서 운영중인 <br>
 								여수게장 정다운식당
 							</span>
 						</p>
-						<p class="ls_txt3">
+						<p class="ms_txt3">
 							지역에 맛집을 찾아보시는 손님들에게 나의 매장이 <br>
 							<span class="bold">가장 먼저 보여지는 것은 가장 큰 무기가 되어줄것</span>입니다.
 						</p>
@@ -193,10 +163,10 @@
 				</div>
 			</section>
 						
-			<section class="landing_section sec4" id="DATA01">
+			<section class="main_section sec4" id="DATA01">
 				<div class="inner">
-					<div class="ls_titbox center">
-						<p class="ls_txt1">DATA REPORT 01</p>
+					<div class="ms_titbox center">
+						<p class="ms_txt1">DATA REPORT 01</p>
 					</div>
 					<div class="cardbox">
 						<div class="item">
@@ -248,17 +218,17 @@
 				</div>
 			</section>
 
-			<section class="landing_section sec5" id="SOLUTION">
+			<section class="main_section sec5" id="SOLUTION">
 				<div class="inner">
-					<div class="ls_titbox center">
-						<p class="ls_txt1">SOLUTION 01</p>
-						<p class="ls_txt2">
+					<div class="ms_titbox center">
+						<p class="ms_txt1">SOLUTION 01</p>
+						<p class="ms_txt2">
 							<span class="bold">
 								네이버 AI 알고리즘은 끊임없이 진화합니다. <br>
 								트렌드를 읽고, 변화에 앞서가는 마케팅이 필요합니다.
 							</span>
 						</p>
-						<p class="ls_txt4">
+						<p class="ms_txt4">
 							네이버 최신 검색 로직과 소비자 검색 패턴을 깊이 있게 분석하여,
 							<br class="pc">
 							매장에 적합한 핵심 키워드를 선별 하고 콘텐츠를 전략적으로 배치합니다.
@@ -275,16 +245,16 @@
 				</div>
 			</section>
 
-			<section class="landing_section sec6" id="DATA02">
+			<section class="main_section sec6" id="DATA02">
 				<div class="inner">
-					<div class="ls_titbox center">
-						<p class="ls_txt1">DATA REPORT 02</p>
-						<p class="ls_txt2">
+					<div class="ms_titbox center">
+						<p class="ms_txt1">DATA REPORT 02</p>
+						<p class="ms_txt2">
 							마케팅브로의 목표는 <br class="tablet">
 							단순한 노출이 아닌, <br>
 							<span class="bold">실제 구매 전환율을 높이는 것입니다.</span>
 						</p>
-						<p class="ls_txt4">
+						<p class="ms_txt4">
 							고객의 니즈에 맞춘 콘텐츠 제작과 효과적인 광고 집행을 통해, <br class="pc">
 							고객이 원하는 결과를 도출할 수 있도록 지원합니다.
 						</p>
@@ -315,10 +285,10 @@
 				<div class="inner">
 					<div class="contbox">
 						<div class="titbox">
-							<p class="ls_txt2">
+							<p class="ms_txt2">
 								<span class="bold">최고 매출 4배 성장!</span>
 							</p>
-							<p class="ls_txt4">
+							<p class="ms_txt4">
 								네이버 마케팅으로 소비자 패턴과 검색 트렌드를 분석해, 매장 방문 가능성을 높이고, <br class="pc">
 								실질적 고객 유입을 강화하는 맞춤형 전략을 설계합니다.
 							</p>
@@ -331,11 +301,11 @@
 				</div>
 			</section>
 
-			<section class="landing_section sec7" id="STRATEGY">
+			<section class="main_section sec7" id="STRATEGY">
 				<div class="visual"></div>
 				<div class="inner">
-					<div class="ls_titbox center">
-						<p class="ls_txt2">
+					<div class="ms_titbox center">
+						<p class="ms_txt2">
 							<span class="bold">단순한 광고가 아닌, <br class="mobile">고객 맞춤형 전략</span>
 						</p>
 					</div>
@@ -468,14 +438,14 @@
 				</div>
 			</section>
 
-			<section class="landing_section sec8" id="PARTNERS">
+			<section class="main_section sec8" id="PARTNERS">
 				<div class="inner">
-					<div class="ls_titbox center">
-						<p class="ls_txt1">PARTNERS </p>
-						<p class="ls_txt2">
+					<div class="ms_titbox center">
+						<p class="ms_txt1">PARTNERS </p>
+						<p class="ms_txt2">
 							<span class="bold">마케팅 성공 법칙</span>
 						</p>
-						<p class="ls_txt4">
+						<p class="ms_txt4">
 							실전 마케팅으로 만들어낸 마케팅브로의 
 							<br class="mobile">사업체를 공개합니다.
 						</p>
@@ -573,86 +543,16 @@
 				</div>
 			</section>
 
-			<section class="landing_section sec9" id="CONTACT">
-				<div class="inner">
-					<div class="contbox">
-						<div class="txtbox">
-							<div class="titbox">
-								<p class="tit">마케팅브로와 함께 시작해 보세요.</p>
-								<p class="desc">
-									여러분의 이야기를 세상에 전할 준비가 <br class="mobile">
-									되어 있습니다.
-								</p>
-							</div>
-							<div class="infobox">
-								<div class="infoitem">
-									<span class="tit">상담전화</span>
-									<span class="desc">
-										<span class="num">010.5597.0257</span>
-										<span class="time">10:00 ~ 18:00</span>
-									</span>
-								</div>
-								<div class="infoitem">
-									<span class="tit">이메일</span>
-									<span class="desc">
-										marketingbro.company<br class="mobile">@gmail.com
-									</span>
-								</div>
-							</div>
-							<div class="ls_morebox">
-								<a href="#none" class="ls_more ver2">무료상담</a>
-							</div>
-						</div>
-						<div class="imgbox">
-							<img src="img/ls9_img.jpg" alt="">
-						</div>
-					</div>
-				</div>
-			</section>
-
 		</div>
 
-		<!-- footer -->
-		<footer class="footer" id="footer">
-			<div class="inner f_inner">
-				<div class="f_cont">
-					<div class="left">
-						<img src="img/f_logo.png" alt="" class="logo">
-						<p class="info">
-							마케팅브로 <span class="bar">I</span> 대표이사 : 김한주 <br>
-							주소 : 전라남도 순천시 장천2길 30-23, 4층4065호 <br>
-							사업자번호 : 563-76-00414
-						</p>
-					</div>
-					<div class="right">
-						<div class="sns_box">
-							<a href="" class="link" target="_blank">
-								<img src="img/sns_ytb.png" alt="">
-							</a>
-							<a href="" class="link" target="_blank">
-								<img src="img/sns_insta.png" alt="">
-							</a>
-							<a href="" class="link" target="_blank">
-								<img src="img/sns_blog.png" alt="">
-							</a>
-						</div>
-						<div class="term_nav">
-							<a href="" class="link">서비스이용약관</a>
-							<span class="bar"></span>
-							<a href="" class="link">개인정보처리방침</a>
-						</div>
-					</div>
-				</div>
-				<p class="f_copy">© 2025 Marketingbro. ALL RIGHT RESERVED.</p>
-			</div>
-		</footer>
+		<?php include "footer.php" ?>		
 
 	</div>
 
 
 
 	<!-- JS -->
-	<script src="js/landing.js"></script>
+	<script src="js/common.js"></script>
 
 
 
