@@ -187,18 +187,16 @@ function darkmode_popup() {
 	$(".popup").removeClass("show");
 	$("#darkmode_popup").addClass("show");
 }
-// 테마 설정 함수
+// theme setting
 function setTheme(theme) {
 	document.body.setAttribute("data-theme", theme);
 	localStorage.setItem("theme", theme);
 	$(".darkmode_btn").removeClass("light dark").addClass(theme);
 }
-
+// darkmode button
 $(document).ready(function () {
-	// 초기 테마 설정
 	setTheme(localStorage.getItem("theme") || "light");
 
-	// 테마 버튼 클릭
 	$(document).on("click", ".sel_btn", function () {
 		setTheme($(this).val());
 		$("#darkmode_popup").removeClass("show");
@@ -211,24 +209,22 @@ function alarm_popup() {
 	$(".popup").removeClass("show");
 	$("#alarm_popup").addClass("show");
 }
-
 // share popup
 function share_popup() {
 	$(".popup").removeClass("show");
 	$("#share_popup").addClass("show");
 }
-
 // app popup
 function app_popup() {
 	$(".popup").removeClass("show");
 	$("#app_popup").addClass("show");
 }
-
 // profile popup
 function profile_popup() {
 	$(".popup").removeClass("show");
 	$("#profile_popup").addClass("show");
 }
+
 
 // header submenu button
 $(document).on('click', '.header .gnb_title', function () {
