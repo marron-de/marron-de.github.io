@@ -121,10 +121,10 @@
         $mail->Host        = 'smtp.gmail.com';   
         $mail->Port        = 465;
         $mail->Mailer        = 'smtp';   
-        $mail->Username    = '';     
-        $mail->Password    = '';   
-        $mail->addAddress('', '받는사람');  
-        $mail->setFrom('' , '보낸사람');  
+        $mail->Username    = 'marketingbro.company@gmail.com';     
+        $mail->Password    = 'vtxdveyazzuzaeci';   
+        $mail->addAddress('marketingbro.company@gmail.com', '받는사람');  
+        $mail->setFrom('marketingbro.company@gmail.com' , '보낸사람');  
         $mail->isHTML(true);  
         $mail->Subject     = $subject;   
         $mail->Body        = $body;  
