@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="login_wrap">
+
+		<div class="login_section">
+			<div class="login_box">
+				<div class="leftbox">
+					<div class="titbox">
+						<p class="tit">Admin Login</p>
+						<p class="desc">Welcome back! Please enter your details.</p>
+					</div>
+					<form name="login_fm" id="login_fm" method="post" action="" class="form">
+						<div class="input_wrap">
+							<div class="input_box">
+								<label class="label_text" for="user_id">ID</label>
+								<input class="input_text" id="user_id" name="user_id" type="text" placeholder="Enter your ID"  required="required" />
+							</div>
+							<div class="input_box">
+								<label class="label_text" for="user_pw">Password</label>
+								<input class="input_text" id="user_pw" name="user_pw" type="password" placeholder="••••••••" required="required" />
+							</div>
+						</div>
+						<div class="check_box">
+							<input class="input_check" type="checkbox" id="auto_login" name="auto_login" value="Y" />
+							<label class="label_check" for="auto_login">Auto Login</label>
+						</div>
+						<div class="button_box">
+							<button type="button" id="btn_login" class="button typeC full"
+								onclick="handleLogin()">Login</button>
+						</div>
+					</form>
+				</div>
+				<div class="rightbox">
+					<div class="logobox">
+						<img src="../img/tk_logo.png" />
+					</div>
+					<div class="txtbox">
+						<img src="../img/login_img.png" alt="" class="img">
+						<p class="tit">
+							Welcome!
+						</p>
+						<p class="desc">
+							Inbound Specialized Travel Agency Connecting Travelers <br>
+							From All Over the World to Korea.
+							<br><br>
+							A platform company that can deliver various travel information to Korea.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 아이디 모달 -->
+		<div id="idError_modal" class="modal">
+			<div class="modal_box">
+				<div class="modal_img">
+					<img src="../img//alert_login.png" alt="" class="img">
+				</div>
+				<p class="modal_tit">아이디를 입력해주세요</p>
+				<div class="modal_btnbox">
+					<button class="modal_btn button auto typeE modal_close">확인</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 비밀번호 모달 -->
+		<div id="pwdError_modal" class="modal">
+			<div class="modal_box">
+				<div class="modal_img">
+					<img src="../img//alert_login.png" alt="" class="img">
+				</div>
+				<p class="modal_tit">비밀번호를 입력해주세요.</p>
+				<div class="modal_btnbox">
+					<button class="modal_btn button auto typeE modal_close">Confirm</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<script src="../js/common.js"></script>
+
+	<!-- 로그인 버튼 -->
+	<script>
+		function handleLogin() {
+			const userId = $("#user_id").val().trim();
+			const userPw = $("#user_pw").val().trim();
+
+			if (userId === "") {
+				$("#idError_modal").addClass("show");
+				$("#user_id").focus();
+				return;
+			}
+			if (userPw === "") {
+				$("#pwdError_modal").addClass("show");
+				$("#user_pw").focus();
+				return;
+			}
+
+			// 로그인 성공 시 이동
+			window.location.href = "../dashboard/dashboard.html";
+		}
+	</script>
+
+</body>
+
+</html>

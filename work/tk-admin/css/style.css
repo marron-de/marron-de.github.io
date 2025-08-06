@@ -6,10 +6,10 @@
 .login_wrap .login_section .leftbox .titbox{width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 0.75rem;}
 .login_wrap .login_section .leftbox .titbox .tit{font:var(--36_title_sb); line-height: 122%; letter-spacing: -0.02em; color: var(--basic-black)}
 .login_wrap .login_section .leftbox .titbox .desc{font:var(--16_body_normal_r);line-height: 150%; color: var(--basic-darkgray)}
-.login_wrap .login_section .leftbox .formbox{width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 1.5rem;}
-.login_wrap .login_section .leftbox .formbox .input_wrap{ display: flex; flex-direction: column ; gap: 1rem;}
-.login_wrap .login_section .leftbox .formbox .input_box{gap: 0.5rem;}
-.login_wrap .login_section .leftbox .formbox .button_box .button {height: 3.75rem;}
+.login_wrap .login_section .leftbox .form{width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 1.5rem;}
+.login_wrap .login_section .leftbox .form .input_wrap{ display: flex; flex-direction: column ; gap: 1rem;}
+.login_wrap .login_section .leftbox .form .input_box{gap: 0.5rem;}
+.login_wrap .login_section .leftbox .form .button_box .button {height: 3.75rem;}
 .login_wrap .login_section .rightbox { position: relative; width: 50%; display: flex;  flex-direction: column;  justify-content: space-between;  padding: 4rem; background: linear-gradient(to top, #005ad3, #2f88ff);}
 .login_wrap .login_section .rightbox .logobox { width: 10rem; filter: invert(10) brightness(10);  display: flex; align-items: center; justify-content: center; margin-left: auto;}
 .login_wrap .login_section .rightbox .txtbox {  display: flex;  flex-direction: column;  gap: 1rem;}
@@ -19,41 +19,105 @@
 
 
 /* 02 대시보드 */
-.dashboard_wrap .ds_sec{display: flex; flex-wrap:wrap;  gap: 1rem;}
-.dashboard_wrap .ds_sec .card_box { width: 100%; display: flex; flex-wrap:wrap;  gap: 1rem;}
-.dashboard_wrap .ds_sec .card_box.wid40 {width: calc((100% - 1rem * 1)*0.4);}
-.dashboard_wrap .ds_sec .card_box.wid60 {width: calc((100% - 1rem * 1)*0.6);}
-.dashboard_wrap .ds_sec .card {border: 1px solid transparent; border-radius: 0.875rem;  box-shadow: var(--box-shadow);  background: var(--basic-white); transition: all 0.4s ease;}
+.dashboard_wrap .ds_sec{display: flex; flex-wrap:wrap;  gap: 1.25rem;}
+.dashboard_wrap .ds_sec .card_box { width: 100%; display: flex; flex-wrap:wrap;  gap: 1.25rem;}
+.dashboard_wrap .ds_sec .card_box.wid40 {width: calc((100% - 1.25rem * 1)*0.4);}
+.dashboard_wrap .ds_sec .card_box.wid50 {width: calc((100% - 1.25rem * 1)/2);}
+.dashboard_wrap .ds_sec .card_box.wid60 {width: calc((100% - 1.25rem * 1)*0.6);}
+.dashboard_wrap .ds_sec .card {width: 100%; border: 1px solid transparent; border-radius: 0.875rem;  box-shadow: var(--box-shadow);  background: var(--basic-white); transition: all 0.4s ease;}
 .dashboard_wrap .ds_sec .card:hover {border-color:#1f88f0; box-shadow:0 0 16px rgba(31,136,240,.2);}
-.dashboard_wrap .ds_sec .card.wid20 {width: calc((100% - 1rem * 4)/5);}
-.dashboard_wrap .ds_sec .card.wid25 {width: calc((100% - 1rem * 3)/4);}
-.dashboard_wrap .ds_sec .card.wid33 {width: calc((100% - 1rem * 2)/3);}
-.dashboard_wrap .ds_sec .card.wid50 {width: calc((100% - 1rem * 1)/2);}
-.dashboard_wrap .ds_sec .card .card_link{width: 100%; display: flex; flex-direction: column; gap: 1rem; padding: 1rem 1.25rem; }
+.dashboard_wrap .ds_sec .card.wid16 {width: calc((100% - 1.25rem * 5)/6);}
+.dashboard_wrap .ds_sec .card.wid20 {width: calc((100% - 1.25rem * 4)/5);}
+.dashboard_wrap .ds_sec .card.wid25 {width: calc((100% - 1.25rem * 3)/4);}
+.dashboard_wrap .ds_sec .card.wid33 {width: calc((100% - 1.25rem * 2)/3);}
+.dashboard_wrap .ds_sec .card.wid50 {width: calc((100% - 1.25rem * 1)/2);}
+
+.dashboard_wrap .ds_sec .card .card_link{width: 100%; display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem 1.5rem; }
 .dashboard_wrap .ds_sec .card .card_head{position: relative; width: 100%;}
 .dashboard_wrap .ds_sec .card .card_head .tit{font: var(--15_body_normal_m); color: var(--basic-darkgray);}
+.dashboard_wrap .ds_sec .card .card_head .view_btn { font: var(--14_label_normal_m);   text-transform: uppercase; display: inline-flex; align-items: center;  gap: 0.375rem;  padding: 0.313rem 0.875rem; background: var(--brand-primary); color: var(--basic-white);  border-radius: 6.25rem;}
 .dashboard_wrap .ds_sec .card .card_body{display: flex; align-items: center; justify-content: space-between;}
 .dashboard_wrap .ds_sec .card .card_body .cont{display: flex; flex-direction: column;}
 .dashboard_wrap .ds_sec .card .card_body .cont .result{font: var(--24_title_m);  letter-spacing: -0.025em; color: var(--basic-darkgray);}
-.dashboard_wrap .ds_sec .card_box .card .card_body .cont .result {font: var(--18_headline_r);}
+.dashboard_wrap .ds_sec .card_box .card .card_body .cont .result {font: var(--18_headline_sb); color: var(--brand-primary);}
 .dashboard_wrap .ds_sec .card .card_body .cont .result.type_info {color: var(--state-info);}
 .dashboard_wrap .ds_sec .card .card_body .cont .result.type_error {color: var(--state-error);}
 .dashboard_wrap .ds_sec .card .card_body .cont .result.weather_ver {display: flex; align-items: center; gap: 1rem;}
-.dashboard_wrap .ds_sec .card .card_body .cont .result.weather_ver .icon {  width: 3.75rem;  aspect-ratio: 1 / 1; display: flex;}
+.dashboard_wrap .ds_sec .card .card_body .cont .result.weather_ver .icon {  width: 4.5rem;  aspect-ratio: 1 / 1; display: flex;}
 .dashboard_wrap .ds_sec .card .card_body .cont .result.weather_ver .city{font:var(--16_body_normal_m); color: var(--basic-darkgray); display: flex; flex-direction: column;}
-.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver {font:var(--14_label_normal_r);  letter-spacing: 0;   display: flex;  flex-direction: column;  gap: 0.125rem;}
-.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver > li{display: flex; align-items: center; gap: 0.25rem;}
-.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver > li .tit{color: var(--basic-darkgray);}
-.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver > li .desc{color: var(--basic-black); font-weight: 500;}
+.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver {font:var(--16_body_normal_r);  letter-spacing: 0;   display: flex;  flex-direction: column;  gap: 0.125rem;}
+.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver > li{display: flex; align-items: center; gap: 0.5rem;}
+.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver > li .tit{color: var(--basic-middlegray);}
+.dashboard_wrap .ds_sec .card .card_body .cont .result.desc_ver > li .desc {  color: var(--brand-primary);  font-weight: 600;}
 .dashboard_wrap .ds_sec .card .card_body .more { display: flex;align-items: center;   gap: 0.25rem;   line-height: 1;  font-weight: 500;  margin-top: 0.5rem;  color: var(--basic-darkgray); font: var(--14_label_normal_r);}
 .dashboard_wrap .ds_sec .card .card_body .cont .desc .badge{display: inline-flex;  align-items: center;  margin-top: 0.5rem; font:var(--12_caption_r); border-radius: 0.313rem; font-weight: 500;}
 .dashboard_wrap .ds_sec .card .card_body .graphic{display: flex; justify-content: flex-end;}
-.dashboard_wrap .ds_sec .card .card_body .graphic.chart_graphic {}
+.dashboard_wrap .ds_sec .card .card_body .graphic.chart_graphic .echart_custom{width: 8rem; aspect-ratio: 1/0.4;}
 .dashboard_wrap .ds_sec .card .card_body .graphic.icon_graphic .icon{width: 4.5rem;}
 .dashboard_wrap .ds_sec .card .card_body .graphic.temperature_graphic {display: flex; flex-direction: column; align-items: center; text-align: center;  color: var(--brand-hover);}
-.dashboard_wrap .ds_sec .card .card_body .graphic.temperature_graphic .now {font-size: 1.75rem; font:var(--28_title_m);}
-.dashboard_wrap .ds_sec .card .card_body .graphic.temperature_graphic .today {font:var(--14_label_read_r);}
+.dashboard_wrap .ds_sec .card .card_body .graphic.temperature_graphic .now {font-size: 1.75rem; font:var(--28_title_sb); }
+.dashboard_wrap .ds_sec .card .card_body .graphic.temperature_graphic .today {font:var(--14_label_read_m); color: var(--basic-middlegray);}
 .dashboard_wrap .ds_sec .card .card_body .graphic [class^="ph"].icon {  background: var(--primary-primary200);  width: 3rem;   aspect-ratio: 1 / 1;  font-size: 1.8rem;  color: var(--brand-primary);  display: flex;   align-items: center;  justify-content: center; border-radius: 50%;}
+.dashboard_wrap .ds_sec2 .card .calender_box {height: 100%;}
+.dashboard_wrap .ds_sec3 .card .card_head {display: flex; align-items: center ; justify-content: space-between;}
+.dashboard_wrap .ds_sec3 .card .card_body {display: flex; align-items: center ; justify-content: space-between; height: 26.25rem; overflow: auto;}
+.dashboard_wrap .ds_sec3 .card .card_body::-webkit-scrollbar {display: none;}
+.dashboard_wrap .ds_sec3 .chartbox {width: 100%; height: 100%;}
+.dashboard_wrap .ds_sec3 .chartbox .echart_custom{position: relative; width: 100%; height: 100%;}
+.dashboard_wrap .ds_sec3 .api_box { width: 100%;  display: flex; flex-direction: column; border-top: 1px solid var(--basic-border);}
+.dashboard_wrap .ds_sec3 .api_box .item { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.625rem 1.25rem;  border-bottom: 1px solid var(--basic-border);}
+.dashboard_wrap .ds_sec3 .api_box .item .txtbox{display: flex; flex-direction: column; gap: 0.25rem; flex: 1; overflow: hidden;}
+.dashboard_wrap .ds_sec3 .api_box .item .txtbox .tit{font:var(--16_body_normal_m); color: var(--basic-darkgray); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.dashboard_wrap .ds_sec3 .api_box .item .txtbox .desc { font: var(--14_label_normal_r);  color: var(--basic-middlegray);}
+.dashboard_wrap .ds_sec3 .api_box .item .txtbox .desc .state {color: var(--brand-primary);}
+.dashboard_wrap .ds_sec3 .api_box .item .btnbox { display: flex; align-items: center;  gap: 1rem;}
+.dashboard_wrap .ds_sec3 .api_box .item .btnbox .badge { width: 6.25rem;  height: 2rem; border-radius: 0.5rem; cursor: pointer;}
+.dashboard_wrap .ds_sec3 .api_box .item .btnbox .select_box{ width: 6.25rem; }
 
 
-.dashboard_wrap .ds_sec1{}
+/* 02 대시보드 - 일정 추가 팝업 */
+#addSchedule_modal .modal_box {width: 31.25rem;}
+
+
+/* 02 대시보드 - 일정 수정 팝업 */
+#editSchedule_modal .modal_box {width: 31.25rem;}
+
+
+/* 02 대시보드 - 일정 상세 팝업 */
+#viewSchedule_modal .modal_box {width: 31.25rem;}
+#viewSchedule_modal .form_infobox { display: flex; flex-direction: column; gap: 1rem;}
+#viewSchedule_modal .form_infobox .item { font: var(--15_body_normal_r); display: flex;  align-items: flex-start;  gap: 1rem;}
+#viewSchedule_modal .form_infobox .item .tit { width: 4rem; font-weight: 600;  color: var(--brand-hover);}
+#viewSchedule_modal .form_infobox .item .desc { flex: 1; word-break: keep-all;  color: var(--basic-darkgray);}
+
+
+/* TKTRAVEL Income & Tourboss Income */
+.income_wrap .income_head { display: flex; align-items: center;  justify-content: space-between; margin-bottom: 1rem;}
+.income_wrap .income_head .select_form {display: flex; align-items: center; gap: 1rem}
+.income_wrap .income_head .select_box {display: flex; align-items: center; gap: 1rem; font:var(--14_label_read_r); color: var(--basic-darkgray);}
+.income_wrap .income_head .select_box .select_year{width: 5rem;}
+.income_wrap .income_head .select_box .select_month{width: 4rem;}
+.income_wrap .income_head .datebox { display:flex; align-items: center; gap: 2rem;}
+.income_wrap .income_head .datebox {font:var(--24_title_m); color: var(--brand-hover);}
+.income_wrap .income_head .datebox .prev-month, 
+.income_wrap .income_head .datebox .next-month { font-size: 2.5rem; color: var(--brand-hover); cursor: pointer;}
+.income_wrap .income_head .datebox .date { font-size: 1.5rem; font-weight: 500;}
+.income_wrap .income_head .rightbox {gap: 1rem;}
+.income_wrap .income_head .total_box {display: flex; align-items: center; gap: 1rem;}
+
+.income_wrap .income_list { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2.5rem 1.5rem; margin-bottom: auto;}
+.income_wrap .income_list .card { width: calc((100% - 1.5rem * 4) / 5);  border-radius: 1rem;   overflow: hidden;  box-shadow: var(--box-shadow);  border: 1px solid var(--basic-border);}
+.income_wrap .income_list .card .card_header {  padding: 0.5rem 1rem; display: flex;  justify-content: space-between;  align-items: center; background: var(--primary-primary200); color: var(--brand-primary);}
+.income_wrap .income_list .card .card_header .tit { font: var(--20_heading_m); }
+.income_wrap .income_list .card .card_header .desc { font: var(--15_body_normal_m);}
+.income_wrap .income_list .card .card_body { display: flex; align-items: center;  justify-content: space-between; text-align: center; gap: 0.5rem; font: var(--16_body_normal_r);  padding: 1.25rem;}
+.income_wrap .income_list .card .card_body .conts {width: 100%; display: flex; justify-content: space-between;}
+.income_wrap .income_list .card .card_body .conts .result { width: 50%; display: flex;  flex-direction: column; align-items: center; gap: 0.313rem; color: var(--basic-darkgray);}
+.income_wrap .income_list .card .card_body .conts .result .desc { color: var(--basic-black);}
+.income_wrap .income_list .card .card_body .conts .result .desc.blue { color: var(--brand-primary);}
+.income_wrap .income_list .card .card_body .conts .barLine {  width: 1px;  height: 2.5rem;  background: var(--basic-border);}
+
+
+/* 호텔예약 달력 */
+.calender_wrap .calender{}
+.calender_wrap .calender .cal_head{ padding: 0 0 2rem;}

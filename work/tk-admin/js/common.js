@@ -59,41 +59,6 @@ $(document).on('click', '.tab_wrap .tab_nav', function () {
 });
 
 
-// datepicker
-$(document).ready(function () {
-	if ($(".datepicker").length) {
-		$.datepicker.setDefaults({
-			closeText: "닫기",
-			prevText: "이전달",
-			nextText: "다음달",
-			currentText: "오늘",
-			monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-			monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-			dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
-			dayNamesShort: ["S", "M", "T", "W", "T", "F", "S"],
-			dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
-			weekHeader: "주",
-			dateFormat: "yy-mm-dd",
-			firstDay: 0,
-			isRTL: false,
-			showMonthAfterYear: true,
-			yearSuffix: "년"
-		});
-
-		const today = new Date();
-		const year = today.getFullYear();
-		const month = String(today.getMonth() + 1).padStart(2, '0');
-		const day = String(today.getDate()).padStart(2, '0');
-		const formatted = `${year}-${month}-${day}`;
-		$(".datepicker.today").attr("placeholder", formatted);
-
-		$(".datepicker").datepicker({
-			maxDate: 'today'
-		});
-	}
-});
-
-
 // modal
 $(document).on('click', '.modal .modal_close', function () {
     $("body").removeClass("hidden");
@@ -117,6 +82,24 @@ $(document).mouseup(function (e) {
 		$(".popup").removeClass("show")
 	}
 });
+
+
+// calender popup
+$(document).on("click", ".calender_btn", function (e) {
+	const $button = $(this);
+	const $popup = $(".calender_popup");
+	const rect = $button[0].getBoundingClientRect();
+	
+	$popup.addClass("show");
+	
+	$popup.css({
+		position: "fixed",
+		left: rect.left + "px",
+		top: rect.bottom + "px", 
+		zIndex: 9999
+	});
+});
+
 
 
 // temp modal

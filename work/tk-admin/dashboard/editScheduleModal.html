@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 일정 추가 모달 -->
+		<div id="editSchedule_modal" class="modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">일정 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="addEvent_fm" id="addEvent_fm" autocomplete="off"  method="post" action="" class="form form_box">
+						<div class="input_box">
+							<label class="label_text" for="eventTitle">제목</label>
+							<input class="input_text" id="eventTitle" name="title" type="text" placeholder="제목을 입력해주세요" value="로망스투어미팅_13:00" required="required"/>
+						</div>
+						<div class="input_box">
+							<label class="label_text" for="eventStartDate">시작일</label>
+							<input class="input_text icon_ver icon_date calender_btn" id="eventStartDate" name="title" type="text" placeholder="YYYY-MM-DD" value="2025-08-07" required="required" readonly="readonly"/>
+						</div>
+						<div class="input_box">
+							<label class="label_text" for="eventEndDate">종료일</label>
+							<input class="input_text icon_ver icon_date calender_btn" id="eventEndDate" name="title" type="text" placeholder="YYYY-MM-DD" value="2025-08-15"  required="required" readonly="readonly"/>
+						</div>
+						<div class="check_box">
+							<input class="input_check" type="checkbox" id="eventAllDay" name="all_day" value="N" checked />
+							<label class="label_check" for="eventAllDay">All Day</label>
+						</div>
+						<div class="input_box">
+                            <label class="label_text" for="eventDescription">설명</label>
+                            <textarea class="input_text h_auto" rows="3" name="description" id="eventDescription" placeholder="설명을 입력해주세요"></textarea>
+                        </div>
+                        <div class="input_box">
+                            <label class="label_text" for="eventLabel">라벨</label>
+							<div class="select_box">
+								<select class="select" id="eventLabel" name="label">
+									<option value="NONE" selected="selected">None</option>
+									<option value="업무미팅" selected>업무미팅</option>
+									<option value="주요사항">주요사항</option>
+									<option value="투어확정">투어확정</option>
+									<option value="K-POP콘서트">K-POP콘서트</option>
+									<option value="직원휴무">직원휴무</option>
+									<option value="해외출장">해외출장</option>
+								</select>
+							</div>
+                        </div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>
