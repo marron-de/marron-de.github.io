@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout intra_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-globe icon"></i>
+			 			INTRANET <i class="ph-bold ph-caret-right"></i> 회사소개서
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl min_auto">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어">
+											<div class="tbl_inline">
+												<div class="select_box search_select">
+													<select name="select_key" id="select_key" class="select size_md">
+														<option value="MTITLE">제목</option>
+														<option value="MEM_NM">작성자</option>
+														<option value="MCONT">내용</option>
+													</select>
+												</div>
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key"
+														name="input_key" placeholder="검색어를 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto">검색</button>
+													<a href="../intra/intraWrite2.html" class="button size_sm typeF auto">등록</a>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="intraList_fm" id="intraList_fm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="total">
+									Total <span class="color">10</span>
+								</p>
+							</div>
+							<div class="rightbox">
+								<a href="../intra/intraWrite2.html" class="button size_sm auto typeE">등록</a>
+								<button type="button" class="button size_sm auto typeF">삭제</button>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl" id="intra_list_tbl">
+								<colgroup>
+                    				<col style="width:50px" />
+                    				<col style="width:60px" />
+									<col style="" />
+									<col style="width:150px" />
+									<col style="width:80px" />
+									<col style="width:150px" />
+									<col style="width:150px" />
+									<col style="width:100px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check all_check">
+											</div>
+										</th>
+										<th data-th="No">No</th>
+										<th data-th="제목">제목</th>
+										<th data-th="작성자">작성자</th>
+										<th data-th="조회">조회</th>
+										<th data-th="작성IP">작성IP</th>
+										<th data-th="등록일">등록일</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+								<tbody>		
+									<tr class="note">
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No"><i class="ph ph-megaphone tbl_picon reverse"></i></td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">9</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">8</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">7</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">6</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">5</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">4</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">3</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">2</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_sm">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">1</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="작성IP">14.6.87.193</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+									</tr>	
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_intranet.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav .side_cont .menu_list .side_item").eq(1).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(4).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

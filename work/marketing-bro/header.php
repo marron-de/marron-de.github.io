@@ -14,6 +14,10 @@
 			<li><a href="/#DATA02" class="link">DATA02</a></li>
 			<li><a href="/#STRATEGY" class="link">전략</a></li>
 			<li><a href="/#CONTACT" class="link">CONTACT</a></li>
+			<li class="button"><a href="/contact.php" class="link">무료상담</a></li>
 		</ul>
+		<div class="h_side tablet">
+			<a href="/contact.php" class="contact_btn">무료상담</a>
+		</div>
 	</div>
 </header>

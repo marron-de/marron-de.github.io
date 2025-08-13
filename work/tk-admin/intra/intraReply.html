@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout intra_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-globe icon"></i>
+			 			INTRANET <i class="ph-bold ph-caret-right"></i> 글 답변
+					</p>
+				</div>				
+
+				<div class="content_write">
+					<div class="board bo_write">
+						<form name="cmmIns_fm" id="cmmIns_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form">
+							<div class="bo_content">
+								<div class="item input_box">
+									<label class="tit label_text">분류</label>
+									<div class="desc radio_wrap">
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_MEMO" class="input_radio" type="radio" value="MEMO" checked>
+											<label for="MCATE_MEMO" class="label_radio">중요메모</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_IDPW" class="input_radio" type="radio" value="IDPW">
+											<label for="MCATE_IDPW" class="label_radio">ID/PW</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_PRJ" class="input_radio" type="radio" value="PRJ">
+											<label for="MCATE_PRJ" class="label_radio">예약문의</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_PRICE" class="input_radio" type="radio" value="PRICE">
+											<label for="MCATE_PRICE" class="label_radio">가격표</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_REF" class="input_radio" type="radio" value="REF">
+											<label for="MCATE_REF" class="label_radio">환불내역서</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_IVQ" class="input_radio" type="radio" value="IVQ">
+											<label for="MCATE_IVQ" class="label_radio">공급처정산</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_CAL" class="input_radio" type="radio" value="CAL">
+											<label for="MCATE_CAL" class="label_radio">거래처정산</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_MEET" class="input_radio" type="radio" value="MEET">
+											<label for="MCATE_MEET" class="label_radio">미팅보고</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_TRIP" class="input_radio" type="radio" value="TRIP">
+											<label for="MCATE_TRIP" class="label_radio">출장보고</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_VAC" class="input_radio" type="radio" value="VAC">
+											<label for="MCATE_VAC" class="label_radio">휴가요청</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_DOC" class="input_radio" type="radio" value="DOC">
+											<label for="MCATE_DOC" class="label_radio">대외공문</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_TAX" class="input_radio" type="radio" value="TAX">
+											<label for="MCATE_TAX" class="label_radio">세무회계</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="MCATE" id="MCATE_ROBI" class="input_radio" type="radio" value="ROBI">
+											<label for="MCATE_ROBI" class="label_radio">계약서관리</label>
+										</span>
+									</div>
+								</div>
+								<div class="item input_box align_center item_agentId">
+									<label class="tit label_text">공급처</label>
+									<div class="desc">
+										<div class="select_box select_size1">
+											<select name="AGENT_ID" class="select size_md">
+												<option value="">공급처를 선택하세요</option>
+												<option value="kookminrent">(주)국민랜트카(부산)</option>
+												<option value="goodmorning">(주)굿모닝 버스</option>
+												<option value="goodmorningmedia">(주)굿모닝미디어</option>
+												<option value=" goodbus">(주)굿버스리무진</option>
+												<option value="areumbus">(주)더 아름다운여행</option>
+												<option value="busline">(주)버스라인</option>
+												<option value="blackstone">(주)블랙스톤에듀팜리조트</option>
+												<option value="sannaedeul">(주)산내들</option>
+												<option value="smaster">(주)시마스터</option>
+												<option value="ajutour">(주)아주고속관광</option>
+												<option value="airportts">(주)에어포트티에스</option>
+												<option value="angelcallvan">(주)엔젤콜밴(코리아트래블)</option>
+												<option value="usimstore">(주)플래닛티</option>
+												<option value="hanas">(주)하나에스렌트카_대구</option>
+												<option value="skytour">(주)하늘여행사</option>
+												<option value="gomyplan">GO MY PLAN(고마이플랜)</option>
+												<option value="kas">KAS</option>
+												<option value="mbc">MBC월드</option>
+												<option value="naturelabs">NATURELABS</option>
+												<option value="sbsmnc">SBS M&amp;C</option>
+												<option value="berkeleypratunam">The Berkeley Hotel Pratunam Bangkok</option>
+												<option value="TK트래블">TKTRAVEL</option>
+												<option value="gayatgo">가얏고마을(전통 가야금만들기 체험)</option>
+												<option value="usimsa">가제트코리아(주)</option>
+												<option value="gamsungstrawberry">감성딸기밭</option>
+												<option value="foryouchi">강릉 가자투어</option>
+												<option value="gncallvan">강릉콜밴</option>
+												<option value="kang">강재구 기사(11인승 스타리아)</option>
+												<option value="wonfarm">강화도 감성딸기밭</option>
+												<option value="luge">강화도 루지</option>
+												<option value="tianlim">강화레포츠파크</option>
+												<option value="geojerail">거제관광모노레일</option>
+												<option value="GB">경상북도문화관광공사</option>
+												<option value="gjleisure">경주레저</option>
+												<option value="golden">골든블루마린</option>
+												<option value="devtest">공급처 개발테스트 계정</option>
+												<option value="guansagol">관사골작업실협동조합</option>
+												<option value="bdna">국립백두대간수목원</option>
+												<option value="greenholidaycafe">그린홀리데이카페</option>
+												<option value="greenholiday">그린홀리데이키친</option>
+												<option value="kim123">김성희 가이드(중국어)</option>
+												<option value="kartland">김천카트랜드</option>
+												<option value="kimtaesik">김태식기사(25인승)</option>
+												<option value="gold">농업회사법인 금풍양조(주)</option>
+												<option value="davinci">다빈치동력패러</option>
+												<option value="dypara">단양패러글라이딩</option>
+												<option value="masangmuye">대가야기마승마문화체험장</option>
+												<option value="daegaya">대가야생활촌</option>
+												<option value="ktodg">대구경북지사</option>
+												<option value="DAEGU">대구관광뷰로</option>
+												<option value="vivaldipark">대명 SONO</option>
+												<option value="ellimtour">대청도 엘림여행사</option>
+												<option value="thespa">더 스파 앳 파라다이스</option>
+												<option value="dosanseowon">도산서원</option>
+												<option value="donggukmc">동국명상원 산들채</option>
+												<option value="joycetour">든든투어(조이스)</option>
+												<option value="deeps">딥스프리다이빙</option>
+												<option value="rolly">라라,캔디,롤리</option>
+												<option value="leisuredream">레저드림 수상레저</option>
+												<option value="romyzian">로미지안가든</option>
+												<option value="naru1123">롯데월드 문보트</option>
+												<option value="lottehotel">롯데호텔본점</option>
+												<option value="lepoint">르푸앙수상레저</option>
+												<option value="madoross">마도로스 인천</option>
+												<option value="maitour">마이투어(치앙마이)</option>
+												<option value="myproguide">마이프로가이드</option>
+												<option value="mainline">메인라인</option>
+												<option value="gopanhwa">명주사 고판화박물관</option>
+												<option value="omynara">문경 오미나라</option>
+												<option value="flyingland">문경 활공랜드</option>
+												<option value="mgatv">문경레저투어산악바이크</option>
+												<option value="mediaart">미디어아트</option>
+												<option value="ab65296">미야비</option>
+												<option value="minss">민상식실장(11인승)</option>
+												<option value="militarythemepark">밀리터리테마파크</option>
+												<option value="nulook">발효체험학교 띄움</option>
+												<option value="allme">백석올미마을(당진한과만들기체험)</option>
+												<option value="balloontour">벌룬어드벤처코리아</option>
+												<option value="bella">벨라스테이 호텔 춘천</option>
+												<option value="boatn">보트앤럭스</option>
+												<option value="bohemian">보헤미안 박이추커피</option>
+												<option value="bonvoyagevan">본보야지밴 (11인승)</option>
+												<option value="bongkimchi">봉우리 김치</option>
+												<option value="bongwha">봉화군청 문화관광과</option>
+												<option value="bongwha01">봉화목재문화체험장</option>
+												<option value="buseoksa">부석사</option>
+												<option value="beautiful">뷰티플미디어</option>
+												<option value="sccable">삼척해상케이블카</option>
+												<option value="scbike">삼척해양레일바이크</option>
+												<option value="nakdonggang">상주 낙동강 자전거 이야기촌</option>
+												<option value="danjiworld">상주 느린세상  영농조합법인</option>
+												<option value="farmers">상주 스테이지 파머스룸</option>
+												<option value="sjflyingland">상주 활공랜드</option>
+												<option value="hridingsj">상주국제승마장</option>
+												<option value="seksj">상주보 수상레저 이용권</option>
+												<option value="seohaerang">서해랑제부도케이블카</option>
+												<option value="Hyejin">서혜진가이드</option>
+												<option value="sosu">소수서원</option>
+												<option value="swtour">승우여행사</option>
+												<option value="koreansul">신평양조장</option>
+												<option value="ami">아미스파 호치민</option>
+												<option value="moonboat">안동 문보트</option>
+												<option value="wolyoungboat">안동 월영교 월영보트</option>
+												<option value="zootopium">안동 주토피움</option>
+												<option value="hahoe">안동 하회마을</option>
+												<option value="andongbanga">안동반가 찜닭만들기 체험</option>
+												<option value="gbtour">안동시티투어 동이사람들</option>
+												<option value="rsshinhwa">알에스신화랜드</option>
+												<option value="alpaca">알파카월드</option>
+												<option value="alpensia">알펜시아 리조트</option>
+												<option value="ysc533">약석원</option>
+												<option value="edel">에델바이스 스위스 테마파크 </option>
+												<option value="aspa1">에이스파 1호점</option>
+												<option value="elysian">엘리시안 강촌 리조트</option>
+												<option value="63restaurant">여의도 63레스토랑</option>
+												<option value="tour08">여행공방</option>
+												<option value="tourboss01">여행대장</option>
+												<option value="travelbus">여행버스</option>
+												<option value="lotuslantern">연등국제선원</option>
+												<option value="escapeyj">영주 방탈출 파크</option>
+												<option value="yjhanbok">영주 선비촌 전통한복체험관</option>
+												<option value="flowerteastory">영주 소백산꽃차이야기</option>
+												<option value="hosufarm">영주 호수목장</option>
+												<option value="orbitor">오르비터</option>
+												<option value="leisurecraft">용인 레저크래프트(바텍전용)</option>
+												<option value="yongineco">용인 에코어드벤처</option>
+												<option value="skywalk">용평리조트</option>
+												<option value="ujcablecar">울진 왕피천 케이블카</option>
+												<option value="worldkorea">월드코리아</option>
+												<option value="welli">웰리힐리 파크</option>
+												<option value="leeldk">이덕근 드라이빙 가이드 (9인승)</option>
+												<option value="eastwave">이스트 웨이브</option>
+												<option value="inthelocal">인더로컬 협동조합</option>
+												<option value="grape">인천 그레이프 레지던스 호텔</option>
+												<option value="incheon">인천관광공사</option>
+												<option value="badagazua">전곡항해적단</option>
+												<option value="jeondeungsa">전등사 템플스테이</option>
+												<option value="제주수성여행사">제주수성여행사</option>
+												<option value="jeju1">제주여행1번지</option>
+												<option value="cho7694">조영호가이드(12인승)</option>
+												<option value="jmjleisure">주문진 &amp; 라라 수상레저</option>
+												<option value="jumunjincruise">주문진관광유람선(주)</option>
+												<option value="ujskyrail">죽변해안스카이레일</option>
+												<option value="ziplinemg">짚라인문경</option>
+												<option value="ziplineyongin">짚라인용인</option>
+												<option value="zipline">짚라인코리아</option>
+												<option value="ziplinetaejongdae">짚라인태종대</option>
+												<option value="goonpark">청도 군파크 루지</option>
+												<option value="railtripcd">청도 레일바이크</option>
+												<option value="chunhong">춘홍 여행사 (방흥안가이드)</option>
+												<option value="79yangtte">칠곡 양떼목장</option>
+												<option value="koreana">코리아나 호텔</option>
+												<option value="KINGSTONEDIVE">킹스톤다이브</option>
+												<option value="tkking">킹콩낚시</option>
+												<option value="tmbus">테마고속투어 버스</option>
+												<option value="tony">토니K</option>
+												<option value="travelland">트래블랜드 버스</option>
+												<option value="cimer">파라다이스 씨메르</option>
+												<option value="paradise">파라다이스시티 호텔</option>
+												<option value="pavilion">파빌리온(63뷔페)</option>
+												<option value="pandatour">판다투어</option>
+												<option value="palmido">팔미도등대(현대마린개발)</option>
+												<option value="herbnara">평창 허브나라농원</option>
+												<option value="yachtday">포항 요트데이</option>
+												<option value="pohangcruise">포항크루즈</option>
+												<option value="HANAMUD">하나머드</option>
+												<option value="hanatour">하나투어</option>
+												<option value="healswing">하늘그네 경포터</option>
+												<option value="high1">하이원 리조트</option>
+												<option value="kdts">한룡여행사(마카오)</option>
+												<option value="han">한수영 드라이빙 가이드 (중국어)</option>
+												<option value="jjangrafting">한탄강짱래프팅</option>
+												<option value="haeden">해든뮤지움</option>
+												<option value="hu3730">허씨비단</option>
+												<option value="hdcosmos">현대요트(왕산마리나 요트체험)</option>
+												<option value="호호제주">호호제주</option>
+												<option value="hongsunchul">홍순철기사(9인승)</option>
+												<option value="winhappy">홍콩 윈앤해피 투어</option>
+												<option value="hongkong100">홍콩100</option>
+												<option value="ycarchery">활기찬예천 활체험센터(예천문화사업단)</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="item input_box align_center item_agentId2">
+									<label class="tit label_text">거래처</label>
+									<div class="desc">
+										<div class="input_flex">
+											<div class="select_box">
+												<select name="AGENT_ID_2" class="select size_md">
+													<option value="">거래처를 선택하세요</option>
+													<option value="tourboss" mbnm="웹마스터">여행대장</option>
+													<option value="naver" mbnm="NAVER">NAVER 스토어</option>
+													<option value="naver01" mbnm="NAVER">NAVER 플레이스</option>
+													<option value="coupang" mbnm="이항수 매니저">쿠팡</option>
+													<option value="yanolja" mbnm="정재복">야놀자</option>
+													<option value="creatrip" mbnm="김현기 파트장">creatrip</option>
+													<option value="kte" mbnm="박세은매니저">KOREATRAVELEASY</option>
+													<option value="nolbal" mbnm="전혜수 매니저">놀이의 발견</option>
+													<option value="kkday" mbnm="김수현 매니저">KKDAY</option>
+													<option value="klook" mbnm="이진선">KLOOK</option>
+													<option value="trip.com" mbnm="이몽기 ">TRIP.COM</option>
+													<option value="ab14926" mbnm="何美華">All Seasons Travel HK Co Limited 捷溢旅游有限公</option>
+													<option value="Asiayo" mbnm="楊晴晴">Asiayo 亞洲遊</option>
+													<option value="atlastravel" mbnm="RACHEL K.B.WAI">ATLAS TRAVEL LIMITED 雅時達旅遊</option>
+													<option value="CanadianSKI" mbnm="CHELSEA RUBEN">Canadian SKI VACATIONS</option>
+													<option value="chan" mbnm="Cynthia Cheong">Chan Brothers</option>
+													<option value="Chans World Holiday" mbnm="Egbert Kheng">Chan's World Holidays</option>
+													<option value="cola" mbnm="藍靖雯 Celia Lan">COLA Tour 可樂旅遊</option>
+													<option value="CTC TRAVEL" mbnm="Jacqueline Low">CTC TRAVEL</option>
+													<option value="egl" mbnm="Jackie">EGL 東瀛遊</option>
+													<option value="everfunholiday" mbnm="陳雅惠 Gakei(非韓國線)">Everfun Holiday 長汎假期</option>
+													<option value="excanadian" mbnm="Jill dunnigan">EXTREMELY CANADIAN</option>
+													<option value="ezfly" mbnm="Lisa">ezfly</option>
+													<option value="eztravel" mbnm="黃詩芸 Ana Huang">EZTravel 易遊網</option>
+													<option value="falcontravel" mbnm="Azmahwati Binti Hj A">Falcon Travel&amp;Tours Sdn. Bhd.</option>
+													<option value="FANTASTTOUR" mbnm="Aurelia">FANTAST TOUR</option>
+													<option value="flightcentre" mbnm="SUKY MOON">Flight Centre(호주)</option>
+													<option value="freetimegear" mbnm="Judith Lin">FREE TIME GEAR</option>
+													<option value="gttour" mbnm="염상엽 부장">GT투어</option>
+													<option value="gmarket" mbnm="차지선 매니저">G마켓</option>
+													<option value="holidaystar" mbnm="Wilson Lok">holidaystar</option>
+													<option value="JK Tour" mbnm="郭恩佑 Anker">JK Tour 聚客旅遊</option>
+													<option value="journeyland" mbnm="Monpat R.">journeyland</option>
+													<option value="joyparadise" mbnm="조이파라다이스">JOY PARADISE 홀리데이</option>
+													<option value="Jun-Air Travel" mbnm="Sharon Peh">Jun-Air Travel</option>
+													<option value="kkday88" mbnm="김수현 매니저">KKDAY(국내)</option>
+													<option value="L.G.E Travel" mbnm="Janet Bong">L.G.E Travel</option>
+													<option value="lifetour" mbnm="Yung">LIFE TOUR 五福旅遊</option>
+													<option value="lion" mbnm="高彗銣 Vicky Gao">LION 雄獅</option>
+													<option value="mediatravel" mbnm="Hafizah Hemy">Media Travel</option>
+													<option value="Nam Ho Travel" mbnm="Michelle Ng">Nam Ho Travel</option>
+													<option value="NEWAMAZINGTRAVEL" mbnm="Eva Yang">NEW AMAZING TRAVEL</option>
+													<option value="NEW SHAN TRAVEL" mbnm="ALAN ONG">NEW SHAN TRAVEL</option>
+													<option value="NEW STAR TRAVEL" mbnm="TEON LEE MIN">NEW STAR TRAVEL</option>
+													<option value="one2go" mbnm="余嘉琪">One2go </option>
+													<option value="a982a68" mbnm="SAMMI LI">PAK LOK TRAVEL 千里馬旅游</option>
+													<option value="PEACETOUR" mbnm="黃佩芬 Monica">PEACE TOUR</option>
+													<option value="Pelago" mbnm="Leander Yohanes">Pelago</option>
+													<option value="permairantau" mbnm="Rosini Amal">Permai Rantau Travel</option>
+													<option value="phoenixtours" mbnm="曾容君Jean(非韓國線)">PHOENIX TOURS 鳳凰旅遊</option>
+													<option value="PINNACLE Travel" mbnm="CASS CHUA">PINNACLE Travel</option>
+													<option value="sinoway" mbnm="袁世華 Evelyn Yuan ">SINOWAY 金寶國際</option>
+													<option value="startravel" mbnm="王靜萍Apple">STAR TRAVEL 燦星旅遊</option>
+													<option value="sunflower" mbnm="Moon Yau">Sun Flower Travel</option>
+													<option value="syntravel" mbnm="AMAN">SYN TRAVEL 始運旅遊</option>
+													<option value="TAIYUANTRAVEL" mbnm="Vincent Sheu">TAIYUAN TRAVEL</option>
+													<option value="a231536" mbnm="Elaine Li">TASTE TRAVEL 味力之旅</option>
+													<option value="tkplace01" mbnm="12345">TKPLACE 거래처</option>
+													<option value="tkplace" mbnm="TKPLACE">TKTRAVEL</option>
+													<option value="tkonsite" mbnm="황가영">TK비발디_현장구매</option>
+													<option value="TRAVEL 21" mbnm="Cathryn Ng">TRAVEL 21</option>
+													<option value="alliance" mbnm="Bryan Tam">Travel Alliance</option>
+													<option value="expert" mbnm="Gordon">Travel Expert</option>
+													<option value="fever" mbnm="Kelvin Tang">Travel Fever</option>
+													<option value="ae9edcc" mbnm="Eric Yeung">TRAVEL SIGNATURE 旅游殿堂</option>
+													<option value="Travel Star" mbnm="Shirley">Travel Star</option>
+													<option value="TRAVEL WANDER" mbnm="Mabel Cheang">TRAVEL WANDER</option>
+													<option value="TravelRich" mbnm="Jasmine Sie">TravelRich</option>
+													<option value="Trazy1" mbnm="강자현">Trazy</option>
+													<option value="trends" mbnm="Jenny">Trends Holiday</option>
+													<option value="tripbaa" mbnm="王耀德 Owen Wang">Tripbaa 趣吧</option>
+													<option value="TTN" mbnm="River Wu">TTN</option>
+													<option value="uplan" mbnm="Rose 靜宜 ">Uplan</option>
+													<option value="webuy" mbnm="Jaccy Ooi">WEBUY Travel</option>
+													<option value="WeHolidays" mbnm="JOANNES VEE">WeHolidays</option>
+													<option value="YOTOUR" mbnm="FanFan">YO TOUR</option>
+													<option value="youngsholiday" mbnm="Aaren Leung">Young's Holidays 悠揚假期</option>
+													<option value="huamei" mbnm="秦艳荣">北京华美商旅</option>
+													<option value="chiehli" mbnm="黃伯鈞">捷利旅行社有限公司</option>
+													<option value="to-go" mbnm="方雯玲">泛遊情報</option>
+													<option value="sportslife" mbnm="高世軒">生活運動行銷股份有限公司</option>
+													<option value="comebesttour" mbnm="黃啟源">盈達旅遊</option>
+													<option value="goldenteamtravel" mbnm="高敏綺">雄峰旅行社</option>
+													<option value="green" mbnm="김도한차장">그린한국어어학원</option>
+													<option value="settour" mbnm="曾嘉盈 Angela Tseng">동남 Tour 東南旅遊</option>
+													<option value="dongdukuniv" mbnm="전태형 선생님">동덕여자대학교 신산업지식재산사업단</option>
+													<option value="local" mbnm="홍창기 이사님">라이크어로컬</option>
+													<option value="vatech" mbnm="이태호 팀장">바텍 여행 복지몰</option>
+													<option value="TK-B2b" mbnm="Johan">발리 여행사</option>
+													<option value="benepia" mbnm="김선행차장님">베네피아</option>
+													<option value="UniversityofSeoul" mbnm="김유나 팀장">서울시립대학교 차세대통신사업단</option>
+													<option value="koreatraveltest" mbnm="김태영">소노국내여행사개발테스트</option>
+													<option value="sigoltour" mbnm="정참미 매니저">시골투어(주)수요일</option>
+													<option value="skytravel" mbnm="길태준 대표">안동 하늘여행사</option>
+													<option value="stmnet" mbnm="김민경 사원">에스티엠넷</option>
+													<option value="yeogi" mbnm="최선미 매니저">여기어때</option>
+													<option value="waug" mbnm="이범욱 매니저">와그</option>
+													<option value="wizkorea" mbnm="정유니게">위즈게스트하우스</option>
+													<option value="ebada" mbnm="안소현 대표">이바다</option>
+													<option value="etbs" mbnm="황명이 과장">이제너두</option>
+													<option value="bizmarket" mbnm="이수빈">인터파크투어 비즈마켓</option>
+													<option value="konest" mbnm="고성훈 매니저">코네스트</option>
+													<option value="seoulpass" mbnm="김현정">트래볼루션</option>
+													<option value="travelnote" mbnm="박예슬">트래블노트</option>
+													<option value="hocheon" mbnm="전춘매">호천국제</option>
+													<option value="Ggogo" mbnm="劉君慧olvia liu">Ｇgogo吉帝旅遊</option>
+												</select>
+											</div>
+											<label for="price" class="label_text input_txt size_md">
+												청구금액
+											</label>
+											<input type="number" name="price" id="price" class="input_text size_md" value="">
+										</div>
+										<p class="input_status error">
+											※ 예약문의 등록시 거래처 선택을 하지 말아주세요!
+										</p>
+									</div>
+								</div>
+								<div class="item input_box align_center item_date">
+									<label for="" class="tit label_text">계약기간</label>
+									<div class="desc">
+										<div class="input_flex">
+											<input type="text" name="cont_date_s" class="input_text size_md icon_ver icon_date calender_btn start_cal" value="2025-08-07" readonly="readonly">
+											<span class="label_text input_txt size_md">~</span>
+											<input type="text" name="cont_date_e" class="input_text size_md icon_ver icon_date calender_btn end_cal" value="2025-08-07" readonly="readonly">
+										</div>
+									</div>
+								</div>
+								<div class="item input_box">
+									<label class="tit label_text">작성자</label>
+									<div class="desc">홍길동</div>
+								</div>
+								<div class="item input_box align_center">
+									<label for="MTITLE" class="tit label_text">제목</label>
+									<div class="desc">
+										<input name="MTITLE" id="MTITLE" type="text" class="input_text size_md" value="[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다." style="ime-mode:active" hname="제목" required>
+									</div>
+								</div>
+								<div class="item input_box align_center">
+									<label class="tit label_text">아이콘 표시</label>
+									<div class="desc radio_wrap">
+										<span class="radio_box size_md">
+											<input name="HOT_YN" id="HOT_YN" class="input_radio" type="checkbox" value="Y" checked>
+											<label for="HOT_YN" class="label_radio">
+												<span class="badge typeC size_sm">HOT</span>
+											</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="DEPOSIT_YN" id="DEPOSIT_YN" class="input_radio" type="checkbox" value="Y">
+											<label for="DEPOSIT_YN" class="label_radio">
+												<span class="badge typeD size_sm">입금완료</span>
+											</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="PAYMENT_YN" id="PAYMENT_YN" class="input_radio" type="checkbox" value="Y">
+											<label for="PAYMENT_YN" class="label_radio">
+												<span class="badge typeE  size_sm">계약금입금</span>
+											</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="NODEPOSIT_YN" id="NODEPOSIT_YN" class="input_radio" type="checkbox" value="Y">
+											<label for="NODEPOSIT_YN" class="label_radio">
+												<span class="badge typeB size_sm">미입금</span>
+											</label>
+										</span>
+										<span class="radio_box size_md">
+											<input name="RESCANCEL_YN" id="RESCANCEL_YN" class="input_radio" type="checkbox" value="Y">
+											<label for="RESCANCEL_YN" class="label_radio">
+												<span class="badge typeC size_sm">예약취소</span>
+											</label>
+										</span>
+									</div>
+								</div>
+								<div class="item input_box align_center">
+									<label for="" class="tit label_text">메인공지</label>
+										<div class="desc">
+										<div class="check_wrap">
+											<span class="radio_box size_md">
+												<input type="radio" name="MAIN_YN" id="MAIN_Y" class="input_radio" value="Y">
+												<label for="MAIN_Y" class="label_radio">예</label>
+											</span>
+											<span class="radio_box size_md">
+												<input type="radio" name="MAIN_YN" id="MAIN_N" class="input_radio" value="N" checked="">
+												<label for="MAIN_N" class="label_radio">아니오</label>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="item input_box">
+									<label for="" class="tit label_text">내용</label>
+									<div class="desc">
+										<textarea class="input_text size_md summernote" rows="5" name="MCONT"></textarea>
+									</div>
+								</div>
+								<div class="item input_box align_center">
+									<label for="" class="tit label_text">파일첨부</label>
+									<div class="desc">
+										<div class="file_list">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="T_UserFile1" name="T_UserFile1">
+													<label for="T_UserFile1" class="label_file size_md" >선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 게시물 파일1.png</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+												<div class="file_preview">
+													<img src="../img/sample1.jpg" alt="" class="img">
+												</div>
+											</div>
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="T_UserFile2" name="T_UserFile2">
+													<label for="T_UserFile2" class="label_file size_md" >선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 게시물 파일2.png</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+												<div class="file_preview">
+													<img src="../img/sample2.jpg" alt="" class="img">
+												</div>
+											</div>
+											<div class="input_box  input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="T_UserFile3" name="T_UserFile3">
+													<label for="T_UserFile3" class="label_file size_md" >선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>							
+							<div class="bo_bntbox">
+								<div class="leftbox">
+									<a href="../intra/intraList.html" class="button typeE auto size_md">목록</a>
+								</div>
+								<div class="rightbox">
+									<a href="" class="button typeE auto size_md">저장</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_intranet.html', '#sidenav');
+	</script>
+	<script src="../js/common.js"></script>
+
+	<!-- Summernote Lite CSS/JS (부트스트랩 불필요) -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function(){
+            $('.summernote').summernote({
+                toolbar: [
+                    // 1줄: 글꼴, 크기, 스타일
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['height', ['height']],
+                    ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                    // 2줄: 색상, 정렬, 리스트
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    // 3줄: 링크, 이미지, 표, 코드 등
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                fontNames: ['맑은 고딕', '굴림', '돋움', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                lineHeights: ['150%', '180%', '200%', '220%', '250%', '280%', '300%'],
+            });
+        });    
+	</script>
+
+	<!-- 분류 선택시 노출 -->
+	<script>$('input[name="MCATE"]').on('change', function () {
+		$('.bo_content .item_agentId, .bo_content .item_agentId2, .bo_content .item_date').removeClass('show');
+
+		if (this.value === 'IVQ') { // 공급처정산
+			$('.bo_content .item_agentId').addClass('show');
+		} else if (this.value === 'CAL') { // 거래처정산
+			$('.bo_content .item_agentId2').addClass('show');
+		} else if (this.value === 'ROBI') { // 거래처정산
+			$('.bo_content .item_date').addClass('show');
+		}
+	});
+
+	// 초기 상태 처리
+	$('input[name="MCATE"]:checked').trigger('change');
+
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout intra_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-calendar-dots icon"></i>
+			 			근무 달력
+					</p>
+				</div>
+				<div class="calender_wrap">
+					<div class="calender size_big">
+						<div class="cal_head">
+							<div class="leftbox">
+								<div class="label_info">
+									<div class="badge size_bg type_ye">근무일</div>
+									<div class="badge size_bg type_re">휴무일</div>
+									<div class="badge size_bg type_gr">연차일수</div>
+									<span class="txt">지급 10일 / 잔여 5일</span>
+								</div>
+								<span class="txt"></span>
+							</div>
+							<div class="centerbox">
+								<button type="button" class="paging_btn prev_btn">
+									<i class="ph ph-caret-left"></i>
+								</button>
+								<p class="cal_date">
+									<span class="cal_year">2025년</span>
+									<span class="cal_month">8월</span>
+								</p>
+								<button type="button" class="paging_btn next_btn">
+									<i class="ph ph-caret-right"></i>
+								</button>
+							</div>
+							<div class="rightbox">
+								<div class="select_box">
+									<select name="mb_id" id="mb_id" class="select size_md">
+										<option value="">선택</option>
+										<option value="tktravel">강일구 대표</option>
+										<option value="jerry">임병남 부장</option>
+										<option value="joyceyip915">조이스 매니저</option>
+										<option value="jamiesy">제이미 파트장</option>
+										<option value="testdev">bus res dev</option>
+										<option value="wkddjsgh">장언호 대리</option>
+										<option value="vipphoebe">진사여 매니저</option>
+										<option value="mary314">메리 매니저</option>
+										<option value="kys072702">김용식 주임</option>
+										<option value="skquf1226">나한별 주임</option>
+										<option value="jangsan7">최규만 팀장</option>
+									</select>
+								</div>
+								<button type="button" class="button typeE auto size_md" onclick="writeSchedule_modal()">일정추가</button>
+								<button type="button" class="button typeF auto size_md" onclick="memberWorking_modal()">연차신청</button>
+							</div>
+						</div>
+						<div class="cal_body">
+							<div class="week_day">
+								<div class="day red">일</div>
+								<div class="day">월</div>
+								<div class="day">화</div>
+								<div class="day">수</div>
+								<div class="day">목</div>
+								<div class="day">금</div>
+								<div class="day blue">토</div>
+							</div>
+							<div class="week_date">
+								<div class="date red disabled">
+									<div class="top">
+										<span class="num">27</span>
+										<span class="count">1건</span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">28</span>
+										<span class="count"></span>
+									</div>			
+									<div class="events"></div>						
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">29</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">30</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">31</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">1</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">2</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">3</span>
+										<span class="count"></span>
+									</div>									
+									<div class="events"></div>
+								</div>
+								<div class="date work">
+									<div class="top">
+										<span class="num">4</span>
+										<span class="count"></span>
+									</div>
+									<div class="events">			
+										<div class="working event">
+											<i class="ph ph-clock icon"></i>
+											<span class="tit">
+												<span class="bold">출근</span>
+												09:10:00 (지각)
+											</span>
+										</div>
+										<div class="working event">
+											<i class="ph ph-clock icon"></i>
+											<span class="tit">
+												<span class="bold">퇴근</span>
+												06:00:00
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="date leave">
+									<div class="top">
+										<span class="num">5</span>
+										<span class="count"></span>
+									</div>
+									<div class="events">	
+										<div class="working event">
+											<i class="ph ph-leaf icon"></i>
+											<span class="tit">
+												<span class="bold">휴무</span>
+												창립기념일 
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="date annual">
+									<div class="top">
+										<span class="num">6</span>
+										<span class="count"></span>
+									</div>
+									<div class="events">
+										<div class="working event">
+											<i class="ph ph-island icon"></i>
+											<span class="tit">
+												<span class="bold">연차휴가</span>
+												연차(개인사유)
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="date today">
+									<div class="top">
+										<span class="num">7</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">8</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">9</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">10</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">11</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">12</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">13</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date selected">
+									<div class="top">
+										<span class="num">14</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">15</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">16</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">17</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">18</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">19</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">20</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">21</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">22</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">23</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">24</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">25</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">26</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">27</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">28</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">29</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">30</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">31</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">1</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">2</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">3</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">4</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">5</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue disabled">
+									<div class="top">
+										<span class="num">6</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+		
+		<!-- 일정 추가 모달 -->
+		<div id="writeSchedule_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">[2025-08-25] 일정 추가</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="writeSchedule_fm" id="writeSchedule_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="input_box">
+							<label class="label_text" for="eventDate">날짜</label>
+							<input class="input_text icon_ver icon_date calender_btn" id="eventDate" name="eventDate" type="text" placeholder="YYYY-MM-DD" required="required" readonly="readonly"/>
+						</div>
+						<div class="input_box">
+							<label class="label_text" for="eventTitle">제목</label>
+							<input class="input_text" id="eventTitle" name="eventTitle" type="text" placeholder="제목을 입력해주세요." required="required"/>
+						</div>
+						<div class="input_box">
+                            <label class="label_text" for="eventDescription">내용</label>
+							<textarea name="eventDescription" hname="내용" rows="5" class="input_text h_auto" id="eventDescription" placeholder="설명을 입력해주세요" required></textarea>
+                        </div>
+						<div class="input_box">
+							<label class="label_text" for="eventWriter">작성자</label>
+							<input class="input_text" id="eventWriter" name="eventWriter" type="text" placeholder="작성자를 입력해주세요." value="testdev" required="required" readonly="readonly"/>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 연차 신청 모달 -->
+		<div id="memberWorking_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">연차관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="memberManager_fm" id="memberManager_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width:50px" />
+									<col style="width:100px" />
+									<col style="width:160px" />
+									<col style="width:160px" />
+									<col style="width:95px" />
+									<col style="width:120px" />
+									<col style="width:120px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="No">No</th>
+										<th data-th="구분">구분</th>
+										<th data-th="시작일">시작일</th>
+										<th data-th="종료일">종료일</th>
+										<th data-th="일수">일수</th>
+										<th data-th="사유">사유</th>
+										<th data-th="입력일">입력일</th>
+									</tr>
+                    			</thead>
+								<tbody>
+									<tr>
+										<td data-th="No">-</td>
+										<td data-th="구분">
+											<div class="select_box">
+												<select name="gubun" id="gubun" class="select size_md" hname="구분" required>
+													<option value="">선택</option>
+													<option value="A">휴가</option>
+													<option value="B">반차</option>
+												</select>
+											</div>
+										</td>
+										<td data-th="시작일">
+											<div class="input_box">
+												<input type="text" name="start_dt" class="input_text icon_ver icon_date calender_btn size_md start_cal" value="2025-08-07" readonly hname="시작일" required>
+											</div>
+										</td>
+										<td data-th="종료일">
+											<div class="input_box">
+												<input type="text" name="end_dt" class="input_text icon_ver icon_date calender_btn size_md end_cal" value="2025-08-07" readonly hname="종료일" required>
+											</div>
+										</td>
+										<td data-th="일수">
+											<div class="input_box">
+												<div class="input_flex">
+													<input type="text" name="voca_cnt" class="input_text size_md" maxlength="4" hname="근무시간" required >
+													<span class="txt">일</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="사유">
+											<div class="input_box">
+												<input type="text" name="reason" class="input_text size_md" value="" hname="사유" required >
+											</div>
+										</td>
+										<td data-th="입력일">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm">휴가등록</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_intranet.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav .side_cont .menu_list .side_item").eq(1).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(1).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// writeSchedule modal
+		function writeSchedule_modal() {
+			$(".modal").removeClass("show");
+			$("#writeSchedule_modal").addClass("show");
+		}
+
+		// memberWorking modal
+		function memberWorking_modal() {
+			$(".modal").removeClass("show");
+			$("#memberWorking_modal").addClass("show");
+		}
+	</script>
+
+
+
+</body>
+
+</html>

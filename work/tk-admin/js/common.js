@@ -61,14 +61,32 @@ $(document).on('click', '.tab_wrap .tab_nav', function () {
 
 // modal
 $(document).on('click', '.modal .modal_close', function () {
-    $("body").removeClass("hidden");
-    $(".modal").removeClass("show");
+    const modal = $(this).closest('.modal');
+    if (modal.hasClass('only')) {
+        modal.removeClass('show');
+        if ($('.modal.show').length === 0) {
+            $("body").removeClass("hidden");
+        }
+    } else {
+        $("body").removeClass("hidden");
+        $(".modal").removeClass("show");
+    }
 });
+
 $(document).mouseup(function (e) {
-	if ($(".modal .modal_box").has(e.target).length === 0) {
-		$("body").removeClass("hidden")
-		$(".modal").removeClass("show")
-	}
+    const targetOnlyModal = $(e.target).closest('.modal.only');
+    if ($('.modal.only .modal_box').has(e.target).length === 0 && targetOnlyModal.length) {
+        targetOnlyModal.removeClass('show');
+        if ($('.modal.show').length === 0) {
+            $("body").removeClass("hidden");
+        }
+    }
+
+    const targetModal = $(e.target).closest('.modal:not(.only)');
+    if ($('.modal:not(.only) .modal_box').has(e.target).length === 0 && targetModal.length) {
+        $("body").removeClass("hidden");
+        $(".modal:not(.only)").removeClass("show");
+    }
 });
 
 
@@ -86,13 +104,13 @@ $(document).mouseup(function (e) {
 
 // calender popup
 $(document).on("click", ".calender_btn", function (e) {
-	const $button = $(this);
-	const $popup = $(".calender_popup");
-	const rect = $button[0].getBoundingClientRect();
+	const button = $(this);
+	const popup = $(".calender_popup");
+	const rect = button[0].getBoundingClientRect();
 	
-	$popup.addClass("show");
+	popup.addClass("show");
 	
-	$popup.css({
+	popup.css({
 		position: "fixed",
 		left: rect.left + "px",
 		top: rect.bottom + "px", 
@@ -211,22 +229,66 @@ function profile_popup() {
 
 // header submenu button
 $(document).on('click', '.header .gnb_title', function () {
-    $(".header .gnb_sublist").removeClass("show");
+    $(".header .gnb_title").removeClass("show");
+    $(this).addClass("active");
     $(this).next(".gnb_sublist").addClass("show");
 });
 $(document).mouseup(function (e) {
 	if ($(".header .gnb_sublist").has(e.target).length === 0 ) {		
+		$(".header .gnb_title").removeClass("active");
 		$(".header .gnb_sublist").removeClass("show");
 	}
 });
 
 
-/* menu swiper */
-$('.menu_swiper').each(function () {
+/* tab swiper */
+$('.tab_swiper').each(function () {
   new Swiper(this, {
     observer: true,
     observeParents: true,
     speed: 500,
     slidesPerView: 'auto',
+	spaceBetween: 20,
+	breakpoints: { 
+		1081: {
+			spaceBetween: 16
+		}, 
+	},
   });
 });
+
+
+// input file
+$(document).ready(function () {
+    $('.input_file_box').each(function () {
+        const box = $(this);
+        const fileInput = box.find('.input_file');
+        const fileSelectBtn = box.find('.fileSelect_btn');
+        const fileLabel = box.find('.label_file');
+
+		
+        fileSelectBtn.on('click', function () {
+            fileInput.click();
+        });
+
+		
+        fileInput.on('change', function () {
+            const files = this.files;
+            if (files.length > 0) {
+                const fileNames = Array.from(files).map(file => file.name).join(', ');
+                fileLabel.text(fileNames).addClass('attached');
+            } else {
+                fileLabel.text('파일 업로드').removeClass('attached');
+            }
+        });
+    });
+});
+
+
+// input color
+$(document).on('click', '.colorchips .color', function () {
+    const colorValue = $(this).data('color')
+    const wrap = $(this).closest('.color_wrap')
+    wrap.find('.input_color').val(colorValue)
+})
+

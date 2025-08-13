@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout intra_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title flexible">
+					<p class="page_title">
+						<i class="ph-fill ph-globe icon"></i>
+			 			INTRANET
+					</p>
+
+					<div class="content_search content_tbl">
+						<form name="search_fm" id="search_fm" method="get">
+							<div class="tbl_box">
+								<table class="tbl min_auto">
+									<colgroup>
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<td data-th="검색어">
+												<div class="tbl_inline">
+													<div class="select_box search_select">
+														<select name="select_key" id="select_key" class="select size_md">
+															<option value="MTITLE">제목</option>
+															<option value="MEM_NM">작성자</option>
+															<option value="MCONT">내용</option>
+														</select>
+													</div>
+													<div class="input_box search_input">
+														<input type="text" class="input_text size_md" id="input_key"
+															name="input_key" placeholder="검색어를 입력해주세요">
+													</div>
+													<div class="tbl_btnbox search_btns">
+														<button type="button" class="button size_sm typeE auto">검색</button>
+														<a href="../intra/intraWrite.html" class="button size_sm typeF auto">등록</a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="content_schresult">
+					<div class="cont_area radio_area">
+						<div class="radio_wrap">
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_0" class="input_radio" type="checkbox" value="" checked>
+								<label for="mcate_0" class="label_radio">
+									전체 <span class="point">(3,865)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_1" class="input_radio" type="checkbox" value="MEMO">
+								<label for="mcate_1" class="label_radio">
+									중요메모 <span class="point">(384)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_2" class="input_radio" type="checkbox" value="IDPW">
+								<label for="mcate_2"class="label_radio">
+									ID/PW <span class="point">(23)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_3" class="input_radio" type="checkbox" value="PRJ">
+								<label for="mcate_3"class="label_radio">
+									예약문의 <span class="point">(220)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_4" class="input_radio" type="checkbox" value="PRICE">
+								<label for="mcate_4"class="label_radio">
+									가격표 <span class="point">(69)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_5" class="input_radio" type="checkbox" value="REF">
+								<label for="mcate_5"class="label_radio">
+									환불내역서 <span class="point">(80)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_6" class="input_radio" type="checkbox" value="IVQ">
+								<label for="mcate_6"class="label_radio">
+									공급처정산 <span class="point">(1,426)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_7" class="input_radio" type="checkbox" value="CAL">
+								<label for="mcate_7"class="label_radio">
+									거래처정산 <span class="point">(738)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_8" class="input_radio" type="checkbox" value="MEET">
+								<label for="mcate_8"class="label_radio">
+									미팅보고 <span class="point">(132)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_9" class="input_radio" type="checkbox" value="TRIP">
+								<label for="mcate_9"class="label_radio">
+									출장보고 <span class="point">(12)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_10" class="input_radio" type="checkbox" value="VAC">
+								<label for="mcate_10"class="label_radio">
+									휴가요청 <span class="point">(57)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_11" class="input_radio" type="checkbox" value="DOC">
+								<label for="mcate_11"class="label_radio">
+									대외공문 <span class="point">(11)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_12" class="input_radio" type="checkbox" value="TAX">
+								<label for="mcate_12"class="label_radio">
+									세무회계 <span class="point">(15)</span>
+								</label>
+							</span>
+							<span class="radio_box size_sm">
+								<input name="mcate" id="mcate_13" class="input_radio" type="checkbox" value="ROBI">
+								<label for="mcate_13"class="label_radio">
+									계약서관리 <span class="point">(75)</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="boardList_fm" id="boardList_fm" method="POST">
+						<div class="bo_list tbl_box">
+							<table class="tbl" id="intra_list_tbl">
+								<colgroup>
+									<col style="width:60px" />
+									<col style="width:100px" />
+									<col style="" />
+                    				<col style="width:100px" />
+									<col style="width:150px" />
+									<col style="width:135px" />
+									<col style="width:100px" />
+									<col style="width:140px" />
+									<col style="width:60px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="No">No</th>
+										<th data-th="구분">구분</th>
+										<th data-th="제목">제목</th>
+										<th data-th="담당부서">담당부서</th>
+										<th data-th="등록자">등록자</th>
+										<th data-th="등록일">등록일</th>
+										<th data-th="상태">상태</th>
+										<th data-th="첨부파일">첨부파일</th>
+										<th data-th="조회">조회</th>
+									</tr>
+								</thead>
+								<tbody>		
+									<tr class="note">
+										<td data-th="No">
+											<i class="ph ph-megaphone tbl_picon reverse"></i>
+										</td>
+										<td data-th="구분">
+											<span class="badge size_bg">휴가요청</span>
+										</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">휴가요청</div>
+										</td>
+										<td data-th="첨부파일"></td>
+										<td data-th="조회">5</td>
+									</tr>							
+									<tr class="note">
+										<td data-th="No">
+											<i class="ph ph-megaphone tbl_picon reverse"></i>
+										</td>
+										<td data-th="구분">
+											<span class="badge size_bg type_ye">예약문의</span>
+										</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. </a>
+												<span class="badge typeB size_sm">new</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_head.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 부장</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">확정요청</div>
+										</td>
+										<td data-th="첨부파일"></td>
+										<td data-th="조회">10</td>
+									</tr>					
+									<tr class="note">
+										<td data-th="No">
+											<i class="ph ph-megaphone tbl_picon reverse"></i>
+										</td>
+										<td data-th="구분">
+											<span class="badge size_bg type_re">중요메모</span>
+										</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a>
+												<img src="../img/ic_disk.png" alt="" class="tbl_icon">
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_ceo.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 대표</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge size_bg pointer">[대외비]</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div></td>
+										<td data-th="조회">10</td>
+									</tr>
+									<tr>
+										<td data-th="No">7</td>
+										<td data-th="구분">
+											<span class="badge size_bg type_gr">거래처정산</span>
+										</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. </a>
+												<img src="../img/ic_disk.png" alt="" class="tbl_icon">
+												<span class="badge typeD size_sm">입금완료</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">입금요청</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+										</td>
+										<td data-th="조회">10</td>
+									</tr>
+									<tr>
+										<td data-th="No">6</td>
+										<td data-th="구분">
+											<span class="badge size_bg typeF">공급처정산</span>
+										</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. </a>
+												<img src="../img/ic_disk.png" alt="" class="tbl_icon">
+												<span class="badge typeD size_sm">입금완료</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">입금요청</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+										</td>
+										<td data-th="조회">10</td>
+									</tr>
+									<tr>
+										<td data-th="No">5</td>
+										<td data-th="구분"></td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+												<span class="badge typeD size_sm">입금완료</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">입금요청</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+										</td>
+										<td data-th="조회">10</td>
+									</tr>
+									<tr>
+										<td data-th="No">4</td>
+										<td data-th="구분">
+											<span class="badge size_bg typeF">공급처정산</span>
+										</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. </a>
+												<img src="../img/ic_disk.png" alt="" class="tbl_icon">
+												<span class="badge typeD size_sm">입금완료</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">입금요청</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+										</td>
+										<td data-th="조회">10</td>
+									</tr>
+									<tr>
+										<td data-th="No">3</td>
+										<td data-th="구분"></td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+												<span class="badge typeD size_sm">입금완료</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">입금요청</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+										</td>
+										<td data-th="조회">10</td>
+									</tr>
+									<tr>
+										<td data-th="No">2</td>
+										<td data-th="구분">
+											<span class="badge size_bg typeF">공급처정산</span>
+										</td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. </a>
+												<img src="../img/ic_disk.png" alt="" class="tbl_icon">
+												<span class="badge typeD size_sm">입금완료</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">입금요청</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+										</td>
+										<td data-th="조회">10</td>
+									</tr>
+									<tr>
+										<td data-th="No">1</td>
+										<td data-th="구분"></td>
+										<td data-th="제목" class="td_title">
+											<div class="tbl_inline">
+												<a href="../intra/intraView.html" class="link bold">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+												<span class="badge typeD size_sm">입금완료</span>
+											</div>
+										</td>
+										<td data-th="담당부서" class="td_dept">
+											<img src="../img/icon_dept_op.png" alt="" class="icon">
+										</td>
+										<td data-th="등록자">홍길동 주임</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="상태">
+											<div class="badge typeD size_bg pointer">입금요청</div>
+										</td>
+										<td data-th="첨부파일">
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+											<div class="file_inline">
+												<a href="" title="다운로드" class="file_link">
+													<img src="../img/ic_filedown.png" class="icon">
+												</a>
+											</div>
+										</td>
+										<td data-th="조회">10</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_intranet.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav .side_cont .menu_list .side_item").eq(1).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(0).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 사이트 관리자 수정 모달 -->
+		<div id="editPersonnel_modal" class="modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">사이트 관리자 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="PersonnelWrite_fm" id="PersonnelWrite_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width:150px" />
+									<col style="width:300px" />
+									<col style="width:150px" />
+									<col style="width:300px" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="아이디">아이디</th>
+										<td data-th="아이디">
+											<div class="input_box input_flex">
+												<input name="mb_id_chk" id="mb_id_chk" type="text" value="test" class="input_text size_md" hname="아이디" required="" autocomplete="false" readonly>
+											</div>
+										</td>
+										<th data-th="국적(언어)">국적(언어)</th>
+										<td data-th="국적(언어)">
+											<div class="select_box">
+												<select class="select size_md" name="bz_nat" id="bz_nat" hname="국적" required="">
+													<option value="KO">한국</option>
+													<option value="HK">홍콩</option>
+													<option value="TW">대만</option>
+													<option value="SG">싱가폴</option>
+													<option value="MY">말레이시아</option>
+													<option value="CN">중국</option>
+													<option value="TA">태국</option>
+													<option value="PH">필리핀</option>
+													<option value="US">미국</option>
+													<option value="VT">베트남</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사번">사번</th>
+										<td data-th="사번">
+											<div class="input_box">
+												<input type="text" name="employee_no" value="tkw0001" class="input_text size_md" hname="사번" required="">
+											</div>
+										</td>
+										<th data-th="비밀번호">비밀번호</th>
+										<td data-th="비밀번호">
+											<div class="input_box input_flex">
+												<input type="password" name="mb_pwd" value="" class="input_text size_md" hname="비밀번호" required="" autocomplete="new-password">
+												<div class="check_box size_sm">
+													<input type="checkbox" name="mb_pwd_change" class="input_check" id="mb_pwd_change" value="Y"/> 
+													<label for="mb_pwd_change" class="label_check">비밀번호변경</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사진(이미지)">사진(이미지)</th>
+										<td data-th="사진(이미지)" colspan="3">				
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="emp_img" name="emp_img">
+													<label for="emp_img" class="label_file size_md" >선택된 파일 없음</label>
+													<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 이미지.png</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+												<div class="file_preview">
+													<img src="../img/profile_temp.jpg" alt="" class="img">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="성명">성명</th>
+										<td data-th="성명">
+											<div class="input_box">
+												<input type="text" name="mb_nm" value="홍길동" class="input_text size_md" hname="이름" required="">
+											</div>
+										</td>
+										<th data-th="성별">성별</th>
+										<td data-th="성별">
+											<div class="select_box">
+												<select name="mb_gend" id="mb_gend" class="select size_md">
+													<option value="">선택</option>
+													<option value="M" selected>남</option>
+													<option value="F">여</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이메일">이메일</th>
+										<td data-th="이메일" colspan="3">
+											<div class="input_box">
+												<input type="text" name="mb_email" id="mb_email" value="test@tktravelkorea.com" class="input_text size_md" hname="이메일" required="" option="email">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="전화번호">전화번호</th>
+										<td data-th="전화번호" colspan="3">
+											<div class="input_box">
+												<input type="text" name="mb_tel" id="mb_tel" value="+821012345678" class="input_text size_md">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="생년월일">생년월일</th>
+										<td data-th="생년월일">
+											<div class="input_box">
+												<input type="text" name="mb_birth" class="input_text icon_ver icon_date size_md birth_cal calender_btn" value="2025-08-07" readonly="readonly">
+											</div>
+										</td>
+										<th data-th="양력/음력">양력/음력</th>
+										<td data-th="양력/음력">
+											<div class="select_box">
+												<select name="mb_birth_sm" id="mb_birth_sm" class="select size_md">
+													<option value="">선택</option>
+													<option value="S" selected>양력</option>
+													<option value="M">음력</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="주소">주소</th>
+										<td data-th="주소" colspan="3">
+											<div class="input_box">
+												<input type="text" name="mb_address1" id="mb_address1" value="서울시" class="input_text size_md">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="등급">등급</th>
+										<td data-th="등급">
+											<div class="select_box">
+												<select name="mb_level" class="select size_md" hname="등급" required="">
+													<option value="">선택</option>
+													<option value="1" selected>LV1.총관리자</option>
+													<option value="2">LV2.부관리자</option>
+													<option value="3">LV3.관리자</option>
+												</select>
+											</div>
+										</td>
+										<th data-th="본지점">본지점</th>
+										<td data-th="본지점">
+											<div class="select_box">
+												<select name="emp_brench_cd" id="emp_brench_cd" class="select size_md" hname="본지점" required="">
+													<option value="BRCH001" selected>서울본사</option>
+													<option value="BRCH003">부산지사</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="부서">부서</th>
+										<td data-th="부서">
+											<div class="select_box">
+												<select name="emp_depart_cd" id="emp_depart_cd" class="select size_md" hname="부서" required="">
+													<option value="">선택</option>
+													<option value="DEPT001">대표</option>
+													<option value="DEPT002">본부장</option>
+													<option value="DEPT003">인바운드 CS팀</option>
+													<option value="DEPT004">인바운드 OP팀</option>
+													<option value="DEPT005" selected>디자인&amp;웹개발팀</option>
+													<option value="DEPT006">인트라,아웃바운드팀</option>
+													<option value="DEPT007">가이드팀</option>
+													<option value="DEPT008">홍보마케팅팀</option>
+													<option value="DEPT009">회계&amp;인사관리팀</option>
+												</select>
+											</div>
+										</td>
+										<th data-th="직급">직급</th>
+										<td data-th="직급">
+											<div class="select_box">
+												<select name="emp_rank_cd" id="emp_rank_cd" class="select size_md" hname="직급" required="">
+													<option value="">선택</option>
+													<option value="RANK001">대표</option>
+													<option value="RANK004">상무</option>
+													<option value="RANK005">본부장</option>
+													<option value="RANK006">차장</option>
+													<option value="RANK010">팀장</option>
+													<option value="RANK009">과장</option>
+													<option value="RANK011">대리</option>
+													<option value="RANK013">주임</option>
+													<option value="RANK014">매니저</option>
+													<option value="RANK008">알바</option>
+													<option value="RANK007">차장</option>
+											</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="입사일">입사일</th>
+										<td data-th="입사일">
+											<div class="input_box">
+												<input type="text" name="emp_incid_dt" value="2025-08-07" class="input_text icon_ver icon_date size_md emp_incid_cal calender_btn" readonly="readonly" hname="입사일" required="">
+											</div>
+										</td>
+										<th data-th="퇴사일">퇴사일</th>
+										<td data-th="퇴사일">
+											<div class="input_box input_flex">
+												<div class="check_box">
+													<input type="checkbox" class="input_check" name="del_flag" id="del_flag" value="Y">
+												</div>
+												<input type="text" name="emp_ret_dt" id="emp_ret_dt" value="" class="input_text icon_ver icon_date size_md emp_ret_cal calender_btn" readonly="readonly">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="연차일수">연차일수</th>
+										<td data-th="연차일수">
+											<div class="input_box input_flex">
+												<span class="label_text input_txt size_md">2025년</span>
+												<input type="text" name="emp_vacation_days" value="15" class="input_text size_md tlc" hname="휴가일수" required="">
+												<span class="label_text input_txt size_md">일</span>
+											</div>
+										</td>
+										<th data-th="목표건수">목표건수</th>
+										<td data-th="목표건수">
+											<div class="input_box input_flex">
+												<span class="label_text input_txt size_md">매월</span>
+												<input type="text" name="emp_target_revenue" value="20" class="input_text size_md tlc" hname="목표수익" required="">
+												<span class="label_text input_txt size_md">건</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="기타">기타</th>
+										<td data-th="기타" colspan="3">
+											<div class="input_box">
+												<textarea name="emp_text" id="emp_text" class="input_text mh_auto" rows="5"></textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

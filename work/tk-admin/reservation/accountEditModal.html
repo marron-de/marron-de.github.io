@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 여행상품예약 수정 > 입출금 수정 모달 -->
+		<div id="accountEdit_modal" class="modal only show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">입출금 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="accountEdit_fm" id="accountEdit_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 90px;">
+									<col style="width: 180px;">
+									<col style="width: 90px;">
+									<col style="width: 180px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="등록일자">등록일자</th>
+										<td data-th="등록일자" colspan="3">
+											<div class="input_box">
+												<input type="text" name="acc_dt" class="input_text size_md icon_ver icon_date calender_btn" value="2025-08-12" readonly="readonly" hname="등록일자" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="계정">계정</th>
+										<td data-th="계정">
+											<div class="select_box">
+												<select name="ioac_cd" class="select size_md">
+													<option value="">선택</option>
+													<option value="IOAC007">티켓비</option>
+													<option value="IOAC001">투어비</option>
+													<option value="IOAC002">호텔비</option>
+													<option value="IOAC008">버스비</option>
+													<option value="IOAC004">계약금</option>
+												</select>
+											</div>
+										</td>
+										<th data-th="판매금액">판매금액</th>
+										<td data-th="판매금액">
+											<div class="input_box">
+												<input type="text" name="input_will_plus" class="input_text size_md align_right" value="620,000" maxlength="8">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="입금(+)">입금(+)</th>
+										<td data-th="입금(+)">
+											<div class="input_box">
+												<input type="text" name="bank_plus" class="input_text size_md align_right" value="0"  maxlength="8">
+											</div>
+										</td>
+										<th data-th="출금(-)">출금(-)</th>
+										<td data-th="출금(-)">
+											<div class="input_box">
+												<input type="text" name="bank_minus" class="input_text size_md align_right" value="0" maxlength="8">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="결제방법">결제방법</th>
+										<td data-th="결제방법" colspan="3">
+											<div class="select_box">
+												<select name="pgcase_cd" class="select size_md">
+													<option value="">선택</option>
+													<option value="INST002">신용카드</option>
+													<option value="INST010">위쳇페이</option>
+													<option value="INST011">알리페이</option>
+													<option value="INST012">계좌이체</option>
+													<option value="INST006">베네피아</option>
+													<option value="INST001">무통장입금</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="계좌번호">계좌번호</th>
+										<td data-th="계좌번호" colspan="3">
+											<div class="select_box">
+												<select name="bank_cd" class="select size_md">
+													<option value="">선택</option>
+													<option value="INBK002">하나은행[010-991910-79304.강일구(TKTRAVEL)]</option>
+													<option value="ENBK001">HSBC (HKD)[121 650915 833.KANG ILGOO]</option>
+													<option value="ENBK002">Bank of China (HKD)[01268010157919.KANG ILGOO]</option>
+													<option value="ENBK003">Fubon Bank (TWD)[012570168100605.KANG ILGOO]</option>
+													<option value="ENBK004">Bank of China (CNY)[6217582000026002501.KANG ILGOO]</option>
+													<option value="ENBK005">Kookmin Bank (USD)[01126811004789.KANG ILGOO]</option>
+													<option value="ENBK008">Hana Bank (KRW)[010-991910-79304.KANG ILGOO]</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="비고">비고</th>
+										<td data-th="비고" colspan="3">
+											<div class="input_box">
+												<input type="text" name="remarks" size="45" class="input_text size_md" value="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+
+</body>
+
+</html>

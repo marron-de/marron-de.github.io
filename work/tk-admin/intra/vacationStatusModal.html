@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 휴가월차현황 모달 -->
+		<div id="vacationStatus_modal" class="modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">휴가월차현황 [홍길동 매니저]</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="memberSearch_fm" id="memberSearch_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="modal_searchbox">
+							<div class="input_box input_flex">
+								<span class="label_text input_txt size_md">근태일 :</span>
+								<input name="start_s1" id="start_s1" type="text" value="2025-08-01" class="start_s1 input_text icon_ver icon_date calender_btn size_md" readonly="readonly">
+								<span class="label_text input_txt size_md">~</span>
+								<input name="start_s2" id="start_s2" type="text" value="2025-08-11" class="start_s2 input_text icon_ver icon_date calender_btn size_md" readonly="readonly">
+								<button type="button" class="input_btn size_md">검색</button>
+							</div>
+						</div>
+					</form>
+					<form name="memberManagerReg_fm" id="memberManagerReg_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">		
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 100px;">
+									<col style="width: 150px;">
+									<col style="width: 150px;">
+									<col style="width: 100px;">
+									<col style="width: 250px;">
+									<col style="width: 120px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="구분">구분</th>
+										<th data-th="시작일">시작일</th>
+										<th data-th="종료일">종료일</th>
+										<th data-th="일수">일수</th>
+										<th data-th="사유">사유</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="구분">
+											<div class="select_box">
+												<select name="gubun" class="select size_md" hname="구분" required>
+													<option value="">선택</option>
+													<option value="A">연차</option>
+													<option value="B">반차</option>
+												</select>
+											</div>
+										</td>
+										<td data-th="시작일">
+											<div class="input_box">
+												<input type="text" name="start_dt" id="start_dt" class="input_text icon_ver icon_date calender_btn size_md start_dt" hname="시작일" value="2025-08-07" required>
+											</div>
+										</td>
+										<td data-th="종료일">
+											<div class="input_box">
+												<input type="text" name="end_dt" id="end_dt" class="input_text icon_ver icon_date calender_btn size_md end_dt" hname="종료일" value="2025-08-07" required>
+											</div>
+										</td>
+										<td data-th="일수">
+											<div class="input_box input_flex">
+												<input type="text" name="voca_cnt" id="voca_cnt" value="" class="input_text size_md w-50" hname="일수" required> 
+												<span class="label_text inpu_txt size_md">일</span>
+											</div>
+										</td>
+										<td data-th="사유">
+											<div class="input_box">
+												<input type="text" name="reason" id="reason" value="" class="input_text size_md" hname="사유" required>
+											</div>
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox">
+												<button type="button" class="button size_sm auto typeE">휴가등록</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 50px;">
+									<col style="width: 50px;">
+									<col style="width: 90px;">
+									<col style="width: 90px;">
+									<col style="width: 50px;">
+									<col style="width: 100px;">
+									<col style="width: 80px;">
+									<col style="width: 90px;">
+									<col style="width: 90px;">
+									<col style="width: 70px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="No.">No.</th>
+										<th data-th="구분">구분</th>
+										<th data-th="시작일">시작일</th>
+										<th data-th="종료일">종료일</th>
+										<th data-th="일수">일수</th>
+										<th data-th="사유">사유</th>
+										<th data-th="입력자">입력자</th>
+										<th data-th="수정일">수정일</th>
+										<th data-th="수정자">수정자</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+								<tbody>
+                                    <tr>
+										<td data-th="No.">3</td>
+										<td data-th="구분">반차</td>
+										<td data-th="시작일">2025-08-07</td>
+										<td data-th="종료일">2025-08-07</td>
+										<td data-th="일수">1일</td>
+										<td data-th="사유">오후반차</td>
+										<td data-th="입력자">강일구 대표</td>
+										<td data-th="수정일"></td>
+										<td data-th="수정자"></td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="vacationEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<td data-th="No.">2</td>
+										<td data-th="구분">연차</td>
+										<td data-th="시작일">2025-08-07</td>
+										<td data-th="종료일">2025-08-09</td>
+										<td data-th="일수">3일</td>
+										<td data-th="사유">연차(개인사유)</td>
+										<td data-th="입력자">강일구 대표</td>
+										<td data-th="수정일"></td>
+										<td data-th="수정자"></td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="vacationEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<td data-th="No.">1</td>
+										<td data-th="구분">휴가</td>
+										<td data-th="시작일">2025-08-07</td>
+										<td data-th="종료일">2025-08-11</td>
+										<td data-th="일수">5일</td>
+										<td data-th="사유">여름휴가</td>
+										<td data-th="입력자">강일구 대표</td>
+										<td data-th="수정일">2025-08-07</td>
+										<td data-th="수정자">강일구 대표</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="vacationEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+            				</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

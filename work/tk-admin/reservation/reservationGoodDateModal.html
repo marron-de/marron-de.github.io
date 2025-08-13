@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 수동예약 > 상품선택 및 행사날짜 선택 모달 -->
+		<div id="reservationGoodDate_modal" class="modal only show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">상품선택 및 행사날짜 선택</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="modal_searchbox">
+						<div class="input_box input_flex">
+							<div class="select_box lang_select">
+								<select name="lang" class="select size_md">
+									<option value="">언어선택</option>
+									<option value="ko" selected="">한글</option>
+									<option value="hk">번체</option>
+									<option value="en">영어</option>
+									<option value="cn">간체</option>
+								</select>
+							</div>
+							<div class="select_box">
+								<select name="tab_s" id="tab_s" class="select size_md">
+									<option value="">==선택==</option>
+									<option value="P">P | Bus Tour</option>
+									<option value="D">D | Day Tour</option>
+									<option value="V">V | Live Tour</option>
+									<option value="T">T | Ticket Pass</option>
+                            	</select>
+							</div>
+							<div class="select_box">
+								<select name="b_uid_s" id="b_uid_s" class="select size_md " >
+									<option value="">==1차분류==</option>
+								</select>
+							</div>
+							<div class="select_box">
+								<select name="m_uid_s" id="m_uid_s" class="select size_md " >
+									<option value="">==2차분류==</option>
+								</select>
+							</div>
+							<span class="label_text input_txt size_md">상품명</span>
+							<input class="input_text size_md" id="g_title_s" name="g_title_s" value="" type="text">
+							<button type="button" class="input_btn size_md">검색</button>
+						</div>
+					</div>
+					<div class="tbl_area gap">
+						<div class="tbl_cont wid40">
+							<div class="tbl_top">
+								<div class="leftbox">
+									<p class="title">상품목록</p>
+								</div>
+								<div class="rightbox"></div>
+							</div>
+							<div class="tbl_box">
+								<table class="tbl space_auto">
+									<colgroup>
+										<col style="width: 50px;">
+										<col style="width: 410px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="No.">No.</th>
+											<th data-th="상품명">상품명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="No.">10</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                                
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">9</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">8</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">7</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">6</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">5</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">4</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">3</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">2</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">1</td>
+											<td data-th="상품명" class="align_left">
+												마카오 세계문화유산 천만불 야경 투어                               
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="tbl_cont wid60">
+							<div class="tbl_top">
+								<div class="leftbox">
+									<p class="title">행사목록</p>
+								</div>
+								<div class="rightbox">
+									<div class="controls">
+										<button type="button" class="paging_btn prev_btn">
+											<i class="ph ph-caret-left"></i>
+										</button>
+										<div class="select_box">
+											<select name="date_year_s" id="date_year_s" class="select size_md">
+												<option value="2023">2023</option>
+												<option value="2024">2024</option>
+												<option value="2025" selected="">2025</option>
+												<option value="2026">2026</option>
+												<option value="2027">2027</option>
+												<option value="2028">2028</option>
+											</select>
+										</div>
+										<div class="select_box">
+											<select name="date_month_s" id="date_month_s" class="select size_md">
+												<option value="01">01</option>
+												<option value="02">02</option>
+												<option value="03">03</option>
+												<option value="04">04</option>
+												<option value="05">05</option>
+												<option value="06">06</option>
+												<option value="07">07</option>
+												<option value="08">08</option>
+												<option value="09">09</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12" selected="">12</option>
+											</select>
+										</div>
+										<button type="button" class="paging_btn next_btn">
+											<i class="ph ph-caret-right"></i>
+										</button>
+									</div>
+									<div class="select_box">
+										<select name="dtid_s" id="dtid_s"class="select size_md">
+											<option value="9051" selected="">침사추이역L3출구구룡호텔앞(12:00)</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="tbl_box">
+								<table class="tbl space_auto">
+									<colgroup>
+										<col style="width: 50px;">
+										<col style="width: 270px;">
+										<col style="width: 100px;">
+										<col style="width: 100px;">
+										<col style="width: 70px;">
+										<col style="width: 90px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="No.">No.</th>
+											<th data-th="행사명">행사명</th>
+											<th data-th="출발일">출발일</th>
+											<th data-th="성인요금">성인요금</th>
+											<th data-th="정원">정원</th>
+											<th data-th="예약">예약</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="No.">10</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">9</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">8</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">7</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">6</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">5</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">4</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">3</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">2</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="No.">1</td>
+											<td data-th="행사명" class="align_left">
+												침사추이역L3출구구룡호텔앞(12:00)
+											</td>
+											<td data-th="출발일">
+												<span class="point">2025.08.01</span>
+											</td>
+											<td data-th="성인요금" class="align_right">139,000</td>
+											<td data-th="정원">
+												<span class="point">0</span>/999
+											</td>
+											<td data-th="예약">
+												<div class="tbl_btnbox">	
+													<button type="button" class="badge typeH">예약가능</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>
