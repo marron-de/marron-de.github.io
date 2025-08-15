@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 호텔상품예약(수동예약) 모달 -->
+		<div id="hotelReservation_modal" class="modal reservation_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">호텔상품예약</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="modal_top">
+						<div class="leftbox">
+							<div class="reserveinfo">
+								<p class="title">예약 상세정보</p>
+							</div>
+						</div>
+						<div class="rightbox">
+							<button type="button" class="button typeE auto size_md">저장</button>
+						</div>
+					</div>
+					<form name="reservGood_fm" id="reservGood_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tab_wrap">
+							<div class="tab_navbox">
+								<div class="tab_nav on"><span class="link">선택상품&가격</span></div>
+								<div class="tab_nav"><span class="link">예약자정보</span></div>
+								<div class="tab_nav"><span class="link">결제정보</span></div>
+							</div>
+							<div class="tab_contbox">
+								<div class="tab_cont tab_selectProduct on" data-th="선택상품&가격">
+									<div class="tbl_wrap">
+										<div class="tbl_cont">
+											<div class="tbl_top">
+												<p class="note_txt">
+													※ ①통화를 눌러서 화폐단위 선택 후 ②조회를 눌러서 행사를 선택해주세요.
+												</p>
+											</div>
+											<div class="tbl_box">
+												<table class="tbl space_auto selectProduct_tbl1">
+													<colgroup>
+														<col style="width: 150px;">
+														<col style="width: 510px;">
+														<col style="width: 150px;">
+														<col style="width: 510px;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th data-th="호텔명">호텔명</th>
+															<td data-th="호텔명">
+																<div class="input_box input_flex">
+																	<div class="select_box">
+																		<select name="curunit" class="select size_md">
+																			<option value="">통화선택</option>
+																			<option value="KRW">KRW</option>
+																			<option value="USD">USD</option>
+																			<option value="PHP">PHP</option>
+																			<option value="SGD">SGD</option>
+																			<option value="MYR">MYR</option>
+																			<option value="THB">THB</option>
+																			<option value="CNY">CNY</option>
+																			<option value="HKD">HKD</option>
+																			<option value="TWD">TWD</option>
+																		</select>
+																	</div>
+																	<input type="text" class="input_text size_md " id="hnm" name="hnm" value="" size="40" hname="호텔명" required="">
+																	<button type="button" class="button auto input_btn typeE size_md" onclick="reservationGoodDate_modal();">조회</button>
+																	<button type="button" class="button auto input_btn typeF size_md">초기화</button>
+																</div>
+															</td>
+															<th data-th="입실일">입실일</th>
+															<td data-th="입실일">
+																<div class="input_box">
+																	<input type="text" class="input_text size_md icon_ver icon_date calender_btn" id="room_date" name="room_date" value="2025-08-14" readonly="">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="룸타입">룸타입</th>
+															<td data-th="룸타입">
+																<div class="input_box input_flex">
+																	<input type="text" class="input_text size_md" id="" name="rnm" value="" required="">
+																</div>
+															</td>
+															<th data-th="숙박일수">숙박일수</th>
+															<td data-th="숙박일수" class="align_left">
+																<div class="input_box input_flex">
+																	<div class="select_box">
+																		<select name="room_day" id="room_day" class="select size_md">
+																			<option value="1" selected="">1</option>
+																			<option value="2">2</option>
+																			<option value="3">3</option>
+																			<option value="4">4</option>
+																			<option value="5">5</option>
+																			<option value="6">6</option>
+																			<option value="7">7</option>
+																			<option value="8">8</option>
+																			<option value="9">9</option>
+																			<option value="10">10</option>
+																			<option value="11">11</option>
+																			<option value="12">12</option>
+																			<option value="13">13</option>
+																			<option value="14">14</option>
+																			<option value="15">15</option>
+																			<option value="16">16</option>
+																			<option value="17">17</option>
+																			<option value="18">18</option>
+																			<option value="19">19</option>
+																			<option value="20">20</option>
+																		</select>
+																	</div>
+																	<span class="label_text input_txt size_md">박</span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="베드타입">베드타입</th>
+															<td data-th="베드타입">
+																<div class="input_box">
+																	<input type="text" name="room_bedtype" value="" class="input_text size_md">
+																</div>
+															</td>
+															<th data-th="퇴실일">퇴실일</th>
+															<td data-th="퇴실일" class="align_left"></td>
+														</tr>
+														<tr>
+															<th data-th="성인 기준인원">성인 기준인원</th>
+															<td data-th="성인 기준인원">
+																<div class="tbl_inline input_box input_flex">
+																	<input type="text" class="input_text size_md people_input" id="person_num" name="person_num" value="2" old_val="2">
+																	<span class="label_text input_txt size_md">명</span>
+																</div>
+															</td>
+															<th data-th="객실수">객실수</th>
+															<td data-th="객실수">
+																<div class="input_box input_flex">
+																	<div class="select_box">
+																		<select name="room_cnt" id="room_cnt" class="select size_md">
+																			<option value="1" selected="">1</option>
+																			<option value="2">2</option>
+																			<option value="3">3</option>
+																			<option value="4">4</option>
+																			<option value="5">5</option>
+																			<option value="6">6</option>
+																			<option value="7">7</option>
+																			<option value="8">8</option>
+																			<option value="9">9</option>
+																			<option value="10">10</option>
+																			<option value="11">11</option>
+																			<option value="12">12</option>
+																			<option value="13">13</option>
+																			<option value="14">14</option>
+																			<option value="15">15</option>
+																			<option value="16">16</option>
+																			<option value="17">17</option>
+																			<option value="18">18</option>
+																			<option value="19">19</option>
+																			<option value="20">20</option>
+																		</select>
+																	</div>
+																	<span class="label_text input_txt size_md">룸</span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="성인 최대인원">성인 최대인원</th>
+															<td data-th="성인 최대인원">
+																<div class="tbl_inline input_box input_flex">
+																	<input type="text" class="input_text size_md people_input" id="person_maxnum" name="person_maxnum" value="4" old_val="4">
+																	<span class="label_text input_txt size_md">명</span>
+																</div>
+															</td>
+															<th data-th="성인 숙박인원">성인 숙박인원</th>
+															<td data-th="성인 숙박인원">
+																<div class="input_box input_flex">
+																	<div class="select_box">
+																		<select name="room_adult_num" id="room_adult_num" class="select size_md" onchange="__ma1HotelJob();">
+                                            								<option value="0" selected="">0</option>
+																			<option value="1" maxnum="0">1</option>
+																			<option value="2" maxnum="0">2</option>
+																			<option value="3" maxnum="0">3</option>
+																			<option value="4" maxnum="0">4</option>
+																			<option value="5"  maxnum="0">5</option>
+																			<option value="6" maxnum="1" style="background-Color:#FF0000;">6</option>
+																		</select>
+																	</div>
+																	<span class="label_text input_txt size_md ">
+																		<span class="bold">※<span class="red">빨간색</span>은 초과인원</span>
+																	</span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="소인 최대인원">소인 최대인원</th>
+															<td data-th="소인 최대인원">
+																<div class="tbl_inline input_box input_flex">
+																	<input type="text" class="input_text size_md people_input" id="child_maxnum" name="child_maxnum" value="2" maxlength="2">
+																	<span class="label_text input_txt size_md">명</span>
+																</div>
+															</td>
+															<th data-th="소인 숙박인원">소인 숙박인원</th>
+															<td data-th="소인 숙박인원">
+																<div class="input_box input_flex">
+																	<div class="select_box">
+																		<select name="room_child_num" id="room_child_num" class="select size_md">
+																			<option value="0">0</option>
+																		</select>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="구분설정">구분설정</th>
+															<td data-th="구분설정">
+																<div class="tbl_inline">
+																	<div class="input_box input_flex">
+																		<span class="label_text input_txt size_md">담당자 :</span>
+																		<div class="select_box">
+																			<select name="admin_id" id="admin_id" class="select size_md" hname="담당자">
+																				<option value="">선택</option>
+																				<option value="tktravel">강일구 대표</option>
+																				<option value="jerry">임병남 부장</option>
+																				<option value="joyceyip915">조이스 매니저</option>
+																				<option value="jamiesy">제이미 파트장</option>
+																				<option value="testdev">bus res dev</option>
+																				<option value="wkddjsgh">장언호 대리</option>
+																				<option value="vipphoebe">진사여 매니저</option>
+																				<option value="mary314">메리 매니저</option>
+																				<option value="kys072702">김용식 주임</option>
+																				<option value="skquf1226">나한별 주임</option>
+																				<option value="jangsan7">최규만 팀장</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="input_box input_flex">
+																		<span class="label_text input_txt size_md">공급처 :</span>
+																		<div class="select_box">
+																			<select name="producer_id" id="producer_id" class="select size_md">
+																				<option	option value="">선택</option>
+																				<option value="mbc">MBC월드</option>
+																				<option value="TK트래블">TKTRAVEL</option>
+																				<option value="DAEGU">대구관광뷰로</option>
+																				<option value="HANAMUD">하나머드</option>
+																				<option value="incheon">인천관광공사</option>
+																				<option value="vivaldipark">대명 SONO</option>
+																				<option value="koreana">코리아나 호텔</option>
+																				<option value="lottehotel">롯데호텔본점</option>
+																				<option value="GB">경상북도문화관광공사</option>
+																				<option value="paradise">파라다이스시티 호텔</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<th data-th="비고">비고</th>
+															<td data-th="비고">
+																<div class="input_box">
+																	<input name="cont" class="input_text size_md" id="" type="text" size="60" value="">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="고객요청">고객요청</th>
+															<td data-th="고객요청" colspan="3">
+																<div class="input_box">
+																	<textarea name="res_cust_memo" class="input_text size_md h_auto" rows="4"></textarea>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>		
+										<div class="tbl_cont">
+											<div class="tbl_top">
+												<div class="leftbox"></div>
+												<div class="rightbox">
+													<button type="button" class="button size_sm auto typeE">조식추가</button>
+													<button type="button" class="button size_sm auto typeE">항목추가</button>
+													<button type="button" class="button size_sm auto typeF">선택항목삭제</button>
+												</div>
+											</div>
+											<div class="tbl_box">
+												<table class="tbl space_auto reserveProduct_tbl4">
+													<colgroup>
+														<col style="width: 50px;">
+														<col style="width: 110px;">
+														<col style="width: 130px;">
+														<col style="width: 120px;">
+														<col style="width: 120px;">
+														<col style="width: 120px;">
+														<col style="width: 50px;">
+														<col style="width: 140px;">
+														<col style="width: 140px;">
+														<col style="width: 140px;">
+														<col style="width: 130px;">
+														<col style="width: 50px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="checkbox">
+																<div class="check_box">
+																	<input type="checkbox"
+																		class="input_check all_check">
+																</div>
+															</th>
+															<th data-th="구분">구분</th>
+															<th data-th="이용일자">이용일자</th>
+															<th data-th="원가" class="point">원가</th>
+															<th data-th="B2B" class="point">B2B</th>
+															<th data-th="B2C" class="point">B2C</th>
+															<th data-th="수량">수량</th>
+															<th data-th="원가 소계">원가 소계</th>
+															<th data-th="B2B 소계">B2B 소계</th>
+															<th data-th="B2C 소계">B2C 소계</th>
+															<th data-th="비고">비고</th>
+															<th data-th="버튼">-</th>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab_cont tab_reserveInfo" data-th="예약자정보">
+									<div class="tbl_wrap">
+										<div class="tbl_cont">
+											<div class="tbl_box">
+												<table class="tbl space_auto reserveInfo_tbl1">
+													<colgroup>
+														<col style="width: 150px;">
+														<col style="width: 510px;">
+														<col style="width: 150px;">
+														<col style="width: 510px;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th data-th="예약자 아이디">예약자 아이디</th>
+															<td data-th="예약자 아이디">
+																<div class="input_box input_flex">
+																	<input type="text" class="input_text size_md point" id="mb_id" name="mb_id" value="">
+																	<button type="button" class="button auto input_btn typeE size_md" onclick="memberSearch_modal();">회원조회</button>
+																</div>
+															</td>
+															<th data-th="예약자명" class="point">
+																<span class="required">예약자명</span>
+															</th>
+															<td data-th="예약자명">
+																<div class="input_box">
+																	<input type="text" class="input_text size_md" id="res_cust_nm" name="res_cust_nm" value="">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="핸드폰" class="point">
+																<span class="required">핸드폰</span>
+															</th>
+															<td data-th="핸드폰">
+																<div class="input_box">
+																	<input type="text" class="input_text size_md" id="cu_phone" name="res_cust_hp" value="" hname="핸드폰" required="">
+																</div>
+															</td>
+															<th data-th="국적">국적</th>
+															<td data-th="국적">
+																<div class="select_box">
+																	<select class="select size_md" name="res_cust_nat_cd" id="res_cust_nat_cd" hname="국적" required="">
+																		<option value="KO">한국</option>
+																		<option value="HK">Hong Kong</option>
+																		<option value="TW">Taiwan</option>
+																		<option value="SG">Singapore</option>
+																		<option value="CN">China</option>
+																		<option value="MO">Macau</option>
+																		<option value="MY">Malaysia</option>
+																		<option value="ID">Indonesia</option>
+																		<option value="TH">Thailand</option>
+																		<option value="PH">Philippines</option>
+																		<option value="VN">Vietnam</option>
+																		<option value="JP">Japan</option>
+																		<option value="US">USA</option>
+																		<option value="GB">United Kingdom</option>
+																		<option value="DE">Germany</option>
+																		<option value="CA">Canada</option>
+																		<option value="FR">France</option>
+																		<option value="ETC">ETC</option>
+																	</select>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="이메일">이메일</th>
+															<td data-th="이메일">
+																<div class="input_box">
+																	<input type="text" class="input_text size_md" id="cu_email" name="res_cust_email" value="">
+																</div>
+															</td>
+															<th data-th="SNS ID" class="point">
+																<span class="required">SNS ID</span>
+															</th>
+															<td data-th="SNS ID">
+																<div class="input_box input_flex">
+																	<div class="select_box">
+																		<select name="b2b_sns_type" id="b2b_sns_type" class="select size_md" style="width:160px;">
+																			<option value="Kakaotalk">Kakaotalk</option>
+																			<option value="Instagram">Instagram</option>
+																			<option value="Line">Line</option>
+																			<option value="Whatsapp">Whatsapp</option>
+																			<option value="Wechat">Wechat</option>
+																		</select>
+																	</div>
+																	<input type="text" class="input_text size_md" id="b2b_sns_id" name="b2b_sns_id" value="">
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="tbl_cont">
+											<div class="tbl_box">
+												<table class="tbl space_auto reserveInfo_tbl2">
+													<colgroup>
+														<col style="width: 100px;">
+														<col style="width: 110px;">
+														<col style="width: 190px;">
+														<col style="width: 190px;">
+														<col style="width: 190px;">
+														<col style="width: 190px;">
+														<col style="width: 190px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="구분">구분</th>
+															<th data-th="성별">성별</th>
+															<th data-th="고객명">고객명</th>
+															<th data-th="연락처">연락처</th>
+															<th data-th="국적">국적</th>
+															<th data-th="생년월일">생년월일</th>
+															<th data-th="여권번호">여권번호</th>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab_cont tab_payment" data-th="결제정보">
+									<div class="tbl_wrap">
+										<div class="tbl_cont">
+											<div class="tbl_box">
+												<table class="tbl space_auto payment_tbl2">
+													<colgroup>
+														<col style="width: 170px;">
+														<col style="width: 130px;">
+														<col style="width: 120px;">
+														<col style="width: 120px;">
+														<col style="width: 120px;">
+														<col style="width: 320px;">
+														<col style="width: 110px;">
+														<col style="width: 110px;">
+														<col style="width: 110px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="날짜등록">날짜등록</th>
+															<th data-th="항목선택">항목선택</th>
+															<th data-th="입금(+)">입금(+)</th>
+															<th data-th="출금(-)">출금(-)</th>
+															<th data-th="결제방법">결제방법</th>
+															<th data-th="입금계좌 / 결제정보">입금계좌 / 결제정보</th>
+															<th data-th="비고">비고</th>
+															<th data-th="담당자">담당자</th>
+															<th data-th="버튼">test</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="날짜등록">
+																<div class="input_box">
+																	<input type="text" name="acc_dt" id="acc_dt" class="input_text size_md icon_ver icon_date calender_btn" value="2025-08-13" readonly="readonly" hname="일자" required="">
+																</div>
+															</td>
+															<td data-th="항목선택">
+																<div class="select_box">
+																	<select name="ioac_cd" id="ioac_cd" class="select size_md">
+																		<option value="">선택</option>
+																		<option value="IOAC007">티켓비</option>
+																		<option value="IOAC001">투어비</option>
+																		<option value="IOAC002">호텔비</option>
+																		<option value="IOAC008">버스비</option>
+																		<option value="IOAC004">계약금</option>
+																	</select>
+																</div>
+															</td>
+															<td data-th="입금(+)">
+																<div class="input_box">
+																	<input type="text" name="bank_plus" id="bank_plus" class="input_text size_md align_right" value="0" maxlength="8">
+																</div>
+															</td>
+															<td data-th="출금(-)">
+																<div class="input_box">
+																	<input type="text" name="bank_minus" id="bank_minus" class="input_text size_md align_right" value="0"  maxlength="8">
+																</div>
+															</td>
+															<td data-th="결제방법">
+																<div class="select_box">
+																	<select name="pgcase_cd" class="select size_md" id="pgcase_cd">
+																		<option value="">선택</option>
+																		<option value="INST002">신용카드</option>
+																		<option value="INST010">위쳇페이</option>
+																		<option value="INST011">알리페이</option>
+																		<option value="INST012">계좌이체</option>
+																		<option value="INST006">베네피아</option>
+																		<option value="INST001">무통장입금</option>
+																	</select>
+																</div>
+															</td>
+															<td data-th="입금계좌 / 결제정보">
+																<div class="select_box">
+																	<select name="bank_cd" class="select size_md" id="bank_cd">
+																		<option value="">선택</option>
+																		<option value="INBK002">하나은행010-991910-79304강일구(TKTRAVEL)</option>
+																		<option value="ENBK001">HSBC (HKD)121 650915 833KANG ILGOO</option>
+																		<option value="ENBK002">Bank of China (HKD)01268010157919KANG ILGOO</option>
+																		<option value="ENBK003">Fubon Bank (TWD)012570168100605KANG ILGOO</option>
+																		<option value="ENBK004">Bank of China (CNY)6217582000026002501KANG ILGOO</option>
+																		<option value="ENBK005">Kookmin Bank (USD)01126811004789KANG ILGOO</option>
+																		<option value="ENBK008">Hana Bank (KRW)010-991910-79304KANG ILGOO</option>
+																	</select>
+																</div>
+															</td>
+															<td data-th="비고" colspan="3">
+																<div class="input_box input_flex">
+																	<input type="text" name="remarks" id="remarks" class="input_text size_md" value="" placeholder="비고입력">
+																	<button type="button" class="input_btn size_md">등록</button>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

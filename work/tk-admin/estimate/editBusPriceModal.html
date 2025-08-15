@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 버스회사수정 모달 -->
+		<div id="editBusPrice_modal" class="modal busPrice_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">버스회사수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form id="busEdit_fm" name="busEdit_fm" autocomplete="off" method="post" enctype="multipart/form-data"
+						class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 140px;">
+									<col style="width: 320px;">
+									<col style="width: 140px;">
+									<col style="width: 320px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="버스회사명">버스회사명</th>
+										<td data-th="버스회사명">
+											<div class="input_box">
+												<input name="corp_nm" id="corp_nm" type="text" value="KAS(11인승)" class="input_text size_md" hname="버스회사명" required="">
+											</div>
+										</td>
+										<th data-th="사업자등록번호">사업자등록번호</th>
+										<td data-th="사업자등록번호">
+											<div class="input_box">
+												<input name="corp_no" id="corp_no" type="text" value="455-88-00251" class="input_text size_md" hname="사업자등록번호" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="대표자">대표자</th>
+										<td data-th="대표자">
+											<div class="input_box">
+												<input name="owner_name" id="owner_name" type="text" value="홍길동" class="input_text size_md" hname="대표자" required="">
+											</div>
+										</td>
+										<th data-th="대표자연락처">대표자연락처</th>
+										<td data-th="대표자연락처">
+											<div class="input_box">
+												<input name="owner_phone" id="owner_phone" type="text" value="010-1234-5678" class="input_text size_md" hname="대표자연락처" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="담당자">담당자</th>
+										<td data-th="담당자">
+											<div class="input_box">
+												<input name="manager_name" id="manager_name" type="text" value="홍길동" class="input_text size_md" hname="담당자" required="">
+											</div>
+										</td>
+										<th data-th="담당자연락처">담당자연락처</th>
+										<td data-th="담당자연락처">
+											<div class="input_box">
+												<input name="manager_phone" id="manager_phone" type="text" value="010-1234-5678" class="input_text size_md" hname="담당자연락처" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="담당자이메일">담당자이메일</th>
+										<td data-th="담당자이메일">
+											<div class="input_box">
+												<input name="manager_email" id="manager_email" type="text" value="test@test.com" class="input_text size_md" hname="담당자이메일" required="">
+											</div>
+										</td>
+										<th data-th="팩스번호">팩스번호</th>
+										<td data-th="팩스번호">
+											<div class="input_box">
+												<input name="bz_fax" id="bz_fax" type="text" value="010-1234-5678" class="input_text size_md" hname="팩스번호" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="주소">주소</th>
+										<td data-th="주소" colspan="3">
+											<div class="input_box">
+												<input name="bz_address" id="bz_address" type="text" value="서울 구로구 가마산로27길 11-19,1202호(구로동, 송현빌딩)" class="input_text size_md" hname="주소" required="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 140px;">
+									<col style="width: 320px;">
+									<col style="width: 140px;">
+									<col style="width: 320px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="직영버스(대)">직영버스(대)</th>
+										<td data-th="직영버스(대)" colspan="3">
+											<div class="tbl_inline">
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">12인승</span>
+													<input name="bus_12" id="bus_12" type="text" class="input_text size_md" value="50">
+												</div>
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">25인승</span>
+													<input name="bus_25" id="bus_25" type="text" class="input_text size_md" value="0">
+												</div>
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">45인승</span>
+													<input name="bus_45" id="bus_45" type="text" class="input_text size_md" value="0">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="정산주기">정산주기</th>
+										<td data-th="정산주기">
+											<div class="input_box">
+												<input name="settlement_period" id="settlement_period" type="text" class="input_text size_md" value="익월 10일">
+											</div>
+										</td>
+										<th data-th="계약일">계약일</th>
+										<td data-th="계약일">
+											<div class="input_box">
+												<input name="contract_date" id="contract_date" type="text" value="2025-10-01" class="input_text size_md icon_ver icon_date calender_btn" readonly="readonly">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="계좌정보">계좌정보</th>
+										<td data-th="계좌정보" colspan="3">
+											<div class="tbl_inline">
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">은행명 :</span>
+													<input name="bank_name" id="bank_name" type="text" class="input_text size_md" value="스텐다드차타드">
+												</div>
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">예금주 :</span>
+													<input name="bank_depositor" id="bank_depositor" type="text" class="input_text size_md" value="(주)코리아에어포트">
+												</div>
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">계좌번호 :</span>
+													<input name="bank_account" id="bank_account" type="text" class="input_text size_md" value="381-20-205748">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="#계약서">#계약서</th>
+										<td data-th="#계약서" colspan="3">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="T_UserFile1" name="T_UserFile1">
+													<label for="T_UserFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 게시물 파일.pdf</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="#성수기 단가표">#성수기 단가표</th>
+										<td data-th="#성수기 단가표" colspan="3">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="T_UserFile2" name="T_UserFile2">
+													<label for="T_UserFile2" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="#비수기 단가표">#비수기 단가표</th>
+										<td data-th="#비수기 단가표" colspan="3">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="T_UserFile3" name="T_UserFile3">
+													<label for="T_UserFile3" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="#버스공제조합보험">#버스공제조합보험</th>
+										<td data-th="#버스공제조합보험" colspan="3">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="T_UserFile4" name="T_UserFile4">
+													<label for="T_UserFile4" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="비고">비고</th>
+										<td data-th="비고" colspan="3">
+											<div class="input_box">
+												<textarea name="bus_memo" id="bus_memo" class="input_text size_md h_auto" rows="3"></textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="버스회사 공급처 연동">버스회사 공급처 연동</th>
+										<td data-th="버스회사 공급처 연동" colspan="3">
+											<div class="select_box">
+												<select name="mb_id" id="mb_id" class="select size_md">
+                                					<option value="novalue">없음</option>
+													<option value="angel">엔젤버스</option>
+													<option value="kokmin">국민랜트카</option>
+													<option value="kim">김태식 기사</option>
+													<option value="bsbus">BS버스</option>
+													<option value="굿모닝버스">굿모닝 버스</option>
+													<option value="goodmorning">(주)굿모닝 버스</option>
+													<option value="kas" selected>KAS</option>
+													<option value="hongsunchul">홍순철기사(9인승)</option>
+													<option value="angelcallvan">(주)엔젤콜밴(코리아트래블)</option>
+													<option value="goodmorningmedia">(주)굿모닝미디어</option>
+													<option value="kimtaesik">김태식기사(25인승)</option>
+													<option value=" goodbus">(주)굿버스리무진</option>
+													<option value="kookminrent">(주)국민랜트카(부산)</option>
+													<option value="gncallvan">강릉콜밴</option>
+													<option value="tmbus">테마고속투어 버스</option>
+													<option value="kang">강재구 기사(11인승 스타리아)</option>
+													<option value="hanas">(주)하나에스렌트카_대구</option>
+													<option value="cho7694">조영호가이드(12인승)</option>
+													<option value="travelland">트래블랜드 버스</option>
+													<option value="minss">민상식실장(11인승)</option>
+													<option value="ajutour">(주)아주고속관광</option>
+													<option value="bonvoyagevan">본보야지밴 (11인승)</option>
+													<option value="han">한수영 드라이빙 가이드 (중국어)</option>
+													<option value="gomyplan">GO MY PLAN(고마이플랜)</option>
+													<option value="leeldk">이덕근 드라이빙 가이드 (9인승)</option>
+													<option value="호호제주">호호제주</option>
+													<option value="jeju1">제주여행1번지</option>
+													<option value="travelbus">여행버스</option>
+													<option value="Hyejin">서혜진가이드</option>
+													<option value="areumbus">(주)더 아름다운여행</option>
+													<option value="mainline">메인라인</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

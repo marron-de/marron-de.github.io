@@ -213,7 +213,7 @@
 
 
 /* 예약관리 > 예약관리&리스트 */
-.tbl.reservation_list tbody tr td .badge { white-space: nowrap;}
+.tbl.reservation.estimate_screen_list tbody tr td .badge { white-space: nowrap;}
 .tbl.reservation_list tbody tr td.td_state.state_received { background: var(--badge-gr-bg);color: var(--badge-gr-color);}
 .tbl.reservation_list tbody tr td.td_state.state_confirmed { background: var(--badge-nv-bg);color: var(--badge-nv-color);}
 .tbl.reservation_list tbody tr td.td_state.state_confirmed2 {  background: var(--badge-pp-bg); color: var(--badge-pp-color);}
@@ -237,6 +237,12 @@
 .tbl.reservation_list tbody tr td .tbl_memo .input_box .save_btn {width: 100%; display: none;}
 .tbl.reservation_list tbody tr td .tbl_memo .input_box textarea.input_text:focus + .save_btn {display: flex;}
 
+.tbl.reservation_list tbody tr td .tbl_product_info .naver_check {pointer-events: none; gap: 0.25rem;}
+.tbl.reservation_list tbody tr td .tbl_departure_info .date,
+.tbl.reservation_list tbody tr td .tbl_use_datetime .date,
+.tbl.reservation_list tbody tr td[data-th="*입실일"],
+.tbl.reservation_list tbody tr td[data-th="퇴실일"] {white-space: nowrap;}
+
 
 /* 예약달력 > 예약관리&리스트 - 알림톡발송내역 모달 */
 .entryStatus_modal .modal_box {width: 50rem;}
@@ -247,7 +253,7 @@
 .entryStatus_modal .info_box .item .desc { flex: 1;}
 
 
-/* 예약관리 > 여행상품예약 수정 모달*/
+/* 예약관리 > 여행상품예약 수정 & 수동예약 모달*/
 .reservation_modal .modal_box {width: 86.25rem;}
 .reservation_modal .modal_box .modal_body {align-items: unset; padding-top: 0;}
 .reservation_modal .modal_top { display: flex;  align-items: center;  justify-content: space-between;  border-bottom: 1px solid var(--basic-border);  width: calc(100% + 1.875rem * 2); margin: 0 -1.875rem; padding: 1rem 1.875rem; position: sticky; top: 0;  z-index: 10;  background: var(--basic-white);}
@@ -258,7 +264,7 @@
 .reservation_modal .modal_top .reserveinfo .descbox .item { display: flex; align-items: center; gap: 0.375rem;}
 .reservation_modal .modal_top .reserveinfo .descbox .item .desc { font-weight: 500;  color: var(--brand-hover);}
 .reservation_modal .tab_wrap {gap: 2rem;}
-.reservation_modal .tab_navbox .tab_nav { font: var(--15_body_normal_r);}
+.reservation_modal .tab_navbox .tab_nav { font: var(--15_body_normal_r); max-width: calc(100% / 6);}
 .reservation_modal .tab_navbox .tab_nav.on {font-weight: 600;}
 .reservation_modal .tab_navbox .tab_nav .link {padding: 1rem 0;}
 .reservation_modal .tbl_wrap {gap: 2rem;}
@@ -277,6 +283,7 @@
 .reservation_modal .selectProduct_tbl1 .tbl_inline .place_input {width: 5rem;}
 .reservation_modal .selectProduct_tbl1 .tbl_inline .people_input {max-width: 2.5rem; text-align: center;}
 .reservation_modal .selectProduct_tbl1 .tbl_inline .total_people {font-weight: 600; margin-left: 1.25rem;}
+.reservation_modal .selectProduct_tbl1 .calender_btn {max-width: 12rem;}
 
 .reservation_modal .reserveInfo_tbl1 .tbl_inline {gap: 1rem;}
 .reservation_modal .reserveInfo_tbl1 .tbl_inline .input_box {width: auto; flex:unset}
@@ -285,7 +292,7 @@
 .reservation_modal .reserveInfo_tbl1 .people_input {max-width: 2.5rem; text-align: center;}
 .reservation_modal .reserveInfo_tbl1 .color_wrap {gap: 1rem;}
 
-.reservation_modal .reserveProduct_tbl2 .people_input {max-width: 15rem;}
+.reservation_modal .reserveProduct_tbl2 .people_input {max-width: 3.125rem;}
 .reservation_modal .reserveProduct_tbl2 .input_file_box .input_flex {flex: 1;}
 .reservation_modal .reserveProduct_tbl2 .tbl_morebtn { position: absolute;  right: 0.25rem;  bottom: 0;   width: 1.875rem;  aspect-ratio: 1 / 1;  background: var(--brand-primary);  font-size: 1.125rem;  color: var(--basic-white); transition: var(--transtion);}
 .reservation_modal .reserveProduct_tbl2 .hide_tr {display: none;}
@@ -300,6 +307,8 @@
 .reservation_modal .reserveProduct_tbl4 .sale_inlne {justify-content: center;}
 .reservation_modal .reserveProduct_tbl4 .sale_inlne .input_box{flex:unset; width: auto;}
 .reservation_modal .reserveProduct_tbl4 .sale_inlne .sale_input1 { max-width: 1.875rem;  padding: 0 0.25rem;  text-align: center;}
+.reservation_modal .reserveProduct_tbl4 .total_tr {border-top: 2px solid var(--basic-lightgray);}
+.reservation_modal .reserveProduct_tbl4 .total_tr td {padding: 0.75rem;}
 
 .reservation_modal .macroLink_tbl1 .tbl_inline {gap: 1rem;}
 .reservation_modal .macroLink_tbl1 .tbl_inline .input_box {width: auto; flex:unset}
@@ -307,7 +316,6 @@
 .reservation_modal .macroLink_tbl1 .calender_btn {max-width: 10rem;}
 .reservation_modal .macroLink_tbl1 .people_input {max-width: 2.5rem; text-align: center;}
 .reservation_modal .macroLink_tbl1 .color_wrap {gap: 1rem;}
-
 
 .reservation_modal .payment_tbl1 .pay_info { align-items: flex-start;}
 .reservation_modal .payment_tbl1 .pay_info .note{margin-top: 1rem;}
@@ -326,12 +334,18 @@
 .reservation_modal .tbl_top .status .badge.type_re,
 .reservation_modal .tbl_top .exec .badge.type_re,
 .reservation_modal .reserveStatus_tbl1 .badge.type_re { background: none;   border: 1px solid var(--badge-re-color);}
-.reservation_modal .tbl_top .status .badge.type_bl,
-.reservation_modal .tbl_top .exec .badge.type_bl,
-.reservation_modal .reserveStatus_tbl1 .badge.type_bl{ background: none;   border: 1px solid var(--badge-bl-color);}
+.reservation_modal .tbl_top .status .badge.type_or,
+.reservation_modal .tbl_top .exec .badge.type_or,
+.reservation_modal .reserveStatus_tbl1 .badge.type_or{ background: none;   border: 1px solid var(--badge-or-color);}
 .reservation_modal .tbl_top .status .badge.type_gr,
 .reservation_modal .tbl_top .exec .badge.type_gr,
 .reservation_modal .reserveStatus_tbl1 .badge.type_gr{ background: none;   border: 1px solid var(--badge-gr-color);}
+.reservation_modal .tbl_top .status .badge.type_bl,
+.reservation_modal .tbl_top .exec .badge.type_bl,
+.reservation_modal .reserveStatus_tbl1 .badge.type_bl{ background: none;   border: 1px solid var(--badge-bl-color);}
+.reservation_modal .tbl_top .status .badge.type_bk,
+.reservation_modal .tbl_top .exec .badge.type_bk,
+.reservation_modal .reserveStatus_tbl1 .badge.type_bk{ background: none;   border: 1px solid var(--badge-bk-color);}
 .reservation_modal .reserveStatus_tbl1 .state_tr .state1,
 .reservation_modal .reserveStatus_tbl1 .state_tr .state2 { background: var(--badge-gr-bg);  --radio-color: var(--badge-gr-color);}
 .reservation_modal .reserveStatus_tbl1 .state_tr .state3 { background: var(--badge-pp-bg);  --radio-color: var(--badge-pp-color);}
@@ -355,7 +369,6 @@
 .reservation_modal .barcode_top .leftbox .btnbox{display: flex; align-items: center; gap: 0.5rem;}
 .reservation_modal .barcode_top .rightbox .select_box { min-width: 6.25rem;}
 .reservation_modal .barcode_top .rightbox .btnbox { display: flex; align-items: center;   justify-content: flex-end; gap: 0.5rem; flex: 1;}
-.reservation_modal .ticketInfo_tbbl1 {} 
 
 
 /* 예약관리 > 여행상품예약 > 회원검색 모달*/
@@ -400,9 +413,6 @@
 #smsSend_modal .modal_box {width: 31.25rem;}
 
 
-/* 예약관리 > 수동예약 */
-
-
 /* 예약관리 > 수동예약 > 상품선택 및 행사날짜 선택 모달 */
 #reservationGoodDate_modal .modal_box {width: 75rem;}
 #reservationGoodDate_modal .modal_searchbox {margin-bottom: 2.5rem;}
@@ -420,3 +430,142 @@
 #reservationGoodDate_modal .tbl tbody tr th,
 #reservationGoodDate_modal .tbl tbody tr td {height: 3.125rem;}
 #reservationGoodDate_modal .tbl tbody tr td.align_lef {white-space: nowrap;  overflow: hidden; text-overflow: ellipsis; max-width: 100px;}
+
+
+/* 예약관리 - 네이버 스마트스토어 오류 알럿 */
+#naverSmartStoreErrorAlert { position: relative;  background: var(--basic-white);  box-shadow: var(--box-shadow);  border: 1px solid var(--basic-border2);  border-radius: 0.625rem; padding: 1.25rem 1rem;}
+#naverSmartStoreErrorAlert .title { font: var(--20_heading_sb); color: var(--badge-gr-color); display: flex;  align-items: center; gap: 0.25rem;  margin-bottom: 0.75rem;}
+#naverSmartStoreErrorAlert .descbox { display: flex;  flex-direction: column;  gap: 0.625rem; font: var(--14_label_normal_r); color: var(--basic-darkgray);}
+#naverSmartStoreErrorAlert .descbox .desc.point { color: var(--brand-hover);  font-weight: 500;}
+#naverSmartStoreErrorAlert .bottom {display: flex; align-items: center; gap: 0.5rem;  font: var(--13_label_r); color: var(--basic-darkgray); margin-top: 1rem;}
+
+
+/* 견적/버스관리 > 견적서리스트 > 견적서리스트 */
+.tbl_top .typebox .item[data-type="견적대기"] .color { background: var(--badge-gr-color);}
+.tbl_top .typebox .item[data-type="예약확정"] .color { background: var(--badge-nv-color);}
+.tbl_top .typebox .item[data-type="인보이스"] .color { background: var(--badge-pp-color);}
+.tbl_top .typebox .item[data-type="바우처"] .color { background: var(--badge-or-color);}
+.tbl_top .typebox .item[data-type="행사완료"] .color { background: var(--badge-ye-color);}
+.tbl_top .typebox .item[data-type="취소완료"] .color { background:var(--badge-re-color);}
+
+.tbl.estimate_list tbody tr td.td_state.state_wait { background: var(--badge-gr-bg);
+color: var(--badge-gr-color);}
+.tbl.estimate_list tbody tr td.td_state.state_confirmed {background: var(--badge-nv-bg);    color: var(--badge-nv-color);}
+.tbl.estimate_list tbody tr td.td_state.state_invoice { background: var(--badge-pp-bg);
+color: var(--badge-pp-color);}
+.tbl.estimate_list tbody tr td.td_state.state_voucher {background: var(--badge-or-bg);
+color: var(--badge-or-color);}
+.tbl.estimate_list tbody tr td.td_state.state_event_done { background: var(--badge-ye-bg);
+color: var(--badge-ye-color);}
+.tbl.estimate_list tbody tr td.td_state.state_cancel { background: var(--badge-re-bg);
+color: var(--badge-re-color);}
+.tbl.estimate_list tbody tr td .tbl_memo .input_box {gap: 0.25rem;}
+.tbl.estimate_list tbody tr td .tbl_memo .input_box textarea.input_text { padding: 0.25rem;}
+.tbl.estimate_list tbody tr td .tbl_memo .input_box .save_btn {width: 100%; display: none;}
+.tbl.estimate_list tbody tr td .tbl_memo .input_box textarea.input_text:focus + .save_btn {display: flex;}
+.tbl.estimate_list tbody tr td[data-th="행사일"] {white-space: nowrap;}
+
+
+/* 견적/버스관리 > 견적서리스트 > 견적서 등록 */
+.estimate_wrap .content_write {position: relative;}
+.estimate_wrap .content_write .tab_navbox{justify-content: space-between; background: none;}
+.estimate_wrap .content_write .tab_navbox .leftbox{ position: relative; display: flex; flex: 1; }
+.estimate_wrap .content_write .tab_navbox .leftbox .tab_nav {flex: unset; }
+.estimate_wrap .content_write .tab_navbox .leftbox .tab_nav .link {padding: 1rem 2rem;}
+.estimate_wrap .content_write .tab_navbox .rightbox{position: relative; display: flex;     gap: 0.5rem;}
+.estimate_wrap .estimate_write {position: relative; display: flex; align-items: flex-start; gap: 1.25rem;}
+.estimate_wrap .estimate_write .leftbox { flex: 1; width: calc(100% - 25rem - 1.25rem); gap: 2rem;}
+.estimate_wrap .estimate_write .leftbox .tbl tbody tr td .button {white-space: nowrap;}
+.estimate_wrap .estimate_write .rightbox { position: sticky; top: 9rem; width: 25rem;   display: flex;  flex-direction: column; gap: 1.25rem;}
+.estimate_wrap .estimate_write .rightbox .btn_box {display: flex; justify-content: space-between;}
+.estimate_wrap .estimate_write .rightbox .btn_box .button {margin-left: auto;}
+.estimate_wrap .estimate_screen { position: relative;  background: var(--basic-white);   box-shadow: var(--box-shadow); border: 1px solid var(--basic-border2);  border-radius: 0.625rem; padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1.5rem;}
+.estimate_wrap .estimate_screen > .titlebox{margin-bottom: 1rem;}
+.estimate_wrap .estimate_screen > .titlebox .title { font: var(--56_display_b);  color: var(--basic-black); text-align: center;}
+.estimate_wrap .estimate_screen > .topbox { display: flex; flex-direction: column; gap: 0.75rem;}
+.estimate_wrap .estimate_screen > .topbox .item { justify-content: flex-end;}
+.estimate_wrap .estimate_screen > .topbox .item .label_text { font: var(--16_body_normal_sb); width: 10rem;}
+.estimate_wrap .estimate_screen > .topbox .item .input_item { flex: 1; max-width: 14rem;}
+.estimate_wrap .estimate_screen .inovice_tbl1 tbody tr th {font-size: 1.2em;}
+.estimate_wrap .estimate_screen .inovice_tbl1 .input_box .label_text { width: 4rem;  text-align: left; font-weight: 500;}
+.estimate_wrap .estimate_screen .inovice_tbl2 .tbl_btnbox .plus_btn,
+.estimate_wrap .estimate_screen .inovice_tbl2 .tbl_btnbox .minus_btn {width: 1.5rem;    font-size: 0.75rem;}
+.estimate_wrap .estimate_screen .inovice_tbl2 .tbl_btnbox .minus_btn { background: var(--state-error);} 
+.estimate_wrap .estimate_screen > .form_line { width: 100%; height: 1px; background: var(--basic-border);}
+.estimate_wrap .estimate_screen > .accountbox { display: flex; flex-direction: column;  gap: 1.5rem;}
+.estimate_wrap .estimate_screen > .accountbox .account_top { flex-direction: row;  align-items: center; justify-content: space-between;}
+.estimate_wrap .estimate_screen > .accountbox .account_top .title { font: var(--18_headline_sb); color: var(--basic-darkgray);}
+.estimate_wrap .estimate_screen > .accountbox .account_top .tab_navbox { flex: 1;  justify-content: flex-end; gap: 0.5rem;}
+.estimate_wrap .estimate_screen > .accountbox .account_top .tab_navbox .tab_nav {  flex: unset; font: var(--14_label_normal_r); border-radius: 0.375rem;  background: var(--basic-white);  border: 1px solid var(--brand-hover); font-weight: 500; height: auto;}
+.estimate_wrap .estimate_screen > .accountbox .account_top .tab_navbox .tab_nav.on {   box-shadow: none; background: var(--brand-hover);}
+.estimate_wrap .estimate_screen > .accountbox .account_top .tab_navbox .tab_nav .link {   padding: 0.375rem 1.25rem;}
+.estimate_wrap .estimate_screen > .accountbox .account_info { display: flex;  flex-wrap: wrap; gap: 0.75rem 1.5rem;}
+.estimate_wrap .estimate_screen > .accountbox .account_info .item { width: calc((100% - 1.5rem) / 2);}
+.estimate_wrap .estimate_screen > .accountbox .account_info .item .label_text { width: 8rem;  font-weight: 500;}
+.estimate_wrap .estimate_screen > .accountbox .account_info .item .input_item { flex: 1;}
+.estimate_wrap .estimate_screen > .textareabox .label_text {font-weight: 600;}
+.estimate_wrap .estimate_screen > .logobox { display: flex; flex-direction: column;  gap: 1rem; }
+.estimate_wrap .estimate_screen > .logobox .logo_select .label_text {font-weight: 600;}
+.estimate_wrap .estimate_screen > .logobox .logo_preview { position: relative; min-height: 8.75rem;  border: 1px dashed var(--basic-border); padding: 1.25rem; text-align: center;  border-radius: 0.375rem; display: flex; align-items: center; justify-content: center;}
+.estimate_wrap .estimate_screen > .logobox .logo_preview .txt {  font: var(--14_label_normal_r); position: absolute; left: 50%;  top: 50%;  transform: translate(-50%, -50%);  color: var(--basic-middlegray);}
+.estimate_wrap .estimate_screen > .logobox .logo_preview img{}
+
+
+/* 견적/버스관리 > 견적서리스트 > 간편견적서 */
+.easyEstimate_list { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem 1rem;}
+.easyEstimate_cont { width: calc((100% - 1rem) / 2);  position: relative;  background: var(--basic-white); box-shadow: var(--box-shadow); border: 1px solid var(--basic-border2);   border-radius: 0.625rem; padding: 1rem;}
+.easyEstimate_list .easyEstimate_cont .input_box .input_text:read-only { border: unset; background: unset;     padding:0}
+.easyEstimate_cont .tbl_top1 { border-bottom: 1px solid var(--basic-border);  padding-bottom: 0.875rem;  margin-bottom: 0.875rem;}
+.easyEstimate_cont .tbl_top1 .total {color: var(--brand-hover); font-weight: 600;}
+.easyEstimate_cont .tbl_top2 .button.hide {display: none;}
+.easyEstimate_cont .tbl_titbox { position: relative; padding: 0.75rem 1rem; background: var(--primary-primary900); border-radius: 0.625rem 0.625rem 0 0;}
+.easyEstimate_cont .tbl_titbox .input_box .input_text {font-weight: 600;}
+.easyEstimate_cont .tbl_titbox .input_box .input_text:read-only { color: var(--basic-white);  text-align: center;}
+.easyEstimate_cont .tbl_schedulebox {position: relative; display: none;}
+.easyEstimate_cont .tbl_schedule { display: flex; background: var(--basic-white); border-left: 1px solid var(--basic-border); border-right: 1px solid var(--basic-border);}
+.easyEstimate_cont .tbl_schedule .item { width: 50%;  border-right: 1px solid var(--basic-border2);}
+.easyEstimate_cont .tbl_schedule .item:last-child{ border-right: 0;}
+.easyEstimate_cont .tbl_schedule .item .head { padding: 0.875rem 1rem;  font: var(--14_label_normal_r); font-weight: 600; letter-spacing: 0.01em; color: var(--brand-hover); text-align: center; background: var(--basic-bg2);}
+.easyEstimate_cont .tbl_schedule .item .body textarea.input_text {border-radius: 0;  border: none; padding: 1rem;}
+.easyEstimate_cont .tbl_contbox { border-radius: 0 0 0.625rem 0.625rem;  box-shadow: none;}
+.easyEstimate_cont .tbl_contbox .tbl thead tr th, 
+.easyEstimate_cont .tbl_contbox .tbl tbody tr th {height: unset; padding: 0.75rem 0.5rem;}
+.easyEstimate_cont .tbl_contbox .tbl tbody tr td {height: unset;}
+.easyEstimate_cont .tbl_contbox .tbl tbody tr th .blue {color: var(--brand-primary);}
+.easyEstimate_cont .tbl_contbox .tbl tbody tr td {}
+.easyEstimate_cont .tbl_contbox .tbl tbody tr.total_tr th{ background: var(--primary-primary200);}
+.easyEstimate_cont .tbl_contbox .tbl tbody tr.total2_tr th{ background: var(--primary-primary300);}
+.easyEstimate_cont .tbl_contbox .tbl tbody tr td .input_box .input_text {height: 2rem;}
+
+
+/* 견적/버스관리 > 견적서리스트 > 간편견적서 - 간편 견적서 등록 모달 */
+#addEasyEstimate_modal .modal_box {width: 50rem;}
+#addEasyEstimate_modal .easyEstimate_cont { width: 100%; padding: 0;}
+
+
+/* 견적/버스관리 > 버스정산관리 > 버스예약리스트 */
+.tbl_top .typebox .item[data-type="미등록"] .color { background: var(--badge-ye-color);}
+.tbl_top .typebox .item[data-type="미정산"] .color { background:var(--badge-re-color);}
+.tbl_top .typebox .item[data-type="정산완료"] .color { background: var(--badge-bl-color);}
+
+.tbl.busReservation_list tbody tr td.td_state.state_unregistered { background: var(--badge-ye-bg);
+color: var(--badge-ye-color);}
+.tbl.busReservation_list tbody tr td.td_state.state_unsettled {background: var(--badge-re-bg);    color: var(--badge-re-color);}
+.tbl.busReservation_list tbody tr td.td_state.state_settled{ background: var(--badge-bl-bg);
+color: var(--badge-bl-color);}
+.tbl.busReservation_list tbody tr.detail_tr {display: none;}
+.tbl.busReservation_list tbody tr.detail_tr td { background: var(--basic-pale);}
+.tbl.busReservation_list tbody tr.detail_tr.show {display: table-row;}
+.tbl.busReservation_list tbody tr .edit_open {cursor: pointer;}
+
+
+/* 견적/버스관리 > 버스정산관리 > 버스예약리스트 - 버스예약등록 모달 */
+.busReservation_modal .modal_box {width: 62.5rem;}
+.busReservation_modal .tbl tbody tr td .calender_btn {max-width: 10rem;}
+.busReservation_modal .tbl tbody tr td .time_input { max-width: 8rem; text-align: center;}
+.busReservation_modal .tbl tbody tr td .tbl_inline.column_ver {gap: 0.5rem;}
+
+
+/* 견적/버스관리 > 버스정산관리 > 버스리스트&가격표  - 버스회사등록 모달 */
+.busPrice_modal .modal_box {width: 62.5rem;}
+.busPrice_modal .tbl tbody tr td .tbl_inline  {gap: 1rem;}

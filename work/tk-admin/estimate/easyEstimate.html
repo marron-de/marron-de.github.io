@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout estimate_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-files icon"></i>
+						간편견적서 리스트
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="제목">제목</th>
+										<td data-th="제목">
+											<div class="tbl_inline">
+												<div class="select_box search_select">
+													<select name="ins_id" id="ins_id" class="select size_md">
+														<option value="all">작성자 전체</option>
+														<option value="jangsan7">최규만 팀장</option>
+														<option value="skquf1226">나한별 주임</option>
+														<option value="kys072702">김용식 주임</option>
+														<option value="mary314">메리 매니저</option>
+														<option value="vipphoebe">진사여 매니저</option>
+														<option value="wkddjsgh">장언호 대리</option>
+														<option value="testdev">bus res dev</option>
+														<option value="jamiesy">제이미 파트장</option>
+														<option value="joyceyip915">조이스 매니저</option>
+														<option value="jerry">임병남 부장</option>
+														<option value="tktravel">강일구 대표</option>
+													</select>
+												</div>
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key"
+														name="input_key" placeholder="검색어를 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto">검색</button>
+													<button type="button" class="button size_sm typeF auto"
+														onclick="addEasyEstimate_modal()">등록</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="검색년월">검색년월</th>
+										<td data-th="검색년월">
+											<div class="tbl_inline">
+												<div class="select_box">
+													<select name="period_yy_s" id="item_period_yy"
+														class="select size_md">
+														<option value="2026">2026년</option>
+														<option value="2025" selected="">2025년</option>
+														<option value="2024">2024년</option>
+														<option value="2023">2023년</option>
+														<option value="2022">2022년</option>
+														<option value="2021">2021년</option>
+														<option value="2020">2020년</option>
+														<option value="2019">2019년</option>
+													</select>
+												</div>
+												<div class="tab_wrap">
+													<div class="tab_navbox tabs_ver">
+														<div class="tab_nav on"><span class="link">전체</span></div>
+														<div class="tab_nav"><span class="link">1월</span></div>
+														<div class="tab_nav"><span class="link">2월</span></div>
+														<div class="tab_nav"><span class="link">3월</span></div>
+														<div class="tab_nav"><span class="link">4월</span></div>
+														<div class="tab_nav"><span class="link">5월</span></div>
+														<div class="tab_nav"><span class="link">6월</span></div>
+														<div class="tab_nav"><span class="link">7월</span></div>
+														<div class="tab_nav"><span class="link">8월</span></div>
+														<div class="tab_nav"><span class="link">9월</span></div>
+														<div class="tab_nav"><span class="link">10월</span></div>
+														<div class="tab_nav"><span class="link">11월</span></div>
+														<div class="tab_nav"><span class="link">12월</span></div>
+													</div>
+												</div>
+
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list">
+					<div class="easyEstimate_list">
+						<div class="easyEstimate_cont">
+							<div class="tbl_top tbl_top1">
+								<div class="leftbox">
+									<p class="total">작성일 : 2025-07-17 12:00:00 / 작성자 : 홍길동 매니저</p>
+								</div>
+								<div class="rightbox">
+									<button class="button typeE auto size_sm" type="button">복사하기</button>
+								</div>
+							</div>
+							<div class="tbl_top tbl_top2">
+								<div class="leftbox">
+									<button type="button" class="button size_sm auto typeE hide addDepositRowBtn">입금
+										+</button>
+									<button type="button" class="button size_sm auto typeF hide removeDepositRowBtn">입금
+										-</button>
+									<button type="button" class="button size_sm auto typeE hide addExpenditureRowBtn">지출
+										+</button>
+									<button type="button"
+										class="button size_sm auto typeF hide removeExpenditureRowBtn">지출 -</button>
+								</div>
+								<div class="rightbox">
+									<button type="button"
+										class="button size_sm auto typeC viewScheduleBtn">일정보기</button>
+									<button type="button" class="button size_sm auto typeE editBtn">수정</button>
+									<button type="button" class="button size_sm auto typeE hide saveBtn">저장</button>
+									<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+								</div>
+							</div>
+							<form method="post" action="" class="form">
+								<div class="tbl_titbox">
+									<div class="input_box">
+										<input type="text" class="input_text size_md" name="title"
+											value="[TKCWIT1D] 철원 한탄강 얼음 트레킹 축제 일일투어" readonly>
+									</div>
+								</div>
+								<div class="tbl_schedulebox">
+									<div class="tbl_schedule">
+										<div class="item">
+											<div class="head">출발일 & 가격표</div>
+											<div class="body input_box">
+												<textarea name="schedule_date"
+													class="input_text size_md h_auto align_center" rows="10"
+													readonly>출발 날짜 : 2025.07.15 ~ 2025.11.30&#13;&#10;출발 인원 :  6인&#13;&#10;평일출발 : 월, 수 출발&#13;&#10;&#13;&#10;비수가價錢&#13;&#10;B2C : 135,000원&#13;&#10;B2B : 125,000원&#13;&#10;원가 : 118,167원&#13;&#10;&#13;&#10;◆짚라인문경◆&#13;&#10;주소 : 경북 문경시 불정동 336-3&#13;&#10;토,일만 가능 09:00-17:00&#13;&#10;&#13;&#10;◆구랑리철로자전거◆&#13;&#10;주소: 경북 문경시 마성면 하내리 262-1&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;◆문경레저투어산악바이크◆&#13;&#10;주소: 경북 문경시 마성면 신현리 114-46&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;★중식 - 약돌한우프라자★&#13;&#10;-한우원기탕 (점심특선): 1인분 15,000원&#13;&#10;https://naver.me/5sszaw9X</textarea>
+											</div>
+										</div>
+										<div class="item">
+											<div class="head">일정표</div>
+											<div class="body input_box">
+												<textarea name="schedule_contents" class="input_text size_md h_auto"
+													rows="10"
+													readonly>06:30 - 06:30  홍대입구역 8번출구&#13;&#10;07:00 - 07:00  명동역 3번출구&#13;&#10;10:00 - 11:30  구랑리철로자전거 ★눈물의 여왕 촬영지&#13;&#10;12:00 - 13:00  중식-약돌한우프라자 (한우원기탕)&#13;&#10;13:30 - 15:00  짚라인 문경(2개코스) &#13;&#10;15:30 - 17:00  문경산악바이크 체험(ATV)  (2人一台) &#13;&#10;19:30 - 19:30  명동역 &#13;&#10;20:00 - 20:00  홍대입구역</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tbl_box content_tbl tbl_contbox">
+									<table class="tbl min_auto space_auto">
+										<colgroup>
+											<col style="width: 350px;">
+											<col style="width: 140px;">
+											<col style="width: 140px;">
+											<col style="width: 160px;">
+										</colgroup>
+										<thead>
+											<th data-th="구분">구분</th>
+											<th data-th="인원/대">인원/대</th>
+											<th data-th="단가">단가</th>
+											<th data-th="가격">가격</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="deposit_title1" value="1인비용" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_cnt1" value="6" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_unit_price1" value="85,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_total_price1" value="510,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">입금 소계 (A)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">510,000</th>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title2" value="KAS 11인승 (부포)" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt2" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price2" value="341,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price2" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title3" value="아주 11인승 (부포)" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt3" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price3" value="770,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price3" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title4" value="철원 한탄강 얼음 트레킹 축제입장료"
+															readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt4" value="6" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price4" value="10,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price4" value="60,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title5" value="가이드 식대" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt5" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price5" value="12,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price5" value="12,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title6" value="가이드" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt6" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price6" value="200,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price6" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">지출 소계 (B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">372,000</th>
+											</tr>
+											<tr class="total2_tr">
+												<th data-th="구분" class="align_center">회사수익 (A-B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">
+													<span class="blue">+138,000</span>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="easyEstimate_cont">
+							<div class="tbl_top tbl_top1">
+								<div class="leftbox">
+									<p class="total">작성일 : 2025-07-17 12:00:00 / 작성자 : 홍길동 매니저</p>
+								</div>
+								<div class="rightbox">
+									<button class="button typeE auto size_sm" type="button">복사하기</button>
+								</div>
+							</div>
+							<div class="tbl_top tbl_top2">
+								<div class="leftbox">
+									<button type="button" class="button size_sm auto typeE addDepositRowBtn">입금
+										+</button>
+									<button type="button" class="button size_sm auto typeF removeDepositRowBtn">입금
+										-</button>
+									<button type="button" class="button size_sm auto typeE addExpenditureRowBtn">지출
+										+</button>
+									<button type="button" class="button size_sm auto typeF removeExpenditureRowBtn">지출
+										-</button>
+								</div>
+								<div class="rightbox">
+									<button type="button"
+										class="button size_sm auto typeC viewScheduleBtn">일정닫기</button>
+									<button type="button" class="button size_sm auto typeE hide editBtn">수정</button>
+									<button type="button" class="button size_sm auto typeE saveBtn">저장</button>
+									<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+								</div>
+							</div>
+							<form method="post" action="" class="form">
+								<div class="tbl_titbox">
+									<div class="input_box">
+										<input type="text" class="input_text size_md" name="title"
+											value="[TKCWIT1D] 철원 한탄강 얼음 트레킹 축제 일일투어">
+									</div>
+								</div>
+								<div class="tbl_schedulebox show" style="display: block;">
+									<div class="tbl_schedule">
+										<div class="item">
+											<div class="head">출발일 & 가격표</div>
+											<div class="body input_box">
+												<textarea name="schedule_date"
+													class="input_text size_md h_auto align_center"
+													rows="10">출발 날짜 : 2025.07.15 ~ 2025.11.30&#13;&#10;출발 인원 :  6인&#13;&#10;평일출발 : 월, 수 출발&#13;&#10;&#13;&#10;비수가價錢&#13;&#10;B2C : 135,000원&#13;&#10;B2B : 125,000원&#13;&#10;원가 : 118,167원&#13;&#10;&#13;&#10;◆짚라인문경◆&#13;&#10;주소 : 경북 문경시 불정동 336-3&#13;&#10;토,일만 가능 09:00-17:00&#13;&#10;&#13;&#10;◆구랑리철로자전거◆&#13;&#10;주소: 경북 문경시 마성면 하내리 262-1&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;◆문경레저투어산악바이크◆&#13;&#10;주소: 경북 문경시 마성면 신현리 114-46&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;★중식 - 약돌한우프라자★&#13;&#10;-한우원기탕 (점심특선): 1인분 15,000원&#13;&#10;https://naver.me/5sszaw9X</textarea>
+											</div>
+										</div>
+										<div class="item">
+											<div class="head">일정표</div>
+											<div class="body input_box">
+												<textarea name="schedule_contents" class="input_text size_md h_auto"
+													rows="10">06:30 - 06:30  홍대입구역 8번출구&#13;&#10;07:00 - 07:00  명동역 3번출구&#13;&#10;10:00 - 11:30  구랑리철로자전거 ★눈물의 여왕 촬영지&#13;&#10;12:00 - 13:00  중식-약돌한우프라자 (한우원기탕)&#13;&#10;13:30 - 15:00  짚라인 문경(2개코스) &#13;&#10;15:30 - 17:00  문경산악바이크 체험(ATV)  (2人一台) &#13;&#10;19:30 - 19:30  명동역 &#13;&#10;20:00 - 20:00  홍대입구역</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tbl_box content_tbl tbl_contbox">
+									<table class="tbl min_auto space_auto">
+										<colgroup>
+											<col style="width: 350px;">
+											<col style="width: 140px;">
+											<col style="width: 140px;">
+											<col style="width: 160px;">
+										</colgroup>
+										<thead>
+											<th data-th="구분">구분</th>
+											<th data-th="인원/대">인원/대</th>
+											<th data-th="단가">단가</th>
+											<th data-th="가격">가격</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="deposit_title1" value="1인비용">
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_cnt1" value="6">
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_unit_price1" value="85,000">
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_total_price1" value="510,000">
+													</div>
+												</td>
+											</tr>
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">입금 소계 (A)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">510,000</th>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title2" value="KAS 11인승 (부포)">
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt2" value="0">
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price2" value="341,000">
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price2" value="0">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title3" value="아주 11인승 (부포)">
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt3" value="0">
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price3" value="770,000">
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price3" value="0">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title4" value="철원 한탄강 얼음 트레킹 축제입장료"
+															readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt4" value="6">
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price4" value="10,000">
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price4" value="60,000">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title5" value="가이드 식대">
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt5" value="0">
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price5" value="12,000">
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price5" value="12,000">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title6" value="가이드">
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt6" value="0">
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price6" value="200,000">
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price6" value="0">
+													</div>
+												</td>
+											</tr>
+
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">지출 소계 (B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">372,000</th>
+											</tr>
+											<tr class="total2_tr">
+												<th data-th="구분" class="align_center">회사수익 (A-B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">
+													<span class="blue">+138,000</span>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="easyEstimate_cont">
+							<div class="tbl_top tbl_top1">
+								<div class="leftbox">
+									<p class="total">작성일 : 2025-07-17 12:00:00 / 작성자 : 홍길동 매니저</p>
+								</div>
+								<div class="rightbox">
+									<button class="button typeE auto size_sm" type="button">복사하기</button>
+								</div>
+							</div>
+							<div class="tbl_top tbl_top2">
+								<div class="leftbox">
+									<button type="button" class="button size_sm auto typeE hide addDepositRowBtn">입금
+										+</button>
+									<button type="button" class="button size_sm auto typeF hide removeDepositRowBtn">입금
+										-</button>
+									<button type="button" class="button size_sm auto typeE hide addExpenditureRowBtn">지출
+										+</button>
+									<button type="button"
+										class="button size_sm auto typeF hide removeExpenditureRowBtn">지출 -</button>
+								</div>
+								<div class="rightbox">
+									<button type="button"
+										class="button size_sm auto typeC viewScheduleBtn">일정보기</button>
+									<button type="button" class="button size_sm auto typeE editBtn">수정</button>
+									<button type="button" class="button size_sm auto typeE hide saveBtn">저장</button>
+									<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+								</div>
+							</div>
+							<form method="post" action="" class="form">
+								<div class="tbl_titbox">
+									<div class="input_box">
+										<input type="text" class="input_text size_md" name="title"
+											value="[TKCWIT1D] 철원 한탄강 얼음 트레킹 축제 일일투어" readonly>
+									</div>
+								</div>
+								<div class="tbl_schedulebox">
+									<div class="tbl_schedule">
+										<div class="item">
+											<div class="head">출발일 & 가격표</div>
+											<div class="body input_box">
+												<textarea name="schedule_date"
+													class="input_text size_md h_auto align_center" rows="10"
+													readonly>출발 날짜 : 2025.07.15 ~ 2025.11.30&#13;&#10;출발 인원 :  6인&#13;&#10;평일출발 : 월, 수 출발&#13;&#10;&#13;&#10;비수가價錢&#13;&#10;B2C : 135,000원&#13;&#10;B2B : 125,000원&#13;&#10;원가 : 118,167원&#13;&#10;&#13;&#10;◆짚라인문경◆&#13;&#10;주소 : 경북 문경시 불정동 336-3&#13;&#10;토,일만 가능 09:00-17:00&#13;&#10;&#13;&#10;◆구랑리철로자전거◆&#13;&#10;주소: 경북 문경시 마성면 하내리 262-1&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;◆문경레저투어산악바이크◆&#13;&#10;주소: 경북 문경시 마성면 신현리 114-46&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;★중식 - 약돌한우프라자★&#13;&#10;-한우원기탕 (점심특선): 1인분 15,000원&#13;&#10;https://naver.me/5sszaw9X</textarea>
+											</div>
+										</div>
+										<div class="item">
+											<div class="head">일정표</div>
+											<div class="body input_box">
+												<textarea name="schedule_contents" class="input_text size_md h_auto"
+													rows="10"
+													readonly>06:30 - 06:30  홍대입구역 8번출구&#13;&#10;07:00 - 07:00  명동역 3번출구&#13;&#10;10:00 - 11:30  구랑리철로자전거 ★눈물의 여왕 촬영지&#13;&#10;12:00 - 13:00  중식-약돌한우프라자 (한우원기탕)&#13;&#10;13:30 - 15:00  짚라인 문경(2개코스) &#13;&#10;15:30 - 17:00  문경산악바이크 체험(ATV)  (2人一台) &#13;&#10;19:30 - 19:30  명동역 &#13;&#10;20:00 - 20:00  홍대입구역</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tbl_box content_tbl tbl_contbox">
+									<table class="tbl min_auto space_auto">
+										<colgroup>
+											<col style="width: 350px;">
+											<col style="width: 140px;">
+											<col style="width: 140px;">
+											<col style="width: 160px;">
+										</colgroup>
+										<thead>
+											<th data-th="구분">구분</th>
+											<th data-th="인원/대">인원/대</th>
+											<th data-th="단가">단가</th>
+											<th data-th="가격">가격</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="deposit_title1" value="1인비용" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_cnt1" value="6" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_unit_price1" value="85,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_total_price1" value="510,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">입금 소계 (A)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">510,000</th>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title2" value="KAS 11인승 (부포)" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt2" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price2" value="341,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price2" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title3" value="아주 11인승 (부포)" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt3" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price3" value="770,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price3" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title4" value="철원 한탄강 얼음 트레킹 축제입장료"
+															readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt4" value="6" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price4" value="10,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price4" value="60,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title5" value="가이드 식대" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt5" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price5" value="12,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price5" value="12,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title6" value="가이드" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt6" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price6" value="200,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price6" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">지출 소계 (B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">372,000</th>
+											</tr>
+											<tr class="total2_tr">
+												<th data-th="구분" class="align_center">회사수익 (A-B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">
+													<span class="blue">+138,000</span>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="easyEstimate_cont">
+							<div class="tbl_top tbl_top1">
+								<div class="leftbox">
+									<p class="total">작성일 : 2025-07-17 12:00:00 / 작성자 : 홍길동 매니저</p>
+								</div>
+								<div class="rightbox">
+									<button class="button typeE auto size_sm" type="button">복사하기</button>
+								</div>
+							</div>
+							<div class="tbl_top tbl_top2">
+								<div class="leftbox">
+									<button type="button" class="button size_sm auto typeE hide addDepositRowBtn">입금
+										+</button>
+									<button type="button" class="button size_sm auto typeF hide removeDepositRowBtn">입금
+										-</button>
+									<button type="button" class="button size_sm auto typeE hide addExpenditureRowBtn">지출
+										+</button>
+									<button type="button"
+										class="button size_sm auto typeF hide removeExpenditureRowBtn">지출 -</button>
+								</div>
+								<div class="rightbox">
+									<button type="button"
+										class="button size_sm auto typeC viewScheduleBtn">일정보기</button>
+									<button type="button" class="button size_sm auto typeE editBtn">수정</button>
+									<button type="button" class="button size_sm auto typeE hide saveBtn">저장</button>
+									<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+								</div>
+							</div>
+							<form method="post" action="" class="form">
+								<div class="tbl_titbox">
+									<div class="input_box">
+										<input type="text" class="input_text size_md" name="title"
+											value="[TKCWIT1D] 철원 한탄강 얼음 트레킹 축제 일일투어" readonly>
+									</div>
+								</div>
+								<div class="tbl_schedulebox">
+									<div class="tbl_schedule">
+										<div class="item">
+											<div class="head">출발일 & 가격표</div>
+											<div class="body input_box">
+												<textarea name="schedule_date"
+													class="input_text size_md h_auto align_center" rows="10"
+													readonly>출발 날짜 : 2025.07.15 ~ 2025.11.30&#13;&#10;출발 인원 :  6인&#13;&#10;평일출발 : 월, 수 출발&#13;&#10;&#13;&#10;비수가價錢&#13;&#10;B2C : 135,000원&#13;&#10;B2B : 125,000원&#13;&#10;원가 : 118,167원&#13;&#10;&#13;&#10;◆짚라인문경◆&#13;&#10;주소 : 경북 문경시 불정동 336-3&#13;&#10;토,일만 가능 09:00-17:00&#13;&#10;&#13;&#10;◆구랑리철로자전거◆&#13;&#10;주소: 경북 문경시 마성면 하내리 262-1&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;◆문경레저투어산악바이크◆&#13;&#10;주소: 경북 문경시 마성면 신현리 114-46&#13;&#10;09:00-17:00&#13;&#10;&#13;&#10;★중식 - 약돌한우프라자★&#13;&#10;-한우원기탕 (점심특선): 1인분 15,000원&#13;&#10;https://naver.me/5sszaw9X</textarea>
+											</div>
+										</div>
+										<div class="item">
+											<div class="head">일정표</div>
+											<div class="body input_box">
+												<textarea name="schedule_contents" class="input_text size_md h_auto"
+													rows="10"
+													readonly>06:30 - 06:30  홍대입구역 8번출구&#13;&#10;07:00 - 07:00  명동역 3번출구&#13;&#10;10:00 - 11:30  구랑리철로자전거 ★눈물의 여왕 촬영지&#13;&#10;12:00 - 13:00  중식-약돌한우프라자 (한우원기탕)&#13;&#10;13:30 - 15:00  짚라인 문경(2개코스) &#13;&#10;15:30 - 17:00  문경산악바이크 체험(ATV)  (2人一台) &#13;&#10;19:30 - 19:30  명동역 &#13;&#10;20:00 - 20:00  홍대입구역</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tbl_box content_tbl tbl_contbox">
+									<table class="tbl min_auto space_auto">
+										<colgroup>
+											<col style="width: 350px;">
+											<col style="width: 140px;">
+											<col style="width: 140px;">
+											<col style="width: 160px;">
+										</colgroup>
+										<thead>
+											<th data-th="구분">구분</th>
+											<th data-th="인원/대">인원/대</th>
+											<th data-th="단가">단가</th>
+											<th data-th="가격">가격</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="deposit_title1" value="1인비용" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_cnt1" value="6" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_unit_price1" value="85,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="deposit_total_price1" value="510,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">입금 소계 (A)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">510,000</th>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title2" value="KAS 11인승 (부포)" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt2" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price2" value="341,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price2" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title3" value="아주 11인승 (부포)" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt3" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price3" value="770,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price3" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title4" value="철원 한탄강 얼음 트레킹 축제입장료"
+															readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt4" value="6" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price4" value="10,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price4" value="60,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title5" value="가이드 식대" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt5" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price5" value="12,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price5" value="12,000" readonly>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="구분">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															name="expenditure_title6" value="가이드" readonly>
+													</div>
+												</td>
+												<td data-th="인원/대" class="align_right">
+													<div class="input_box">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_cnt6" value="0" readonly>
+													</div>
+												</td>
+												<td data-th="단가">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_unit_price6" value="200,000" readonly>
+													</div>
+												</td>
+												<td data-th="가격">
+													<div class="input_box" class="align_right">
+														<input type="text" class="input_text size_md align_right"
+															name="expenditure_total_price6" value="0" readonly>
+													</div>
+												</td>
+											</tr>
+
+											<tr class="total_tr">
+												<th data-th="구분" class="align_center">지출 소계 (B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">372,000</th>
+											</tr>
+											<tr class="total2_tr">
+												<th data-th="구분" class="align_center">회사수익 (A-B)</th>
+												<th data-th="인원/대" class="align_right"></th>
+												<th data-th="단가" class="align_right"></th>
+												<th data-th="가격" class="align_right">
+													<span class="blue">+138,000</span>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 간편 견적서 등록 모달 -->
+		<div id="addEasyEstimate_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">간편 견적서 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="easyEstimate_cont">
+						<form id="reg_fm" name="reg_fm" autocomplete="off" method="post" enctype="multipart/form-data"
+							class="form">
+							<div class="tbl_titbox">
+								<div class="input_box">
+									<input type="text" class="input_text size_md" name="title" placeholder="제목">
+								</div>
+							</div>
+							<div class="tbl_schedule">
+								<div class="item">
+									<div class="head">날짜</div>
+									<div class="body input_box">
+										<textarea name="schedule_date" class="input_text size_md h_auto"
+											rows="10"></textarea>
+									</div>
+								</div>
+								<div class="item">
+									<div class="head">일정표</div>
+									<div class="body input_box">
+										<textarea name="schedule_contents" class="input_text size_md h_auto"
+											rows="10"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="tbl_box content_tbl tbl_contbox">
+								<table class="tbl min_auto space_auto">
+									<colgroup>
+										<col style="width: 300px;">
+										<col style="width: 90px;">
+										<col style="width: 160px;">
+										<col style="width: 160px;">
+									</colgroup>
+									<thead>
+										<th data-th="구분">구분</th>
+										<th data-th="인원/대">인원/대</th>
+										<th data-th="단가">단가</th>
+										<th data-th="가격">가격</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="deposit_title1" class="input_text size_md"
+														value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="deposit_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="deposit_title1" class="input_text size_md"
+														value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="deposit_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="deposit_title1" class="input_text size_md"
+														value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="deposit_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="deposit_title1" class="input_text size_md"
+														value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="deposit_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="deposit_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr class="total_tr">
+											<th data-th="구분" class="align_center">입금 소계 (A)</th>
+											<th data-th="인원/대" class="align_right"></th>
+											<th data-th="단가" class="align_right"></th>
+											<th data-th="가격" class="align_right">0</th>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="구분">
+												<div class="input_box">
+													<input type="text" name="expenditure_title1"
+														class="input_text size_md" value="">
+												</div>
+											</td>
+											<td data-th="인원/대" class="align_right">
+												<div class="input_box">
+													<input type="text" name="expenditure_cnt1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="단가">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_unit_price1"
+														class="input_text size_md align_right" value="">
+												</div>
+											</td>
+											<td data-th="가격">
+												<div class="input_box" class="align_right">
+													<input type="text" name="expenditure_total_price1"
+														class="input_text size_md align_right" value="0" readonly>
+												</div>
+											</td>
+										</tr>	
+										<tr class="total_tr">
+											<th data-th="구분" class="align_center">지출 소계 (B)</th>
+											<th data-th="인원/대" class="align_right"></th>
+											<th data-th="단가" class="align_right"></th>
+											<th data-th="가격" class="align_right">0</th>
+										</tr>
+										<tr class="total2_tr">
+											<th data-th="구분" class="align_center">회사수익 (A-B)</th>
+											<th data-th="인원/대" class="align_right"></th>
+											<th data-th="단가" class="align_right"></th>
+											<th data-th="가격" class="align_right">
+												<span class="blue">0</span>
+											</th>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_erp.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(1).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(2).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- 일정보기 버튼 -->
+	<script>
+		$(document).on("click", ".viewScheduleBtn", function () {
+			const container = $(this).closest(".easyEstimate_cont");
+			const scheduleBox = container.find(".tbl_schedulebox");
+
+			if (!scheduleBox.hasClass("show")) {
+				scheduleBox.slideDown(400).addClass("show");
+				$(this).text("일정닫기");
+			} else {
+				scheduleBox.slideUp(400).removeClass("show");
+				$(this).text("일정보기");
+			}
+		});
+	</script>
+	
+
+	<!-- 수정 버튼 -->
+	<script>
+		$(document).on("click", ".editBtn", function () {
+			const container = $(this).closest(".easyEstimate_cont");
+			container.find("input, textarea").prop("readonly", false);
+			container.find(".editBtn").addClass("hide");
+			container.find(".saveBtn").removeClass("hide");
+			container.find(".addDepositRowBtn, .removeDepositRowBtn, .addExpenditureRowBtn, .removeExpenditureRowBtn")
+				.removeClass("hide");
+		});
+	</script>
+
+	<!-- 임시 저장 버튼 -->
+	<script>
+		$(document).on("click", ".saveBtn", function () {
+			const container = $(this).closest(".easyEstimate_cont");
+			container.find("input, textarea").prop("readonly", true);
+			container.find(".editBtn").removeClass("hide");
+			container.find(".saveBtn").addClass("hide");
+			container.find(".addDepositRowBtn, .removeDepositRowBtn, .addExpenditureRowBtn, .removeExpenditureRowBtn")
+				.addClass("hide");
+		});
+	</script>
+
+
+	<!-- modal button -->
+	<script>
+		// addEasyEstimate modal
+		function addEasyEstimate_modal() {
+			$(".modal").removeClass("show");
+			$("#addEasyEstimate_modal").addClass("show");
+		}
+	</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
