@@ -1469,43 +1469,22 @@
 						type: 'category',
 						data: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 						boundaryGap: false,
-						axisLine: {
-							show: false
-						},
-						axisLabel: {
-							show: false
-						},
-						axisTick: {
-							show: false
-						},
-						axisPointer: {
-							type: 'none'
-						}
+						axisLine: { show: false },
+						axisLabel: { show: false },
+						axisTick: { show: false },
+						axisPointer: { type: 'none' }
 					},
 					yAxis: {
 						type: 'value',
-						splitLine: {
-							show: false
-						},
-						axisLine: {
-							show: false
-						},
-						axisLabel: {
-							show: false
-						},
-						axisTick: {
-							show: false
-						},
-						axisPointer: {
-							type: 'none'
-						}
+						splitLine: { show: false },
+						axisLine: { show: false },
+						axisLabel: { show: false },
+						axisTick: {	show: false },
+						axisPointer: { type: 'none' }
 					},
 					series: [{
 						type: 'bar',
 						showBackground: true,
-						backgroundStyle: {
-							borderRadius: 10
-						},
 						barWidth: '32%',
 						itemStyle: {
 							barBorderRadius: 10,
@@ -1587,23 +1566,23 @@
 					return months;
 				};
 
-				 var tooltipFormatter = function tooltipFormatter(params) {
-					var tooltipItem = '';
+				let tooltipFormatter = function tooltipFormatter(params) {
+					let tooltipItem = '';
 					params.forEach(function (el) {
 						tooltipItem += `
-							<div class='ms-1'>
-								<h6 class="text-700">
-									<span class="fas fa-circle me-1 fs-11" style="color:${el.borderColor ? el.borderColor : el.color}"></span>
-
+							<div class="descbox">
+								<p class="desc">
+									<span class="ph-fill ph-circle" style="color:${el.borderColor ? el.borderColor : el.color}"></span>
+									<span class="txt">
 									${el.seriesName} : ${typeof el.value === 'object' ? el.value[1].toLocaleString() : el.value.toLocaleString()}
-
-								</h6>
+									</span>
+								</p>
 							</div>
 						`;
 					});
 					return `
-						<div>
-							<p class='mb-2 text-600'>
+						<div class="chart_tooltip">
+							<p class='title'>
 								${params[0].axisValue}
 							</p>
 							${tooltipItem}
@@ -1616,45 +1595,27 @@
 						data: ['Inbound', 'K-pop', 'Tourboss', 'Other'],
 						top: 0,
 						left: 0,
-						itemWidth: 10,
-						itemHeight: 10,
+						itemWidth: 12,
+						itemHeight: 12,
 						icon: 'circle',
-						inactiveColor: '#CED4DA',
-						textStyle: {
-							color: '#495057'
-						},
+						inactiveColor: '#0c3f81',
+						textStyle: { color: '#434343', fontSize: 14, },
 						itemGap: 20
 					}],
 					xAxis: {
 						type: 'category',
 						data: getLast12Months(),
-						axisLine: {
-							show: false
-						},
-						axisTick: {
-							show: false
-						},
-						axisLabel: {
-							color: '#6C757D'
-						},
-						splitLine: {
-							show: false 
-						}
+						axisLine: { show: false },
+						axisTick: { show: false },
+						axisLabel: { color: '#6C757D' },
+						splitLine: { show: false  }
 					},
 					yAxis: {
 						type: 'value',
 						position: 'right',
-						axisLine: {
-							show: false
-						},
-						axisTick: {
-							show: false
-						},
-						splitLine: {
-							lineStyle: {
-								color: '#f0f4fa'
-							}
-						},
+						axisLine: { show: false },
+						axisTick: { show: false },
+						splitLine: { lineStyle: { color: 'rgba(0,0,0,0.08)' } },
 						axisLabel: {
 							show: true,
 							color: '#6C757D',
@@ -1666,22 +1627,18 @@
 					},
 					tooltip: {
 						trigger: 'axis',
-						padding: [7, 10],
-						axisPointer: {
-							type: 'none'
-						},
-						backgroundColor: '#F8F9FA',
+						padding: [10, 10],
+						axisPointer: { type: 'none' },
+						backgroundColor: '#ffffff',
 						borderColor: '#DEE2E6',
-						textStyle: {
-							color: '#212529'
-						},
+						textStyle: {color: '#000000'},
 						borderWidth: 1,
 						transitionDuration: 0,
-						position: function (pos, params, dom, rect, size) {
-							if (typeof getPosition === 'function') {
-								return getPosition(pos, params, dom, rect, size);
-							}
-							return pos;
+						position: function(pos, params, dom, rect, size) {
+							const offsetY = 10;
+							const x = pos[0] - dom.clientWidth / 2;
+							const y = pos[1] - dom.clientHeight - offsetY;
+							return [x, y];
 						},
 						formatter: tooltipFormatter
 					},
@@ -1723,13 +1680,13 @@
 							type: 'bar',
 							stack: 'total',
 							itemStyle: {
-								color: '#abcaf5'
+								color: '#92c5fd'
 							},
 						}
 					],
 					grid: {
-						right: '50px',
-						left: '0px',
+						right: '0%',
+						left: '0%',
 						bottom: '10%',
 						top: '15%'
 					}

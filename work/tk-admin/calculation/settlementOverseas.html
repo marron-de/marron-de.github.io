@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout calculation_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-calculator icon"></i>
+						B2B 거래처(국내) 월별정산내역
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="검색년월">검색년월</th>
+										<td data-th="검색년월">
+											<div class="tbl_inline">
+												<div class="select_box">
+													<select name="period_yy_s" id="item_period_yy" class="select size_md">
+														<option value="2026">2026년</option>
+														<option value="2025" selected=">2025년</option>
+														<option value="2024">2024년</option>
+														<option value="2023">2023년</option>
+														<option value="2022">2022년</option>
+														<option value="2021">2021년</option>
+														<option value="2020">2020년</option>
+														<option value="2019">2019년</option>
+													</select>
+												</div>
+												<div class="tab_wrap">
+													<div class="tab_navbox tabs_ver">
+														<div class="tab_nav"><span class="link">1월</span></div>
+														<div class="tab_nav"><span class="link">2월</span></div>
+														<div class="tab_nav"><span class="link">3월</span></div>
+														<div class="tab_nav"><span class="link">4월</span></div>
+														<div class="tab_nav"><span class="link">5월</span></div>
+														<div class="tab_nav"><span class="link">6월</span></div>
+														<div class="tab_nav"><span class="link">7월</span></div>
+														<div class="tab_nav on"><span class="link">8월</span></div>
+														<div class="tab_nav"><span class="link">9월</span></div>
+														<div class="tab_nav"><span class="link">10월</span></div>
+														<div class="tab_nav"><span class="link">11월</span></div>
+														<div class="tab_nav"><span class="link">12월</span></div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="boardList_fm" id="boardList_fm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="title title_size_bg"><span class="color">2025년 08월 거래처 매출 내역</span></p>
+							</div>
+							<div class="rightbox"></div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl calculation_list min_auto">
+								<colgroup>
+									<col style="width: 260px;">
+									<col style="width: 70px;">
+									<col style="width: 140px;">
+									<col style="width: 70px;">
+									<col style="width: 140px;">
+									<col style="width: 70px;">
+									<col style="width: 140px;">
+									<col style="width: 70px;">
+									<col style="width: 140px;">
+									<col style="width: 70px;">
+									<col style="width: 140px;">
+									<col style="width: 70px;">
+									<col style="width: 140px;">
+									<col style="width: 120px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="거래처명" rowspan="2">거래처명</th>
+										<th data-th="자유여행" colspan="2">자유여행</th>
+										<th data-th="버스여행" colspan="2">버스여행</th>
+										<th data-th="티켓" colspan="2">티켓</th>
+										<th data-th="공항픽업" colspan="2">공항픽업</th>
+										<th data-th="버스렌트" colspan="2">버스렌트</th>
+										<th data-th="총합계" colspan="2">총합계</th>
+										<th data-th="인보이스" rowspan="2">인보이스</th>
+									</tr>
+									<tr>
+										<th data-th="수량">수량</th>
+										<th data-th="금액">금액</th>
+										<th data-th="수량">수량</th>
+										<th data-th="금액">금액</th>
+										<th data-th="수량">수량</th>
+										<th data-th="금액">금액</th>
+										<th data-th="수량">수량</th>
+										<th data-th="금액">금액</th>
+										<th data-th="수량">수량</th>
+										<th data-th="금액">금액</th>
+										<th data-th="수량">수량</th>
+										<th data-th="금액" class="border">금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="거래처명" class="align_left">TK TRAVEL</td>
+										<td data-th="자유여행 수량">0</td>
+										<td data-th="자유여행 금액" class="align_right">0</td>
+										<td data-th="버스여행 수량">3</td>
+										<td data-th="버스여행 금액" class="align_right">3,244,072</td>
+										<td data-th="티켓 수량">128</td>
+										<td data-th="티켓 금액" class="align_right">43,795,000</td>
+										<td data-th="공항픽업 수량">0</td>
+										<td data-th="공항픽업 금액" class="align_right">0</td>
+										<td data-th="버스렌트 수량">2</td>
+										<td data-th="버스렌트 금액" class="align_right">939,400</td>
+										<td data-th="총합계 수량" class="point">135</td>
+										<td data-th="총합계 금액" class="point align_right">48,156,672</td>
+										<td data-th="인보이스">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeF auto size_sm">
+													<span class="txt">EXCEL</span>
+													<i class="ph-bold ph-download-simple"></i>
+												</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="거래처명" class="align_left">creatrip</td>
+										<td data-th="자유여행 수량">0</td>
+										<td data-th="자유여행 금액" class="align_right">0</td>
+										<td data-th="버스여행 수량">2</td>
+										<td data-th="버스여행 금액" class="align_right">928,200</td>
+										<td data-th="티켓 수량">0</td>
+										<td data-th="티켓 금액" class="align_right">0</td>
+										<td data-th="공항픽업 수량">2</td>
+										<td data-th="공항픽업 금액" class="align_right">190,000</td>
+										<td data-th="버스렌트 수량">0</td>
+										<td data-th="버스렌트 금액" class="align_right">0</td>
+										<td data-th="총합계 수량" class="point">4</td>
+										<td data-th="총합계 금액" class="point align_right">1,118,200</td>
+										<td data-th="인보이스">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeF auto size_sm">
+													<span class="txt">EXCEL</span>
+													<i class="ph-bold ph-download-simple"></i>
+												</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="거래처명" class="align_left">LION 雄獅</td>
+										<td data-th="자유여행 수량">0</td>
+										<td data-th="자유여행 금액" class="align_right">0</td>
+										<td data-th="버스여행 수량">0</td>
+										<td data-th="버스여행 금액" class="align_right">0</td>
+										<td data-th="티켓 수량">0</td>
+										<td data-th="티켓 금액" class="align_right">0</td>
+										<td data-th="공항픽업 수량">10</td>
+										<td data-th="공항픽업 금액" class="align_right">1,060,000</td>
+										<td data-th="버스렌트 수량">0</td>
+										<td data-th="버스렌트 금액" class="align_right">0</td>
+										<td data-th="총합계 수량" class="point">10</td>
+										<td data-th="총합계 금액" class="point align_right">1,080,000</td>
+										<td data-th="인보이스">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeF auto size_sm">
+													<span class="txt">EXCEL</span>
+													<i class="ph-bold ph-download-simple"></i>
+												</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="거래처명" class="align_left">TRIP.COM</td>
+										<td data-th="자유여행 수량">0</td>
+										<td data-th="자유여행 금액" class="align_right">0</td>
+										<td data-th="버스여행 수량">0</td>
+										<td data-th="버스여행 금액" class="align_right">0</td>
+										<td data-th="티켓 수량">3</td>
+										<td data-th="티켓 금액" class="align_right">685,000</td>
+										<td data-th="공항픽업 수량">0</td>
+										<td data-th="공항픽업 금액" class="align_right">0</td>
+										<td data-th="버스렌트 수량">0</td>
+										<td data-th="버스렌트 금액" class="align_right">0</td>
+										<td data-th="총합계 수량" class="point">3</td>
+										<td data-th="총합계 금액" class="point align_right">685,000</td>
+										<td data-th="인보이스">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeF auto size_sm">
+													<span class="txt">EXCEL</span>
+													<i class="ph-bold ph-download-simple"></i>
+												</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="거래처명" class="align_left">KKDAY</td>
+										<td data-th="자유여행 수량">0</td>
+										<td data-th="자유여행 금액" class="align_right">0</td>
+										<td data-th="버스여행 수량">0</td>
+										<td data-th="버스여행 금액" class="align_right">0</td>
+										<td data-th="티켓 수량">2</td>
+										<td data-th="티켓 금액" class="align_right">225,000</td>
+										<td data-th="공항픽업 수량">0</td>
+										<td data-th="공항픽업 금액" class="align_right">0</td>
+										<td data-th="버스렌트 수량">0</td>
+										<td data-th="버스렌트 금액" class="align_right">0</td>
+										<td data-th="총합계 수량" class="point">2</td>
+										<td data-th="총합계 금액" class="point align_right">225,000</td>
+										<td data-th="인보이스">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeF auto size_sm">
+													<span class="txt">EXCEL</span>
+													<i class="ph-bold ph-download-simple"></i>
+												</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="거래처명" class="align_left">KLOOK</td>
+										<td data-th="자유여행 수량">1</td>
+										<td data-th="자유여행 금액" class="align_right">220,000</td>
+										<td data-th="버스여행 수량">0</td>
+										<td data-th="버스여행 금액" class="align_right">0</td>
+										<td data-th="티켓 수량">0</td>
+										<td data-th="티켓 금액" class="align_right">0</td>
+										<td data-th="공항픽업 수량">0</td>
+										<td data-th="공항픽업 금액" class="align_right">0</td>
+										<td data-th="버스렌트 수량">0</td>
+										<td data-th="버스렌트 금액" class="align_right">0</td>
+										<td data-th="총합계 수량" class="point">1</td>
+										<td data-th="총합계 금액" class="point align_right">220,000</td>
+										<td data-th="인보이스">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeF auto size_sm">
+													<span class="txt">EXCEL</span>
+													<i class="ph-bold ph-download-simple"></i>
+												</button>
+											</div>
+										</td>						
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+
+				<div class="content_list">
+					<div class="tbl_top">
+						<div class="leftbox">
+							<p class="title title_size_bg"><span class="color">2025년 08월 통계자료</span></p>
+						</div>
+						<div class="rightbox"></div>
+					</div>
+					<div class="content_chart">
+						<div id="b2b_chart" class="chart"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_calculation.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(2).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(7).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- echarts -->
+	<script src="https://cdn.jsdelivr.net/npm/echarts@6.0.0/dist/echarts.min.js"></script>
+	<script>
+		const chartEl = document.getElementById('b2b_chart');
+		const myChart = echarts.init(chartEl);
+
+		let tooltipFormatter = function tooltipFormatter(params) {
+			let tooltipItem = '';
+			  params.forEach(function(el) {
+				const color = el.data.tooltipColor || '#000';
+				tooltipItem += `
+					<div class="descbox">
+						<p class="desc">
+							<span class="ph-fill ph-circle" style="color:${color}"></span>
+							<span class="txt">${el.value.toLocaleString()}</span>
+						</p>
+					</div>
+				`;
+			});
+			return `
+				<div class="chart_tooltip">
+					<p class='title'>${params[0].axisValue}</p>
+					${tooltipItem}
+				</div>
+			`;
+		};
+
+		const barData = [
+			{ value: 48156672, tooltipColor: '#92c5fd', itemStyle: { color: new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:'#d3e8ff'},{offset:1,color:'#92c5fd'}]) } },
+			{ value: 1118200, tooltipColor: '#60abfc', itemStyle: { color: new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:'#92c5fd'},{offset:1,color:'#60abfc'}]) } },
+			{ value: 1080000, tooltipColor: '#479efb', itemStyle: { color: new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:'#60abfc'},{offset:1,color:'#479efb'}]) } },
+			{ value: 685000, tooltipColor: '#126dd9', itemStyle: { color: new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:'#479efb'},{offset:1,color:'#126dd9'}]) } },
+			{ value: 225000, tooltipColor: '#1657a7', itemStyle: { color: new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:'#126dd9'},{offset:1,color:'#1657a7'}]) } },
+			{ value: 220000,  tooltipColor: '#0c3f81', itemStyle: { color: new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:'#1657a7'},{offset:1,color:'#0c3f81'}]) } },
+		];
+
+		const maxValue = Math.max(...barData.map(d => d.value));
+
+		const option = {
+			xAxis: {
+				type: 'value',
+				position: 'top',
+				axisLine: { show: false },
+				axisTick: { show: false },
+				splitLine: { show: true, lineStyle: { color: 'rgba(0,0,0,0.08)' } },
+				 splitNumber: 10,
+				axisLabel: { 
+					show: true, 
+					color: '#6C757D', 
+					margin: 20,
+				},
+			},
+			yAxis: {
+				type: 'category',
+				inverse: true, 
+				data: ['TK TRAVEL', 'creatrip', 'LION 雄獅', 'TRIP.COM', 'KKDAY', 'KLOOK'],
+				axisLine: { show: false },
+				axisTick: { show: false },
+				splitLine: { show: false },
+				axisLabel: { show: true, color: '#6C757D', 	margin: 20, },
+			},
+			tooltip: {
+				trigger: 'axis',
+				padding: [10, 10],
+				axisPointer: { type: 'none' },
+				backgroundColor: '#ffffff',
+				borderColor: '#DEE2E6',
+				textStyle: {color: '#000000'},
+				borderWidth: 1,
+				transitionDuration: 0,
+				position: function(pos, params, dom, rect, size) {
+					const offsetY = 10;
+					const x = pos[0] - dom.clientWidth / 2;
+					const y = pos[1] - dom.clientHeight - offsetY;
+					return [x, y];
+				},
+				formatter: tooltipFormatter
+			},
+			series: [{
+				type: 'bar',
+				data: barData,
+				barWidth: 40,
+				label: {
+					show: true,
+					position: 'right',
+					color: '#00306b',  
+					fontSize: 12,
+					formatter: function(params) {
+						return params.value.toLocaleString(); 
+					}
+				}
+			}],
+			grid: {
+				right: '5%',
+				left: '5%',
+				bottom: '0%',
+				top: '10%'
+			}
+		};
+
+		myChart.setOption(option);
+
+		const ro = new ResizeObserver(() => myChart.resize());
+		ro.observe(chartEl.parentElement);
+		window.addEventListener('resize', () => myChart.resize());
+
+	</script>
+
+
+
+
+</body>
+
+</html>
