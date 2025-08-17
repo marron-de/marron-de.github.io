@@ -95,8 +95,7 @@ $(document).on('click', '.popup .pop_close', function () {
     $(this).closest(".popup").removeClass("show");
 });
 $(document).mouseup(function (e) {
-	if ($(".popup").has(e.target).length === 0 ) {		
-		$("body").removeClass("popup");
+	if ($(".popup").has(e.target).length === 0 ) {	
 		$(".popup").removeClass("show")
 	}
 });
