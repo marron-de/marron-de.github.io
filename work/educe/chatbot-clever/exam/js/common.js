@@ -58,3 +58,11 @@ $(document).on('click', '.exam_wrap .result_example .more_answer', function () {
         btn.text("풀이 및 정답");
     }
 });
+
+
+/* 내용닫기 버튼 */
+$(document).on('click', '.exam_wrap .result_close', function () {
+    $(".exam_wrap").removeClass("result_open");
+    $(".exam_wrap .exam_bottom .exam_button").removeClass("on");
+    $(".exam_wrap .result_cont").removeClass("show");
+});
