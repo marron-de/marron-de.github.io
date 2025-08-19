@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout good_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-suitcase-rolling icon"></i>
+						상품등록
+					</p>
+				</div>
+				
+				<div class="content_write">
+					<div class="tab_wrap">
+						<div class="tab_navbox">
+							<div class="leftbox">
+								<div class="tab_nav on">
+									<span class="link">기본정보</span>
+								</div>
+							</div>
+							<div class="rightbox">
+								<button type="button" class="button size_sm auto typeE">저장</button>
+							</div>
+						</div>
+						<div class="tab_contbox">
+							<div class="tab_cont on" data-th="기본정보">
+								<div class="goodAdd_write">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 쿠팡 상품코드 모달 -->
+		<div id="coupangSearchProduct_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">쿠팡 상품코드</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					
+					
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_good.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(3).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// coupangSearchProduct modal
+		function categoryManage_modal() {
+			$(".modal").removeClass("show");
+			$("#coupangSearchProduct_modal").addClass("show");
+		}
+	</script>
+
+
+
+
+</body>
+
+</html>

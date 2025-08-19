@@ -1,0 +1,1079 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout good_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-suitcase-rolling icon"></i>
+						상품 해시태그 등록
+					</p>
+				</div>
+
+				<div class="content_write goodAdd_write">
+					<div class="good_addbox">
+						<div class="item">
+							<form name="frm_ins" id="frm_ins" method="post" enctype="multipart/form-data" class="form">
+								<p class="form_tit">해시태그 이미지 등록</p>
+								<div class="form_box">
+									<div class="input_box input_flex input_file_box">
+										<p class="label_text size_md">아이콘 파일</p>	
+										<div class="input_flex full">
+											<input type="file" class="input_file" id="userFile1" name="userFile1">
+											<label for="userFile1" class="label_file size_md" >선택된 파일 없음</label>
+											<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+										</div>
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">아이콘 문구</label>
+										<input type="text" name="img_desc" class="input_text size_md" required="">
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">상품언어</label>
+										<div class="select_box">
+											<select name="lang" class="select size_md">
+												<option value="ko">한국어</option>
+												<option value="en">영어</option>
+												<option value="hk">번체</option>
+												<option value="cn">간체</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form_btnbox">
+									<button type="button" class="button size_md typeE auto">신규생성</button>
+								</div>
+							</form>
+						</div>
+						<div class="bar"></div>
+						<div class="item">
+							<form name="frm_edit" id="frm_edit" method="post" enctype="multipart/form-data" class="form">
+								<p class="form_tit">해시태그 이미지 편집</p>
+								<div class="form_box">
+									<div class="input_box input_flex input_file_box">
+										<p class="label_text size_md">아이콘 파일</p>	
+										<div class="input_flex full">
+											<input type="file" class="input_file" id="userFile1" name="userFile1">
+											<label for="userFile1" class="label_file size_md" >선택된 파일 없음</label>
+											<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+										</div>
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">아이콘 문구</label>
+										<input type="text" name="img_desc" class="input_text size_md" required="" value="투어텔">
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">상품언어</label>
+										<div class="select_box">
+											<select name="lang" class="select size_md">
+												<option value="ko" selected>한국어</option>
+												<option value="en">영어</option>
+												<option value="hk">번체</option>
+												<option value="cn">간체</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form_btnbox">
+									<button type="button" class="button size_md typeE auto">수정저장</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="good_listbox">
+						<div class="listbox">
+							<p class="title">한국어</p>
+							<ul class="list">
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView1">
+											<label for="koView1" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView2">
+											<label for="koView2" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView3">
+											<label for="koView3" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView4">
+											<label for="koView4" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView5">
+											<label for="koView5" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView6">
+											<label for="koView6" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView7">
+											<label for="koView7" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView8">
+											<label for="koView8" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView9">
+											<label for="koView9" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="koView10">
+											<label for="koView10" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="listbox">
+							<p class="title">영어</p>
+							<ul class="list">
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView1">
+											<label for="enView1" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView2">
+											<label for="enView2" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView3">
+											<label for="enView3" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView4">
+											<label for="enView4" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView5">
+											<label for="enView5" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView6">
+											<label for="enView6" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView7">
+											<label for="enView7" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView8">
+											<label for="enView8" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView9">
+											<label for="enView9" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="enView10">
+											<label for="enView10" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="listbox">
+							<p class="title">중국어 번체</p>
+							<ul class="list">
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView1">
+											<label for="twView1" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView2">
+											<label for="twView2" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView3">
+											<label for="twView3" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView4">
+											<label for="twView4" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView5">
+											<label for="twView5" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView6">
+											<label for="twView6" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView7">
+											<label for="twView7" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView8">
+											<label for="twView8" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView9">
+											<label for="twView9" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="twView10">
+											<label for="twView10" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="listbox">
+							<p class="title">중국어 간체</p>
+							<ul class="list">
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView1">
+											<label for="cnView1" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView2">
+											<label for="cnView2" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView3">
+											<label for="cnView3" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView4">
+											<label for="cnView4" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView5">
+											<label for="cnView5" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView6">
+											<label for="cnView6" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView7">
+											<label for="cnView7" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView8">
+											<label for="cnView8" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView9">
+											<label for="cnView9" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="descbox">
+										<p class="tit">아이콘 이름</p>
+										<p class="desc">투어텔</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">아이콘 이미지</p>
+										<p class="desc">
+											<img src="../img/badge/hashtag_투어텔.png" alt="" class="imgbadge">
+										</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="cnView10">
+											<label for="cnView10" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+											<button type="button" class="badge size_bg typeH">삭제</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_good.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(3).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

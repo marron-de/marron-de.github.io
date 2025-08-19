@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 카테고리관리 모달 -->
+		<div id="categoryManage_modal" class="modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">카테고리관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="goodAdd_write">
+						<div class="good_addbox">
+							<div class="item">
+								<form name="frm_ins" id="frm_ins" method="post" enctype="multipart/form-data" class="form">
+									<p class="form_tit">카테고리  생성</p>
+									<div class="form_box ver2">
+										<div class="input_box input_flex">
+											<label class="label_text size_md">카테고리명</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="">
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(PC)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile1" name="userFile1">
+												<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(MOBILE)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile2" name="userFile2">
+												<label for="userFile2" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex">
+											<label class="label_text size_md">링크</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="">
+										</div>
+									</div>
+									<div class="form_btnbox">
+										<button type="button" class="button size_md typeE auto">신규생성</button>
+									</div>
+								</form>
+							</div>
+							<div class="bar"></div>
+							<div class="item">
+								<form name="frm_edit" id="frm_edit" method="post" enctype="multipart/form-data" class="form">
+									<p class="form_tit">카테고리 편집</p>
+									<div class="form_box ver2">
+										<div class="input_box input_flex">
+											<label class="label_text size_md">카테고리명</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="" value="테스트카테고리 ">
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(PC)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile1" name="userFile1">
+												<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(MOBILE)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile2" name="userFile2">
+												<label for="userFile2" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex">
+											<label class="label_text size_md">링크</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="" value="https://test.com/">
+										</div>
+									</div>
+									<div class="form_btnbox">
+										<button type="button" class="button size_md typeE auto">수정저장</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="good_listbox">
+							<div class="listbox">
+								<p class="title">카테고리 섹션</p>
+								<ul class="list ver4">
+									<li class="item">
+										<div class="descbox">
+											<p class="tit">카테고리명</p>
+											<p class="desc">테스트 카테고리</p>
+										</div>
+										<div class="descbox">
+											<p class="tit">이미지(PC)</p>
+											<p class="desc">
+												<img src="../img/profile_temp.jpg" alt="" class="imgbadge">
+											</p>
+										</div>
+										<div class="descbox">
+											<p class="tit">이미지(MOBILE)</p>
+											<p class="desc">
+												<img src="../img/profile_temp.jpg" alt="" class="imgbadge">
+											</p>
+										</div>
+										<div class="descbox">
+											<p class="tit">링크</p>
+											<p class="desc">https://test.com/</p>
+										</div>
+										<div class="bottombox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check" id="koView1">
+												<label for="koView1" class="label_check">노출</label>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="badge size_bg typeG">수정</button>
+												<button type="button" class="badge size_bg typeH">삭제</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

@@ -36,16 +36,16 @@ $(document).on('click', '.clvr_popup .pop_menu', function () {
 
 /* clvr menu popup hover*/
 $(document).on("click", ".clvr_menu_popup .menu_box .item", function (e) {
-  e.stopPropagation();
-	 const target = $(this);
-  const isActive = target.hasClass("hover");
-  $(".clvr_menu_popup .menu_box .item").removeClass("hover");
-  if (!isActive) target.addClass("hover");
+	e.stopPropagation();
+	const target = $(this);
+	const isActive = target.hasClass("hover");
+	$(".clvr_menu_popup .menu_box .item").removeClass("hover");
+	if (!isActive) target.addClass("hover");
 });
 $(document).on("click", function (e) {
-  if (!$(e.target).closest(".clvr_menu_popup .menu_box .item").length) {
-    $(".clvr_menu_popup .menu_box .item").removeClass("hover");
-  }
+	if (!$(e.target).closest(".clvr_menu_popup .menu_box .item").length) {
+		$(".clvr_menu_popup .menu_box .item").removeClass("hover");
+	}
 });
 
 

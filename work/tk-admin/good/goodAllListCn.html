@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout estimate_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-files icon"></i>
+						TK TRAVEL(간체) 판매중 상품 리스트
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어">
+											<div class="tbl_inline">
+												<div class="select_box search_select">
+													<select name="g_ok" id="g_ok" class="select size_md">
+														<option value="">사용여부</option>
+														<option value="Y">판매중</option>
+														<option value="N">판매중지</option>
+													</select>
+												</div>
+												<div class="select_box">
+													<select name="b_uid_s" id="b_uid_s" class="select size_md">
+														<option value="">상품카테고리</option>
+														<option value="153">할인티켓</option>
+														<option value="163">해외자유여행</option>
+														<option value="117">해외패키지</option>
+														<option value="92">해외eSIM</option>
+														<option value="157">외식쿠폰</option>
+														<option value="162">픽업/샌딩</option>
+													</select>
+												</div>
+												<div class="select_box">
+													<select name="kind_code" id="kind_code" class="select size_md">
+                                    					<option value="">투어종류</option>
+														<option value="TKND001">연중상품</option>
+														<option value="TKND002">봄한정</option>
+														<option value="TKND003">여름한정</option>
+														<option value="TKND004">가을한정</option>
+														<option value="TKND005">겨울한정</option>
+														<option value="TKND006">패키지상품</option>
+														<option value="TKND007">축제행사</option>
+													</select>
+												</div>
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto">검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="boardList_fm" id="boardList_fm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="total">
+									Total <span class="color">254</span>
+								</p>
+							</div>
+							<div class="rightbox">
+								<div class="tab_wrap size_md">
+									<div class="tab_navbox tabs_ver">
+										<div class="tab_nav on">
+											<a href="#none" class="link">CNY</a>
+										</div>
+										<div class="tab_nav">
+											<a href="#none" class="link">KRW</a>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="button size_sm auto typeF">
+									<img src="../img/ic_excel.png" alt="" class="icon">
+									<span class="txt">엑셀다운로드</span>
+								</button>
+								<div class="select_box">
+									<select class="select size_md" aria-label="노출순서" name="order_by_s" id="order_by_s">
+										<option value="g_regdate desc">등록일 ↑</option>
+										<option value="g_regdate">등록일 ↓</option>
+										<option value="g_ok desc">노출순서 ↑</option>
+										<option value="g_no">노출순서 ↓</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl goodAll_list">
+								<colgroup>
+									<col style="width: 70px;">
+									<col style="width: 75px;">
+									<col style="width: 95px;">
+									<col style="width: 60px;">
+									<col style="width: 200px;">
+									<col style="width: 300px;">
+									<col style="width: 210px;">
+									<col style="width: 140px;">
+									<col style="width: 70px;">
+									<col style="width: 110px;">
+									<col style="width: 110px;">
+									<col style="width: 110px;">
+									<col style="width: 110px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="노출순서" rowspan="2">노출순서</th>
+										<th data-th="투어종류" rowspan="2">투어종류</th>
+										<th data-th="투어코드" rowspan="2">투어코드</th>
+										<th data-th="판매중" rowspan="2">판매중</th>
+										<th data-th="상품명" rowspan="2">상품명</th>
+										<th data-th="행사명" rowspan="2">행사명</th>
+										<th data-th="판매기간" rowspan="2">판매기간</th>
+										<th data-th="출발요일" rowspan="2">출발요일</th>
+										<th data-th="최소출발" rowspan="2">최소출발</th>
+										<th data-th="판매가" colspan="2">판매가</th>
+										<th data-th="공급가" colspan="2">공급가</th>
+									</tr>
+									<tr>
+										<th data-th="성인">성인</th>
+										<th data-th="아동">아동</th>
+										<th data-th="성인">성인</th>
+										<th data-th="아동">아동</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 B款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 A款 (60分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+												<span class="text">0</span>
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+												<span class="text">CNY 263</span>
+												<span class="text">CNY 263</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+												<span class="text">CNY 216</span>
+												<span class="text">CNY 216</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 B款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 A款 (60分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+												<span class="text">0</span>
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+												<span class="text">CNY 263</span>
+												<span class="text">CNY 263</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+												<span class="text">CNY 216</span>
+												<span class="text">CNY 216</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 B款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 A款 (60分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+												<span class="text">0</span>
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+												<span class="text">CNY 263</span>
+												<span class="text">CNY 263</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+												<span class="text">CNY 216</span>
+												<span class="text">CNY 216</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 B款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 A款 (60分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+												<span class="text">0</span>
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+												<span class="text">CNY 263</span>
+												<span class="text">CNY 263</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+												<span class="text">CNY 216</span>
+												<span class="text">CNY 216</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 B款 (30分钟)</a>
+												<a href="" class="tbl_link">公主裙子租借 A款 (60分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+												<span class="text">0</span>
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+												<span class="text">CNY 263</span>
+												<span class="text">CNY 263</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+												<span class="text">CNY 216</span>
+												<span class="text">CNY 216</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="노출순서">0</td>
+										<td data-th="투어종류">연중상품</td>
+										<td data-th="투어코드">TBLTDRESS</td>
+										<td data-th="판매중">O</td>
+										<td data-th="상품명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">Lotte World 首尔乐天世界 X SHARON CAT 公主裙子租借 体验券</a>
+											</div>
+										</td>
+										<td data-th="행사명" class="align_left">
+											<div class="tbl_inline column_ver align_left">
+												<a href="" class="tbl_link">公主裙子租借 A款 (30分钟)</a>
+											</div>
+										</td>
+										<td data-th="판매기간">
+											<div class="tbl_inline column_ver">
+												<span class="text">2025-08-12 ~ 2026-08-12</span>
+											</div>
+										</td>
+										<td data-th="출발요일">
+											<div class="tbl_inline column_ver">
+												<span class="text">월,화,수,목,금,토,일</span>
+											</div>
+										</td>
+										<td data-th="최소출발">
+											<div class="tbl_inline column_ver">
+												<span class="text">0</span>
+											</div>
+										</td>
+										<td data-th="판매가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 158</span>
+											</div>
+										</td>
+										<td data-th="판매가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+										<td data-th="공급가 성인">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 129</span>
+											</div>
+										</td>
+										<td data-th="공급가 아동">
+											<div class="tbl_inline column_ver">
+												<span class="text">CNY 0</span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div class="popup calender_popup">
+			<div class="cal_head">
+				<div class="leftbox">
+					<p class="cal_date">
+						<span class="cal_year">2025년</span>
+						<span class="cal_month">8월</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="paging_box">
+						<button type="button" class="paging_btn prev_btn">
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button type="button" class="paging_btn next_btn">
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="cal_body">
+				<div class="week_day">
+					<div class="day red">일</div>
+					<div class="day">월</div>
+					<div class="day">화</div>
+					<div class="day">수</div>
+					<div class="day">목</div>
+					<div class="day">금</div>
+					<div class="day blue">토</div>
+				</div>
+				<div class="week_date">
+					<div class="date red disabled">
+						<span class="num">27</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">28</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">29</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">30</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">31</span>
+					</div>
+					<div class="date">
+						<span class="num">1</span>
+					</div>
+					<div class="date">
+						<span class="num">2</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">3</span>
+					</div>
+					<div class="date">
+						<span class="num">4</span>
+					</div>
+					<div class="date">
+						<span class="num">5</span>
+					</div>
+					<div class="date">
+						<span class="num">6</span>
+					</div>
+					<div class="date today">
+						<span class="num">7</span>
+					</div>
+					<div class="date">
+						<span class="num">8</span>
+					</div>
+					<div class="date blue">
+						<span class="num">9</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">10</span>
+					</div>
+					<div class="date">
+						<span class="num">11</span>
+					</div>
+					<div class="date">
+						<span class="num">12</span>
+					</div>
+					<div class="date">
+						<span class="num">13</span>
+					</div>
+					<div class="date selected">
+						<span class="num">14</span>
+					</div>
+					<div class="date">
+						<span class="num">15</span>
+					</div>
+					<div class="date blue">
+						<span class="num">16</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">17</span>
+					</div>
+					<div class="date">
+						<span class="num">18</span>
+					</div>
+					<div class="date">
+						<span class="num">19</span>
+					</div>
+					<div class="date">
+						<span class="num">20</span>
+					</div>
+					<div class="date">
+						<span class="num">21</span>
+					</div>
+					<div class="date">
+						<span class="num">22</span>
+					</div>
+					<div class="date blue">
+						<span class="num">23</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">24</span>
+					</div>
+					<div class="date">
+						<span class="num">25</span>
+					</div>
+					<div class="date">
+						<span class="num">26</span>
+					</div>
+					<div class="date">
+						<span class="num">27</span>
+					</div>
+					<div class="date">
+						<span class="num">28</span>
+					</div>
+					<div class="date">
+						<span class="num">29</span>
+					</div>
+					<div class="date blue">
+						<span class="num">30</span>
+					</div>
+				</div>
+				<div class="week_date">
+					<div class="date red">
+						<span class="num">31</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">1</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">2</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">3</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">4</span>
+					</div>
+					<div class="date disabled">
+						<span class="num">5</span>
+					</div>
+					<div class="date blue disabled">
+						<span class="num">6</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_good.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(3).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

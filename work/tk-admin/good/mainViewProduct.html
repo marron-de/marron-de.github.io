@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout good_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-suitcase-rolling icon"></i>
+						메인페이지 노출
+					</p>
+				</div>
+
+				<div class="content_write goodAdd_write">
+					<div class="good_addbox">
+						<div class="item">
+							<form name="frm_ins" id="frm_ins" method="post" enctype="multipart/form-data" class="form">
+								<p class="form_tit">섹션 생성</p>
+								<div class="form_box ver2">
+									<div class="check_wrap top_check_wrap">
+										<div class="check_box size_md">
+											<input type="checkbox" name="is_vacation_benepia_show" id="vacationShow" class="input_check">
+											<label for="vacationShow" class="label_check">휴가샵 노출 여부</label>
+										</div>
+										<div class="check_box size_md">
+											<input type="checkbox" name="hotelSection" id="hotelSection" class="input_check">
+											<label for="hotelSection" class="label_check">호텔섹션</label>
+										</div>
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">섹션명</label>
+										<input type="text" name="img_desc" class="input_text size_md" required="">
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">섹션설명문구</label>
+										<input type="text" name="img_desc" class="input_text size_md" required="">
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">상품노출수량</label>
+										<div class="input_flex">
+											<input type="text" name="img_desc" class="input_text size_md count_input align_center" required="">
+											<p class="input_status error">
+												※ 한페이지에 표시할 상품 수, PC에만 적용되며 3의 배수로 입력해주세요.
+											</p>
+										</div>
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">more 연결 링크</label>
+										<div class="select_box input_flex">
+											<select name="b_uid_s" id="b_uid_s" class="select size_md full">
+												<option value="0">없음</option>
+												<option value="153">할인티켓</option>
+												<option value="163">해외자유여행</option>
+												<option value="117">해외패키지</option>
+												<option value="92">해외eSIM</option>
+												<option value="157">외식쿠폰</option>
+												<option value="69">할인호텔</option>
+												<option value="162">픽업/샌딩</option>
+												<option value="165">실시간차량</option>
+											</select>
+											<p class="input_status error">※ more에 연결링크를 선택해주세요.</p>
+										</div>
+									</div>
+								</div>
+								<div class="form_btnbox">
+									<button type="button" class="button size_md typeE auto">신규생성</button>
+								</div>
+							</form>
+						</div>
+						<div class="bar"></div>
+						<div class="item">
+							<form name="frm_edit" id="frm_edit" method="post" enctype="multipart/form-data" class="form">
+								<p class="form_tit">섹션 편집</p>
+								<div class="form_box ver2">
+									<div class="check_wrap top_check_wrap">
+										<div class="check_box size_md">
+											<input type="checkbox" name="modifyBenepiaShow" id="modifyBenepiaShow" class="input_check" checked>
+											<label for="modifyBenepiaShow" class="label_check">베네피아 노출 여부</label>
+										</div>
+										<div class="check_box size_md">
+											<input type="checkbox" name="is_vacation_benepia_show" id="modifyVacationShow" class="input_check" checked>
+											<label for="modifyVacationShow" class="label_check">휴가샵 노출 여부</label>
+										</div>
+										<div class="check_box size_md">
+											<input type="checkbox" name="hotelSection" id="modifyHotelSection" class="input_check">
+											<label for="modifyHotelSection" class="label_check">호텔섹션</label>
+										</div>
+										<div class="check_box size_md">
+											<input type="checkbox" name="hotelSection" id="isCategorySection" class="input_check">
+											<label for="modifyCategorySection" class="label_check">메인섹션구분</label>
+										</div>
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">섹션명</label>
+										<input type="text" name="img_desc" class="input_text size_md" required="" value="할인티켓">
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">섹션설명문구</label>
+										<input type="text" name="img_desc" class="input_text size_md" required="" value="국내 입장권, 엑티비티 할인 티켓을 모았습니다.">
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">상품노출수량</label>
+										<div class="input_flex">
+											<input type="text" name="img_desc" class="input_text size_md count_input align_center" required="" value="6">
+											<p class="input_status error">
+												※ 한페이지에 표시할 상품 수, PC에만 적용되며 3의 배수로 입력해주세요.
+											</p>
+										</div>
+									</div>
+									<div class="input_box input_flex">
+										<label class="label_text size_md">more 연결 링크</label>
+										<div class="select_box input_flex">
+											<select name="b_uid_s" id="b_uid_s" class="select size_md full">
+												<option value="0">없음</option>
+												<option value="153" selected>할인티켓</option>
+												<option value="163">해외자유여행</option>
+												<option value="117">해외패키지</option>
+												<option value="92">해외eSIM</option>
+												<option value="157">외식쿠폰</option>
+												<option value="69">할인호텔</option>
+												<option value="162">픽업/샌딩</option>
+												<option value="165">실시간차량</option>
+											</select>
+											<p class="input_status error">※ more에 연결링크를 선택해주세요.</p>
+										</div>
+									</div>
+								</div>
+								<div class="form_btnbox">
+									<button type="button" class="button size_md typeE auto" onclick="categoryManage_modal()">카테고리관리</button>
+									<button type="button" class="button size_md typeE auto">수정저장</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="good_listbox">
+						<div class="listbox">
+							<p class="title">노출섹션</p>
+							<p class="desc">
+								※ 해당 섹션에 등록된 상품수가 1이상이면 메인페이지에 표시됩니다. 
+								박스에 <span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>가 
+								있으면 휴가샵에 노출 
+								<span class="icon"><img src="../img/benepia.png" alt=""></span>가 
+								있으면 베네피아에 노출됩니다.
+							</p>
+							<ul class="list ver2">
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView1">
+											<label for="isView1" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView2">
+											<label for="isView2" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView3">
+											<label for="isView3" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView4">
+											<label for="isView4" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView5">
+											<label for="isView5" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView6">
+											<label for="isView6" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="listbox">
+							<p class="title">비노출 섹션</p>
+							<ul class="list ver2">
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView7">
+											<label for="isView7" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="topbox">
+										<div class="left">
+											<p class="tit">할인티켓</p>
+											<p class="desc">국내 입장권, 엑티비티 할인 티켓을 모았습니다.</p>
+										</div>
+										<div class="right">
+											<span class="icon"><img src="../img/benepia-vacation.png" alt=""></span>
+											<span class="icon"><img src="../img/benepia.png" alt=""></span>
+										</div>
+									</div>
+									<div class="descbox">
+										<p class="tit">메인섹션구분</p>
+										<p class="desc">미사용</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">등록된 상품 수</p>
+										<p class="desc">71</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">상품노출수량</p>
+										<p class="desc">6</p>
+									</div>
+									<div class="descbox">
+										<p class="tit">more 연결 링크</p>
+										<p class="desc">할인티켓</p>
+									</div>
+									<div class="bottombox">
+										<div class="check_box size_md">
+											<input type="checkbox" class="input_check" id="isView8">
+											<label for="isView8" class="label_check">노출</label>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="badge size_bg typeG">수정</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 카테고리관리 모달 -->
+		<div id="categoryManage_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">카테고리관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="goodAdd_write">
+						<div class="good_addbox">
+							<div class="item">
+								<form name="frm_ins" id="frm_ins" method="post" enctype="multipart/form-data" class="form">
+									<p class="form_tit">카테고리  생성</p>
+									<div class="form_box ver2">
+										<div class="input_box input_flex">
+											<label class="label_text size_md">카테고리명</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="">
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(PC)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile1" name="userFile1">
+												<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(MOBILE)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile2" name="userFile2">
+												<label for="userFile2" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex">
+											<label class="label_text size_md">링크</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="">
+										</div>
+									</div>
+									<div class="form_btnbox">
+										<button type="button" class="button size_md typeE auto">신규생성</button>
+									</div>
+								</form>
+							</div>
+							<div class="bar"></div>
+							<div class="item">
+								<form name="frm_edit" id="frm_edit" method="post" enctype="multipart/form-data" class="form">
+									<p class="form_tit">카테고리 편집</p>
+									<div class="form_box ver2">
+										<div class="input_box input_flex">
+											<label class="label_text size_md">카테고리명</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="" value="테스트카테고리 ">
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(PC)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile1" name="userFile1">
+												<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex input_file_box">
+											<p class="label_text size_md">이미지(MOBILE)</p>	
+											<div class="input_flex full">
+												<input type="file" class="input_file" id="userFile2" name="userFile2">
+												<label for="userFile2" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+										</div>
+										<div class="input_box input_flex">
+											<label class="label_text size_md">링크</label>
+											<input type="text" name="img_desc" class="input_text size_md" required="" value="https://test.com/">
+										</div>
+									</div>
+									<div class="form_btnbox">
+										<button type="button" class="button size_md typeE auto">수정저장</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="good_listbox">
+							<div class="listbox">
+								<p class="title">카테고리 섹션</p>
+								<ul class="list ver4">
+									<li class="item">
+										<div class="descbox">
+											<p class="tit">카테고리명</p>
+											<p class="desc">테스트 카테고리</p>
+										</div>
+										<div class="descbox">
+											<p class="tit">이미지(PC)</p>
+											<p class="desc">
+												<img src="../img/profile_temp.jpg" alt="" class="imgbadge">
+											</p>
+										</div>
+										<div class="descbox">
+											<p class="tit">이미지(MOBILE)</p>
+											<p class="desc">
+												<img src="../img/profile_temp.jpg" alt="" class="imgbadge">
+											</p>
+										</div>
+										<div class="descbox">
+											<p class="tit">링크</p>
+											<p class="desc">https://test.com/</p>
+										</div>
+										<div class="bottombox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check" id="koView1">
+												<label for="koView1" class="label_check">노출</label>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="badge size_bg typeG">수정</button>
+												<button type="button" class="badge size_bg typeH">삭제</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_good.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(3).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// categoryManage modal
+		function categoryManage_modal() {
+			$(".modal").removeClass("show");
+			$("#categoryManage_modal").addClass("show");
+		}
+	</script>
+
+
+
+
+</body>
+
+</html>
