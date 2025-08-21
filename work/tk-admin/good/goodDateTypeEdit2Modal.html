@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+
+		<!-- 행사 수정 모달 (eSIM ver) -->
+		<div id="goodDateTypeEdit2_modal" class="modal goodDateTypeEdit_modal only show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">중국 1일 / 5G 매일 1GB 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_datetype_updt" id="frm_datetype_updt" method="post" class="form">
+						<div class="tbl_box">
+							<table class="tbl ">
+								<colgroup>
+									<col style="width: 200px;">
+  									<col style="width: 600px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="행사명">행사명</th>
+										<td data-th="행사명">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="date_type_nm" value="[샤론캣 플레이] 드레스 대여 A타입(30분)" style="width:605px;">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="Creatrip 메일 매크로 연동 행사명">Creatrip  <br>메일 매크로 연동 행사명</th>
+										<td data-th="Creatrip 메일 매크로 연동 행사명">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="creatrip_mail_date_type_nm" value="" placeholder="예약 메일에 행사명을 복사해서 입력해주세요!">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="trazy 메일 매크로 연동 행사명">trazy <br>메일 매크로 연동 행사명</th>
+										<td data-th="trazy 메일 매크로 연동 행사명">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="trazy_mail_date_type_nm" value="" placeholder="예약 메일에 행사명을 복사해서 입력해주세요!">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="kkday 메일 매크로 연동 행사명">kkday <br>메일 매크로 연동 행사명</th>
+										<td data-th="kkday 메일 매크로 연동 행사명">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="kkday_mail_date_type_nm" value="" placeholder="예약 메일에 행사명을 복사해서 입력해주세요!">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="PDF 주소 L">PDF 주소 L</th>
+										<td data-th="PDF 주소 L">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="pdf_url" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="PDF 주소 N">PDF 주소 N</th>
+										<td data-th="PDF 주소 N">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="pdf_url2" value="" style="width:605px;">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="공급처 API 코드">공급처 API 코드</th>
+										<td data-th="공급처 API 코드">
+											<div class="tbl_inline column_ver align_left">
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md bold">[기본] 성인</span>
+													<input type="text" class="input_text size_md mx120" name="api_item_code_a" value="">
+													<span class="label_text input_txt size_md">/</span>
+													<span class="label_text input_txt size_md bold">아동</span>
+													<input type="text" class="input_text size_md mx120" name="api_item_code_c" value="">
+												</div>
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md bold">[복합] 성인</span>
+													<input type="text" class="input_text size_md mx120" name="api_item_code_a2" value="">
+													<span class="label_text input_txt size_md">/</span>
+													<span class="label_text input_txt size_md bold">아동</span>
+													<input type="text" class="input_text size_md mx120" name="api_item_code_c2" value="">
+												</div>
+												<div class="input_box input_flex">
+													<span class="input_status size_md point">* 공급처의 API 연동 상품코드 (SONO 우대번호 / 티켓 그룹코드번호)</span>
+												</div>
+												<div class="tbl_btnbox">
+													<button type="button" type="button" class="button size_sm auto typeF" onclick="searchGroupcode_modal()">그룹코드검색</button>
+													<button type="button" type="button" class="button size_sm auto typeF" onclick="searchGroupcode_modal()">K-POP 그룹코드검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="쿠팡 API 옵션코드">쿠팡 API 옵션코드</th>
+										<td data-th="쿠팡 API 옵션코드">
+											<div class="tbl_inline align_left">
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md bold">[쿠팡] 성인</span>
+													<input type="text" class="input_text size_md mx120" name="api_coupang_code_a" id="api_coupang_code_a" value="">
+													<span class="label_text input_txt size_md">/</span>
+													<span class="label_text input_txt size_md bold">아동</span>
+													<input type="text" class="input_text size_md mx120" name="api_coupang_code_c" id="api_coupang_code_c" value="">
+												</div>
+												<div class="tbl_btnbox">
+													<button type="button" type="button" class="button size_sm auto typeF">옵션코드검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+										<tr>
+											<th data-th="Esim 상품 옵션 ID">Esim 상품 옵션 ID</th>
+											<td data-th="Esim 상품 옵션 ID">
+												<div class="input_box input_flex">
+													<input type="text" class="input_text size_md" name="esim_option_id" id="esim_option_id" value="">
+													<button type="button" class="input_btn size_md" onclick="esimSearchProductOption_modal()">옵션ID검색</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="Esim 상품 옵션 ID (24.8 이후)">Esim 상품 옵션 ID <br>(24.8 이후)</th>
+											<td data-th="Esim 상품 옵션 ID (24.8 이후)">
+												<div class="input_box input_flex">
+													<input type="text" class="input_text size_md" name="esim_option_id2" id="esim_option_id2" value="">
+													<button type="button" class="input_btn size_md" onclick="esimSearchProductOption_modal()">옵션ID검색</button>
+												</div>
+											</td>
+										</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

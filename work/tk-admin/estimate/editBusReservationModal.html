@@ -320,180 +320,29 @@
 		</div>
 
 		<!-- 캘린더 팝업 -->
-		<div class="popup calender_popup">
-			<div class="cal_head">
-				<div class="leftbox">
-					<p class="cal_date">
-						<span class="cal_year">2025년</span>
-						<span class="cal_month">8월</span>
-					</p>
-				</div>
-				<div class="rightbox">
-					<div class="paging_box">
-						<button type="button" class="paging_btn prev_btn">
-							<i class="ph ph-caret-left"></i>
-						</button>
-						<button type="button" class="paging_btn next_btn">
-							<i class="ph ph-caret-right"></i>
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="cal_body">
-				<div class="week_day">
-					<div class="day red">일</div>
-					<div class="day">월</div>
-					<div class="day">화</div>
-					<div class="day">수</div>
-					<div class="day">목</div>
-					<div class="day">금</div>
-					<div class="day blue">토</div>
-				</div>
-				<div class="week_date">
-					<div class="date red disabled">
-						<span class="num">27</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">28</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">29</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">30</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">31</span>
-					</div>
-					<div class="date">
-						<span class="num">1</span>
-					</div>
-					<div class="date">
-						<span class="num">2</span>
-					</div>
-				</div>
-				<div class="week_date">
-					<div class="date red">
-						<span class="num">3</span>
-					</div>
-					<div class="date">
-						<span class="num">4</span>
-					</div>
-					<div class="date">
-						<span class="num">5</span>
-					</div>
-					<div class="date">
-						<span class="num">6</span>
-					</div>
-					<div class="date today">
-						<span class="num">7</span>
-					</div>
-					<div class="date">
-						<span class="num">8</span>
-					</div>
-					<div class="date blue">
-						<span class="num">9</span>
-					</div>
-				</div>
-				<div class="week_date">
-					<div class="date red">
-						<span class="num">10</span>
-					</div>
-					<div class="date">
-						<span class="num">11</span>
-					</div>
-					<div class="date">
-						<span class="num">12</span>
-					</div>
-					<div class="date">
-						<span class="num">13</span>
-					</div>
-					<div class="date selected">
-						<span class="num">14</span>
-					</div>
-					<div class="date">
-						<span class="num">15</span>
-					</div>
-					<div class="date blue">
-						<span class="num">16</span>
-					</div>
-				</div>
-				<div class="week_date">
-					<div class="date red">
-						<span class="num">17</span>
-					</div>
-					<div class="date">
-						<span class="num">18</span>
-					</div>
-					<div class="date">
-						<span class="num">19</span>
-					</div>
-					<div class="date">
-						<span class="num">20</span>
-					</div>
-					<div class="date">
-						<span class="num">21</span>
-					</div>
-					<div class="date">
-						<span class="num">22</span>
-					</div>
-					<div class="date blue">
-						<span class="num">23</span>
-					</div>
-				</div>
-				<div class="week_date">
-					<div class="date red">
-						<span class="num">24</span>
-					</div>
-					<div class="date">
-						<span class="num">25</span>
-					</div>
-					<div class="date">
-						<span class="num">26</span>
-					</div>
-					<div class="date">
-						<span class="num">27</span>
-					</div>
-					<div class="date">
-						<span class="num">28</span>
-					</div>
-					<div class="date">
-						<span class="num">29</span>
-					</div>
-					<div class="date blue">
-						<span class="num">30</span>
-					</div>
-				</div>
-				<div class="week_date">
-					<div class="date red">
-						<span class="num">31</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">1</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">2</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">3</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">4</span>
-					</div>
-					<div class="date disabled">
-						<span class="num">5</span>
-					</div>
-					<div class="date blue disabled">
-						<span class="num">6</span>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="calender_popup"></div>
 		
     </div>
 
 
     <!-- JS -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
     <script src="../js/common.js"></script>
 
 </body>

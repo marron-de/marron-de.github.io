@@ -627,26 +627,121 @@ color: var(--badge-bl-color);}
 
 /* 상품관리 > 상품 목록 > 상품 등록 & 상품 수정 */
 .good_wrap .content_write {position: relative;}
+.good_wrap .content_write .tab_content {display: flex; flex-direction: column; gap: 2.5rem;}
 .good_wrap .content_write .tab_navbox{justify-content: space-between; background: none;}
 .good_wrap .content_write .tab_navbox .leftbox{ position: relative; display: flex; flex: 1; }
 .good_wrap .content_write .tab_navbox .leftbox .tab_nav {flex: unset; }
 .good_wrap .content_write .tab_navbox .leftbox .tab_nav .link {padding: 1rem 2rem;}
 .good_wrap .content_write .tab_navbox .rightbox{position: relative; display: flex;     gap: 0.5rem;}
+.good_wrap .content_write .tab_contbox .tab_cont {display: block; animation: none;}
 
 .good_write {position: relative; width: 100%;}
 .good_write .form_box{gap: 2.5rem;}
-.good_write .tbl_wrap.row_ver{flex-direction: row; gap: 1.5rem;}
-.good_write .tbl_wrap.row_ver .content_wrap {width: 50%;}
 .good_write .content_wrap{ position: relative;}
-.good_write .tbl_box .mx660{max-width: 660px;}
-.good_write .tbl_box .mx220{max-width: 220px;}
-.good_write .tbl_box .mx140{max-width: 140px;}
-.good_write .tbl_box .mx40{max-width: 40px;}
+.good_wrap .content_tbl .tbl thead tr th, 
+.good_wrap .content_tbl .tbl tbody tr th, 
+.good_wrap .content_tbl .tbl tbody tr td {padding: 0.75rem;}
+
+/* 기본정보 */
+.good_write_info .tbl_wrap.row_ver{flex-direction: row; gap: 1.5rem;}
+.good_write_info .tbl_wrap.row_ver .content_wrap {width: 50%;}
+.good_write_info .tbl_box .mx660{max-width: 660px;}
+.good_write_info .tbl_box .mx220{max-width: 220px;}
+.good_write_info .tbl_box .mx140{max-width: 140px;}
+.good_write_info .tbl_box .mx40{max-width: 40px;}
+.good_write_info .tbl_box .input_file_box .file_preview .img{max-width: 300px;}
+
+/* 갤러리 */
+.good_write_gallery .gallery_upload { display: flex; flex-direction: column; gap: 2.5rem;}
+.good_write_gallery .gallery_upload .upload_box {  position: relative;  background: var(--basic-white);  box-shadow: var(--box-shadow);  border: 1px solid var(--basic-border2);   border-radius: 0.625rem;  padding: 1.25rem 1rem;}
+.good_write_gallery .gallery_upload .upload_box .upload_btn { width: 100%;  padding: 7rem 2rem;  font: var(--30_title_r); font-weight: 300; border: 1px dashed var(--basic-border2);   border-radius: 0.625rem;  color: var(--basic-lightgray);}
+.good_write_gallery .gallery_wrap { position: relative;  background: var(--basic-white);   box-shadow: var(--box-shadow);  border: 1px solid var(--basic-border2);  border-radius: 0.625rem;  padding: 1.25rem 1rem;}
+.good_write_gallery .gallery_wrap .gallery_list { display: flex; flex-wrap: wrap;  gap: 1.25rem;}
+.good_write_gallery .gallery_wrap .gallery_list > .item { width: calc((100% - 1.25rem * 7) / 8); display: flex; flex-direction: column; gap: 0.375rem;}
+.good_write_gallery .gallery_wrap .gallery_list > .item .input_box .input_text.number{width: 3.125rem; flex: unset; text-align: center;} 
+.good_write_gallery .gallery_wrap .gallery_list > .item .imgbox {width: 100%; cursor: pointer; border-radius: 0.625rem; overflow: hidden;}
+.good_write_gallery .gallery_wrap .gallery_list > .item .imgbox .img{width: 100%; height: 100%; object-fit: cover;}
+
+/* 행사관리 */
+.good_write_event { display: flex; align-items: flex-start; gap: 2rem;}
+.good_write_event .event_side { width: 25rem; display: flex; flex-direction: column;  gap: 1.25rem;}
+.good_write_event .event_side .topbox { display: flex; gap: 0.5rem;}
+.good_write_event .event_side .topbox .button {flex: 1; white-space: nowrap;}
+.good_write_event .event_side .listbox { border: 1px solid var(--basic-border);  border-radius: 0.375rem; display: flex; flex-direction: column; max-height: 28rem;  overflow: auto;}
+.good_write_event .event_side .listbox .list_btn { width: 100%;  background: var(--basic-white);  color: var(--basic-darkgray); border-bottom: 1px solid var(--basic-border); height: unset; padding: 0.5rem 1rem;  word-break: keep-all; text-align: left; justify-content: flex-start; border-radius: 0;}
+.good_write_event .event_side .listbox .list_btn:last-child {border-bottom: 0;}
+.good_write_event .event_side .listbox .list_btn.on {  background: var(--brand-hover);  color: var(--basic-white);}
+.good_write_event .event_side .codebox {  position: relative; background: var(--basic-white); box-shadow: var(--box-shadow);  border: 1px solid var(--basic-border2);  border-radius: 0.625rem;  padding: 1.25rem 1rem; display: flex; flex-direction: column;  gap: 0.625rem;  max-height: 28rem;  overflow: auto;}
+.good_write_event .event_side .codebox > .title { font: var(--18_headline_sb);  color: var(--basic-darkgray);}
+.good_write_event .event_side .codebox .codelist { display: flex; flex-direction: column;  gap: 0.5rem;}
+.good_write_event .event_side .codebox .codelist .item {  font: var(--14_label_normal_r);   color: var(--basic-darkgray); display: flex; align-items: center;  justify-content: space-between;  gap: 0.25rem;}
+.good_write_event .event_side .codebox .codelist .item .tit { flex: 1;  word-break: keep-all;}
+.good_write_event .event_side .codebox .codelist .item .code { font-weight: 600;  color: var(--brand-hover);}
+.good_write_event .event_calender {width: calc(100% - 2rem - 25rem); overflow: hidden;}
+.good_write_event .event_calender .calender_top .title { font: var(--18_headline_r);}
+.good_write_event .event_calender .calender_top .title .bold{font-weight: 600;}
+.good_write_event .event_calender .calender_top { margin-bottom: 1rem;}
+.good_write_event .event_calender .calender .cal_head { padding: 1.125rem 0;  border-top: 1px solid var(--basic-border);}
+.good_write_event .event_calender .calender .week_day .day {display: flex; align-items: center; gap: 0.5rem;}
+.good_write_event .event_calender .calender .week_date .date {min-height: 8.5rem;}
+.good_write_event .event_calender .calender .week_date .date .events.price_event {cursor: pointer;}
+
+/* SEO관리 */
+.good_write_seo .search_list {display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem;}
+.good_write_seo .search_list .item{display: flex; align-items: center; gap: 0.5rem; font-weight: 500;}
+.good_write_seo .search_list .item .icon { width: 1.125rem;}
+
+/* 후기관리 */
+.good_write_review .tbl .select_box {min-width: 10rem;}
+.good_write_review .bo_view { position: relative;  background: var(--basic-white);   box-shadow: var(--box-shadow);  border: 1px solid var(--basic-border2);  border-radius: 0.625rem;  padding: 2.5rem 2rem; margin-top: 5rem;}
+.good_write_review .bo_view .bo_comment { margin-top: 0;}
 
 
 /* 상품관리 > 상품 목록 > 상품 등록 & 상품 수정 - 쿠팡 상품코드 모달 */
 #coupangSearchProduct_modal .modal_box { width: 62.5rem;}
 #coupangSearchProduct_modal .modal_searchbox .input_flex .input_text { max-width: 20rem;}
+
+
+/* 상품관리 > 상품 목록 > 상품 수정 - 이미지 크게보기 모달 */
+#galleryImg_modal .modal_box { width: 62.5rem;}
+#galleryImg_modal .img_area {width: 100%; display: flex; align-items: center; justify-content: center;}
+#galleryImg_modal .img_area .img { object-fit: contain;}
+
+
+/* 상품관리 > 상품 목록 > 상품 수정 - 행사명 및 API 연동관리 모달 */
+.viewGoodDateType_modal .modal_box { width: 62.5rem;}
+.viewGoodDateType_modal .form_box {gap: 2.5rem;}
+.viewGoodDateType_modal .tbl .mx120 {max-width: 120px;}
+.viewGoodDateType_modal .tbl .mx120 {max-width: 120px;}
+.viewGoodDateType_modal .tbl .tbl_btnbox button { display: flex; align-items: center; justify-content: center;}
+.viewGoodDateType_modal .tbl .tbl_btnbox button [class^="ph"] { font-size: 1.25rem;   color: var(--brand-hover);}
+
+
+/* 상품관리 > 상품 목록 > 상품 수정 -행사 수정 모달 */
+.goodDateTypeEdit_modal .modal_box { width: 56.25rem;}
+.goodDateTypeEdit_modal .tbl .mx120{max-width: 120px;}
+
+
+/* 상품관리 > 상품 목록 > 상품 수정 - 그룹코드검색 모달 */
+#searchGroupcode_modal .modal_box { width: 50rem;}
+
+
+/* 상품관리 > 상품 목록 > 상품 수정 - Esim 옵션ID 모달 */
+#esimSearchProductOption_modal .modal_box { width: 37.5rem;}
+
+
+/* 상품관리 > 상품 목록 > 상품 수정 - 상태 변경 모달 */
+#goodDateViewState_modal .modal_box { width: 30rem;}
+
+
+/* 상품관리 > 상품 목록 > 상품 수정 - 행사 일정등록 모달 */
+.goodDate_modal .modal_box { width: 93.75rem;}
+.goodDate_modal .tbl .tbl_box {box-shadow: none; border-radius: 0.375rem;}
+.goodDate_modal .tbl .calender_btn { max-width: 10rem;}
+.goodDate_modal .tbl .equal_btn {font-size: 2rem; display: inline-flex;  vertical-align: middle; color: var(--brand-hover); width: 2.25rem;}
+.goodDate_modal .tbl .mn160 {min-width: 160px;}
+.goodDate_modal .tbl tbody tr th .tbl_inline .checkspace {width: 1.25rem;}
+
 
 
 /* 상품관리 > 상품 목록 > 해시태그 등록 & 상품 노출 순서 변경  */

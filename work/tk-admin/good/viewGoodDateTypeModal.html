@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 	
+
+		<!-- 행사명 및 API 연동관리 모달 -->
+		<div id="viewGoodDateType_modal" class="modal viewGoodDateType_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">행사명 및 API 연동관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="form_box">
+						<form name="frm_datetype_ins" id="frm_datetype_ins" method="post" class="form">
+							<div class="tbl_box">
+								<table class="tbl space_auto">
+									<colgroup>
+										<col style="width: 180px;">
+										<col style="width: 750px;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th data-th="행사명">행사명</th>
+											<td data-th="행사명">
+												<div class="input_box">
+													<input type="text" class="input_text size_md" name="date_type_nm" value="" hname="행사명" required="">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="PDF 주소 L">PDF 주소 L</th>
+											<td data-th="PDF 주소 L">
+												<div class="input_box">
+													<input type="text" class="input_text size_md" name="pdf_url" value="">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="PDF 주소 N">PDF 주소 N</th>
+											<td data-th="PDF 주소 N">
+												<div class="input_box">
+													<input type="text" class="input_text size_md" name="pdf_url2" value="" style="width:605px;">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="공급처 API 코드">공급처 API 코드</th>
+											<td data-th="공급처 API 코드">
+												<div class="tbl_inline column_ver align_left">
+													<div class="input_box input_flex">
+														<span class="label_text input_txt size_md bold">[기본] 성인</span>
+														<input type="text" class="input_text size_md mx120" name="api_item_code_a" value="">
+														<span class="label_text input_txt size_md">/</span>
+														<span class="label_text input_txt size_md bold">아동</span>
+														<input type="text" class="input_text size_md mx120" name="api_item_code_c" value="">
+													</div>
+													<div class="input_box input_flex">
+														<span class="label_text input_txt size_md bold">[복합] 성인</span>
+														<input type="text" class="input_text size_md mx120" name="api_item_code_a2" value="">
+														<span class="label_text input_txt size_md">/</span>
+														<span class="label_text input_txt size_md bold">아동</span>
+														<input type="text" class="input_text size_md mx120" name="api_item_code_c2" value="">
+													</div>
+													<div class="input_box input_flex">
+														<span class="input_status size_md point">* 공급처의 API 연동 상품코드 (SONO 우대번호 / 티켓 그룹코드번호)</span>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="쿠팡 API 옵션코드">쿠팡 API 옵션코드</th>
+											<td data-th="쿠팡 API 옵션코드">
+												<div class="tbl_inline align_left">
+													<div class="input_box input_flex flex_auto">
+														<span class="label_text input_txt size_md bold">[쿠팡] 성인</span>
+														<input type="text" class="input_text size_md mx120" name="api_coupang_code_a" id="api_coupang_code_a" value="">
+														<span class="label_text input_txt size_md">/</span>
+														<span class="label_text input_txt size_md bold">아동</span>
+														<input type="text" class="input_text size_md mx120" name="api_coupang_code_c" id="api_coupang_code_c" value="">
+													</div>
+													<div class="input_box input_flex">
+														<span class="input_status size_md point">* 쿠팡의 API 연동 옵션코드</span>
+													</div>
+													<button type="button" type="button" class="button size_sm auto typeF">옵션코드검색</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl_bottom">
+								<button type="button" class="button typeE size_md auto">행사명등록</button>
+							</div>
+						</form>
+						<form name="frm_datetype_list" id="frm_datetype_list" method="post" class="form">
+							<div class="tbl_top">
+								<div class="leftbox">
+									<p class="note_txt">
+										※ 미노출 체크시 상품 상세페이지에 고객센터 문의하기로 표기됩니다.
+									</p>
+								</div>
+								<div class="rightbox">
+									<button type="button" class="button size_sm auto typeF">노출순서 변경</button>
+								</div>
+							</div>
+							<div class="tbl_box">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 60px;">
+										<col style="width: 70px;">
+										<col style="width: 310px;">
+										<col style="width: 101px;">
+										<col style="width: 85px;">
+										<col style="width: 130px;">
+										<col style="width: 90px;">
+										<col style="width: 90px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="노출">노출</th>
+											<th data-th="순서">순서</th>
+											<th data-th="행사명">행사명</th>
+											<th data-th="API 공급처코드">API 공급처코드</th>
+											<th data-th="쿠팡API">쿠팡API</th>
+											<th data-th="API 거래처코드">API 거래처코드</th>
+											<th data-th="수정">수정</th>
+											<th data-th="왕복행사">왕복행사</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="1" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge error size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="2" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="3" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="4" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="5" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="6" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="7" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="8" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="9" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+										<tr>
+											<td data-th="노출">
+												<button type="button" class="iconbadge success size_md"></button>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input name="order_num_arr[]" class="input_text size_md align_center" id="order_num_arr[]" type="text" maxlength="3" value="10" autocomplete="off">
+												</div>
+											</td>
+											<td data-th="행사명" class="align_left">
+												[샤론캣 플레이] 드레스 대여 A타입(30분) (356)
+											</td>
+											<td data-th="API 공급처코드">
+												(성인) <br>(아동)
+											</td>
+											<td data-th="쿠팡API">
+												<span class="red">X</span>
+											</td>
+											<td data-th="API 거래처코드">TK3359-9183</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox">		
+												<button type="button" class="edit_btn" onclick="goodDateTypeEdit_modal()">
+													<i class="ph ph-note-pencil"></i>
+												</button>
+												<button type="button" class="delete_btn">
+													<i class="ph ph-trash"></i>
+												</button>
+											</div>
+											</td>
+											<td data-th="왕복행사">
+												<div class="tbl_btnbox">
+													<div class="check_box size_md">
+														<input type="checkbox" name="" id="" class="input_check">
+													</div>					
+												</div>							
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>
