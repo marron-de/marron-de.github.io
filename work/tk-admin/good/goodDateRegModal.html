@@ -52,13 +52,15 @@
 						<div class="tbl_box">
 							<table class="tbl space_auto">
 								<colgroup>
-									<col style="width: 240px;">
-									<col style="width: 1200px;">
+									<col style="width: 200px;">
+									<col style="width: 520px;">
+									<col style="width: 200px;">
+									<col style="width: 520px;">
 								</colgroup>
 								<tbody>
                                     <tr>
 										<th data-th="행사명">행사명</th>
-										<td data-th="행사명">
+										<td data-th="행사명" colspan="3">
 											<div class="input_box input_flex">
 												<div class="select_box">
 													<select name="dtid" class="select size_md" hname="행사명" required="">
@@ -82,7 +84,7 @@
 									</tr>
                                     <tr>
 										<th data-th="행사코드">행사코드</th>
-										<td data-th="행사코드">
+										<td data-th="행사코드" colspan="3">
 											<div class="input_box input_flex">
 												<input type="text" class="input_text size_md nofull" name="d_code_h" value="KOSEO153511250821" readonly="" hname="행사코드" required="">
 												<div class="check_box size_md">
@@ -95,7 +97,7 @@
 									</tr>
                                     <tr>
 										<th data-th="행사생성조건" rowspan="2">행사생성조건</th>
-										<td data-th="행사생성조건">
+										<td data-th="행사생성조건" colspan="3">
 											<div class="radio_wrap">
 												<span class="radio_box size_md">
 													<input type="radio" name="ins_cond" id="ins_cond_1" class="input_radio" value="auto" checked="true">
@@ -109,7 +111,7 @@
 										</td>
 									</tr>
                                     <tr>
-										<td data-th="행사생성조건">
+										<td data-th="행사생성조건" colspan="3">
 											<div class="tbl_inline gap2">
 												<div class="input_box input_flex flex_auto">
 													<input type="text" name="d_start" id="d_start" class="input_text size_md icon_ver icon_date calender_btn" value="2025-08-12" readonly="readonly">
@@ -155,11 +157,11 @@
 									</tr>
                                     <tr>
 										<th data-th="정원/최소출발인원/상태">정원/최소출발인원/상태</th>
-										<td data-th="정원/최소출발인원/상태">
+										<td data-th="정원/최소출발인원/상태" colspan="3">
 											<div class="input_box input_flex">
-												<input name="d_people2" type="text" size="5" value="100" class="input_text size_md align_right nofull" maxlength="4" hname="정원" required="">
+												<input name="d_people2" type="text" size="2" value="100" class="input_text size_md align_right nofull" maxlength="4" hname="정원" required="">
 												<span class="label_text input_txt size_md">명</span>
-												<input name="d_people3" type="text" size="5" value="0" class="input_text size_md align_right nofull" maxlength="4">
+												<input name="d_people3" type="text" size="2" value="0" class="input_text size_md align_right nofull" maxlength="4">
 												<span class="label_text input_txt size_md">명</span>
 												<div class="select_box">
 													<select name="d_ok" class="select size_md">
@@ -171,8 +173,8 @@
 										</td>
 									</tr>
                                     <tr>
-										<th data-th="가격(기준 판매가)">가격(기준 판매가)</th>
-										<td data-th="가격(기준 판매가)">
+										<th data-th="거래처">거래처</th>
+										<td data-th="거래처" colspan="3">
 											<div class="tbl_box">
 												<table class="tbl">
 													<colgroup>
@@ -289,7 +291,7 @@
 									</tr>
                                     <tr>
 										<th data-th="행사담당자">행사담당자</th>
-										<td data-th="행사담당자">
+										<td data-th="행사담당자" colspan="3">
 											<div class="input_box input_flex">
 												<div class="select_box mn160">
 													<select name="admin_id" class="select size_md">
@@ -320,11 +322,31 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
 		
     </div>
 
 
     <!-- JS -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
     <script src="../js/common.js"></script>
 
 </body>

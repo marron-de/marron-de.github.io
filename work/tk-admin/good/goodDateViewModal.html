@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+
+		<!-- 행사 관리 모달 -->
+		<div id="goodDateView_modal" class="modal goodDate_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">[[샤론캣 플레이] 드레스 대여 B타입(30분)] 행사관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frmdate" id="frmdate" method="post" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 200px;">
+									<col style="width: 520px;">
+									<col style="width: 200px;">
+									<col style="width: 520px;">
+								</colgroup>
+								<tbody>
+                                    <tr>
+										<th data-th="행사명">
+											<div class="tbl_inline">
+												<div class="check_box"><input type="checkbox" name="" id="" class="input_check"></div>	
+												행사명
+											</div>
+										</th>
+										<td data-th="행사명" class="align_left">[샤론캣 플레이] 드레스 대여 B타입(30분)</td>
+										<th data-th="여행기간">여행기간</th>
+										<td data-th="여행기간" class="align_left">일일투어</td>
+									</tr>
+                                    <tr>
+										<th data-th="행사코드">
+											<div class="tbl_inline">
+												<span class="checkspace"></span>행사코드
+											</div>
+										</th>
+										<td data-th="행사코드" colspan="3" class="align_left">KOSEO1535112508122496323</td>
+									</tr>
+                                    <tr>
+										<th data-th="여행일(사용일)">
+											<div class="tbl_inline">
+												<span class="checkspace"></span>여행일(사용일)
+											</div>
+										</th>
+										<td data-th="여행일(사용일)" colspan="3" class="align_left"><span class="bold blue">2025-08-12(二)</span></td>
+									</tr>
+                                    <tr>
+										<th data-th="인원">
+											<div class="tbl_inline">
+												<div class="check_box"><input type="checkbox" name="" id="" class="input_check"></div>	
+												인원
+											</div>
+										</th>
+										<td data-th="인원">
+											<div class="input_box input_flex">
+												<span class="label_text input_txt size_md">현재모객 </span>
+												<input name="d_people1" type="text" value="0" size="2" class="input_text size_md align_right nofull" maxlength="4" readonly="">
+												<span class="label_text input_txt size_md">명</span>
+												<span class="label_text input_txt size_md">/</span>
+												<span class="label_text input_txt size_md">최대모객 </span>
+												<input name="d_people2" type="text" value="100" size="2" class="input_text size_md align_right nofull" maxlength="4" hname="정원" required="">
+												<span class="label_text input_txt size_md">명</span>
+												<span class="label_text input_txt size_md">/</span>
+												<span class="label_text size_md point">최소출발</span>
+												<input name="d_people3" type="text" value="0" size="2" class="input_text size_md align_right nofull" maxlength="4">
+												<span class="label_text input_txt size_md">명</span>
+											</div>
+										</td>
+										<th data-th="상태">상태</th>
+										<td data-th="상태" class="align_left">예약마감</td>
+									</tr>
+                                    <tr>
+										<th data-th="판매가격">
+											<div class="tbl_inline align_top">
+												<div class="check_box"><input type="checkbox" name="" id="" class="input_check"></div>	
+												<div class="tbl_inline column_ver align_left">판매가격 <span class="desc point">(*필수)</span></div>
+											</div>
+										</th>
+										<td data-th="판매가격" colspan="3">
+											<div class="tbl_box">
+												<table class="tbl">
+													<colgroup>
+														<col style="width: 150px;">
+														<col style="width: 358px;">
+														<col style="width: 358px;">
+														<col style="width: 358px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="구분" class="align_center">구분</th>
+															<th data-th="원가" class="align_center">원가 <span class="point">(*공급처 연동)</span>
+															</th>
+															<th data-th="B2B" class="align_center"><span class="point">B2B</span></th>
+															<th data-th="B2C" class="align_center"><span class="point">B2C</span></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="구분">
+																<div class="check_box size_md inline">
+																	<input type="checkbox" name="d_disp_adult" class="input_check" id="d_disp_adult"
+																		value="Y">
+																	<label class="label_check" for="d_disp_adult"> 성인</label>
+																</div>
+															</td>
+															<td data-th="원가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_buy1" type="text" size="13" value="41,000" class="input_text size_md align_right nofull" hname="성인공급가" required="" maxlength="10" disabled="">  
+																	<span class="label_text input_txt size_md">원</span>
+																	<button type="button" class="equal_btn"><i class="ph-fill ph-arrow-square-down"></i></button>
+																</div>
+															</td>
+															<td data-th="B2B">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_agent1" type="text" size="13" value="0" class="input_text size_md align_right nofull" hname="성인거래처가" required="" maxlength="10" disabled=""> 
+																	<span class="label_text input_txt size_md">원</span>
+																	<button type="button" class="equal_btn"><i class="ph-fill ph-arrow-square-down"></i></button>
+																</div>
+															</td>
+															<td data-th="B2C">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money1" type="text" size="13" value="50,000" class="input_text size_md align_right nofull" hname="성인가" required="" maxlength="10" disabled=""> 
+																	<span class="label_text input_txt size_md">원</span>
+																	<button type="button" class="equal_btn"><i class="ph-fill ph-arrow-square-down"></i></button>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td data-th="구분">
+																<div class="check_box size_md inline">
+																	<input type="checkbox" name="d_disp_child" class="input_check" id="d_disp_child"
+																		value="Y">
+																	<label class="label_check" for="d_disp_child"> 소인</label>
+																</div>
+															</td>
+															<td data-th="원가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_buy2" type="text" size="13" value="0" class="input_text size_md align_right nofull d_buy" maxlength="10" disabled=""> 
+																	<span class="label_text input_txt size_md">원</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+															<td data-th="B2B">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_agent2" type="text" size="13" value="0" class="input_text size_md align_right nofull d_agent" maxlength="10" disabled="">
+																	<span class="label_text input_txt size_md">원</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+															<td data-th="B2C">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money2" type="text" size="13" value="0" class="input_text size_md align_right nofull d_money" maxlength="10" disabled="">
+																	<span class="label_text input_txt size_md">원</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td data-th="구분">
+																<div class="check_box size_md inline">
+																	<input type="checkbox" name="d_disp_baby" class="input_check" id="d_disp_baby"
+																		value="Y">
+																	<label class="label_check" for="d_disp_baby"> 유아</label>
+																</div>
+															</td>
+															<td data-th="원가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_buy3" type="text" size="13" value="0" class="input_text size_md align_right nofull d_buy" maxlength="10"> 
+																	<span class="label_text input_txt size_md">원</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+															<td data-th="B2B">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_agent3" type="text" size="13" value="0" class="input_text size_md align_right nofull d_agent" maxlength="10">
+																	<span class="label_text input_txt size_md">원</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+															<td data-th="B2C">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money3" type="text" size="13" value="0" class="input_text size_md align_right nofull d_money" maxlength="10">
+																	<span class="label_text input_txt size_md">원</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="정상가격">
+											<div class="tbl_inline align_top">
+												<div class="check_box"><input type="checkbox" name="" id="" class="input_check"></div>	
+												<div class="tbl_inline column_ver align_left">정상가격 <span class="desc point">(*할인금액 표기)</span></div>
+											</div>
+										</th>
+										<td data-th="정상가격" colspan="3">
+											<div class="tbl_box">
+												<table class="tbl">
+													<colgroup>
+														<col style="width: 150px;">
+														<col style="width: 538px;">
+														<col style="width: 538px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="구분" class="align_center">구분</th>
+															<th data-th="퍼센트(%)" class="align_center">퍼센트(%)</span>
+															</th>
+															<th data-th="정상 판매가" class="align_center">정상 판매가</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="구분">성인</td>
+															<td data-th="퍼센트(%)">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money4p" type="text" size="13" value="0" class="input_text size_md align_right nofull" required="" maxlength="10" >  
+																	<span class="label_text input_txt size_md">%</span>
+																	<button type="button" class="equal_btn"><i class="ph-fill ph-arrow-square-down"></i></button>
+																</div>
+															</td>
+															<td data-th="정상 판매가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money4" type="text" size="13" value="0" class="input_text size_md align_right nofull" required="" maxlength="10"> 
+																	<span class="label_text input_txt size_md">%</span>
+																	<button type="button" class="equal_btn"><i class="ph-fill ph-arrow-square-down"></i></button>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td data-th="구분">소인</td>
+															<td data-th="퍼센트(%)">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money5p" type="text" size="13" value="0" class="input_text size_md align_right nofull d_buy" maxlength="10"> 
+																	<span class="label_text input_txt size_md">%</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+															<td data-th="정상 판매가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money5" type="text" size="13" value="0" class="input_text size_md align_right nofull d_agent" maxlength="10">
+																	<span class="label_text input_txt size_md">%</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td data-th="구분">유아</td>
+															<td data-th="퍼센트(%)">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money6p" type="text" size="13" value="0" class="input_text size_md align_right nofull d_buy" maxlength="10"> 
+																	<span class="label_text input_txt size_md">%</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+															<td data-th="정상 판매가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="d_money6" type="text" size="13" value="0" class="input_text size_md align_right nofull d_agent" maxlength="10">
+																	<span class="label_text input_txt size_md">%</span>
+																	<span type="button" class="equal_btn"></span>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="거래처">
+											<div class="tbl_inline align_top">
+												<div class="check_box"><input type="checkbox" name="" id="" class="input_check"></div>	
+												<div class="tbl_inline column_ver align_left">
+													거래처 
+													<span class="desc point">(*성인공급가 - 공급처정산액)</span>
+													<span class="desc point">(*성인판매가 - 거래처입금액)</span>
+												</div>
+											</div>
+										</th>
+										<td data-th="거래처" colspan="3" class="align_left">
+											<div class="tbl_inline column_ver align_left gap2">
+												<div class="tbl_wrap row_ver">
+													<div class="tbl_box tbl_box_list">
+														<table class="tbl">
+															<colgroup>
+																<col style="width: 50px;">
+																<col style="width: 168px;">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check all_check">
+																		</div>
+																	</th>
+																	<th data-th="거래처명" class="align_center">거래처명</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+																<tr>
+																	<td data-th="checkbox">
+																		<div class="check_box size_md">
+																			<input type="checkbox" class="input_check">
+																		</div>
+																	</td>
+																	<td data-th="거래처명" class="align_center">여행대장</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="tbl_box tbl_box_cont">
+														<table class="tbl">
+															<colgroup>
+																<col style="width: 160px;">
+																<col style="width: 100px;">
+																<col style="width: 135px;">
+																<col style="width: 135px;">
+																<col style="width: 100px;">
+																<col style="width: 135px;">
+																<col style="width: 135px;">
+																<col style="width: 60px;">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th data-th="연동 거래처" class="align_center">연동 거래처</th>
+																	<th data-th="공급처 수수료" class="align_center bg_re">공급처 수수료</th>
+																	<th data-th="원가(성인)" class="align_center bg_re">원가(성인)</th>
+																	<th data-th="원가(소인)" class="align_center bg_re">원가(소인)</th>
+																	<th data-th="판매처 수수료" class="align_center bg_ye">판매처 수수료</th>
+																	<th data-th="B2B(성인)" class="align_center bg_ye">B2B(성인)</th>
+																	<th data-th="B2B(소인)" class="align_center bg_ye">B2B(소인)</th>
+																	<th data-th="버튼" class="align_center">-</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="연동 거래처" class="align_center">여행대장</td>
+																	<td data-th="공급처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="buy_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="원가(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="원가(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="buy_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="판매처 수수료" class="align_center">
+																		<div class="input_box input_flex">
+																			<input name="agent_dc_rate_ar[]" class="input_text size_md align_right percent_input" type="text" value="0">
+																			<span class="label_text input_txt size_md">%</span>
+																		</div>
+																	</td>
+																	<td data-th="B2B(성인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_adult_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="B2B(소인)" class="align_center">
+																		<div class="input_box">
+																			<input name="agent_price_child_ar[]" class="input_text size_md align_right" type="text" value="0">
+																		</div>
+																	</td>
+																	<td data-th="버튼" class="align_center">
+																		<div class="tbl_btnbox">		
+																			<button type="button" class="delete_btn">
+																				<i class="ph ph-trash"></i>
+																			</button>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="point">※해당 거래처을 체크 하신후, 거래처 B2B가격을 수정/입력 할 수 있습니다.</div>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="행사담당자">
+											<div class="tbl_inline">
+												<div class="check_box"><input type="checkbox" name="" id="" class="input_check"></div>	
+												행사담당자
+											</div>
+										</th>
+										<td data-th="행사담당자">
+											<div class="input_box input_flex">
+												<div class="select_box mn160">
+													<select name="admin_id" class="select size_md">
+														<option value="tktravel">강일구 대표</option>
+														<option value="jerry">임병남 부장</option>
+														<option value="joyceyip915">조이스 매니저</option>
+														<option value="jamiesy">제이미 파트장</option>
+														<option value="testdev" selected="">bus res dev</option>
+														<option value="wkddjsgh">장언호 대리</option>
+														<option value="vipphoebe">진사여 매니저</option>
+														<option value="mary314">메리 매니저</option>
+														<option value="kys072702">김용식 주임</option>
+														<option value="skquf1226">나한별 주임</option>
+														<option value="jangsan7">최규만 팀장</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+            				</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeA">전체 선택</button>
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

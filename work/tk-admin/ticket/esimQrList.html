@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout ticket_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-ticket icon"></i>
+						eSIM QR 관리
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어">
+											<div class="tbl_inline">
+												<div class="select_box search_select">
+													<select name="search_key_s" class="select size_md">
+														<option value="ti_cust_nm">고객명</option>
+														<option value="ti_cust_hp">고객연락처</option>
+														<option value="ticket_number">티켓번호</option>
+														<option value="manage_code">관리번호</option>
+														<option value="rsv_no">바우처NO</option>
+														<option value="ti_memo">메모</option>
+													</select>
+												</div>
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto">검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="기간">기간</th>
+										<td data-th="기간">
+											<div class="tbl_inline gap2">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" name="date_key" id="period_s_1" value="ins_dt" class="input_radio" checked="">
+														<label for="period_s_1" title="등록일" class="label_radio">등록일</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="date_key" id="period_s_2" value="ti_send_dt" class="input_radio">
+														<label for="period_s_2" title="발송일" class="label_radio">발송일</label>
+													</div>
+												</div>
+												<div class="input_box input_flex w_auto">
+													<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+													<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
+												</div>
+												<div class="tab_wrap">
+													<div class="tab_navbox tabs_ver">
+														<div class="tab_nav"><span class="link">어제</span></div>
+														<div class="tab_nav"><span class="link">오늘</span></div>
+														<div class="tab_nav on"><span class="link">7일</span></div>
+														<div class="tab_nav"><span class="link">15일</span></div>
+														<div class="tab_nav"><span class="link">1개월</span></div>
+														<div class="tab_nav"><span class="link">3개월</span></div>
+														<div class="tab_nav"><span class="link">1년</span></div>
+														<div class="tab_nav"><span class="link">전체</span></div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓상태">티켓상태</th>
+										<td data-th="티켓상태">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input type="radio" name="ticket_status" id="ticket_status1" class="input_radio" checked="" value="">
+													<label for="ticket_status1" class="label_radio">전체</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ticket_status" id="ticket_status2" class="input_radio" value="W">
+													<label for="ticket_status2" class="label_radio">미사용</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ticket_status" id="ticket_status3" class="input_radio" value="S">
+													<label for="ticket_status3" class="label_radio">발송완료</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ticket_status" id="ticket_status4" class="input_radio" value="U">
+													<label for="ticket_status4" class="label_radio">사용완료</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ticket_status" id="ticket_status5" class="input_radio" value="C">
+													<label for="ticket_status5" class="label_radio">취소</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_schresult">
+					<div class="cont_area flex_area">
+						<div class="leftbox">
+							<p class="text">
+								<i class="ph ph-funnel"></i>
+								<span>
+									검색기간 : 
+									<span class="bold">2025-08-05 ~ 2025-08-12</span>
+								</span>
+							</p>
+						</div>
+						<div class="rightbox">
+							<p class="text">
+								결과 : <span class="bold">248</span>개
+							</p>
+							<span class="bar">|</span>
+							<p class="text">
+								미사용  : <span class="bold">246</span>개  
+							</p>
+							<span class="bar">|</span>
+							<p class="text">
+								발송완료  : <span class="bold">0</span>개
+							</p>
+							<span class="bar">|</span>
+							<p class="text">
+								취소  : <span class="bold">2</span>개
+							</p>
+						</div>
+					</div>
+                
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="frm_list" id="frm_list" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="total">선택된 티켓을</p>
+								<button type="button" class="button size_sm auto typeF">일괄삭제</button>
+							</div>
+							<div class="rightbox">
+								<button type="button" class="button size_sm auto typeF">
+									<img src="../img/ic_excel.png" alt="" class="icon"> 
+									<span class="txt">엑셀저장</span>
+								</button>
+								<div class="select_box">
+									<select name="order_by_s" id="order_by_s" class="select size_md">
+										<option value="ti_send_dt desc">발송일 ↑</option>
+										<option value="ti_send_dt">발송일 ↓</option>
+										<option value="ins_dt desc">등록일 ↑</option>
+										<option value="ins_dt">등록일 ↓</option>
+										<option value="ti_use_dt desc">사용일 ↑</option>
+										<option value="ti_use_dt">사용일 ↓</option>
+										<option value="edit_dt desc">수정일 ↑</option>
+										<option value="edit_dt">수정일 ↓</option>
+									</select>
+								</div>
+								<div class="select_box">
+									<select name="list_count_s" id="list_count_s" class="select size_md">
+										<option value="10">10개 보기</option>
+										<option value="20" selected="">20개 보기</option>
+										<option value="30">30개 보기</option>
+										<option value="50">50개 보기</option>
+										<option value="100">100개 보기</option>
+										<option value="200">200개 보기</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl ticket_list">
+								<colgroup>
+									<col style="width: 40px">
+									<col style="width: 70px;">
+									<col style="width: 220px;">
+									<col style="width: 55px;">
+									<col style="width: 110px;">
+									<col style="width: 110px;">
+									<col style="width: 218px;">
+									<col style="width: 100px;">
+									<col style="width: 300px;">
+									<col style="width: 65px;">
+									<col style="width: 125px;">
+									<col style="width: 80px;">
+									<col style="width: 70px;">
+									<col style="width: 90px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check all_check">
+											</div>
+										</th>
+										<th data-th="상태">상태</th>
+										<th data-th="주문NO. 고객명/연락처">주문NO. <br>고객명/연락처</th>
+										<th data-th="구분">구분</th>
+										<th data-th="사용예정일" class="point">사용예정일</th>
+										<th data-th="발송일시">발송일시</th>
+										<th data-th="티켓명 티켓그룹코드(API)">티켓명 <br>티켓그룹코드(API)</th>	
+										<th data-th="유효기간">유효기간</th>									
+										<th data-th="QR번호 관리(우대)번호">QR번호 <br>관리(우대)번호</th>
+										<th data-th="QR코드 이미지">QR코드 이미지</th>
+										<th data-th="공급처">공급처</th>
+										<th data-th="메모">메모</th>
+										<th data-th="발송방법">발송방법</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+								<tbody>									
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_unused">미사용</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_sent">발송완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_used">사용완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_cancelled">취소</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_used">사용완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_used">사용완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_used">사용완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_used">사용완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_used">사용완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="상태" class="td_state state_used">사용완료</td>
+										<td data-th="주문NO. 고객명/연락처">
+											T17556480475EC7151 / 202508200903482715744424 <br> <span class="bold">홍길동</span> <br>
+											010-1234-5678
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="사용예정일">2025-08-23</td>
+										<td data-th="발송일시">2025-08-22 <br>19:31:32</td>
+										<td data-th="티켓명 티켓그룹코드(API)">
+											필리핀 30일 / 매일 2GB 이후 속도저하	
+										</td>
+										<td data-th="유효기간">2026-02-16</td>
+										<td data-th="QR번호 관리(우대)번호">
+											<span class="tbl_link bold tbl_number">D1BFEA40BFB24E1D97F63297CD9CAA85</span>
+										</td>
+										<td data-th="QR코드 이미지">
+											<div class="tbl_img">
+												<img src="../img/qr.png" alt="">
+											</div>
+										</td>
+										<td data-th="공급처" class="break_word">가제트코리아(주)</td>
+										<td data-th="메모">테스트</td>
+										<td data-th="발송방법">알림톡</td>
+										<td data-th="버튼">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="esimQrEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>
+									</tr>									
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+				
+		<!-- eSIM QR코드 수정 모달 -->
+		<div id="esimQrEdit_modal" class="modal ticketWrite_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">eSIM QR코드 수정 - D1BFEA40BFB24E1D97F63297CD9CAA85</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_ticket_edit" id="frm_ticket_edit" method="post" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 658px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="공급처">공급처</th>
+										<td data-th="공급처" class="align_left">ESIM</td>
+									</tr>
+									<tr>
+										<th data-th="티켓명">티켓명</th>
+										<td data-th="티켓명">
+											<div class="input_box">
+												<input type="text" name="ticket_nm" class="input_text size_md" hname="티켓명" required="" value="필리핀 30일 / 매일 2GB 이후 속도저하">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="QR번호">QR번호</th>
+										<td data-th="QR번호" class="align_left">D1BFEA40BFB24E1D97F63297CD9CAA85</td>
+									</tr>
+									<tr>
+										<th data-th="사용 유효기간">사용 유효기간</th>
+										<td data-th="사용 유효기간" class="align_left">2026-02-16</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 658px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="상태">상태</th>
+										<td data-th="상태">
+											<div class="input_box">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status1" class="input_radio" checked>
+														<label for="ticket_status1" class="label_radio">미사용</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status2" class="input_radio">
+														<label for="ticket_status2" class="label_radio">발송완료</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status3" class="input_radio">
+														<label for="ticket_status3" class="label_radio">사용완료</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status4" class="input_radio">
+														<label for="ticket_status4" class="label_radio">취소</label>
+													</div>
+												</div>
+												<p class="input_status point">* 알림톡 발송 예정일 경우 '미사용' 으로 등록</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="바우처 번호">바우처 번호</th>
+										<td data-th="바우처 번호" class="align_left">
+											<div class="input_box">
+												<span class="label_text input_txt size_md">T17556480475EC7151</span>
+												<p class="input_status point">* 예약관리에 상품수정 "바우처 번호"와 연동.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사용예정일">사용예정일</th>
+										<td data-th="사용예정일" class="align_left">2025-08-20</td>
+									</tr>
+									<tr>
+										<th data-th="발송│사용완료일">발송│사용완료일</th>
+										<td data-th="발송│사용완료일">
+											<div class="tbl_inline">
+												<div class="input_box input_flex flex_auto">
+													<span class="label_text input_txt size_md">발송일시 </span>
+													<input type="text" name="ti_send_dt" id="ti_send_dt" class="input_text size_md icon_ver icon_date calender_btn mx180" value="" readonly="readonly">
+												</div>
+												<div class="input_box input_flex flex_auto">
+													<span class="label_text input_txt size_md">사용일시  </span>
+													<input type="text" name="ti_use_dt" id="ti_use_dt" class="input_text size_md icon_ver icon_date calender_btn mx180" value="" readonly="readonly">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓 발송방법">티켓 발송방법</th>
+										<td data-th="티켓 발송방법" class="align_left">알림톡</td>
+									</tr>
+									<tr>
+										<th data-th="고객명">고객명</th>
+										<td data-th="고객명">
+											<div class="input_box">
+												<input name="ti_cust_nm" id="ti_cust_nm" value="홍길동" type="text" class="input_text size_md" hname="고객명" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="고객 연락처">고객 연락처</th>
+										<td data-th="고객 연락처">
+											<div class="input_box">
+												<input name="ti_cust_hp" id="ti_cust_hp" value="010-1234-5678" type="text" class="input_text size_md" hname="고객 연락처" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="메모">메모</th>
+										<td data-th="메모">
+											<div class="input_box">
+												<textarea name="ti_memo" id="ti_memo" class="input_text size_md h_auto" rows="5" hname="메모" required="">테스트 테스트 테스트</textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_ticket.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');		
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(4).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(6).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// esimQrEdit modal
+		function esimQrEdit_modal() {
+			$(".modal").removeClass("show");
+			$("#esimQrEdit_modal").addClass("show");
+		}
+
+		// esimQrEdit modal
+		$(document).on('click', '.tbl.ticket_list .tbl_number', function() {
+			$(".modal").removeClass("show");
+			$("#esimQrEdit_modal").addClass("show");
+		});
+	</script>
+
+
+
+
+</body>
+
+</html>

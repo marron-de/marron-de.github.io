@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- K-POP 티켓등록 모달 -->
+		<div id="concertTicketWrite_modal" class="modal ticketWrite_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">K-POP 티켓 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_ins" id="frm_ins" method="post" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 658px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="티켓그룹">티켓그룹</th>
+										<td data-th="티켓그룹">
+											<div class="input_box input_flex">
+												<div class="select_box full">
+													<select name="group_code" id="group_code" class="select size_md">
+                               							 <option value="">선택</option>
+														<option value="TEST001">K-POP TEST1</option>
+														<option value="2024_SBS썸머">2024_SBS썸머가요대전222</option>
+													</select>
+												</div>
+												<input type="text" class="input_text size_md" id="producer_search" placeholder="티켓그룹 검색">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓명">티켓명</th>
+										<td data-th="티켓명">
+											<div class="input_box">
+												<input type="text" name="ticket_nm" class="input_text size_md" hname="티켓명" required="">
+												<p class="input_status point">* 고객 바코드에 표시되는 티켓 이름입니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓구분">티켓구분</th>
+										<td data-th="티켓구분">
+											<div class="input_box">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation1" class="input_radio" checked>
+														<label for="generation1" class="label_radio">성인</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation2" class="input_radio">
+														<label for="generation2" class="label_radio">아동</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation3" class="input_radio">
+														<label for="generation3" class="label_radio">유아</label>
+													</div>
+												</div>
+												<p class="input_status point">* 구분이 없는 티켓일 경우 '성인'으로 등록해주세요.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="구역">구역</th>
+										<td data-th="구역">
+											<div class="input_box">
+												<input type="text" name="area" class="input_text size_md" value="" placeholder="※ ex) 스탠딩 or 일반석 or VIP" hname="구역" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓번호">티켓번호</th>
+										<td data-th="티켓번호" class="align_left">
+											<div class="tbl_inline column_ver gap2 align_left">
+												<span class="bold">마지막 티켓 번호 </span>
+												<div class="input_box input_flex">										
+													<input type="text" value="" id="ticketCode" class="input_text size_md mx180" placeholder="티켓코드">
+													<input type="text" value="" name="ea" id="ea" class="input_text size_md mx180" placeholder="발행수">
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');		
+	</script>
+    <script src="../js/common.js"></script>
+
+
+</body>
+
+</html>

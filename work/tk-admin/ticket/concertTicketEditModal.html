@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- K-POP 티켓수정 모달 -->
+		<div id="concertTicketEdit_modal" class="modal ticketWrite_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">K-POP 티켓 수정 - MGATVC5217</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_ticket_edit" id="frm_ticket_edit" method="post" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 658px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="티켓그룹">티켓그룹</th>
+										<td data-th="티켓그룹">
+											<div class="input_box input_flex">
+												<div class="select_box full">
+													<select name="group_code" id="group_code" class="select size_md">
+                            							<option value="">선택</option>
+														<option value="TEST001" selected="">K-POP TEST1</option>
+														<option value="2024_SBS썸머">2024_SBS썸머가요대전222</option>
+                                                    </select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="공급처">공급처</th>
+										<td data-th="공급처" class="align_left">여행대장</td>
+									</tr>
+									<tr>
+										<th data-th="티켓명">티켓명</th>
+										<td data-th="티켓명">
+											<div class="input_box">
+												<input type="text" name="ticket_nm" class="input_text size_md" hname="티켓명" required="" value="2024 K-WAVE 콘서트 인기가요 티켓 스탠딩">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓번호">티켓번호</th>
+										<td data-th="티켓번호">
+											<div class="input_box input_flex">
+												<input type="text" name="ticket_number" value="MGATVC5217" class="input_text size_md mx180" hname="티켓번호" required="">
+												<button type="button" class="input_btn size_md" onclick="concertTicketHistory_modal()">이력보기</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓구분">티켓구분</th>
+										<td data-th="티켓구분">
+											<div class="input_box">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation1" class="input_radio" checked>
+														<label for="generation1" class="label_radio">성인</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation2" class="input_radio">
+														<label for="generation2" class="label_radio">아동</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation3" class="input_radio">
+														<label for="generation3" class="label_radio">유아</label>
+													</div>
+												</div>
+												<p class="input_status point">* 구분이 없는 티켓일 경우 '성인'으로 등록해주세요.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="구역">구역</th>
+										<td data-th="구역">
+											<div class="input_box">
+												<input type="text" name="area" id="area" class="input_text size_md" value="스탠딩" hname="구역" required="">
+												<p class="input_status">※ ex) 스탠딩 or 일반석 or VIP</p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 658px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="상태">상태</th>
+										<td data-th="상태">
+											<div class="input_box">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status1" class="input_radio">
+														<label for="ticket_status1" class="label_radio">미사용</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status2" class="input_radio" checked>
+														<label for="ticket_status2" class="label_radio">발송완료</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status3" class="input_radio">
+														<label for="ticket_status3" class="label_radio">사용완료</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ticket_status" id="ticket_status4" class="input_radio">
+														<label for="ticket_status4" class="label_radio">취소</label>
+													</div>
+												</div>
+												<p class="input_status point">* 알림톡 발송 예정일 경우 '미사용' 으로 등록</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="바우처 번호">바우처 번호</th>
+										<td data-th="바우처 번호">
+											<div class="input_box">
+												<div class="input_box input_flex">
+													<input name="rsv_no" id="rsv_no" value="TKT25082225A" type="text" class="input_text size_md mx180" hname="예약번호" required="">
+													<button type="button" class="input_btn size_md">초기화</button>
+												</div>
+												<p class="input_status point">* 예약관리에 상품수정 "바우처 번호"와 연동.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사용예정일">사용예정일</th>
+										<td data-th="사용예정일">
+											<div class="input_box input_flex">
+												<input type="text" name="ti_reserve_dt" id="ti_reserve_dt" class="input_text size_md icon_ver icon_date calender_btn mx180" value="2025-08-23" readonly="readonly">
+												<button type="button" class="input_btn size_md">오늘</button>
+												<button type="button" class="input_btn size_md">내일</button>
+												<button type="button" class="input_btn size_md">모레</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="발송│사용완료일">발송│사용완료일</th>
+										<td data-th="발송│사용완료일">
+											<div class="tbl_inline">
+												<div class="input_box input_flex flex_auto">
+													<span class="label_text input_txt size_md">발송일시 </span>
+													<input type="text" name="ti_send_dt" id="ti_send_dt" class="input_text size_md icon_ver icon_date calender_btn mx180" value="" readonly="readonly">
+												</div>
+												<div class="input_box input_flex flex_auto">
+													<span class="label_text input_txt size_md">사용일시  </span>
+													<input type="text" name="ti_use_dt" id="ti_use_dt" class="input_text size_md icon_ver icon_date calender_btn mx180" value="" readonly="readonly">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓 발송방법">티켓 발송방법</th>
+										<td data-th="티켓 발송방법">
+											<div class="input_box">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" name="ti_send_method" id="ti_send_method1" class="input_radio" checked>
+														<label for="ti_send_method1" class="label_radio">알림톡</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ti_send_method" id="ti_send_method2" class="input_radio">
+														<label for="ti_send_method2" class="label_radio">친구톡</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ti_send_method" id="ti_send_method3" class="input_radio">
+														<label for="ti_send_method3" class="label_radio">SMS </label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ti_send_method" id="ti_send_method4" class="input_radio">
+														<label for="ti_send_method4" class="label_radio">MMS </label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="ti_send_method" id="ti_send_method5" class="input_radio">
+														<label for="ti_send_method5" class="label_radio"> API  </label>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="고객명">고객명</th>
+										<td data-th="고객명">
+											<div class="input_box">
+												<input name="ti_cust_nm" id="ti_cust_nm" value="홍길동" type="text" class="input_text size_md" hname="고객명" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="고객 연락처">고객 연락처</th>
+										<td data-th="고객 연락처">
+											<div class="input_box">
+												<input name="ti_cust_hp" id="ti_cust_hp" value="010-1234-5678" type="text" class="input_text size_md" hname="고객 연락처" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="메모">메모</th>
+										<td data-th="메모">
+											<div class="input_box">
+												<textarea name="ti_memo" id="ti_memo" class="input_text size_md h_auto" rows="5" hname="메모" required="">테스트 테스트 테스트</textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');		
+	</script>
+    <script src="../js/common.js"></script>
+
+
+</body>
+
+</html>

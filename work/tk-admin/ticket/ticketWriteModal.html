@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 티켓등록 모달 -->
+		<div id="ticketWrite_modal" class="modal ticketWrite_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">티켓 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_ins" id="frm_ins" method="post" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 658px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="티켓그룹">티켓그룹</th>
+										<td data-th="티켓그룹">
+											<div class="input_box input_flex">
+												<div class="select_box full">
+													<select name="group_code" id="group_code" class="select size_md">
+                                						<option value="">선택</option>
+														<option value="TBWALK004">워킹온더클라우드 아이리스 1인</option>
+														<option value="AMI01">스페셜 전신마사지(90분)</option>
+														<option value="AMI02">바디 &amp; 풋 마사지(90분)</option>
+														<option value="AMI03">바디 마사지(60분)</option>
+														<option value="AMI04">발마사지(60분)</option>
+														<option value="79YANG07">깡통열차PKG</option>
+														<option value="79YANG08">오카리나색칠하기PKG</option>
+														<option value="40303853">2021비발디_오픈특가_리렌_리프트_TK트래블</option>
+														<option value="40303855">2021스노위_오픈특가_TK트래블</option>
+														<option value="TBWALK003">워킹온더클라우드 시즈널 1인</option>
+														<option value="TBWALK001">워킹온더클라우드 리오 1인</option>
+														<option value="TKYPSKI06">용평리조트PKG-렌탈(소인주간권)</option>
+														<option value="TBRAINBOW">레인보우 브릿지 요트투어</option>
+														<option value="TBLIMOUSIN">리무진 정기운항</option>
+														<option value="TBLUGE02">강화도 루지 2회권</option>
+														<option value="TBLUGE03">강화도 루지 3회권</option>
+														<option value="YPCA007">용평리조트 발왕산 케이블카(7차)</option>
+														<option value="YPCA008">용평리조트 발왕산 케이블카(8차)</option>
+														<option value="YPCA010">용평리조트 발왕산 케이블카(10차)</option>
+														<option value="SMASTER001">속초 시마스터 리무진(1인권)</option>
+														<option value="YPCA011">용평리조트 발왕산 케이블카(11차)</option>
+														<option value="YPCAKKDAY">용평리조트 발왕산 케이블카(KKDAY 775장)</option>
+														<option value="SMASTER002">속초 시마스터 파워요트(1인권)</option>
+														<option value="SMASTER003">속초 시마스터 리무진(전체대여)</option>
+														<option value="SMASTER004">속초 시마스터 파워요트(전체대여)</option>
+														<option value="TESTTONY">토니K 테스트</option>
+														<option value="LALA001">라라서프 입문강습(1인권)</option>
+														<option value="LALA002">라라서프 프리미엄입문강습(1인권)</option>
+														<option value="CANDY001">캔디서프 프리미엄감습(1인권)</option>
+														<option value="CANDY002">캔디서프 프리미엄강습+바베큐(1인권)</option>
+														<option value="CANDY003">캔디서프 보드렌탈(1인권)</option>
+														<option value="CANDY004">캔디서프 보드&amp;수트렌탈+바베큐(1인권)</option>
+														<option value="ROLY001">롤리서프 프리미엄강습(1인권)</option>
+														<option value="ROLY002">롤리서프 프리미엄강습+바베큐(1인권)</option>
+														<option value="ROLY003">롤리서프 보드렌탈(1인권)</option>
+														<option value="ROLY004">롤리서프 보드&amp;수트렌탈+바베큐(1인권)</option>
+														<option value="BOATN001">부산 보트앤 요트(1인권)</option>
+														<option value="TBSCCABLE0">삼척해상케이블카 장호역왕복(대인)</option>
+														<option value="TBSCCABLE3">삼척해상케이블카 용화역왕복(대인)</option>
+														<option value="TBSCCABLE1">삼척해상케이블카 장호역왕복(아동)</option>
+														<option value="TBSCCABLE4">삼척해상케이블카 용화역왕복(아동)</option>
+														<option value="TBSCBIKE2P">삼척해양레일바이크 2인승</option>
+														<option value="TBSCBIKE4P">삼척해양레일바이크 4인승</option>
+														<option value="YPCA012">용평리조트 발왕산 케이블카(12차)</option>
+														<option value="LUGEKKDA01">추석 강화루지 1회권</option>
+														<option value="LUGEKKDA02">추석 강화루지 2회권</option>
+														<option value="LUGEKKDA03">추석 강화루지 3회권</option>
+														<option value="TKBSS01">부석사_성인</option>
+														<option value="TKBSS02">부석사_아동</option>
+														<option value="TKSOSU01">소수서원_성인</option>
+														<option value="TKSOSU02">소수서원_아동</option>
+														<option value="KKDAY200">용평리조트 발왕산 케이블카(KKDAY 200장)</option>
+														<option value="TKYJHANBOK">영주 선비촌 한복대여 1시간권</option>
+														<option value="TKFLOWER01">소백산꽃차이야기(꽃코디얼,미니다육,꽃크로플)</option>
+														<option value="TKNULOOK01">영주 막걸리만들기 체험</option>
+														<option value="TKNULOOK02">영주 누룩쿠키만들기 체험</option>
+														<option value="TKNULOOK03">막걸리+누룩쿠키 만들기 체험</option>
+														<option value="TKHOSU01">호수목장 치즈늘리기 체험</option>
+														<option value="TKHOSU02">호수목장 치즈늘리기+피자만들기 체험</option>
+														<option value="TKHOSU03">호수목장 치즈늘리기+치즈주먹밥 만들기 체험</option>
+														<option value="TKGSG01">풍기인삼비누+풍기인견때수건 만들기 체험</option>
+														<option value="TKGSG02">라탄컵홀더만들기 체험</option>
+														<option value="TKGSG03">라탄 컵받침 만들기 체험</option>
+														<option value="TKGSG04">라탄 자개모빌 만들기 체험</option>
+														<option value="TKGSG05">나만의 립밤만들기 체험</option>
+														<option value="TKESCAPE01">영주 방탈출파크</option>
+														<option value="YPCA013">용평리조트 발왕산 케이블카(13차)</option>
+														<option value="KKDAY1000">발왕산 케이블카 KKDAY 1000장_10.07</option>
+														<option value="GJCART01">경주레저 카트레이싱 이용권 1인용</option>
+														<option value="GJCART02">경주레저 카트레이싱 이용권 2인용</option>
+														<option value="GJATV01">경주레저 산악바이크 ATV 1인 이용권</option>
+														<option value="GJATV02">경주레저 산악바이크 ATV 2인 이용권</option>
+														<option value="GAYATGO01">가야금가야금만들기 + 커피1잔(대소동일)</option>
+														<option value="MASANG04">대가야 기마문화체험장 마차체험 15분 대소동일</option>
+														<option value="MASANG03">대가야 기마문화체험장 국궁체험 20발 대소동일</option>
+														<option value="MASANG02">대가야 기마문화체험장 승마체험 아동</option>
+														<option value="MASANG01">대가야 기마문화체험장 승마체험 성인</option>
+														<option value="MASANG05">대가야 기마문화체험장 마차체험 외승길 20분 대소동일</option>
+														<option value="MASANG06">대가야 기마문화체험장 카라반 4인 평일이용권</option>
+														<option value="DAEGAYA01">대가야생활촌 입장권 성인</option>
+														<option value="DAEGAYA02">대가야생활촌 입장권 아동</option>
+														<option value="OMYNARA01">문경 오미나라 와인체험 대소동일</option>
+														<option value="OMYNARA02">문경 오미나라 증류주 체험 대소동일</option>
+														<option value="MGATV01">문경 레저투어 ATV 1인 단독탑승</option>
+														<option value="MGATV02">문경 레저투어 ATV 2인 동승(성인+아동)</option>
+														<option value="MGATV03">문경 레저투어 ATV 2인 동승(성인+성인)</option>
+														<option value="ZIPMG01">(쿠팡용 기간만료)짚라인 문경 1인 이용권</option>
+														<option value="MGFLY01">문경활공랜드 일반코스 1인 이용권</option>
+														<option value="MGFLY02">문경활공랜드 액티브 코스 1인 이용권</option>
+														<option value="MGFLY03">문경활공랜드 커플동행 2인 이용권</option>
+														<option value="MGFLY04">문경활공랜드 노을코스 1인 이용권</option>
+														<option value="SJHRIDE01">상주국제승마장 승마체험권+말먹이 대소동일</option>
+														<option value="SJHRIDE02">상주국제승마장 승마 일일강습 대소동일</option>
+														<option value="SEKSJ01">상주보수상레저 폰툰보트 1인 이용권 성인 </option>
+														<option value="SEKSJ02">상주보수상레저 폰툰보트 1인 이용권 아동</option>
+														<option value="SEKSJ03">상주보수상레저 모터보트 1인 이용권 성인 </option>
+														<option value="SEKSJ04">상주보수상레저 모터보트 1인 이용권 아동 </option>
+														<option value="SJFLY01">상주활공랜드 주중 1인 체험</option>
+														<option value="SJFLY02">상주활공랜드 주말 1인 체험</option>
+														<option value="SJFLY03">상주활공랜드 주중 1인체험+촬영</option>
+														<option value="SJFLY04">상주활공랜드 주말 1인체험+촬영</option>
+														<option value="FARMERS01">스테이지 2인 패키지</option>
+														<option value="FARMERS02">스테이지 3인 패키지</option>
+														<option value="FARMERS03">스테이지 4인 패키지</option>
+														<option value="BANGA01">찜닭만들기 체험</option>
+														<option value="BANGA02">찜닭만들기 체험 + 생강라떼 1잔</option>
+														<option value="BANGA03">찜닭만들기 체험 + 생강라떼만들기</option>
+														<option value="HAHOE01">하회마을 입장권 성인</option>
+														<option value="HAHOE02">하회마을 입장권 아동</option>
+														<option value="DOSAN01">도산서원 입장권 성인</option>
+														<option value="DOSAN02">도산서원 입장권 아동</option>
+														<option value="ADMOON01">안동 문보트 3인승 이용권</option>
+														<option value="ADJOO01">주토피움 주간 동식물체험 1인</option>
+														<option value="ADJOO02">주토피움 야간 빛 테마파크 1인</option>
+														<option value="GBTOUR01">안동시티투어 성인</option>
+														<option value="GBTOUR02">안동시티투어 아동</option>
+														<option value="YCARCH01">예천 활쏘기 체험 만원의 행복</option>
+														<option value="YCARCH02">예천 활체험센터 자세교정 1시간</option>
+														<option value="YCARCH03">예천 활체험센터 예비바코드</option>
+														<option value="UJSKY01">A코스 왕복 2인권</option>
+														<option value="UJSKY02">A코스 왕복 3인권</option>
+														<option value="UJSKY03">A코스 왕복 4인권</option>
+														<option value="UJCABLE01">왕피천 케이블카 일반캐빈 성인</option>
+														<option value="UJCABLE02">왕피천 케이블카 일반캐빈 아동</option>
+														<option value="UJCABLE03">왕피천 케이블카 크리스탈캐빈 성인</option>
+														<option value="UJCABLE04">왕피천 케이블카 크리스탈캐빈 아동</option>
+														<option value="79YANG01">양떼목장 입장권 대소동일</option>
+														<option value="79YANG02">입장권+산양젖먹이기 체험 대소동일</option>
+														<option value="79YANG03">입장권+양액자 만들기 대소동일</option>
+														<option value="79YANG04">입장권+산양젖만들기+양액자 만들기 대소동일</option>
+														<option value="79YANG06">입장권+양액자 만들기 대소동일</option>
+														<option value="PHCRU01">포항크루즈 이용권 성인</option>
+														<option value="PHCRU02">포항크루즈 이용권 아동</option>
+														<option value="PHYAC01">포항 요트데이 퍼블릭 요트투어 성인</option>
+														<option value="PHYAC02">포항 요트데이 퍼블릭 요트투어 아동</option>
+														<option value="RAILCD01">청도 레일바이크 평일 이용권</option>
+														<option value="RAILCD02">청도 레일바이크 주말, 공휴일 이용권</option>
+														<option value="GPARK01">군파크루지 평일 커플 2인 1회</option>
+														<option value="GPARK02">군파크루지 주말 커플 2인 1회</option>
+														<option value="GPARK03">군파크루지 평일 가족 3인 2회</option>
+														<option value="GPARK04">군파크루지 평일 1인 2회</option>
+														<option value="GPARK05">군파크루지 평일 1인 3회</option>
+														<option value="GPARK06">군파크루지 주말 1인 2회</option>
+														<option value="GPARK07">군파크루지 주말 1인 3회</option>
+														<option value="PHYAC03">포항 요트데이 퍼블릭 요트투어 야간(대소동일)</option>
+														<option value="GOLD01">양조장막걸리 시음 및 투어</option>
+														<option value="ellim01">대청도 평일출발 5인 1실(대소동일)</option>
+														<option value="ellim02">대청도 평일출발 2인 1실</option>
+														<option value="ellim03">대청도 금,일요일 출발 5인 1실</option>
+														<option value="ellim04">대청도 금.일요일 출발 2인 1실</option>
+														<option value="ellim05">대청도 토요일 출발 5인 1실</option>
+														<option value="ellim06">대청도 토요일 출발 2인 1실(성인)</option>
+														<option value="ellim07">대청도 토요일 출발 2인 1실(소인)</option>
+														<option value="TKSPAAT">Prone Position 이용권</option>
+														<option value="TBLUGE05">강화루지2회권(주말)_미식</option>
+														<option value="WONFARM01">교동딸기이용권</option>
+														<option value="GREEN01">그린홀리데이키친 인삼 알리오올리오파스타 1인</option>
+														<option value="orbitor01">인천 5개 시장 스탬프 투어</option>
+														<option value="inthe01">인천 현지로컬가이드 맛집투어</option>
+														<option value="YPCA014">★★★발왕산 케이블카 왕복 이용권_14차</option>
+														<option value="airts01">가스트로투어(함봉산+가좌시장)</option>
+														<option value="airts02">가스트로투어(성창포길+신포국제시장)</option>
+														<option value="LOTUS01">힐링 템플스테이 1박2일 이용권(자율형)</option>
+														<option value="JDTP01">전등사 한박자쉬고 1박2일(개별화장실)성인</option>
+														<option value="JDTP02">전등사 한박자쉬고 1박2일(개별화장실)청소년</option>
+														<option value="DGMC01">아결 요가 명상(월,목) 19:00 (1회권)</option>
+														<option value="DGMC02">중년들을 위한 B.L 요가 명상(화,금) 14:00 (1회권)</option>
+														<option value="DGMC03">오행 웰빙 비빔밥</option>
+														<option value="DGMC04">콩불고기 정식(최소2인)</option>
+														<option value="DGMC05">연잎밥 정식</option>
+														<option value="HEADEN01">성인 입장권+음료 1잔</option>
+														<option value="HEADEN02">아동 입장권</option>
+														<option value="HEADEN03">입장권+매직미러 체험(성인)</option>
+														<option value="HEADEN04">입장권+매직미러 체험(소인)</option>
+														<option value="HEADEN05">입장권+가우디액자 체험(성인)</option>
+														<option value="HEADEN06">입장권+가우디액자 체험(소인)</option>
+														<option value="PALMI01">오후 팔미도 금빛 낙조투어 1인</option>
+														<option value="YSW01">전통좌훈패키지+강화인삼영양밥4개</option>
+														<option value="HDCSMS01">코스모스 40분 단독이용 (8인승)</option>
+														<option value="HDCSMS02">트레발리 40분 단독이용 (8인승)</option>
+														<option value="TBLUGE04">강화루지2회권(주중)_미식</option>
+														<option value="GREEN02">그린홀리데이키친 아메리카노 1잔</option>
+														<option value="TBDOSAN01">도산서원 입장권(성인)</option>
+														<option value="TBDOSAN02">도산서원 입장권(소인)</option>
+														<option value="YSW03">강화약쑥전통좌훈체험권</option>
+														<option value="wonfarm02">감성딸기밭 체험 패키지 2인권</option>
+														<option value="wonfarm03">감성딸기밭 체험 패키지 3인권</option>
+														<option value="GREEN03">알리오올리오파스타(중지)</option>
+														<option value="GREEN04">명란크림파스타(중지)</option>
+														<option value="GREEN05">해산물 토마토 파스타(중지)</option>
+														<option value="GREEN06">크림리조또(중지)</option>
+														<option value="wonfarm04">감성딸기밭 체험 패키지 4인권</option>
+														<option value="wonfarm05">감성딸기밭 체험 패키지 5인권</option>
+														<option value="GREEN07">홀리데이 스텔라 피자(중지)</option>
+														<option value="GREEN08">모임 단체 대관 4시간(11시~15시)</option>
+														<option value="TKYPSKI07">21~22 용평 PKG-리프트(대인주간권)</option>
+														<option value="TKYPSKI08">21~22 용평 PKG-리프트(소인주간권)</option>
+														<option value="TKYPSKI09">21~22 용평 PKG-렌탈(대인주간권)</option>
+														<option value="TKYPSKI10">21~22 용평 PKG-렌탈(소인주간권)</option>
+														<option value="TKYPSKI11">21~22 용평 리프트 티켓(대인주간권)</option>
+														<option value="TKYPSKI12">21~22 용평 리프트 티켓(소인주간권)</option>
+														<option value="ROMY01">로미지안가든 1인 입장권</option>
+														<option value="ROMY02">사누끼우동+커피+입장권PKG</option>
+														<option value="ROMY03">등심돈가스+커피+입장권PKG</option>
+														<option value="YSW04">강화약쑥전통좌훈체험권 5회</option>
+														<option value="YPCA015">22년 발왕산 케이블카 15차(대인)</option>
+														<option value="YPCA016">22년 발왕산 케이블카 15차(소인)</option>
+														<option value="TBKD2202">용평발왕산_KKDAY선구매 200(소인)_22.1.24</option>
+														<option value="TBKD2201">용평발왕산_KKDAY선구매 800(대인)_22.1.24</option>
+														<option value="TRIPCOM20">발왕산케이블카 트립닷컴 선구매 20장(대인)</option>
+														<option value="TRIPCOMROM">로미지안가든 입장권 트립닷컴 선구매 20장(공통)</option>
+														<option value="TKYPSKI13">(특가) 21~22 용평 리프트 티켓(대인주간권)</option>
+														<option value="TKYPSKI14">(특가) 21~22 용평 리프트 티켓(소인주간권)</option>
+														<option value="TKYPSKI15">(특가) 21~22 용평 PKG-리프트(대인주간권)</option>
+														<option value="TKYPSKI16">(특가) 21~22 용평 PKG-리프트(소인주간권)</option>
+														<option value="TKYPSKI17">(특가) 21~22 용평 PKG-렌탈(대인주간권)</option>
+														<option value="TKYPSKI18">(특가) 21~22 용평 PKG-렌탈(소인주간권)</option>
+														<option value="ZIPMG02">짚라인 문경 1인 체험 이용권</option>
+														<option value="ZIPYI01">짚라인 용인 1인 체험 이용권</option>
+														<option value="GREEN09">리코타치즈 샐러드</option>
+														<option value="GREEN10">알리오 올리오 파스타</option>
+														<option value="GREEN11">명란 크림파스타</option>
+														<option value="GREEN12">해산물 토마토 파스타</option>
+														<option value="GREEN13">로제 파스타</option>
+														<option value="GREEN14">마르게리타 피자</option>
+														<option value="GREEN15">고르곤졸라 피자</option>
+														<option value="GREEN16">감바스</option>
+														<option value="GREEN17">한우 채끝 스테이크</option>
+														<option value="63BNH01">(LUNCH) 싱푸 코스 1인</option>
+														<option value="63BNH02">(DINNER) 파사이 코스 1인</option>
+														<option value="63TTS01">(Lunch) 터치더스카이 Special Couse 1인</option>
+														<option value="63TTS02">(Dinner) 터치더스카이 더 마스터 쉐프 course 1인</option>
+														<option value="63WOC01">(Lunch) 워킹온더클라우드 런치 스페셜 1인</option>
+														<option value="63WOC02">(Lunch) 워킹온더클라우드 주중 랍스타 스페셜 1인</option>
+														<option value="63WOC03">(Lunch) 워킹온더클라우드 주말/공휴일 랍스타 스페셜 1인</option>
+														<option value="63WOC04">(Lunch) 워킹온더 클라우드 런치 A코스 1인</option>
+														<option value="63WOC05">(Dinner) 워킹온더클라우드 디너 시즌 코스 1인</option>
+														<option value="63WOC06">(Dinner) 워킹온더클라우드 디너 루나 코스 1인</option>
+														<option value="63SCK01">(Lunch) 슈치쿠 런치 오마카세 코스 1인</option>
+														<option value="63SCK02">(Lunch) 슈치쿠 런치 모미 코스 1인</option>
+														<option value="63SCK03">(Dinner) 슈치쿠 디너 오마카세 코스 1인</option>
+														<option value="63SCK04">(Dinner) 슈치쿠 디너 모미 코스 1인</option>
+														<option value="63WOC07">(Dinner) 워킹온더클라우드 디너 아이리스 코스 1인</option>
+														<option value="ZIPMGSP01">(5월 가정의달 특가) 짚라인 문경 1인 체험 이용권</option>
+														<option value="ZIPYISP01">(5월 가정의달 특가) 짚라인 용인 1인 체험 이용권</option>
+														<option value="TBKD2203">용평발왕산_KKDAY선구매 1,000(대인)_22.05.10</option>
+														<option value="TBWALK002">워킹온더클라우드 벨로 1인</option>
+														<option value="MGOMS01">가이드투어+셀프와인 체험 15:00~16:30</option>
+														<option value="DJSPS01">신평 양조장 1인 체험 이용권</option>
+														<option value="GNCOFFE01">강릉 세계 원두 커피 시음</option>
+														<option value="PCHERB01">평창 허브나라 농원 A</option>
+														<option value="SJHEO01">상주 허씨 비단 직물 A</option>
+														<option value="BKIMCHI01">봉우리 명인 김치</option>
+														<option value="MJGPH01">목판화를 이용한 고판화 체험</option>
+														<option value="PCHERB02">평창 허브나라 농원 B</option>
+														<option value="SJHEO02">상주 허씨 비단 직물 B</option>
+														<option value="MGOMS02">가이드투어+셀프와인 체험 10:00~11:30</option>
+														<option value="CANDY005">캔디서프 프리미엄강습 PKG(1인)</option>
+														<option value="CANDY006">캔디서프 보드 &amp; 수트 렌탈(1인)</option>
+														<option value="CANDY007">캔디서프 보드렌탈(1인)</option>
+														<option value="TBSF2D1N">파도도타고 썸도타고</option>
+														<option value="LALA003">라라서프 입문강습 PKG(1인)</option>
+														<option value="LALA004">라라서프 보드+수트렌탈(1인)</option>
+														<option value="LALA005">라라서프 보드렌탈(1인)</option>
+														<option value="TBECO0001">용인 에코어드벤처 1인 이용권</option>
+														<option value="MASANG07">대가야 기마문화체험장 카라반 4인 금,토,일, 공휴일 이용권</option>
+														<option value="LEUP01">르푸앙 수상레저 입장권</option>
+														<option value="LEUP02">놀이기구 1회 이용권</option>
+														<option value="LEUP03">놀이기구 오전 무제한 이용권(09:00~13:00)</option>
+														<option value="LEUP04">놀이기구 오후 무제한 이용권(14:00~18:00)</option>
+														<option value="LEUP05">놀이기구 종일 무제한 이용권(09:00~18:00)</option>
+														<option value="LEUP06">놀이기구 오전 무제한 + 제트보트 1회</option>
+														<option value="LEUP07">놀이기구 오후 무제한 + 제트보트 1회</option>
+														<option value="LEUP08">놀이기구 종일 무제한 + 제트보트 1회</option>
+														<option value="JJANG01">래프팅 체험 1인권</option>
+														<option value="PHYAC04">프라이빗 2인 커플투어</option>
+														<option value="PHYAC05">프라이빗 3~7인 투어</option>
+														<option value="PHYAC06">프라이빗 8~11인 투어</option>
+														<option value="PHYAC07">요트프로포즈(투어미포함)</option>
+														<option value="PHYAC08">요트프로포즈(투어포함)</option>
+														<option value="LEUP09">오전 수상스키 강습 + 놀이기구 3종</option>
+														<option value="LEUP10">오후 수상스키 강습 + 놀이기구 3종</option>
+														<option value="LEUP11">종일 수상스키 강습 + 놀이기구 3종</option>
+														<option value="LEUP12">오전 웨이크보드 강습 + 놀이기구 3종</option>
+														<option value="LEUP13">오후 웨이크보드 강습 + 놀이기구 3종</option>
+														<option value="LEUP14">종일 웨이크보드 강습 + 놀이기구 3종</option>
+														<option value="TBSHR01">서해랑크리스탈캐빈 왕복권(대인)</option>
+														<option value="TBPIR001">전곡항11인승요트(전체대여권1시간)</option>
+														<option value="TBSHR02">서해랑크리스탈캐빈 왕복권(소인)</option>
+														<option value="KINGKONG1">[킹콩5호] 쭈꾸미/갑오징어 낚시</option>
+														<option value="KINGKONG2">[킹콩2호] 우럭/광어 낚시</option>
+														<option value="KINGKONG3">[킹콩6호] 쭈꾸갑오징어 낚시 종일 체험권 (04:30~16:00)</option>
+														<option value="RAILCD03">금요일 야간 이용권</option>
+														<option value="RAILCD04">토요일 야간 이용권</option>
+														<option value="LEUP15">3종 놀이기구 이용권</option>
+														<option value="LEUP16">5종 놀이기구 이용권</option>
+														<option value="LEUP17">제트보트 1회 이용권</option>
+														<option value="TKHCAPC000">홍천AlcapaWorld</option>
+														<option value="TKNATUR22">[NATURELABS] 시간의 조각:계절 입장권 (성인)</option>
+														<option value="TKNATUR23">[NATURELABS] 시간의 조각:계절 입장권 (청소년)</option>
+														<option value="TKNATUR24">[NATURELABS] 시간의 조각:계절 입장권 (유아)</option>
+														<option value="RAILCD05">청도 레일바이크 주중 2인승 이용권</option>
+														<option value="RAILCD06">청도 레일바이크 주말 2인승 이용권</option>
+														<option value="RAILCD07">청도 레일바이크 주중 3인승 이용권</option>
+														<option value="RAILCD08">청도 레일바이크 주말 3인승 이용권</option>
+														<option value="RAILCD09">청도 레일바이크 주중 4인승 이용권</option>
+														<option value="RAILCD10">청도 레일바이크 주말 4인승 이용권</option>
+														<option value="63WOC00">(Lunch) 워킹온더클라우드 런치 시즈널 1인</option>
+														<option value="TBSHR001">서해랑케이블카 크리스탈캐빈 왕복 이용권</option>
+														<option value="TALJUN">강화 티앤림레포츠파크 정글패키지 1인 이용권</option>
+														<option value="TALBAT">강화 티앤림레포츠파크 배틀패키지 1인 이용권</option>
+														<option value="TALSUR">강화 티앤림레포츠파크 서바이벌 1인 이용권</option>
+														<option value="TALGOC">강화 티앤림레포츠파크 고카트 1인 이용권</option>
+														<option value="63BP0001">63빌딩 PAVILION Lunch 성인 1인</option>
+														<option value="63BP0002">63빌딩 PAVILION Lunch 초등 1인</option>
+														<option value="63BP0003">63빌딩 PAVILION Dinner 성인 1인</option>
+														<option value="63BP0004">63빌딩 PAVILION Dinner 초등 1인</option>
+														<option value="TALADV">강화 티앤림레포츠파크 어드벤처 1인 이용권</option>
+														<option value="TALZIB">강화 티앤림레포츠파크 집라인 1인 이용권</option>
+														<option value="TBYIATV">용인 레저크래프트 ATV 이용권</option>
+														<option value="TBGBST1">[오감만족 영주 하늘여행] 열기구 + 호랑이형님 테마 방탈출</option>
+														<option value="TBGBST11">[오감만족 영주 하늘여행] 열기구 + 유미의세포들 테마 방탈출</option>
+														<option value="TBGBST12">[오감만족 영주 하늘여행] 열기구 + 여신강림 테마 방탈출</option>
+														<option value=" TBGBST13">[오감만족 영주 하늘여행] 열기구 + 신의탑 테마 방탈출</option>
+														<option value="TBGBYJ21">[오감만족 영주 하늘여행] 열기구 + 꽃코디얼 체험</option>
+														<option value="TBGBYJ22">[오감만족 영주 하늘여행] 열기구 + 미니다육만들기 체험</option>
+														<option value="TBGBYJ23">[오감만족 영주 하늘여행] 열기구 + 꽃크로플만들기 체험</option>
+														<option value="TBGBYJ31">[오감만족 영주 하늘여행] 열기구 + 인삼비누 체험</option>
+														<option value="TBGBYJ32">[오감만족 영주 하늘여행] 열기구 + 청바지업사이클 키링 만들기</option>
+														<option value="TBGBYJ33">[오감만족 영주 하늘여행] 열기구 + 스테인드아크릴 도어벨 만들기</option>
+														<option value="TBGBYJ34">[오감만족 영주 하늘여행] 열기구 + 커피자루 텀블러가방 만들기</option>
+														<option value="TBGBYJ41">[오감만족 영주 하늘여행] 열기구 + 막걸리 만들기</option>
+														<option value="TBGBYJ42">[오감만족 영주 하늘여행] 열기구 + 누룩쿠키 만들기</option>
+														<option value="TBGBYJ43">[오감만족 영주 하늘여행] 열기구 + 누룩쿠키,막걸리 만들기</option>
+														<option value="TBGBSJ11">열기구 체험 + 하늘자전거 1인 이용권</option>
+														<option value="TBGBSJ12">열기구 체험 + 카트 1인 이용권</option>
+														<option value="TBGBSJ21">열기구 체험 + 푼툰보트 이용권</option>
+														<option value="TBGBSJ22">열기구 체험 + 모터보트 이용권</option>
+														<option value="TBGBSJ31">열기구 체험 + 서바이벌 이용권</option>
+														<option value="TBGBSJ41">열기구 + 말먹이주기체험 + 승마체험</option>
+														<option value="TBGBYJ0">영주 오감만족 하늘여행 열기구 1인 체험권</option>
+														<option value="63BP0005">63빌딩 PAVILION Lunch 미취학 1인</option>
+														<option value="63BP0006">63빌딩 PAVILION Dinner 미취학 1인</option>
+														<option value="TBADWY">도넛보트 체험권 1인~5인 [30분]</option>
+														<option value="TBADWY1">도넛보트 체험권 6인 [30분]</option>
+														<option value="TBADWY2">에그보트 체험권 1인~4인 [30분]</option>
+														<option value="TBADWY0">도넛보트 체험권 1인~5인 [30분]</option>
+														<option value="TBADLD1">무제한종일권</option>
+														<option value="TBADLD2">패키지A (입장권+놀이기구)</option>
+														<option value="TBADLD3">패키지 B (입장권+놀이기구2)</option>
+														<option value="TBADLD4">패키지 C (입장권+놀이기구3)</option>
+														<option value="TBADLD5">패키지 D (입장권+놀이기구4)</option>
+														<option value="TBADLD6">패키지 E (입장권+놀이기구4)</option>
+														<option value="TBADLD7">입장권</option>
+														<option value="TBADLD8">수상스키/웨이크보드지상교육+1회라이딩</option>
+														<option value="TBADLD9">수상스키/웨이크보드지상교육+2회라이딩</option>
+														<option value="TBADLD10">1회라이딩</option>
+														<option value="TBADLD11">플라이피쉬</option>
+														<option value="TBADLD12">제트보트</option>
+														<option value="TBADLD13">럭셔리보트투어 A코스</option>
+														<option value="TBADLD14">럭셔리보트투어 B코스</option>
+														<option value="TBADLD15">럭셔리보트투어 C코스</option>
+														<option value="TBADWY3">럭셔리보트 체험권 5인 (인원 추가 시 현장결제)</option>
+														<option value="TBADLD0">입장권 (에어바운스존+워터슬라이드존)</option>
+														<option value="TBGBBH61">열기구 1인 체험권 + 수납함만들기 체험</option>
+														<option value="TBGBBH5">열기구 1인 체험권 + 얼굴문패만들기 체험</option>
+														<option value="TBGBBH43">열기구 체험권 + 국립백두대간수목원 입장권(어린이)</option>
+														<option value="TBBYBT001">부여하늘여행 열기구탑승권 성인 1인 탑승권</option>
+														<option value="TBGBBH42">열기구 1인 체험권 + 국립백두대간수목원 입장권(청소년)</option>
+														<option value="TBGBBH41">열기구 1인 체험권 + 국립백두대간수목원 입장권(성인)</option>
+														<option value="TBGBBH31">열기구 1인 체험권 + 은어반두잡이 체험</option>
+														<option value="TBGBBH11">열기구 1인 체험권</option>
+														<option value="TBGBBH21">열기구 1인 체험권 + 은어맨손잡이 체험</option>
+														<option value="TBBYBT002">부여하늘여행 열기구탑승권 소인 1인 탑승권</option>
+														<option value="ROMY04">치즈돈가스+커피+입장권PKG</option>
+														<option value="ROMY05">생선돈가스+커피+입장권PKG</option>
+														<option value="TBSJ0001">  열기구 체험 + 카트 2인 이용권</option>
+														<option value="JMJ01">바나나보트 1회 이용권(1인)</option>
+														<option value="JMJ02">슈퍼마블 1회 이용권(1인)</option>
+														<option value="JMJ03">플라이피쉬 1회 이용권(1인)</option>
+														<option value="JMJ04">제트스키 1회 이용권(1인)</option>
+														<option value="JMJ05">할인 패키지 A (바나나보트 1회 + 슈퍼마블 1회)</option>
+														<option value="JMJ06">할인 패키지 B (바나나보트 1회 + 플라이피쉬 1회)</option>
+														<option value="JMJ07">할인 패키지 C (바나나보트 1회 + 제트스키 1회)</option>
+														<option value="JMJ08">할인 패키지 D (슈퍼마블 1회 + 플라이피쉬 1회)</option>
+														<option value="JMJ09">할인 패키지 E (슈퍼마블 1회 + 제트스키 1회)</option>
+														<option value="JMJ10">할인 패키지 F (플라이피쉬 1회 + 제트스키 1회)</option>
+														<option value="JMJ11">할인 패키지 G (바나나보트 1회 + 슈퍼마블 1회 + 플라이피쉬 1회)</option>
+														<option value="JMJ12">할인 패키지 H (바나나보트 1회 + 슈퍼마블 1회 + 제트스키 1회)</option>
+														<option value="JMJ13">할인 패키지 I (슈퍼마블 1회 + 플라이피쉬 1회 + 제트스키 1회)</option>
+														<option value="JMJ14">할인 패키지 J (바나나보트 1회 + 슈퍼마블 1회 + 플라이피쉬 1회 + 제트스키 1회)</option>
+														<option value="JMJ15">플라이보드(텐덤) 1인</option>
+														<option value="JMJ16">플라이보드(체험) 1인</option>
+														<option value="SONOSNOWY1">Sono Snowyland Ticket [ONLY]</option>
+														<option value="TBBRDV001">체험비행A코스</option>
+														<option value="TBBRDV002">체험비행B코스</option>
+														<option value="TBBRDV003">체험비행C코스</option>
+														<option value="HKAP01">홍콩 공항픽업</option>
+														<option value="HKAP02">홍콩 공항샌딩</option>
+														<option value="HKSSAC01">홍콩 싹쓸이 당일투어 공항A게이트 미팅(14:00)</option>
+														<option value="HKSSAC02">홍콩 싹쓸이 당일투어 셩완역 A1 출구 미팅(12:50)</option>
+														<option value="HKCD01">홍콩 센트럴 투어 (센트럴역 D1 출구) 18:00</option>
+														<option value="HKNT01">홍콩 나이트투어 (조던역 A출구) 18:00</option>
+														<option value="HKWD01">홍콩 서구룡 문화투어 (시계탑 미팅) 14:00</option>
+														<option value="TBMACA1">마카오 완전정복 당일투어 (홍콩 시계탑 미팅) 10:30</option>
+														<option value="TBKWHG1">(1인) 그네 당일 10회권</option>
+														<option value="TBKWHG2">(1인) 그네 당일 3회권</option>
+														<option value="TBKWHG3">(1인) 하늘그네 1회권</option>
+														<option value="TBKWHG4">(1인) 메이폴그네 1회권</option>
+														<option value="TBKWHG5">(1인) 시소그네 1회권</option>
+														<option value="TBKWHG6">자전거 1시간 대여권</option>
+														<option value="TBKWHG7">(1인) 입장권 1시간</option>
+														<option value="TBKWHG8">동반입장권</option>
+														<option value="TBLOTTEMB">롯데월드 문보트 이용권</option>
+														<option value="TBLOTTEUFO">롯데월드 UFO보트 이용권</option>
+														<option value="Hwadamsup0">Hwadamsup ticket</option>
+														<option value="TBGBGH11">열기구 체험권 + 김천사랑상품권 1만원 + 포도 할인권 5천원</option>
+														<option value="TBGBGC21">열기구 체험 + 짚와이어 체험 + 김천사랑상품권 1만원</option>
+														<option value="TBGBGC22">열기구 체험 + 스카이워크 + 김천사랑상품권 1만원</option>
+														<option value="TBGBGC23">열기구 체험 + 짚와이어 + 스카이워크 + 전망대 + 김천사랑상품권 1만원</option>
+														<option value="TBGBGC24">열기구 체험 + 전망대입장권 + 김천사랑상품권 1만원</option>
+														<option value="TBGBGC31">열기구 체험 + 레저카트 1인승 + 김천사랑상품권 1만원</option>
+														<option value="TBGBGC32">열기구 체험 2인 + 레저카트 2인승 + 김천사랑상품권 2만원</option>
+														<option value="TBSCBL01">서천 열기구 자유 1인 이용권(성인)(주중)</option>
+														<option value="TBSCBL02">서천 열기구 자유 1인 이용권(소인)(주중)</option>
+														<option value="TBSCBL03">서천 열기구 자유 1인 이용권(성인)(주말)</option>
+														<option value="TBSCBL04">서천 열기구 자유 1인 이용권(소인)(주말)</option>
+														<option value="TBSCBL05">서천 열기구 계류 1인 이용권(성인)</option>
+														<option value="TBSCBL06">서천 열기구 계류 1인 이용권(소인)</option>
+														<option value="63BNH03">(DINNER) 황상 코스 1인</option>
+														<option value="TKSTBUS01">홍대 → SONO비발디</option>
+														<option value="TKSTBUS02">SONO비발디 → 홍대</option>
+														<option value="TKSTBUS03">명동 → SONO비발디</option>
+														<option value="TKSTBUS04">SONO비발디 → 명동</option>
+														<option value="TBTWDT1">대만 화롄 데이투어 1인 이용권</option>
+														<option value="TBTWDT2">대만 예스진지 데이투어 1인 이용권</option>
+														<option value="TBTWTD3">대만 예스허지 데이투어 1인 이용권</option>
+														<option value="TBTWDT4">대만 예스폭지 데이투어 1인 이용권</option>
+														<option value="ZIPTJD1">태종대오션플라잉테마파크 짚라인 1인 체험권</option>
+														<option value="edel03">입장권+중식 닭갈비+스노우플레이</option>
+														<option value="edel04">입장권+치즈떡볶이 체험+아이스 커피</option>
+														<option value="edel05">입장권+치즈퐁뒤체험</option>
+														<option value="edel06">입장권+라끌렛체험</option>
+														<option value="THCOOK01">아카 키친 쿠킹스쿨 [오전]</option>
+														<option value="THCOOK02">아카 키친 쿠킹스쿨 [오후]</option>
+														<option value="THTRA01">정글 트레킹 성인 1인 [11세~]</option>
+														<option value="THTRA02">정글 트레킹 아동 1인 [4세~10세]</option>
+														<option value="THDAY01">백색사원+블랙뮤지엄+블루사원</option>
+														<option value="THDAY02">백색사원+블랙뮤지엄+블루사원+목긴마을</option>
+														<option value="THDAY03">백색사원+골든트라이앵글+보트트립+블루사원</option>
+														<option value="THELE01">코끼리 가족 돌보기 성인 1인 [오전]</option>
+														<option value="THELE02">코끼리 가족 돌보기 아동 1인 [오전]</option>
+														<option value="THELE03">코끼리 가족 돌보기 성인 1인 [오후]</option>
+														<option value="THELE04">코끼리 가족 돌보기 아동 1인 [오후]</option>
+														<option value="edel07">입장권+수제크림치즈만들기 체험</option>
+														<option value="LALA006">라라서프 패들보드 렌탈(1인)</option>
+														<option value="LALA007">라라서프 패들보드+수트 렌탈(1인)</option>
+														<option value="ASPA01">타이마사지 60분</option>
+														<option value="ASPA02">타이마사지 90분</option>
+														<option value="ASPA03">타이마사지 120분</option>
+														<option value="ASPA04">아로마테라피 60분</option>
+														<option value="ASPA05">아로마테라피 90분</option>
+														<option value="ASPA06">아로마테라피 120분</option>
+														<option value="ASPA07">핫 오일 테라피 60분</option>
+														<option value="ASPA08">핫 오일 테라피 90분</option>
+														<option value="ASPA09">핫 오일 테라피 120분</option>
+														<option value="ASPA10">스크럽+아로마 테라피 100분</option>
+														<option value="ASPA11">스크럽+아로마 테라피 120분</option>
+														<option value="ASPA12">스크럽+아로마 테라피 150분</option>
+														<option value="ASPA13">허브 볼 테라피 90분</option>
+														<option value="ASPA14">허브 볼 테라피 120분</option>
+														<option value="ASPA15">스크럽+허브 볼 테라피 100분</option>
+														<option value="ASPA16">스크럽+허브 볼 테라피 120분</option>
+														<option value="ASPA17">스크럽+허브 볼 테라피 150분</option>
+														<option value="ASPA18">아로마+자쿠지 120분 [스파패키지]</option>
+														<option value="ASPA19">스크럽+아로마+자쿠지 150분 [스파패키지]</option>
+														<option value="ASPA20">핫스톤 테라피 90분</option>
+														<option value="ASPA21">핫스톤 테라피 120분</option>
+														<option value="ASPA22">스크럽+핫스톤 테라피 120분</option>
+														<option value="ASPA23">스크럽+핫스톤 테라피 150분</option>
+														<option value="TBLALA7">2종 탑승권 (제트스키제외)</option>
+														<option value="TBLALA72">2종 탑승권 (제트스키제외)(수트+탈의실+샤워이용)</option>
+														<option value="TBLALA91">서핑+레저 2종 탑승권(제트스키제외)</option>
+														<option value="TBLALA81">3종 탑승권 (제트스키제외)</option>
+														<option value="TBLALA92">3종 탑승권 (제트스키제외)(수트+탈의실+샤워이용)</option>
+														<option value="TJDMA1">태종대오션플라잉테마파크 미디어아트 1인 체험권 [성인]</option>
+														<option value="TJDMA2">태종대오션플라잉테마파크 미디어아트 1인 체험권 [청소년]</option>
+														<option value="TJDMA3">태종대오션플라잉테마파크 미디어아트 1인 체험권 [아동]</option>
+														<option value="TBMACA002">마카오 6시간 당일투어</option>
+														<option value="TBMACAO03">마카오 세계문화유산+먹거리체험 데이투어</option>
+														<option value="TBMACAO04">마카오 오후 시티투어</option>
+														<option value="TBMACAO05">마카오 나이트 투어</option>
+														<option value="79YANG05">입장권+산양젖만들기+양액자 만들기 대소동일</option>
+														<option value="TBUSA">콘서트 투어(1층 좌석 랜덤 입장권+버스)</option>
+														<option value="edel01">입장권+바베큐체험</option>
+														<option value="edel02">입장권+테라리움 만들기 체험</option>
+														<option value="TBLALA101">서핑+레저 2종(제트스키제외)+대게무제한+숙소</option>
+														<option value="TBLALA61">1회 탑승권</option>
+														<option value="TBLALA62">1회 탑승권(수트+탈의실+샤워이용)</option>
+														<option value="TBLALA41">1회 탑승권</option>
+														<option value="TBLALA42">1회 탑승권(수트+탈의실+샤워이용)</option>
+														<option value="TBLALA21">패들보드 렌탈권</option>
+														<option value="TBALALA22">패들보드 + 수트 렌탈권</option>
+														<option value="TBLALA31">1회 탑승권</option>
+														<option value="TBLALA32">1회 탑승권(수트+탈의실+샤워이용)</option>
+														<option value="TBLALA51">1회 탑승권</option>
+														<option value="TBLALA52">1회 탑승권(수트+탈의실+샤워이용)</option>
+														<option value="TALCAR">강화레포츠파크 카트패키지 1인 이용권</option>
+														<option value="TBWALK005">워킹온더클라우드 루나 1인</option>
+														<option value="63BNH04">디너 펑요우 코스 1인</option>
+														<option value="63BNH05">디너 따동 코스 1인</option>
+														<option value="63WOC08">(Dinner) 워킹온더클라우드 안심 샐러드바 1인</option>
+														<option value="63WOC09">(Dinner) 워킹온더클라우드 양갈비 샐러드바 1인</option>
+														<option value="63WOC10">(Dinner) 워킹온더클라우드 안심+메로구이 샐러드바 1인</option>
+														<option value="63WOC11">(Dinner) 워킹온더클라우드 안심+바닷가재 샐러드바 1인</option>
+														<option value="63WOC12">(Dinner) 워킹온더클라우드 안심+전복구이 샐러드바 1인</option>
+														<option value="63BNH06">(Dinner) 창셔우 코스 1인</option>
+														<option value="63WOC13">주중 런치 몬타나 1인 </option>
+														<option value="TBLWMB">롯데월드 문보트 이용권</option>
+														<option value="TBLWUFO">롯데월드 UFO보트 이용권</option>
+														<option value="EAST01">오션뷰 펜션 1박 2일 풀패키지</option>
+														<option value="EAST02">여성1박2일패키지(강습+숙박+무제한BBQ파티)</option>
+														<option value="EAST03">남성1박2일패키지(강습+숙박+무제한BBQ파티)</option>
+														<option value="EAST04">[입문강습 패키지] 서핑 강습</option>
+														<option value="EAST05">1:1 단독 강습</option>
+														<option value="EAST06">1:2 단독 강습</option>
+														<option value="EAST07">1:3 단독 강습</option>
+														<option value="EAST08">1:4 단독 강습</option>
+														<option value="EAST09">보드+슈트+샤워</option>
+														<option value="EAST10">보드+샤워or슈트+샤워</option>
+													</select>
+												</div>
+												<input type="text" class="input_text size_md" id="producer_search" placeholder="티켓그룹 검색">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓명">티켓명</th>
+										<td data-th="티켓명">
+											<div class="input_box">
+												<input type="text" name="ticket_nm" class="input_text size_md" hname="티켓명" required="">
+												<p class="input_status point">* 고객 바코드에 표시되는 티켓 이름입니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓구분">티켓구분</th>
+										<td data-th="티켓구분">
+											<div class="input_box">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation1" class="input_radio" checked>
+														<label for="generation1" class="label_radio">성인</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation2" class="input_radio">
+														<label for="generation2" class="label_radio">아동</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="generation" id="generation3" class="input_radio">
+														<label for="generation3" class="label_radio">유아</label>
+													</div>
+												</div>
+												<p class="input_status point">* 구분이 없는 티켓일 경우 '성인'으로 등록해주세요.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사용 유효기간">사용 유효기간</th>
+										<td data-th="사용 유효기간">
+											<div class="input_box">
+												<div class="input_box input_flex">
+													<input type="text" name="ti_valid_start" id="ti_valid_start" class="valid_start_cal input_text size_md icon_ver icon_date calender_btn mx180" value="" readonly="readonly">
+													<span class="label_text input_txt size_md">~</span>
+													<input type="text" name="ti_valid_end" id="ti_valid_end" class="valid_end_cal input_text size_md icon_ver icon_date calender_btn mx180" value="" readonly="readonly">
+												</div>
+												<p class="input_status point">*  유효기간이 없는 티켓일 경우 입력하지 않습니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="티켓번호">티켓번호</th>
+										<td data-th="티켓번호" class="align_left">
+											<div class="tbl_inline column_ver gap2 align_left">
+												<span class="bold">마지막 티켓 번호 </span>
+												<div class="input_box input_flex">										
+													<input type="text" value="" id="ticketCode" class="input_text size_md mx180" placeholder="티켓코드">
+													<input type="text" value="" id="ticketStartNum" class="input_text size_md" placeholder="티켓 시작번호">
+													<span class="label_text input_txt size_md bold">~</span>
+													<input type="text" value="" id="ticketEndNum" class="input_text size_md" placeholder="티켓 끝번호">
+												</div>
+												<div class="input_box input_flex">
+													<input type="text" value="" id="placeNum" class="input_text size_md mx180" placeholder="자릿수">
+													<span class="label_text input_txt size_md">ex) 00001 -> 5를 입력</span>
+													<button type="button" class="input_btn size_md">자동입력</button>
+												</div>
+												<div class="input_box">
+													<textarea name="ticket_data" id="ticket_data" class="input_text size_md h_auto" rows="5"></textarea>
+													<p class="input_status point">* 티켓번호는 한줄당 한개씩 입력해주세요.</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');		
+	</script>
+    <script src="../js/common.js"></script>
+
+
+</body>
+
+</html>
