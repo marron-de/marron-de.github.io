@@ -1,0 +1,276 @@
+:root {
+	--transition: all 0.4s ease ;
+	--shadow : 0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.08)
+}
+
+
+/* 공통 */
+ * { margin: 0; padding: 0; outline: none; box-sizing: border-box;-webkit-tap-highlight-color: transparent; }
+body {margin: 0; padding: 0; -ms-overflow-style: none; scrollbar-width: none; }
+body::-webkit-scrollbar {display: none;}
+html { scroll-behavior: smooth; }
+html, body {font: 400 1rem/1.3 'Pretendard', sans-serif;  color: #000000; width: 100%; position: relative;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent;}
+img {max-width: 100%;}
+img.full {width: 100%; height: 100%; object-fit: contain;}
+button { font-family: inherit; border: none; background-color: transparent; outline: 0;  cursor: pointer; }
+input,textarea,button,select {font-family: inherit;}
+
+body.hidden { overflow: hidden;} 
+body::before { content: "";  position: fixed;  left: 0;  top: 0;  width: 100%;  height: 100%; background-color: rgba(0,0,0,0.25); z-index: 99;  transition: all 0.4s ease; opacity: 0; pointer-events: none;cursor: pointer;}
+body.hidden::before { opacity: 1;  pointer-events: auto;}
+
+.wrap { position: relative;  width: 100%; min-height: 100vh; display: flex;  flex-direction: column;}
+.container { position: relative; flex: 1;  width: 100%; padding-top: 5rem;}
+.inner {position: relative; width: 90%; max-width: 1280px;  margin-left: auto; margin-right: auto;}
+.section {position: relative; width: 100%;}
+.pc {display: block;}
+.tablet {display: none !important;}
+.mobile { display: none !important;}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display: none;}
+
+
+
+/* 공통 - 헤더*/
+.header { position: fixed; left: 0; top: 0; width: 100%; height: 5rem; background: #131720; z-index: 80;}
+.header .h_inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem;}
+.header .h_logo { width: 5.688rem;}
+.header .h_logo > a {display: flex;}
+.header .h_side {display: flex; align-items: center; gap: 0.75rem;} 
+.header .h_side .button.typeD { font-weight: 400;}
+.header .h_side .menu_open{background: url(../img/ic_menu.png) no-repeat center/contain; width: 2.4rem; aspect-ratio: 1/1; display: none;} 
+
+
+
+/* 공통 - 푸터 */
+.footer {position: relative; background: #131720; padding: 3rem 0;}
+.footer .f_inner {display: flex; align-items: flex-start; gap: 1.5rem; font-weight: 400;font-size: 0.875rem;line-height: 157%;color: #dfdfdf;}
+.footer .f_tit {font-weight: 700;font-size: 1rem;line-height: 150%;color: #fff;}
+.footer .f_info {flex: 1; display: flex; flex-direction: column;}
+.footer .f_info .logo { width: 5.688rem; display: flex; margin-bottom: 2rem;}
+.footer .f_info .info_txt { margin-bottom: 0.875rem;}
+.footer .f_cont {display: flex; align-items: flex-start; gap: 1.5rem;}
+.footer .f_cont .item {width: 10rem; display: flex; flex-direction: column; gap: 1rem;}
+.footer .f_cont .item .contbox{display: flex; flex-direction: column; gap: 0.5rem;}
+.footer .f_cont .guidebox .contbox .link{font-weight: 500;}
+.footer .f_cont .sitebox .contbox .link {display: flex; align-items: center; gap: 0.563rem;}
+.footer .f_cont .sitebox .contbox .link .tit {font-weight: 500;}
+.footer .f_cont .sitebox .contbox .link .desc {font-size: 0.813rem;line-height: 154%;color: #737984;}
+.footer .f_contact {display: flex; flex-direction: column; gap: 1rem;}
+.footer .f_contact .contbox {display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;}
+.footer .f_contact .contbox .inq_btn { font-size: 0.813rem; line-height: 154%;   border: 1px solid #fff; border-radius: 0.5rem;  width: auto;  height: 2rem;  padding: 0 1rem;}
+
+
+
+/* 공통 - 폼 */
+.form_box {position: relative; display: flex; flex-wrap: wrap; gap: 2.5rem;} 
+.form_line {width: 100%; height: 1px; background: #dfe5ec;}
+.input_box { position: relative; width: 100%; display: flex; flex-direction: column; gap: 0.75rem;}
+.input_box .input_text { width: 100%; height: 3.5rem; border: 1px solid #dfdfdf;   border-radius: 1rem;  padding: 0 1.25rem; font-size: 1rem; line-height: 150%;  color: #131720; background: #fff;}
+.input_box .input_text::placeholder {color: #adb2bb;}
+.input_box .input_text:read-only { border: none; padding: 0;}
+.input_box .input_text.datepicker {background: url(../img/ic_datepicker.png) no-repeat right 1.25rem center/1.5rem auto #fff; padding-right: 3.75rem;  cursor: pointer;}
+.input_box textarea.input_text {height: 7.5rem; padding: 1.25rem; resize: none;}
+.input_box .label_text { font-weight: 700;font-size: 1rem;line-height: 150%;color: #131720; display: block; word-break: keep-all;}
+.input_box .label_text .required { color: #7c00ff;}
+.input_box .input_item {display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;}
+.input_box .input_item .input_text {flex: 1;}
+.input_box .input_item .select_box {flex: 1;}
+.input_box .input_item .mx220 {max-width: 13.75rem;}
+.input_box .input_item .mx240 {max-width: 15rem;}
+.input_box .input_item .mx300 {max-width: 18.75rem;}
+.input_box .input_txt{font-size: 1rem;line-height: 150%;color: #131720;}
+.input_box .input_btn { padding: 0;  width: 6.75rem; height: 3.5rem;   font-size: 1rem;  border-radius: 1rem;}
+.input_box .word_number { font-size: 0.875rem;line-height: 157%;color: #627383;  position: absolute;  right: 1rem;bottom: 1rem;}
+.input_box_sch .input_text{padding-right: 4rem;}
+.input_box_sch .search_btn{background: url(../img/ic_search.png) no-repeat center/contain; width: 1.5rem; aspect-ratio: 1/1; position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%);}
+
+.check_wrap { position: relative; display: flex; align-items: center; gap: 1rem;} 
+.check_box { position: relative; display: flex; align-items: center; gap: 0.5rem;} 
+.check_box .input_check { display: inline-block; width: 1.5rem; aspect-ratio: 1 / 1;  appearance: none; background: url(../img/checkbox_off.png) no-repeat center / contain;  cursor: pointer;}
+.check_box .input_check:checked { background-image: url(../img/checkbox_on.png);}
+.check_box .label_check { flex: 1; display: inline-block; font-size: 0.875rem;line-height: 157%;color: #131720; word-break: keep-all; cursor: pointer; }
+.check_box .label_check .link {font-weight: 500; }
+.check_box .label_check .line {text-decoration: underline;text-underline-offset: 0.188rem;}
+
+.radio_wrap { display: flex; flex-wrap: wrap; align-items: center; gap:1rem;}
+.radio_box { display: flex; align-items: center; gap: 0.375rem;}
+.radio_box .input_radio {background: url(../img/radio_off.png) no-repeat center / contain; width: 1.5rem; height: 1.5rem; appearance: none; cursor: pointer;}
+.radio_box .input_radio:checked {background-image: url(../img/radio_on.png);}
+.radio_box .label_radio { font-size: 0.875rem;line-height: 157%;color: #131720; cursor: pointer;}
+ 
+.select_box { position: relative; width: 100%;}
+.select_box .select { width: 100%; appearance: none;height: 3.5rem; border: 1px solid #dfdfdf;  border-radius: 1rem;  padding: 0 4rem 0 1.25rem;  font-size: 1rem;  line-height: 150%; color: #131720; background: #fff; background: url(../img/select_arrow.png) no-repeat right 1.25rem top 50% / 1.75rem #ffffff; cursor: pointer;}
+
+.button {border: 1px solid #131720; border-radius: 0.75rem; padding: 0 2rem; height: 3rem; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; line-height: 157%; border: none; transition: var(--transition);}
+.button.typeA { background: linear-gradient(to right, #f9471e 0%, #7c00ff 100%); color: #fff;background-size: 100% auto;}
+.button.typeA:hover { background-position: right center;  background-size: 250% auto;}
+.button.typeB {background: #181818; color: #fff; border: 1px solid #131720;}
+.button.typeB:hover{background: #fff; color: #131720;}
+.button.typeC {background: #fff; color: #131720; border: 1px solid #131720;}
+.button.typeC:hover{background: #181818; color: #fff;}
+.button.typeD {background:transparent; color: #fff; border: 1px solid rgba(255,255,255,0.6); }
+.button.typeD:hover {background: #fff; color: #131720;}
+.button.typeE {background: #fff; color: #627383; border: 1px solid #c4cdd6;}
+.button.typeE:hover{background: #627383; color: #fff;}
+.button.typeF {background: #7c00ff; color: #fff; border: 1px solid #7c00ff;}
+.button.typeF:hover{background: #fff; color: #7c00ff;}
+.button.typeG {background: #f9471e; color: #fff; border: 1px solid #f9471e;}
+.button.typeG:hover{background: #fff; color: #f9471e;}
+.button:disabled {background: #f0f1f8; border: 1px solid #f0f1f8; color: #adb2bb;}
+.button:disabled:hover {background: #f0f1f8; border: 1px solid #f0f1f8; color: #adb2bb;}
+.button.small {font-size: 0.813rem; line-height: 154%; height: 2.5rem; border-radius: 0.5rem; padding: 0 1.5rem;}
+.button.big {font-size: 1.125rem;line-height: 144%; font-weight: 800; height: 4rem; border-radius: 1rem;}
+
+.bookmark_btn {background: url(../img/ic_bookmark_off.png) no-repeat center/contain; width: 2rem; aspect-ratio: 1/1;}
+.bookmark_btn.on {background-image: url(../img/ic_bookmark_on.png);}
+
+.swiper_prev_btn {background: url(../img/ic_slide_arrow2.png) no-repeat center/contain; width: 3rem; height: auto; aspect-ratio: 1/1; transition: var(--transition);}
+.swiper_prev_btn.swiper-button-disabled {opacity: 0;}
+.swiper_next_btn {background: url(../img/ic_slide_arrow.png) no-repeat center/contain; width: 3rem; height: auto; aspect-ratio: 1/1; transition: var(--transition);}
+.swiper_next_btn.swiper-button-disabled {opacity: 0;}
+
+
+
+/* 공통 - datepicker */
+#datepicker:focus>.ui-datepicker { display: block; }
+.ui-datepicker {  font-family: inherit; display: none; margin-top: 0.625rem; margin-left: 0; margin-right: 0;  width: 18rem; box-shadow: var(--shadow);  background: #fff;  border: 1px solid #dfe5ec; border-radius: 0.5rem; padding: 1.25rem 1rem; z-index: 50 !important;}
+.ui-widget.ui-widget-content { border: 1px solid #dfe5ec;}
+.ui-datepicker .ui-datepicker-header { position: relative; padding: 0; display: flex;  align-items: center;  justify-content: center; gap: 0.5rem; border-radius: 0;  background: #ffffff; margin-bottom: 1.25rem; border: 0;}
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {display: none;}
+.ui-datepicker .ui-datepicker-title { margin: 0; text-align: center; order: 2;  font-weight: 700; font-size: 0.875rem; line-height: 100%; color: #131720;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position: relative; width: 1.25rem !important; height: auto !important; left: auto; right:auto; top: auto; aspect-ratio: 1 / 1; display: flex; cursor: pointer;}
+.ui-datepicker .ui-datepicker-prev {order: 1;}
+.ui-datepicker .ui-datepicker-next {order: 3;}
+.ui-datepicker .ui-datepicker-prev span, 
+.ui-datepicker .ui-datepicker-next span { position: relative; left: auto; margin-left: 0; top: auto; margin-top: 0;background: no-repeat center / contain; width: 100%; height: 100%; margin: 0  !important;}
+.ui-datepicker .ui-datepicker-prev span{ background-image: url(../img/datepicker_prev.png);}
+.ui-datepicker .ui-datepicker-next span{ background-image: url(../img/datepicker_next.png);}
+.ui-datepicker-calendar { width: 100%; }  
+.ui-datepicker table {margin: 0;}
+.ui-datepicker td { padding: 0;}
+.ui-datepicker-calendar>thead { display: none;}
+.ui-datepicker-calendar>thead>tr>th { width: 2.25rem; height: 2.25rem; padding: 0; font-weight: 600; font-size: 0.813rem; line-height: 154%; color: #131720;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { border: none; background-color: transparent;  font-weight: 400; font-size: 0.813rem; line-height: 154%;  text-align: center; color: #131720;  width: 1.75rem; height: 1.75rem; padding: 0; display: flex;align-items: center;justify-content: center; margin: 0.25rem;}
+.ui-state-active::after {display: none;}
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,
+.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus,
+.ui-button:hover,.ui-button:focus { border: none; background-color: transparent;text-align: center; font-weight: 400; font-size: 0.813rem;  line-height: 154%; color: #131720; width: 1.75rem; height: 1.75rem;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight { position: relative;}
+.ui-state-highlight::after, .ui-widget-content .ui-state-highlight::after, .ui-widget-header .ui-state-highlight::after { content: ""; width: 0.25rem; aspect-ratio: 1/1; position: absolute; left: 50%; bottom: 0.125rem; transform: translateX(-50%); background: #c4cdd6; border-radius: 50%;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {border-radius: 50%; background: #131720; color: #ffffff;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {border-radius: 50%; background: #131720; color: #ffffff;}
+.ui-state-disabled { cursor: auto; color: #cccccc;}    
+.ui-datepicker-calendar>tbody>tr>.ui-state-disabled:hover {cursor: auto;  background-color: #ffffff; }  
+.ui-datepicker-calendar>tbody>tr>td:hover {background-color: transparent; opacity: 0.6; }   
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {  opacity: 1;  color: #adb2bb;}
+.datepicker_lnline .ui-datepicker.ui-datepicker-inline { border: none; width: auto; box-shadow: none;   margin-top: 0;padding: 0; border-radius: 0;}
+
+
+/* 공통 - 테이블 */
+.tbl_wrap {position: relative; width: 100%;}
+.tbl_wrap .tbl { position: relative; width: 100%; border-collapse: collapse; font-size: 0.875rem;line-height: 157%;color: #131720;}
+.tbl_wrap .tbl thead tr { border-bottom: 1px solid #e5e8ec; border-top: 1px solid #e5e8ec;}
+.tbl_wrap .tbl thead tr th { font-weight: 700; text-align: left; padding: 0.813rem 1.5rem; white-space: nowrap; height: 3rem;}
+.tbl_wrap .tbl tbody tr {border-bottom: 1px solid #e5e8ec;}
+.tbl_wrap .tbl tbody tr td { position: relative; padding: 0.688rem 0 0.688rem 1.5rem; height: 3.5rem; word-break: keep-all; height: 3.5rem;}
+.tbl_wrap .tbl thead tr th.num, 
+.tbl_wrap .tbl tbody tr td.num { padding-left: 2.5rem;}
+.tbl_wrap .tbl tbody tr td .tbl_btn {font-size: 0.813rem;line-height: 154%;color: #334353;border: 1px solid #adb2bb;border-radius: 0.5rem;background: #fff; padding: 0 0.75rem; height: 1.75rem;}
+
+
+/* 공통 - 모달  */
+.modal { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; background: rgba(0, 0, 0, 0.5); transition: all 0.4s ease; pointer-events: none; opacity: 0;}
+.modal.show { pointer-events: auto; opacity: 1;}
+.modal .modal_box { position: absolute; left: 50%;  top: 50%;  transform: translate(-50%, -50%);  border-radius: 1rem; background: #fff;  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.09);  padding: 2.5rem 2rem 1.5rem;  min-width: 400px; max-width: 90%;  max-height: 90%;  display: flex; flex-direction: column; align-items: center;  transition: all 0.4s ease;  margin-top: 2.5rem; opacity: 0; overflow: auto;}
+.modal.show .modal_box { margin-top: 0; opacity: 1;}
+.modal .modal_box::-webkit-scrollbar {display: none;}
+.modal .modal_box.mx400 {max-width: 25rem;}
+.modal .modal_box.noPadding {padding: 0;}
+.modal .modal_box .modal_img {width: 5rem; margin-bottom: 1.5rem;}
+.modal .modal_box .modal_tit { font-weight: 700;font-size: 1rem;line-height: 150%;text-align: center;color: #000017;}
+.modal .modal_box .modal_desc { font-size: 0.875rem;line-height: 157%;text-align: center;
+color: #131720; margin-top: 0.5rem; word-break: keep-all;}
+.modal .modal_box .modal_btnbox { width: 100%; display: flex; justify-content: center;  gap: 0.75rem; margin-top: 1.5rem;}
+.modal .modal_box .modal_tit + .modal_btnbox {margin-top: 2rem;}
+.modal .modal_box .modal_btn {border-radius: 0.5rem;}
+.modal .modal_box .modal_head {position: relative; width: 100%; height: 3.5rem; padding: 1rem 1.25rem;}
+.modal .modal_box .modal_head .modal_tit{text-align: center;} 
+.modal .modal_box .modal_head .close_btn{background: url(../img/ic_close.png) no-repeat center/contain; width: 1.5rem; aspect-ratio: 1/1; position: absolute; top: 50%; right: 1.25rem; transform: translateY(-50%);}
+.modal .modal_box .modal_body {width: 100%; padding: 1rem 1.5rem 0;}
+.modal .modal_box .modal_foot {width: 100%; display: flex; justify-content: center;  gap: 0.75rem; padding: 1.5rem;}
+
+
+/* 공통 - 팝업 */
+.popup {position: absolute; opacity: 0; pointer-events: none;}
+.popup.show {opacity: 1; pointer-events: auto;}
+.popup .pop_close {background: url(../img/pop_close.png) no-repeat center/contain; width: 1.5rem; aspect-ratio: 1/1;}
+
+
+/* 공통 - 탭 */
+.tab_wrap {position: relative;}
+.tab_navbox { display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #dfe5ec;}
+.tab_navbox .tab_nav {flex: 1; position: relative; font-size: 1rem;line-height: 150%;text-align: center;color: #627383; transition: var(--transition); cursor: pointer;}
+.tab_navbox .tab_nav::after {content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 0.188rem; background: #131720; border-radius: 0.5rem; opacity: 0;} 
+.tab_navbox .tab_nav .link { display: flex; justify-content: center; width: 100%;  height: 100%; padding-bottom: 0.875rem; text-align: center;}
+.tab_navbox .tab_nav.on {color: #131720; font-weight: 700;}
+.tab_navbox .tab_nav.on::after {opacity: 1;}
+.tab_contbox { position: relative;}
+.tab_contbox .tab_cont { display: none; /*animation: 1.2s ease 0s fadeIn;*/}
+.tab_contbox .tab_cont.on {display: block;}
+
+@keyframes fadeIn {
+	0% {opacity:0}
+	100% {opacity:1;}
+}
+
+.tab_swiper {width: 100%;}
+.tab_swiper .tab_navbox {  justify-content: center; gap: 0; overflow: unset;}
+.tab_swiper .tab_navbox .tab_nav {width: auto;}
+
+
+
+/* 공통 - 페이지네이션 */
+.paging {flex: 1; width: 100%; display: flex; align-items: center; justify-content: center; gap:0.5rem; margin-top: 2.5rem;}
+.paging .page { width: 2.5rem; height: 2.5rem;  font-size: 0.875rem;  line-height: 157%;  letter-spacing: -0.04em;  color: #131720;  border: 1px solid #dfe5ec;;   border-radius: 0.5rem; background: #ffffff;  overflow: hidden;}
+.paging .page.on { font-weight: 700; color: #ffffff;  background: #131720; border-color: #131720;}
+.paging .page .link {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
+.paging .page_btn:nth-child(2){margin-right: 0.5rem;}
+.paging .page_btn:nth-last-child(2){margin-left: 0.5rem;}
+
+
+
+/* 공통 - 채용정보 */
+.joblist { display: flex; flex-direction: column;  border-top: 1px solid #131720;}
+.joblist .item{padding: 1.5rem 0; display: flex; align-items: center; gap: 1.5rem; border-bottom: 1px solid #dfe5ec;}
+.joblist .item .logo { width: 9.938rem; display: flex; align-items: center;  justify-content: flex-start;}
+.joblist .item .logo .img { max-height: 2.5rem;}
+.joblist .item .txtbox{flex: 1;}
+.joblist .item .txtbox .tit{font-weight: 700;font-size: 1rem;line-height: 150%;color: #131720; margin-bottom: 0.125rem; display: flex; align-items: center; gap: 0.375rem;}
+.joblist .item .txtbox .tit .dday{font-weight: 800; font-size: 0.813rem; height: 1.5rem; line-height: 1; text-transform: uppercase;color: #7c00ff; border: 1px solid #7c00ff; border-radius: 0.5rem; padding: 0 0.75rem; display: inline-flex; align-items: center; justify-content: center;}
+.joblist .item .txtbox .desc{font-size: 0.875rem;line-height: 157%;color: #334353;}
+.joblist .item .txtbox .tagbox{margin-top: 0.75rem; display: flex; gap: 0.375rem;}
+.joblist .item .txtbox .tagbox .tag{font-size: 0.75rem ;line-height: 150%;color: #627383; padding: 0.188rem 0.75rem; border: 1px solid #c4cdd6; border-radius: 6.25rem;}
+.joblist .item .btnbox{display: flex; align-items: center; gap: 0.75rem;}
+.joblist .item .btnbox .bookmark_btn {width: 2.5rem;}
+.joblist .item .btnbox .btnitem {position: relative;}
+.joblist .item .btnbox .btnitem .msg { position: absolute; right: 0; bottom: 100%;  font-weight: 700;  font-size: 0.75rem; line-height: 150%;  text-transform: uppercase;   color: #7c00ff; border: 1px solid #7c00ff;  border-radius: 0.5rem; background: #fff;  width: 19.25rem;  height: 1.75rem;  padding: 0 0.75rem;  white-space: nowrap; display: flex; align-items: center; justify-content: flex-end; box-shadow: 0 0.188rem 0.375rem 0 rgba(0, 0, 0, 0.12);}
+
+
+
+/* 공통 -  브레드크럼 */
+.breadcrumb {font-weight: 700;font-size: 0.813rem;line-height: 154%;color: #131720; display: flex; align-items: center; gap: 0.25rem; padding-top: 1rem; padding-bottom: 1rem;}
+.breadcrumb .home{background: url(../img/ic_home.png) no-repeat center/contain; width: 1.25rem; aspect-ratio: 1/1;}
+.breadcrumb .arrow{background: url(../img/ic_arrow.png) no-repeat center/contain; width: 1rem; aspect-ratio: 1/1;}
+.breadcrumb .link{display: inline-block;}
+
+
+
+/* 공통 - 페이지 타이틀 */
+.page_title {font-weight: 700; font-size: 2.75rem;line-height: 136%;text-align: center;
+color: #000;}
+.page_title.mb1 {margin-bottom: 2.5rem;}
+.page_title.mb2 {margin-bottom: 3rem;}
+.page_subtitle {font-weight: 700;font-size: 2.25rem;line-height: 133%;color: #131720; text-align: center;}
