@@ -550,3 +550,21 @@ $(document).mouseup(function (e) {
 		$(".empboard_wrap .conditionbox").removeClass("show");
 	}
 });
+
+
+
+
+// 250820 추가
+
+// tab swiper
+$(document).ready(function () {
+	const index = parseInt($('.swiper.tab_swiper').attr('data-index'), 10) || 0;
+
+	const tab_swiper = new Swiper('.tab_swiper', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		speed: 500,
+		initialSlide: index,
+	})
+});
