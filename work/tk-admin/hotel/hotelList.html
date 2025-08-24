@@ -1,0 +1,1193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout good_wrap hotel_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-building-office icon"></i>				
+						할인호텔
+						<i class="ph-bold ph-caret-right arrow"></i>
+						★프로모션 특가★
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어">
+											<div class="tbl_inline">
+												<div class="select_box search_select">
+													<select class="select size_md" aria-label="상품명" name="search_key_s">
+														<option value="hotel_nm">호텔명</option>
+														<option value="hotel_code">호텔코드</option>
+														<option value="admin_nm">담당자명</option>
+													</select>
+												</div>
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto">검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="기간">기간</th>
+										<td data-th="기간">
+											<div class="tbl_inline gap2">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio1" type="radio" name="date_key" value="g_regdate" checked="">
+														<label class="label_radio" for="inlineRadio1">등록일</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio2" type="radio" name="date_key" value="g_moddate">
+														<label class="label_radio" for="inlineRadio2">수정일</label>
+													</div>
+												</div>
+												<div class="input_box input_flex w_auto">
+													<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+													<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
+												</div>
+												<div class="tab_wrap">
+													<div class="tab_navbox tabs_ver">
+														<div class="tab_nav"><span class="link">어제</span></div>
+														<div class="tab_nav"><span class="link">오늘</span></div>
+														<div class="tab_nav"><span class="link">7일</span></div>
+														<div class="tab_nav"><span class="link">15일</span></div>
+														<div class="tab_nav"><span class="link">1개월</span></div>
+														<div class="tab_nav"><span class="link">3개월</span></div>
+														<div class="tab_nav"><span class="link">1년</span></div>
+														<div class="tab_nav on"><span class="link">전체</span></div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사이트/카테고리">사이트/카테고리</th>
+										<td data-th="사이트/카테고리">
+											<div class="tbl_inline">
+												<div class="select_box">
+													<select class="select size_md" aria-label="선택" name="lang">
+														<option value="">선택</option>
+														<option value="ko" selected="">여행대장</option>
+														<option value="en">TK 영어</option>
+														<option value="hk">TK 번체</option>
+														<option value="cn">TK 간체</option>
+													</select>
+												</div>
+												<div class="select_box">
+													<select class="select size_md" aria-label="1차카테고리" name="b_uid_s" id="b_uid_s">
+														<option value="">1차카테고리</option>
+														<option value="69">할인호텔</option>
+														<option value="128">Hotels</option>
+														<option value="136">住宿预订</option>
+														<option value="110">住宿預訂</option>
+													</select>
+												</div>
+												<div class="select_box">
+													<select class="select size_md" aria-label="2차카테고리" name="m_uid_s" id="m_uid_s">
+														<option value="">2차카테고리</option>
+													</select>
+												</div>
+												<div class="select_box">
+													<select class="select size_md" aria-label="3차카테고리" name="s_uid_s" id="s_uid_s">
+                                						<option value="">3차카테고리</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="인기/추천">인기/추천</th>
+										<td data-th="인기/추천">
+											<div class="tbl_inline column_ver">
+												<div class="radio_wrap goodcheck_box">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_99" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_99">전체</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_0" type="radio" name="gmain_s" value="g_main1">
+														<label class="label_radio" for="gmain_s_0">
+															<span class="badge type_re size_sm">1</span>					
+															<span class="txt">TB메인티켓</span>
+													 </label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_1" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_1">
+															<span class="badge type_pk size_sm">2</span>					
+															<span class="txt">TB메인투어</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_2" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_2">
+															<span class="badge type_nv size_sm">3</span>					
+															<span class="txt">TB 메인패키지</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_3" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_3">
+															<span class="badge type_or size_sm">4</span>					
+															<span class="txt">TB 공항픽업</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_4" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_4">
+															<span class="badge type_pp size_sm">5</span>					
+															<span class="txt">TB 차량렌트</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_5" type="radio" name="gmain_s" value="g_main3">
+														<label class="label_radio" for="gmain_s_5">
+															<span class="badge type_bl size_sm">6</span>					
+															<span class="txt">TB 서브인기</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_6" type="radio" name="gmain_s" value="g_main2">
+														<label class="label_radio" for="gmain_s_6">
+															<span class="badge type_bl size_sm">6</span>					
+															<span class="txt">TB 추천상품</span>
+														</label>
+													</div>
+												</div>
+												<div class="radio_wrap goodcheck_box">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_7" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_7">
+															<span class="badge type_re size_sm">1</span>					
+															<span class="txt">TK 메인티켓</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_8" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_8">
+															<span class="badge type_pk size_sm">2</span>					
+															<span class="txt">TK 메인투어</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_9" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_9">
+															<span class="badge type_nv size_sm">3</span>					
+															<span class="txt">TK 메인패키지</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_10" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_10">
+															<span class="badge type_or size_sm">4</span>					
+															<span class="txt">TK 공항픽업</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_11" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_11">
+															<span class="badge type_pp size_sm">5</span>					
+															<span class="txt">TK 차량렌트</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_12" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_12">
+															<span class="badge type_bl size_sm">6</span>					
+															<span class="txt">TK Kpop콘서트</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_13" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_13">
+															<span class="badge type_ye size_sm">7</span>					
+															<span class="txt">TK 한국여행영상</span>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="gmain_s_14" type="radio" name="gmain_s" value="" checked="">
+														<label class="label_radio" for="gmain_s_14">
+															<span class="badge type_gr size_sm">8</span>					
+															<span class="txt">TK 추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_schresult">
+					<div class="cont_area flex_area">
+						<div class="leftbox">
+							<p class="text">
+								<i class="ph ph-funnel"></i>
+								<span>
+									검색기간 : 
+									<span class="bold">2025-08-05 ~ 2025-08-12</span>
+								</span>
+							</p>
+						</div>
+						<div class="rightbox">
+							<p class="text">
+								결과 : <span class="bold">1,362</span>건
+							</p>
+						</div>
+					</div>
+                
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="boardList_fm" id="boardList_fm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="total">선택된 상품을</p>
+								<div class="select_box">
+									<select class="select size_md" aria-label="사용유무" name="g_ok">
+										<option value="Y">사용(활성)</option>
+										<option value="N">비사용(비활성)</option>
+									</select>
+								</div>
+								<button type="button" class="button size_sm auto typeE">일괄처리</button>
+							</div>
+							<div class="rightbox">
+								<a href="../hotel/hotelWrite.html" class="button size_sm auto typeE">상품등록</a>
+								<button type="button" class="button size_sm auto typeF">노출순서 변경</button>
+								<div class="select_box">
+									<select class="select size_md" aria-label="노출순서" name="order_by_s" id="order_by_s">
+										<option value="g_regdate desc">등록일 ↑</option>
+										<option value="g_regdate">등록일 ↓</option>
+										<option value="g_ok desc">노출순서 ↑</option>
+										<option value="g_no">노출순서 ↓</option>
+									</select>
+								</div>
+								<div class="select_box">
+									<select name="list_count_s" id="list_count_s" class="select size_md">
+										<option value="10">10개 보기</option>
+										<option value="20" selected="">20개 보기</option>
+										<option value="30">30개 보기</option>
+										<option value="50">50개 보기</option>
+										<option value="100">100개 보기</option>
+										<option value="200">200개 보기</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl good_list hotel_list">
+								<colgroup>
+									<col style="width: 40px;">
+									<col style="width: 50px;">
+									<col style="width: 50px;">
+									<col style="width: 80px;">
+									<col style="width: 60px;">
+									<col style="width: 100px;">
+									<col style="width: 120px;">
+									<col style="width: 870px;">
+									<col style="width: 80px;">
+									<col style="width: 110px;">
+									<col style="width: 90px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check all_check">
+											</div>
+										</th>
+										<th data-th="번호">번호</th>
+										<th data-th="복사">복사</th>
+										<th data-th="사용">사용</th>
+										<th data-th="노출">노출</th>
+										<th data-th="호텔코드">호텔코드</th>
+										<th data-th="이미지">이미지</th>
+										<th data-th="호텔명">호텔명</th>
+										<th data-th="조회수">조회수</th>
+										<th data-th="등록일/수정일">등록일/수정일</th>
+										<th data-th="수정">-</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">10</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">9</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											
+											<button type="button" class="badge type_re">
+												<span class="txt">미사용</span>
+												<i class="ph ph-x"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">8</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">7</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">6</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">5</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">4</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">3</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">2</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="번호">1</td>
+										<td data-th="복사">
+											<div class="tbl_btnbox">
+												<button type="button" class="copy_btn"><i class="ph ph-copy-simple"></i></button>
+											</div>
+										</td>
+										<td data-th="사용">
+											<button type="button" class="badge type_gr">
+												<span class="txt">사용</span>
+												<i class="ph ph-check"></i>
+											</button>
+										</td>
+										<td data-th="노출">
+											<div class="input_box">
+												<input class="input_text size_md align_center" type="text" name="g_no_arr[]" value="0" autocomplete="off">
+											</div>
+										</td>
+										<td data-th="호텔코드">
+											<div class="tbl_inline column_ver">
+												<span class="code">TBLTDRESS</span>
+												<span class="partner">
+													<img src="../img/partner/naver.png" alt="" class="icon">
+													<img src="../img/partner/coupang.png" alt="" class="icon">
+												</span>
+											</div>
+										</td>
+										<td data-th="이미지" class="align_center">
+											<a href="#none" class="tbl_img">
+												<img src="../img/good_thum1.jpg" alt="" class="img">
+											</a>
+										</td>
+										<td data-th="호텔명">
+											<div class="tbl_inline column_ver align_left tbl_goodName">
+												<div class="tbl_inline icon_box">
+													<img src="../img/badge/badge_prd_type6.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type9.png" alt="" class="imgbadge">
+													<img src="../img/badge/badge_prd_type11.png" alt="" class="imgbadge">
+												</div>
+												<a href="../hotel/hotelEdit.html" class="tbl_link">[마카오] 브로드웨이 호텔 + 갤럭시 수영장 [2박특가]</a>
+												<div class="check_wrap goodcheck_box">
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_1" class="input_check" checked>
+														<label for="mainSectionViewGood_1_1" class="label_check">
+															<span class="badge type_re size_sm">1</span>
+															<span class="txt">할인호텔</span>
+														</label>
+													</div>
+													<div class="check_box size_sm">
+														<input type="checkbox" name="mainSectionViewGood" id="mainSectionViewGood_1_2" class="input_check">
+														<label for="mainSectionViewGood_1_2" class="label_check">
+															<span class="badge type_pk size_sm">2</span>
+															<span class="txt">추천상품</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="조회수">22,859</td>
+										<td data-th="등록일/수정일">
+											2025.08.07 <br>
+											2025.08.13
+										</td>
+										<td data-th="수정">
+											<div class="tbl_inline column_ver">
+												<a href="../hotel/hotelEdit.html" type="button" class="badge typeG size_bg full">수정</a>
+												<button type="button" class="badge typeH size_bg full">삭제</button>
+											</div>
+										</td>										
+									</tr>								
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_hotel.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(5).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(0).find(".side_acc > li").addClass("show");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(0).find(".acc_cont").slideDown(400);
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(1).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

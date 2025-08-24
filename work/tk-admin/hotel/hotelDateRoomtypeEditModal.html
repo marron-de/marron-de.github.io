@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+
+		<!-- 행사 수정 모달 -->
+		<div id="hotelDateRoomtypeEdit_modal" class="modal goodDateTypeEdit_modal only show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">시티뷰 킹베드 [2박상품] 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_datetype_updt" id="frm_datetype_updt" method="post" class="form">
+						<div class="tbl_box">
+							<table class="tbl ">
+								<colgroup>
+									<col style="width: 150px;">
+  									<col style="width: 650px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="행사명">행사명</th>
+										<td data-th="행사명">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="room_type" value="시티뷰 킹베드 [2박상품]" hname="룸타입" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배드타입">배드타입</th>
+										<td data-th="배드타입">
+											<div class="tbl_inline column_ver">
+												<div class="input_box input_flex">
+													<input type="text" name="room_bedtype_arr[]" value="킹베드" class="input_text size_md">
+													<button type="button" class="input_btn size_md picon"><i class="ph-bold ph-plus"></i></button>
+												</div>
+												<div class="input_box input_flex">
+													<input type="text" name="room_bedtype_arr[]" value="킹베드" class="input_text size_md">
+													<button type="button" class="input_btn size_md picon"><i class="ph-bold ph-plus"></i></button>
+													<button type="button" class="input_btn size_md picon"><i class="ph-bold ph-minus"></i></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사진 (최대5장)">사진 (최대5장) <br><span class="desc point">(720px X 480px)</span></th>
+										<td data-th="사진 (최대5장)">
+											<div class="tbl_inline column_ver gap2">
+												<div class="input_box input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile1" name="T_UserFile1">
+														<label for="T_UserFile1" class="label_file size_md attached">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+													<div class="file_data">
+														<img src="../img/ic_filedown.png" alt="" class="icon">
+														<a href="" class="txt">테스트 게시물 파일.pdf</a>
+														<button type="button" class="delete_btn">
+															<i class="ph-fill ph-x-circle"></i>
+														</button>
+													</div>
+												</div>
+												<div class="input_box input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile2" name="T_UserFile2">
+														<label for="T_UserFile2" class="label_file size_md attached">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+												</div>
+												<div class="input_box  input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile3" name="T_UserFile3">
+														<label for="T_UserFile3" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+												</div>
+												<div class="input_box input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile4" name="T_UserFile4">
+														<label for="T_UserFile4" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+												</div>
+												<div class="input_box  input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile5" name="T_UserFile5">
+														<label for="T_UserFile5" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="룸정보">룸정보 <br><span class="desc point">(예약안내 표기 시)</span></th>
+										<td data-th="룸정보">
+											<div class="input_box">
+												<textarea name="room_info" id="room_info" class="input_text size_md h_auto" rows="6">◈ 킹베드 1개&#13;&#10;&#13;&#10;◈ 객실크기 : 26m²&#13;&#10;◈ 전망 : 시티뷰&#13;&#10;◈ 샤워실 &amp; 욕조</textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="룸주의사항">룸주의사항 <br><span class="desc point">(예약안내 표기 시)</span></th>
+										<td data-th="룸주의사항">
+											<div class="input_box">
+												<textarea name="room_specify" id="room_specify" class="input_text size_md h_auto" rows="6">◈ 브로드웨이 킹룸, 브로드웨이 트윈룸, 브로드웨이 리버 킹룸, 브로드웨이 리버 트윈룸에는 최대 성인 2명과 12세 이하 어린이 1명까지 체크인하실 수 있습니다.&#13;&#10;&#13;&#10;◈ 아동 조식은 조식 포함 요금에 포함되어 있지 않습니다. 아동 조식은 별도로 부과됩니다</textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="기준인원">기준인원 <br><span class="desc point">*필수입력</span></th>
+										<td data-th="기준인원">
+											<div class="input_box input_flex">
+												<span class="label_text input_txt size_md bold">기준인원 :</span>
+												<input type="text" class="input_text size_md mx50 align_right" name="person_num" value="2">
+												<span class="label_text input_txt size_md">/</span>
+												<span class="label_text input_txt size_md bold">최대인원(성인) :</span>
+												<input type="text" class="input_text size_md mx50 align_right" name="person_maxnum" value="2">
+												<span class="label_text input_txt size_md">/</span>														
+												<span class="label_text input_txt size_md">(초과요금 <input type="text" class="input_text size_md mx100 align_right" name="person_max_price" value="0"> )</span>
+												<span class="label_text input_txt size_md">/</span>
+												<span class="label_text input_txt size_md bold">최대인원(소인)</span>
+												<input type="text" class="input_text size_md mx50 align_right" name="child_maxnum" value="1">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상세표기정보">상세표기정보 <br><span class="desc point">*필수입력</span></th>
+										<td data-th="상세표기정보" class="align_left">
+											<div class="tbl_inline column_ver">
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md mn120">체크인 시간</span>
+													<input type="text" name="room_checkin" id="room_checkin" value="15:00" class="input_text size_md">
+												</div>
+												<div class="input_box input_flex">		
+													<span class="label_text input_txt size_md mn120">체크아웃 시간</span>
+													<input type="text" name="room_checkout" id="room_checkout" value="11:00" class="input_text size_md">
+												</div>
+												<div class="input_box input_flex">													
+													<span class="label_text input_txt size_md mn120">세금/봉사료</span>
+													<input type="text" name="room_taxinfo" id="room_taxinfo" value="세금 및 봉사료 포함" class="input_text size_md">
+												</div>
+												<div class="input_box input_flex">													
+													<span class="label_text input_txt size_md mn120">무료취소안내</span>
+													<input type="text" name="room_cancelinfo" id="room_cancelinfo" value="취소불가 및 날짜 변경불가 상품" class="input_text size_md">
+												</div>
+												<div class="input_box input_flex">													
+													<span class="label_text input_txt size_md mn120">혜택/특가정보 </span>
+													<input type="text" name="room_special" id="room_special" value="" class="input_text size_md">
+													<span class="label_text input_txt size_md">
+														(색상 # <input type="text" name="room_special_color" id="room_special_color" value="" class="input_text size_md nofull mx120">)
+													 </span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

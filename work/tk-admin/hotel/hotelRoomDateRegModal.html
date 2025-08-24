@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+
+		<!-- 입실일등록 모달 -->
+		<div id="hotelRoomDateReg_modal" class="modal goodDate_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">[시티뷰 킹베드 [2박상품]] 입실관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frmdate" id="frmdate" method="post" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 200px;">
+									<col style="width: 520px;">
+									<col style="width: 200px;">
+									<col style="width: 520px;">
+								</colgroup>
+								<tbody>
+                                    <tr>
+										<th data-th="입실일 생성조건" rowspan="2">입실일 생성조건</th>
+										<td data-th="입실일 생성조건" colspan="3">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" name="con_input" id="ins_cond_1" class="input_radio" value="auto" checked="true">
+													<label for="ins_cond_1" class="label_radio">요일별</label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" value="private" name="con_input" id="ins_cond_2" class="input_radio">
+													<label for="ins_cond_2" class="label_radio">일자별</label>
+												</span>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<td data-th="입실일 생성조건" colspan="3">
+											<div class="tbl_inline gap2">
+												<div class="input_box input_flex flex_auto">
+													<input type="text" name="room_date_s1" id="d_start" class="input_text size_md icon_ver icon_date calender_btn" value="2025-08-12" readonly="readonly">
+													<span class="label_text input_txt size_md">~</span>
+													<input type="text" name="room_date_e" id="d_end" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-21"  readonly="readonly">
+												</div>
+												<div class="check_wrap">
+													<span class="check_box size_md">
+														<input name="room_date[]" id="sun" type="checkbox" class="input_check" value="0" checked="">
+														<label for="sun" class="label_check"><span class="c_red">일요일</span></label>
+													</span>
+													<span class="check_box size_md">
+														<input name="room_date[]" id="mon" type="checkbox" class="input_check" value="1" checked="">
+														<label for="mon" class="label_check">월요일</label>
+													</span>
+													<span class="check_box size_md">
+														<input name="room_date[]" id="tue" type="checkbox" class="input_check" value="2" checked="">
+														<label for="tue" class="label_check">화요일</label>
+													</span>
+													<span class="check_box size_md">
+														<input name="room_date[]" id="wen" type="checkbox" class="input_check" value="3" checked="">
+														<label for="wen" class="label_check">수요일</label>
+													</span>
+													<span class="check_box size_md">
+														<input name="room_date[]" id="thu" type="checkbox" class="input_check" value="4" checked="">
+														<label for="thu" class="label_check">목요일</label>
+													</span>
+													<span class="check_box size_md">
+														<input name="room_date[]" id="fri" type="checkbox" class="input_check" value="5" checked="">
+														<label for="fri" class="label_check">금요일</label>
+													</span>
+													<span class="check_box size_md">
+														<input name="room_date[]" id="sat" type="checkbox" class="input_check" value="6" checked="">
+														<label for="sat" class="label_check"><span class="c_blue">토요일</span></label>
+													</span>
+													<span class="check_box size_md">
+														<input name="week_date_all" id="week_date_all" type="checkbox" class="input_check" value="" checked=""> 
+														<label for="week_date_all" class="label_check"><span class="text-primary">전체</span></label></span>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="판매가(Web판매가)">판매가(Web판매가)</th>
+										<td data-th="판매가(Web판매가)" colspan="3">
+											<div class="tbl_box">
+												<table class="tbl">
+													<colgroup>
+														<col style="width: 60px;">
+														<col style="width: 280px;">
+														<col style="width: 280px;">
+														<col style="width: 280px;">
+														<col style="width: 280px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="구분" class="align_center">구분</th>
+															<th data-th="공급가" class="align_center">공급가</th>
+															<th data-th="정상가" class="align_center">정상가</th>
+															<th data-th="할인율" class="align_center">할인율</th>
+															<th data-th="판매가" class="align_center">판매가</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="구분">가격</td>
+															<td data-th="공급가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="price_cost" id="price_cost" type="text" class="input_text size_md align_right" maxlength="10" hname="공급가" required="" value="186,571">
+																</div>
+															</td>
+															<td data-th="정상가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="price_ori" id="price_ori" type="text" class="input_text size_md align_right" maxlength="10" hname="정상가" required="" value="0 ">
+																</div>
+															</td>
+															<td data-th="할인율">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="sale_rate" id="sale_rate" type="text" class="input_text size_md align_right"  maxlength="10" value="0">
+																	<span class="label_text input_txt size_md">%</span>
+																</div>
+															</td>
+															<td data-th="판매가">
+																<div class="tbl_inline input_box input_flex align_center">
+																	<input name="price_sell" id="price_sell" type="text" class="input_text size_md align_right" maxlength="10" value="221,647" hname="판매가" required="">
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="옵션상품">옵션상품</th>
+										<td data-th="옵션상품" colspan="3">
+											<div class="tbl_wrap row_ver">
+												<div class="tbl_box tbl_box_list w40">
+													<table class="tbl">
+														<colgroup>
+															<col style="width: 60px;">
+															<col style="width: 220px;">
+															<col style="width: 100px;">
+															<col style="width: 100px;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th data-th="checkbox">
+																	<div class="check_box size_md">
+																		<input type="checkbox" class="input_check all_check">
+																	</div>
+																</th>
+																<th data-th="옵션명" class="align_center">옵션명</th>
+																<th data-th="판매가" class="align_center">판매가</th>
+																<th data-th="거래처가" class="align_center">거래처가</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td data-th="checkbox">
+																	<div class="check_box size_md">
+																		<input type="checkbox" class="input_check">
+																	</div>
+																</td>
+																<td data-th="옵션명">2박 3일 단독 특가</td>
+																<td data-th="판매가" class="align_center">0</td>
+																<td data-th="거래처가" class="align_center">0</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="tbl_box tbl_box_cont">
+													<table class="tbl">
+														<colgroup>
+															<col style="width: 250px;">
+															<col style="width: 130px;">
+															<col style="width: 130px;">
+															<col style="width: 130px;">
+															<col style="width: 60px;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th data-th="옵션명" class="align_center">옵션명</th>
+																<th data-th="원가" class="align_center">원가</th>
+																<th data-th="판매가" class="align_center">판매가</th>
+																<th data-th="거래처가" class="align_center">거래처가</th>
+																<th data-th="버튼" class="align_center">-</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td data-th="옵션명"></td>
+																<td data-th="원가">0</td>
+																<td data-th="판매가">0</td>
+																<td data-th="거래처가">0</td>
+																<td data-th="버튼">
+																	<div class="tbl_btnbox">		
+																		<button type="button" class="delete_btn">
+																			<i class="ph ph-trash"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>	
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="기본인원">기본인원</th>
+										<td data-th="기본인원" colspan="3">
+											<div class="input_box input_flex">
+												<input name="adult_num" id="adult_num" type="text" value="2" class="input_text size_md align_right nofull" maxlength="3" hname="성인기본인원" required="" readonly="">
+												<span class="label_text input_txt size_md">명</span>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="최대인원">최대인원</th>
+										<td data-th="최대인원" colspan="3">
+											<div class="input_box input_flex">
+												<input name="adult_maxnum" id="adult_maxnum" type="text" value="2" class="input_text size_md align_right nofull" maxlength="3" hname="최대성인기본인원" required="" readonly="">
+												<span class="label_text input_txt size_md">명</span>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="비고">비고</th>
+										<td data-th="비고" colspan="3">
+											<div class="input_box">
+												<textarea name="cont" id="cont" class="input_text size_md h_auto" rows="5">◈ 킹베드 1개&#13;&#10;◈ 객실크기 : 26m²&#13;&#10;◈ 전망 : 시티뷰&#13;&#10;◈ 샤워실 & 욕조</textarea>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="사용룸/블록수/예약상태">사용룸/블록수/예약상태</th>
+										<td data-th="사용룸/블록수/예약상태" colspan="3">
+											<div class="input_box input_flex">
+												<input name="left_seat" id="left_seat" type="text" value="0" class="input_text size_md align_right nofull"  maxlength="4" hname="사용" required="">
+												<span class="label_text input_txt size_md">/</span>
+												<input name="total_seat" id="total_seat" type="text" value="5" class="input_text size_md align_right nofull" maxlength="4" hname="블록수" required="">
+												<div class="select_box mn160">
+													<select name="lodg_state_cd" id="lodg_state_cd" class="select size_md">
+														<option value="A">일반예약</option>
+														<option value="B">즉시예약</option>
+														<option value="C">예약마감</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th data-th="행사담당자">행사담당자</th>
+										<td data-th="행사담당자" colspan="3">
+											<div class="input_box input_flex">
+												<div class="select_box mn160">
+													<select name="admin_id" class="select size_md">
+														<option value="tktravel">강일구 대표</option>
+														<option value="jerry">임병남 부장</option>
+														<option value="joyceyip915">조이스 매니저</option>
+														<option value="jamiesy">제이미 파트장</option>
+														<option value="testdev" selected="">bus res dev</option>
+														<option value="wkddjsgh">장언호 대리</option>
+														<option value="vipphoebe">진사여 매니저</option>
+														<option value="mary314">메리 매니저</option>
+														<option value="kys072702">김용식 주임</option>
+														<option value="skquf1226">나한별 주임</option>
+														<option value="jangsan7">최규만 팀장</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+            				</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>
