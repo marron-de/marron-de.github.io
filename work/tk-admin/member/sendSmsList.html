@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout member_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-users icon"></i>
+						알림톡&LMS
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어" colspan="5">
+											<div class="tbl_inline">
+												<div class="select_box search_select">
+													<select name="search_key_s" class="select size_md">
+                                            			<option	option value="mb_nm">회원이름</option>
+                                            			<option value="mb_email">회원이메일</option>
+													</select>
+												</div>
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto">검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="발송일자">발송일자</th>
+										<td data-th="발송일자">
+											<div class="tbl_inline gap2">
+												<div class="input_box input_flex w_auto">
+													<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+													<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="frm_list" id="frm_list" method="POST">
+						<div class="bo_list tbl_box">
+							<table class="tbl member_list">
+								<colgroup>
+									<col style="width: 70px;">
+									<col style="width: 230px;">
+									<col style="width: 230px;">
+									<col style="width: 230px;">
+									<col style="width: 230px;">
+									<col style="width: 230px;">
+									<col style="width: 260px;">
+									<col style="width: 160px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="No">No</th>
+										<th data-th="회원이름">회원이름</th>
+										<th data-th="타입">타입</th>
+										<th data-th="보낸번호">보낸번호</th>
+										<th data-th="받는번호">받는번호</th>
+										<th data-th="처리결과">처리결과</th>
+										<th data-th="발송일자">발송일자</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+							<tbody>							
+								<tr>
+									<td data-th="No">10</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">9</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">8</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">7</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">6</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">5</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">4</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">3</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">2</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No">1</td>
+									<td data-th="회원이름">홍길동</td>
+									<td data-th="타입">알림톡</td>
+									<td data-th="보낸번호">070-8276-1919</td>
+									<td data-th="받는번호">010-1234-5678</td>
+									<td data-th="처리결과">LMS 자동발송완료	</td>
+									<td data-th="발송일자">2025-08-26 05:20:02</td>
+									<td data-th="버튼">
+										<div class="tbl_btnbox">
+											<button type="button" class="button typeE auto size_sm" onclick="viewSms_modal()">메시지보기</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 메시지 보기 모달 -->
+		<div id="viewSms_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">메시지 보기</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="tbl_box">
+						<table class="tbl space_auto">
+							<colgroup>
+								<col style="width: 150px;">
+								<col style="width: 588px">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th data-th="메시지 내용">메시지 내용</th>
+									<td data-th="메시지 내용">
+										<div class="input_box">
+											<textarea class="input_text size_md h_auto point" id="msg" rows="15">메일 매크로 앱 멈춤 알림&#13;&#10;&#13;&#10;회사 내 맥미니에서 [스마트플레이스 매크로 앱]의 매크로를&#13;&#10;재실행 하세요.&#13;&#10;&#13;&#10;발생시간 : 2025-08-26 05:20:02&#13;&#10;&#13;&#10;작동중인 아이패드 시뮬레이터에서&#13;&#10;매크로 앱을 종료 후 재실행 하세요.&#13;&#10;방법 모를시 개발자 문의</textarea>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_member.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');		
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(7).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(2).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// viewMsg modal
+		function viewSms_modal() {
+			$(".modal").removeClass("show");
+			$("#viewSms_modal").addClass("show");
+		}
+	</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout vehicles_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title flexible between">
+					<p class="page_title">
+						<i class="ph-fill ph-car icon"></i>
+						주의사항 관리
+					</p>
+					<div class="tab_wrap size_md">
+						<div class="tab_navbox tabs_ver">
+							<div class="tab_nav on">
+								<a href="#none" class="link">한글</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">영어</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">번체</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">간체</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content_list content_tbl">
+					<form name="caution_list_frm" id="caution_list_frm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="title_size_bg">
+									주의사항 내용
+								</p>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl vehicles_list">
+								<colgroup>
+									<col style="width: 1550px;">
+									<col style="width: 100px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="내용">내용</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="내용" class="align_left">
+											저희 TK트래블은 항상 질 좋은 차량 서비스를 제공해 드리기 위해 계속된 노력과 발전의 자세로 임하고 있습니다. <br>
+											아래 주의사항을 꼭 참고하시어 예약 시 도움이 되었으면 합니다.
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit_modal()">수정</button>
+											</div>
+										</td>						
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="caution_list_frm" id="caution_list_frm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="title_size_bg">
+									주의사항 제목
+								</p>
+							</div>
+							<div class="rightbox">						
+								<button type="button" class="button size_sm auto typeE" onclick="cautionWrite_modal()">등록</button>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl vehicles_list">
+								<colgroup>
+									<col style="width: 70px;">
+									<col style="width: 1420px;">
+									<col style="width: 160px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="순서">순서</th>
+										<th data-th="내용">내용</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="순서">1</td>
+										<td data-th="내용" class="align_left">
+											모든 차량의 경우 목적지별 렌트의 시간이 다르니 상품 구매 전 상세내용을 꼭 참조 부탁드립니다.
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">2</td>
+										<td data-th="내용" class="align_left">
+											일일 렌탈 차량의 경우, 일정을 미리 계획하여 정확히 넣어 주시는 것이 좋습니다. <br>
+											당일 유동적으로 변경도 가능하지만 예약 상품의 성격에 맞지 않는 스케줄을 추가하시려는 경우, 이용이 불가하거나 가능하더라도 많은 추가 요금이 발생할 수 있으니 참고 부탁드립니다.
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">3</td>
+										<td data-th="내용" class="align_left">
+											11인승 1대당 최대 탑승 인원은 8인, 25인승 16인, 28인승 28인, 45인승 42인 이며, 짐 (캐리어 등)이 있는 경우 짐의 양에 따라 탑승인원이 줄어 들 수 있습니다.
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">4</td>
+										<td data-th="내용" class="align_left">
+											차량 예약 시 짐이나 인원 수를 꼭 유념하시어 진행 부탁드립니다. <br>
+											판단하시기 어려운 경우, 저희 1:1 게시판을 통해 문의하시면 확인하여 안내드리니 꼭 다시 한 번 더 인원 수 및 짐의 양을 고려하시어 예약 진행 부탁드립니다
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">5</td>
+										<td data-th="내용" class="align_left">
+											모든 차량 예약은 예약과 동시에, 대부분 즉시 확정이 가능합니다. <br>
+											(배차가 불가능 할 경우 예약한 시간 시점으로 24시간이내 연락 드립니다.) <br>
+											그러나 2일 ~ 1일 전 예약 혹은 당일 예약 차량 수배 가능 여부를 1:1 게시판 또는 카카오톡플러스친구를 통해 확인 후 예약 진행 부탁드립니다.
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">6</td>
+										<td data-th="내용" class="align_left">
+											차량 예약 시 날짜, 인원, 차종, 경로, 미팅 시간, 장소 등을 꼭 확인해 주시기 바랍니다. 저희 TK트래블은 고객님의 예약 건을 함부로 변경하거나 수정하지 않습니다. <br>
+											그러므로 부정확하게 예약하시는 경우, 저희 측에서 도와드리기가 어려울 수 있으니 최대한 정확하게 예약하실 수 있게 예약 시 꼭 확인하시고 진행 부탁드립니다.
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">7</td>
+										<td data-th="내용" class="align_left">
+											기사님의 금전적 요구 또는 일정에 맞지 않는 곳으로 이동, 기사님의 불친절 한 서비스 등이 생긴다면 지체 없이 TK트래블로 연락해 주시기 바랍니다.
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">8</td>
+										<td data-th="내용" class="align_left">
+											TK트래블 차량 상품에는 기본적으로 유류비 및 톨비가 포함되어 있습니다. <br>(유류비 및 톨비 불포함으로 나와 있는 상품을 제외하면 나머지 차량은 전부 포함 상품입니다.)
+										</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="cautionEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 주의사항 내용 등록 모달 -->
+		<div id="cautionWrite_modal" class="modal caution_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">주의사항 내용 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="caution_frm" id="caution_frm" method="get" class="form form_box">		
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 150px;">
+									<col style="width: 758px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="순서">순서</th>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="number" name="order_num" class="input_text size_md" min="0" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용">
+											<div class="input_box">
+												<textarea name="contents" class="input_text size_md h_auto" hname="내용" required="" rows="5"></textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 주의사항 제목 수정 모달 -->
+		<div id="cautionEdit_modal" class="modal caution_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">주의사항 제목 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="caution_frm" id="caution_frm" method="get" class="form form_box">	
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 150px;">
+									<col style="width: 758px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용">
+											<div class="input_box">
+												<textarea name="contents" class="input_text size_md h_auto" hname="내용" required="" rows="5">저희 TK트래블은 항상 질 좋은 차량 서비스를 제공해 드리기 위해 계속된 노력과 발전의 자세로 임하고 있습니다.&#13;&#10;아래 주의사항을 꼭 참고하시어 예약 시 도움이 되었으면 합니다.</textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 주의사항 내용 수정 모달 -->
+		<div id="cautionEdit2_modal" class="modal caution_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">주의사항 내용 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="caution_frm" id="caution_frm" method="get" class="form form_box">		
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 150px;">
+									<col style="width: 758px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="순서">순서</th>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="number" name="order_num" class="input_text size_md" min="0" value="0">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용">
+											<div class="input_box">
+												<textarea name="contents" class="input_text size_md h_auto" hname="내용" required="" rows="5">모든 차량의 경우 목적지별 렌트의 시간이 다르니 상품 구매 전 상세내용을 꼭 참조 부탁드립니다.</textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_vehicles.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(6).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(3).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// cautionWrite modal
+		function cautionWrite_modal() {
+			$(".modal").removeClass("show");
+			$("#cautionWrite_modal").addClass("show");
+		}
+		
+		// cautionEdit modal
+		function cautionEdit_modal() {
+			$(".modal").removeClass("show");
+			$("#cautionEdit_modal").addClass("show");
+		}
+		
+		// cautionEdit2 modal
+		function cautionEdit2_modal() {
+			$(".modal").removeClass("show");
+			$("#cautionEdit2_modal").addClass("show");
+		}
+	</script>
+
+
+
+</body>
+
+</html>

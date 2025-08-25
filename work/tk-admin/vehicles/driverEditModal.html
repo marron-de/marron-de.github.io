@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+
+		<!-- 기사수정 모달 -->
+		<div id="driverEdit_modal" class="modal car_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">기사 수정 - 김대영</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="driver_frm" id="driver_frm" method="get" class="form form_box">	
+						<div class="car_formbox">
+							<div class="car_imgbox">
+								<div class="file_preview">
+									<img src="../img/profile_temp.jpg" alt="" class="img">
+								</div>
+								<div class="input_box input_file_box">
+									<span class="label_text input_txt">기사님 사진</span>
+									<div class="input_flex">
+										<input type="file" class="input_file" id="userFile1" name="userFile1">
+										<label for="userFile1" class="label_file">선택된 파일 없음</label>
+										<button type="button" class="input_btn fileSelect_btn">파일 선택</button>
+									</div>
+									<div class="file_data">
+										<img src="../img/ic_filedown.png" alt="" class="icon">
+										<a href="" class="txt">테스트 파일.png</a>
+										<button type="button" class="delete_btn">
+											<i class="ph-fill ph-x-circle"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="car_infobox tbl_box">
+								<table class="tbl space_auto">
+									<colgroup>
+										<col style="width: 180px;">
+										<col style="width: 758px">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th data-th="이름">이름</th>
+											<td data-th="이름">
+												<div class="input_box">
+													<input name="d_name" id="d_name" type="text" value="김대영" class="input_text size_md" hname="이름" required="">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="연락처">연락처</th>
+											<td data-th="연락처">
+												<div class="input_box">
+														<input name="d_phone" id="d_phone" type="text" value="010-1234-5678" class="input_text size_md" hname="연락처" required="">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="차량정보">차량정보</th>
+											<td data-th="차량정보">
+												<div class="input_box">
+													<input name="car_info" id="car_info" type="text" value="관광버스" class="input_text size_md" hname="차량정보" required="">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="주민등록번호">주민등록번호</th>
+											<td data-th="주민등록번호">
+												<div class="input_box">
+													<input name="jumin_info" id="jumin_info" type="text" value="123-123-12345" class="input_text size_md" hname="주민등록번호" required="">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="계좌번호">계좌번호</th>
+											<td data-th="계좌번호">
+												<div class="input_box input_flex">
+													<input name="bank_info" id="bank_info" type="text" value="국민은행" class="input_text size_md mx240" hname="은행명" required="">
+													<input name="account_number" id="account_number" type="text" value="0999012340" class="input_text size_md mx240" hname="계좌번호" required="">
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>		
+						<div class="car_line"></div>
+						<div class="car_formbox">
+							<div class="car_imgbox">
+								<div class="file_preview">
+									<img src="../img/car_sample.png" alt="" class="img">
+								</div>
+								<div class="input_box input_file_box">
+									<span class="label_text input_txt">차량 사진</span>
+									<div class="input_flex">
+										<input type="file" class="input_file" id="userFile1" name="userFile1">
+										<label for="userFile1" class="label_file">선택된 파일 없음</label>
+										<button type="button" class="input_btn fileSelect_btn">파일 선택</button>
+									</div>
+									<div class="file_data">
+										<img src="../img/ic_filedown.png" alt="" class="icon">
+										<a href="" class="txt">테스트 파일.png</a>
+										<button type="button" class="delete_btn">
+											<i class="ph-fill ph-x-circle"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="car_infobox tbl_box">
+								<table class="tbl space_auto">
+									<colgroup>
+										<col style="width: 180px;">
+										<col style="width: 758px">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th data-th="친절도">친절도</th>
+											<td data-th="친절도">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio1-1" type="radio" name="star_rating1" value="1">
+														<label class="label_radio" for="inlineRadio1-2">
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio1-2" type="radio" name="star_rating1" value="2">
+														<label class="label_radio" for="inlineRadio1-2">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio1-3" type="radio" name="star_rating1" value="3">
+														<label class="label_radio" for="inlineRadio1-3">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio1-4" type="radio" name="star_rating1" value="4">
+														<label class="label_radio" for="inlineRadio1-4">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio1-5" type="radio" name="star_rating1" value="5" checked>
+														<label class="label_radio" for="inlineRadio1-5">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="차량상태">차량상태</th>
+											<td data-th="차량상태">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio2-1" type="radio" name="star_rating2" value="1">
+														<label class="label_radio" for="inlineRadio2-1">
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio2-2" type="radio" name="star_rating2" value="2">
+														<label class="label_radio" for="inlineRadio2-2">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio2-3" type="radio" name="star_rating2" value="3">
+														<label class="label_radio" for="inlineRadio2-3">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio2-4" type="radio" name="star_rating2" value="4">
+														<label class="label_radio" for="inlineRadio2-4">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio2-5" type="radio" name="star_rating2" value="5" checked>
+														<label class="label_radio" for="inlineRadio2-5">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="안전운행">안전운행</th>
+											<td data-th="안전운행">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio3-1" type="radio" name="star_rating3" value="1">
+														<label class="label_radio" for="inlineRadio3-1">
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio3-2" type="radio" name="star_rating3" value="2">
+														<label class="label_radio" for="inlineRadio3-2">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio3-3" type="radio" name="star_rating3" value="3">
+														<label class="label_radio" for="inlineRadio3-3">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio3-4" type="radio" name="star_rating3" value="4">
+														<label class="label_radio" for="inlineRadio3-4">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio3-5" type="radio" name="star_rating3" value="5" checked>
+														<label class="label_radio" for="inlineRadio3-5">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="시간엄수">시간엄수</th>
+											<td data-th="시간엄수">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio4-1" type="radio" name="star_rating4" value="1">
+														<label class="label_radio" for="inlineRadio4-1">
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio4-2" type="radio" name="star_rating4" value="2">
+														<label class="label_radio" for="inlineRadio4-2">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio4-3" type="radio" name="star_rating4" value="3">
+														<label class="label_radio" for="inlineRadio4-3">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio4-4" type="radio" name="star_rating4" value="4">
+														<label class="label_radio" for="inlineRadio4-4">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio4-5" type="radio" name="star_rating4" value="5" checked>
+														<label class="label_radio" for="inlineRadio4-5">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="총 만족도">총 만족도</th>
+											<td data-th="총 만족도">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio5-1" type="radio" name="star_rating5" value="1">
+														<label class="label_radio" for="inlineRadio5-1">
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio5-2" type="radio" name="star_rating5" value="2">
+														<label class="label_radio" for="inlineRadio5-2">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio5-3" type="radio" name="star_rating5" value="3">
+														<label class="label_radio" for="inlineRadio5-3">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio5-4" type="radio" name="star_rating5" value="4">
+														<label class="label_radio" for="inlineRadio5-4">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+													<div class="radio_box size_md">
+														<input class="input_radio" id="inlineRadio5-5" type="radio" name="star_rating5" value="5" checked>
+														<label class="label_radio" for="inlineRadio5-5">
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+															<i class="ph-fill ph-star"></i>
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>		
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

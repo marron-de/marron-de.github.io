@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout vehicles_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title flexible between">
+					<p class="page_title">
+						<i class="ph-fill ph-car icon"></i>
+						Q&A 관리
+					</p>
+					<div class="tab_wrap size_md">
+						<div class="tab_navbox tabs_ver">
+							<div class="tab_nav on">
+								<a href="#none" class="link">한글</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">영어</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">번체</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">간체</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="caution_list_frm" id="caution_list_frm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="title_size_bg">
+									Q&A 내용
+								</p>
+							</div>
+							<div class="rightbox">						
+								<button type="button" class="button size_sm auto typeE" onclick="qnaWrite_modal()">등록</button>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl vehicles_list">
+								<colgroup>
+									<col style="width: 70px;">
+									<col style="width: 320px;">
+									<col style="width: 1004px;">
+									<col style="width: 100px;">
+									<col style="width: 160px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="순서">순서</th>
+										<th data-th="질문(Q)">질문(Q)</th>
+										<th data-th="내용(A)">내용(A)</th>
+										<th data-th="글쓴이">글쓴이</th>
+										<th data-th="버튼">-</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="순서">1</td>
+										<td data-th="질문(Q)">포함사항과 불포함사항은 무엇인가요?</td>
+										<td data-th="내용(A)" class="align_left">
+											포함사항은 차량, 기사, 유류비, 톨비, 주차비입니다. / 불포함 사항은 기사팁, 추가시간 이용비용, 기타 개인비용입니다.
+										</td>
+										<td data-th="글쓴이">관리자</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="qnaEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">2</td>
+										<td data-th="질문(Q)">기사팁을 꼭 줘야하나요?</td>
+										<td data-th="내용(A)" class="align_left">
+											편안하고 만족스러운 서비스였다면, 감사의 표시로 주시면 감사하겠습니다^^
+										</td>
+										<td data-th="글쓴이">관리자</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="qnaEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">3</td>
+										<td data-th="질문(Q)">
+											기사님 식사를 따로 챙겨드려야 하나요?	
+										</td>
+										<td data-th="내용(A)" class="align_left">
+											고객님이 식사 하시는 동안 기사님은 알아서 식사를 해결하시며, 식사비를 챙겨주지 않으셔도 됩니다.	
+										</td>
+										<td data-th="글쓴이">관리자</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="qnaEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">4</td>
+										<td data-th="질문(Q)">
+											미팅장소는 어디인가요?
+										</td>
+										<td data-th="내용(A)" class="align_left">
+											호텔 픽업을 요청하신 경우에는 호텔 1층 로비가 미팅장소가 됩니다. 그 외의 다른장소로의 픽업일 경우는 정확한 위치를 전달주셔야 합니다.	
+										</td>
+										<td data-th="글쓴이">관리자</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="qnaEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">5</td>
+										<td data-th="질문(Q)">
+											영/유아의 탑승은 어떻게 되나요?	
+										</td>
+										<td data-th="내용(A)" class="align_left">
+											영/유아의 탑승도 동일하게 1인으로 체크됩니다. 카시트가 필요하실 경우, 추가 금액이 부과되니 참고 부탁드리겠습니다.
+										</td>
+										<td data-th="글쓴이">관리자</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="qnaEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+									<tr>
+										<td data-th="순서">6</td>
+										<td data-th="질문(Q)">
+											픽업 또는 드랍포인트를 추가할 수 있나요?	
+										</td>
+										<td data-th="내용(A)" class="align_left">
+											픽업 또는 드랍포인트를 추가할 수 있습니다. 다만, 포인트 추가에 따른 비용이 발생한다는 점 확인부탁드리겠습니다!
+										</td>
+										<td data-th="글쓴이">관리자</td>
+										<td data-th="버튼">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="qnaEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>						
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- Q&A 등록 모달 -->
+		<div id="qnaWrite_modal" class="modal qna_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">Q&A 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="qna_frm" id="qna_frm" method="get" class="form form_box">		
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 150px;">
+									<col style="width: 758px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="제목">제목</th>
+										<td data-th="제목">
+											<div class="input_box">
+													<input name="subject" id="subject" type="text" value="" class="input_text size_md" hname="제목" required="" autocomplete="off">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="글쓴이">글쓴이</th>
+										<td data-th="글쓴이">
+											<div class="input_box">
+												<input name="writer" id="writer" type="text" value="" class="input_text size_md" hname="글쓴이" required="" autocomplete="off">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="순서">순서</th>
+										<td data-th="순서">
+											<div class="input_box">
+												<input name="order_num" id="order_num" type="text" value="" class="input_text size_md hname="순서" required="" autocomplete="off">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용">
+											<div class="input_box">
+												<textarea name="contents" class="input_text size_md h_auto" hname="내용" required="" rows="5"></textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Q&A 내용 수정 모달 -->
+		<div id="qnaEdit_modal" class="modal qna_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">포함사항과 불포함사항은 무엇인가요? - 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="qna_frm" id="qna_frm" method="get" class="form form_box">		
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 150px;">
+									<col style="width: 758px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="제목">제목</th>
+										<td data-th="제목">
+											<div class="input_box">
+												<input name="subject" id="subject" type="text" value="포함사항과 불포함사항은 무엇인가요?" class="input_text size_md" hname="제목" required="" autocomplete="off">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="글쓴이">글쓴이</th>
+										<td data-th="글쓴이">
+											<div class="input_box">
+												<input name="writer" id="writer" type="text" value="관리자 " class="input_text size_md" hname="글쓴이" required="" autocomplete="off">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="순서">순서</th>
+										<td data-th="순서">
+											<div class="input_box">
+												<input name="order_num" id="order_num" type="text" value="1" class="input_text size_md hname="순서" required="" autocomplete="off">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용">
+											<div class="input_box">
+												<textarea name="contents" class="input_text size_md h_auto" hname="내용" required="" rows="5">포함사항은 차량, 기사, 유류비, 톨비, 주차비입니다. / 불포함 사항은 기사팁, 추가시간 이용비용, 기타 개인비용입니다.</textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_vehicles.html', '#sidenav');
+
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(6).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(4).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// qnaWrite modal
+		function qnaWrite_modal() {
+			$(".modal").removeClass("show");
+			$("#qnaWrite_modal").addClass("show");
+		}
+		
+		// qnaEdit modal
+		function qnaEdit_modal() {
+			$(".modal").removeClass("show");
+			$("#qnaEdit_modal").addClass("show");
+		}
+	</script>
+
+
+
+</body>
+
+</html>

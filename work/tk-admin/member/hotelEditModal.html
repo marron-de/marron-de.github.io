@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+
+		<!-- 호텔 수정 모달 -->
+		<div id="hotelEdit_modal" class="modal memberWrite_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">호텔 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_ins" id="frm_ins" method="post" enctype="multipart/form-data" action="" class="form">
+						<div class="tbl_box">							
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 130px;">
+									<col style="width: 260px">
+									<col style="width: 130px;">
+									<col style="width: 260px">
+									<col style="width: 130px;">
+									<col style="width: 260px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="업체명">
+											<span class="required">업체명</span>
+										</th>
+										<td data-th="업체명">
+											<div class="input_box">
+												<input name="bz_corp_nm" id="bz_corp_nm" type="text" value="테스트 호텔" class="input_text size_md" hname="업체명" required="">
+											</div>
+										</td>
+										<th data-th="분류">
+											<span class="required">분류</span>
+										</th>
+										<td data-th="분류">
+											<div class="select_box">
+												<select class="select size_md" name="bz_cd" id="bz_cd" hname="분류" required="">
+													<option value="">업체분류</option>
+													<option value="MHTL001" selected>일반숙박업</option>
+													<option value="MHTL002">호텔숙박업</option>
+													<option value="MHTL003">리조트숙박업</option>
+												</select>
+											</div>
+										</td>
+										<th data-th="국적">
+											<span class="required">국적</span>
+										</th>
+										<td data-th="국적">
+											<div class="select_box">
+												<select class="select size_md" name="bz_nat" id="bz_nat" hname="국적" required="">
+													<option value="">국적</option>
+													<option value="KO" selected>한국</option>
+													<option value="HK">홍콩</option>
+													<option value="TW">대만</option>
+													<option value="SG">싱가폴</option>
+													<option value="MY">말레이시아</option>
+													<option value="CN">중국</option>
+													<option value="TA">태국</option>
+													<option value="PH">필리핀</option>
+													<option value="US">미국</option>
+													<option value="VT">베트남</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="메뉴사용">메뉴사용</th>
+										<td data-th="메뉴사용">
+											<div class="check_wrap">
+												<span class="check_box size_md">
+													<input type="checkbox" name="ag_allow_menu[]" id="ag_allow_menu_t" value="TOUR" checked="" class="input_check">
+													<label for="ag_allow_menu_t" title="투어/티켓" class="label_check">투어/티켓</label>
+												</span>
+												<span class="check_box size_md">
+													<input type="checkbox" name="ag_allow_menu[]" id="ag_allow_menu_h" value="HOTEL" class="input_check">
+													<label for="ag_allow_menu_h" title="호텔/리조트" class="label_check">호텔/리조트</label>
+												</span>
+											</div>
+										</td>
+										<th data-th="업체담당자">
+											<span class="required">업체담당자</span>
+										</th>
+										<td data-th="업체담당자">
+											<div class="input_box">
+												<input type="text" name="mb_nm" id="mb_nm&quot;" class="input_text size_md" value="홍길동 매니저" hname="업체담당자" required="">
+											</div>
+										</td>
+										<th data-th="연락처">
+											<span class="required">연락처</span>
+										</th>
+										<td data-th="연락처">
+											<div class="input_box">
+												<input type="text" name="mb_phone" id="mb_phone&quot;" class="input_text size_md" value="010-1234-5678" hname="연락처" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="아이디">
+											<span class="required">아이디</span>
+										</th>
+										<td data-th="아이디" colspan="5" class="align_left">testhotel</td>
+									</tr>
+									<tr>
+										<th data-th="비밀번호">
+											<span class="required">비밀번호</span>
+										</th>
+										<td data-th="비밀번호">
+											<div class="input_box input_flex">
+												<input type="text" name="mb_pwd" id="mb_pwd&quot;" class="input_text size_md mb_pwd2" value="" hname="비밀번호">
+												<div class="check_box size_md">
+													<input type="checkbox" name="mb_pwd_change" id="mb_pwd_change" class="input_check">
+													<label for="mb_pwd_change" class="label_check">비밀번호 변경</label>
+												</div>
+											</div>
+										</td>
+										<th data-th="비밀번호 (목록노출)">
+											<span class="required">비밀번호 (목록노출)</span>
+										</th>
+										<td data-th="비밀번호 (목록노출)">
+											<div class="input_box">
+												<input type="text" name="biz_pass_memo" id="biz_pass_memo&quot;" class="input_text size_md" value="1234" hname="비밀번호(목록노출)" required="">
+											</div>
+										</td>
+										<th data-th="팩스번호">팩스번호</th>
+										<td data-th="팩스번호">
+											<div class="input_box">
+												<input type="text" name="bz_fax" id="bz_fax&quot;" class="input_text size_md" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="주소">주소</th>
+										<td data-th="주소" colspan="5">
+											<div class="tbl_inline column_ver align_left gap2">
+												<div class="input_box input_flex">
+													<input class="input_text size_md mb_zipno" id="mb_zipno" name="mb_zipno" type="text" value="" placeholder="주소검색" readonly="">
+													<input type="text" name="mb_address1" id="mb_address1&quot;" class="input_text size_md mb_address1" value="" placeholder="기본주소">
+													<input type="text" name="mb_address2" id="mb_address2&quot;" class="input_text size_md" value="" placeholder="상세주소">
+												</div>
+												<span class="point">※ 상세주소까지 입력해야 인보이스 PDF에 두줄로 출력됩니다.</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="공급처 계좌">공급처 계좌</th>
+										<td data-th="공급처 계좌" colspan="5">
+											<div class="tbl_inline column_ver align_left gap2">
+												<div class="input_box input_flex">
+													<div class="select_box">
+														<select class="select size_md" name="bz_avnk_cd" id="bz_avnk_cd">
+                                       						<option value="">입금은행</option>
+															<option value="AVNK001">국민은행</option>
+															<option value="AVNK002">기업은행</option>
+															<option value="AVNK003">농협은행</option>
+															<option value="AVNK004">우리은행</option>
+															<option value="AVNK005">신한은행</option>
+															<option value="AVNK006">하나은행</option>
+															<option value="AVNK007">SC은행</option>
+															<option value="AVNK008">외환은행</option>
+															<option value="AVNK009">한국씨티은행</option>
+															<option value="AVNK010">우체국</option>
+															<option value="AVNK011">경남은행</option>
+															<option value="AVNK012">광주은행</option>
+															<option value="AVNK013">대구은행</option>
+															<option value="AVNK014">도이치</option>
+															<option value="AVNK015">부산은행</option>
+															<option value="AVNK016">산림조합</option>
+															<option value="AVNK017">산업은행</option>
+															<option value="AVNK018">상호저축은행</option>
+															<option value="AVNK019">새마을금고</option>
+															<option value="AVNK020">수협</option>
+															<option value="AVNK021">신협중앙회</option>
+															<option value="AVNK022">전북은행</option>
+															<option value="AVNK023">제주은행</option>
+														</select>
+													</div>
+													<input type="text" name="bz_avnk_owner" id="bz_avnk_owner&quot;" class="input_text size_md mx240" value="" placeholder="예금주">
+													<input type="text" name="bz_avnk_number" id="bz_avnk_number&quot;" class="input_text size_md" value="" placeholder="계좌번호">
+												</div>
+												<span class="point">※ 공급처 정산시 인보이스 PDF에 출력되는 계좌번호입니다.</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="즐겨찾기">즐겨찾기</th>
+										<td data-th="즐겨찾기">
+											<div class="check_box size_md">
+												<input type="checkbox" name="mb_favorite" id="mb_favorite" value="1" class="input_check" checked>
+												<label for="mb_favorite" class="label_check point"> 리스트 상단 노출</label>
+											</div>
+										</td>
+										<th data-th="담당자/연락처">
+											<span class="required">담당자/연락처</span>
+										</th>
+										<td data-th="담당자/연락처">
+											<div class="input_box">
+												<input type="text" name="ag_manager" id="ag_manager&quot;" class="input_text size_md" value="홍길동 매니저/010-1234-5678" hname="담당자/연락처" required="">
+											</div>
+										</td>
+										<th data-th="현지 연락처">
+											<span class="required">현지 연락처</span>
+										</th>
+										<td data-th="현지 연락처">
+											<div class="input_box">
+												<input type="text" name="ag_phone" id="ag_phone&quot;" class="input_text size_md" value="" hname="현지 연락처" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="Homepage">Homepage</th>
+										<td data-th="Homepage" colspan="5">
+											<div class="input_box">
+												<input type="text" name="ag_homepage" id="ag_homepage&quot;" class="input_text size_md" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="구글시트링크">구글시트링크</th>
+										<td data-th="구글시트링크" colspan="5">
+											<div class="input_box">
+												<input type="text" name="ag_google_sheet" id="ag_google_sheet&quot;" class="input_text size_md" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="업체로고">
+											<span class="required">업체로고</span><br>
+											<span class="desc point">(240x137)</span>
+										</th>
+										<td data-th="업체로고" colspan="5">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="ag_shop_photo" name="ag_shop_photo">
+													<label for="ag_shop_photo" class="label_file">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">업체로고.png</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="아이콘">
+											<span class="required">아이콘</span><br>
+											<span class="desc point">(png 파일)</span>
+										</th>
+										<td data-th="아이콘" colspan="5">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="ag_favicon" name="ag_favicon">
+													<label for="ag_favicon" class="label_file">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>
