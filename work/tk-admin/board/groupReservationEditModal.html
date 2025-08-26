@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 요청세부내용 수정 모달 -->
+		<div id="groupReservationEdit_modal" class="modal preview_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">요청세부내용</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="groupReservationPreview" id="groupReservationPreview" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 554px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="회사/단체명">회사/단체명</th>
+										<td data-th="회사/단체명" class="align_left">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="companyName" id="companyName" size="20" placeholder="회사/단체명" value="회사명">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="부서">부서</th>
+										<td data-th="부서" class="align_left">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="department" id="department" size="20" maxlength="50" placeholder="부서명" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="직책">직책</th>
+										<td data-th="직책" class="align_left">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="position" id="position" size="20" maxlength="20" placeholder="직책" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="담당자 성명">담당자 성명</th>
+										<td data-th="담당자 성명" class="align_left">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="name" id="name" size="20" maxlength="20" required="" placeholder="성명" value="홍길동">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="연락처">연락처</th>
+										<td data-th="연락처" class="align_left">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="phoneNumber" id="phoneNumber" size="20" maxlength="20" required="" placeholder="휴대전화번호" value="010-1234-5678">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이메일">이메일</th>
+										<td data-th="이메일" class="align_left">
+											<div class="input_box">
+												<input type="email" class="input_text size_md" name="email" id="email" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="예상행사인원">예상행사인원</th>
+										<td data-th="예상행사인원" class="align_left">
+											<div class="input_box input_flex">
+												<input type="number" class="input_text size_md mx50" name="memberCnt" id="memberCnt" min="0" required="" placeholder="행사인원" value="8">
+												<label for="memberCnt" class="label_text size_md">명</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="예상출발일">예상출발일</th>
+										<td data-th="예상출발일" class="align_left">
+											<div class="input_box">
+												<input type="text"class="input_text size_md" name="startDate" id="startDate" size="8" maxlength="10" orequired="" placeholder="행사일" value="2026-04-29">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="예정방문지">예정방문지</th>
+										<td data-th="예정방문지" class="align_left">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" name="visitPlace" id="visitPlace" size="8" maxlength="10" required="" placeholder="예정방문지" value="남프랑스  돌로미티">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="희망숙박등급">희망숙박등급</th>
+										<td data-th="희망숙박등급" class="align_left">
+											<div class="select_box">
+												<select name="hotelrating" id="hotelrating" class="select size_md">
+													<option value="">호텔등급선택</option>
+													<option value="5">5성급</option>
+													<option value="4">4성급</option>
+													<option value="3">3성급</option>
+													<option value="0">기타 숙박</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="MICE 진행">MICE 진행</th>
+										<td data-th="MICE 진행" class="align_left">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="seminar" value="Y" id="seminar_y"> 
+													<label for="seminar_y" class="label_radio">진행함 </label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="seminar" value="N" id="seminar_n" checked=""> 
+													<label for="seminar_n" class="label_radio">진행안함 </label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="단독만찬">단독만찬</th>
+										<td data-th="단독만찬" class="align_left">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="dinner" id="dinner_y" value="Y"> 
+													<label for="dinner_y" class="label_radio">진행함 </label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="dinner" value="N" id="dinner_n" checked=""> 
+													<label for="dinner_n" class="label_radio">진행안함 </label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="기관 및 업체방문 유무">기관 및 업체방문 유무</th>
+										<td data-th="기관 및 업체방문 유무" class="align_left">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="comVisit" value="Y" id="comVisit_y" > 
+													<label for="comVisit_y" class="label_radio">진행함 </label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="comVisit" value="N" id="comVisit_n" checked=""> 
+													<label for="comVisit_n" class="label_radio">진행안함 </label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="기타 남기실 말씀">기타 남기실 말씀</th>
+										<td data-th="기타 남기실 말씀" class="align_left">
+											<div class="input_box">
+												<textarea name="memo" id="memo" cols="70" rows="8" class="input_text size_md h_auto"></textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="등록일">등록일</th>
+										<td data-th="등록일" class="align_left">2025-08-13 16:50:08</td>
+									</tr>
+									<tr>
+										<th data-th="접속IP">접속IP</th>
+										<td data-th="접속IP" class="align_left">	221.162.152.181</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

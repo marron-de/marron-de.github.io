@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout board_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-clipboard-text icon"></i>
+			 			<span class="tit">게시판명</span>
+					</p>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl min_auto">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어">
+											<div class="tbl_inline">
+												<div class="select_box search_select">
+													<select name="select_key" id="select_key" class="select size_md">
+														<option value="MTITLE">제목</option>
+														<option value="MEM_NM">작성자</option>
+														<option value="MCONT">내용</option>
+													</select>
+													
+												</div>
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key"
+														name="input_key" placeholder="검색어를 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto">검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="frm_list" id="frm_list" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="total">
+									Total <span class="color">10</span>
+								</p>
+								<button type="button" class="button size_sm auto typeE">미답변 (15)</button>
+							</div>
+							<div class="rightbox">
+								<a href="../board/boardWrite2.html" class="button size_sm auto typeE">등록</a>
+								<div class="select_box">
+									<select name="order_by_s" id="order_by_s" class="select size_md">
+										<option value="INSDT DESC">작성일 (최근순)</option>
+										<option value="INSDT ASC">작성일 ↑</option>
+										<option value="READCNT DESC">조회수 (최근순)</option>
+										<option value="READCNT ASC">조회수 ↑</option>
+									</select>
+								</div>
+								<div class="select_box">
+									<select name="list_count_s" id="list_count_s" class="select size_md">
+										<option value="20" selected="">20개 보기</option>
+										<option value="50">50개 보기</option>
+										<option value="100">100개 보기</option>
+										<option value="200">200개 보기</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl" id="board_list_tbl">
+								<colgroup>
+                    				<col style="width: 50px">
+                    				<col style="width: 60px">
+									<col style="width: 874px;">
+									<col style="width: 100px;">
+									<col style="width: 120px;">
+									<col style="width: 80px;">
+									<col style="width: 150px">
+									<col style="width: 130px;">
+									<col style="width: 90px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check all_check">
+											</div>
+										</th>
+										<th data-th="No">No</th>
+										<th data-th="제목/내용">제목/내용</th>
+										<th data-th="고객ID">고객ID</th>
+										<th data-th="작성자">작성자</th>
+										<th data-th="조회수">조회수</th>
+										<th data-th="등록일">등록일</th>
+										<th data-th="미리보기">미리보기</th>
+										<th data-th="삭제">삭제</th>
+									</tr>
+								</thead>
+								<tbody>		
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">10</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+												<a href="../board/boardEdit2.html" class="link tbl_link">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">9</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<a href="../board/boardEdit2.html" class="link tbl_link">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">8</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+												<a href="../board/boardEdit2.html" class="link tbl_link">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">7</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<a href="../board/boardEdit2.html" class="link tbl_link">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">6</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+												<a href="../board/boardEdit2.html" class="link tbl_link">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">5</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<a href="../board/boardEdit2.html" class="link tbl_link">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">4</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+												<a href="../board/boardEdit2.html" class="link tbl_link">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">3</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<a href="../board/boardEdit2.html" class="link tbl_link">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">2</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+												<a href="../board/boardEdit2.html" class="link tbl_link">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box size_md">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No">1</td>
+										<td data-th="제목/내용" class="td_title">
+											<div class="tbl_inline">
+												<a href="../board/boardEdit2.html" class="link tbl_link">
+													<i class="ph-bold ph-arrow-elbow-down-right re_icon"></i>
+													<img src="../img/ic_lock.png" alt="" class="tbl_icon">
+													[RE] 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 
+												</a>
+											</div>
+										</td>
+										<td data-th="고객ID">test</td>
+										<td data-th="작성자">홍길동 매니저</td>
+										<td data-th="조회">19</td>
+										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="미리보기">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button type_gr" onclick="boardPreview_modal()">
+													<span class="txt">미리보기</span>
+													<i class="ph-bold ph-magnifying-glass picpon"></i>
+												</button>
+											</div>
+										</td>
+										<td data-th="삭제">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge size_button typeH">삭제</button>
+											</div>
+										</td>
+									</tr>		
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 상세보기 모달 -->
+		<div id="boardPreview_modal" class="modal boardPreview_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">상세보기</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="boardPreview" id="boardPreview" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 120px;">
+									<col style="width: 250px">
+									<col style="width: 120px;">
+									<col style="width: 250px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="작성자">작성자</th>
+										<td data-th="작성자" class="align_left">홍길동</td>
+										<th data-th="이메일">이메일</th>
+										<td data-th="이메일" class="align_left">test@test.com</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용" colspan="3" class="align_left">
+											테스트 내용입니다. <br>
+											테스트 내용입니다. <br>
+											테스트 내용입니다. <br>
+											테스트 내용입니다. <br>
+											테스트 내용입니다. <br>
+											테스트 내용입니다. 
+										</td>
+									</tr>
+									<tr>
+										<th data-th="코멘트">코멘트</th>
+										<td data-th="작성자" colspan="3" class="align_left">
+											<div class="cmtlist">
+												<div class="cmtitem">
+													<div class="top">
+														<p class="info">
+															<span class="txt name">홍길동</span>
+															<span class="bar"></span>
+															<span class="txt date">2022-04-20 18:15</span>
+														</p>
+														<div class="sidebtns">     
+															<button type="button" class="btn delete_btn badge type_re">삭제</button>               
+														</div>                      
+													</div>
+													<div class="bottom">
+														<p class="desc">
+															테스트 댓글입니다. 테스트 댓글입니다. 테스트 댓글입니다.
+														</p>
+													</div>
+												</div>
+												<div class="cmtitem">
+													<div class="top">
+														<p class="info">
+															<span class="txt name">홍길동</span>
+															<span class="bar"></span>
+															<span class="txt date">2022-04-20 18:15</span>
+														</p>
+														<div class="sidebtns">     
+															<button type="button" class="btn delete_btn badge type_re">삭제</button>               
+														</div>                      
+													</div>
+													<div class="bottom">
+														<p class="desc">
+															테스트 댓글입니다. 테스트 댓글입니다. 테스트 댓글입니다.
+														</p>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_board.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(8).addClass("active");
+			}, 100);
+		});
+	</script>
+
+	<!-- 타이틀/메뉴활성화 -->
+	<script>
+		$(window).on("load", function () {
+			const params = new URLSearchParams(window.location.search);
+			const bdCd = params.get("BD_CD");
+
+			if (bdCd === "B2BQNA") {
+				// 1:1문의
+				$(".page_title .tit").text("1:1문의");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(0).addClass("active");
+			} else if (bdCd === "QNA") {
+				// 문의하기
+				$(".page_title .tit").text("문의하기");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(7).addClass("active");
+			} else if (bdCd === "AGQNA") {
+				// Q&A
+				$(".page_title .tit").text("Q&A");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(16).addClass("active");
+			}
+		});
+	</script>
+	
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// boardPreview modal
+		function boardPreview_modal() {
+			$(".modal").removeClass("show");
+			$("#boardPreview_modal").addClass("show");
+		}
+	</script>
+
+
+
+</body>
+
+</html>
