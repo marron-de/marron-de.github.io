@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 팝업 이미지 관리 모달 -->
+		<div id="popupGallery_modal" class="modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">팝업 이미지 관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_gallery_edit" id="frm_gallery_edit" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="gallery_wrap">
+							<div class="tbl_top">
+								<div class="leftbox">
+									<p class="total">
+										<span class="color">10</span>개의 이미지가 등록되어 있습니다.
+									</p>
+								</div>
+								<div class="rightbox">
+									<div class="check_box">
+										<input class="input_check" name="gallery_item_all" id="gallery_item_all" type="checkbox" value="">
+										<label class="label_check" for="gallery_item_all">전체선택</label>
+									</div>
+									<button type="button" class="button size_sm auto typeE">파일수정</button>
+									<button type="button" class="button size_sm auto typeF">파일삭제</button>
+								</div>
+							</div>
+							<div class="gallery_list">
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_1" value="1">
+										<label class="label_check" for="chkall_1">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img1.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_1" id="ImgMemo_1" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_1" id="ordernum_1" value="0" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_2" value="2">
+										<label class="label_check" for="chkall_2">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img2.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_2" id="ImgMemo_2" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_2" id="ordernum_2" value="1" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_3" value="3">
+										<label class="label_check" for="chkall_3">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img3.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_3" id="ImgMemo_3" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_3" id="ordernum_3" value="2" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_4" value="4">
+										<label class="label_check" for="chkall_4">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img4.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_4" id="ImgMemo_4" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_4" id="ordernum_4" value="3" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_5" value="5">
+										<label class="label_check" for="chkall_5">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img5.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_5" id="ImgMemo_5" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_5" id="ordernum_5" value="4" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_6" value="6">
+										<label class="label_check" for="chkall_6">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img6.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_6" id="ImgMemo_6" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_6" id="ordernum_6" value="5" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_7" value="7">
+										<label class="label_check" for="chkall_7">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img7.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_7" id="ImgMemo_7" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_7" id="ordernum_7" value="6" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_8" value="8">
+										<label class="label_check" for="chkall_8">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img8.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_8" id="ImgMemo_8" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_8" id="ordernum_8" value="7" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_9" value="9">
+										<label class="label_check" for="chkall_9">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img9.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_9" id="ImgMemo_9" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_9" id="ordernum_9" value="8" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_10" value="10">
+										<label class="label_check" for="chkall_10">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img10.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_10" id="ImgMemo_10" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_10" id="ordernum_10" value="9" maxlength="3">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>

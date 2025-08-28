@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout design_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">				
+				<div class="content_title flexible between">
+					<p class="page_title">
+						<i class="ph-fill ph-shapes icon"></i>
+						메인 롤링 배너
+					</p>
+					<div class="rightbox">
+						<div class="select_box">
+							<select name="device" id="device" class="select size_md">
+								<option value="PC" selected="">PC</option>
+								<option value="MOBILE">MOBILE</option>
+							</select>
+						</div>
+						<div class="tab_wrap size_md">
+							<div class="tab_navbox tabs_ver">
+								<div class="tab_nav on">
+									<a href="#none" class="link">메인 롤링 배너</a>
+								</div>
+								<div class="tab_nav">
+									<a href="#none" class="link">메인 하단 배너</a>
+								</div>
+								<div class="tab_nav">
+									<a href="#none" class="link">메인 테마 상품</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="배너제목">배너제목	</th>
+										<td data-th="메인롤링배너" class="align_left">메인롤링배너</td>
+									</tr>
+									<tr>
+										<th data-th="구분">구분</th>
+										<td data-th="구분" class="align_left">구분</td>
+									</tr>
+									<tr>
+										<th data-th="이미지사이즈(px)">이미지사이즈(px)</th>
+										<td data-th="이미지사이즈(px)" class="align_left"><span class="point">(PC : 1920 x 589 / Mobile : 783 x 313)</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="frm_list" id="frm_list" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox"></div>
+							<div class="rightbox">
+								<button type="button" class="button size_sm auto typeE" onclick="homepageBannerWrite_modal()">등록하기</button>
+								<button type="button" class="button size_sm auto typeF">순서저장</button>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl" id="design_list_tbl">
+								<colgroup>
+                    				<col style="width: 70px;">
+                    				<col style="width: 80px;">
+									<col style="width: 130px;">
+									<col style="width: 464px;">
+									<col style="width: 320px;">
+									<col style="width: 120px;">
+									<col style="width: 80px;">
+									<col style="width: 80px;">	
+									<col style="width: 80px;">
+									<col style="width: 80px;">
+									<col style="width: 150px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="사용">사용</th>
+										<th data-th="순서">순서</th>
+										<th data-th="이미지">이미지</th>
+										<th data-th="URL">URL</th>
+										<th data-th="검색 키워드">검색 키워드</th>
+										<th data-th="등록일">등록일</th>
+										<th data-th="여행대장">여행대장</th>
+										<th data-th="휴가샵">휴가샵</th>
+										<th data-th="베네피아">베네피아</th>
+										<th data-th="E-제너두">E-제너두</th>
+										<th data-th="수정">수정</th>
+									</tr>
+								</thead>
+								<tbody>		
+									<tr>
+										<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="1" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="2" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="3" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="4" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="5" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="6" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge error size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="7" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge error size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="8" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge error size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="9" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>											
+									<tr>
+										<td data-th="사용"><span class="iconbadge error size_md"></span></td>
+										<td data-th="순서">
+											<div class="input_box">
+												<input type="text" name="order_num_arr[]" value="10" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+											</div>
+										</td>
+										<td data-th="이미지">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/good/20241127_44CECC3FB31A032E.jpg" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left td_title">
+											<a class="tbl_link" href="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" target="_blank">https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/</a>
+
+										<td data-th="검색 키워드">키워드, 키워드, 키워드</td>
+										<td data-th="등록일">2025-01-09	</td>
+										<td data-th="여행대장">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_tb" class="input_check" checked=>
+											</div>
+										</td>
+										<td data-th="휴가샵">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bpvc" class="input_check">
+											</div>
+										</td>
+										<td data-th="베네피아">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_bp" class="input_check">
+											</div>
+										</td>
+										<td data-th="E-제너두">
+											<div class="check_box size_md">
+												<input type="checkbox" name="disp_site_eb" class="input_check">
+											</div>
+										</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="homepageBannerEdit_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 배너등록 모달 -->
+		<div id="homepageBannerWrite_modal" class="modal homepageBanner_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">배너등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_write" id="frm_write" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 240px;">
+									<col style="width: 498px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="카테고리ID">카테고리ID</th>
+										<td data-th="카테고리ID" class="align_left">
+											<div class="select_box">
+												<select name="b_uid" class="select size_md">
+													<option value="">선택</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이미지&동영상">
+											이미지&동영상
+											<p class="desc point">
+												(PC-1920 x 589) <br>
+												(MOB-783 x 313) <br>
+												(테마 180 x 180) jpg,mp4파일만 가능
+											</p>
+										</th>
+										<td data-th="이미지&동영상" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="userFile1" name="userFile1">
+													<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL">URL</th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="text" name="link_url" value="" class="input_text size_md">
+												<p class="input_status size_md">
+													* 바로가기 방법 : 링크주소뒤에 "&search_mode=1"를 붙여주세요. <br>			
+													* 링크 주소 마지막에 "&f=srch"를 붙여주시면 검색기능이 활성화 됩니다.	
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어" class="align_left">
+											<div class="input_box">
+												<input type="text" name="search_keyword" value="" class="input_text size_md">
+												<p class="input_status size_md">
+													* 검색할 단어 구분을 콤마(,)로 입력해 주시기 바랍니다.
+												</p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 배너수정 모달 -->
+		<div id="homepageBannerEdit_modal" class="modal homepageBanner_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">배너수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_write" id="frm_write" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 240px;">
+									<col style="width: 498px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="카테고리ID">카테고리ID</th>
+										<td data-th="카테고리ID" class="align_left">
+											<div class="select_box">
+												<select name="b_uid" class="select size_md">
+													<option value="">선택</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이미지&동영상">
+											이미지&동영상
+											<p class="desc point">
+												(PC-1920 x 589) <br>
+												(MOB-783 x 313) <br>
+												(테마 180 x 180) jpg,mp4파일만 가능
+											</p>
+										</th>
+										<td data-th="이미지&동영상" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="userFile1" name="userFile1">
+													<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 파일.jpg</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="미리보기">미리보기</th>
+										<td data-th="미리보기" class="align_left">
+											<div class="tbl_img">
+												<img src="https://www.tktravelkorea.com/FileData/hotel/20250801_95D5A3FC80F08AA6.jpg" alt="" class="img">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL">URL</th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="text" name="link_url" value="https://www.tktravelkorea.com/tour/whole-year/gangneung-donghae-mureungbyeolyucheonji-nongoldamgilstreet-outdoor-activities-2d1n/" class="input_text size_md">
+												<p class="input_status size_md">
+													* 바로가기 방법 : 링크주소뒤에 "&search_mode=1"를 붙여주세요. <br>			
+													* 링크 주소 마지막에 "&f=srch"를 붙여주시면 검색기능이 활성화 됩니다.	
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="검색어">검색어</th>
+										<td data-th="검색어" class="align_left">
+											<div class="input_box">
+												<input type="text" name="search_keyword" value="키워드, 키워드, 키워드" class="input_text size_md">
+												<p class="input_status size_md">
+													* 검색할 단어 구분을 콤마(,)로 입력해 주시기 바랍니다.
+												</p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_design.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(9).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(12).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+	
+	<!-- 타이틀/메뉴활성화 -->
+	<script>
+		$(window).on("load", function () {
+			const params = new URLSearchParams(window.location.search);
+			const bdCd = params.get("lang");
+
+			if (bdCd === "ko") {
+				// 여행대장
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(16).addClass("active");
+
+
+			} else if (bdCd === "en") {
+				// 영어
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(17).addClass("active");
+
+
+			} else if (bdCd === "hk") {
+				// 번체
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(18).addClass("active");
+
+
+			} else if (bdCd === "cn") {
+				// 간체
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(19).addClass("active");
+			}
+		});
+	</script>
+
+
+	<!-- modal button -->
+	<script>
+		// homepageBannerWrite modal
+		function homepageBannerWrite_modal() {
+			$(".modal").removeClass("show");
+			$("#homepageBannerWrite_modal").addClass("show");
+		}
+
+		// homepageBannerEdit modal
+		function homepageBannerEdit_modal() {
+			$(".modal").removeClass("show");
+			$("#homepageBannerEdit_modal").addClass("show");
+		}
+	</script>
+
+
+
+</body>
+
+</html>

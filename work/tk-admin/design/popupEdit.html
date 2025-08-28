@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout design_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-shapes icon"></i>
+						<span class="tit">팝업창 수정</span>
+					</p>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write">
+						<form name="InForm" id="InForm" method="POST">
+							<div class="tbl_box ver3">
+								<table class="tbl member_list min_auto">
+									<colgroup>
+										<col style="width: 150px;">
+										<col style="width: 1588px;">
+									</colgroup>
+									<tbody>									
+										<tr>
+											<th data-th="언어">언어</th>
+											<td data-th="언어">
+												<div class="input_box input_lex">
+													<div class="select_box">
+														<select name="lang" hname="언어선택" class="select size_md" required="">
+															<option value="">언어선택</option>
+															<option value="ko" selected>한국</option>
+															<option value="en">영어</option>
+															<option value="cn">간체</option>
+															<option value="hk">번체</option>
+															<option value="ag">대리점</option>
+														</select>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="제 목">제 목</th>
+											<td data-th="제 목">
+												<div class="input_box input_flex">
+													<input type="text" name="PTitle" class="input_text size_md" size="115"maxlength="200" value="2025 TK트레블 사기 조심 안내">
+													<span class="check_box size_md">
+														<input type="checkbox" class="input_check" name="PTitleUse" value="Y" id="PTitleUse"> 
+														<label for="PTitleUse" class="label_check">팝업시 제목표시</label>
+													</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="가 로">가 로</th>
+											<td data-th="가 로">
+												<div class="input_box input_flex">
+													<input type="text" name="PWidth" id="PWidth" value="605" class="input_text size_md nofull align_right" size="5">
+													<span class="label_txt input_txt size_md">px</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="세 로">세 로</th>
+											<td data-th="세 로">
+												<div class="input_box input_flex">
+													<input type="text" name="PHeight" id="PHeight" value="430" class="input_text size_md nofull align_right" size="5">
+													<span class="label_txt input_txt size_md">px</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="위치">위치</th>
+											<td data-th="위치">
+												<div class="tbl_inline gap3">
+													<div class="radio_wrap">
+														<div class="radio_box size_md">
+															<input type="radio" class="input_radio" name="PCenter" value="1" id="PCenter_1"> 
+															<label for="PCenter_1" class="label_radio">중앙에</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" class="input_radio" name="PCenter" value="2" id="PCenter_2" checked>
+															<label for="PCenter_2" class="label_radio"> 위치지정</label>
+														</div>
+													</div>
+													<div class="tbl_inline PCenter_2_show">
+														<div class="input_box input_flex">
+															<span class="label_txt input_txt size_md">TOP :</span>
+															<input type="text" name="PTOP" value="200" class="input_text size_md align_right" size="5" maxlength="4">
+															<span class="label_txt input_txt size_md">px</span>
+														</div>
+														<div class="input_box input_flex">
+															<span class="label_txt input_txt size_md">LEFT :</span>
+															<input type="text" name="PLEFT" value="30" class="input_text size_md align_right" size="5"maxlength="4">
+															<span class="label_txt input_txt size_md">px</span>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="스크롤바">스크롤바</th>
+											<td data-th="스크롤바">
+												<div class="tbl_inline gap3">
+													<div class="radio_wrap">
+														<div class="radio_box size_md">
+															<input type="radio" class="input_radio" name="PScroll" value="1" id="PScroll_1" checked> 
+															<label for="PScroll_1" class="label_radio">사용안함</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" class="input_radio" name="PScroll" value="0" id="PScroll_2">
+															<label for="PScroll_2" class="label_radio"> 사용함</label>
+														</div>
+													</div>
+													<div class="tbl_inline PScroll_2_show">
+														<div class="input_box input_flex">
+															<span class="label_txt input_txt size_md">Height :</span>
+															<input type="text" name="PScrollHeight" value="" class="input_text size_md align_right" size="5" maxlength="4">
+															<span class="label_txt input_txt size_md">px</span>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="쿠키">쿠키</th>
+											<td data-th="쿠키">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" class="input_radio" name="PCookie" value="1" id="PCookie_1" checked> 
+														<label for="PCookie_1" class="label_radio">YES (하루동안사용안함)</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" class="input_radio" name="PCookie" value="0" id="PCookie_2">
+														<label for="PCookie_2" class="label_radio"> NO</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="형식">형식</th>
+											<td data-th="형식">
+												<div class="radio_wrap">
+													<div class="radio_box size_md">
+														<input type="radio" class="input_radio" name="PType" value="1" id="PType_1" checked> 
+														<label for="PType_1" class="label_radio">이미지맵</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" class="input_radio" name="PType" value="2" id="PType_2">
+														<label for="PType_2" class="label_radio">HTML</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr class="PType_1_show">
+											<th data-th="사용법">사용법</th>
+											<td data-th="사용법" class="align_left">
+												<ul class="info">
+													<li>"이미지 불러오기" 를 통해 이미지 선택</li>
+													<li>"맵레이어 생성"을 클릭하여 새로운 spot영역을 생성 (여러개 생성시는 생성하고자 하는 갯수만큼 클릭)</li>
+													<li>링크주소와 이미지설명을 기재</li>
+													<li>이미지 위에 생성된 맵영역을 드래그하여 원하는 위치로 드래그</li>
+													<li>맵영역 크기 설정은 박스 귀퉁이를 드래그하면 됨</li>
+													<li>"Make Code"버튼을 클릭하면 맵코드 생성</li>
+													<li>"Preview"버튼 클릭하면 링크된 내용의 미리보기 할 수 있음</li>
+												</ul>
+											</td>
+										</tr>
+										<tr class="PType_1_show">
+											<th data-th="이미지맵">이미지맵</th>
+											<td data-th="이미지맵">
+												<div class="tbl_inline column_ver gap3">
+													<div class="tbl_box">
+														<table class="tbl min_auto">
+															<colgroup> 
+																<col style="width: 180px;">
+																<col>
+																<col style="width: 180px;">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="Image URL">Image URL</th>
+																	<td data-th="Image URL">
+																		<div class="input_box">
+																			<input type="text" id="imageInput" name="imageInput" value="https://www.tktravelkorea.com/FileData/pop/20250726_B10198DF490DA49A.jpg" class="input_text size_md">
+																		</div>
+																	</td>
+																	<td> 
+																		<button type="button" class="button typeF auto size_sm full" onclick="popupGallery_modal()">이미지불러오기</button>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="링크주소">링크주소</th>
+																	<td data-th="링크주소">
+																		<div class="input_box">
+																			<input class="input_text size_md" id="linker7" type="text" value="">
+																		</div>
+																	</td>
+																	<td rowspan="2">
+																		<div class="tbl_inline column_ver gap2">
+																			<button type="button" class="button typeF auto size_sm full">맵레이어 생성</button>
+																			<button type="button" class="button typeF auto size_sm full">맵레이어 생성제거</button>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="이미지설명">이미지설명</th>
+																	<td data-th="이미지설명" class="border">
+																		<div class="input_box">
+																			<input class="input_text size_md" id="title7" type="text" value="">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="maplayer" colspan="3">
+																		<div id="workSpace">
+																			<img style="position:relative" id="mapimage" galleryimg="false" src="https://www.tktravelkorea.com/FileData/pop/20250726_B10198DF490DA49A.jpg">
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="tbl_box">
+														<table class="tbl min_auto">
+															<thead> 
+																<tr>
+																	<th data-th="이미지맵 코드">
+																		<div class="tbl_inline between">
+																			<button type="button" class="button typeF auto size_sm">Make Code</button>
+																			<button type="button" class="button typeF auto size_sm">Preview</button>
+																		</div>
+																	</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td data-th="이미지맵 코드">
+																		<div class="input_box">
+																			<textarea class="input_text size_md point h_auto" id="codeWindow" name="codeWindow" rows="15">&lt;img src="https://www.tktravelkorea.com/FileData/pop/20250726_B10198DF490DA49A.jpg" width="605" border="0"&gt;</textarea>
+																		</div>
+																	</td>
+																</tr>														
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr class="PType_2_show">
+											<th data-th="내용">내용</th>
+											<td data-th="내용">
+												<div class="input_box">
+													<textarea name="PCont" class="input_text size_md h_auto" id="PCont" rows="15"></textarea>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+					<div class="tbl_bottom">
+						<button type="button" class="button typeE auto size_md mn100">저장</button>
+						<button type="button" class="button typeF auto size_md mn100">목록</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 팝업 이미지 관리 모달 -->
+		<div id="popupGallery_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">팝업 이미지 관리</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_gallery_edit" id="frm_gallery_edit" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="gallery_wrap">
+							<div class="tbl_top">
+								<div class="leftbox">
+									<p class="total">
+										<span class="color">10</span>개의 이미지가 등록되어 있습니다.
+									</p>
+								</div>
+								<div class="rightbox">
+									<div class="check_box">
+										<input class="input_check" name="gallery_item_all" id="gallery_item_all" type="checkbox" value="">
+										<label class="label_check" for="gallery_item_all">전체선택</label>
+									</div>
+									<button type="button" class="button size_sm auto typeE">파일수정</button>
+									<button type="button" class="button size_sm auto typeF">파일삭제</button>
+								</div>
+							</div>
+							<div class="gallery_list">
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_1" value="1">
+										<label class="label_check" for="chkall_1">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img1.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_1" id="ImgMemo_1" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_1" id="ordernum_1" value="0" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_2" value="2">
+										<label class="label_check" for="chkall_2">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img2.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_2" id="ImgMemo_2" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_2" id="ordernum_2" value="1" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_3" value="3">
+										<label class="label_check" for="chkall_3">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img3.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_3" id="ImgMemo_3" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_3" id="ordernum_3" value="2" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_4" value="4">
+										<label class="label_check" for="chkall_4">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img4.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_4" id="ImgMemo_4" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_4" id="ordernum_4" value="3" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_5" value="5">
+										<label class="label_check" for="chkall_5">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img5.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_5" id="ImgMemo_5" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_5" id="ordernum_5" value="4" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_6" value="6">
+										<label class="label_check" for="chkall_6">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img6.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_6" id="ImgMemo_6" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_6" id="ordernum_6" value="5" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_7" value="7">
+										<label class="label_check" for="chkall_7">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img7.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_7" id="ImgMemo_7" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_7" id="ordernum_7" value="6" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_8" value="8">
+										<label class="label_check" for="chkall_8">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img8.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_8" id="ImgMemo_8" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_8" id="ordernum_8" value="7" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_9" value="9">
+										<label class="label_check" for="chkall_9">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img9.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_9" id="ImgMemo_9" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_9" id="ordernum_9" value="8" maxlength="3">
+									</div>
+								</div>
+								<div class="item">
+									<div class="check_box size_md">
+										<input class="input_check" type="checkbox" name="chkall[]" id="chkall_10" value="10">
+										<label class="label_check" for="chkall_10">311KB</label>
+									</div>
+									<div class="imgbox" onclick="galleryImg_modal()">
+										<img class="img" src="../img/good_img10.jpg" alt="" aria-colspan="">
+									</div>
+									<div class="input_box input_flex">
+										<input class="input_text size_md label" type="text" name="ImgMemo_10" id="ImgMemo_10" value="">
+										<input class="input_text size_md number" type="text" name="ordernum_10" id="ordernum_10" value="9" maxlength="3">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_design.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(9).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+	<script>
+		$(document).ready(function () {
+			function togglePCenter() {
+				if ($("#PCenter_2").is(":checked")) {
+					$(".PCenter_2_show").addClass("show");
+				} else {
+					$(".PCenter_2_show").removeClass("show");
+				}
+			}
+			function togglePScroll() {
+				if ($("#PScroll_2").is(":checked")) {
+					$(".PScroll_2_show").addClass("show");
+				} else {
+					$(".PScroll_2_show").removeClass("show");
+				}
+			}
+
+			function togglePType() {
+				const val = $("input[name='PType']:checked").val();
+				$("tr[class^='PType_']").removeClass("show");
+				if (val) {
+					$(".PType_" + val + "_show").addClass("show");
+					$("input[name='PType']:checked").closest("tr").addClass("show");
+				}
+			}
+
+			togglePCenter();
+			togglePScroll();
+			togglePType();
+
+			$("input[name='PCenter']").on("change", togglePCenter);
+			$("input[name='PScroll']").on("change", togglePScroll);
+			$("input[name='PType']").on("change", togglePType);
+		});
+	</script>
+
+
+	<!-- modal button -->
+	<script>
+		// popupGallery modal
+		function popupGallery_modal() {
+			$(".modal").removeClass("show");
+			$("#popupGallery_modal").addClass("show");
+		}
+	</script>
+
+
+</body>
+
+</html>

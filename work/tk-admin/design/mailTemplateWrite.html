@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout design_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-shapes icon"></i>
+						<span class="tit">템플릿 등록</span>
+					</p>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write">
+						<form name="frm_list" id="frm_list" method="POST">
+							<div class="tbl_box ver3">
+								<table class="tbl member_list min_auto">
+									<colgroup>
+										<col style="width: 150px;">
+										<col style="width: 1588px;">
+									</colgroup>
+								<tbody>									
+									<tr>
+										<th data-th="템플릿 제목"><span class="required">템플릿 제목</span></th>
+										<td data-th="템플릿 제목">
+											<div class="input_box">
+												<input name="mt_title" id="mt_title" type="text" size="80" class="input_text size_md" value="" hname="템플릿 제목" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="언어">언어</th>
+										<td data-th="언어">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="mt_lang" value="KO" checked="">
+													<label for="" class="label_radio">국문</label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="mt_lang" value="EN">
+													<label for="" class="label_radio">영문</label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="mt_lang" value="TC">
+													<label for="" class="label_radio">번체</label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" class="input_radio" name="mt_lang" value="SC">
+													<label for="" class="label_radio">간체</label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="템플릿 사용여부">템플릿 사용여부</th>
+										<td data-th="템플릿 사용여부">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" name="mt_status"id="mt_status_y"  class="input_radio" value="Y" checked="">
+													<label for="mt_status_y" class="label_radio">사용</label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" name="mt_status" id="mt_status_n" class="input_radio" value="N">
+													<label for="mt_status_n" class="label_radio">미사용</label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="대표이미지"><span class="required">대표이미지</span></th>
+										<td data-th="대표이미지" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_main_img" name="mt_main_img">
+													<label for="mt_main_img" class="label_file size_md ">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (900px X 1157px)</p>
+											</div>
+										</td>
+									</tr>								
+									<tr>
+										<th data-th="제목">제목</th>
+										<td data-th="제목">
+											<div class="input_box">
+												<input name="mt_main_title" id="mt_main_title" type="text" size="80" class="input_text size_md" value=""  hname="제목" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상품 1">상품 1</th>
+										<td data-th="상품 1" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_product_image1" name="mt_product_image1">
+													<label for="mt_product_image1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (450px X 736px)</p>
+												<input name="mt_product_url1" id="mt_product_url1" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상품 2">상품 2</th>
+										<td data-th="상품 2" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_product_image2" name="mt_product_image2">
+													<label for="mt_product_image2" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (450px X 736px)</p>
+												<input name="mt_product_url2" id="mt_product_url2" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상품 3">상품 3</th>
+										<td data-th="상품 3" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_product_image3" name="mt_product_image3">
+													<label for="mt_product_image3" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (450px X 736px)</p>
+												<input name="mt_product_url3" id="mt_product_url3" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상품 4">상품 4</th>
+										<td data-th="상품 4" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_product_image4" name="mt_product_image4">
+													<label for="mt_product_image4" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (450px X 736px)</p>
+												<input name="mt_product_url4" id="mt_product_url4" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상품 5">상품 5</th>
+										<td data-th="상품 5" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_product_image5" name="mt_product_image5">
+													<label for="mt_product_image5" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (450px X 736px)</p>
+												<input name="mt_product_url5" id="mt_product_url5" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상품 6">상품 6</th>
+										<td data-th="상품 6" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_product_image6" name="mt_product_image6">
+													<label for="mt_product_image6" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<input name="mt_product_url6" id="mt_product_url6" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+												<p class="point">※ 이미지 사이즈 (450px X 736px)</p>
+											</div>
+										</td>
+									</tr>							
+									<tr>
+										<th data-th="더보기 링크주소"><span class="required">더보기 링크주소</span></th>
+										<td data-th="더보기 링크주소">
+											<div class="input_box">
+												<input name="mt_more_link" id="mt_more_link" type="text" size="80" class="input_text size_md" value="" style="ime-mode:active" hname="더보기 링크주소" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="더보기 배경 색상">더보기 배경 색상</th>
+										<td data-th="더보기 배경 색상">
+											<div class="input_box input_flex">				
+												<span class="label_text input_txt size_md">#</span>			
+												<input name="mt_more_bgcolor" id="mt_more_bgcolor" type="text" size="8" class="input_text size_md nofull" value="" style="ime-mode:active" hname="배경 색상">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배너 1">배너 1</th>
+										<td data-th="배너 1" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_banner_image1" name="mt_banner_image1">
+													<label for="mt_banner_image1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (900px X 150px)</p>
+												<input name="mt_banner_url1" id="mt_banner_url1" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배너 2">배너 2</th>
+										<td data-th="배너 2" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_banner_image2" name="mt_banner_image2">
+													<label for="mt_banner_image2" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (900px X 150px)</p>
+												<input name="mt_banner_url2" id="mt_banner_url2" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배너 3">배너 3</th>
+										<td data-th="배너 3" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_banner_image3" name="mt_banner_image3">
+													<label for="mt_banner_image3" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (900px X 150px)</p>
+												<input name="mt_banner_url3" id="mt_banner_url3" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배너 4">배너 4</th>
+										<td data-th="배너 4" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_banner_image4" name="mt_banner_image4">
+													<label for="mt_banner_image4" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (900px X 150px)</p>
+												<input name="mt_banner_url4" id="mt_banner_url4" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배너 5">배너 5</th>
+										<td data-th="배너 5" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_banner_image5" name="mt_banner_image5">
+													<label for="mt_banner_image5" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (900px X 150px)</p>
+												<input name="mt_banner_url5" id="mt_banner_url5" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배너 6">배너 6</th>
+										<td data-th="배너 6" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="mt_banner_image6" name="mt_banner_image6">
+													<label for="mt_banner_image6" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (900px X 150px)</p>
+												<input name="mt_banner_url6" id="mt_banner_url6" type="text" size="80" class="input_text size_md" value=""  hname="상품URL" placeholder="상품 URL 입력">
+											</div>
+										</td>
+									</tr>										
+								</tbody>
+
+								</table>
+							</div>
+						</form>
+					</div>
+					<div class="tbl_bottom">
+						<button type="button" class="button typeE auto size_md mn100">저장</button>
+						<button type="button" class="button typeF auto size_md mn100">목록</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_design.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(9).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(7).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

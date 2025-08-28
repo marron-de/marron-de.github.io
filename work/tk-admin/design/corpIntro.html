@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout design_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-shapes icon"></i>
+						<span class="tit">회사소개</span>
+					</p>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write form_box">
+						<form name="frm_ins" id="frm_ins" method="POST">
+							<div class="tbl_box ver3">
+								<table class="tbl member_list min_auto">
+									<colgroup>
+										<col style="width: 150px;">
+										<col style="width: 1588px;">
+									</colgroup>
+								<tbody>					
+									<tr>
+										<th data-th="한국 내용">한국 내용</th>
+										<td data-th="한국 내용">
+											<div class="input_box">												
+												<textarea class="summernote" name="event_footer"></textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+
+								</table>
+							</div>
+						</form>
+					</div>
+					<div class="tbl_bottom">
+						<button type="button" class="button typeE auto size_md mn100">저장</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_design.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(9).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+	
+	<!-- 타이틀/메뉴활성화 -->
+	<script>
+		$(window).on("load", function () {
+			const params = new URLSearchParams(window.location.search);
+			const bdCd = params.get("lang");
+
+			if (bdCd === "ko") {
+				// 한국 회사소개
+				$(".page_title .tit").text("한국 회사소개");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(16).addClass("active");
+
+
+			} else if (bdCd === "en") {
+				// 영어 회사소개
+				$(".page_title .tit").text("영어 회사소개");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(17).addClass("active");
+
+
+			} else if (bdCd === "hk") {
+				// 번체 회사소개
+				$(".page_title .tit").text("번체 회사소개");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(18).addClass("active");
+
+
+			} else if (bdCd === "cn") {
+				// 간체 회사소개
+				$(".page_title .tit").text("간체 회사소개");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(19).addClass("active");
+			}
+		});
+	</script>
+
+	
+	<!-- Summernote Lite CSS/JS (부트스트랩 불필요) -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			$('.summernote').summernote({
+				height: 400,
+				toolbar: [
+					// 1줄: 글꼴, 크기, 스타일
+					['fontname', ['fontname']],
+					['fontsize', ['fontsize']],
+					['height', ['height']],
+					['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+					// 2줄: 색상, 정렬, 리스트
+					['color', ['color']],
+					['para', ['ul', 'ol', 'paragraph']],
+					// 3줄: 링크, 이미지, 표, 코드 등
+					['insert', ['link', 'picture', 'video', 'table', 'hr']],
+					['view', ['fullscreen', 'codeview', 'help']]
+				],
+				fontNames: ['맑은 고딕', '굴림', '돋움', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+				lineHeights: ['150%', '180%', '200%', '220%', '250%', '280%', '300%'],
+			});
+		});    
+	</script>
+
+
+
+</body>
+
+</html>
