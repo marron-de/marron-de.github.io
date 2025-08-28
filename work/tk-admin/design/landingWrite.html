@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout design_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-shapes icon"></i>
+						<span class="tit">이벤트 등록</span>
+					</p>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write form_box gap_lg2">
+						<form name="frm_list" id="frm_list" method="POST">
+							<div class="tbl_box ver3">
+								<table class="tbl member_list">
+									<colgroup>
+										<col style="width: 150px;">
+										<col style="width: 1588px;">
+									</colgroup>
+								<tbody>									
+									<tr>
+										<th data-th="언어">언어</th>
+										<td data-th="언어">
+											<div class="input_box input_flex">
+												<div class="select_box">
+													<select name="event_lang" hname="언어" required="" class="select size_md">
+														<option value="">언어선택</option>
+														<option value="ko" selected="">한국</option>
+														<option value="hk">번체</option>
+														<option value="en">영어</option>
+														<option value="cn">간체</option>
+													</select>
+												</div>
+												<p class="point">* 선택한 사이트에서만 페이지를 볼 수 있습니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이벤트 코드">이벤트 코드</th>
+										<td data-th="이벤트 코드">
+											<div class="input_box input_flex">
+												<input name="event_code" id="event_code" type="text" size="35" class="input_text size_md nofull" value="" hname="이벤트 코드" required="">
+												<p class="point">* 영문과 숫자만 사용해주세요. / 중복되지 않도록 주의해주세요.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이벤트 사용여부">이벤트 사용여부</th>
+										<td data-th="이벤트 사용여부">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" name="event_status"id="event_status_y"  class="input_radio" value="Y" checked="">
+													<label for="event_status_y" class="label_radio">사용</label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" name="event_status" id="event_status_n" class="input_radio" value="N">
+													<label for="event_status_n" class="label_radio">미사용</label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이벤트 제목">이벤트 제목</th>
+										<td data-th="이벤트 제목">
+											<div class="input_box">
+												<input name="event_title" id="event_title" type="text" size="80" class="input_text size_md" value="" hname="이벤트 제목" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="이벤트 기간">이벤트 기간</th>
+										<td data-th="이벤트 기간">
+											<div class="input_box input_flex">
+												<input type="text" name="event_start" id="event_start" class="input_text size_md icon_ver icon_date calender_btn" value="2025-08-28" hname="시작일" readonly="">
+												<span class="label_text inpu_txt size_md">~</span>
+												<input type="text" name="event_end" id="event_end" class="input_text size_md icon_ver icon_date calender_btn" value="2025-08-28" hname="시작일" readonly="">
+												<p class="point">*  이벤트 기간이 아닐 경우 이벤트 페이지를 볼 수 없습니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="타임세일 사용여부">타임세일 사용여부</th>
+										<td data-th="타임세일 사용여부">
+											<div class="radio_wrap">
+												<span class="radio_box size_md">
+													<input type="radio" name="time_sale_status" id="time_sale_status_y"  class="input_radio" value="Y">
+													<label for="time_sale_status_y" class="label_radio">사용</label>
+												</span>
+												<span class="radio_box size_md">
+													<input type="radio" name="time_sale_status" id="time_sale_status_n" class="input_radio" value="N" checked="">
+													<label for="time_sale_status_n" class="label_radio">미사용</label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="타임세일 총인원">타임세일 총인원</th>
+										<td data-th="타임세일 총인원">
+											<div class="tbl_inline gap2">
+												<div class="input_box flex_auto">
+													<input type="text" name="time_sale_people_cnt" id="time_sale_people_cnt" class=" input_text size_md" value="" hname="타임세일총인원">
+												</div>
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">타임세일 마감일</span>
+													<input name="time_sale_deadline" id="time_sale_deadline" type="text" value="" class="input_text size_md icon_ver icon_date calender_btn" maxlength="100">
+													<p class="point">*  이 날짜를 기준으로 타임세일 시간이 지정됩니다</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="목록 이미지">목록 이미지</th>
+										<td data-th="목록 이미지" class="align_left">
+											<div class="file_list">
+												<div class="input_box input_file_box">
+													<span class="label_text size_md">[PC버전]</span>
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile1" name="T_UserFile1">
+														<label for="T_UserFile1" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+													<p class="point">※ 이미지 사이즈 (870px X 280px)</p>
+												</div>
+												<div class="input_box input_file_box">
+													<span class="label_text size_md">[모바일버전]</span>
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile2" name="T_UserFile2">
+														<label for="T_UserFile2" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+													<p class="point">※ 이미지 사이즈 (1264px X 400px)</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상단 이미지">상단 이미지</th>
+										<td data-th="상단 이미지" class="align_left">
+											<div class="file_list">
+												<div class="input_box input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="T_UserFile3" name="T_UserFile3">
+														<label for="T_UserFile3" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+													</div>
+													<div class="tbl_inline align_middle gap2">
+														<p class="point">※ 이미지 사이즈 (1920px X 1280px)</p>
+														<div class="check_box size_md">
+															<input type="checkbox" name="event_gradent" class="input_check" id="event_gradent" value="Y">
+															<label for="event_gradent" class="label_check">배경 색상 그라데이션 사용 </label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="배경 색상">배경 색상</th>
+										<td data-th="배경 색상">
+											<div class="input_box input_flex">				
+												<span class="label_text input_txt size_md">#</span>							
+												<input name="event_bgcolor" id="event_bgcolor" type="text" size="8" class="input_text size_md nofull" hname="배경 색상" required="" value="FFFFFF">
+												<input type="text" size="3" class="input_text size_md nofull" style="background-color:#FFFFFF;" readonly="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상단 HTML">상단 HTML</th>
+										<td data-th="상단 HTML">
+											<div class="input_box">											
+												<textarea class="summernote" name="event_header"></textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="하단 HTML">하단 HTML</th>
+										<td data-th="하단 HTML">
+											<div class="input_box">												
+												<textarea class="summernote" name="event_footer"></textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="페이지 CSS">페이지 CSS</th>
+										<td data-th="페이지 CSS" class="align_left">
+											<div class="input_box">
+												<textarea name="event_css" id="event_css" class="input_text size_md h_auto " rows="5"></textarea>
+												<span>
+													ex) <br>
+													- 아이콘 색상 : #contents_event .good_info .icon { background-color : #F00;} <br>
+													- 가격 색상 : #contents_event .good_info .price { color : #F00;}
+												</span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+
+								</table>
+							</div>
+						</form>
+						<form name="frm_list" id="frm_list" method="POST">
+							<div class="tbl_top">
+								<div class="leftbox">
+									<p class="title_size_bg">
+										이벤트 상품관리
+									</p>
+								</div>
+								<div class="rightbox"></div>
+							</div>
+							<div class="bo_list tbl_box">
+								<table class="tbl" id="design_list_tbl">
+									<colgroup>
+										<col style="width: 90px;">
+										<col style="width: 80px;">
+										<col style="width: 70px;">
+										<col style="width: 120px;">
+										<col style="width: 604px;">
+										<col style="width: 150px;">
+										<col style="width: 150px;">
+										<col style="width: 120px;">
+										<col style="width: 120px;">
+										<col style="width: 150px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="사용">사용</th>
+											<th data-th="복사">복사</th>
+											<th data-th="순서">순서</th>
+											<th data-th="이미지">이미지</th>
+											<th data-th="상품명">상품명</th>
+											<th data-th="아이콘">아이콘</th>
+											<th data-th="유효기간">유효기간</th>
+											<th data-th="정상가">정상가</th>
+											<th data-th="판매가">판매가</th>
+											<th data-th="수정">수정</th>
+										</tr>
+									</thead>
+									<tbody>		
+										<td class="noPost" colspan="10">
+											<div class="tbl_nopost">
+												<span class="icon">
+													<i class="ph ph-warning-circle"></i>
+												</span>
+												<span class="txt point">&lt;주의&gt; 이벤트 등록하기 후 이벤트 상품관리에서 상품추가를 할 수 있습니다.</span>
+											</div>
+										</td>										
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+					<div class="tbl_bottom">
+						<button type="button" class="button typeE auto size_md mn100">저장</button>
+						<button type="button" class="button typeF auto size_md mn100">목록</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_design.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(9).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+	
+	<!-- Summernote Lite CSS/JS (부트스트랩 불필요) -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			$('.summernote').summernote({
+				height: 400,
+				toolbar: [
+					// 1줄: 글꼴, 크기, 스타일
+					['fontname', ['fontname']],
+					['fontsize', ['fontsize']],
+					['height', ['height']],
+					['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+					// 2줄: 색상, 정렬, 리스트
+					['color', ['color']],
+					['para', ['ul', 'ol', 'paragraph']],
+					// 3줄: 링크, 이미지, 표, 코드 등
+					['insert', ['link', 'picture', 'video', 'table', 'hr']],
+					['view', ['fullscreen', 'codeview', 'help']]
+				],
+				fontNames: ['맑은 고딕', '굴림', '돋움', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+				lineHeights: ['150%', '180%', '200%', '220%', '250%', '280%', '300%'],
+			});
+		});    
+	</script>
+
+
+
+</body>
+
+</html>

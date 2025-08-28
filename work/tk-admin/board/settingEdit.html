@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout board_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-clipboard-text icon"></i>
+						게시판 생성
+					</p>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write">
+						<form name="frm_edit_board" id="frm_edit_board" method="POST">
+							<div class="tbl_box ver3">
+								<table class="tbl member_list">
+									<colgroup>
+										<col style="width: 250px;">
+										<col style="width: 1488px;">
+									</colgroup>
+								<tbody>									
+									<tr>
+										<th data-th="게시판 그룹">게시판 그룹</th>
+										<td data-th="게시판 그룹" class="align_left">
+											<div class="select_box">
+												<select class="select size_md" name="GRP_CD" id="GRP_CD" hname="게시판 그룹" required="">
+													<option value="">게시판 그룹</option>
+													<option value="GRP01" selected>고객센터</option>
+													<option value="GRP04">客服中心</option>
+													<option value="GRP02">CS Center</option>
+													<option value="GRP03">客服中心</option>
+													<option value="GRP05">게시판</option>
+													<option value="GRP06">B2B 거래처 문의</option>
+													<option value="GRP07">실시간차량</option>
+													<option value="GRP99">인트라넷</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="게시판 코드">게시판 코드</th>
+										<td data-th="게시판 코드" class="align_left">NOTICE</td>
+									</tr>
+									<tr>
+										<th data-th="게시판이름">게시판이름</th>
+										<td data-th="게시판이름" class="align_left">
+											<div class="input_box">
+												<input class="input_text size_md" type="text" name="BD_NM" id="BD_NM" value="공지사항" hname="게시판이름" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="종류">종류</th>
+										<td data-th="종류" class="align_left">
+											<div class="select_box">
+												<select name="BD_SORT" id="BD_SORT" class="select size_md">
+													<option value="BDTPM01" selected>공지/뉴스형</option>
+													<option value="BDTPM02">응답형(자유)</option>
+													<option value="BDTPM05">여행후기</option>
+													<option value="BDTPM06">FAQ</option>
+													<option value="MD03">갤러리형</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="탭 분류 설정">탭 분류 설정</th>
+										<td data-th="탭 분류 설정" class="align_left">
+											<div class="tbl_inline column_ver gap2">
+												<div class="input_box input_flex">
+													<input type="text" name="BD_TP[]" id="BD_TP[]" class="input_text size_md" size="10">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeF auto size_sm icon_button"><i class="ph-bold ph-plus"></i></button>
+														<button type="button" class="button typeF auto size_sm icon_button"><i class="ph-bold ph-minus"></i></button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="페이지당 목록 개수">페이지당 목록 개수</th>
+										<td data-th="페이지당 목록 개수" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_PS" id="BD_PS" class="select size_md">
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15" selected>15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+													<option value="30">30</option>
+													<option value="31">31</option>
+													<option value="32">32</option>
+													<option value="33">33</option>
+													<option value="34">34</option>
+													<option value="35">35</option>
+													<option value="36">36</option>
+													<option value="37">37</option>
+													<option value="38">38</option>
+													<option value="39">39</option>
+													<option value="40">40</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="페이지당 이동범위">페이지당 이동범위</th>
+										<td data-th="페이지당 이동범위" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_PM" id="BD_PM" class="select size_md">
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10" selected>10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+												</select>
+											</div>
+										</td>
+										</tr>
+									<tr>
+										<th data-th="첨부파일 갯수">첨부파일 갯수</th>
+										<td data-th="첨부파일 갯수" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_FL" id="BD_FL" class="select size_md">
+													<option value="0" selected>없음</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="웹에디터사용">웹에디터사용</th>
+										<td data-th="웹에디터사용" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_WE" id="BD_WE" class="select size_md">
+													<option value="Y" selected>YES
+													</option>
+													<option value="N">NO
+													</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="코멘트 사용">코멘트 사용</th>
+										<td data-th="코멘트 사용" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_CG" id="BD_CG" class="select size_md">
+													<option value="Y" selected>YES
+													</option>
+													<option value="N">NO
+													</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="코멘트 사용">코멘트 사용</th>
+										<td data-th="코멘트 사용" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_NG" id="BD_NG" class="select size_md" selected>
+													<option value="Y">YES
+													</option>
+													<option value="N">NO
+													</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="사용자 글쓰기">사용자 글쓰기</th>
+										<td data-th="사용자 글쓰기" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_MG" id="BD_MG" class="select size_md" disabled>
+													<option value="Y">YES
+													</option>
+													<option value="N">NO
+													</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="회원전용 글쓰기">회원전용 글쓰기</th>
+										<td data-th="회원전용 글쓰기" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_MO" id="BD_MO" class="select size_md" disabled>
+													<option value="Y">YES
+													</option>
+													<option value="N">NO
+													</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="답변글 사용">답변글 사용</th>
+										<td data-th="답변글 사용" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_RG" id="BD_RG" class="select size_md" disabled>
+													<option value="Y">YES
+													</option>
+													<option value="N">NO
+													</option>
+												</select>
+												
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="비밀글 사용">비밀글 사용</th>
+										<td data-th="비밀글 사용" class="align_left">
+											<div class="select_box mx160">
+												<select name="BD_SC" id="BD_SC" class="select size_md" disabled>
+													<option value="Y">YES
+													</option>
+													<option value="N">NO
+													</option>
+												</select>
+												
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="개설일">개설일</th>
+										<td data-th="개설일" class="align_left">2025-08-28</td>
+									</tr>
+								</tbody>
+
+								</table>
+							</div>
+							<div class="bo_btnbox">
+								<div class="leftbox">
+									<a href="../board/setting.html" class="button typeE auto size_md">목록</a>
+								</div>
+								<div class="rightbox">
+									<button class="button typeE auto size_md">수정</button>
+									<button class="button typeF auto size_md">다시작성</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_board.html', '#sidenav');	
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(8).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+
+</body>
+
+</html>

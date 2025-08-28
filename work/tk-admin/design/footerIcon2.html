@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout design_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-shapes icon"></i>
+						<span class="tit">푸터아이콘 관리 - TK트래블</span>
+					</p>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="frm_list" id="frm_list" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox"></div>
+							<div class="rightbox">
+								<button type="button" class="button size_sm auto typeE" onclick="footerRegWrite2_modal()">등록하기</button>
+								<button type="button" class="button size_sm auto typeF">순서저장</button>
+							</div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl" id="design_list_tbl">
+								<colgroup>
+                    				<col style="width: 60px;">
+                    				<col style="width: 200px;">
+									<col style="width: 884px;">
+									<col style="width: 180px;">
+									<col style="width: 180px;">
+									<col style="width: 150px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="순서">순서</th>
+										<th data-th="아이콘 이미지">아이콘 이미지</th>
+										<th data-th="URL">URL</th>
+										<th data-th="링크명">링크명</th>
+										<th data-th="등록일">등록일</th>
+										<th data-th="수정">수정</th>
+									</tr>
+								</thead>
+								<tbody>		
+									<tr>
+										<td data-th="순서">1</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0148[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%201.png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+									<tr>
+										<td data-th="순서">2</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0156[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%202.png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+									<tr>
+										<td data-th="순서">3</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0209[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%203.png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+									<tr>
+										<td data-th="순서">4</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0218[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%205.png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+									<tr>
+										<td data-th="순서">5</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0227[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%207.png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+									<tr>
+										<td data-th="순서">6</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0243[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%208.png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+									<tr>
+										<td data-th="순서">7</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0243[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%208.png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+									<tr>
+										<td data-th="순서">8</td>
+										<td data-th="아이콘 이미지">
+											<div class="tbl_img mx60">
+												<img src="https://www.tktravelkorea.com/FileData/footerIcon/tb/0744[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20[%EB%B3%B5%EC%82%AC%EB%B3%B8]%20%EC%A0%9C%EB%AA%A9%EC%9D%84%20%EC%9E%85%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94%20(7).png" alt="" class="img">
+											</div>
+										</td>
+										<td data-th="URL" class="align_left">
+											<div class="tbl_inline column_ver align_left padding_y">
+												<a class="tbl_link" href="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">번체 : https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">간체 : https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+												<a class="tbl_link" href="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" target="_blank">영어 : https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&amp;scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F</a>
+											</div>
+										</td>
+										<td data-th="링크명">
+											<div class="tbl_inline column_ver">
+												<p>번체 : 線上詢問</p>
+												<p>간체 : 线上询问</p>
+												<p>영어 : 1:1 Inquires</p>
+											</div>
+										</td>
+										<td data-th="등록일">2023-02-16</td>
+										<td data-th="수정">
+											<div class="tbl_btnbox center">
+												<button type="button" class="button typeE auto size_sm" onclick="footerRegEdit2_modal()">수정</button>
+												<button type="button" class="button typeF auto size_sm">삭제</button>
+											</div>
+										</td>
+									</tr>												
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 푸터아이콘 등록 모달 -->
+		<div id="footerRegWrite2_modal" class="modal footerReg_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">푸터아이콘 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="footer_reg_write" id="footer_reg_write" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 554px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="아이콘 이미지"><span class="required">아이콘 이미지</span></th>
+										<td data-th="아이콘 이미지" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="userFile1" name="userFile1">
+													<label for="userFile1" class="label_file">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL"><span class="required">URL(영어)</span></th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="url" name="linkEn" class="input_text size_md" value="" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL"><span class="required">URL(번체)</span></th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="url" name="linkHk" class="input_text size_md" value="" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL"><span class="required">URL(간체)</span></th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="url" name="linkCn" class="input_text size_md" value="" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="링크명"><span class="required">링크명(영어)</span></th>
+										<td data-th="링크명" class="align_left">
+											<div class="input_box">
+												<input type="text" name="linkNameEn" value="" class="input_text size_md" hname="링크명" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="링크명"><span class="required">링크명(번체)</span></th>
+										<td data-th="링크명" class="align_left">
+											<div class="input_box">
+												<input type="text" name="linkNameHk" value="" class="input_text size_md" hname="링크명" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="링크명"><span class="required">링크명(간체)</span></th>
+										<td data-th="링크명" class="align_left">
+											<div class="input_box">
+												<input type="text" name="linkNameCn" value="" class="input_text size_md" hname="링크명" required="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 푸터아이콘 수정 모달 -->
+		<div id="footerRegEdit2_modal" class="modal footerReg_modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">푸터아이콘 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="footer_reg_write" id="footer_reg_write" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 180px;">
+									<col style="width: 554px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="아이콘 이미지"><span class="required">아이콘 이미지</span></th>
+										<td data-th="아이콘 이미지" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="userFile1" name="userFile1">
+													<label for="userFile1" class="label_file">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 이미지 파일.png</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL"><span class="required">URL(영어)</span></th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="url" name="linkEn" class="input_text size_md" value="https://en.tktravelkorea.com/cmm/?BD_CD=ENQNA&scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL"><span class="required">URL(번체)</span></th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="url" name="linkHk" class="input_text size_md" value="https://www.tktravelkorea.com/cmm/?BD_CD=TWQNA&scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="URL"><span class="required">URL(간체)</span></th>
+										<td data-th="URL" class="align_left">
+											<div class="input_box">
+												<input type="url" name="linkCn" class="input_text size_md" value="https://cn.tktravelkorea.com/cmm/?BD_CD=CNQNA&scat=%E7%B7%9A%E4%B8%8A%E8%A9%A2%E5%95%8F" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="링크명"><span class="required">링크명(영어)</span></th>
+										<td data-th="링크명" class="align_left">
+											<div class="input_box">
+												<input type="text" name="linkNameEn" value="1:1 Inquires" class="input_text size_md" hname="링크명" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="링크명"><span class="required">링크명(번체)</span></th>
+										<td data-th="링크명" class="align_left">
+											<div class="input_box">
+												<input type="text" name="linkNameHk" value="線上詢問" class="input_text size_md" hname="링크명" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="링크명"><span class="required">링크명(간체)</span></th>
+										<td data-th="링크명" class="align_left">
+											<div class="input_box">
+												<input type="text" name="linkNameCn" value="线上询问" class="input_text size_md" hname="링크명" required="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_design.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(9).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(3).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// footerRegWrite modal
+		function footerRegWrite2_modal() {
+			$(".modal").removeClass("show");
+			$("#footerRegWrite2_modal").addClass("show");
+		}
+
+		// footerRegEdit modal
+		function footerRegEdit2_modal() {
+			$(".modal").removeClass("show");
+			$("#footerRegEdit2_modal").addClass("show");
+		}
+	</script>
+
+
+
+</body>
+
+</html>

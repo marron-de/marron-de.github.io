@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 이벤트 상품 등록 모달 -->
+		<div id="eventGoodWrite_modal" class="modal eventGood_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">이벤트 상품 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_edit_good" id="frm_edit_good" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 150px;">
+									<col style="width: 584px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="상품 이미지">상품 이미지</th>
+										<td data-th="상품 이미지" class="align_left">
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="userFile1" name="userFile1">
+													<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<p class="point">※ 이미지 사이즈 (720px x 480px)</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="순서">순서</th>
+										<td data-th="순서" class="align_left">
+											<div class="input_box input_flex">
+												<input name="eg_order_num" id="eg_order_num" type="text" value="99" size="6" class="input_text size_md nofull align_center" maxlength="3"  hname="순서" required="">
+												<span class="point">※ 낮은 번호가 상위에 노출됩니다.</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상품명">상품명</th>
+										<td data-th="상품명" class="align_left">
+											<div class="input_box">
+												<input name="eg_title" id="eg_title" type="text" value="" size="50" class="input_text size_md" hname="상품명" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="아이콘">아이콘</th>
+										<td data-th="아이콘" class="align_left">
+											<div class="input_box input_flex">
+												<input name="eg_icon" id="eg_icon" type="text" value="" size="15" class="input_text size_md mx240">
+												<span class="point">(TEXT)</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="유효기간">유효기간</th>
+										<td data-th="유효기간" class="align_left">
+											<div class="input_box input_flex">
+												<input name="eg_date" id="eg_date" type="text" value="" size="20" class="input_text size_md mx240">
+												<span class="point">(TEXT)</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="정상가">정상가</th>
+										<td data-th="정상가" class="align_left">
+											<div class="input_box input_flex">
+												<input name="eg_price_normal" id="eg_price_normal" type="text" value="" size="20" class="input_text size_md mx240">
+												<span class="point">(TEXT)</span>	
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="판매가">판매가</th>
+										<td data-th="판매가" class="align_left">
+											<div class="input_box input_flex">
+												<input name="eg_price" id="eg_price" type="text" value="" size="20" class="input_text size_md mx240">
+												<span class="point">(TEXT)</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="링크 URL">링크 URL</th>
+										<td data-th="링크 URL" class="align_left">
+											<div class="input_box">
+												<input name="eg_url" id="eg_url" type="text" value="" size="50" class="input_text size_md" hname="링크URL" required="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+</body>
+
+</html>
