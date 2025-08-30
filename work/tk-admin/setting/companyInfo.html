@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout setting_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-gear icon"></i>
+						회사정보
+					</p>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write">
+						<p class="sub_title">기본정보 설정</p>
+						<form name="company_frm" id="company_frm" method="POST">
+							<div class="form_box flex_wrap">
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_company" class="label_text">회사명</label>
+										<input class="input_text size_md" id="shop_company" name="shop_company" type="text" value="TK 트래블" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_company_en" class="label_text">회사명(영어)</label>
+										<input class="input_text size_md" id="shop_company_en" name="shop_company_en" type="text" value="TK TRAVEL" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_company_cn" class="label_text">회사명(간체)</label>
+										<input class="input_text size_md" id="shop_company_cn" name="shop_company_cn" type="text" value="TK TRAVEL" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_company_hk" class="label_text">회사명(번체)</label>
+										<input class="input_text size_md" id="shop_company_hk" name="shop_company_hk" type="text" value="TK TRAVEL" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_tel" class="label_text">대표전화</label>
+										<input class="input_text size_md" id="shop_tel" name="shop_tel" type="text" value="070-8276-1919" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_tel_lang" class="label_text">대표전화(영어)</label>
+										<input class="input_text size_md" id="shop_tel_lang" name="shop_tel_lang" type="text" value="+82262988000" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_fax" class="label_text">팩스번호</label>
+										<input class="input_text size_md" id="shop_fax" name="shop_fax" type="text" value="02-6383-8003">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_fax_lang" class="label_text">팩스번호(영어)</label>
+										<input class="input_text size_md" id="shop_fax_lang" name="shop_fax_lang" type="text" value="+82263838003" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box input_flex">
+										<div class="input_box nofull">
+											<label for="shop_zipno" class="label_text">우편번호</label>
+											<input class="input_text size_md" id="shop_zipno" name="shop_zipno" type="text" value="2582" placeholder="주소검색" readonly="">
+										</div>
+										<div class="input_box">
+											<label for="shop_address" class="label_text">주소</label>
+											<input class="input_text size_md" id="shop_address" name="shop_address" type="text" value="서울특별시 동대문구 신이문로 39, 명경빌딩 5층 (02409)" placeholder="한글 주소" required="">
+										</div>
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_address_en" class="label_text">주소(영어)</label>
+										<input class="input_text size_md" id="shop_address_en" name="shop_address_en" type="text" value="5F, Myungkyung B/D, 39, Sinimun-ro, Dongdaemun-gu, Seoul, Republic of Korea (02409)" placeholder="영어 주소" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_address_cn" class="label_text">주소(간체)</label>
+										<input class="input_text size_md" id="shop_address_cn" name="shop_address_cn" type="text" value="首尔特别市 东大门区 新里门路 39 明镜大楼 5楼 (02409)" placeholder="간체 주소" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_address_hk" class="label_text">주소(번체)</label>
+										<input class="input_text size_md" id="shop_address_hk" name="shop_address_hk" type="text" value="首爾特別市 東大門區 新里門路 39 明鏡大樓 5樓 (02409)" placeholder="번체 주소" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_no" class="label_text">사업자등록번호</label>
+										<input class="input_text size_md" id="shop_no" name="shop_no" type="text" value="417-70-01307" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_tour_license" class="label_text">관광사업자등록증</label>
+										<input class="input_text size_md" id="shop_tour_license" name="shop_tour_license" type="text" value="제 2019호-000011호">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_sales_ino" class="label_text">통신판매업신고</label>
+										<input class="input_text size_md" id="shop_sales_ino" name="shop_sales_ino" type="text" value="제 2019 - 서울동대문 -1651호" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_sales_ino_en" class="label_text">통신판매업신고(영어)</label>
+										<input class="input_text size_md" id="shop_sales_ino_en" name="shop_sales_ino_en" type="text" value="2019-Seodaemun-1651" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_sales_ino_cn" class="label_text">통신판매업신고(간체)</label>
+										<input class="input_text size_md" id="shop_sales_ino_cn" name="shop_sales_ino_cn" type="text" value="第2019-首尔西大門-1651号" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_sales_ino_hk" class="label_text">통신판매업신고(번체)</label>
+										<input class="input_text size_md" id="shop_sales_ino_hk" name="shop_sales_ino_hk" type="text" value="第2019-首爾西大門-1651號" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_owner" class="label_text">대표자</label>
+										<input class="input_text size_md" id="shop_owner" name="shop_owner" type="text" value="강일구" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_owner_en" class="label_text">대표자(영어)</label>
+										<input class="input_text size_md" id="shop_owner_en" name="shop_owner_en" type="text" value="KANG ILGOO" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_owner_cn" class="label_text">대표자(간체)</label>
+										<input class="input_text size_md" id="shop_owner_cn" name="shop_owner_cn" type="text" value="KANG ILGOO" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_owner_hk" class="label_text">대표자(번체)</label>
+										<input class="input_text size_md" id="shop_owner_hk" name="shop_owner_hk" type="text" value="KANG ILGOO" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_company" class="label_text">은행정보</label>
+										<div class="tbl_box">
+											<table class="tbl min_auto" id="setting_bank">
+												<colgroup>
+													<col style="width: 350px;">
+													<col style="width: 350px;">
+													<col style="width: 80px;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th data-th="은행명">은행명</th>
+														<th data-th="계좌번호">계좌번호</th>
+														<th data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon plus_btn">
+																	<i class="ph ph-plus icon"></i>
+																</button>
+															</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td data-th="은행명">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_name_arr[]" value="HSBC(HKD)" type="text">
+															</div>
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_arr[]" value="121 650915 833" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">
+															<input class="input_text size_md" name="shop_bank_name_arr[]" value="Bank of China(HKD)" type="text">
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_arr[]" value="01268010157919" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">
+															<input class="input_text size_md" name="shop_bank_name_arr[]" value="Fubon Bank (TWD)" type="text">
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_arr[]" value="00570168100605" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">															
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_name_arr[]" value="우리은행" type="text">
+															</div>
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_arr[]" value="1005-503-237735" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_name_arr[]" value="하나은행" type="text">
+															</div>
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_arr[]" value=" 010-991910-79304" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr> 
+													<tr>
+														<td data-th="예금주" colspan="3">
+															<div class="input_box input_flex">
+																<label for="shop_bank_accounter" class="label_text mn50"> 예금주</label>
+																<input class="input_text size_md" id="shop_bank_accounter" name="shop_bank_accounter" value="KANG ILGOO" type="text" placeholder="예금주">
+															</div>
+														</td>
+													</tr> 
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_company" class="label_text">은행정보(영어)</label>
+										<div class="tbl_box">
+											<table class="tbl min_auto" id="setting_bank">
+												<colgroup>
+													<col style="width: 350px;">
+													<col style="width: 350px;">
+													<col style="width: 80px;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th data-th="은행명">은행명</th>
+														<th data-th="계좌번호">계좌번호</th>
+														<th data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon plus_btn">
+																	<i class="ph ph-plus icon"></i>
+																</button>
+															</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td data-th="은행명">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_name_lang_arr[][]" value="HKD | HSBC" type="text">
+															</div>
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_lang_arr[][]" value="121 650915 833" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">
+															<input class="input_text size_md" name="shop_bank_name_lang_arr[][]" value="HKD | Bank of China" type="text">
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_lang_arr[]" value="01268010157919" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">
+															<input class="input_text size_md" name="shop_bank_name_lang_arr[]" value="TWD | Fubon Bank" type="text">
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_lang_arr[]" value="00570168100605" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">															
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_name_lang_arr[]" value="USD | Kookmin Bank" type="text">
+															</div>
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_lang_arr[]" value="1005-503-237735" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="은행명">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_name_lang_arr[]" value="KRW | 하나은행" type="text">
+															</div>
+														</td>
+														<td data-th="계좌번호">
+															<div class="input_box">
+																<input class="input_text size_md" name="shop_bank_number_lang_arr[]" value=" 010-991910-79304" type="text">
+															</div>
+														</td>
+														<td data-th="버튼">
+															<div class="tbl_btnbox">
+																<button type="button" class="tbl_picon minus_btn">
+																	<i class="ph ph-minus icon"></i>
+																</button>
+															</div>
+														</td>
+													</tr> 
+													<tr>
+														<td data-th="예금주" colspan="3">
+															<div class="input_box input_flex">
+																<label for="shop_bank_accounter_lang" class="label_text mn50"> 예금주</label>
+																<input class="input_text size_md" id="shop_bank_accounter_lang" name="shop_bank_accounter_lang" value="KANG ILGOO" type="text" placeholder="예금주">
+															</div>
+														</td>
+													</tr> 
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="form_item full">
+									<div class="file_list">
+										<div class="input_box input_file_box">
+											<label for="shoplogo" class="label_text">한글 사이트로고(PC)</label>
+											<div class="input_flex">
+												<input type="file" class="input_file" id="shoplogo" name="shoplogo">
+												<label for="shoplogo" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+											<div class="file_data">
+												<img src="../img/ic_filedown.png" alt="" class="icon">
+												<a href="" class="txt">테스트 게시물 파일.pdf</a>
+												<button type="button" class="delete_btn">
+													<i class="ph-fill ph-x-circle"></i>
+												</button>
+											</div>
+											<div class="file_preview">
+												<img src="https://www.tktravelkorea.com/FileData/logo/m_logo2.png" alt="" class="img auto mx60">
+											</div>
+										</div>
+										<div class="input_box input_file_box">
+											<label for="shoplogobenepia" class="label_text">한글 베네피아 사이트로고</label>
+											<div class="input_flex">
+												<input type="file" class="input_file" id="shoplogobenepia" name="shoplogobenepia">
+												<label for="shoplogobenepia" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+											<div class="file_data">
+												<img src="../img/ic_filedown.png" alt="" class="icon">
+												<a href="" class="txt">테스트 게시물 파일.pdf</a>
+												<button type="button" class="delete_btn">
+													<i class="ph-fill ph-x-circle"></i>
+												</button>
+											</div>
+											<div class="file_preview">
+												<img src="https://www.tktravelkorea.com/FileData/logo/tbXbenepia.png" alt="" class="img auto mx60">
+											</div>
+										</div>
+										<div class="input_box input_file_box">
+											<label for="shoplogoetbs" class="label_text">한글 E-제너두 사이트로고</label>
+											<div class="input_flex">
+												<input type="file" class="input_file" id="shoplogoetbs" name="shoplogoetbs">
+												<label for="shoplogoetbs" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+											<div class="file_data">
+												<img src="../img/ic_filedown.png" alt="" class="icon">
+												<a href="" class="txt">테스트 게시물 파일.pdf</a>
+												<button type="button" class="delete_btn">
+													<i class="ph-fill ph-x-circle"></i>
+												</button>
+											</div>
+											<div class="file_preview">
+												<img src="https://www.tktravelkorea.com/FileData/logo/tbXetbs.png" alt="" class="img auto mx60">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form_item full">
+									<div class="file_list">
+										<div class="input_box input_file_box">
+											<label for="shoplogo_lang" class="label_text">외국어 사이트로고(PC)</label>
+											<div class="input_flex">
+												<input type="file" class="input_file" id="shoplogo_lang" name="shoplogo_lang">
+												<label for="shoplogo_lang" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+											<div class="file_data">
+												<img src="../img/ic_filedown.png" alt="" class="icon">
+												<a href="" class="txt">테스트 게시물 파일.pdf</a>
+												<button type="button" class="delete_btn">
+													<i class="ph-fill ph-x-circle"></i>
+												</button>
+											</div>
+											<div class="file_preview">
+												<img src="https://www.tktravelkorea.com/FileData/logo/TK%20LOGO%20WEBSITE%20%EB%B3%B5%EC%82%AC03%20(1).png" alt="" class="img auto mx60">
+											</div>
+										</div>
+										<div class="input_box input_file_box">
+											<label for="shop_bottom_logo" class="label_text">외국어 사이트로고(모바일)</label>
+											<div class="input_flex">
+												<input type="file" class="input_file" id="shop_bottom_logo" name="shop_bottom_logo">
+												<label for="shop_bottom_logo" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+											<div class="file_data">
+												<img src="../img/ic_filedown.png" alt="" class="icon">
+												<a href="" class="txt">테스트 게시물 파일.pdf</a>
+												<button type="button" class="delete_btn">
+													<i class="ph-fill ph-x-circle"></i>
+												</button>
+											</div>
+											<div class="file_preview">
+												<img src="https://www.tktravelkorea.com/FileData/logo/TK%20LOGO%20mobile%2002.png" alt="" class="img auto mx60">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form_item full">
+									<div class="file_list">
+										<div class="input_box input_file_box">
+											<label for="shop_logo_ag" class="label_text">대리점 사이트로고(PC)</label>
+											<div class="input_flex">
+												<input type="file" class="input_file" id="shop_logo_ag" name="shop_logo_ag">
+												<label for="shop_logo_ag" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+											<div class="file_data">
+												<img src="../img/ic_filedown.png" alt="" class="icon">
+												<a href="" class="txt">테스트 게시물 파일.pdf</a>
+												<button type="button" class="delete_btn">
+													<i class="ph-fill ph-x-circle"></i>
+												</button>
+											</div>
+											<div class="file_preview">
+												<img src="https://www.tktravelkorea.com/FileData/logo/TK-PLACE.png" alt="" class="img auto mx60">
+											</div>
+										</div>
+										<div class="input_box input_file_box">
+											<label for="shop_logo_ag_mobile" class="label_text">대리점 사이트로고(모바일)</label>
+											<div class="input_flex">
+												<input type="file" class="input_file" id="shop_logo_ag_mobile" name="shop_logo_ag_mobile">
+												<label for="shop_logo_ag_mobile" class="label_file size_md">선택된 파일 없음</label>
+												<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+											</div>
+											<div class="file_data">
+												<img src="../img/ic_filedown.png" alt="" class="icon">
+												<a href="" class="txt">테스트 게시물 파일.pdf</a>
+												<button type="button" class="delete_btn">
+													<i class="ph-fill ph-x-circle"></i>
+												</button>
+											</div>
+											<div class="file_preview">
+												<img src="https://www.tktravelkorea.com/FileData/logo/(3).png" alt="" class="img auto mx60">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bo_btnbox">
+								<div class="centerbox">
+									<button type="button" class="button typeE auto">저장</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write">
+						<p class="sub_title">부가정보  설정</p>
+						<form name="company_frm" id="company_frm" method="POST">
+							<div class="form_box flex_wrap">
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_name" class="label_text">사이트명</label>
+										<input class="input_text size_md" id="shop_name" name="shop_name" value="여행대장" type="text" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_name_en" class="label_text">사이트명(영어)</label>
+										<input class="input_text size_md" id="shop_name_en" name="shop_name_en" value="TK TRAVEL" type="text" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_name_cn" class="label_text">사이트명(간체)</label>
+										<input class="input_text size_md" id="shop_name_cn" name="shop_name_cn" value="TK TRAVEL" type="text" required="">
+									</div>
+								</div>
+								<div class="form_item wid25">
+									<div class="input_box">
+										<label for="shop_name_hk" class="label_text">사이트명(번체)</label>
+										<input class="input_text size_md" id="shop_name_hk" name="shop_name_hk" value="TK TRAVEL" type="text" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_description" class="label_text">description</label>
+										<input class="input_text size_md" id="shop_description" name="shop_description" type="text" value="자유여행 No.1 여행대장" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_description_en" class="label_text">description(영어)</label>
+										<input class="input_text size_md" id="shop_description_en" name="shop_description_en" type="text" value="Korea No.1 Tour Agence" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_description_cn" class="label_text">description(간체)</label>
+										<input class="input_text size_md" id="shop_description_cn" name="shop_description_cn" type="text" value="韩国No.1 旅游平台" required="">
+									</div>
+								</div>
+								<div class="form_item wid50">
+									<div class="input_box">
+										<label for="shop_description_hk" class="label_text">description(번체)</label>
+										<input class="input_text size_md" id="shop_description_hk" name="shop_description_hk" type="text" value="韓國No.1 旅遊平台" required="">
+									</div>
+								</div>
+								<div class="form_item full">
+									<div class="input_box">
+										<label for="shop_keywords" class="label_text">keywords</label>
+										<input class="input_text size_md" id="shop_keywords" name="shop_keywords" type="text" value="여행대장,홍콩,마카오,홍콩자유여행,홍콩가이드,가이드투어,자유여행,태국,홋카이도,대만,버스예약,국내여행,해외호텔" required="">
+									</div>
+								</div>
+								<div class="form_item full">
+									<div class="input_box">
+										<label for="shop_keywords_en" class="label_text">keywords(영어)</label>
+										<input class="input_text size_md" id="shop_keywords_en" name="shop_keywords_en" type="text" value="Korea tour,Kpop,Korea free tour,Ski tour,Cherry blossom,Maple leaf,Myeongdong,Korea hotel,TKTRAVEL,Korean food, BTS,Seoul land,MBC world,Busan,Jeju Island" required="">
+									</div>
+								</div>
+								<div class="form_item full">
+									<div class="input_box">
+										<label for="shop_keywords_cn" class="label_text">keywords(간체) </label>
+										<input class="input_text size_md" id="shop_keywords_cn" name="shop_keywords_cn" type="text" value="韩国旅行,KPOP,韩国自由行,韩国滑雪团,韩国赏樱,韩国赏枫,明洞,韩国饭店,TKTRAVEL,韩国料理,防弹少年团,首尔乐园,MBC WORLD,釜山,济州岛" required="">
+									</div>
+								</div>
+								<div class="form_item full">
+									<div class="input_box">
+										<label for="shop_keywords_hk" class="label_text">keywords(번체) </label>
+										<input class="input_text size_md" id="shop_keywords_hk" name="shop_keywords_hk" type="text" value="韓國旅行,KPOP,韓國自由行,韓國滑雪團,韓國賞櫻,韓國賞楓,明洞,韓國飯店,TKTRAVEL,韓國料理,防彈少年團,首爾樂園,MBC WORLD,釜山,濟州島" required="">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_email" class="label_text">대표이메일</label>
+										<input class="input_text size_md" id="shop_email" name="shop_email" type="email" value="cs@tktravelkorea.com" placeholder="사이트에서 보내지는 이메일주소">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_email_lang" class="label_text">대표이메일(영어)</label>
+										<input class="input_text size_md" id="shop_email_lang" name="shop_email_lang" type="email" value="cs@tktravelkorea.com" placeholder="사이트에서 보내지는 이메일주소">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_smsfrom" class="label_text">표시될전화번호</label>
+										<input class="input_text size_md" id="shop_smsfrom" name="shop_smsfrom" type="text" value="02-6298-8000">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_salestime" class="label_text">업무시간(평일)</label>
+										<input class="input_text size_md" id="shop_salestime" name="shop_salestime" type="text" value="09:00 ~ 18:00">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_salestime_holiday" class="label_text">업무시간(휴일)</label>
+										<input class="input_text size_md" id="shop_salestime_holiday" name="shop_salestime_holiday" type="text" value="주말/공휴일은 게시판을 이용해주세요.">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_salestime_saturday" class="label_text">점심시간</label>
+										<input class="input_text size_md" id="shop_salestime_saturday" name="shop_salestime_saturday" type="text" value="12:00 ~ 13:00">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_salestime_holiday_en" class="label_text">업무시간(휴일) 영어</label>
+										<input class="input_text size_md" id="shop_salestime_holiday_en" name="shop_salestime_holiday_en" type="text" value="Sat / Sun / Public Holiday">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_salestime_holiday_cn" class="label_text">업무시간(휴일) 간체</label>
+										<input class="input_text size_md" id="shop_salestime_holiday_cn" name="shop_salestime_holiday_cn" type="text" value="六日与国定假日">
+									</div>
+								</div>
+								<div class="form_item wid33">
+									<div class="input_box">
+										<label for="shop_salestime_holiday_hk" class="label_text">업무시간(휴일) 번체</label>
+										<input class="input_text size_md" id="shop_salestime_holiday_hk" name="shop_salestime_holiday_hk" type="text" value="六日與國定假日">
+									</div>
+								</div>
+							</div>
+							<div class="bo_btnbox">
+								<div class="centerbox">
+									<button type="button" class="button typeE auto">저장</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_setting.html', '#sidenav');	
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(10).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(0).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+
+</body>
+
+</html>

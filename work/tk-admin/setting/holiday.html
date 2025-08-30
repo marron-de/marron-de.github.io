@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout setting_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_list_wrap">	
+					<div class="content_list_box wid40">
+						<div class="content_title">
+							<p class="page_title">
+								<i class="ph-fill ph-gear icon"></i>
+								달력휴일관리
+							</p>
+						</div>
+						<div class="content_search content_tbl">
+							<form name="search_fm" id="search_fm" method="get">
+								<div class="tbl_box">
+									<table class="tbl">
+										<colgroup>
+											<col style="width: 150px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th data-th="공휴일 등록">공휴일 등록</th>
+												<td data-th="공휴일 등록">
+													<div class="tbl_inline">
+														<div class="select_box search_select">
+															<select name="nation" class="select size_md">
+																<option value="ko">한국</option>
+																<option value="tw">대만</option>
+																<option value="hk">홍콩</option>
+																<option value="us">미국</option>
+																<option value="cn">중국</option>
+															</select>
+														</div>
+														<div class="input_box flex_auto">
+															<input type="text" name="holiday_date" id="holiday_date" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+														</div>
+														<div class="input_box search_input">
+															<input type="text" class="input_text size_md" id="holiday_name" name="holiday_name" placeholder="공휴일명을 입력해주세요.">
+														</div>
+														<div class="tbl_btnbox search_btns">
+															<button type="button" class="button size_sm typeE auto">등록</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="content_list content_tbl">
+							<form name="frm_list" id="frm_list" method="POST" class="form_box">
+								<div class="calender size_sm">
+									<div class="cal_head">
+										<div class="leftbox"></div>
+										<div class="centerbox">
+											<button type="button" class="paging_btn prev_btn">
+												<i class="ph ph-caret-left"></i>
+											</button>
+											<p class="cal_date">
+												<span class="cal_year">2025년</span>
+												<span class="cal_month">8월</span>
+											</p>
+											<button type="button" class="paging_btn next_btn">
+												<i class="ph ph-caret-right"></i>
+											</button>
+										</div>
+										<div class="rightbox"></div>
+									</div>
+								</div>
+								<div class="bo_list tbl_box">
+									<table class="tbl setting_list min_auto" id="setting_list_tbl">
+										<colgroup>
+											<col style="width: 140px;">
+											<col style="width: 100px;">
+											<col style="width: 504px;">
+											<col style="width: 70px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="날짜">날짜</th>
+												<th data-th="국가">국가</th>
+												<th data-th="공휴일명">공휴일명</th>
+												<th data-th="버튼">-</th>
+											</tr>
+										</thead>
+										<tbody>		
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+											<tr>
+												<td data-th="날짜">2025-01-01</td>
+												<td data-th="국가">한국</td>
+												<td data-th="공휴일명" class="align_left">임시공휴일</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-trash icon"></i>
+																		<span class="txt">삭제</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>															
+										</tbody>
+									</table>
+								</div>
+							</form>
+							<div class="pagination mt">
+								<button type="button" class="page page_btn start"></button>
+								<button type="button" class="page page_btn prev"></button>
+								<a href="#none" class="page page_link">1</a>
+								<a href="#none" class="page page_link active">2</a>
+								<a href="#none" class="page page_link">3</a>
+								<a href="#none" class="page page_link">4</a>
+								<button type="button" class="page page_btn next"></button>
+								<button type="button" class="page page_btn end"></button>
+							</div>
+						</div>
+					</div>
+					<div class="content_list_box wid60">						
+						<div class="calender">
+							<div class="cal_head">
+								<div class="leftbox"></div>
+								<div class="centerbox">
+									<button type="button" class="paging_btn prev_btn">
+										<i class="ph ph-caret-left"></i>
+									</button>
+									<p class="cal_date">
+										<span class="cal_year">2025년</span>
+										<span class="cal_month">8월</span>
+									</p>
+									<button type="button" class="paging_btn next_btn">
+										<i class="ph ph-caret-right"></i>
+									</button>
+								</div>
+								<div class="rightbox"></div>
+							</div>
+							<div class="cal_body">
+								<div class="week_day">
+									<div class="day red">일</div>
+									<div class="day">월</div>
+									<div class="day">화</div>
+									<div class="day">수</div>
+									<div class="day">목</div>
+									<div class="day">금</div>
+									<div class="day blue">토</div>
+								</div>
+								<div class="week_date">
+									<div class="date red disabled">
+										<div class="top">
+											<span class="num">27</span>
+											<span class="count">1건</span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">28</span>
+											<span class="count"></span>
+										</div>			
+										<div class="events"></div>			
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">29</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">30</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">31</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">1</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date blue">
+										<div class="top">
+											<span class="num">2</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+								</div>
+								<div class="week_date">
+									<div class="date red">
+										<div class="top">
+											<span class="num">3</span>
+											<span class="count"></span>
+										</div>									
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">4</span>
+											<span class="count"></span>
+										</div>
+										<div class="events">	
+											<div class="holiday blue">임시공휴일2</div>
+										</div>
+									</div>
+									<div class="date red">
+										<div class="top">
+											<span class="num">5</span>
+											<span class="count"></span>
+										</div>
+										<div class="events">	
+											<div class="holiday red">임시공휴일1</div>
+											<div class="holiday blue">임시공휴일2</div>
+										</div>
+									</div>
+									<div class="date red">
+										<div class="top">
+											<span class="num">6</span>
+											<span class="count"></span>
+										</div>
+										<div class="events">	
+											<div class="holiday red">임시공휴일1</div>
+										</div>
+									</div>
+									<div class="date today">
+										<div class="top">
+											<span class="num">7</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">8</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date blue">
+										<div class="top">
+											<span class="num">9</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+								</div>
+								<div class="week_date">
+									<div class="date red">
+										<div class="top">
+											<span class="num">10</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">11</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">12</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">13</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date selected">
+										<div class="top">
+											<span class="num">14</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">15</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date blue">
+										<div class="top">
+											<span class="num">16</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+								</div>
+								<div class="week_date">
+									<div class="date red">
+										<div class="top">
+											<span class="num">17</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">18</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">19</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">20</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">21</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">22</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date blue">
+										<div class="top">
+											<span class="num">23</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+								</div>
+								<div class="week_date">
+									<div class="date red">
+										<div class="top">
+											<span class="num">24</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">25</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">26</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">27</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">28</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date">
+										<div class="top">
+											<span class="num">29</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date blue">
+										<div class="top">
+											<span class="num">30</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+								</div>
+								<div class="week_date">
+									<div class="date red">
+										<div class="top">
+											<span class="num">31</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">1</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">2</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">3</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">4</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date disabled">
+										<div class="top">
+											<span class="num">5</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+									<div class="date blue disabled">
+										<div class="top">
+											<span class="num">6</span>
+											<span class="count"></span>
+										</div>
+										<div class="events"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_setting.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(10).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(20).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

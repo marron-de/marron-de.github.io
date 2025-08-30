@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout setting_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-gear icon"></i>
+						서버용량관리
+					</p>
+				</div>
+
+				<div class="content_write serverLog_write">
+					<div class="server_removebox">
+						<div class="item">
+							<p class="form_tit">미사용 이미지 제거</p>
+							<div class="form_descbox">
+								<p class="desc point">※ 카페24 하드용량 제거 목적으로 매일 새벽3시 ~ 7시 사이에 자동으로 최적화 작업 진행 중입니다.</p>
+								<p class="desc point">※ 게시판을 만들 때 반드시 어드민의 게시판 관리기능을 통해 만들어 주세요.</p>
+								<p class="desc point">※ /FileData/ckeditor/images 폴더를 사용하는 작업을 할 경우 반드시 /crontab/ckEditorImg/inputData_cron.php 파일에 이미지 사용 검사 기능을 추가하세요.</p>
+							</div>
+							<div class="radio_wrap">
+								<div class="radio_box size_md">
+									<input class="input_radio" type="radio" name="remove_unused_images" id="remove_unused_images_y"
+										value="Y" checked="">
+									<label class="label_radio" for="remove_unused_images_y">작동</label>
+								</div>
+								<div class="radio_box size_md">
+									<input class="input_radio" type="radio" name="remove_unused_images" id="remove_unused_images_n"
+										value="N">
+									<label class="label_radio" for="remove_unused_images_n">미작동</label>
+								</div>
+							</div>
+						</div>
+						<div class="bar"></div>
+						<div class="item">
+							<p class="form_tit">로그 제거</p>
+							<div class="form_descbox">
+								<p class="desc point">※ 폴더명은 년월 정보로 구성되며 오류 발생시 문제 파악을 위하여 가능한 한달 전 로그는 삭제하지마세요..</p>
+								<p class="desc point">※ 데이터양에 따라 시간이 오래 걸릴 수 있습니다.</p>
+								<p class="desc point">※ 한개 폴더의 삭제가 완료되면 다음 폴더를 삭제해주세요.</p>
+								<p class="desc point">※ 삭제 전 반드시 FTP에 접속하여 /FileData/logs/ 폴더를 백업하시기 바랍니다.</p>
+								<p class="desc point">※ 삭제한 후에는 cafe 관리자사이트에 접속하여 확보된 용량을 확인 하시기 바랍니다.</p>
+							</div>
+							<div class="form_box flex_wrap">
+								<div class="form_item">
+									<div class="form_titbox">
+										<p class="tit">외부연동로그</p>
+									</div>
+									<div class="server_listbox">
+										<div class="listbox">
+											<p class="desc">
+												<span class="txt">폴더명 : yanolja</span>
+												<span class="bar">|</span>
+												<span class="txt">용량 : 16M</span>
+											</p>
+											<ul class="list">
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="listbox">
+											<p class="desc">
+												<span class="txt">폴더명 : api</span>
+												<span class="bar">|</span>
+												<span class="txt">용량 : 718M</span>
+											</p>
+											<ul class="list">
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="listbox">
+											<p class="desc">
+												<span class="txt">폴더명 : yanolja</span>
+												<span class="bar">|</span>
+												<span class="txt">용량 : 16M</span>
+											</p>
+											<ul class="list">
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="listbox">
+											<p class="desc">
+												<span class="txt">폴더명 : api</span>
+												<span class="bar">|</span>
+												<span class="txt">용량 : 718M</span>
+											</p>
+											<ul class="list">
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="form_item">
+									<div class="form_titbox">
+										<p class="tit">내부로그</p>
+									</div>
+									<div class="server_listbox">
+										<div class="listbox">
+											<ul class="list">
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+												<li class="item">
+													<div class="descbox">
+														<p class="tit">서브 폴더명</p>
+														<p class="desc">202505</p>
+													</div>
+													<div class="descbox">
+														<p class="tit">용량</p>
+														<p class="desc">2.1M</p>
+													</div>
+													<div class="bottombox">
+														<div class="btnbox">
+															<button type="button" class="badge size_bg typeH">삭제</button>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_setting.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(10).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(21).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

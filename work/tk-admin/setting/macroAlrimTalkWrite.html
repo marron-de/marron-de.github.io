@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout setting_wrap">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">				
+				<div class="content_title  ">
+					<p class="page_title">
+						<i class="ph-fill ph-gear icon"></i>
+						알림톡 수정
+					</p>
+				</div>
+
+				<div class="content_write content_tbl">
+					<div class="board bo_write">
+						<form name="rule_frm" id="rule_frm" method="POST">
+							<div class="tbl_box ver3">
+								<table class="tbl board_list">
+									<colgroup>
+										<col style="width: 150px;">
+										<col style="width: 284px;">
+										<col style="width: 150px;">
+										<col style="width: 284px;">
+										<col style="width: 150px;">
+										<col style="width: 284px;">
+										<col style="width: 150px;">
+										<col style="width: 284px;">
+									</colgroup>
+								<tbody>									
+									<tr>
+										<th data-th="분류">분류</th>
+										<td data-th="분류">
+											<div class="input_box">
+												<input class="input_text size_md" id="tab_nm" type="text" value="티켓" disabled="">
+											</div>
+										</td>
+										<th data-th="예약상태">예약상태</th>
+										<td data-th="예약상태">
+											<div class="input_box">
+												<input class="input_text size_md" id="res_cd_nm" type="text" value="예약접수 " disabled="">
+											</div>
+										</td>
+										<th data-th="템플릿코드 (비즈뿌리오)">템플릿코드 (비즈뿌리오)</th>
+										<td data-th="템플릿코드 (비즈뿌리오)">
+											<div class="input_box">
+												<input class="input_text size_md" id="at_tpl_code" name="at_tpl_code" type="text" value="TBTBOOK_V4" required="">
+											</div>
+										</td>
+										<th data-th="자동발송">자동발송</th>
+										<td data-th="자동발송">
+											<div class="select_box">
+												<select class="select size_md" id="auto_send" size="1" name="auto_send" required="">
+													<option value="Y" selected="">Y</option>
+													<option value="N">N</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="제목">제목</th>
+										<td data-th="제목" colspan="3">
+											<div class="input_box">
+												<input class="input_text size_md" id="subj" name="subj" type="text" value="무통장입금" required="">
+											</div>
+										</td>
+										<th data-th="연동상품명">연동상품명</th>
+										<td data-th="연동상품명" colspan="3">
+											<div class="input_box">
+												<input class="input_text size_md" id="memo" name="memo" type="text" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용" colspan="3">
+											<div class="input_box">
+												<textarea class="input_text size_md h_auto" id="cont" name="cont" rows="24">#{고객명}고객님 안녕하세요. 여행대장입니다.&#13;&#10;#{상품명}&#13;&#10;예약이 접수되었습니다.&#13;&#10;&#13;&#10;▶티켓명: #{행사명}&#13;&#10;▶사용일: #{시작일}&#13;&#10;▶예약번호: #{예약번호}&#13;&#10;▶예약자명: #{고객명}&#13;&#10;▶성인: #{성인인원} 명&#13;&#10;▶아동: #{아동인원} 명&#13;&#10;▶연락처: #{회원핸드폰}&#13;&#10;▶결제요청: #{최종결재액}원&#13;&#10;▶결제수단 : 무통장 입금&#13;&#10;&#13;&#10;■입금계좌정보&#13;&#10;하나은행 01099191079304&#13;&#10;예금주 : 강일구(TK트래블)&#13;&#10;&#13;&#10;■무통장 입금 완료 후 여행대장 카카오톡 또는 고객 게시판에 글을 남겨주세요.&#13;&#10;&#13;&#10;[여행대장 고객만족실]&#13;&#10;TEL : 070-8276-1919&#13;&#10;운영시간: 오전9시~오후6시까지&#13;&#10;https://www.tourboss.co.kr</textarea>
+											</div>
+										</td>
+										<th data-th="설명">설명</th>
+										<td data-th="설명" colspan="3" class="align_left align_top">
+											<div class="tbl_inline column_ver gap3 align_left">
+												<div class="tbl_inline column_ver align_left">
+													<span class="bold">[카카오 알림톡 상용구]</span>
+													<span class="desc">
+														아래 나열된 키워드를 사용하시면, 자동으로 대체해서 고객께 발송됩니다.
+													</span>
+												</div>
+												<div class="tbl_inline column_ver align_left">
+													<span class="bold">공통정보</span>
+													<span class="desc">
+														#{회사명} #{오늘날짜}
+													</span>
+												</div>
+												<div class="tbl_inline column_ver align_left">
+													<span class="bold">예약정보</span>
+													<span class="desc">
+														#{상품명} #{행사명} #{접수번호} #{예약번호} #{진행상태} #{시작일} #{종료일} <br>
+														#{총인원} #{성인인원} #{아동인원} #{최종결재액}
+													</span>
+												</div>
+												<div class="tbl_inline column_ver align_left">
+													<span class="bold">고객정보</span>
+													<span class="desc">
+														#{고객명} #{회원아이디} #{회원핸드폰} #{가입일}
+													</span>
+												</div>
+												<div class="tbl_inline column_ver align_left">
+													<span class="bold">URL</span>
+													<span class="desc">
+														#{사이트주소} #{바코드링크} #{회원정보링크} #{나의예약링크}
+													</span>
+												</div>
+												<div class="tbl_inline column_ver align_left">
+													<span class="bold">호텔정보</span>
+													<span class="desc">
+														#{호텔바우처번호} #{호텔이름} #{객실타입} #{룸수} #{박수}
+													</span>
+												</div>
+												<div class="tbl_inline column_ver align_left">
+													<span class="bold point">★ 상품 타입에 따라 사용되는 상용구가 다릅니다</span>
+													<span class="bold point">★ 모든 내용은 비즈뿌리오와 동일하게 맞춰주세요.</span>
+													<span class="bold point">★ 템플릿 내용 수정시 비즈뿌리오에 먼저 승인을 받아주세요.</span>
+												</div>												
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="버튼명">버튼명</th>
+										<td data-th="버튼명" colspan="3">
+											<div class="input_box">
+												<input class="input_text size_md" id="at_button_name" name="at_button_name" type="text" value="">
+											</div>
+										</td>
+										<th data-th="URL">URL</th>
+										<td data-th="URL" colspan="3">
+											<div class="input_box">
+												<input class="input_text size_md" id="at_button_url" name="at_button_url" type="text" value="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+
+								</table>
+							</div>
+							<div class="bo_btnbox">
+								<div class="leftbox">
+									<button type="button" class="button typeE auto size_md">목록</button>
+								</div>
+								<div class="rightbox">
+									<button class="button typeE auto size_md">저장</button>
+									<button class="button typeF auto size_md">다시작성</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_setting.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(10).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+	
+	<!-- Summernote Lite CSS/JS (부트스트랩 불필요) -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			$('.summernote').summernote({
+				height: 400,
+				toolbar: [
+					// 1줄: 글꼴, 크기, 스타일
+					['fontname', ['fontname']],
+					['fontsize', ['fontsize']],
+					['height', ['height']],
+					['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+					// 2줄: 색상, 정렬, 리스트
+					['color', ['color']],
+					['para', ['ul', 'ol', 'paragraph']],
+					// 3줄: 링크, 이미지, 표, 코드 등
+					['insert', ['link', 'picture', 'video', 'table', 'hr']],
+					['view', ['fullscreen', 'codeview', 'help']]
+				],
+				fontNames: ['맑은 고딕', '굴림', '돋움', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+				lineHeights: ['150%', '180%', '200%', '220%', '250%', '280%', '300%'],
+			});
+		});    
+	</script>
+
+
+
+</body>
+
+</html>

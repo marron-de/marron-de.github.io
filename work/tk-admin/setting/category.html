@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout setting_wrap sideopen">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">				
+				<div class="content_title  ">
+					<p class="page_title">
+						<i class="ph-fill ph-gear icon"></i>
+						카테고리
+					</p>
+				</div>
+
+				<div class="content_list_wrap">
+					<div class="content_list_box wid33">	
+						<div class="content_search content_tbl">
+							<form name="category_frm_a" id="category_frm_a" method="get">
+								<div class="tbl_box">
+									<table class="tbl">
+										<colgroup>
+											<col style="width: 90px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th data-th="1차분류">1차분류</th>
+												<td data-th="1차분류">
+													<div class="tbl_inline">
+														<div class="input_box">
+															<input class="input_text size_md" id="b_name" name="b_name" type="text" value="" required="">
+														</div>
+														<div class="select_box">
+															<select class="select size_md" id="b_lang" size="1" name="b_lang" required="">
+																<option value="">언어선택</option>
+																<option value="ko">한국</option>
+																<option value="en">영어</option>
+																<option value="cn">간체</option>
+																<option value="hk">번체</option>
+																<option value="ag">대리점</option>
+															</select>
+														</div>
+														<div class="select_box search_select3">
+															<select class="select size_md" id="tab" size="1" name="tab" required="">
+																<option value="">기능분류</option>
+																<option value="T">T | Ticket Pass</option>
+																<option value="D">D | Day Tour</option>
+																<option value="P">P | Bus Tour</option>
+																<option value="L">L | Hotel</option>
+																<option value="S">S | Pickup</option>
+																<option value="R">R | Rentcar</option>
+																<option value="V">V | Live Tour</option>
+																<option value="C">C | Car_Reservation</option>
+															</select>
+														</div>
+														<div class="tbl_btnbox search_btns">
+															<button type="button" class="button size_sm typeE auto">등록</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="content_list content_tbl">
+							<form name="frm_list_a" id="frm_list_a" method="POST">
+								<div class="tbl_top">
+									<div class="leftbox">
+										<p class="title">1차분류</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeF">순서저장</button>
+									</div>
+								</div>
+								<div class="bo_list tbl_box">
+									<table class="tbl setting_list" id="setting_list_tbl">
+										<colgroup>
+											<col style="width: 50px;">
+											<col style="width: 60px;">
+											<col style="width: 173px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="사용">사용</th>
+												<th data-th="순서">순서</th>
+												<th data-th="제목">제목</th>
+												<th data-th="언어">언어</th>
+												<th data-th="2차">2차</th>
+												<th data-th="상품">상품</th>
+												<th data-th="기능">기능</th>
+												<th data-th="버튼">-</th>
+											</tr>
+										</thead>
+										<tbody>		
+											<tr class="selected">
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="1">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>	
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge error size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="2">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left ">
+													<div class="tbl_inline column_ver ali">
+														<div class="input_box">
+															<input class="input_text size_md" type="text" name="ContinentName" id="name_A" value="해외여행패키지">
+														</div>
+														<button type="button" class="button typeE size_sm auto full">저장</button>
+													</div>
+												</td>												
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge error size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="3">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>				
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="4">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>				
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="5">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>				
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="6">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>				
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="7">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>				
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="8">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>				
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="9">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>				
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="10">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">해외여행패키지</a></td>
+												<td data-th="언어">한국</td>
+												<td data-th="2차">7</td>
+												<td data-th="상품">6</td>
+												<td data-th="기능">P</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>					
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="content_list_box wid33">	
+						<div class="content_search content_tbl">
+							<form name="category_frm_b" id="category_frm_b" method="get">
+								<div class="tbl_box">
+									<table class="tbl">
+										<colgroup>
+											<col style="width: 90px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th data-th="2차분류">2차분류</th>
+												<td data-th="2차분류">
+													<div class="tbl_inline">
+														<div class="input_box">
+															<input class="input_text size_md" id="m_name" name="m_name" type="text" value="" required="">
+														</div>
+														<div class="tbl_btnbox search_btns">
+															<button type="button" class="button size_sm typeE auto">등록</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="content_list content_tbl">
+							<form name="frm_list_b" id="frm_list_b" method="POST">
+								<div class="tbl_top">
+									<div class="leftbox">
+										<p class="title">2차분류</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeF">순서저장</button>
+									</div>
+								</div>
+								<div class="bo_list tbl_box">
+									<table class="tbl setting_list" id="setting_list_tbl">
+										<colgroup>
+											<col style="width: 50px;">
+											<col style="width: 60px;">
+											<col style="width: 273px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="사용">사용</th>
+												<th data-th="순서">순서</th>
+												<th data-th="제목">제목</th>
+												<th data-th="3차">3차</th>
+												<th data-th="상품">상품</th>
+												<th data-th="버튼">-</th>
+											</tr>
+										</thead>
+										<tbody>		
+											<tr class="selected">
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="1">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">홍콩</a></td>
+												<td data-th="3차">1</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>	
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="2">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left ">
+													<div class="tbl_inline column_ver ali">
+														<div class="input_box">
+															<input class="input_text size_md" type="text" name="ContinentName" id="name_A" value="홍콩">
+														</div>
+														<button type="button" class="button typeE size_sm auto full">저장</button>
+													</div>
+												</td>
+												<td data-th="3차">1</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>	
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="3">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">홍콩</a></td>
+												<td data-th="3차">1</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>			
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="4">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">홍콩</a></td>
+												<td data-th="3차">1</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>			
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="5">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">홍콩</a></td>
+												<td data-th="3차">1</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>			
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="6">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">홍콩</a></td>
+												<td data-th="3차">1</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>			
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="7">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">홍콩</a></td>
+												<td data-th="3차">1</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>			
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="content_list_box wid33">	
+						<div class="content_search content_tbl">
+							<form name="category_frm_c" id="category_frm_c" method="get">
+								<div class="tbl_box">
+									<table class="tbl">
+										<colgroup>
+											<col style="width: 90px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th data-th="3차분류">3차분류</th>
+												<td data-th="3차분류">
+													<div class="tbl_inline">
+														<div class="input_box">
+															<input class="input_text size_md" id="s_name" name="s_name" type="text" value="" required="">
+														</div>
+														<div class="tbl_btnbox search_btns">
+															<button type="button" class="button size_sm typeE auto">등록</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="content_list content_tbl">
+							<form name="frm_list_c" id="frm_list_c" method="POST">
+								<div class="tbl_top">
+									<div class="leftbox">
+										<p class="title">3차분류</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeF">순서저장</button>
+									</div>
+								</div>
+								<div class="bo_list tbl_box">
+									<table class="tbl setting_list" id="setting_list_tbl">
+										<colgroup>
+											<col style="width: 50px;">
+											<col style="width: 60px;">
+											<col style="width: 323px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="사용">사용</th>
+												<th data-th="순서">순서</th>
+												<th data-th="제목">제목</th>
+												<th data-th="상품">상품</th>
+												<th data-th="버튼">-</th>
+											</tr>
+										</thead>
+										<tbody>		
+											<tr class="selected">
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="1">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left "><a href="#none">홍콩여행</a></td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>	
+											<tr>
+												<td data-th="사용">
+													<span class="iconbadge success size_md"></span>
+												</td>
+												<td data-th="순서">
+													<div class="input_box">
+														<input class="input_text size_md align_center  order_input" id="OrderNum_arr" name="OrderNum_arr[]" type="text" value="2">
+													</div>
+												</td>
+												<td data-th="제목" class="align_left ">
+													<div class="tbl_inline column_ver ali">
+														<div class="input_box">
+															<input class="input_text size_md" type="text" name="ContinentName" id="name_A" value="홍콩여행">
+														</div>
+														<button type="button" class="button typeE size_sm auto full">저장</button>
+													</div>
+												</td>
+												<td data-th="상품">1</td>
+												<td data-th="버튼">
+													<div class="opt_box">
+														<button type="button" class="opt_btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+														<div class="popup opt_popup">
+															<div class="opt_list">
+																<div class="item">
+																	<button type="button" class="opt_popbtn">
+																		<i class="ph ph-pencil-simple-line icon"></i>
+																		<span class="txt">수정</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>	
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/header.html', '#header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_setting.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(10).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(3).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

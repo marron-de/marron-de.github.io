@@ -99,6 +99,9 @@ $(document).mouseup(function (e) {
 		$(".popup").removeClass("show")
 	}
 });
+$(document).on('click', '.opt_box .opt_btn', function () {
+    $(this).closest(".opt_box").find(".popup.opt_popup").toggleClass("show");
+});
 
 
 // calender popup
