@@ -91,12 +91,33 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
 		
     </div>
 
 
     <!-- JS -->
-    <script src="../js/common.js"></script>
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
+	<script src="../js/common.js"></script>
 
 </body>
 

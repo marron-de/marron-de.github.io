@@ -116,7 +116,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="card wid25">
+					<div class="card wid25 pc">
 						<div class="card_link">
 							<div class="card_head">
 								<p class="tit">Time & Weather</p>
@@ -1333,8 +1333,8 @@
 						}
 					}],
 					grid: {
-						right: 5,
-						left: 10,
+						right: '5%',
+						left: '5%',
 						top: 0,
 						bottom: 0
 					}
@@ -1429,20 +1429,26 @@
 						data: ['Inbound', 'K-pop', 'Tourboss', 'Other'],
 						top: 0,
 						left: 0,
-						itemWidth: 12,
-						itemHeight: 12,
+						itemWidth: window.innerWidth <= 1080 ? 10 : 12 ,
+						itemHeight:  window.innerWidth <= 1080 ? 10 : 12 ,
 						icon: 'circle',
 						inactiveColor: '#0c3f81',
-						textStyle: { color: '#434343', fontSize: 14, },
-						itemGap: 20
+						textStyle: {
+							color: '#434343',
+							fontSize: window.innerWidth <= 1080 ? 10 : 14 
+						},
+						itemGap: window.innerWidth <= 1080 ? 14 : 20
 					}],
 					xAxis: {
 						type: 'category',
 						data: getLast12Months(),
 						axisLine: { show: false },
 						axisTick: { show: false },
-						axisLabel: { color: '#6C757D' },
-						splitLine: { show: false  }
+						axisLabel: { 							
+							fontSize: window.innerWidth <= 1080 ? 10 : 13 ,
+							color: '#6C757D' 
+						},
+						splitLine: { show: false  },
 					},
 					yAxis: {
 						type: 'value',
@@ -1452,6 +1458,7 @@
 						splitLine: { lineStyle: { color: 'rgba(0,0,0,0.08)' } },
 						axisLabel: {
 							show: true,
+							fontSize: window.innerWidth <= 1080 ? 10 : 13 ,
 							color: '#6C757D',
 							margin: 5,
 							formatter: function (v) {
