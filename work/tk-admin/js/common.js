@@ -255,15 +255,19 @@ function darkmode_popup() {
 }
 // theme setting
 function setTheme(theme) {
+	document.body.classList.remove("lightmode", "darkmode");
+	document.body.classList.add(theme + "mode");
 	document.body.setAttribute("data-theme", theme);
 	localStorage.setItem("theme", theme);
 	$(".darkmode_btn, .mob_darkmode_btn")
 		.removeClass("light dark")
-		.addClass(theme)
+		.addClass(theme);
 }
 // darkmode button
 $(document).ready(function () {
-	setTheme(localStorage.getItem("theme") || "light");
+	let savedTheme = localStorage.getItem("theme") || "light";
+	setTheme(savedTheme);
+
 	$(document).on("click", ".dropdown_popup .sel_btn", function () {
 		setTheme($(this).val());
 		$("#darkmode_popup").removeClass("show");
