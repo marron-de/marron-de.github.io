@@ -148,7 +148,7 @@ $(document).mouseup(function (e) {
 	}
 });
 $(document).on('click', '.opt_box .opt_btn', function () {
-	$("body").removeClass("popup_hidden");
+	$("body").toggleClass("popup_hidden");
     $(this).closest(".opt_box").find(".popup.opt_popup").toggleClass("show");
 });
 
@@ -275,13 +275,6 @@ function darkmode_toggle() {
 	let newTheme = currentTheme === "light" ? "dark" : "light";
 	setTheme(newTheme);
 }
-// mobile top button
-function top_button() {
-	$(".container").animate({
-		scrollTop: 0
-	}, 400);
-	return false;
-}
 
 
 // share popup
@@ -329,6 +322,10 @@ function profile_popup() {
 	if ($(window).width() <= 1080) {
 		$("body").addClass("popup_hidden");	
 	}
+}
+// mobile fixnav button
+function fixnav_button() {
+	$(".header .h_top .h_sidebox .fixnav").toggleClass("collapsed");
 }
 
 
@@ -399,4 +396,18 @@ $(document).on('click', '.colorchips .color', function () {
     const wrap = $(this).closest('.color_wrap')
     wrap.find('.input_color').val(colorValue)
 })
+
+
+// header title
+$(window).on("load", function () {
+	const wrap = document.getElementById("wrap");
+	const titleEl = document.querySelector(".header .h_title .page_title .tit");
+	const iconEl = document.querySelector(".header .h_title .page_title .icon");
+
+	if (wrap) {
+		if (titleEl) titleEl.textContent = wrap.dataset.title || "";
+		if (iconEl) iconEl.className = "ph-fill icon " + (wrap.dataset.icon || "");
+	}
+});
+
 
