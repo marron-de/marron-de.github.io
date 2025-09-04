@@ -666,46 +666,58 @@
 			const params = new URLSearchParams(window.location.search);
 			const bdCd = params.get("CodeID");
 
-			if (bdCd === "MEM") {
-				// 회원기본코드
-				$(".page_title .tit").text("회원기본코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(5).addClass("active");
-			} else if (bdCd === "TGO") {
-				// 추천코드
-				$(".page_title .tit").text("추천코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(6).addClass("active");
-			} else if (bdCd === "ACC") {
-				// 정산코드
-				$(".page_title .tit").text("정산코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(7).addClass("active");
-			} else if (bdCd === "PRD") {
-				// 예약코드
-				$(".page_title .tit").text("예약코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(8).addClass("active");
-			} else if (bdCd === "CMM") {
-				// 게시판/디자인코드
-				$(".page_title .tit").text("게시판/디자인코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(9).addClass("active");
-			} else if (bdCd === "HTL") {
-				// 숙박/관광코드
-				$(".page_title .tit").text("숙박/관광코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(10).addClass("active");
-			} else if (bdCd === "ASA") {
-				// 국내지역코드
-				$(".page_title .tit").text("국내지역코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(11).addClass("active");
-			} else if (bdCd === "CRP") {
-				// 인사/회사코드
-				$(".page_title .tit").text("인사/회사코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(12).addClass("active");
-			} else if (bdCd === "SUB") {
-				// 지하철코드
-				$(".page_title .tit").text("지하철코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(13).addClass("active");
-			} else if (bdCd === "RNT") {
-				// 렌트카코드
-				$(".page_title .tit").text("렌트카코드");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(14).addClass("active");
+			function setTitleAndMenu() {
+				if ($(".page_title .tit").length && $(".sidenav .side_cont .side_submenubox .menu_list .side_item").length) {
+					if (bdCd === "MEM") {
+						// 회원기본코드
+						$(".page_title .tit").text("회원기본코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(5).addClass("active");
+					} else if (bdCd === "TGO") {
+						// 추천코드
+						$(".page_title .tit").text("추천코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(6).addClass("active");
+					} else if (bdCd === "ACC") {
+						// 정산코드
+						$(".page_title .tit").text("정산코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(7).addClass("active");
+					} else if (bdCd === "PRD") {
+						// 예약코드
+						$(".page_title .tit").text("예약코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(8).addClass("active");
+					} else if (bdCd === "CMM") {
+						// 게시판/디자인코드
+						$(".page_title .tit").text("게시판/디자인코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(9).addClass("active");
+					} else if (bdCd === "HTL") {
+						// 숙박/관광코드
+						$(".page_title .tit").text("숙박/관광코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(10).addClass("active");
+					} else if (bdCd === "ASA") {
+						// 국내지역코드
+						$(".page_title .tit").text("국내지역코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(11).addClass("active");
+					} else if (bdCd === "CRP") {
+						// 인사/회사코드
+						$(".page_title .tit").text("인사/회사코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(12).addClass("active");
+					} else if (bdCd === "SUB") {
+						// 지하철코드
+						$(".page_title .tit").text("지하철코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(13).addClass("active");
+					} else if (bdCd === "RNT") {
+						// 렌트카코드
+						$(".page_title .tit").text("렌트카코드");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(14).addClass("active");
+					}
+					return true;
+				}
+				return false;
+			}
+
+			if (!setTitleAndMenu()) {
+				const interval = setInterval(() => {
+					if (setTitleAndMenu()) clearInterval(interval);
+				}, 100);
 			}
 		});
 	</script>

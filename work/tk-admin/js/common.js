@@ -403,14 +403,25 @@ $(document).on('click', '.colorchips .color', function () {
 
 
 // header title
-$(window).on("load", function () {
+$(function () {
 	const wrap = document.getElementById("wrap");
-	const titleEl = document.querySelector(".header .h_title .page_title .tit");
-	const iconEl = document.querySelector(".header .h_title .page_title .icon");
 
-	if (wrap) {
-		if (titleEl) titleEl.textContent = wrap.dataset.title || "";
-		if (iconEl) iconEl.className = "ph-fill icon " + (wrap.dataset.icon || "");
+	function setHeader() {
+		const titleEl = document.querySelector(".header .h_title .page_title .tit");
+		const iconEl = document.querySelector(".header .h_title .page_title .icon");
+
+		if (wrap && titleEl && iconEl) {
+			titleEl.textContent = wrap.dataset.title || "";
+			iconEl.className = "ph-fill icon " + (wrap.dataset.icon || "");
+			return true; 
+		}
+		return false;
+	}
+
+	if (!setHeader()) {
+		const interval = setInterval(() => {
+			if (setHeader()) clearInterval(interval);
+		}, 100); 
 	}
 });
 

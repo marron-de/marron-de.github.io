@@ -644,9 +644,7 @@
 				$(".header .h_bottom .gnb .gnb_item").eq(8).addClass("active");
 			}, 100);
 		});
-	</script>	
-	<script src="../js/common.js"></script>
-	
+	</script>		
 
 	<!-- 타이틀/메뉴활성화 -->
 	<script>
@@ -654,25 +652,39 @@
 			const params = new URLSearchParams(window.location.search);
 			const bdCd = params.get("BD_CD");
 
-			if (bdCd === "REVIEW_INTERGRATED") {
-				// 여행후기
-				$(".page_title .tit").text("여행후기");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(8).addClass("active");
+			function setTitleAndMenu() {
+				if ($(".page_title .tit").length && $(".sidenav .side_cont .side_submenubox .menu_list .side_item").length) {
+					if (bdCd === "REVIEW_INTERGRATED") {
+						// 여행후기
+						$(".page_title .tit").text("여행후기");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(8).addClass("active");
 
 
-			} else if (bdCd === "TWREV") {
-				// 旅遊評論
-				$(".page_title .tit").text("旅遊評論");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(17).addClass("active");
+					} else if (bdCd === "TWREV") {
+						// 旅遊評論
+						$(".page_title .tit").text("旅遊評論");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(17).addClass("active");
 
 
-			} else if (bdCd === "ENREV") {
-				// Reviews
-				$(".page_title .tit").text("Reviews");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(28).addClass("active");
+					} else if (bdCd === "ENREV") {
+						// Reviews
+						$(".page_title .tit").text("Reviews");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(28).addClass("active");
+					} 
+					return true;
+				}
+				return false;
+			}
+
+			if (!setTitleAndMenu()) {
+				const interval = setInterval(() => {
+					if (setTitleAndMenu()) clearInterval(interval);
+				}, 100);
 			}
 		});
 	</script>
+
+	<script src="../js/common.js"></script>
 
 
 	<!-- modal button -->

@@ -595,8 +595,6 @@
 			}, 100);
 		});
 	</script>	
-	<script src="../js/common.js"></script>
-
 
 	<!-- 타이틀/메뉴활성화 -->
 	<script>
@@ -604,121 +602,135 @@
 			const params = new URLSearchParams(window.location.search);
 			const bdCd = params.get("BD_CD");
 
-			if (bdCd === "NOTICE") {
-				// 공지사항
-				$(".page_title .tit").text("공지사항");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(6).addClass("active");
-			} else if (bdCd === "GALLERY") {
-				// 여행사진
-				$(".page_title .tit").text("여행사진");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(9).addClass("active");
-			} else if (bdCd === "EVENT") {
-				// 기획전
-				$(".page_title .tit").text("기획전");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(10).addClass("active");
-			} else if (bdCd === "NEWS") {
-				// 뉴스
-				$(".page_title .tit").text("뉴스");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(11).addClass("active");
-			} else if (bdCd === "RECRUIT") {
-				// 채용정보
-				$(".page_title .tit").text("채용정보");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(12).addClass("active");
-			} else if (bdCd === "QNA_VT") {
-				// 복지몰 문의
-				$(".page_title .tit").text("복지몰 문의");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(13).addClass("active");
-			} else if (bdCd === "FAQ") {
-				// 자주묻는질문
-				$(".page_title .tit").text("자주묻는질문");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(14).addClass("active");
+			function setTitleAndMenu() {
+				if ($(".page_title .tit").length && $(".sidenav .side_cont .side_submenubox .menu_list .side_item").length) {
+					if (bdCd === "NOTICE") {
+						// 공지사항
+						$(".page_title .tit").text("공지사항");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(6).addClass("active");
+					} else if (bdCd === "GALLERY") {
+						// 여행사진
+						$(".page_title .tit").text("여행사진");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(9).addClass("active");
+					} else if (bdCd === "EVENT") {
+						// 기획전
+						$(".page_title .tit").text("기획전");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(10).addClass("active");
+					} else if (bdCd === "NEWS") {
+						// 뉴스
+						$(".page_title .tit").text("뉴스");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(11).addClass("active");
+					} else if (bdCd === "RECRUIT") {
+						// 채용정보
+						$(".page_title .tit").text("채용정보");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(12).addClass("active");
+					} else if (bdCd === "QNA_VT") {
+						// 복지몰 문의
+						$(".page_title .tit").text("복지몰 문의");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(13).addClass("active");
+					} else if (bdCd === "FAQ") {
+						// 자주묻는질문
+						$(".page_title .tit").text("자주묻는질문");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(14).addClass("active");
 
 
-			} else if (bdCd === "CNNTC") {
-				// 最新公告
-				$(".page_title .tit").text("最新公告");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(15).addClass("active");
-			} else if (bdCd === "TWFAQ") {
-				// 追問
-				$(".page_title .tit").text("追問");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(18).addClass("active");
-			} else if (bdCd === "TWGLY") {
-				// 韓國旅遊照片
-				$(".page_title .tit").text("韓國旅遊照片");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(19).addClass("active");
-			} else if (bdCd === "CNREC") {
-				// 招聘信息
-				$(".page_title .tit").text("招聘信息");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(20).addClass("active");
-			} else if (bdCd === "TWEVENT") {
-				// 企劃展
-				$(".page_title .tit").text("企劃展");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(21).addClass("active");
-			} else if (bdCd === "CNREV") {
-				// 旅游评论
-				$(".page_title .tit").text("旅游评论");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(22).addClass("active");
-			} else if (bdCd === "CNFAQ") {
-				// 追问
-				$(".page_title .tit").text("追问");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(23).addClass("active");
-			} else if (bdCd === "CNGLY") {
-				// 韩国旅游照片
-				$(".page_title .tit").text("韩国旅游照片");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(24).addClass("active");
-			} else if (bdCd === "CNEVENT") {
-				// 企划展
-				$(".page_title .tit").text("企划展");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(25).addClass("active");
+					} else if (bdCd === "CNNTC") {
+						// 最新公告
+						$(".page_title .tit").text("最新公告");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(15).addClass("active");
+					} else if (bdCd === "TWFAQ") {
+						// 追問
+						$(".page_title .tit").text("追問");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(18).addClass("active");
+					} else if (bdCd === "TWGLY") {
+						// 韓國旅遊照片
+						$(".page_title .tit").text("韓國旅遊照片");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(19).addClass("active");
+					} else if (bdCd === "CNREC") {
+						// 招聘信息
+						$(".page_title .tit").text("招聘信息");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(20).addClass("active");
+					} else if (bdCd === "TWEVENT") {
+						// 企劃展
+						$(".page_title .tit").text("企劃展");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(21).addClass("active");
+					} else if (bdCd === "CNREV") {
+						// 旅游评论
+						$(".page_title .tit").text("旅游评论");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(22).addClass("active");
+					} else if (bdCd === "CNFAQ") {
+						// 追问
+						$(".page_title .tit").text("追问");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(23).addClass("active");
+					} else if (bdCd === "CNGLY") {
+						// 韩国旅游照片
+						$(".page_title .tit").text("韩国旅游照片");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(24).addClass("active");
+					} else if (bdCd === "CNEVENT") {
+						// 企划展
+						$(".page_title .tit").text("企划展");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(25).addClass("active");
 
 
-			} else if (bdCd === "ENNTC") {
-				// Notice
-				$(".page_title .tit").text("Notice");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(26).addClass("active");
-			} else if (bdCd === "ENFAQ") {
-				// FAQ
-				$(".page_title .tit").text("FAQ");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(29).addClass("active");
-			} else if (bdCd === "ENGLY") {
-				// Travel Photo
-				$(".page_title .tit").text("Travel Photo");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(30).addClass("active");
-			} else if (bdCd === "ENREC") {
-				// Recruit
-				$(".page_title .tit").text("Recruit");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(31).addClass("active");
-			} else if (bdCd === "ENEVENT") {
-				// Exhibitions
-				$(".page_title .tit").text("Exhibitions");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(32).addClass("active");
+					} else if (bdCd === "ENNTC") {
+						// Notice
+						$(".page_title .tit").text("Notice");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(26).addClass("active");
+					} else if (bdCd === "ENFAQ") {
+						// FAQ
+						$(".page_title .tit").text("FAQ");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(29).addClass("active");
+					} else if (bdCd === "ENGLY") {
+						// Travel Photo
+						$(".page_title .tit").text("Travel Photo");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(30).addClass("active");
+					} else if (bdCd === "ENREC") {
+						// Recruit
+						$(".page_title .tit").text("Recruit");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(31).addClass("active");
+					} else if (bdCd === "ENEVENT") {
+						// Exhibitions
+						$(".page_title .tit").text("Exhibitions");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(32).addClass("active");
 
 
-			} else if (bdCd === "AGNTC") {
-				// 공지사항
-				$(".page_title .tit").text("공지사항");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(33).addClass("active");
+					} else if (bdCd === "AGNTC") {
+						// 공지사항
+						$(".page_title .tit").text("공지사항");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(33).addClass("active");
 
 
-			} else if (bdCd === "VREVIEW") {
-				// 한글리뷰
-				$(".page_title .tit").text("한글리뷰");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(35).addClass("active");
-			} else if (bdCd === "VREVE") {
-				// 영어리뷰
-				$(".page_title .tit").text("영어리뷰");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(36).addClass("active");
-			} else if (bdCd === "VREVH") {
-				// 번체리뷰
-				$(".page_title .tit").text("번체리뷰");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(37).addClass("active");
-			} else if (bdCd === "VREVC") {
-				// 간체리뷰
-				$(".page_title .tit").text("간체리뷰");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(38).addClass("active");
-			} 
+					} else if (bdCd === "VREVIEW") {
+						// 한글리뷰
+						$(".page_title .tit").text("한글리뷰");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(35).addClass("active");
+					} else if (bdCd === "VREVE") {
+						// 영어리뷰
+						$(".page_title .tit").text("영어리뷰");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(36).addClass("active");
+					} else if (bdCd === "VREVH") {
+						// 번체리뷰
+						$(".page_title .tit").text("번체리뷰");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(37).addClass("active");
+					} else if (bdCd === "VREVC") {
+						// 간체리뷰
+						$(".page_title .tit").text("간체리뷰");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(38).addClass("active");
+					} 
+					return true;
+				}
+				return false;
+			}
+
+			if (!setTitleAndMenu()) {
+				const interval = setInterval(() => {
+					if (setTitleAndMenu()) clearInterval(interval);
+				}, 100);
+			}
 		});
-	</script>
+	</script>	
+	
+	<script src="../js/common.js"></script>	
 
 
 	<!-- modal button -->

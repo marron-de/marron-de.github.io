@@ -617,8 +617,6 @@
 			}, 100);
 		});
 	</script>
-	<script src="../js/common.js"></script>
-
 
 	<!-- 타이틀/메뉴활성화 -->
 	<script>
@@ -626,39 +624,53 @@
 			const params = new URLSearchParams(window.location.search);
 			const bdCd = params.get("BD_CD");
 
-			if (bdCd === "B2BQNA") {
-				// 1:1문의
-				$(".page_title .tit").text("1:1문의");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(0).addClass("active");
+			function setTitleAndMenu() {
+				if ($(".page_title .tit").length && $(".sidenav .side_cont .side_submenubox .menu_list .side_item").length) {
+					if (bdCd === "B2BQNA") {
+						// 1:1문의
+						$(".page_title .tit").text("1:1문의");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(0).addClass("active");
 
 
-			} else if (bdCd === "QNA") {
-				// 문의하기
-				$(".page_title .tit").text("문의하기");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(7).addClass("active");
+					} else if (bdCd === "QNA") {
+						// 문의하기
+						$(".page_title .tit").text("문의하기");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(7).addClass("active");
 
 
-			} else if (bdCd === "CNQNA") {
-				// Q&A
-				$(".page_title .tit").text("Q&A");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(16).addClass("active");
+					} else if (bdCd === "CNQNA") {
+						// Q&A
+						$(".page_title .tit").text("Q&A");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(16).addClass("active");
 
 
-			} else if (bdCd === "ENQNA") {
-				// Q&A
-				$(".page_title .tit").text("Q&A");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(27).addClass("active");
+					} else if (bdCd === "ENQNA") {
+						// Q&A
+						$(".page_title .tit").text("Q&A");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(27).addClass("active");
 
 
-			} else if (bdCd === "AGQNA") {
-				// Q&A
-				$(".page_title .tit").text("Q&A");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(34).addClass("active");
+					} else if (bdCd === "AGQNA") {
+						// Q&A
+						$(".page_title .tit").text("Q&A");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(34).addClass("active");
 
 
-			}  
+					}  
+					return true;
+				}
+				return false;
+			}
+
+			if (!setTitleAndMenu()) {
+				const interval = setInterval(() => {
+					if (setTitleAndMenu()) clearInterval(interval);
+				}, 100);
+			}
 		});
 	</script>
+	
+	<script src="../js/common.js"></script>
 		
 
 

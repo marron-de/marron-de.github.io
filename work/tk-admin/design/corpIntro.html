@@ -134,28 +134,40 @@
 			const params = new URLSearchParams(window.location.search);
 			const bdCd = params.get("lang");
 
-			if (bdCd === "ko") {
-				// 한국 회사소개
-				$(".page_title .tit").text("한국 회사소개");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(16).addClass("active");
+			function setTitleAndMenu() {
+				if ($(".page_title .tit").length && $(".sidenav .side_cont .side_submenubox .menu_list .side_item").length) {
+					if (bdCd === "ko") {
+						// 한국 회사소개
+						$(".page_title .tit").text("한국 회사소개");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(16).addClass("active");
 
 
-			} else if (bdCd === "en") {
-				// 영어 회사소개
-				$(".page_title .tit").text("영어 회사소개");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(17).addClass("active");
+					} else if (bdCd === "en") {
+						// 영어 회사소개
+						$(".page_title .tit").text("영어 회사소개");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(17).addClass("active");
 
 
-			} else if (bdCd === "hk") {
-				// 번체 회사소개
-				$(".page_title .tit").text("번체 회사소개");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(18).addClass("active");
+					} else if (bdCd === "hk") {
+						// 번체 회사소개
+						$(".page_title .tit").text("번체 회사소개");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(18).addClass("active");
 
 
-			} else if (bdCd === "cn") {
-				// 간체 회사소개
-				$(".page_title .tit").text("간체 회사소개");
-				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(19).addClass("active");
+					} else if (bdCd === "cn") {
+						// 간체 회사소개
+						$(".page_title .tit").text("간체 회사소개");
+						$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(19).addClass("active");
+					}
+					return true;
+				}
+				return false;
+			}
+
+			if (!setTitleAndMenu()) {
+				const interval = setInterval(() => {
+					if (setTitleAndMenu()) clearInterval(interval);
+				}, 100);
 			}
 		});
 	</script>
