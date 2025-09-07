@@ -1,0 +1,143 @@
+
+/* common */
+* { margin: 0; padding: 0; outline: none; box-sizing: border-box;}
+body {margin: 0; padding: 0; -ms-overflow-style: none; scrollbar-width: none; }
+body::-webkit-scrollbar {display: none;}
+html { scroll-behavior: smooth; }
+html, body {font: 400 16px/1.3 'Pretendard', sans-serif;  color: #000000; width: 100%; position: relative;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent;}
+img {max-width: 100%;}
+button { font-family: inherit; border: none; background-color: transparent; outline: 0;  cursor: pointer; }
+input,textarea,button,select {font-family: inherit;}
+
+body.hidden { overflow: hidden;}
+body::before { content: "";  position: fixed;  left: 0;  top: 0;  width: 100%;  height: 100%; background-color: rgba(0,0,0,0.25); z-index: 99;  transition: all 0.4s ease; opacity: 0; pointer-events: none;cursor: pointer;}
+body.hidden::before { opacity: 1;  pointer-events: auto;}
+  
+.wrap {width: 100%; min-height: 100vh; position: relative;}
+.container {position: relative; width: 100%; padding-top: 9rem; padding-bottom: 12.5rem;} 
+.inner {position: relative; width: 90%; max-width: 1280px;  margin-left: auto; margin-right: auto;}
+
+  
+/*header*/
+.header { position: fixed; left: 0; top: 0; width: 100%; height: 6rem;  background: #fff; z-index: 100;}
+.header .h_inner { height: 100%; display: flex; align-items: center; justify-content: space-between;  gap: 1rem;}
+.header .h_leftbox {display: flex; align-items: center; gap: 0.75rem;}
+.header .h_leftbox .h_logo {display: flex; align-items: center; justify-content: center; width: 7.563rem;}
+.header .h_leftbox .h_title {font-weight: 600;font-size: 1.25rem;line-height: 180%;color: #000;}
+.header .h_rightbox {display: flex; align-items: center; gap: 0.75rem;}
+.header .h_rightbox .h_button{height: 3rem; display: flex; align-items: center; gap: 0.5rem;font-weight: 600;font-size: 0.875rem;line-height: 157%;color: #000; padding: 0 1.5rem; border: 1px solid #b4b7bb; border-radius: 0.5rem;}
+.header .h_rightbox .h_button .icon{width: 1.5rem;}
+    
+
+/* tab */
+.tab_navbox {padding: 1.25rem 1.75rem; display: flex; gap: 0.75rem;  border-bottom: 1px solid #e5e8ec;}
+.tab_navbox .tab_nav{ position: relative; font-size: 1rem;line-height: 150%;color: #45484a; flex: 1; border: 1px solid #b4b7bb; border-radius: 0.5rem; transition: all 0.4s ease; padding: 0.85rem ; overflow: hidden;}
+.tab_navbox .tab_nav::before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(270deg, #7f2ed8 0%, #5f68ff 50.7%, #4ad6ff 100%); opacity: 0; transition: all 0.4s ease;}
+.tab_navbox .tab_nav .link{position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
+.tab_navbox .tab_nav.on {color: #fff; border-color: transparent;}
+.tab_navbox .tab_nav.on::before {opacity: 1;}
+
+
+/* page title */
+.page_titbox {display: flex; flex-direction: column; gap: 0.5rem;}
+.page_titbox .page_tit {font-weight: 600;font-size: 1.125rem;line-height: 144%;color: #000;}
+.page_titbox .page_desc {font-size: 0.875rem;line-height: 157%;color: #45484a;}
+
+
+/* chart */
+.chart {position: relative;}
+.doughnut_chart {position: relative; display: flex; align-items: center; justify-content: center;}
+.doughnut_chart .chart_txtbox{width: 72%; display: flex; flex-direction: column; align-items: center; gap: 0.25rem; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.doughnut_chart .chart_txtbox .desc{font-size: 0.875rem;line-height: 143%;text-align: center;color: #212223;}
+.doughnut_chart .chart_txtbox .tit{font-weight: 600;font-size: 2rem;line-height: 137%;text-align: center;color: #000;}
+
+.line_chart {position: relative;}
+.line_chart .chart_tooltip { background: url(../img/tooltip_bg.png) no-repeat center / contain;  width: 3.75rem; height: 2.313rem; display: flex;  align-items: center;  justify-content: center; padding-bottom: 0.5rem;  font-weight: 700;  font-size: 0.813rem;  line-height: 154%;  text-align: center; color: #304aff; margin-top: -2.75rem; transition: all 0.4s ease;}
+
+.chart_labels {padding: 0.813rem 1.5rem; display: flex; align-items: center;  justify-content: center; gap: 1.5rem;border: 1px solid #d8dadd; border-radius: 0.75rem;}
+.chart_labels .label{display: flex; align-items: center; gap: 0.5rem;}
+.chart_labels .label .box_color{width: 1rem; aspect-ratio: 1/1; border-radius: 50%;}
+.chart_labels .label .box_color.color1{background: #304aff;}
+.chart_labels .label .box_color.color2{background: #7f2ed8;}
+.chart_labels .label .label_txt{font-size: 0.875rem;line-height: 157%;color: #000;}
+
+
+/* alert */
+.alertbox {width: 100%; display: flex; flex-direction: column; gap: 0.375rem; border-radius: 0.75rem; background: #f5f7ff; padding: 1.25rem;}
+.alertbox .title{font-weight: 700; font-size: 0.813rem; line-height: 154%; color: #45484a; display: flex; align-items: center; gap: 0.25rem;}
+.alertbox .title .icon{width: 1rem;}
+.alertbox .title .txt{flex: 1;}
+.alertbox .desc{font-size: 0.813rem;line-height: 169%;color: #45484a;}
+
+
+/* table */
+.tblbox { position: relative;  width: 100%;  border: 1px solid #d8dadd;  border-radius: 0.75rem; overflow: hidden;}
+.tblbox .tbl { position: relative; width: 100%;  font-size: 0.875rem;  line-height: 157%;  color: #000;  border-collapse: collapse;}
+.tblbox .tbl thead tr { background: #f4f6f8;  border-bottom: 1px solid #d8dadd;}
+.tblbox .tbl thead tr th { height: 2.875rem; text-align: center; font-weight: 600; border-right: 1px solid #d8dadd;}
+.tblbox .tbl thead tr th:last-child {border-right: 0;}
+.tblbox .tbl tbody tr{ border-bottom: 1px solid #d8dadd;}
+.tblbox .tbl tbody tr:last-child {border-bottom: 0;}
+.tblbox .tbl tbody tr td{height: 2.875rem; text-align: center; border-right: 1px solid #d8dadd; padding: 0 1.5rem;}
+.tblbox .tbl tbody tr td:last-child {border-right: 0;}
+.tblbox .tbl tbody tr td.align_left {text-align: left;}
+.tblbox .tbl tbody tr td .point {font-weight: 700; color: #304aff;}
+.tblbox .tbl tbody tr td .state_good {font-weight: 700; color: #304aff;}
+.tblbox .tbl tbody tr td .state_bad {font-weight: 700; color: #ff5858;}
+.tblbox .tbl tbody tr td .color_badge {color: #ff4141; font-weight: 600;  padding: 0.188rem 0.75rem; background: #ffe9e9; border-radius: 0.375rem; display: inline-block;}
+.tblbox .tbl tbody tr td  * + .color_badge {margin-left: 0.5rem;}
+
+
+/* sample */
+.chart_sample { position: relative; padding: 7.5rem;  display: flex;  flex-direction: column;  gap: 2.5rem;}
+.chart_sample .chart_box {display: flex; gap: 2rem;}
+
+
+
+
+/* ARI Version 02 */
+/* header */
+.ari_ver2 .header {background: #0b123d;}
+.ari_ver2 .header .h_leftbox .h_title {color: #fff;}
+.ari_ver2 .header .h_rightbox .h_button {color: #fff; border-color: rgba(180,183,187,0.4)}
+
+/* page title */
+.ari_ver2 .page_titbox { margin-bottom: 3rem;}
+.ari_ver2 .page_titbox .page_tit { font-weight: 800;  font-size: 1.75rem; line-height: 143%;}
+.ari_ver2 .page_titbox .page_desc {  font-size: 1rem; line-height: 150%; color: #000;}
+.ari_ver2 .page_subtit {  font-weight: 800;  font-size: 1rem; line-height: 150%;  color: #000;}
+.ari_ver2 .page_subtit .color {color: #304aff;}
+
+
+/* chart */
+.ari_ver2 .doughnut_chart .chart_txtbox .desc { color: #000;}
+.ari_ver2 .doughnut_chart .chart_txtbox .tit {font-weight: 800;}
+
+
+/* alert */
+.ari_ver2 .alertbox .title {  font-weight: 800; font-size: 0.875rem; line-height: 157%;  color: #000;}
+.ari_ver2 .alertbox .desc { font-size: 0.875rem; line-height: 157%;}
+
+
+/* table */
+.ari_ver2 .tblbox .tbl { color: #000;}
+.ari_ver2 .tblbox .tbl thead tr th { height: 3.25rem;font-size: 1rem;line-height: 150%; font-weight: 800; color: #000;}
+.ari_ver2 .tblbox .tbl thead tr th .small {font-size: 0.875rem; line-height: 157%; font-weight: 400;}
+.ari_ver2 .tblbox .tbl tbody tr td { height: 3.25rem;}
+.ari_ver2 .tblbox .tbl tbody tr td .blue {font-weight: 700; color: #304aff;}
+.ari_ver2 .tblbox .tbl tbody tr td .red {font-weight: 700; color: #ff2323;}
+.ari_ver2 .tblbox .tbl tbody tr td .state_good, 
+.ari_ver2 .tblbox .tbl tbody tr td .state_bad {font-weight: 800; font-size: 1rem; line-height: 150%;}
+.ari_ver2 .tblbox .tbl tbody tr td .pla_state1 {font-weight: 800; font-size: 1rem; line-height: 150%; color: #304aff;}
+.ari_ver2 .tblbox .tbl tbody tr td .pla_state2 {font-weight: 800; font-size: 1rem; line-height: 150%; color: #35c469;}
+.ari_ver2 .tblbox .tbl tbody tr td .pla_state3 {font-weight: 800; font-size: 1rem; line-height: 150%; color: #eebd00;}
+.ari_ver2 .tblbox .tbl tbody tr td .pla_state4 {font-weight: 800; font-size: 1rem; line-height: 150%; color: #FF873C;}
+.ari_ver2 .tblbox .tbl tbody tr td .pla_state5 {font-weight: 800; font-size: 1rem; line-height: 150%; color: #FF5A46;}
+.ari_ver2 .tblbox .tbl tbody tr td .bold_500 {font-weight: 500; color: #000;}
+.ari_ver2 .tblbox .tbl tbody tr td .bold_600 {font-weight: 600; color: #000;}
+.ari_ver2 .tblbox .tbl tbody tr td .bold_700 {font-weight: 700; color: #000;}
+.ari_ver2 .tblbox .tbl tbody tr td .bold_800 {font-weight: 800; color: #000;}
+.ari_ver2 .tblbox .tbl tbody tr td .tbl_items {display: flex; flex-direction: column; gap: 0.5rem; width: 100%; padding: 1.25rem 0;}
+.ari_ver2 .tblbox .tbl tbody tr td .tbl_items .item{}

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI 역량평가 결과지</title>
+
+	<!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+
+	<div class="wrap ari_ver2">
+
+		<!-- header -->
+		<header class="header">
+			<div class="inner h_inner">
+				<div class="h_leftbox">
+					<div class="h_logo">
+						<img src="img/logo2.png" alt="" class="logo">
+					</div>
+					<p class="h_title">AI 역량평가 결과지</p>
+				</div>
+				<div class="h_rightbox">
+					<button type="button" class="h_button">
+						<img src="img/ico_print2.png" alt="" class="icon">
+						<span class="txt">인쇄하기</span>
+					</button>
+					<button type="button" class="h_button">
+						<img src="img/ico_pdf2.png" alt="" class="icon">
+						<span class="txt">PDF로 열기</span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div class="container">
+			<div class="section_wrap">
+				<section class="section info_section">
+					<div class="inner">
+						<div class="contbox">
+							<div class="item item1">
+								<p class="tit">검사일시</p>
+								<p class="desc">2025.04.04</p>
+							</div> 
+							<div class="item item2">
+								<p class="tit">이름</p>
+								<p class="desc">권재영</p>
+							</div>
+							<div class="item item3">
+								<p class="tit">아이디</p>
+								<p class="desc">410015</p>
+							</div>
+							<div class="item item4">
+								<p class="tit">지원분야</p>
+								<p class="desc">기상전문가_박사</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section result_section">
+					<div class="inner">
+						<div class="contbox">
+							<div class="page_titbox">
+								<p class="page_tit">종합 평가결과</p>
+								<p class="page_desc">역량, 직무경험, 항목적합도 등의 항목을 E-INDEX 전체 완성도 지수로 표시됩니다.</p>
+							</div>
+							<div class="contitem contitem1">
+								<div class="item">
+									<div class="chart doughnut_chart">
+										<canvas class="chart2_6" width="220" height="220" class="graph"></canvas>
+										<div class="chart_txtbox">
+											<p class="desc">역량평가</p>
+											<p class="tit">최우수</p>
+										</div>
+									</div>
+									<div class="txtbox">
+										<p class="tit">역량평가</p>
+										<p class="desc">
+											입력된 자기소개서를 AI NLP 기술을 통해 내용을 종합적으로 분석합니다. <br>
+											이러한 분석은 AI의 딥러닝 과정을 통해 이루어집니다.
+										</p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="chart doughnut_chart">
+										<canvas class="chart6_1" width="220" height="220" class="graph"></canvas>
+										<div class="chart_txtbox">
+											<p class="desc">항목적합성</p>
+											<p class="tit">적합</p>
+										</div>
+									</div>
+									<div class="txtbox">
+										<p class="tit">항목적합</p>
+										<p class="desc">
+											입력된 내용이 제시된 항목과 일치하는지 분석한 결과입니다. <br>
+											만약, 주의 판정을 받았다면 자기소개서 항목에 벗어난 내용이 들어가 있을 수 있습니다.
+										</p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="chart doughnut_chart">
+										<canvas class="chart7_1" width="220" height="220" class="graph"></canvas>
+										<div class="chart_txtbox">
+											<p class="desc">내용적합성</p>
+											<p class="tit">적합</p>
+										</div>
+									</div>
+									<div class="txtbox">
+										<p class="tit">분량적합</p>
+										<p class="desc">
+											일정 분량 이상과 내용을 입력하였는지를 확인한 결과를 나타내 줍니다. <br>
+											이를 통해 무성의한 자기소개서를 구분할 수 있습니다.
+										</p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="chart doughnut_chart">
+										<canvas class="chart8_4" width="220" height="220" class="graph"></canvas>
+										<div class="chart_txtbox">
+											<p class="desc">표절검사</p> 
+											<p class="tit">안전</p>
+										</div>
+									</div>
+									<div class="txtbox">
+										<p class="tit">직무적합</p>
+										<p class="desc">
+											분석된 내용으로 지원자가 지원한 지원분야와 얼마나 적합한지에 대한 정보를 제공합니다. 이 분석 자료는 자연어 처리용 신경망 모델인 DeBERTa를 사용하게 됩니다.
+										</p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="chart doughnut_chart">
+										<canvas class="chart9_7" width="220" height="220" class="graph"></canvas>
+										<div class="chart_txtbox">
+											<p class="desc">직무적합도</p>
+											<p class="tit">주의</p>
+										</div>
+									</div>
+									<div class="txtbox">
+										<p class="tit">우수역량</p>
+										<p class="desc">
+											자기소개서 분석을 통해 개인의 역량 중에서 우수역량에 대해서 알려줍니다. <br>
+											결과지 세부 내역을 보면 부족역량에 대해서도 알 수 있습니다.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="contitem contitem2">
+								<div class="item">
+									<div class="topbox">
+										<p class="title">
+											<span class="bold">전체지원자 내 순위</span>
+											 (전체 지원자 <span class="color">10명</span>)
+										</p>
+										<p class="percent">
+											2등
+										</p>
+									</div>
+									<div class="progressbox">
+										<div class="progress">
+											<div class="progress_bar" style="width: 88%;">
+												<div class="pointer"></div>
+											</div>
+										</div>
+									</div>
+									<div class="bottombox">
+										<p class="desc">
+											전체 지원자 중에서 순위를 표시합니다. 이러한 순위는 자소서 분석내용 중 역량평가에 기반한 것 입니다.  <br>자소서 항목이 전문적인 기술 용어를 필요로 하는 경우에는 역량평가의 정확성이 낮아질 수 있습니다.  <br>
+											그러므로 세심한 관찰이 필요합니다.
+										</p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="topbox">
+										<p class="title">
+											<span class="bold">지원분야 내 순위</span>
+											 (지원분야 지원자 <span class="color">10명</span>)
+										</p>
+										<p class="percent">
+											8등
+										</p>
+									</div>
+									<div class="progressbox">
+										<div class="progress">
+											<div class="progress_bar" style="width: 24%;">
+												<div class="pointer"></div>
+											</div>
+										</div>
+									</div>
+									<div class="bottombox">
+										<p class="desc">
+											지원분야 내 응시자의 순위를 표시합니다. 전체 응시자를 대상으로 하는 경쟁이 아닌 지원분야 내 경쟁이라면 <br>본 순위를 기준으로 해야 합니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section competency_section">
+					<div class="inner">
+						<div class="contbox">
+							<div class="page_titbox">
+								<p class="page_tit">역량평가 (Competency Evaluation)</p>
+								<p class="page_desc">자기소개서의 항목별 역량평가 결과를 6등급으로 평가하여 제시합니다.</p>
+							</div>
+							<div class="contitem contitem1">
+								<div class="chartbox">
+									<div class="chart doughnut_chart">
+										<canvas class="chart2_6" width="268" height="268" class="graph"></canvas>
+										<div class="chart_txtbox">
+											<p class="desc">역량평가</p>
+											<p class="tit">최우수</p>
+										</div>
+									</div>
+								</div>
+								<div class="descbox">
+									<div class="descleft">
+										<div class="descitem">
+											<p class="tit">최우수</p>
+											<p class="desc">
+												AI가 분석한 결과 개인 및 직무 역량이 가장 우수한 것으로 분석됨.
+											</p>
+										</div>
+										<div class="descitem">
+											<p class="tit">우수</p>
+											<p class="desc">
+												개인 및 직무 역량이 비교적 우수한 것으로 분석됨.
+											</p>
+										</div>
+										<div class="descitem">
+											<p class="tit">양호</p>
+											<p class="desc">
+												우수한 역량을 보여주는 것은 아니지만 비교적 양호한 수준임.
+											</p>
+										</div>
+									</div>
+									<div class="descright">
+										<div class="descitem">
+											<p class="tit">보통</p>
+											<p class="desc">
+												AI가 분석한 결과 개인 및 직무 역량이 가장 우수한 것으로 분석됨.
+											</p>
+										</div>
+										<div class="descitem">
+											<p class="tit">미흡</p>
+											<p class="desc">
+												모든 분석 결과가 매우 미흡하여 배제요인이 다소 발견됨.
+											</p>
+										</div>
+										<div class="descitem">
+											<p class="tit">평가미달</p>
+											<p class="desc">
+												AI 분석결과 내용이 정상적이지 않거나 판단하기 어려운 수준임.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contitem contitem2">
+								<p class="page_subtit">항목별 평가</p>
+								<div class="evaluation_sheet">
+									<div class="evaluation">
+										<div class="item">-</div>
+										<div class="item">
+											<span class="badge good">
+												<span class="icon"></span>
+												<span class="txt">우수</span>
+											</span>
+										</div>
+										<div class="item">
+											<span class="badge bad">
+												<span class="icon"></span>
+												<span class="txt">미흡</span>
+											</span>
+										</div>
+										<div class="item">-</div>
+										<div class="item">-</div>
+										<div class="item">-</div>
+										<div class="item">-</div>
+										<div class="item">-</div>
+										<div class="item">-</div>
+									</div>
+									<div class="line"></div>
+									<div class="result">
+										<div class="item">
+											<p class="title">전체</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71.4%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">1번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">1번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71.8%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">3번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">4번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71.8%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">5번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">6번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71.8%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">7번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71%</div>
+											</div>
+										</div>
+										<div class="item">
+											<p class="title">8번</p>
+											<div class="progressbox">
+												<div class="progress">
+													<div class="progress_bar" style="width: 69%;">
+														<div class="pointer"></div>
+													</div>
+													<div class="progress_txt">
+														<span class="txt">평가미달</span>
+														<span class="txt">미흡</span>
+														<span class="txt">보통</span>
+														<span class="txt">양호</span>
+														<span class="txt">우수</span>
+														<span class="txt">최우수</span>
+													</div>
+													<div class="progress_dot">
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot white"></span>
+														<span class="dot"></span>
+														<span class="dot"></span>
+													</div>
+												</div>
+												<div class="percent">71.8%</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="alertbox">
+								<div class="title">
+									<img src="img/ico_alert.png" alt="" class="icon">
+									<span class="txt">설명</span>
+								</div>
+								<p class="desc">
+									자기소개서의 항목별 역량 평가는 작성된 내용을 AI가 분석한 결과입니다. AI는 고평가자가 보이는 작성 패턴을 분석하여 이와 유사할 경우 높은 점수를 부여하게 됩니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- JS -->
+	<script src="js/common.js"></script>
+
+	<!-- chart.js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/chartCustom.js"></script>
+
+
+
+</body>
+
+</html>
