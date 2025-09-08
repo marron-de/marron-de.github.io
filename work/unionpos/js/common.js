@@ -203,6 +203,20 @@ function lang_popup() {
 }
 
 
+// 주문화면 제품 클릭시
+$(function () {
+  const items = $('.order_wrap .prd_list .prd_box > .item');
+  items.on('mousedown touchstart', function (e) {
+    if ($(e.target).closest('.addbox').length) return;
+    $(this).addClass('active');
+  });
+
+  items.on('mouseup mouseleave touchend', function () {
+    $(this).removeClass('active');
+  });
+});
+
+
 // 주문화면 제품 추가
 $(document).on("click", ".order_wrap .prd_list .prd_box .addbox .add_btn", function () {
   const addBox = $(this).closest(".addbox");
@@ -258,11 +272,23 @@ $(document).on("change", "#complete_popup #terms", function () {
 });
 
 
-// 결제하기 더보기
 function moreView(btn) {
-  const hiddenItems = $(".payment_wrap .payment_list .item.hide");
-  hiddenItems.removeClass("hide");
-  $(btn).hide();
+  const paymentList = document.querySelector(".payment_wrap .payment_list");
+  const hiddenItems = paymentList.querySelectorAll(".item.hide");
+  const btnEl = btn.querySelector(".txt");
+
+  if (hiddenItems.length > 0) {
+    hiddenItems.forEach(el => el.classList.remove("hide"));
+    btn.dataset.state = "expanded";
+    btnEl.textContent = "접기";
+    btn.classList.add("on");
+  } else {
+    const expandedItems = paymentList.querySelectorAll(".item:not(.hide):nth-child(n+5)");
+    expandedItems.forEach(el => el.classList.add("hide"));
+    btn.dataset.state = "collapsed";
+    btnEl.textContent = "2건 더보기";
+    btn.classList.remove("on");
+  }
 }
 
 
