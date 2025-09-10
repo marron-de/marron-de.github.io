@@ -53,38 +53,53 @@
 						<i class="ph-fill ph-users icon"></i>
 						인사관리
 					</p>
-					<div class="content_search content_tbl">
-						<form name="search_fm" id="search_fm" method="get">
-							<div class="tbl_box">
-								<table class="tbl min_auto">
-									<colgroup>
-										<col>
-									</colgroup>
-									<tbody>
-										<tr>
-											<td data-th="검색어">
-												<div class="tbl_inline">
-													<div class="select_box search_select">
-														<select name="select_key" id="select_key" class="select size_md">
-															<option value="MEM_NO">사번</option>
-															<option value="MEM_ID">아이디</option>
-															<option value="MEM_NM">성명</option>
-														</select>
-													</div>
-													<div class="input_box search_input">
-														<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
-													</div>
-													<div class="tbl_btnbox search_btns">
-														<button type="button" class="button size_sm typeE auto">검색</button>
-														<button type="button" class="button size_sm typeF auto" onclick="writePersonnel_modal()">등록</button>
-													</div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+
+					<div class="mob_filter_wrap">
+						<div class="mob_filter_topbox">
+							<div class="leftbox"></div>
+							<div class="rightbox">
+								<button type="button" class="mob_icon_button mob_search_open">
+									<i class="ph ph-magnifying-glass icon"></i>
+								</button>
+								<button type="button" class="mob_icon_button" onclick="writePersonnel_modal()">
+									<i class="ph ph-pencil-simple icon"></i>
+								</button>
 							</div>
-						</form>
+						</div>
+						<div class="content_search content_tbl">
+							<form name="search_fm" id="search_fm" method="get">
+								<div class="tbl_box">
+									<table class="tbl min_auto">
+										<colgroup>
+											<col>
+										</colgroup>
+										<tbody>
+											<tr class="mob_search_box">
+												<td data-th="검색어">
+													<div class="tbl_inline">
+														<div class="select_box search_select">
+															<select name="select_key" id="select_key" class="select size_md">
+																<option value="MEM_NO">사번</option>
+																<option value="MEM_ID">아이디</option>
+																<option value="MEM_NM">성명</option>
+															</select>
+														</div>
+														<div class="input_box search_input">
+															<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+														</div>
+														<div class="tbl_btnbox search_btns">
+															<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
+															<button type="button" class="button size_sm typeF auto" onclick="writePersonnel_modal()">등록</button>
+														</div>
+														<button type="button" class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 				
@@ -115,8 +130,8 @@
 					</div>
 				</div>
 
-				<div class="content_list content_tbl">
-					<div class="bo_list tbl_box">
+				<div class="content_list content_tbl content_mobtbl">
+					<div class="bo_list tbl_box mobtbl4">
 						<table class="tbl">
 							<colgroup>
 								<col style="width:50px" />
@@ -154,21 +169,21 @@
 							</thead>
 							<tbody>									
 								<tr>
-									<td data-th="Lv.">Lv.1</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.1</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일"></td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동</td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50"></td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -178,21 +193,21 @@
 									</td>
 								</tr>
 								<tr>
-									<td data-th="Lv.">Lv.2</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.2</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일"></td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50"></td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -202,21 +217,21 @@
 									</td>
 								</tr>
 								<tr>
-									<td data-th="Lv.">Lv.3</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.3</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일"></td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50"></td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -226,21 +241,21 @@
 									</td>
 								</tr>
 								<tr>
-									<td data-th="Lv.">Lv.1</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.1</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일"></td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50"></td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -250,21 +265,21 @@
 									</td>
 								</tr>
 								<tr>
-									<td data-th="Lv.">Lv.2</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.2</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일"></td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50"></td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -274,21 +289,21 @@
 									</td>
 								</tr>
 								<tr class="line">
-									<td data-th="Lv.">Lv.1</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.1</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일">2025-08-30</td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50">2025-08-30</td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -298,21 +313,21 @@
 									</td>
 								</tr>
 								<tr class="line">
-									<td data-th="Lv.">Lv.2</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.2</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일">2025-08-30</td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50">2025-08-30</td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -322,21 +337,21 @@
 									</td>
 								</tr>
 								<tr class="line">
-									<td data-th="Lv.">Lv.1</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.1</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일">2025-08-30</td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50">2025-08-30</td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -346,21 +361,21 @@
 									</td>
 								</tr>
 								<tr class="line">
-									<td data-th="Lv.">Lv.2</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.2</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일">2025-08-30</td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50">2025-08-30</td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>
@@ -370,21 +385,21 @@
 									</td>
 								</tr>
 								<tr class="line">
-									<td data-th="Lv.">Lv.1</td>
-									<td data-th="사번">tkw0001</td>
-									<td data-th="아이디">
+									<td data-th="Lv." class="mob_lv">Lv.1</td>
+									<td data-th="사번" class="mob_tit_use w_50">tkw0001</td>
+									<td data-th="아이디" class="mob_tit_use w_50">
 										<a href="#none" class="tbl_link" onclick="editPersonnel_modal()">test</a>
 									</td>
-									<td data-th="성명">홍길동 매니저</td>
-									<td data-th="성별">남</td>
-									<td data-th="생년월일(생일)">0000-00-00</td>
-									<td data-th="근무지점">서울본사</td>
-									<td data-th="부서명">디자인&웹개발팀</td>
-									<td data-th="직급">매니저</td>
-									<td data-th="입사일">2025-08-07</td>
-									<td data-th="퇴사일">2025-08-30</td>
-									<td data-th="최근로그인">08/07 12:00:40</td>
-									<td data-th="로그인수">100</td>
+									<td data-th="성명" class="mob_tit_use w_50">홍길동 </td>
+									<td data-th="성별" class="mob_tit_use w_50">남</td>
+									<td data-th="생년월일" class="mob_tit_use w_50">0000-00-00</td>
+									<td data-th="근무지점" class="mob_tit_use w_50">서울본사</td>
+									<td data-th="부서명" class="mob_tit_use w_50">디자인&웹개발팀</td>
+									<td data-th="직급" class="mob_tit_use w_50">매니저</td>
+									<td data-th="입사일" class="mob_tit_use w_50">2025-08-07</td>
+									<td data-th="퇴사일" class="mob_tit_use w_50">2025-08-30</td>
+									<td data-th="최근로그인" class="mob_tit_use mob_hide">08/07 12:00:40</td>
+									<td data-th="로그인수" class="mob_tit_use mob_hide">100</td>
 									<td data-th="버튼">
 										<div class="tbl_btnbox">
 											<button type="button" class="button typeE auto size_sm" onclick="editPersonnel_modal()">수정</button>

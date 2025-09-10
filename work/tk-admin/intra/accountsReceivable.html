@@ -54,47 +54,61 @@
 			 			Accounts Receivable
 					</p>
 				</div>
-
-				<div class="content_search content_tbl">
-					<form name="search_fm" id="search_fm" method="get">
-						<div class="tbl_box">
-							<table class="tbl min_auto">
-								<colgroup>
-									<col style="width: 150px">
-									<col>
-								</colgroup>
-								<tbody>
-									<tr>
-										<th data-th="검색어">검색어</th>
-										<td data-th="검색어">
-											<div class="tbl_inline">
-												<div class="select_box search_select">
-													<select name="select_key" id="select_key" class="select size_md">
-														<option value="MTITLE">제목</option>
-														<option value="MEM_NM">작성자</option>
-														<option value="MCONT">내용</option>
-													</select>
-												</div>
-												<div class="input_box search_input">
-													<input type="text" class="input_text size_md" id="input_key"
-														name="input_key" placeholder="검색어를 입력해주세요">
-												</div>
-												<div class="tbl_btnbox search_btns">
-													<button type="button" class="button size_sm typeE auto">검색</button>
-													<a href="../intra/intraWrite.html" class="button size_sm typeF auto">등록</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+				
+				<div class="mob_filter_wrap">
+					<div class="mob_filter_topbox">
+						<div class="leftbox"></div>
+						<div class="rightbox">
+							<button type="button" class="mob_icon_button mob_search_open">
+								<i class="ph ph-magnifying-glass icon"></i>
+							</button>
+							<a href="../intra/intraWrite.html" class="mob_icon_button">
+								<i class="ph ph-pencil-simple icon"></i>
+							</a>
 						</div>
-					</form>
+					</div>
+					<div class="content_search content_tbl">
+						<form name="search_fm" id="search_fm" method="get">
+							<div class="tbl_box">
+								<table class="tbl min_auto">
+									<colgroup>
+										<col style="width: 150px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr class="mob_search_box">
+											<th data-th="검색어">검색어</th>
+											<td data-th="검색어">
+												<div class="tbl_inline">
+													<div class="select_box search_select">
+														<select name="select_key" id="select_key" class="select size_md">
+															<option value="MTITLE">제목</option>
+															<option value="MEM_NM">작성자</option>
+															<option value="MCONT">내용</option>
+														</select>
+													</div>
+													<div class="input_box search_input">
+														<input type="text" class="input_text size_md" id="input_key"
+															name="input_key" placeholder="검색어를 입력해주세요">
+													</div>
+													<div class="tbl_btnbox search_btns">
+														<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
+														<a href="../intra/intraWrite.html" class="button size_sm typeF auto">등록</a>
+													</div>
+													<button type="button" class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
 				</div>
 
-				<div class="content_list content_tbl">
+				<div class="content_list content_tbl content_mobtbl">
 					<form name="boardList_fm" id="boardList_fm" method="POST">
-						<div class="bo_list tbl_box">
+						<div class="bo_list tbl_box mobtbl4">
 							<table class="tbl" id="intra_list_tbl">
 								<colgroup>
 									<col style="width:60px" />
@@ -124,7 +138,7 @@
 								</thead>
 								<tbody>									
 									<tr>
-										<td data-th="No">12</td>
+										<td data-th="No" class="mob_hide">12</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_re">중요메모</span>
 										</td>
@@ -135,18 +149,17 @@
 												<span class="badge typeB size_sm">미입금</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_ceo.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -158,10 +171,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">11</td>
+										<td data-th="No" class="mob_hide">11</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_or">환불내역서</span>
 										</td>
@@ -175,18 +202,17 @@
 												<span class="badge typeD size_sm">입금완료</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_head.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -198,10 +224,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">10</td>
+										<td data-th="No" class="mob_hide">10</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_ye">예약문의</span>
 										</td>
@@ -212,18 +252,17 @@
 												<span class="badge typeE size_sm">계약금입금</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_business.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -235,10 +274,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">9</td>
+										<td data-th="No" class="mob_hide">9</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_gr">거래처정산</span>
 										</td>
@@ -249,18 +302,17 @@
 												<span class="badge typeF size_sm">계약금완료</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_ceo.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -272,10 +324,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">8</td>
+										<td data-th="No" class="mob_hide">8</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_bl">대외공문</span>
 										</td>
@@ -286,18 +352,17 @@
 												<span class="badge typeC size_sm">예약취소</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_design.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -309,10 +374,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">7</td>
+										<td data-th="No" class="mob_hide">7</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_nv">미팅보고서</span>
 										</td>
@@ -323,18 +402,17 @@
 												<span class="badge typeB size_sm">NEW</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_guide.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -346,10 +424,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">6</td>
+										<td data-th="No" class="mob_hide">6</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_pp">업무일지</span>
 										</td>
@@ -360,18 +452,17 @@
 												<span class="badge typeC size_sm">HOT</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_cs.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -383,10 +474,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">5</td>
+										<td data-th="No" class="mob_hide">5</td>
 										<td data-th="구분">
 											<span class="badge size_bg type_pk">품의보고</span>
 										</td>
@@ -397,18 +502,17 @@
 												<span class="badge typeD size_sm">BEST</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_op.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeD size_bg pointer">확정요청</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -420,10 +524,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">4</td>
+										<td data-th="No" class="mob_hide">4</td>
 										<td data-th="구분">
 											<span class="badge size_bg typeF">공급처정산</span>
 										</td>
@@ -434,18 +552,17 @@
 												<span class="badge typeA size_sm">TOUR</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_ceo.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeE size_bg">확정완료</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -457,10 +574,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>									
 									<tr>
-										<td data-th="No">3</td>
+										<td data-th="No" class="mob_hide">3</td>
 										<td data-th="구분">
 											<span class="badge size_bg typeA">정산답변</span>
 										</td>
@@ -471,18 +602,17 @@
 												<span class="badge typeB size_sm">미입금</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_ceo.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeE size_bg">확정완료</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -494,10 +624,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">2</td>
+										<td data-th="No" class="mob_hide">2</td>
 										<td data-th="구분">
 											<span class="badge size_bg typeB">세무회계</span>
 										</td>
@@ -508,18 +652,17 @@
 												<span class="badge typeB size_sm">미입금</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_ceo.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeE size_bg">확정완료</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -531,10 +674,24 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td data-th="No">1</td>
+										<td data-th="No" class="mob_hide">1</td>
 										<td data-th="구분">
 											<span class="badge size_bg">기본</span>
 										</td>
@@ -545,18 +702,17 @@
 												<span class="badge typeB size_sm">미입금</span>
 											</div>
 										</td>
-										<td data-th="청구금액" class="td_price">
-											1,140,000
-										</td>
-										<td data-th="담당부서" class="td_dept">
+										<td data-th="입금상태" class="mob_tit_use mob_view">미입금</td>
+										<td data-th="청구금액" class="td_price mob_tit_use mob_tit_use_last">1,140,000</td>
+										<td data-th="담당부서" class="td_dept w_auto">
 											<img src="../img/icon_dept_ceo.png" alt="" class="icon">
 										</td>
-										<td data-th="등록자">홍길동 매니저</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
-										<td data-th="상태">
+										<td data-th="등록자" class="w_auto">홍길동 매니저</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
+										<td data-th="상태" class="mob_state">
 											<div class="badge typeE size_bg">확정완료</div>
 										</td>
-										<td data-th="첨부파일">
+										<td data-th="첨부파일" class="mob_hide">
 											<div class="file_inline">
 												<a href="" title="다운로드" class="file_link">
 													<img src="../img/ic_filedown.png" class="icon">
@@ -568,7 +724,21 @@
 												</a>
 											</div>
 										</td>
-										<td data-th="조회">10</td>
+										<td data-th="조회" class="mob_hide">10</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>

@@ -55,46 +55,68 @@
 					</p>
 				</div>
 
-				<div class="content_search content_tbl tablet">
-					<form name="search_fm" id="search_fm" method="get">
-						<div class="tbl_box">
-							<table class="tbl min_auto">
-								<colgroup>
-									<col style="width: 150px">
-									<col>
-								</colgroup>
-								<tbody>
-									<tr>
-										<th data-th="검색어">검색어</th>
-										<td data-th="검색어">
-											<div class="tbl_inline">
-												<div class="select_box search_select">
-													<select name="select_key" id="select_key" class="select size_md">
-														<option value="MTITLE">제목</option>
-														<option value="MEM_NM">작성자</option>
-														<option value="MCONT">내용</option>
-													</select>
-												</div>
-												<div class="input_box search_input">
-													<input type="text" class="input_text size_md" id="input_key"
-														name="input_key" placeholder="검색어를 입력해주세요">
-												</div>
-												<div class="tbl_btnbox search_btns">
-													<button type="button" class="button size_sm typeE auto">검색</button>
-													<a href="../intra/intraWrite2.html" class="button size_sm typeF auto">등록</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+				<div class="mob_filter_wrap tablet">
+					<div class="mob_filter_topbox">
+						<div class="leftbox">
+							<p class="total">
+								Total <span class="color">10</span>
+							</p>
 						</div>
-					</form>
+						<div class="rightbox">
+							<button type="button" class="mob_icon_button mob_search_open">
+								<i class="ph ph-magnifying-glass icon"></i>
+							</button>
+							<a href="../intra/intraWrite.html" class="mob_icon_button">
+								<i class="ph ph-pencil-simple icon"></i>
+							</a>
+							<button type="button" class="mob_icon_button">
+								<i class="ph ph-trash icon"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="content_search content_tbl">
+						<form name="search_fm" id="search_fm" method="get">
+							<div class="tbl_box">
+								<table class="tbl min_auto">
+									<colgroup>
+										<col style="width: 150px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr class="mob_search_box">
+											<th data-th="검색어">검색어</th>
+											<td data-th="검색어">
+												<div class="tbl_inline">
+													<div class="select_box search_select">
+														<select name="select_key" id="select_key" class="select size_md">
+															<option value="MTITLE">제목</option>
+															<option value="MEM_NM">작성자</option>
+															<option value="MCONT">내용</option>
+														</select>
+													</div>
+													<div class="input_box search_input">
+														<input type="text" class="input_text size_md" id="input_key"
+															name="input_key" placeholder="검색어를 입력해주세요">
+													</div>
+													<div class="tbl_btnbox search_btns">
+														<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
+														<a href="../intra/intraWrite2.html" class="button size_sm typeF auto">등록</a>
+													</div>
+													<button type="button" class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
 				</div>
 
-				<div class="content_list content_tbl">
+				<div class="content_list content_tbl content_mobtbl">
 					<form name="intraList_fm" id="intraList_fm" method="POST">
-						<div class="tbl_top">
+						<div class="tbl_top pc">
 							<div class="leftbox">
 								<p class="total">
 									Total <span class="color">10</span>
@@ -105,7 +127,7 @@
 								<button type="button" class="button size_sm auto typeF">삭제</button>
 							</div>
 						</div>
-						<div class="bo_list tbl_box">
+						<div class="bo_list tbl_box mobtbl4">
 							<table class="tbl" id="intra_list_tbl">
 								<colgroup>
                     				<col style="width:50px" />
@@ -140,20 +162,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No"><i class="ph ph-megaphone tbl_picon reverse"></i></td>
+										<td data-th="No" class="mob_hide"><i class="ph ph-megaphone tbl_picon reverse"></i></td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -163,20 +199,34 @@
 												<input type="checkbox" class="input_check all_check">
 											</div>
 										</td>
-										<td data-th="No">9</td>
+										<td data-th="No" class="mob_hide">9</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -186,20 +236,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">8</td>
+										<td data-th="No" class="mob_hide">8</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -209,20 +273,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">7</td>
+										<td data-th="No" class="mob_hide">7</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -232,20 +310,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">6</td>
+										<td data-th="No" class="mob_hide">6</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -255,20 +347,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">5</td>
+										<td data-th="No" class="mob_hide">5</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -278,20 +384,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">4</td>
+										<td data-th="No" class="mob_hide">4</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -301,20 +421,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">3</td>
+										<td data-th="No" class="mob_hide">3</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -324,20 +458,34 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">2</td>
+										<td data-th="No" class="mob_hide">2</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>
+											</div>
+										</td>
+										<td data-th="모바일 정보" class="mob_infobox">
+											<div class="item view_item">
+												<i class="ph ph-eye icon"></i>
+												<span class="num">10</span>
+											</div>
+											<div class="item file_item">
+												<i class="ph ph-floppy-disk icon"></i>
+												<span class="num">2</span>
+											</div>
+											<div class="item chat_item">
+												<i class="ph ph-chat-centered-dots icon"></i>
+												<span class="num">0</span>
 											</div>
 										</td>
 									</tr>	
@@ -347,17 +495,17 @@
 												<input type="checkbox" class="input_check">
 											</div>
 										</td>
-										<td data-th="No">1</td>
+										<td data-th="No" class="mob_hide">1</td>
 										<td data-th="제목" class="td_title">
 											<div class="tbl_inline">
 												<a href="../intra/intraView2.html" class="link bold">테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다. 테스트 게시물입니다.</a> 
 												<span class="badge typeB size_sm">new</span>
 											</div>
 										</td>
-										<td data-th="작성자">홍길동 매니저</td>
-										<td data-th="조회">19</td>
-										<td data-th="작성IP">14.6.87.193</td>
-										<td data-th="등록일">2025.08.07 12:00</td>
+										<td data-th="작성자" class="w_auto">홍길동 매니저</td>
+										<td data-th="조회" class="mob_hide">19</td>
+										<td data-th="작성IP" class="mob_hide">14.6.87.193</td>
+										<td data-th="등록일" class="w_auto">2025.08.07 12:00</td>
 										<td data-th="버튼">
 											<div class="tbl_btnbox center">
 												<button type="button" class="button size_sm auto typeF">삭제</button>

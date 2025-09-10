@@ -426,3 +426,11 @@ $(function () {
 });
 
 
+
+/* 250908 추가작업 */
+$(document).on('click', '.mob_filter_wrap  .mob_search_open', function () {
+    $(".mob_filter_wrap  .content_search").addClass("show");
+});
+$(document).on('click', '.mob_filter_wrap  .mob_search_close', function () {
+    $(".mob_filter_wrap  .content_search").removeClass("show");
+});
