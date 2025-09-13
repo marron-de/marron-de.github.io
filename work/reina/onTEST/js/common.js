@@ -130,36 +130,34 @@ $(document).ready(function () {
 
 
 // select2 
-$(document).ready(function() {
+$(function() {
     function formatOption(data) {
-        if (!data.id || $(data.element).data('hidden')) {
-            return null; 
-        }
-
-        let iconUrl = $(data.element).data('icon');
-        let $option = $('<span></span>');
-
-        if (iconUrl) {
-            $option.append('<img src="' + iconUrl + '" alt="" class="icon">');
-        }
-        $option.append('<span class="txt">' + data.text + '</span>');
-
-        return $option;
+        if (!data.id || $(data.element).data('hidden')) return null;
+        let icon = $(data.element).data('icon');
+        return $('<span>').append(icon ? '<img src="' + icon + '" class="icon">' : '').append('<span class="txt">' + data.text + '</span>');
     }
-	$(".select2").each(function() {
-        let customClass = $(this).data("class") || ""; 
 
-        $(this).select2({
+    $(".select2").each(function() {
+        let select = $(this);
+        let customClass = select.data("class") || "";
+
+        let container = select.select2({
             templateResult: formatOption,
             templateSelection: formatOption,
-            dropdownCssClass: customClass,  
-        });
-		
-		let $selectContainer = $(this).next('.select2-container');
-        
-        if (!$selectContainer.hasClass(customClass)) {
-            $selectContainer.addClass(customClass);
+            dropdownCssClass: customClass
+        }).next('.select2-container');
+
+        if (customClass && !container.hasClass(customClass)) {
+            container.addClass(customClass);
         }
+
+        let initialDataClass = select.find("option:selected").data("class");
+        if (initialDataClass) container.attr("data-class", initialDataClass);
+
+        select.on("change", function() {
+            let newDataClass = $(this).find("option:selected").data("class") || '';
+            container.attr("data-class", newDataClass);
+        });
     });
 });
 
@@ -169,7 +167,6 @@ $(".modal .close_btn").click(function () {
 	$("body").removeClass("hidden")
 	$(".modal").removeClass("show")
 })
-
 $(document).mouseup(function (e) {
 	if ($(".modal .modal_box").has(e.target).length === 0 && $(".ui-datepicker").has(e.target).length === 0) {
 		$("body").removeClass("hidden")
@@ -182,56 +179,66 @@ $(document).mouseup(function (e) {
 $(".popup .pop_close").click(function () {
 	$(this).closest(".popup").removeClass("show")
 })
-
 $(document).mouseup(function (e) {
 	if ($(".popup").has(e.target).length === 0 ) {
 		$(".popup").removeClass("show")
 	}
 });
 
+$(".opt_popup .opt_popbtn").click(function () {
+    const popup = $(this).closest(".opt_popup");
+    popup.find(".opt_popbtn").removeClass("selected");
+    $(this).addClass("selected");
 
-/* 카테고리 기능 */
-$(document).ready(function () {
-    if ($('.list_swiper').length) {
-        const initialSlide = $('.list_swiper').attr('data-initial') || 0;        
-        const list_swiper = new Swiper('.list_swiper', {
-            speed: 500,
-            slidesPerView: 'auto',
-			spaceBetween: 8,
-            initialSlide: initialSlide,
-			allowSlideClick: false,
-			slideToClickedSlide: false,
-			touchMoveStopPropagation: false,
-			breakpoints: { 
-				1080: {
-					direction: 'vertical',
-					spaceBetween: 0,
-				}, 
-			}
-        });
-
-        $(list_swiper.slides).each(function () {
-            $(this).removeClass('swiper-slide-active');
-        });
-
-		const activeSlide = list_swiper.slides[initialSlide];
-        // $(activeSlide).addClass('on');
+    const input = $(this).find('input[type="radio"]');
+    if (input.length) {
+        input.prop("checked", true).trigger("change");
     }
 });
+$(".opt_popup .opt_close").click(function () {
+	$(".opt_popup").removeClass("show")
+})
 
 
-// 사진 등록
+// 네비게이션 버튼
+$(".navigation .nav_btn").click(function () {
+	$(".layout").toggleClass("closed")
+})
+
+$(".navigation .nav_open").click(function () {
+	$(".layout").removeClass("closed")
+})
+
+
+// 네비게이션 툴팁
+$(".navigation .nav .acc_tit").hover(
+  function () { $(this).addClass("hover"); },
+  function () { $(this).removeClass("hover");}
+);
+
+
+// 헤더 툴팁
+$(".page_header .btn").hover(
+  function () { $(this).addClass("hover"); },
+  function () { $(this).removeClass("hover");}
+);
+
+
+// 첨부파일 업로드
 $(document).ready(function () {
-    $('.photo_box').each(function () {
+    $('.file_upload').each(function () {
         const photoBox = $(this);
-        const inputPhoto = photoBox.find('.input_photo');
+        const wrapper = photoBox.closest('.input_filebox'); 
+        const inputFile = wrapper.find('.input_file');
         const delBtn = photoBox.find('.del_btn');
         const uploadBox = photoBox.find('.upload_box');
+        const fileNameBox = wrapper.find('.filename');
 
         function handleFileUpload(file) {
-            const maxSize = inputPhoto.data('size');
+            const maxSize = inputFile.data('size');
             const sizeInBytes = convertSizeToBytes(maxSize);
-            const allowedTypes = inputPhoto.data('accept').split(',').map(type => type.trim().toLowerCase());
+            const allowedTypes = inputFile.data('accept').split(',')
+                .map(type => type.trim().toLowerCase());
 
             if (file.size > sizeInBytes) {
                 alert(`파일 크기는 ${maxSize} 이하로 업로드해야 합니다.`);
@@ -249,6 +256,8 @@ $(document).ready(function () {
             } else {
                 handleImageUpload(file);
             }
+
+            fileNameBox.text(file.name); // 파일명 표시
         }
 
         function handlePdfUpload(file) {
@@ -270,7 +279,9 @@ $(document).ready(function () {
                             canvasContext: context,
                             viewport: viewport
                         }).promise.then(function () {
-                            const img = $('<img class="img" />').attr('src', canvas.toDataURL()).attr('alt', 'PDF Thumbnail');
+                            const img = $('<img class="img" />')
+                                .attr('src', canvas.toDataURL())
+                                .attr('alt', 'PDF Thumbnail');
                             uploadBox.empty().append(img).addClass('uploaded');
                             delBtn.show();
                         });
@@ -285,7 +296,9 @@ $(document).ready(function () {
         function handleImageUpload(file) {
             const reader = new FileReader();
             reader.onload = function(e) {
-                const img = $('<img class="img" />').attr('src', e.target.result).attr('alt', '이미지 업로드');
+                const img = $('<img class="img" />')
+                    .attr('src', e.target.result)
+                    .attr('alt', '이미지 업로드');
                 uploadBox.empty().append(img).addClass('uploaded');
                 delBtn.show();
             };
@@ -303,7 +316,7 @@ $(document).ready(function () {
             }
         }
 
-        inputPhoto.on('change', function (e) {
+        inputFile.on('change', function (e) {
             const file = e.target.files[0];
             if (file) handleFileUpload(file);
         });
@@ -311,11 +324,12 @@ $(document).ready(function () {
         delBtn.on('click', function () {
             uploadBox.empty().removeClass('uploaded');
             delBtn.hide();
-            inputPhoto.val('');
+            inputFile.val('');
+            fileNameBox.text('');
         });
 
         uploadBox.on('click', function () {
-            inputPhoto.click();
+            inputFile.click();
         });
 
         uploadBox.on('dragover', function (e) {
@@ -335,66 +349,41 @@ $(document).ready(function () {
         });
     });
 });
+;
 
 
-
-// 자격증 검색 팝업
-$(document).ready(function () {
-	$('.select_btn').on('click', function () {
-        const popup = $(this).next('.select_popup');
-        if (popup.hasClass('show')) {
-            popup.removeClass('show');
-			$('.select_popup .medium_navitem').removeClass("show")
-        } else {
-            popup.addClass('show');
-        }
-    });
-
-	$('.select_popup .medium_navitem .sel_nav').on('click', function () {
-        const selectedItem = $(this);
-        const selectedText = $(this).find('.txt').text();
-		$('.select_popup .medium_navitem .sel_nav').removeClass("on")
-		selectedItem.addClass("on")
-        $(this).closest('.select_box').find('.select_btn .txt').text(selectedText); 
-
-        $('.select_popup').removeClass('show'); 
-		$('.select_popup .medium_navitem').removeClass("show")
-    });
-
-	$('.select_popup .major_navbox .next_btn').on('click', function () {
-        if ($('.select_popup .major_navbox .sel_nav.on').length > 0) {
-            $('.select_popup .medium_navitem').addClass("show");
-        } 
-    });
-
-	$('.select_popup .close_btn').on('click', function () {
-		$(this).closest(".select_popup").removeClass("show")
-		$('.select_popup .medium_navitem').removeClass("show")
-    });
-});
-
-$(document).mouseup(function (e) {
-	if ($(".select_btn").has(e.target).length === 0 && $(".select_popup").has(e.target).length === 0) {
-		$(".select_popup").removeClass("show")
-		$('.select_popup .medium_navitem').removeClass("show")
-	}
+// 라벨 체크박스
+$(".form_label .input_check").on("change", function () {
+  const parent = $(this).closest(".form_label");
+  if ($(this).is(":checked")) {
+    parent.addClass("checked");
+  } else {
+    parent.removeClass("checked");
+  }
 });
 
 
-// 헤더 모바일 버튼
-$(document).ready(function () {
-	$('.v_header .name_btn').on('click', function () {
-        const popup = $('.v_header .sidebox');
-        if (popup.hasClass('show')) {
-            popup.removeClass('show');
-        } else {
-            popup.addClass('show');
-        }
+// 테이블 전체 체크
+$(function() {
+    let table = $(".tbl");
+
+    table.find(".allCheck").on("change", function() {
+        let checked = $(this).prop("checked");
+        table.find('td[data-th="checkbox"] .input_check').prop("checked", checked);
+    });
+
+    table.on("change", 'td[data-th="checkbox"] .input_check', function() {
+        let total = table.find('td[data-th="checkbox"] .input_check').length;
+        let checkedCount = table.find('td[data-th="checkbox"] .input_check:checked').length;
+        table.find(".allCheck").prop("checked", total === checkedCount);
     });
 });
 
-$(document).mouseup(function (e) {
-	if ($(".v_header .name_btn").has(e.target).length === 0 && $(".v_header .sidebox").has(e.target).length === 0) {
-		$(".v_header .sidebox").removeClass("show")
-	}
-});
+
+// 알럿 버튼
+$(".alert_box .alert_btn").hover(
+  function () { $(this).siblings(".alert_popup").addClass("show");},
+  function () { $(this).siblings(".alert_popup").removeClass("show"); }
+);
+
+
