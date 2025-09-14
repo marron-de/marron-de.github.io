@@ -716,6 +716,7 @@ $(document).ready(function () {
 });
 
 
+// 모바일 UI Bar
 $(function () {
   function checkUIBars() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -736,4 +737,158 @@ $(function () {
 
   $(window).on('resize orientationchange scroll', checkUIBars);
   checkUIBars();
+});
+
+
+
+// 25.09.14 작업
+// countUp
+$(document).ready(function() {
+  const CountUpCtor = window.countUp && window.countUp.CountUp;
+  if (!CountUpCtor) return console.error('CountUp not found');
+
+  $('.countup').each(function() {
+    const el = $(this);
+    const target = el.data('target') || 0;
+    const duration = (el.data('time') || 2000) / 1000;
+    const delay = el.data('delay') || 0;
+
+    const counter = new CountUpCtor(this, target, {
+      duration: duration,
+      separator: ',',
+    });
+
+    setTimeout(() => {
+      if (!counter.error) counter.start();
+      else console.error(counter.error);
+    }, delay);
+  });
+});
+
+
+// 캐릭터키우기 입력폼
+$(document).ready(function() {
+  const wishes = [
+    "모두 행복하게 해주세요~",
+    "건강하게 해주세요~",
+    "소망이 이루어지게 해주세요~",
+    "행복한 하루 보내게 해주세요~",
+    "모든 일이 잘 풀리게 해주세요~"
+  ];
+
+  $('.input_switch').on('change', function() {
+    const inputBox = $(this).closest('.inputbox');
+    const textarea = inputBox.find('.textarea');
+
+    if ($(this).is(':checked')) {
+      inputBox.addClass('wished');
+      const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+      textarea.val(randomWish);
+    } else {
+      inputBox.removeClass('wished');
+      textarea.val('');
+    }
+  });
+});
+
+
+// 캐릭터키우기 보상팝업 countUp & 폭죽
+$(document).ready(function() {
+  const modal = $('#reward_modal');
+  let wasShown = false;
+
+  function startCount(el, callback) {
+    const target = parseInt(el.data('target'), 10) || 0;
+    const duration = parseInt(el.data('time'), 10) || 1000;
+    const digits = el.find('.digit');
+    const startTime = performance.now();
+
+    function animate(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const current = Math.floor(target * progress);
+      const str = current.toString().padStart(digits.length, '0');
+      digits.each((i, d) => { d.textContent = str[i]; });
+      if (progress < 1) requestAnimationFrame(animate);
+      else if (typeof callback === 'function') callback();
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  function runCount() {
+    const groups = modal.find('.countup_group');
+    let completed = 0;
+
+    const rect = modal[0].getBoundingClientRect();
+    const x = (rect.left + rect.width / 2) / window.innerWidth;
+    const y = (rect.top + rect.height / 2) / window.innerHeight + 0.05;
+
+    groups.each(function() {
+      startCount($(this), () => {
+        completed++;
+        if (completed === groups.length && window.confetti) {
+          confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { x: x, y: y }
+          });
+        }
+      });
+    });
+  }
+
+  if (modal.hasClass('show')) {
+    runCount();
+    wasShown = true;
+  }
+
+  function checkModal() {
+    const isShown = modal.hasClass('show');
+    if (isShown && !wasShown) {
+      runCount();
+    } else if (!isShown && wasShown) {
+      modal.find('.countup_group').each(function() {
+        $(this).find('.digit').text('0');
+      });
+    }
+    wasShown = isShown;
+  }
+
+  setInterval(checkModal, 50);
+});
+
+
+// 로그인 배경 슬라이드
+const loginbg_slider = new Swiper(".loginbg_slider", {
+	loop: true,
+	speed: 500,		
+	observer: true,  
+	observeParents: true,  
+	effect : 'fade',
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+});
+
+
+// 아이디 로그인 팝업
+function idLoginModal() {
+  $(".idLogin_modal").addClass("show");
+}
+
+
+/* 마이페이지 쿠폰 등록 */
+$(document).ready(function() {
+  $('.coupon_wrap .coupon_input .input').on('input', function() {
+    let value = $(this).val().replace(/-/g, ''); 
+    value = value.substring(0, 15); 
+    const parts = [];
+
+    for (let i = 0; i < value.length; i += 5) {
+      parts.push(value.substring(i, i + 5));
+    }
+
+    $(this).val(parts.join('-'));
+  });
 });
