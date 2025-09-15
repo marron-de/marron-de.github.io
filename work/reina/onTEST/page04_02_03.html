@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onTEST</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- chart.js -->
+    <script src="js/chart.js"></script>
+    <script src="js/chartjs-plugin-datalabels.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal type2 examInputPopup show" id="totalExamInputPopup">
+            <div class="modal_box">
+				<div class="modal_head">
+					<p class="h_title">문제 입력</p>
+					<button type="button" class="close_btn"></button>
+				</div>
+				<div class="modal_body">
+					<div class="form_box wrap">
+						<div class="form_item w50">
+							<div class="input_box">
+								<label class="label_text">문제 유형</label>
+								<div class="select_box">
+									<select class="select select2">
+										<option value="01. 수리 영역">01. 수리 영역</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box line_ver">
+								<label class="label_text">
+									개별 문제등록 문항선택 <span class="point">05</span>
+								</label>
+								<div class="input_flex between">
+									<div class="tab_btnbox">
+										<button type="button" class="tab_btn active">문항 1</button>
+										<button type="button" class="tab_btn">문항 2</button>
+										<button type="button" class="tab_btn">문항 3</button>
+										<button type="button" class="tab_btn">문항 4</button>
+										<button type="button" class="tab_btn">문항 5</button>
+									</div>
+									<button type="button" class="form_labelbtn auto examImport_btn">
+										<img src="img/ico_arrowleft.png" alt="" class="icon">
+										<span class="txt">문제 가져오기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">안내문 설정</label>
+								<div class="input_flex">
+									<div class="form_label w50">
+										<div class="switch_box reverse">
+											<input type="checkbox" name="frm_Guide" id="frm_Guide" class="input_switch" checked="">
+											<label for="frm_Guide" class="label_switch between">안내문 포함</label>
+										</div>
+									</div>
+									<p class="alert_txt w50">
+										<img src="img/ico_alert2.png" alt="" class="icon">
+										<span class="txt">
+											객관식 (복수정답의 경우 정답을 ;(세미클론)으로 구분하여 입력해주세요.
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">문항명</label>
+								<div class="input_flex">
+									<input type="text" class="input_text w50" placeholder="수리 1번">
+									<p class="alert_txt w50">
+										<img src="img/ico_alert2.png" alt="" class="icon">
+										<span class="txt">
+											실제 시험지에는 표시되지 않고, 관리상 필요한 항목입니다.
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">문제입력</label>
+								<div class="input_editorbox">
+									<div class="editor">
+										<div class="item item1">
+											<select class="editor_select">
+												<option value="나눔고딕" selected="">나눔고딕</option>
+												<option value="프리텐다드">프리텐다드</option>
+											</select>
+										</div>
+										<div class="bar"></div>
+										<div class="item item2">
+											<select class="editor_select">
+												<option value="제목1">제목1</option>
+												<option value="제목2">제목2</option>
+												<option value="제목3">제목3</option>
+												<option value="본문1">본문1</option>
+												<option value="본문2">본문2</option>
+												<option value="본문3" selected="">본문3</option>
+											</select>
+										</div>
+										<div class="bar"></div>
+										<div class="item item3">
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon1.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon2.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon3.png" alt="">
+											</button>
+										</div>
+										<div class="bar"></div>
+										<div class="item item4">
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon4.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon5.png" alt="">
+											</button>
+										</div>
+										<div class="bar"></div>
+										<div class="item item5">
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon6.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon7.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon8.png" alt="">
+											</button>
+										</div>
+									</div>
+									<textarea class="input_text h192" placeholder="내용을 입력해주세요"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="from_line"></div>
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">보기입력 유형</label>
+								<div class="form_label padding">
+									<div class="form_flex full">
+										<div class="form_label2 auto w218">
+											<div class="select_box">
+												<select class="select select2" data-class="ver2">
+													<option value="객관식" data-class="typeA">객관식</option>
+													<option value="주관식 (단답형)" data-class="typeC">주관식 (단답형)</option>
+													<option value="서술형" data-class="typeD" selected>서술형</option>
+												</select>
+											</div>
+										</div>
+										<div class="input_flex gap2">
+											<span class="input_txt bold">보기표시 형태</span>
+											<div class="radio_wrap">
+												<div class="radio_box">
+													<input type="radio" name="fileOption" id="fileOption_none" class="input_radio" checked>
+													<label for="fileOption_none" class="label_radio">파일첨부 기능 사용 안함</label>
+												</div>
+												<div class="radio_box">
+													<input type="radio" name="fileOption" id="fileOption_use" class="input_radio">
+													<label for="fileOption_use" class="label_radio">파일첨부 기능 사용</label>
+												</div>
+												<div class="radio_box">
+													<input type="radio" name="fileOption" id="fileOption_only" class="input_radio">
+													<label for="fileOption_only" class="label_radio">파일첨부만 가능</label>
+												</div>
+											</div>
+										</div>
+										<div class="input_flex gap2 full">
+											<span class="input_txt bold input_flex gap1">
+												난이도
+												<div class="alert_box">
+													<button type="button" class="icon_btn small alert_btn">
+														<img src="img/ico_info.png" alt="" class="icon">
+													</button>
+													<div class="alert_popup">
+														<div class="box">
+															난이도를 상, 중 하로 설정할 수 있으며 각각 <br>
+															01, 02, 03입니다.
+														</div>
+													</div>
+												</div>
+											</span>
+											<div class="select_box">
+												<select class="select select2">
+													<option value="01">01</option>
+													<option value="02">02</option>
+													<option value="03">03</option>
+													<option value="04">04</option>
+													<option value="05" selected>05</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">해설입력</label>
+								<div class="form_label align_start auto">
+									<div class="radio_wrap">
+										<div class="radio_box">
+											<input type="radio" name="commentary" id="commentary_use" class="input_radio" checked>
+											<label for="commentary_use" class="label_radio">미사용</label>
+										</div>
+										<div class="radio_box">
+											<input type="radio" name="commentary" id="commentary_ususe" class="input_radio">
+											<label for="commentary_ususe" class="label_radio">사용</label>
+										</div>
+									</div>
+								</div>
+								<div class="input_editorbox">
+									<div class="editor">
+										<div class="item item1">
+											<select class="editor_select">
+												<option value="나눔고딕" selected="">나눔고딕</option>
+												<option value="프리텐다드">프리텐다드</option>
+											</select>
+										</div>
+										<div class="bar"></div>
+										<div class="item item2">
+											<select class="editor_select">
+												<option value="제목1">제목1</option>
+												<option value="제목2">제목2</option>
+												<option value="제목3">제목3</option>
+												<option value="본문1">본문1</option>
+												<option value="본문2">본문2</option>
+												<option value="본문3" selected="">본문3</option>
+											</select>
+										</div>
+										<div class="bar"></div>
+										<div class="item item3">
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon1.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon2.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon3.png" alt="">
+											</button>
+										</div>
+										<div class="bar"></div>
+										<div class="item item4">
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon4.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon5.png" alt="">
+											</button>
+										</div>
+										<div class="bar"></div>
+										<div class="item item5">
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon6.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon7.png" alt="">
+											</button>
+											<button type="button" class="icon_btn">
+												<img src="img/editor_fontIcon8.png" alt="">
+											</button>
+										</div>
+									</div>
+									<textarea class="input_text h192" placeholder="내용을 입력해주세요"></textarea>
+								</div>
+							</div>
+						</div>						
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">정답입력</label>
+								<p class="alert_txt">
+									<img src="img/ico_alert2.png" alt="" class="icon">
+									<span class="txt">
+										서술형의 경우 정답입력이 없습니다.
+									</span>
+								</p>
+							</div>
+						</div>						
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">예외 처리</label>
+								<div class="form_label align_start auto">
+									<div class="radio_wrap">
+										<div class="radio_box">
+											<input type="radio" name="exceptionType" id="exceptionType1" class="input_radio" checked>
+											<label for="exceptionType1" class="label_radio">채점제외</label>
+										</div>
+										<div class="radio_box">
+											<input type="radio" name="exceptionType" id="exceptionType2" class="input_radio">
+											<label for="exceptionType2" class="label_radio">모두 정답</label>
+										</div>
+										<div class="radio_box">
+											<input type="radio" name="exceptionType" id="exceptionType3" class="input_radio">
+											<label for="exceptionType3" class="label_radio">푼 경우 정답</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="modal_foot">
+					<button type="button" class="btn typeD auto">문제은행 저장</button>
+					<button type="button" class="btn auto">입력 완료</button>
+				</div>
+
+				<!-- 문제은행에거 가져오기 -->
+				<div class="examImport_box">
+					<div class="innerbox">
+						<div class="headbox">
+							<p class="tit">문제은행에서 가져오기</p>
+						</div>
+						<div class="bodybox">
+							<div class="form_box">
+								<div class="import_item">
+									<p class="alert_txt">
+										<img src="img/ico_alert2.png" alt="" class="icon">
+										<span class="txt">
+											가져올 문제를 선택 후 가져오기 버튼을 눌러주세요. 클릭한 순서대로 입력됩니다.
+										</span>
+									</p>
+									<div class="btnbox">
+										<button type="button" class="btn icon_ver2">
+											<img src="img/ico_arrowdown.png" alt="" class="icon">
+											<span class="txt">펼치기</span>
+										</button>
+										<button type="button" class="btn icon_ver2">
+											<img src="img/ico_arrowup.png" alt="" class="icon">
+											<span class="txt">닫기</span>
+										</button>
+									</div>
+									<div class="directory_box">
+										<div class="directory_item cat1">
+											<div class="path_box">
+												<div class="path"></div>
+												<button type="button" class="path_btn"></button>
+											</div>
+											<div class="item_box">
+												<div class="title">
+													<div class="icon_box">
+														<img src="img/ico_folder2.png" alt="" class="icon">
+													</div>
+													<div class="check_box">
+														<input type="checkbox" class="input_check" name="directory1" id="directory1">
+														<label for="directory1" class="label_check">
+															모듈 <span class="point">(1)</span>
+														</label>
+													</div>
+												</div>
+												<div class="directory_item cat2">
+													<div class="path_box">
+														<div class="path"></div>
+														<button type="button" class="path_btn"></button>
+													</div>
+													<div class="item_box">
+														<div class="title">
+															<div class="icon_box">
+																<img src="img/ico_doc.png" alt="" class="icon">
+															</div>
+															<div class="check_box">
+																<input type="checkbox" class="input_check" name="directory2" id="directory2">
+																<label for="directory2" class="label_check">
+																	유형 <span class="point">(1)</span>
+																</label>
+															</div>
+														</div>
+														<div class="directory_item cat3">
+															<div class="path_box">
+																<div class="path"></div>
+																<button type="button" class="path_btn"></button>
+															</div>
+															<div class="item_box">
+																<div class="title">
+																	<div class="icon_box">
+																		<img src="img/ico_doc.png" alt="" class="icon">
+																	</div>
+																	<div class="check_box">
+																		<input type="checkbox" class="input_check" name="directory3" id="directory3">
+																		<label for="directory3" class="label_check">
+																			세부유형 <span class="point">(1)</span>
+																		</label>
+																	</div>
+																</div>
+																<div class="directory_item cat4">
+																	<div class="path_box">
+																		<div class="path"></div>
+																	</div>										
+																	<div class="item_box">
+																		<div class="title">
+																			<div class="icon_box">
+																				<img src="img/ico_exam.png" alt="" class="icon">
+																			</div>
+																			<div class="check_box">
+																				<input type="checkbox" class="input_check" name="directory4" id="directory4">
+																				<label for="directory4" class="label_check">
+																					문제 <span class="point">(1)</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form_item">
+									<div class="input_box">
+										<label class="label_text">입력문제 설정</label>
+										<div class="form_label padding">
+											<div class="form_flex full">
+												<div class="form_label2 auto w320">
+													<div class="select_box">
+														<select class="select select2" data-class="ver2">
+															<option value="전체 문항" data-class="typeA" selected>전체 문항</option>
+															<option value="일부 문항" data-class="typeC">일부 문항</option>
+														</select>
+													</div>
+												</div>
+												<div class="input_flex gap2 full">		
+													<div class="check_box">
+														<input type="checkbox" class="input_check" id="setDifficulty" name="setDifficulty" checked>
+														<label for="setDifficulty" class="label_check">난이도 설정</label>
+													</div>
+													<div class="check_box">
+														<input type="checkbox" class="input_check" id="randomInput" name="randomInput">
+														<label for="randomInput" class="label_check">랜덤 입력</label>
+													</div>
+												</div>
+												<p class="input_point color2">20문항</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form_item">
+									<div class="input_box">
+										<label class="label_text">난이도별 비율 설정</label>
+										<div class="form_label padding">
+											<div class="form_flex full">
+												<div class="input_flex gap2">	
+													<div class="input_txt bold">상</div>
+													<div class="select_box w120">
+														<select class="select select2">
+															<option value="5%">5%</option>
+															<option value="10%">10%</option>
+															<option value="15%">15%</option>
+															<option value="20%">20%</option>
+															<option value="25%">25%</option>
+															<option value="30%">30%</option>
+															<option value="35%" selected>35%</option>
+															<option value="40%">40%</option>
+															<option value="45%">45%</option>
+															<option value="50%">50%</option>
+															<option value="55%">55%</option>
+															<option value="60%">60%</option>
+															<option value="65%">65%</option>
+															<option value="70%">70%</option>
+															<option value="75%">75%</option>
+															<option value="80%">80%</option>
+															<option value="85%">85%</option>
+															<option value="90%">90%</option>
+															<option value="95%">95%</option>
+															<option value="100%">100%</option>
+														</select>
+													</div>
+												</div>
+												<div class="input_flex gap2">	
+													<div class="input_txt bold">중</div>
+													<div class="select_box w120">
+														<select class="select select2">
+															<option value="5%">5%</option>
+															<option value="10%">10%</option>
+															<option value="15%">15%</option>
+															<option value="20%">20%</option>
+															<option value="25%">25%</option>
+															<option value="30%">30%</option>
+															<option value="35%" selected>35%</option>
+															<option value="40%">40%</option>
+															<option value="45%">45%</option>
+															<option value="50%">50%</option>
+															<option value="55%">55%</option>
+															<option value="60%">60%</option>
+															<option value="65%">65%</option>
+															<option value="70%">70%</option>
+															<option value="75%">75%</option>
+															<option value="80%">80%</option>
+															<option value="85%">85%</option>
+															<option value="90%">90%</option>
+															<option value="95%">95%</option>
+															<option value="100%">100%</option>
+														</select>
+													</div>
+												</div>
+												<div class="input_flex gap2 full">	
+													<div class="input_txt bold">하</div>
+													<div class="select_box w120">
+														<select class="select select2">
+															<option value="5%">5%</option>
+															<option value="10%">10%</option>
+															<option value="15%">15%</option>
+															<option value="20%">20%</option>
+															<option value="25%">25%</option>
+															<option value="30%">30%</option>
+															<option value="35%" selected>35%</option>
+															<option value="40%">40%</option>
+															<option value="45%">45%</option>
+															<option value="50%">50%</option>
+															<option value="55%">55%</option>
+															<option value="60%">60%</option>
+															<option value="65%">65%</option>
+															<option value="70%">70%</option>
+															<option value="75%">75%</option>
+															<option value="80%">80%</option>
+															<option value="85%">85%</option>
+															<option value="90%">90%</option>
+															<option value="95%">95%</option>
+															<option value="100%">100%</option>
+														</select>
+													</div>
+												</div>
+												<p class="input_point color1">100%</p>
+											</div>
+										</div>
+										<p class="alert_txt">
+											<img src="img/ico_alert2.png" alt="" class="icon">
+											<span class="txt">
+												설정된 문제 수보다 선택된 문제 수가 더 많은 경우 설정된 문제 수 만큼 입력됩니다.
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footbox">
+							<button type="button" class="btn auto">입력 완료</button>
+						</div>
+						<button type="button" class="">
+							<img src="img/ico_arrowright.png" alt="" class="examImport_close">
+						</button>
+					</div>
+				</div>
+			</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

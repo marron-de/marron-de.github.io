@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onTEST</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- chart.js -->
+    <script src="js/chart.js"></script>
+    <script src="js/chartjs-plugin-datalabels.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal type2 examBank_modal show" id="examBankDirectlyPopup">
+            <div class="modal_box">
+				<div class="modal_head">
+					<p class="h_title">문제은행에서 바로 출제</p>
+					<button type="button" class="close_btn"></button>
+				</div>
+				<div class="modal_body">			
+					<div class="form_box gap1">
+						<div class="form_item">
+							<div class="input_flex gap2">
+								<button type="button" class="btn icon_ver2">
+									<img src="img/ico_arrowdown.png" alt="" class="icon">
+									<span class="txt">펼치기</span>
+								</button>
+								<button type="button" class="btn icon_ver2">
+									<img src="img/ico_arrowup.png" alt="" class="icon">
+									<span class="txt">닫기</span>
+								</button>
+							</div>					
+						</div>
+						<div class="form_item">		
+							<div class="directory_box h265">
+								<div class="directory_item cat1">
+									<div class="path_box">
+										<div class="path"></div>
+										<button type="button" class="path_btn"></button>
+									</div>
+									<div class="item_box">
+										<div class="title">
+											<div class="icon_box">
+												<img src="img/ico_folder2.png" alt="" class="icon">
+											</div>
+											<div class="check_box">
+												<input type="checkbox" class="input_check" name="directory1" id="directory1">
+												<label for="directory1" class="label_check">
+													모듈 <span class="point">(1)</span>
+												</label>
+											</div>
+										</div>
+										<div class="directory_item cat2">
+											<div class="path_box">
+												<div class="path"></div>
+												<button type="button" class="path_btn"></button>
+											</div>
+											<div class="item_box">
+												<div class="title">
+													<div class="icon_box">
+														<img src="img/ico_doc.png" alt="" class="icon">
+													</div>
+													<div class="check_box">
+														<input type="checkbox" class="input_check" name="directory2" id="directory2">
+														<label for="directory2" class="label_check">
+															유형 <span class="point">(1)</span>
+														</label>
+													</div>
+												</div>
+												<div class="directory_item cat3">
+													<div class="path_box">
+														<div class="path"></div>
+														<button type="button" class="path_btn"></button>
+													</div>
+													<div class="item_box">
+														<div class="title">
+															<div class="icon_box">
+																<img src="img/ico_doc.png" alt="" class="icon">
+															</div>
+															<div class="check_box">
+																<input type="checkbox" class="input_check" name="directory3" id="directory3">
+																<label for="directory3" class="label_check">
+																	세부유형 <span class="point">(1)</span>
+																</label>
+															</div>
+														</div>
+														<div class="directory_item cat4">
+															<div class="path_box">
+																<div class="path"></div>
+															</div>										
+															<div class="item_box">
+																<div class="title">
+																	<div class="icon_box">
+																		<img src="img/ico_exam.png" alt="" class="icon">
+																	</div>
+																	<div class="check_box">
+																		<input type="checkbox" class="input_check" name="directory4" id="directory4">
+																		<label for="directory4" class="label_check">
+																			문제 <span class="point">(1)</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<label class="label_text">난이도별 비율 설정</label>
+								<div class="form_label padding">
+									<div class="form_flex full">
+										<div class="input_flex full">	
+											<div class="input_txt bold">상</div>
+											<div class="select_box">
+												<select class="select select2">
+													<option value="5%">5%</option>
+													<option value="10%">10%</option>
+													<option value="15%">15%</option>
+													<option value="20%">20%</option>
+													<option value="25%">25%</option>
+													<option value="30%">30%</option>
+													<option value="35%" selected>35%</option>
+													<option value="40%">40%</option>
+													<option value="45%">45%</option>
+													<option value="50%">50%</option>
+													<option value="55%">55%</option>
+													<option value="60%">60%</option>
+													<option value="65%">65%</option>
+													<option value="70%">70%</option>
+													<option value="75%">75%</option>
+													<option value="80%">80%</option>
+													<option value="85%">85%</option>
+													<option value="90%">90%</option>
+													<option value="95%">95%</option>
+													<option value="100%">100%</option>
+												</select>
+											</div>
+										</div>
+										<div class="input_flex full">	
+											<div class="input_txt bold">중</div>
+											<div class="select_box">
+												<select class="select select2">
+													<option value="5%">5%</option>
+													<option value="10%">10%</option>
+													<option value="15%">15%</option>
+													<option value="20%">20%</option>
+													<option value="25%">25%</option>
+													<option value="30%">30%</option>
+													<option value="35%" selected>35%</option>
+													<option value="40%">40%</option>
+													<option value="45%">45%</option>
+													<option value="50%">50%</option>
+													<option value="55%">55%</option>
+													<option value="60%">60%</option>
+													<option value="65%">65%</option>
+													<option value="70%">70%</option>
+													<option value="75%">75%</option>
+													<option value="80%">80%</option>
+													<option value="85%">85%</option>
+													<option value="90%">90%</option>
+													<option value="95%">95%</option>
+													<option value="100%">100%</option>
+												</select>
+											</div>
+										</div>
+										<div class="input_flex full">	
+											<div class="input_txt bold">하</div>
+											<div class="select_box">
+												<select class="select select2">
+													<option value="5%">5%</option>
+													<option value="10%">10%</option>
+													<option value="15%">15%</option>
+													<option value="20%">20%</option>
+													<option value="25%">25%</option>
+													<option value="30%">30%</option>
+													<option value="35%" selected>35%</option>
+													<option value="40%">40%</option>
+													<option value="45%">45%</option>
+													<option value="50%">50%</option>
+													<option value="55%">55%</option>
+													<option value="60%">60%</option>
+													<option value="65%">65%</option>
+													<option value="70%">70%</option>
+													<option value="75%">75%</option>
+													<option value="80%">80%</option>
+													<option value="85%">85%</option>
+													<option value="90%">90%</option>
+													<option value="95%">95%</option>
+													<option value="100%">100%</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="input_flex between">
+									<p class="input_point color1">100%</p>
+									<p class="input_point color2">20문항</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal_foot">
+					<button type="button" class="btn">설정완료</button>
+				</div>
+			</div>
+        </div>
+
+    </div>
+
+
+
+	<!-- pdf -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+	
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

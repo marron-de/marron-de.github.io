@@ -160,7 +160,9 @@ $(function() {
         });
     });
 });
-
+$(document).on("mouseup", ".select2-dropdown, .select2-dropdown *", function (e) {
+    e.stopPropagation();
+});
 
 // 모달 공통
 $(".modal .close_btn").click(function () {
@@ -257,7 +259,7 @@ $(document).ready(function () {
                 handleImageUpload(file);
             }
 
-            fileNameBox.text(file.name); // 파일명 표시
+            fileNameBox.text(file.name); 
         }
 
         function handlePdfUpload(file) {
@@ -349,7 +351,6 @@ $(document).ready(function () {
         });
     });
 });
-;
 
 
 // 라벨 체크박스
@@ -386,4 +387,15 @@ $(".alert_box .alert_btn").hover(
   function () { $(this).siblings(".alert_popup").removeClass("show"); }
 );
 
+
+/* 문제은행가져오기 팝업 */
+$(".examInputPopup .examImport_btn").click(function () {
+	$(".examInputPopup").addClass("hidden")
+	$(".examInputPopup .examImport_box").addClass("show")
+})
+
+$(".examInputPopup .examImport_close").click(function () {
+	$(".examInputPopup").removeClass("hidden")
+	$(".examInputPopup .examImport_box").removeClass("show")
+})
 
