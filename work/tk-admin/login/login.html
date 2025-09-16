@@ -129,12 +129,16 @@
 							<input class="input_text" id="user_position" name="user_position" type="text" placeholder="직책을 입력해주세요." required/>
 						</div>
 						<div class="input_box">
-							<label class="label_text">휴대폰번호</label>
+							<label class="label_text">이메일 인증</label>
 							<div class="input_flex">
-								<input class="input_text" id="user_phone" name="user_phone" type="text" placeholder="휴대폰번호를 입력해주세요." required/>
-								<button type="button" class="input_btn">인증하기</button>
+								<input class="input_text w160" id="user_email1" name="user_phone" type="text" placeholder="email" required/>
+								<span class="input_txt label_text">@</span>
+								<input class="input_text" id="user_email2" name="user_phone" type="text" placeholder="example.com" required/>
 							</div>
-							<input class="input_text" id="user_talkpw" name="user_talkpw" type="text" placeholder="알림톡 비밀번호를 입력해주세요." required/>
+							<div class="input_flex">
+								<input class="input_text" id="user_emailPw" name="user_emailPw" type="text" placeholder="인증번호 4자리를 입력해주세요" required/>
+								<button type="button" class="input_btn emailPw_btn">인증하기</button>
+							</div>
 						</div>
 					</form>
 					<div class="modal_btnbox">
@@ -156,7 +160,7 @@
 		function handleLogin() {
 			const userId = $("#user_id").val().trim();
 			const userPw = $("#user_pw").val().trim();
-			const userTalkpw = $("#user_talkpw").val().trim();
+			const userEmailPw = $("#user_emailPw").val().trim();
 
 			if (userId === "") {
 				$("#idError_modal").addClass("show");
@@ -168,7 +172,7 @@
 				$("#user_pw").focus();
 				return;
 			}
-			if (userTalkpw === "") {
+			if (userEmailPw === "") {
 				$("#certification_modal").addClass("show");
 				$("#user_name").focus();
 				return;
@@ -177,6 +181,11 @@
 			// 로그인 성공 시 이동
 			window.location.href = "../dashboard/dashboard.html";
 		}
+
+		$("#certification_modal .emailPw_btn").click(function () {
+			$("#user_emailPw").addClass("show")
+		})
+
 	</script>
 
 </body>

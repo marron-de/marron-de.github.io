@@ -4,12 +4,12 @@
 }
 
   
-/* 리셋셋 */
+/* 리셋 */
  * { margin: 0; padding: 0; outline: none; box-sizing: border-box;}
 body {margin: 0; padding: 0; -ms-overflow-style: none; scrollbar-width: none; }
 body::-webkit-scrollbar {display: none;}
 html { scroll-behavior: smooth; }
-html, body {font: 400 1rem/1.3 'Pretendard', sans-serif;  color: #000017; width: 100%; position: relative;}
+html, body {font: 400 14px/1.3 'Pretendard', sans-serif;  color: #000017; width: 100%; position: relative;}
 ul, li {list-style: none;}
 a {text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent;}
 img {max-width: 100%;}
@@ -132,7 +132,7 @@ body.hidden { overflow: hidden;}
 .toast_popup {  position: fixed;  left: 15rem;  top: 3rem;  width: calc(100% - 15rem);   display: flex;  justify-content: center;  transform: translateY(-2.5rem);  z-index: 50;   transition: var(--transition);  opacity: 0;  pointer-events: none;}
 .layout.closed .toast_popup {left: 4.5rem; width: calc(100% - 4.5rem);}
 .toast_popup.show { transform: translateY(0); opacity: 1; pointer-events: auto; }
-.toast_popup .txtbox {border: 2px solid #000; border-radius: 0.5rem; width: 400px; min-height: 3.5rem; display: flex; align-items: center; justify-content: center; gap: 0.25rem;box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2); background: #fff; }
+.toast_popup .txtbox {border: 2px solid #000; border-radius: 0.5rem; width: 25rem; min-height: 3.5rem; display: flex; align-items: center; justify-content: center; gap: 0.25rem;box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2); background: #fff; }
 .toast_popup .txtbox .icon {width: 1.25rem;}
 .toast_popup .txtbox .title {font-weight: 700; font-size: 0.875rem; line-height: 157%; color: #000;}
 
@@ -171,7 +171,7 @@ body.hidden { overflow: hidden;}
 .form_labelbtn {position: relative;  min-height: 3rem; border-radius: 0.5rem; border: 1px solid #d8dadd; background: #fff; padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 0.5rem;font-size: 0.875rem;line-height: 157%;color: #131720; }
 .form_labelbtn .icon{width: 1.5rem;}
 
-.form_flex {display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;}
+.form_flex {display: flex; align-items: center; gap: 0.75rem; }
 .form_flex.column_ver {flex-direction: column; align-items: unset; gap: 1.5rem;}
 .form_flex.between {justify-content: space-between;}
 .form_flex.full {width: 100%;}
@@ -188,12 +188,15 @@ body.hidden { overflow: hidden;}
 .form_flex .w724 { flex: unset; width: 45.25rem;}
 .form_flex .w160 { flex: unset; width: 10rem;}
 .form_flex .w180 { flex: unset; width: 11.25rem;}
+.form_flex .min130 {min-width: max(8.125rem, 130px)}
+.form_flex .full180 { flex: unset; max-width: 11.25rem;}
 
 
 /* 공통 - input */
 .input_box { position: relative; width: 100%; display: flex; flex-direction: column; gap: 0.75rem;}
 .input_box.line_ver {padding-bottom: 1.5rem; border-bottom: 1px solid #dfe5ec;}
 .input_box .input_text { width: 100%;  height: 3rem; background: #f4f6f8; border: 1px solid #f4f6f8;  border-radius: 0.5rem;  padding: 0 0.875rem;  font-size: 0.875rem;   line-height: 157%;  color: #383b40;}
+.input_box .input_text.ver2 { border-color: #d8dadd; background: #fff;}
 .input_box .input_text::placeholder {color: #adb2bb;}
 .input_box .input_text:read-only {background: #f0f1f8; color: #adb2bb;}
 .input_box textarea.input_text {height: 14.5rem; padding: 1rem; resize: none;}
@@ -208,6 +211,7 @@ body.hidden { overflow: hidden;}
 .input_box .align_start{align-self: flex-start;}
 .input_box .align_end{align-self: flex-end;}
 .input_btn { font-weight: 700; font-size: 0.875rem; line-height: 157%;  color: #000;  height: 3rem;  border: 1px solid #adb2bb;  border-radius: 0.5rem; background: #fff;  padding: 0 1.5rem; display: flex; align-items: center; justify-content: center;}
+.input_btn.w100 {width: 6.25rem; padding: 0;}
 .input_btn.icon_ver{width: 3rem; padding: 0;}
 .input_btn.icon_ver .icon {width: 1.5rem;}
 .input_txt {font-size: 0.875rem;line-height: 157%;color: #383b40;}
@@ -219,7 +223,7 @@ body.hidden { overflow: hidden;}
 .input_point.color1 {color: #01a4ff;}
 .input_point.color2 {color: #f9471e;}
 
-.input_flex {display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;}
+.input_flex {display: flex; align-items: center; gap: 0.75rem;}
 .input_flex.between {justify-content: space-between;}
 .input_flex.gap1 {gap: 0.25rem;}
 .input_flex.gap2 {gap: 1rem;}
@@ -304,8 +308,8 @@ overflow: hidden;}
 /* 공통 - switch button */
 .switch_wrap { display: flex; align-items: center; gap: 1rem;}
 .switch_box { display: flex; align-items: center; justify-content: space-between;  gap: 1rem;}
-.switch_box .input_switch { position: relative; width: 2.75rem; height: 1.5rem; appearance: none; background: #d8dadd; border-radius: 100px; cursor: pointer; transition: all 0.4s ease;}
-.switch_box .input_switch::before { content: ""; position: absolute; left: 0.125rem;  top: 50%; transform: translateY(-50%); width: 1.25rem; aspect-ratio: 1 / 1; border-radius: 100px;  box-shadow: 0 0.063rem 0.375rem 0 rgba(0, 0, 0, 0.14); background: #fff; transition: all 0.4s ease;}
+.switch_box .input_switch { position: relative; width: 2.75rem; height: 1.5rem; appearance: none; background: #d8dadd; border-radius: 6.25rem; cursor: pointer; transition: all 0.4s ease;}
+.switch_box .input_switch::before { content: ""; position: absolute; left: 0.125rem;  top: 50%; transform: translateY(-50%); width: 1.25rem; aspect-ratio: 1 / 1; border-radius: 6.25rem;  box-shadow: 0 0.063rem 0.375rem 0 rgba(0, 0, 0, 0.14); background: #fff; transition: all 0.4s ease;}
 .switch_box .input_switch:checked{ background: #000;}
 .switch_box .input_switch:checked::before { left: calc(100% - 1.25rem - 0.125rem);}
 .switch_box .label_switch { word-break: keep-all;  font-size: 0.875rem;  line-height: 157%; color: #383b40; cursor: pointer; display: flex; align-items: center; gap: 0.375rem;}
@@ -412,25 +416,38 @@ overflow: hidden;}
 .directory_box.ver2 { border: none;  padding: 0;}
 .directory_box.h265 {height: 16.563rem;}
 .directory_item {display: flex; align-items: flex-start; gap: 0.25rem;}
-.directory_item .path_box { position: relative;  width: 1.438rem;  aspect-ratio: 1 / 1;}
+.directory_item .path_box { position: relative;  width: 1.438rem; min-width: 1.438rem;  aspect-ratio: 1 / 1;}
 .directory_item .path_box .path {background: url(../img/ico_path.png) no-repeat center/contain; width: 100%; aspect-ratio: 1/1;}
 .directory_item .path_box .path_btn {background: url(../img/ico_square_minus.png) no-repeat center/contain; width: 0.875rem; aspect-ratio: 1/1; position: absolute; left: 0; bottom: 0;}
-.directory_item .item_box {display: flex; flex-direction: column; gap: 0.5rem;  flex: 1;}
+.directory_item .item_box {display: flex; flex-direction: column; gap: 0.5rem;}
 .directory_item .item_box .directory_item {margin-left: 0.25rem;}
-.directory_item .title {display: flex; align-items: center; gap: 0.375rem; margin-top: 0.25rem;}
+.directory_item .title {display: flex; align-items: center; gap: 0.375rem; margin-top: 0.25rem; cursor: pointer;}
 .directory_item .title.mt0 {margin-top: 0;}
-.directory_item .title .icon_box {width: 1.5rem; display: flex; align-items: center; justify-content: center;}
-.directory_item .title .txt_box {font-weight: 400;font-size: 0.875rem;line-height: 157%;color: #383b40;} 
+.directory_item .title .icon_box {width: 1.5rem; min-width: 1.5rem; display: flex; align-items: center; justify-content: center;}
+.directory_item .title .txt_box {font-weight: 400;font-size: 0.875rem;line-height: 157%;color: #383b40; white-space: nowrap;} 
 .directory_item .title .txt_box .point{color: #01a4ff;} 
-.directory_item .title .type_add {margin-left: 0.125rem;}
-.directory_item .title .delete_btn {width: 1rem;}
-.directory_item .title .input_box.w120 { width: 7.5rem;}
-.directory_item .title .input_box .input_text {  border-color: #d8dadd;  background-color: #fff;  width: auto;  height: 2rem;  min-width: 7.5rem;  padding: 0 0.75rem;font-size: 0.813rem;  line-height: 154%;}
+.directory_item .title .type_add {margin-left: 0.125rem; white-space: nowrap; display: none;}
+.directory_item .title .delete_btn {width: 1rem; min-height: 2rem; display: none;}
+.directory_item .title .input_box.w120 { flex: unset; width: 7.5rem;}
+.directory_item .title .input_box .input_text {  border-color: #d8dadd;  background-color: #fff;  width: auto;  height: 2rem;  min-width: 7.5rem;  padding: 0 0.75rem;font-size: 0.813rem;  line-height: 154%; display: none;}
+
+.directory_item .title:not(.input_ver).hover_ver {margin-top: 0; margin-bottom: -0.25rem;} 
+.directory_item .title:not(.input_ver).hover_ver .delete_btn {display: flex;}
+.directory_item .title:not(.input_ver).hover_ver .type_add {display: flex;}
+
+.directory_item .title.input_ver {margin-top: 0; margin-bottom: -0.25rem;}
+.directory_item .title.input_ver .txt_box {display: none;}
+.directory_item .title.input_ver .input_box .input_text {display: block;}
+
+.directory_box.allHide .directory_item .item_box .directory_item.cat2 {display: none;}
 
 .directory_breadcrumb {display: flex; align-items: center; gap: 0.375rem; font-weight: 400;
 font-size: 0.875rem;line-height: 157%;color: #000;}
 .directory_breadcrumb .icon {width: 1.5rem;}
 .directory_breadcrumb .txt {flex: 1;}
+
+.module_Addbox {display: none;}
+.module_Addbox.show {display: flex;}
 
 
 /* 공통 - datepicker */
@@ -500,6 +517,8 @@ font-size: 0.875rem;line-height: 157%;color: #000;}
 .tbl_wrap .tbl tbody tr td .tbl_file {display: inline-flex; align-items: center; gap: 0.625rem;}
 .tbl_wrap .tbl tbody tr td .tbl_file .icon {width: 1.5rem;}
 .tbl_wrap .tbl tbody tr td .part_logo {max-height: 1rem;}
+
+.tbl_wrap .tbl tbody tr td[data-th="시험지 이름"] { min-width: max(6.25rem, 100px);}
 
 .modal .tbl_wrap .tbl {border-top: 1px solid #000; border-bottom: 1px solid #e5e8ec;}
 .modal .tbl_wrap .tbl thead tr th:nth-child(1) {padding-left: 1.5rem}

@@ -178,19 +178,27 @@
 						<div class="form_box wrap gap1">
 							<div class="form_item">
 								<div class="input_flex gap2">
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="direcShow(this)">
 										<img src="img/ico_arrowdown.png" alt="" class="icon">
 										<span class="txt">펼치기</span>
 									</button>
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="direcHide(this)">
 										<img src="img/ico_arrowup.png" alt="" class="icon">
 										<span class="txt">닫기</span>
 									</button>
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="moduleAdd(this)">
 										<img src="img/ico_plus2.png" alt="" class="icon">
 										<span class="txt">모듈추가</span>
 									</button>
-								</div>					
+								</div>				
+							</div>
+							<div class="form_item w50 module_Addbox">
+								<div class="input_box">
+									<div class="input_flex">
+										<input type="text" class="input_text ver2">
+										<button type="button" class="input_btn">저장</button>
+									</div>
+								</div>	
 							</div>
 							<div class="form_item w50">				
 								<div class="directory_box h265">
@@ -205,9 +213,17 @@
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
 												<div class="txt_box">
-													<p class="txt">
-														모듈 <span class="point">(1)</span>
-													</p>
+													<p class="txt">모듈 <span class="point">(1)</span></p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
 												</div>
 											</div>
 											<div class="directory_item cat2">
@@ -215,15 +231,23 @@
 													<div class="path"></div>
 													<button type="button" class="path_btn"></button>
 												</div>
-												<div class="item_box">
+												<div class="item_box">			
 													<div class="title">
 														<div class="icon_box">
 															<img src="img/ico_doc.png" alt="" class="icon">
 														</div>
 														<div class="txt_box">
-															<p class="txt">
-																유형 <span class="point">(1)</span>
-															</p>
+															<p class="txt">유형 <span class="point">(1)</span></p>
+														</div>
+														<button type="button" class="btn small type_add">
+															<img src="img/ico_plus.png" alt="" class="icon">
+															<span class="txt">세부유형 추가</span>
+														</button>
+														<button type="button" class="icon_btn delete_btn">
+															<img src="img/ico_delete.png" alt="" class="icon">
+														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
 														</div>
 													</div>
 													<div class="directory_item cat3">
@@ -237,9 +261,13 @@
 																	<img src="img/ico_doc.png" alt="" class="icon">
 																</div>
 																<div class="txt_box">
-																	<p class="txt">
-																		세부유형 <span class="point">(1)</span>
-																	</p>
+																	<p class="txt">세부유형 <span class="point">(1)</span></p>
+																</div>
+																<button type="button" class="icon_btn delete_btn">
+																	<img src="img/ico_delete.png" alt="" class="icon">
+																</button>
+																<div class="input_box w120">
+																	<input type="text" class="input_text" placeholder="세부유형">
 																</div>
 															</div>
 															<div class="directory_item cat4">
@@ -254,6 +282,12 @@
 																		</div>
 																		<div class="txt_box">
 																			<p class="txt">문제 <span class="point">(1)</span></p>
+																		</div>
+																		<button type="button" class="icon_btn delete_btn">
+																			<img src="img/ico_delete.png" alt="" class="icon">
+																		</button>
+																		<div class="input_box w120">
+																			<input type="text" class="input_text" placeholder="문제 1">
 																		</div>
 																	</div>
 																</div>
@@ -273,24 +307,56 @@
 											<img src="img/ico_info2.png" alt="" class="icon">
 											문제등록 가이드
 										</p>		
-										<div class="directory_box ver2">
+										<div class="directory_box ver2 notHide">
 											<div class="directory_item cat1">
+										<div class="path_box">
+											<div class="path"></div>
+											<button type="button" class="path_btn"></button>
+										</div>
+										<div class="item_box">
+											<div class="title">
+												<div class="icon_box">
+													<img src="img/ico_folder2.png" alt="" class="icon">
+												</div>
+												<div class="txt_box">
+													<p class="txt">모듈 <span class="point">(1)</span></p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
+												</div>
+											</div>
+											<div class="directory_item cat2">
 												<div class="path_box">
 													<div class="path"></div>
 													<button type="button" class="path_btn"></button>
 												</div>
-												<div class="item_box">
+												<div class="item_box">			
 													<div class="title">
 														<div class="icon_box">
-															<img src="img/ico_folder2.png" alt="" class="icon">
+															<img src="img/ico_doc.png" alt="" class="icon">
 														</div>
 														<div class="txt_box">
-															<p class="txt">
-																모듈 <span class="point">(1)</span>
-															</p>
+															<p class="txt">유형 <span class="point">(1)</span></p>
+														</div>
+														<button type="button" class="btn small type_add">
+															<img src="img/ico_plus.png" alt="" class="icon">
+															<span class="txt">세부유형 추가</span>
+														</button>
+														<button type="button" class="icon_btn delete_btn">
+															<img src="img/ico_delete.png" alt="" class="icon">
+														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
 														</div>
 													</div>
-													<div class="directory_item cat2">
+													<div class="directory_item cat3">
 														<div class="path_box">
 															<div class="path"></div>
 															<button type="button" class="path_btn"></button>
@@ -301,41 +367,33 @@
 																	<img src="img/ico_doc.png" alt="" class="icon">
 																</div>
 																<div class="txt_box">
-																	<p class="txt">
-																		유형 <span class="point">(1)</span>
-																	</p>
+																	<p class="txt">세부유형 <span class="point">(1)</span></p>
+																</div>
+																<button type="button" class="icon_btn delete_btn">
+																	<img src="img/ico_delete.png" alt="" class="icon">
+																</button>
+																<div class="input_box w120">
+																	<input type="text" class="input_text" placeholder="세부유형">
 																</div>
 															</div>
-															<div class="directory_item cat3">
+															<div class="directory_item cat4">
 																<div class="path_box">
 																	<div class="path"></div>
 																	<button type="button" class="path_btn"></button>
-																</div>
+																</div>										
 																<div class="item_box">
 																	<div class="title">
 																		<div class="icon_box">
-																			<img src="img/ico_doc.png" alt="" class="icon">
+																			<img src="img/ico_exam.png" alt="" class="icon">
 																		</div>
 																		<div class="txt_box">
-																			<p class="txt">
-																				세부유형 <span class="point">(1)</span>
-																			</p>
+																			<p class="txt">문제 <span class="point">(1)</span></p>
 																		</div>
-																	</div>
-																	<div class="directory_item cat4">
-																		<div class="path_box">
-																			<div class="path"></div>
-																			<button type="button" class="path_btn"></button>
-																		</div>										
-																		<div class="item_box">
-																			<div class="title">
-																				<div class="icon_box">
-																					<img src="img/ico_exam.png" alt="" class="icon">
-																				</div>
-																				<div class="txt_box">
-																					<p class="txt">문제 <span class="point">(1)</span></p>
-																				</div>
-																			</div>
+																		<button type="button" class="icon_btn delete_btn">
+																			<img src="img/ico_delete.png" alt="" class="icon">
+																		</button>
+																		<div class="input_box w120">
+																			<input type="text" class="input_text" placeholder="문제 1">
 																		</div>
 																	</div>
 																</div>
@@ -344,6 +402,8 @@
 													</div>
 												</div>
 											</div>
+										</div>
+									</div>
 										</div>
 										<p class="input_desc2 mt">
 											- 문제은행은 최상위 계층의 모듈부터 유형, 세부유형 그리고 문제로 구성됩니다. <br>
@@ -378,38 +438,27 @@
 						<div class="form_box wrap gap1">
 							<div class="form_item">
 								<div class="input_flex gap2">
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="direcShow(this)">
 										<img src="img/ico_arrowdown.png" alt="" class="icon">
 										<span class="txt">펼치기</span>
 									</button>
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="direcHide(this)">
 										<img src="img/ico_arrowup.png" alt="" class="icon">
 										<span class="txt">닫기</span>
 									</button>
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="moduleAdd(this)">
 										<img src="img/ico_plus2.png" alt="" class="icon">
 										<span class="txt">모듈추가</span>
 									</button>
-								</div>					
+								</div>				
 							</div>
-							<div class="form_item w50">				
-								<div class="directory_box h265">
-									<div class="directory_item cat1">
-										<div class="path_box">
-											<div class="path"></div>
-										</div>
-										<div class="item_box ">
-											<div class="title">
-												<div class="icon_box">
-													<img src="img/ico_folder2.png" alt="" class="icon">
-												</div>
-												<div class="txt_box">
-													<p class="txt">모듈 </p>
-												</div>
-											</div>
-										</div>
+							<div class="form_item w50 module_Addbox">
+								<div class="input_box">
+									<div class="input_flex">
+										<input type="text" class="input_text ver2">
+										<button type="button" class="input_btn">저장</button>
 									</div>
-								</div>
+								</div>	
 							</div>
 							<div class="form_item w50">				
 								<div class="directory_box h265">
@@ -418,7 +467,7 @@
 											<div class="path"></div>
 										</div>
 										<div class="item_box">
-											<div class="title mt0">
+											<div class="title">
 												<div class="icon_box">
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
@@ -432,6 +481,9 @@
 												<button type="button" class="icon_btn delete_btn">
 													<img src="img/ico_delete.png" alt="" class="icon">
 												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
+												</div>
 											</div>
 										</div>
 									</div>
@@ -444,10 +496,49 @@
 											<div class="path"></div>
 										</div>
 										<div class="item_box">
-											<div class="title mt0">
+											<div class="title hover_ver">
 												<div class="icon_box">
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
+												<div class="txt_box">
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_item w50">				
+								<div class="directory_box h265">
+									<div class="directory_item cat1">
+										<div class="path_box">
+											<div class="path"></div>
+										</div>
+										<div class="item_box">
+											<div class="title input_ver">
+												<div class="icon_box">
+													<img src="img/ico_folder2.png" alt="" class="icon">
+												</div>
+												<div class="txt_box">
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
 												<div class="input_box w120">
 													<input type="text" class="input_text" placeholder="모듈">
 												</div>
@@ -464,19 +555,27 @@
 						<div class="form_box wrap gap1">
 							<div class="form_item">
 								<div class="input_flex gap2">
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="direcShow(this)">
 										<img src="img/ico_arrowdown.png" alt="" class="icon">
 										<span class="txt">펼치기</span>
 									</button>
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="direcHide(this)">
 										<img src="img/ico_arrowup.png" alt="" class="icon">
 										<span class="txt">닫기</span>
 									</button>
-									<button type="button" class="btn icon_ver2">
+									<button type="button" class="btn icon_ver2" onclick="moduleAdd(this)">
 										<img src="img/ico_plus2.png" alt="" class="icon">
 										<span class="txt">모듈추가</span>
 									</button>
-								</div>					
+								</div>				
+							</div>
+							<div class="form_item w50 module_Addbox">
+								<div class="input_box">
+									<div class="input_flex">
+										<input type="text" class="input_text ver2">
+										<button type="button" class="input_btn">저장</button>
+									</div>
+								</div>	
 							</div>
 							<div class="form_item w50">				
 								<div class="directory_box h265">
@@ -485,12 +584,12 @@
 											<div class="path"></div>
 										</div>
 										<div class="item_box">
-											<div class="title mt0">
+											<div class="title hover_ver">
 												<div class="icon_box">
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
 												<div class="txt_box">
-													<p class="txt">모듈</p>
+													<p class="txt">모듈 </p>
 												</div>
 												<button type="button" class="btn small type_add">
 													<img src="img/ico_plus.png" alt="" class="icon">
@@ -499,40 +598,8 @@
 												<button type="button" class="icon_btn delete_btn">
 													<img src="img/ico_delete.png" alt="" class="icon">
 												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="form_item w50">				
-								<div class="directory_box h265">
-									<div class="directory_item cat1">
-										<div class="path_box">
-											<div class="path"></div>
-											<button type="button" class="path_btn"></button>
-										</div>
-										<div class="item_box">
-											<div class="title">
-												<div class="icon_box">
-													<img src="img/ico_folder2.png" alt="" class="icon">
-												</div>
-												<div class="txt_box">
-													<p class="txt">모듈</p>
-												</div>
-											</div>
-											<div class="directory_item cat2">
-												<div class="path_box">
-													<div class="path"></div>
-												</div>
-												<div class="item_box">
-													<div class="title mt0">
-														<div class="icon_box">
-															<img src="img/ico_doc.png" alt="" class="icon">
-														</div>
-														<div class="input_box w120">
-															<input type="text" class="input_text" placeholder="유형">
-														</div>
-													</div>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
 												</div>
 											</div>
 										</div>
@@ -552,7 +619,17 @@
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
 												<div class="txt_box">
-													<p class="txt">모듈</p>
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
 												</div>
 											</div>
 											<div class="directory_item cat2">
@@ -560,12 +637,12 @@
 													<div class="path"></div>
 												</div>
 												<div class="item_box">
-													<div class="title mt0">
+													<div class="title input_ver">
 														<div class="icon_box">
 															<img src="img/ico_doc.png" alt="" class="icon">
 														</div>
 														<div class="txt_box">
-															<p class="txt">유형</p>
+															<p class="txt">유형 </p>
 														</div>
 														<button type="button" class="btn small type_add">
 															<img src="img/ico_plus.png" alt="" class="icon">
@@ -574,38 +651,6 @@
 														<button type="button" class="icon_btn delete_btn">
 															<img src="img/ico_delete.png" alt="" class="icon">
 														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="form_item w50">				
-								<div class="directory_box h265">
-									<div class="directory_item cat1">
-										<div class="path_box">
-											<div class="path"></div>
-											<button type="button" class="path_btn"></button>
-										</div>
-										<div class="item_box">
-											<div class="title">
-												<div class="icon_box">
-													<img src="img/ico_folder2.png" alt="" class="icon">
-												</div>
-												<div class="txt_box">
-													<p class="txt">모듈</p>
-												</div>
-											</div>
-											<div class="directory_item cat2">
-												<div class="path_box">
-													<div class="path"></div>
-												</div>
-												<div class="item_box">
-													<div class="title mt0">
-														<div class="icon_box">
-															<img src="img/ico_doc.png" alt="" class="icon">
-														</div>
 														<div class="input_box w120">
 															<input type="text" class="input_text" placeholder="유형">
 														</div>
@@ -629,7 +674,127 @@
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
 												<div class="txt_box">
-													<p class="txt">모듈</p>
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
+												</div>
+											</div>
+											<div class="directory_item cat2">
+												<div class="path_box">
+													<div class="path"></div>
+												</div>
+												<div class="item_box">
+													<div class="title hover_ver">
+														<div class="icon_box">
+															<img src="img/ico_doc.png" alt="" class="icon">
+														</div>
+														<div class="txt_box">
+															<p class="txt">유형 </p>
+														</div>
+														<button type="button" class="btn small type_add">
+															<img src="img/ico_plus.png" alt="" class="icon">
+															<span class="txt">세부유형 추가</span>
+														</button>
+														<button type="button" class="icon_btn delete_btn">
+															<img src="img/ico_delete.png" alt="" class="icon">
+														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_item w50">				
+								<div class="directory_box h265">
+									<div class="directory_item cat1">
+										<div class="path_box">
+											<div class="path"></div>
+											<button type="button" class="path_btn"></button>
+										</div>
+										<div class="item_box">
+											<div class="title">
+												<div class="icon_box">
+													<img src="img/ico_folder2.png" alt="" class="icon">
+												</div>
+												<div class="txt_box">
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
+												</div>
+											</div>
+											<div class="directory_item cat2">
+												<div class="path_box">
+													<div class="path"></div>
+												</div>
+												<div class="item_box">
+													<div class="title input_ver">
+														<div class="icon_box">
+															<img src="img/ico_doc.png" alt="" class="icon">
+														</div>
+														<div class="txt_box">
+															<p class="txt">유형 </p>
+														</div>
+														<button type="button" class="btn small type_add">
+															<img src="img/ico_plus.png" alt="" class="icon">
+															<span class="txt">세부유형 추가</span>
+														</button>
+														<button type="button" class="icon_btn delete_btn">
+															<img src="img/ico_delete.png" alt="" class="icon">
+														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_item w50">				
+								<div class="directory_box h265">
+									<div class="directory_item cat1">
+										<div class="path_box">
+											<div class="path"></div>
+											<button type="button" class="path_btn"></button>
+										</div>
+										<div class="item_box">
+											<div class="title">
+												<div class="icon_box">
+													<img src="img/ico_folder2.png" alt="" class="icon">
+												</div>
+												<div class="txt_box">
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
 												</div>
 											</div>
 											<div class="directory_item cat2">
@@ -638,12 +803,12 @@
 													<button type="button" class="path_btn"></button>
 												</div>
 												<div class="item_box">
-													<div class="title mt0">
+													<div class="title hover_ver">
 														<div class="icon_box">
 															<img src="img/ico_doc.png" alt="" class="icon">
 														</div>
 														<div class="txt_box">
-															<p class="txt">유형</p>
+															<p class="txt">유형 </p>
 														</div>
 														<button type="button" class="btn small type_add">
 															<img src="img/ico_plus.png" alt="" class="icon">
@@ -652,16 +817,25 @@
 														<button type="button" class="icon_btn delete_btn">
 															<img src="img/ico_delete.png" alt="" class="icon">
 														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
+														</div>
 													</div>
 													<div class="directory_item cat3">
 														<div class="path_box">
 															<div class="path"></div>
 														</div>
-														<div class="item_box">
-															<div class="title">
+														<div class="item_box">															
+															<div class="title input_ver">
 																<div class="icon_box">
 																	<img src="img/ico_doc.png" alt="" class="icon">
 																</div>
+																<div class="txt_box">
+																	<p class="txt">세부유형</p>
+																</div>
+																<button type="button" class="icon_btn delete_btn">
+																	<img src="img/ico_delete.png" alt="" class="icon">
+																</button>
 																<div class="input_box w120">
 																	<input type="text" class="input_text" placeholder="세부유형">
 																</div>
@@ -687,7 +861,17 @@
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
 												<div class="txt_box">
-													<p class="txt">모듈</p>
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
 												</div>
 											</div>
 											<div class="directory_item cat2">
@@ -701,15 +885,25 @@
 															<img src="img/ico_doc.png" alt="" class="icon">
 														</div>
 														<div class="txt_box">
-															<p class="txt">유형</p>
+															<p class="txt">유형 </p>
+														</div>
+														<button type="button" class="btn small type_add">
+															<img src="img/ico_plus.png" alt="" class="icon">
+															<span class="txt">세부유형 추가</span>
+														</button>
+														<button type="button" class="icon_btn delete_btn">
+															<img src="img/ico_delete.png" alt="" class="icon">
+														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
 														</div>
 													</div>
 													<div class="directory_item cat3">
 														<div class="path_box">
 															<div class="path"></div>
 														</div>
-														<div class="item_box">
-															<div class="title">
+														<div class="item_box">												
+															<div class="title hover_ver">
 																<div class="icon_box">
 																	<img src="img/ico_doc.png" alt="" class="icon">
 																</div>
@@ -719,6 +913,9 @@
 																<button type="button" class="icon_btn delete_btn">
 																	<img src="img/ico_delete.png" alt="" class="icon">
 																</button>
+																<div class="input_box w120">
+																	<input type="text" class="input_text" placeholder="세부유형">
+																</div>
 															</div>
 														</div>
 													</div>
@@ -741,7 +938,17 @@
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
 												<div class="txt_box">
-													<p class="txt">모듈</p>
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
 												</div>
 											</div>
 											<div class="directory_item cat2">
@@ -759,6 +966,16 @@
 																유형 <span class="point">(1)</span>
 															</p>
 														</div>
+														<button type="button" class="btn small type_add">
+															<img src="img/ico_plus.png" alt="" class="icon">
+															<span class="txt">세부유형 추가</span>
+														</button>
+														<button type="button" class="icon_btn delete_btn">
+															<img src="img/ico_delete.png" alt="" class="icon">
+														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
+														</div>
 													</div>
 													<div class="directory_item cat3">
 														<div class="path_box">
@@ -766,27 +983,41 @@
 															<button type="button" class="path_btn"></button>
 														</div>
 														<div class="item_box">
-															<div class="title">
-																<div class="icon_box">
-																	<img src="img/ico_doc.png" alt="" class="icon">
-																</div>
-																<div class="txt_box">
-																	<p class="txt">
-																		세부유형 <span class="point">(1)</span>
-																	</p>
+															<div class="item_box">												
+																<div class="title">
+																	<div class="icon_box">
+																		<img src="img/ico_doc.png" alt="" class="icon">
+																	</div>
+																	<div class="txt_box">
+																		<p class="txt">
+																			세부유형 <span class="point">(1)</span>
+																		</p>
+																	</div>
+																	<button type="button" class="icon_btn delete_btn">
+																		<img src="img/ico_delete.png" alt="" class="icon">
+																	</button>
+																	<div class="input_box w120">
+																		<input type="text" class="input_text" placeholder="세부유형">
+																	</div>
 																</div>
 															</div>
 															<div class="directory_item cat4">
 																<div class="path_box">
 																	<div class="path"></div>
 																</div>										
-																<div class="item_box">
+																<div class="item_box">									
 																	<div class="title">
 																		<div class="icon_box">
 																			<img src="img/ico_exam.png" alt="" class="icon">
 																		</div>
 																		<div class="txt_box">
 																			<p class="txt">문제 1</p>
+																		</div>
+																		<button type="button" class="icon_btn delete_btn">
+																			<img src="img/ico_delete.png" alt="" class="icon">
+																		</button>
+																		<div class="input_box w120">
+																			<input type="text" class="input_text" placeholder="문제 1">
 																		</div>
 																	</div>
 																</div>
@@ -812,7 +1043,17 @@
 													<img src="img/ico_folder2.png" alt="" class="icon">
 												</div>
 												<div class="txt_box">
-													<p class="txt">모듈</p>
+													<p class="txt">모듈 </p>
+												</div>
+												<button type="button" class="btn small type_add">
+													<img src="img/ico_plus.png" alt="" class="icon">
+													<span class="txt">유형 추가</span>
+												</button>
+												<button type="button" class="icon_btn delete_btn">
+													<img src="img/ico_delete.png" alt="" class="icon">
+												</button>
+												<div class="input_box w120">
+													<input type="text" class="input_text" placeholder="모듈">
 												</div>
 											</div>
 											<div class="directory_item cat2">
@@ -830,6 +1071,16 @@
 																유형 <span class="point">(1)</span>
 															</p>
 														</div>
+														<button type="button" class="btn small type_add">
+															<img src="img/ico_plus.png" alt="" class="icon">
+															<span class="txt">세부유형 추가</span>
+														</button>
+														<button type="button" class="icon_btn delete_btn">
+															<img src="img/ico_delete.png" alt="" class="icon">
+														</button>
+														<div class="input_box w120">
+															<input type="text" class="input_text" placeholder="유형">
+														</div>
 													</div>
 													<div class="directory_item cat3">
 														<div class="path_box">
@@ -837,31 +1088,42 @@
 															<button type="button" class="path_btn"></button>
 														</div>
 														<div class="item_box">
-															<div class="title">
-																<div class="icon_box">
-																	<img src="img/ico_doc.png" alt="" class="icon">
-																</div>
-																<div class="txt_box">
-																	<p class="txt">
-																		세부유형 <span class="point">(1)</span>
-																	</p>
+															<div class="item_box">												
+																<div class="title">
+																	<div class="icon_box">
+																		<img src="img/ico_doc.png" alt="" class="icon">
+																	</div>
+																	<div class="txt_box">
+																		<p class="txt">
+																			세부유형 <span class="point">(1)</span>
+																		</p>
+																	</div>
+																	<button type="button" class="icon_btn delete_btn">
+																		<img src="img/ico_delete.png" alt="" class="icon">
+																	</button>
+																	<div class="input_box w120">
+																		<input type="text" class="input_text" placeholder="세부유형">
+																	</div>
 																</div>
 															</div>
 															<div class="directory_item cat4">
 																<div class="path_box">
 																	<div class="path"></div>
 																</div>										
-																<div class="item_box">
-																	<div class="title">
+																<div class="item_box">								
+																	<div class="title hover_ver">
 																		<div class="icon_box">
 																			<img src="img/ico_exam.png" alt="" class="icon">
-																		</div>																		
+																		</div>
 																		<div class="txt_box">
 																			<p class="txt">문제 1</p>
 																		</div>
 																		<button type="button" class="icon_btn delete_btn">
 																			<img src="img/ico_delete.png" alt="" class="icon">
 																		</button>
+																		<div class="input_box w120">
+																			<input type="text" class="input_text" placeholder="문제 1">
+																		</div>
 																	</div>
 																</div>
 															</div>

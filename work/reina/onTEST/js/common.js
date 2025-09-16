@@ -144,7 +144,8 @@ $(function() {
         let container = select.select2({
             templateResult: formatOption,
             templateSelection: formatOption,
-            dropdownCssClass: customClass
+            dropdownCssClass: customClass,
+    		width: '100%'
         }).next('.select2-container');
 
         if (customClass && !container.hasClass(customClass)) {
@@ -398,4 +399,54 @@ $(".examInputPopup .examImport_close").click(function () {
 	$(".examInputPopup").removeClass("hidden")
 	$(".examInputPopup .examImport_box").removeClass("show")
 })
+
+
+// 모듈
+function direcShow(btn) {
+    const boxes = btn.closest('.form_box').querySelectorAll('.directory_box');
+    boxes.forEach(box => {
+        if (!box.classList.contains('notHide')) {
+            box.classList.remove('allHide');
+        }
+    });
+}
+
+function direcHide(btn) {
+    const boxes = btn.closest('.form_box').querySelectorAll('.directory_box');
+    boxes.forEach(box => {
+        if (!box.classList.contains('notHide')) {
+            box.classList.add('allHide');
+        }
+    });
+}
+
+function moduleAdd(btn) {
+    const moduleBox = btn.closest('.form_box').querySelector('.module_Addbox');
+    if (moduleBox) {
+        moduleBox.classList.toggle('show');
+    }
+}
+
+$(document).ready(function() {
+    $('.directory_item .title').hover(
+        function() {
+            if (!$(this).hasClass('input_ver')) {
+                $(this).addClass('hover_ver');
+            }
+        },
+        function() {
+            $(this).removeClass('hover_ver');
+        }
+    );
+
+    $('.directory_item .txt_box').on('click', function(e) {
+        e.stopPropagation();
+        $(this).closest('.title').removeClass('hover_ver').addClass('input_ver');
+        $(this).siblings('.input_box').find('input').focus();
+    });
+
+    $('.directory_item .input_box input').on('blur', function() {
+        $(this).closest('.title').removeClass('input_ver');
+    });
+});
 
