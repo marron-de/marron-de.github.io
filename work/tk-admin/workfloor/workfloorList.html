@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout workfloor_wrap sideopen" data-title="Workfloor" data-icon="ph-users-three">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="sub_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-users-three icon"></i>
+			 			Workfloor
+					</p>
+				</div>
+				
+				<div class="mob_filter_wrap">
+					<div class="mob_filter_topbox">
+						<div class="leftbox">
+							<div class="select_box">
+								<select class="select size_md">
+									<option value="전체">전체</option>
+									<option value="홍길동1">홍길동1</option>
+									<option value="홍길동2">홍길동2</option>
+									<option value="홍길동3">홍길동3</option>
+									<option value="홍길동4">홍길동4</option>
+									<option value="홍길동5">홍길동5</option>
+								</select>
+							</div>
+							<div class="select_box">
+								<select class="select size_md">
+									<option value="대기중">대기중</option>
+									<option value="진행예정">진행예정</option>
+									<option value="진행중">진행중</option>
+									<option value="검토중">검토중</option>
+									<option value="발주">발주</option>
+									<option value="보류">보류</option>
+									<option value="완료">완료</option>
+								</select>
+							</div>
+						</div>
+						<div class="rightbox">
+							<button type="button" class="mob_icon_button mob_search_open">
+								<i class="ph ph-magnifying-glass icon"></i>
+							</button>
+							<button type="button" class="mob_icon_button" onclick="workfloorWrite_modal()">
+								<i class="ph ph-pencil-simple icon"></i>
+							</button>
+						</div>
+					</div>
+					<div class="content_search content_tbl">
+						<form name="search_fm" id="search_fm" method="get">
+							<div class="tbl_box">
+								<table class="tbl min_auto">
+									<colgroup>
+										<col style="width: 150px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr class="mob_search_box">
+											<th data-th="검색어">검색어</th>
+											<td data-th="검색어">
+												<div class="tbl_inline">
+													<div class="select_box search_select">
+														<select name="select_key" id="select_key" class="select size_md">
+															<option value="전체">전체</option>
+															<option value="홍길동1">홍길동1</option>
+															<option value="홍길동2">홍길동2</option>
+															<option value="홍길동3">홍길동3</option>
+															<option value="홍길동4">홍길동4</option>
+															<option value="홍길동5">홍길동5</option>
+														</select>
+													</div>
+													<div class="select_box search_select">
+														<select name="period_yy_s" id="item_period_yy" class="select size_md">
+															<option value="2026">2026년</option>
+															<option value="2025" selected="">2025년</option>
+															<option value="2024">2024년</option>
+															<option value="2023">2023년</option>
+															<option value="2022">2022년</option>
+															<option value="2021">2021년</option>
+															<option value="2020">2020년</option>
+															<option value="2019">2019년</option>
+														</select>
+													</div>
+													<div class="tab_wrap pc">
+														<div class="tab_navbox tabs_ver">
+															<div class="tab_nav"><span class="link">1월</span></div>
+															<div class="tab_nav"><span class="link">2월</span></div>
+															<div class="tab_nav"><span class="link">3월</span></div>
+															<div class="tab_nav"><span class="link">4월</span></div>
+															<div class="tab_nav"><span class="link">5월</span></div>
+															<div class="tab_nav"><span class="link">6월</span></div>
+															<div class="tab_nav"><span class="link">7월</span></div>
+															<div class="tab_nav"><span class="link">8월</span></div>
+															<div class="tab_nav on"><span class="link">9월</span></div>
+															<div class="tab_nav"><span class="link">10월</span></div>
+															<div class="tab_nav"><span class="link">11월</span></div>
+															<div class="tab_nav"><span class="link">12월</span></div>
+														</div>
+													</div>
+													<div class="input_box search_input tablet">
+														<input type="text" class="input_text size_md" id="input_key"
+															name="input_key" placeholder="검색어를 입력해주세요">
+													</div>
+													<div class="tbl_btnbox search_btns tablet">
+														<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
+													</div>
+													<button type="button" class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="content_list">
+					<form name="boardList_fm" id="boardList_fm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox full">
+								<div class="select_box pc mw120">
+									<select id="set-status" class="select size_md">
+										<option value="대기중">대기중</option>
+										<option value="진행중">진행중</option>
+										<option value="검토중">검토중</option>
+										<option value="발주">발주</option>
+										<option value="완료">완료</option>
+										<option value="보류">보류</option>
+										<option value="취소">취소</option>
+									</select>
+								</div>
+								<div class="typebox">
+									<div class="item" data-type="대기중">
+										<span class="color"></span>
+										<span class="txt">대기중</span>
+									</div>
+									<div class="item" data-type="진행중">
+										<span class="color"></span>
+										<span class="txt">진행중</span>
+									</div>
+									<div class="item" data-type="검토중">
+										<span class="color"></span>
+										<span class="txt">검토중</span>
+									</div>
+									<div class="item" data-type="발주">
+										<span class="color"></span>
+										<span class="txt">발주</span>
+									</div>
+									<div class="item" data-type="완료">
+										<span class="color"></span>
+										<span class="txt">완료</span>
+									</div>
+									<div class="item" data-type="보류">
+										<span class="color"></span>
+										<span class="txt">보류</span>
+									</div>
+									<div class="item" data-type="취소">
+										<span class="color"></span>
+										<span class="txt">취소</span>
+									</div>
+								</div>
+							</div>
+							<div class="rightbox full">
+								<button type="button" class="button size_sm auto typeE" onclick="workfloorWrite_modal()">업무 등록</button>
+							</div>
+						</div>
+						<div class="workflow_list">
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="workflow_item">
+								<div class="topbox">
+									<div class="leftbox">
+										<div class="profile">
+											<img src="../img/profile_temp.jpg" alt="" class="thum">
+										</div>
+										<p class="name">홍길동 매니저</p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE writeBtn" onclick="workfloorWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeF deleteBtn">삭제</button>
+									</div>
+								</div>
+								<div class="listbox">
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box check">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="대기중">
+											<p class="tit">대기중인 업무입니다.</p>
+											<p class="date">2025-09-01</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="진행중">
+											<p class="tit">진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다. 진행중인 업무입니다.</p>
+											<p class="date">2025-09-02</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="검토중">
+											<p class="tit">검토중인 업무입니다.</p>
+											<p class="date">2025-09-03</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="발주">
+											<p class="tit">발주된 업무입니다. 발주된 업무입니다.</p>
+											<p class="date">2025-09-04</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="완료">
+											<p class="tit">완료된 업무입니다. 완료된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="보류">
+											<p class="tit">보류된 업무입니다.</p>
+											<p class="date">2025-09-05</p>
+										</div>
+									</div>
+									<div class="listitem">
+										<div class="check_box">
+											<input type="checkbox" class="input_check size_md">
+										</div>
+										<div class="work_box" data-state="취소">
+											<p class="tit">취소된 업무입니다. 취소된 업무입니다.</p>
+											<p class="date">2025-09-06</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+		
+		<!-- 업무 등록 모달 -->
+		<div id="workfloorWrite_modal" class="modal workfloor_modal_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">업무 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form id="busEdit_fm" name="busEdit_fm" autocomplete="off" method="post" enctype="multipart/form-data"
+						class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 140px;">
+									<col style="width: 613px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="이름">이름</th>
+										<td data-th="이름">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="홍길동">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상태">상태</th>
+										<td data-th="상태">
+											<div class="select_box">
+												<select class="select size_md">
+													<option value="선택">선택</option>
+													<option value="대기중">대기중</option>
+													<option value="진행예정">진행예정</option>
+													<option value="진행중">진행중</option>
+													<option value="검토중">검토중</option>
+													<option value="발주">발주</option>
+													<option value="보류">보류</option>
+													<option value="완료">완료</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="시작일">시작일</th>
+										<td data-th="시작일">
+											<div class="input_box">
+												<input type="text" name="start_date" id="start_date" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-01" readonly="readonly">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="마감일">마감일</th>
+										<td data-th="마감일">
+											<div class="input_box">
+												<input type="text" name="start_date" id="start_date" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-01" readonly="readonly">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="진행률">진행률</th>
+										<td data-th="진행률">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text size_md w160">
+												<span class="input_txt label_text size_md">%</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="제목">제목</th>
+										<td data-th="제목">
+											<div class="input_box">
+												<input type="text" class="input_text size_md">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용">
+											<div class="input_box">
+												<textarea class="input_text size_md h_auto" rows="5"></textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="첨부파일">첨부파일</th>
+										<td data-th="첨부파일" colspan="3">
+											<div class="tbl_inline column_ver">
+												<div class="input_box input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="userFile1" name="userFile1">
+														<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 업무 상세보기 모달 -->
+		<div id="workfloorEdit_modal" class="modal workfloor_modal_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">업무 상세보기</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form id="busEdit_fm" name="busEdit_fm" autocomplete="off" method="post" enctype="multipart/form-data"
+						class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 140px;">
+									<col style="width: 613px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="이름">이름</th>
+										<td data-th="이름">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="홍길동">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="상태">상태</th>
+										<td data-th="상태">
+											<div class="select_box">
+												<select class="select size_md">
+													<option value="선택">선택</option>
+													<option value="대기중" selected>대기중</option>
+													<option value="진행예정">진행예정</option>
+													<option value="진행중">진행중</option>
+													<option value="검토중">검토중</option>
+													<option value="발주">발주</option>
+													<option value="보류">보류</option>
+													<option value="완료">완료</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="시작일">시작일</th>
+										<td data-th="시작일">
+											<div class="input_box">
+												<input type="text" name="start_date" id="start_date" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-01" readonly="readonly">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="마감일">마감일</th>
+										<td data-th="마감일">
+											<div class="input_box">
+												<input type="text" name="start_date" id="start_date" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-20" readonly="readonly">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="진행률">진행률</th>
+										<td data-th="진행률">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text size_md w160" value="80">
+												<span class="input_txt label_text size_md">%</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="제목">제목</th>
+										<td data-th="제목">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="대기중인 업무입니다.">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="내용">내용</th>
+										<td data-th="내용">
+											<div class="input_box">
+												<textarea class="input_text size_md h_auto" rows="5">대기중인 업무입니다. 대기중인 업무입니다. 대기중인 업무입니다.</textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="첨부파일">첨부파일</th>
+										<td data-th="첨부파일" colspan="3">
+											<div class="tbl_inline column_ver">
+												<div class="input_box input_file_box">
+													<div class="input_flex">
+														<input type="file" class="input_file" id="userFile1" name="userFile1">
+														<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+														<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+													</div>
+													<div class="file_data">
+														<img src="../img/ic_filedown.png" alt="" class="icon">
+														<a href="" class="txt">테스트 파일.pdf</a>
+														<button type="button" class="delete_btn">
+															<i class="ph-fill ph-x-circle"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/sub_header.html', '#sub_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');		
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav .side_cont .menu_list .side_item").eq(2).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// workfloorWrite modal
+		function workfloorWrite_modal() {
+			$(".modal").removeClass("show");
+			$("#workfloorWrite_modal").addClass("show");
+		}
+		// workfloorEdit modal
+		$(document).on('click', '.workflow_item .listitem .work_box', function() {
+			$(".modal").removeClass("show");
+			$("#workfloorEdit_modal").addClass("show");
+		});
+	</script>
+
+
+
+</body>
+
+</html>
