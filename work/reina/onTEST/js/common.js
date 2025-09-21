@@ -132,10 +132,14 @@ $(document).ready(function () {
 // select2 
 $(function() {
     function formatOption(data) {
-        if (!data.id || $(data.element).data('hidden')) return null;
-        let icon = $(data.element).data('icon');
-        return $('<span>').append(icon ? '<img src="' + icon + '" class="icon">' : '').append('<span class="txt">' + data.text + '</span>');
-    }
+		if (!data.element) return null; 
+		if ($(data.element).data('hidden')) return null;
+
+		let icon = $(data.element).data('icon');
+		return $('<span>')
+			.append(icon ? '<img src="' + icon + '" class="icon">' : '')
+			.append('<span class="txt">' + data.text + '</span>');
+	}
 
     $(".select2").each(function() {
         let select = $(this);
@@ -165,6 +169,7 @@ $(document).on("mouseup", ".select2-dropdown, .select2-dropdown *", function (e)
     e.stopPropagation();
 });
 
+
 // 모달 공통
 $(".modal .close_btn").click(function () {
 	$("body").removeClass("hidden")
@@ -187,7 +192,6 @@ $(document).mouseup(function (e) {
 		$(".popup").removeClass("show")
 	}
 });
-
 $(".opt_popup .opt_popbtn").click(function () {
     const popup = $(this).closest(".opt_popup");
     popup.find(".opt_popbtn").removeClass("selected");
@@ -207,7 +211,6 @@ $(".opt_popup .opt_close").click(function () {
 $(".navigation .nav_btn").click(function () {
 	$(".layout").toggleClass("closed")
 })
-
 $(".navigation .nav_open").click(function () {
 	$(".layout").removeClass("closed")
 })
@@ -225,6 +228,15 @@ $(".page_header .btn").hover(
   function () { $(this).addClass("hover"); },
   function () { $(this).removeClass("hover");}
 );
+
+
+// 레이아웃 - 페이지 필터
+$(".top_filer .align_btn").click(function () {
+	$(".top_filer .align_popup").addClass("show")
+})
+$(".top_filer .setting_btn").click(function () {
+	$(".top_filer .setting_popup").addClass("show")
+})
 
 
 // 첨부파일 업로드
@@ -353,6 +365,52 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.file_upload2').each(function () {
+        const uploadBox = $(this);
+        const wrapper = uploadBox.closest('.input_filebox');
+        const inputFile = wrapper.find('.input_file');
+
+        function handleFileUpload(file) {
+            const allowedTypes = inputFile.data('accept').split(',')
+                .map(type => type.trim().toLowerCase());
+
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+            if (!allowedTypes.includes(fileExtension)) {
+                alert(`지원되는 파일 형식은 ${allowedTypes.join(', ')}입니다.`);
+                return;
+            }
+
+            alert("(임시) 업로드 완료: " + file.name);
+        }
+
+        inputFile.on('change', function (e) {
+            const file = e.target.files[0];
+            if (file) handleFileUpload(file);
+        });
+
+        uploadBox.on('click', function () {
+            inputFile.click();
+        });
+
+        uploadBox.on('dragover', function (e) {
+            e.preventDefault();
+            uploadBox.addClass('drag_over');
+        });
+
+        uploadBox.on('dragleave', function () {
+            uploadBox.removeClass('drag_over');
+        });
+
+        uploadBox.on('drop', function (e) {
+            e.preventDefault();
+            uploadBox.removeClass('drag_over');
+            const file = e.originalEvent.dataTransfer.files[0];
+            if (file) handleFileUpload(file);
+        });
+    });
+});
+
 
 // 라벨 체크박스
 $(".form_label .input_check").on("change", function () {
@@ -389,18 +447,6 @@ $(".alert_box .alert_btn").hover(
 );
 
 
-/* 문제은행가져오기 팝업 */
-$(".examInputPopup .examImport_btn").click(function () {
-	$(".examInputPopup").addClass("hidden")
-	$(".examInputPopup .examImport_box").addClass("show")
-})
-
-$(".examInputPopup .examImport_close").click(function () {
-	$(".examInputPopup").removeClass("hidden")
-	$(".examInputPopup .examImport_box").removeClass("show")
-})
-
-
 // 모듈
 function direcShow(btn) {
     const boxes = btn.closest('.form_box').querySelectorAll('.directory_box');
@@ -410,7 +456,6 @@ function direcShow(btn) {
         }
     });
 }
-
 function direcHide(btn) {
     const boxes = btn.closest('.form_box').querySelectorAll('.directory_box');
     boxes.forEach(box => {
@@ -419,14 +464,12 @@ function direcHide(btn) {
         }
     });
 }
-
 function moduleAdd(btn) {
     const moduleBox = btn.closest('.form_box').querySelector('.module_Addbox');
     if (moduleBox) {
         moduleBox.classList.toggle('show');
     }
 }
-
 $(document).ready(function() {
     $('.directory_item .title').hover(
         function() {
@@ -449,4 +492,87 @@ $(document).ready(function() {
         $(this).closest('.title').removeClass('input_ver');
     });
 });
+
+
+// 플레이 박스
+$(function() {
+    const vidbox = $('.play_box .vidbox');
+    const media = vidbox.find('video, audio').get(0);
+    const pauseBtn = vidbox.find('.pause_btn');
+
+    if (!media) return;
+
+    $('.play_box .vid_btn, .play_box .control_btn.play').on('click', function () {
+        if (media.paused) {
+            media.play();
+            vidbox.addClass('play');
+        } else {
+            media.pause();
+            vidbox.removeClass('play');
+        }
+    });
+
+    media.addEventListener('ended', function () {
+        vidbox.removeClass('play');
+    });
+
+    vidbox.on('mouseenter', '.video, .pause_btn', function() {
+        if (vidbox.hasClass('play')) {
+            pauseBtn.addClass('hover');
+        }
+    });
+
+    vidbox.on('mouseleave', '.video, .pause_btn', function() {
+        pauseBtn.removeClass('hover');
+    });
+});
+
+
+/* 문제은행가져오기 팝업 */
+$(".examInputPopup .examImport_btn").click(function () {
+	$(".examInputPopup").addClass("hidden")
+	$(".examInputPopup .examImport_box").addClass("show")
+})
+$(".examInputPopup .examImport_close").click(function () {
+	$(".examInputPopup").removeClass("hidden")
+	$(".examInputPopup .examImport_box").removeClass("show")
+})
+
+
+/* 본인인증popup */
+$(function () {
+  $(".verification_box .item").each(function () {
+    const item = $(this);
+    const inputFile = item.find("input[type='file']");
+    const imgbox = item.find(".imgbox");
+
+    const acceptData = inputFile.data("accept");
+    if (acceptData) {
+      inputFile.attr(
+        "accept",
+        acceptData
+          .split(",")
+          .map(ext => "." + ext.trim())
+          .join(", ")
+      );
+    }
+
+    item.find(".file_btn").on("click", function () {
+      inputFile.trigger("click");
+    });
+
+    inputFile.on("change", function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        imgbox.html('<img src="' + ev.target.result + '" alt="" class="img"/>');
+        imgbox.addClass("uploaded");
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+});
+
 
