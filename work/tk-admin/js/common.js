@@ -433,3 +433,26 @@ $(document).on('click', '.mob_filter_wrap  .mob_search_open', function () {
 $(document).on('click', '.mob_filter_wrap  .mob_search_close', function () {
     $(".mob_filter_wrap  .content_search").removeClass("show");
 });
+
+
+/* 250922 추가작업 */
+/* workfloor tab */
+$(document).ready(function () {
+	const index_pc = parseInt($('.swiper.workfloor_tab_pc').attr('data-index'), 10) || 0;
+	const workfloor_tab_pc = new Swiper('.workfloor_tab_pc', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		speed: 500,
+		initialSlide: index_pc,
+	})
+
+	const index_mob = parseInt($('.swiper.workfloor_tab_mob').attr('data-index'), 10) || 0;
+	const workfloor_tab_mob = new Swiper('.workfloor_tab_mob', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		speed: 500,
+		initialSlide: index_mob,
+	})
+});
