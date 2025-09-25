@@ -40,11 +40,11 @@
 
     <div id="wrap"> 
 		
-		<!-- 업무 상세보기 모달 -->
+		<!-- 업무 수정 모달 -->
 		<div id="workfloorEdit_modal" class="modal workfloor_modal_modal mobtbl show">
 			<div class="modal_box ver2">
 				<div class="modal_head">
-					<p class="tit">업무 상세보기</p>
+					<p class="tit">업무 수정</p>
 					<button class="modal_close"></button>
 				</div>
 				<div class="modal_body">
@@ -71,39 +71,60 @@
 											<div class="select_box">
 												<select class="select size_md">
 													<option value="선택">선택</option>
-													<option value="대기중" selected>대기중</option>
-													<option value="진행예정">진행예정</option>
+													<option value="대기중">대기중</option>
 													<option value="진행중">진행중</option>
-													<option value="검토중">검토중</option>
-													<option value="발주">발주</option>
-													<option value="보류">보류</option>
 													<option value="완료">완료</option>
+													<option value="보류">보류</option>
+													<option value="취소">취소</option>
 												</select>
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<th data-th="시작일">시작일</th>
-										<td data-th="시작일">
-											<div class="input_box">
+										<th data-th="일정">일정</th>
+										<td data-th="일정">
+											<div class="input_box input_flex">
 												<input type="text" name="start_date" id="start_date" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-01" readonly="readonly">
+												<span class="txt">~</span>
+												<input type="text" name="start_date" id="start_date" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-20" readonly="readonly">
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<th data-th="마감일">마감일</th>
-										<td data-th="마감일">
-											<div class="input_box">
-												<input type="text" name="start_date" id="start_date" class="input_text size_md icon_ver icon_date calender_btn" value="2025-09-20" readonly="readonly">
+										<th data-th="공유직원">공유직원</th>
+										<td data-th="공유직원">
+											<div class="select_box">
+												<select class="select size_md">
+													<option value="선택">선택</option>
+													<option value="홍길동" selected>홍길동</option>
+													<option value="홍길동2">홍길동2</option>
+													<option value="홍길동3">홍길동3</option>
+												</select>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<th data-th="진행률">진행률</th>
 										<td data-th="진행률">
-											<div class="input_box input_flex">
-												<input type="text" class="input_text size_md w160" value="80">
-												<span class="input_txt label_text size_md">%</span>
+											<div class="tbl_inline gap2">
+												<div class="input_box input_flex flex_auto mobSize_full">
+													<input type="text" class="input_text size_md w160 align_right" value="80">
+													<span class="input_txt label_text size_md">%</span>
+												</div>
+												<div class="input_flex gap_sm">
+													<div class="radio_box size_md">
+														<input type="radio" name="paymentStatus" id="statusFull" class="input_radio" checked>
+														<label for="statusFull" class="label_radio">완납</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="paymentStatus" id="statusDeposit" class="input_radio">
+														<label for="statusDeposit" class="label_radio">계약금</label>
+													</div>
+													<div class="radio_box size_md">
+														<input type="radio" name="paymentStatus" id="statusUnpaid" class="input_radio">
+														<label for="statusUnpaid" class="label_radio">미납</label>
+													</div>
+												</div>
 											</div>
 										</td>
 									</tr>

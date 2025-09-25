@@ -568,3 +568,20 @@ $(document).ready(function () {
 		initialSlide: index,
 	})
 });
+
+
+
+
+// 250820 추가
+
+/* 11썸네일 01_디폴트 */
+$(document).ready(function () {
+    $('.thumbnail_wrap .thumb_box .titbox .setting_btn').on('click', function (e) {
+        const conent = $(this).parent().parent().parent('.item');        
+        conent.addClass('show');
+    });
+    $('.thumbnail_wrap .thumb_box .titbox .cancel_btn').on('click', function (e) {
+        const conent = $(this).parent().parent().parent('.item');        
+        conent.removeClass('show');
+    });
+});
