@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onTEST</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- chart.js -->
+    <script src="js/chart.js"></script>
+    <script src="js/chartjs-plugin-datalabels.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal type2 show" id="resultReportPopup">
+            <div class="modal_box size_big">
+				<div class="modal_head">
+					<p class="h_title">Result Report</p>
+					<button type="button" class="close_btn"></button>
+				</div>
+				<div class="modal_body">	
+					<div class="report_wrap">
+						<section class="report_section re_sec1">
+							<div class="setting_box">
+								<button type="button" class="setting_btn">
+									<img src="img/ico_settingBtn.png" alt="" class="icon">
+								</button>
+								<div class="popup opt_popup setting_popup show">
+									<div class="opt_list">
+										<div class="item">
+											<button type="button" class="opt_popbtn selected">
+												<img src="img/ico_print.png" alt="" class="icon">
+												<span class="txt">결과지 인쇄</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_resultSave.png" alt="" class="icon">
+												<span class="txt">결과지 통합저장</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_excel.png" alt="" class="icon">
+												<span class="txt">시험문제 저장</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_result.png" alt="" class="icon">
+												<span class="txt">시험화면 보기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="report_titbox">
+								<p class="report_tit1">반도체 소자와 공정이론 시험</p>
+								<div class="report_tit2 flex">
+									<div class="item">
+										<span class="txt bold">수험번호</span>
+										<span class="txt">A0000123</span>
+									</div>
+									<div class="item">
+										<span class="txt bold">응시일</span>
+										<span class="txt"> 2025-10-24</span>
+									</div>
+								</div>
+							</div>	
+							<div class="report_statebox">
+								<div class="form_label input_box">
+									<span class="input_txt">시작 IP</span>
+									<span class="input_point">220.120.92.115</span>
+								</div>
+								<div class="form_label input_box">
+									<span class="input_txt">종료 IP</span>
+									<span class="input_point color2">220.120.92.115</span>
+								</div>
+							</div>
+						</section>
+						<section class="report_section re_sec2">
+							<div class="report_titbox">
+								<div class="report_tit2">
+									<span class="bold">종합 분석</span>
+								</div>
+							</div>	
+							<div class="report_contbox">
+								<div class="leftbox">
+									<div class="dounut_chartbox">
+										<canvas id="dounutChart" class="dounutChart" width="260" height="260"></canvas>
+										<div class="chart_txtbox">
+											<p class="tit">100점 환산 그래프</p>
+											<p class="score">92점</p>
+										</div>
+									</div>
+								</div>
+								<div class="rightbox">
+									<div class="total_box">
+										<div class="total_item">
+											<p class="tit">획득점수</p>
+											<p class="score">
+												<span class="big">23</span>
+												<span class="txt">/25점</span>
+											</p>
+										</div>
+										<div class="total_item">
+											<p class="tit">순위</p>
+											<p class="score">
+												<span class="big">24</span>
+												<span class="txt">/162명</span>
+											</p>
+										</div>
+										<div class="total_item">
+											<p class="tit">상위수준</p>
+											<p class="score">
+												<span class="big">
+													15<span class="small">%</span>
+												</span>
+												<span class="txt">/100%</span>
+											</p>
+										</div>
+										<div class="total_item">
+											<p class="tit">푼문항수</p>
+											<p class="score">
+												<span class="big">25</span>
+												<span class="txt">/25문항</span>
+											</p>
+										</div>
+									</div>
+									<div class="bar_chartbox">
+										<div class="barchart">
+											<div class="baritem type1" data-score="21">
+												<div class="bar"></div>
+												<span class="score">23점</span>
+											</div>
+											<div class="baritem type2" data-score="19.625">
+												<div class="bar"></div>
+												<span class="score">21.2점</span>
+											</div>
+											<div class="baritem type3" data-score="22.3">
+												<div class="bar"></div>
+												<span class="score">23.4점</span>
+											</div>
+										</div>
+										<div class="y_labelbox">
+											<div class="label point">본인</div>
+											<div class="label">전체</div>
+											<div class="label">상위 100%</div>
+										</div>
+										<div class="x_labelbox">
+											<div class="label">0점</div>
+											<div class="label">5점</div>
+											<div class="label">10점</div>
+											<div class="label">15점</div>
+											<div class="label">20점</div>
+											<div class="label">25점</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<div class="report_line"></div>
+						<section class="report_section re_sec3">
+							<div class="report_titbox">
+								<div class="report_tit2">
+									<span class="bold">영역별 상세분석</span>
+								</div>
+								<div class="report_tit2">1. [24하] [4월 9일] 반도체 소자</div>
+							</div>	
+							<div class="report_contbox">
+								<div class="tbl_wrap">
+									<table class="tbl ver2">
+										<colgroup>
+											<col style="width: 352px;">
+											<col style="width: 318px;">
+											<col style="width: 359px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="획득점수">획득점수</th>
+												<th data-th="100점 환산 점수">100점 환산 점수</th>
+												<th data-th="푼 문항수">푼 문항수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="center">
+												<td data-th="획득점수">
+													<span class="bold point">23</span>/25점
+												</td>
+												<td data-th="100점 환산 점수">
+													<span class="bold point">92</span>/100점
+												</td>
+												<td data-th="푼 문항수">
+													<span class="bold point">25</span>/25문항
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="bar_chartbox">
+									<div class="barchart">
+										<div class="baritem type1" data-score="21">
+											<div class="bar"></div>
+											<span class="score">23점</span>
+										</div>
+										<div class="baritem type2" data-score="19.625">
+											<div class="bar"></div>
+											<span class="score">21.2점</span>
+										</div>
+										<div class="baritem type3" data-score="22.3">
+											<div class="bar"></div>
+											<span class="score">23.4점</span>
+										</div>
+									</div>
+									<div class="y_labelbox">
+										<div class="label point">본인</div>
+										<div class="label">전체</div>
+										<div class="label">상위 100%</div>
+									</div>
+									<div class="x_labelbox">
+										<div class="label">0점</div>
+										<div class="label">5점</div>
+										<div class="label">10점</div>
+										<div class="label">15점</div>
+										<div class="label">20점</div>
+										<div class="label">25점</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="report_section re_sec4">
+							<div class="report_titbox">
+								<div class="report_tit2">2. [24하] [4월 9일] 반도체 소자</div>
+							</div>	
+							<div class="report_contbox">
+								<div class="tbl_wrap">
+									<table class="tbl ver2">
+										<colgroup>
+											<col style="width: 352px;">
+											<col style="width: 318px;">
+											<col style="width: 359px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="획득점수">획득점수</th>
+												<th data-th="100점 환산 점수">100점 환산 점수</th>
+												<th data-th="푼 문항수">푼 문항수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="center">
+												<td data-th="획득점수">
+													<span class="bold point">23</span>/25점
+												</td>
+												<td data-th="100점 환산 점수">
+													<span class="bold point">92</span>/100점
+												</td>
+												<td data-th="푼 문항수">
+													<span class="bold point">25</span>/25문항
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="bar_chartbox">
+									<div class="barchart">
+										<div class="baritem type1" data-score="21">
+											<div class="bar"></div>
+											<span class="score">23점</span>
+										</div>
+										<div class="baritem type2" data-score="19.625">
+											<div class="bar"></div>
+											<span class="score">21.2점</span>
+										</div>
+										<div class="baritem type3" data-score="22.3">
+											<div class="bar"></div>
+											<span class="score">23.4점</span>
+										</div>
+									</div>
+									<div class="y_labelbox">
+										<div class="label point">본인</div>
+										<div class="label">전체</div>
+										<div class="label">상위 100%</div>
+									</div>
+									<div class="x_labelbox">
+										<div class="label">0점</div>
+										<div class="label">5점</div>
+										<div class="label">10점</div>
+										<div class="label">15점</div>
+										<div class="label">20점</div>
+										<div class="label">25점</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+	<script>	
+		const dounutChart = document.getElementById('dounutChart');
+		const dounutCtx = dounutChart.getContext('2d');
+		const dounutConfig = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					label: '100점 환산 그래프',
+					data: [92, 8], // 전체 100 중 92%
+					backgroundColor: [
+						'#01A4FF', // 채워진 부분
+						'#e5e8ec'  // 남은 부분 (회색)
+					],
+					borderWidth: 0
+				}]
+			},
+			options: {
+				responsive: false,
+				cutout: '80%',
+				plugins: {
+					legend: { display: false },
+					tooltip: { enabled: false }
+				}
+			},
+		};
+		new Chart(dounutCtx, dounutConfig);
+	</script>
+
+
+</body>
+
+</html>

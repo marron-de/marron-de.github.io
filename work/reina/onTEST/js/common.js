@@ -132,6 +132,7 @@ $(document).ready(function () {
 // select2 
 $(function() {
     function formatOption(data) {
+		if (!data.id) return data.text || '';
 		if (!data.element) return null; 
 		if ($(data.element).data('hidden')) return null;
 
@@ -144,12 +145,15 @@ $(function() {
     $(".select2").each(function() {
         let select = $(this);
         let customClass = select.data("class") || "";
+		let placeholder = select.data("placeholder") || "";
 
         let container = select.select2({
             templateResult: formatOption,
             templateSelection: formatOption,
             dropdownCssClass: customClass,
-    		width: '100%'
+    		width: '100%',
+			placeholder: placeholder,
+			allowClear: false,
         }).next('.select2-container');
 
         if (customClass && !container.hasClass(customClass)) {
@@ -179,6 +183,17 @@ $(document).mouseup(function (e) {
 	if ($(".modal .modal_box").has(e.target).length === 0 && $(".ui-datepicker").has(e.target).length === 0) {
 		$("body").removeClass("hidden")
 		$(".modal").removeClass("show")
+	}
+});
+
+
+// 오프캔버스 공통
+$(".offcanvas .offcanvas_close").click(function () {
+	$(".offcanvas").removeClass("show")
+})
+$(document).mouseup(function (e) {
+	if ($(".offcanvas").has(e.target).length === 0) {
+		$(".offcanvas").removeClass("show")
 	}
 });
 
@@ -576,3 +591,83 @@ $(function () {
 });
 
 
+/* 이메일 전송 */
+$('.input_textbox').on('click', function (e) {
+	if ($(e.target).closest('.badge').length) {
+		return;
+	}
+
+	const editableText = $(this).find('.editable_text');
+	const inputPopup = $(this).siblings('.input_popup');
+	if (editableText.length) {
+		$(this).addClass('editable');
+		editableText.focus();
+		inputPopup.addClass('show');
+	}
+	e.stopPropagation();
+});
+$('.input_popup .input_opt').on('click', function () {
+	const selectedText = $(this).text();
+	const inputTextbox = $(this).closest('.input_popup').siblings('.input_textbox');
+	const editableText = inputTextbox.find('.editable_text');
+	const badgeBox = inputTextbox.find('.badgebox');
+	const badge = $('<div class="badge"><span class="txt"></span><button class="remove_btn"></button></div>');
+	badge.find('.txt').text(selectedText);
+
+	badgeBox.append(badge);
+	$(this).closest('.input_textbox').removeClass('editable');
+	$(this).closest('.input_popup').removeClass('show');
+	editableText.val('');
+});
+$('.input_textbox .badgebox').on('click', '.remove_btn', function () {
+	$(this).closest('.badge').remove();
+});  
+$(document).on('click', function (e) {
+	if (!$(e.target).closest('.input_textbox').length) {
+		$('.input_textbox').removeClass('editable');
+		$('.input_popup').removeClass('show');
+	}
+});
+
+$('.input_box.file_ver .fileupload_btn, .input_box.file_ver .input_text').on('click', function() {
+    $(this).siblings('.file_input').click();
+});
+$('.input_box.file_ver .file_input').on('change', function () {
+    const fileName = this.files[0]?.name || '';
+    const inputBox = $(this).closest('.input_box.file_ver');
+    const fileNameInput = inputBox.find('.input_text');
+    
+    fileNameInput.val(fileName);
+
+    if (fileName) {
+        inputBox.addClass('hasFile');
+    } else {
+        inputBox.removeClass('hasFile');
+    }
+});
+
+
+/* 문자 전송 */
+$(function () {
+  $('#smsSendPopup .preview_btn').on('click', function () {
+    $('#smsSendPopup .sms_contbox').toggleClass('preview_show');
+  });
+});
+
+
+/* 결과지및통계보고서 */
+$(document).ready(function () {
+	const maxScore = 25;
+	$('.bar_chartbox .barchart .baritem').each(function () {
+		const score = parseFloat($(this).data('score'));
+		const percent = (score / maxScore) * 100;
+		$(this).css('--bar-percent', percent + '%');
+		if (percent >= 93) {
+			$(this).addClass('chartIn');
+		}
+	});
+});
+
+$("#resultReportPopup .setting_btn").click(function () {
+	$("#resultReportPopup .setting_popup").addClass("show")
+})

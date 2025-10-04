@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onTEST</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- chart.js -->
+    <script src="js/chart.js"></script>
+    <script src="js/chartjs-plugin-datalabels.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal type2 show" id="emailSendPopup">
+            <div class="modal_box size_big">
+				<div class="modal_head">
+					<p class="h_title">이메일 전송</p>
+					<button type="button" class="close_btn"></button>
+				</div>
+				<div class="modal_body">
+					<ul class="tab_wrap">
+						<li class="tab_navbox mb1">
+							<div class="tab_nav on">메일작성</div>
+							<div class="tab_nav">지난설정</div>
+							<div class="tab_nav">전송내역</div>
+						</li>
+						<li class="tab_contbox">
+							<div class="tab_cont on">
+								<div class="form_box">
+									<div class="form_item">
+										<div class="input_box">
+											<label class="label_text">템플릿명</label>
+											<div class="select_box">
+												<select class="select select2" data-placeholder="새로 작성">
+													<option hidden></option>
+													<option value="템플릿명1">템플릿명1</option>
+													<option value="템플릿명2">템플릿명2</option>
+													<option value="템플릿명3">템플릿명3</option>
+													<option value="템플릿명4">템플릿명4</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box">
+											<label class="label_text">발신자</label>
+											<input type="text" class="input_text" placeholder="hello@reina.solutions">
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box">
+											<label class="label_text">
+												수신자 <span class="required">10</span>
+											</label>
+											<div class="input_textbox btn_ver">
+												<div class="badgebox">
+													<div class="badge">
+														<span class="txt">장형준 (3sh0402@gmail.com)</span>
+														<button class="remove_btn"></button>
+													</div>
+												</div>
+												<input type="text" class="input_text editable_text">	
+											</div>	
+											<div class="popup input_popup">
+												<div class="input_list">
+													<p class="input_opt">장형준 (3sh0402@gmail.com)</p>
+													<p class="input_opt">장형식 (4sh1207@naver.com)</p>
+												</div>
+											</div>		
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box align_start">
+											<label class="label_text">
+												참조 <span class="required">10</span>
+											</label>
+											<div class="form_label auto">
+												<div class="check_box">
+													<input type="checkbox" name="AllRef" id="AllRef" class="input_check">
+													<label for="AllRef" class="label_check">명단전체</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box file_ver">
+											<label class="label_text">파일첨부</label>
+											<div class="input_flex">
+												<input type="file" class="file_input">
+												<input type="text" class="input_text" placeholder="파일첨부" readonly>
+												<button type="button" class="btn typeD fileupload_btn">파일찾기</button>
+											</div>					
+											<div class="file_list tbl_wrap">
+												<table class="tbl file_tbl">
+													<colgroup>
+														<col style="width: 56px;">
+														<col style="width: 772px;">
+														<col style="width: 204px;">
+													</colgroup>								
+													<thead>
+														<tr>
+															<th data-th="chekbox">
+																<div class="check_box">
+																	<input type="checkbox" class="input_check">
+																</div>
+															</th>
+															<th data-th="파일명">파일명</th>
+															<th data-th="파일크기">파일크기</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="chekbox">
+																<div class="check_box inline">
+																	<input type="checkbox" class="input_check">
+																</div>
+															</td>
+															<td data-th="파일명">@카카오톡 투명 png.png</td>
+															<td data-th="파일크기">256kb</td>
+														</tr>
+														<tr>
+															<td data-th="chekbox">
+																<div class="check_box inline">
+																	<input type="checkbox" class="input_check">
+																</div>
+															</td>
+															<td data-th="파일명">@카카오톡 투명 png.png</td>
+															<td data-th="파일크기">256kb</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="file_btnbox">
+												<button type="button" class="btn typeF">삭제</button>
+											</div>
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box">
+											<label class="label_text">메일 제목</label>
+											<input type="text" class="input_text" placeholder="제목">
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box">
+											<div class="badgebox gap1">
+												<span class="badge big auto typeE border">#시험이름</span>
+												<span class="badge big auto typeA border">#시험링크</span>
+												<span class="badge big auto typeG border">#시험일자</span>
+												<span class="badge big auto typeD border">#지원자수험번호</span>
+												<span class="badge big auto typeD border">#지원자이름</span>
+											</div>
+											<div class="input_editorbox">
+												<div class="editor">
+													<div class="item item1">
+														<select class="editor_select">
+															<option value="나눔고딕" selected="">나눔고딕</option>
+															<option value="프리텐다드">프리텐다드</option>
+														</select>
+													</div>
+													<div class="bar"></div>
+													<div class="item item2">
+														<select class="editor_select">
+															<option value="제목1">제목1</option>
+															<option value="제목2">제목2</option>
+															<option value="제목3">제목3</option>
+															<option value="본문1">본문1</option>
+															<option value="본문2">본문2</option>
+															<option value="본문3" selected="">본문3</option>
+														</select>
+													</div>
+													<div class="bar"></div>
+													<div class="item item3">
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon1.png" alt="">
+														</button>
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon2.png" alt="">
+														</button>
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon3.png" alt="">
+														</button>
+													</div>
+													<div class="bar"></div>
+													<div class="item item4">
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon4.png" alt="">
+														</button>
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon5.png" alt="">
+														</button>
+													</div>
+													<div class="bar"></div>
+													<div class="item item5">
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon6.png" alt="">
+														</button>
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon7.png" alt="">
+														</button>
+														<button type="button" class="icon_btn">
+															<img src="img/editor_fontIcon8.png" alt="">
+														</button>
+													</div>
+												</div>
+												<textarea class="input_text h192" placeholder="내용을 입력해주세요"></textarea>
+											</div>
+											<div class="word_num">
+												<span class="color">12</span>/256kb
+											</div>
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box">
+											<label class="label_text">예약발송</label>
+											<div class="input_flex input_datebox">
+												<div class="input_datebox w260">
+													<input type="text" class="input_text datepicker" value="2024-08-01 ~ 2024-08-07">
+												</div>
+												<div class="input_timebox w260">
+													<input type="text" class="input_text time_ver" value="17:00">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form_item">
+										<div class="input_box align_start">
+											<label class="label_text">템플릿 저장</label>
+											<div class="form_label auto">
+												<div class="check_box">
+													<input type="checkbox" name="SaveSetting" id="SaveSetting" class="input_check">
+													<label for="SaveSetting" class="label_check">설정저장</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>	
+								<div class="form_btnbox">
+									<button type="button" class="btn auto typeD">미리보기</button>
+									<button type="button" class="btn w100">확인</button>
+								</div>
+							</div>
+							<div class="tab_cont">
+								<p class="tbl_tit">
+									지난 메일설정 <span class="point">5</span>
+								</p>
+								<div class="tbl_wrap">
+									<table class="tbl ver2">
+										<colgroup>
+											<col style="width: 164px;">
+											<col style="width: 179px;">
+											<col style="width: 442px;">
+											<col style="width: 134px;">
+											<col style="width: 113px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="No.">No.</th>
+												<th data-th="사용">사용</th>
+												<th data-th="템플릿명">템플릿명</th>
+												<th data-th="저장일시">저장일시</th>
+												<th data-th="삭제">삭제</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="사용">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_write2.png" alt="" class="icon">
+														<span class="txt">작성하기</span>
+													</button>
+												</td>
+												<td data-th="템플릿명">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="저장일시">2025-10-24</td>
+												<td data-th="삭제">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_delete2.png" alt="" class="icon">
+														<span class="txt">삭제</span>
+													</button>
+												</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="사용">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_write2.png" alt="" class="icon">
+														<span class="txt">작성하기</span>
+													</button>
+												</td>
+												<td data-th="템플릿명">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="저장일시">2025-10-24</td>
+												<td data-th="삭제">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_delete2.png" alt="" class="icon">
+														<span class="txt">삭제</span>
+													</button>
+												</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="사용">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_write2.png" alt="" class="icon">
+														<span class="txt">작성하기</span>
+													</button>
+												</td>
+												<td data-th="템플릿명">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="저장일시">2025-10-24</td>
+												<td data-th="삭제">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_delete2.png" alt="" class="icon">
+														<span class="txt">삭제</span>
+													</button>
+												</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="사용">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_write2.png" alt="" class="icon">
+														<span class="txt">작성하기</span>
+													</button>
+												</td>
+												<td data-th="템플릿명">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="저장일시">2025-10-24</td>
+												<td data-th="삭제">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_delete2.png" alt="" class="icon">
+														<span class="txt">삭제</span>
+													</button>
+												</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="사용">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_write2.png" alt="" class="icon">
+														<span class="txt">작성하기</span>
+													</button>
+												</td>
+												<td data-th="템플릿명">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="저장일시">2025-10-24</td>
+												<td data-th="삭제">
+													<button type="button" class="tbl_btn">
+														<img src="img/ico_delete2.png" alt="" class="icon">
+														<span class="txt">삭제</span>
+													</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>	
+								<div class="el_layout mt4">
+									<div class="leftbox"></div>	
+									<div class="pagination">
+										<button type="button" class="page page_btn">
+											<img src="img/ico_first.png" alt="" class="icon">
+										</button>
+										<button type="button" class="page page_btn">
+											<img src="img/ico_prev.png" alt="" class="icon">
+										</button>
+										<div class="page on">
+											<a href="" class="link">1</a>
+										</div>									
+										<button type="button" class="page page_btn">
+											<img src="img/ico_next.png" alt="" class="icon">
+										</button>
+										<button type="button" class="page page_btn">
+											<img src="img/ico_last.png" alt="" class="icon">
+										</button>
+									</div>
+									<div class="rightbox"></div>
+								</div>
+							</div>
+							<div class="tab_cont">
+								<p class="tbl_tit">
+									메일 전송내역 <span class="point">5</span>
+								</p>
+								<div class="tbl_wrap">
+									<table class="tbl ver2">
+										<colgroup>
+											<col style="width: 135px;">
+											<col style="width: 393px;">
+											<col style="width: 338px;">
+											<col style="width: 166px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="No.">No.</th>
+												<th data-th="수신자명">수신자명</th>
+												<th data-th="메일제목">메일제목</th>
+												<th data-th="전송일자">전송일자</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="수신자명">
+													<div class="tbl_flex gap0">
+														<input type="text" class="tbl_input" value="장형준 <3sh0402@gmail.com>">
+														<span class="txt">
+															외 <span class="point">3</span>명
+														</span>
+													</div>
+												</td>
+												<td data-th="메일제목">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="전송일자">2025-10-24 17:00</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="수신자명">
+													<div class="tbl_flex gap0">
+														<input type="text" class="tbl_input" value="장형준 <3sh0402@gmail.com>">
+														<span class="txt">
+															외 <span class="point">3</span>명
+														</span>
+													</div>
+												</td>
+												<td data-th="메일제목">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="전송일자">2025-10-24 17:00</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="수신자명">
+													<div class="tbl_flex gap0">
+														<input type="text" class="tbl_input" value="장형준 <3sh0402@gmail.com>">
+														<span class="txt">
+															외 <span class="point">3</span>명
+														</span>
+													</div>
+												</td>
+												<td data-th="메일제목">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="전송일자">2025-10-24 17:00</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="수신자명">
+													<div class="tbl_flex gap0">
+														<input type="text" class="tbl_input" value="장형준 <3sh0402@gmail.com>">
+														<span class="txt">
+															외 <span class="point">3</span>명
+														</span>
+													</div>
+												</td>
+												<td data-th="메일제목">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="전송일자">2025-10-24 17:00</td>
+											</tr>
+											<tr class="center">
+												<td data-th="No.">01</td>
+												<td data-th="수신자명">
+													<div class="tbl_flex gap0">
+														<input type="text" class="tbl_input" value="장형준 <3sh0402@gmail.com>">
+														<span class="txt">
+															외 <span class="point">3</span>명
+														</span>
+													</div>
+												</td>
+												<td data-th="메일제목">
+													<a href="#none" class="tbl_link">온라인 시험 링크 발송 템플릿 안내메일</a>
+												</td>
+												<td data-th="전송일자">2025-10-24 17:00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>	
+								<div class="el_layout mt4">
+									<div class="leftbox"></div>	
+									<div class="pagination">
+										<button type="button" class="page page_btn">
+											<img src="img/ico_first.png" alt="" class="icon">
+										</button>
+										<button type="button" class="page page_btn">
+											<img src="img/ico_prev.png" alt="" class="icon">
+										</button>
+										<div class="page on">
+											<a href="" class="link">1</a>
+										</div>									
+										<button type="button" class="page page_btn">
+											<img src="img/ico_next.png" alt="" class="icon">
+										</button>
+										<button type="button" class="page page_btn">
+											<img src="img/ico_last.png" alt="" class="icon">
+										</button>
+									</div>
+									<div class="rightbox"></div>
+								</div>
+							</div>
+						</li>
+					</ul>	
+				</div>
+			</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>
