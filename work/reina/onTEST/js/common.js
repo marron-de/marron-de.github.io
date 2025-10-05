@@ -671,3 +671,53 @@ $(document).ready(function () {
 $("#resultReportPopup .setting_btn").click(function () {
 	$("#resultReportPopup .setting_popup").addClass("show")
 })
+
+
+/* ICC chat */
+$(document).ready(function () {
+  const chatWrap = $(".icc_chat");
+  const chatBtn = $(".icc_chat .chat_btn");
+  chatBtn.on("click", function (e) {
+    e.stopPropagation();
+    chatWrap.toggleClass("show");
+  });
+
+  $(document).on("click", function (e) {
+    if (!chatWrap.is(e.target) && chatWrap.has(e.target).length === 0) {
+      chatWrap.removeClass("show");
+    }
+  });
+});
+
+
+/* ICC chat select*/
+$(".icc_chat .chatselect .select_btn").on("click", function (e) {
+	e.stopPropagation(); 
+	$(".icc_chat .chatselect").toggleClass("open");
+});
+
+$(document).on("mouseup", function (e) {
+	if (!$(e.target).closest(".icc_chat .chatselect, .icc_chat .chatselect_popup").length) {
+		$(".icc_chat .chatselect").removeClass("open");
+	}
+});
+
+$(document).on('click', '.chatselect_popup .opt_btn', function () {
+  const value = $(this).text();
+  const wrap = $(this).closest('.chatselect');
+  
+  wrap.find('.select_btn .txt').text(value);
+
+  // selected 클래스 갱신
+  wrap.find('.opt_btn').removeClass('selected');
+  $(this).addClass('selected');
+  
+  wrap.removeClass('open');
+  wrap.find('.chatselect_popup').removeClass('show');
+});
+
+$('.chatselect_popup .opt_btn').hover(
+  function() { $(this).addClass('hover');},
+  function() { $(this).removeClass('hover'); }
+);
+

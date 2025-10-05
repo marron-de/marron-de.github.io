@@ -18,10 +18,13 @@ input,textarea,button,select {font-family: inherit;}
 body.hidden { overflow: hidden;} 
 .wrap {width: 100%; position: relative; min-width: 1279px;}
 .container {width: 100%; position: relative;}
+.container.padding {padding-top: 4.5rem;}
 .section {width: 100%; position: relative;}
+.page_inner {width: 90%; max-width: 1280px; margin: 0 auto;}
 ::-webkit-scrollbar {width: 0.313rem; height: 0.313rem;}
 ::-webkit-scrollbar-thumb {background: #000; border-radius: 10rem; cursor: pointer; margin: 0 1rem; }
 ::-webkit-scrollbar-track {background: #fff; border-radius: 10rem;}
+
 
 /* 공통 - layout*/
 .layout { display: flex; min-height: 100vh}
@@ -260,6 +263,7 @@ font-size: 0.875rem;line-height: 157%;}
 
 /* 공통 - input */
 .input_box { position: relative; width: 100%; display: flex; flex-direction: column; gap: 0.75rem;}
+.input_box.auto {width: auto;}
 .input_box.align_start {align-items: flex-start;}
 .input_box.line_ver {padding-bottom: 1.5rem; border-bottom: 1px solid #dfe5ec;}
 .input_box .input_text { width: 100%;  height: 3rem; background: #f4f6f8; border: 1px solid #f4f6f8;  border-radius: 0.5rem;  padding: 0 0.875rem;  font-size: 0.875rem;   line-height: 157%;  color: #383b40;}
@@ -491,14 +495,14 @@ overflow: hidden;}
 .select2-container--default .select2-dropdown--below { border: 1px solid #d8dadd;  border-radius: 0 0 0.375rem 0.375rem;  overflow: hidden;}
 .select2-container--default .select2-results>.select2-results__options { max-height: 25rem;}
 .select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar {display: none;}
-.select2-results__option--selectable { font-size: 0.875rem; line-height: 157%; color: #000017;  padding: 0.375rem 0.75rem; transition: var(--transition)}
+.select2-results__option--selectable { font-size: 0.875rem; line-height: 157%; color: #000;  padding: 0.375rem 0.75rem; transition: var(--transition)}
 .select2-results__option--selectable > span {display: flex; align-items: center; gap: 0.5rem;}
 .select2-results__option--selectable .icon { width: 1rem; height: 1rem;}
 .select2-results__option--selectable .txt {flex: 1;}
 .select2-container--open .select2-selection--single .select2-selection__arrow {  transform: rotate(180deg);}
-.select2-container--default .select2-results__option--selected {  background-color: #01a4ff; color: #ffffff;}
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable { background-color: #f0f1f8;  color: #000017;}
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selected {  background-color: #01a4ff; color: #ffffff;}
+.select2-container--default .select2-results__option--selected {  background-color: #fff; color: #000; font-weight: 800;}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable { background-color: #f4f6f8;  color: #000;}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selected {  background-color: #f4f6f8; color: #000;}
 
 .select2-container--default.ver2 .select2-selection--single { border-color: #c4cdd6;  border-radius: 0.375rem;  height: 2rem; padding: 0 0.75rem;}
 .select2-container--default.ver2 .select2-selection--single .select2-selection__rendered { color: #000017;}
@@ -519,6 +523,11 @@ overflow: hidden;}
 
 .select2-container--default.state_used .select2-selection--single .select2-selection__rendered > span::before {content: ""; width: 0.75rem; aspect-ratio: 1/1; border-radius: 50%; background-color: #01a4ff;}
 .select2-container--default.state_unused .select2-selection--single .select2-selection__rendered > span::before {content: ""; width: 0.75rem; aspect-ratio: 1/1; border-radius: 50%; background-color: #adb2bb;}
+
+.select2-container--default.chat_ver .select2-selection--single {  border: none;  border-radius: 0;  height: 3.5rem;  padding: 0 1.5rem;  background: #fff;}
+.select2-container--default.chat_ver .select2-selection--single .select2-selection__rendered { font-weight: 800;  font-size: 1.125rem;  line-height: 144%;  color: #000;}
+.select2-container--default .select2-dropdown--below.chat_ver {  border-radius: 0;  border: none; border-top: 1px solid #e5e8ec; border-bottom: 1px solid #e5e8ec;}
+.select2-container--default .select2-dropdown--below.chat_ver .select2-results__option--selectable {  padding: 0.813rem 1.5rem;}
 
 
 /* 공통 - button */
@@ -712,6 +721,7 @@ font-size: 0.875rem;line-height: 157%;color: #000;}
 .tbl_wrap .tbl tbody tr td.td_date1 {min-width: max(7.5rem, 120px);}
 .tbl_wrap .tbl tbody tr td.td_date2 {min-width: max(4rem, 64px);}
 .tbl_wrap .tbl tbody tr td.td_date3 {min-width: max(6rem, 96px);}
+.tbl_wrap .tbl tbody tr td.td_date4 {min-width: max(4.75rem, 76px);}
 .tbl_wrap .tbl tbody tr td.last {padding-right: 2.5rem;}
 .tbl_wrap .tbl tbody tr td .point {font-weight: 700;color: #01a4ff;} 
 .tbl_wrap .tbl tbody tr td .red {font-weight: 700;color: #f9471e;} 
@@ -927,7 +937,6 @@ color: #383b40;}
 .log_offcanvas .timeline_cont .timeline_box > .item.color1 .tit{color: #01a4ff;}
 .log_offcanvas .timeline_cont .timeline_box > .item.color2 .tit{color: #f9471e;}
 
-
 .frm_offcanvas .form_box + .form_btns{margin-top: 1.5rem;}
 
 
@@ -951,3 +960,113 @@ color: #383b40;}
 .bar_chartbox .y_labelbox { position: absolute; left: 0; top: 1.25rem; width: 3.375rem; display: flex;  flex-direction: column;  gap: 1rem;  font-size: 0.75rem;  line-height: 150%;  text-align: right;  color: #747983;}
 .bar_chartbox .y_labelbox .point {font-weight: 700; color: #01a4ff;}
 .bar_chartbox .x_labelbox { width: 100%;  display: flex;  align-items: center;   justify-content: space-between; font-size: 0.75rem; line-height: 150%; color: #747983;}
+
+
+/* 공통 - ICC header */
+.icc_header { position: fixed;  left: 0; top: 0;  width: 100%;  height: 4.5rem; display: flex;align-items: center; justify-content: space-between; gap: 4rem; padding: 0 2.5rem; border-bottom: 1px solid #dfe5ec; background: #fff; z-index: 50; min-width: 1279px;}
+.icc_header .logobox { width: 7.5rem; display: flex; align-items: center;  justify-content: center;}
+.icc_header .menubox { flex: 1; height: 100%; display: flex; gap: 3rem;}
+.icc_header .menubox .menuitem { position: relative; font-weight: 400;  font-size: 0.875rem; line-height: 157%; color: #000; transition: var(--transition);}
+.icc_header .menubox .menuitem::after { content: "";  background: #01a4ff; width: 100%;  height: 0.25rem;  position: absolute;  left: 0;  bottom: 0;  opacity: 0; pointer-events: none; transition: var(--transition);}
+.icc_header .menubox .menuitem:hover { color: #01a4ff;}
+.icc_header .menubox .menuitem.on { font-weight: 700; color: #01a4ff;}
+.icc_header .menubox .menuitem.on::after {opacity: 1;}
+.icc_header .menubox .menuitem .link { display: flex;  align-items: center;  justify-content: center; width: 100%; height: 100%;}
+.icc_header .sidebox{display: flex; align-items: center; gap: 0.938rem;}
+.icc_header .sidebox .hello {font-size: 0.875rem;line-height: 157%;color: #383b40;}
+.icc_header .sidebox .hello .name{font-weight: 700;}
+.icc_header .sidebox .btnbox {display: flex; align-items: center; gap: 0.5rem;}
+.icc_header .sidebox .btnbox .btn { position: relative; height: 2.5rem;  min-width: 6.125rem;}
+
+
+/* 공통 - ICC layout*/
+.icc_layout { position: relative; height: calc(100vh - 4.5rem); overflow: auto; display: flex; flex-direction: column;}
+.icc_layout::-webkit-scrollbar {display: none;}
+.icc_layout.padding {padding: 3rem 2.5rem 5rem;}
+
+.icc_layout .icc_section {position: relative; width: 100%;}
+.icc_layout .icc_section.full {height: 100%;}
+
+.icc_layout .icc_section .page_subtit{font-weight: 800;font-size: 1rem;line-height: 150%;color: #000; display: flex; align-items: center; gap: 0.5rem;}
+.icc_layout .icc_section .page_subtit .color {color: #01a4ff;}
+.icc_layout .icc_section .page_subtit .color2 {color: #f9471e;}
+
+.icc_layout .icc_section .sec_top { display: flex; align-items: flex-end;  justify-content: space-between; gap: 0.75rem;  border-bottom: 1px solid #000;  padding-bottom: 1rem;   margin-bottom: 0.875rem;}
+.icc_layout .icc_section .sec_top .leftbox,
+.icc_layout .icc_section .sec_top .rightbox {display: flex; align-items: center; gap: 0.75rem; flex: 1;}
+.icc_layout .icc_section .sec_top .leftbox.gap1,
+.icc_layout .icc_section .sec_top .rightbox.gap1 {gap: 1.5rem;}
+.icc_layout .icc_section .sec_top .leftbox.no_full,
+.icc_layout .icc_section .sec_top .rightbox.no_full {flex: unset; max-width: 93%;}
+.icc_layout .icc_section .sec_top .rightbox {justify-content: flex-end;}
+.icc_layout .icc_section .sec_top .bar {width: 1px; height: 1.5rem; background: #e5e8ec; display: inline-block;}
+.icc_layout .icc_section .sec_top .select_box {width: 11.25rem;}
+
+.icc_layout .icc_section .sec_cont{position: relative;}
+.icc_layout .icc_section .sec_cont .tbl_wrap .tbl{border-bottom: 1px solid #e5e8ec;}
+
+.icc_layout .icc_btnbox {display: flex; align-items: center; gap: 1rem; justify-content: space-between; margin-top: 2.5rem;}
+.icc_layout .icc_btnbox .leftbox,
+.icc_layout .icc_btnbox .rightbox{flex: 1; display: flex; align-items: center; gap: 0.75rem;}
+.icc_layout .icc_btnbox .rightbox {justify-content: flex-end;}
+
+.icc_layout .monitoring_box { position: relative; display: flex; flex-wrap: wrap;  gap: 1.563rem;}
+.icc_layout .monitoring_box .item { width: calc((100% - 1.563rem * 4) / 5);   box-shadow: 0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.08);  background: #fff;  border-radius: 0.75rem;  padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 1rem;}
+.icc_layout .monitoring_box .item .topbox { display: flex;  align-items: center;  justify-content: space-between;}
+.icc_layout .monitoring_box .item .topbox .number{font-weight: 700;font-size: 1rem;line-height: 150%;color: #000; display: flex; align-items: center; gap: 0.5rem;}
+.icc_layout .monitoring_box .item .topbox .number .dot{width: 0.75rem; aspect-ratio: 1/1; border-radius: 50%;}
+.icc_layout .monitoring_box .item .topbox .number .dot.colorType1{background: #01a4ff;}
+.icc_layout .monitoring_box .item .topbox .number .dot.colorType2{background: #d8dadd;}
+.icc_layout .monitoring_box .item .topbox .number .dot.colorType3{background: #f9471e;}
+.icc_layout .monitoring_box .item .topbox .number .dot.colorType4{background: #000;}
+.icc_layout .monitoring_box .item .topbox .delete_btn {  background: url(../img/ico_close.png) no-repeat center / contain;  width: 1.5rem;  aspect-ratio: 1 / 1;}
+.icc_layout .monitoring_box .item .screenbox{border-radius: 0.75rem; background: #f2f4f6; width: 100%; height: 12.5rem; overflow: hidden;}
+.icc_layout .monitoring_box .item .screenbox .default{width: 100%; height: 100%; object-fit: cover;}
+.icc_layout .monitoring_box .item .btnbox { display: flex;  align-items: center;  justify-content: space-between; padding: 0 1.5rem;}
+.icc_layout .monitoring_box .item .btnbox.ver2 { padding: 0;}
+.icc_layout .monitoring_box .item .btnitem { display: flex;  align-items: center; gap: 1.25rem; }
+
+
+/* ICC chat */
+.icc_chat {position: fixed; right: 2.5rem; bottom: 2.5rem; z-index: 50;}
+.icc_chat .chat_btn{display: flex; align-items: center; width: 3rem;}
+.icc_chat .chat_btn .icon{background: url(../img/icc_chat.png) no-repeat center/contain; width: 100%; aspect-ratio: 1/1; overflow: hidden;}
+.icc_chat .chatselect { position: relative; width: 100%;}
+.icc_chat .chatselect .select_btn { width: 100%;  height: 3.5rem;  display: flex;  align-items: center;  justify-content: space-between;  gap: 0.75rem;  padding: 0 1.5rem;  font-weight: 800;  font-size: 1.125rem;  line-height: 144%; color: #000;}
+.icc_chat .chatselect .select_btn .arrow{background: url(../img/select_arrow.png) no-repeat center/contain; width: 1.5rem; aspect-ratio: 1/1; transition: var(--transition);}
+.icc_chat .chatselect.open .select_btn .arrow{transform: rotate(-180deg);}
+.icc_chat .chatselect .chatselect_popup { width: 100%;  display: flex;  flex-direction: column;  border-radius: 0;  box-shadow: none;  border-top: 1px solid #e5e8ec;   border-bottom: 1px solid #e5e8ec; top: calc(100% - 1px);}
+.icc_chat .chatselect.open .chatselect_popup { opacity: 1; pointer-events: auto;}
+.icc_chat .chatselect .chatselect_popup .opt_btn { width: 100%; height: 3rem;  text-align: left;  padding: 0 1.5rem; display: flex;  align-items: center;   transition: var(--transition); font-weight: 400; font-size: 0.875rem; line-height: 157%; color: #000;}
+.icc_chat .chatselect .chatselect_popup .opt_btn.hover {background: #f4f6f8;}
+.icc_chat .chatarea {position: absolute; right: 0; bottom: calc(100% + 1.5rem); width: 30rem;  min-height: 38.75rem; max-height: 38.75rem; box-shadow: 0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.12); background: #fff; border-radius: 1rem; display: flex;   flex-direction: column;  overflow: hidden; transition: all 0.6s ease; transform: translateY(1rem); opacity: 0;  pointer-events: none;}
+.icc_chat.show .chatarea { transform: translateY(0); opacity: 1; pointer-events: auto;}
+.icc_chat .chatarea .chatbox { position: relative; flex: 1;  width: 100%;  height: 100%; display: flex;  flex-direction: column;  gap: 1.5rem; padding: 1.5rem 0.75rem; background: #fff; overflow: hidden; border-top: 1px solid #e5e8ec;}
+.icc_chat .chatarea .chatbox .chatlist {  flex: 1; width: 100%; display: flex;  flex-direction: column;  gap: 1.5rem;  overflow: auto; padding: 0 0.75rem;}
+.icc_chat .chatarea .chatbox .chatlist::-webkit-scrollbar {width: 6px; height: 6px;}
+.icc_chat .chatarea .chatbox .chatlist::-webkit-scrollbar-thumb {background: #000; border-radius: 10px;}
+.icc_chat .chatarea .chatbox .chatlist::-webkit-scrollbar-track {background: #f0f1f8; border-radius: 10px;}
+.icc_chat .chatarea .chatbox .chatitem { display: flex;  flex-direction: column; gap: 0.5rem;}
+.icc_chat .chatarea .chatbox .chatitem .chat { display: flex; align-items: flex-start; gap: 0.5rem;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .profile {width: 2.5rem; aspect-ratio: 1/1;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .profile .profile_img { width: 100%;  aspect-ratio: 1 / 1;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox { display: flex; flex-direction: column; gap: 0.625rem;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox .name {  font-weight: 700; font-size: 0.813rem; line-height: 154%; color: #131720;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox .msgbox { position: relative; display: flex; align-items: flex-end ;gap: 0.5rem;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox .msgbox .time {  font-size: 0.75rem;  line-height: 150%; color: #627383;  width: 4rem;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox .msgbox .msg {  position: relative;  font-size: 0.813rem; line-height: 154%; color: #131720; background: #f0f1f8;  border-radius: 0.625rem;  padding: 0.75rem 1rem 0.75rem 1.25rem;  display: flex;flex-direction: column; gap: 0.5rem;}.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox .msgbox .msg::before {content: ""; position: absolute; top: 0; background: no-repeat center/contain; width: 0.625rem; aspect-ratio: 1 / 1.2;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox .msgbox .msg .txt{flex: 1;}
+.icc_chat .chatarea .chatbox .chatitem .chat > .txtbox .msgbox .msg .txt .link {text-decoration: underline; text-underline-offset: 3px;}
+.icc_chat .chatarea .chatbox .chatitem.me_chat { align-items: flex-end;}
+.icc_chat .chatarea .chatbox .chatitem.me_chat .chat > .txtbox {  align-items: flex-end;padding-right: 0.313rem}
+.icc_chat .chatarea .chatbox .chatitem.me_chat .chat > .txtbox .msgbox { flex-direction: row; ;}
+.icc_chat .chatarea .chatbox .chatitem.me_chat .chat > .txtbox .msgbox .msg {  color: #01a4ff; background: #e3f6ff; text-align: right;}
+.icc_chat .chatarea .chatbox .chatitem.me_chat .chat > .txtbox .msgbox .msg::before {background-image: url(../img/chat_msg_tail_me.png); right:  -0.313rem;}
+.icc_chat .chatarea .chatbox .chatitem.me_chat .chat > .txtbox .msgbox .time {text-align: right;}
+.icc_chat .chatarea .chatbox .chatitem.other_chat{ align-items: flex-start;}
+.icc_chat .chatarea .chatbox .chatitem.other_chat .chat > .txtbox { align-items: flex-start;  padding-left: 0.313rem;}
+.icc_chat .chatarea .chatbox .chatitem.other_chat .chat > .txtbox .msgbox { flex-direction: row-reverse;}
+.icc_chat .chatarea .chatbox .chatitem.other_chat .chat > .txtbox .msgbox .msg::before {background-image: url(../img/chat_msg_tail_basic.png); left:  -0.313rem;}
+.icc_chat .chatarea .chatbox .chatinput {width: 100%; padding: 0 0.75rem;}
+.icc_chat .chatarea .chatbox .chatinput .input_text { padding: 0 3.75rem 0 1rem;}
+.icc_chat .chatarea .chatbox .chatinput .send_btn{ position: absolute;  right: 1.75rem;  top: 50%;  transform: translateY(-50%); width: 1.5rem;}
