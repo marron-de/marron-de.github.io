@@ -1,27 +1,23 @@
-
+	
 <!-- footer -->
 <footer class="footer" id="footer">
 	<div class="inner f_inner">
 		<div class="f_left">
 			<div class="f_logo">
-				<img src="img/logo_b.png" alt="">
+				<img src="/img/logo_b.png" alt="">
 			</div>
 			<div class="f_info">
 				<p class="info_top">
-					Level 2/63 Dixon St Sydney, NSW 2000
+					Shop 23, 15 De Clambe Drive Castle Hill NSW 2154
 				</p>
 				<div class="info_bottom">
 					<div class="item">
-						<span class="tit">MAIL.</span>
-						<span class="desc">contact@healsy.com.au</span>
+						<span class="tit">Mail.</span>
+						<span class="desc">contact@healsyclinic.com.au</span>
 					</div>
 					<div class="item">
-						<span class="tit">TEL.</span>
-						<span class="desc">1234567890</span>
-					</div>
-					<div class="item">
-						<span class="tit">FAX.</span>
-						<span class="desc">1234567890</span>
+						<span class="tit">Tel.</span>
+						<span class="desc">(+61) 02 9159 3977</span>
 					</div>
 				</div>
 			</div>
@@ -31,7 +27,7 @@
 		</div>
 		<div class="f_right">
 			<p class="f_copyright">
-				<img src="img/copy_logo.png" alt="" class="logo">
+				<img src="/img/copy_logo.png" alt="" class="logo">
 				<span class="txtarea">
 					<span class="txt">WALTER WALKER AU No.2 Pty Limited</span>
 					<span class="txt">@ 2025. All right reserved.</span>
@@ -46,7 +42,7 @@
 <div class="modal" id="privacy_modal">
 	<div class="modal_box contact_box">
 		<div class="logobox">
-			<img src="img/logo.png" alt="" class="logo">
+			<img src="/img/logo.png" alt="" class="logo">
 		</div>
 		<div class="txtbox">			
 			<div class="tit_box">
@@ -210,3 +206,7 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- top button -->
+<button type="button" id="top_button" class="top_button"></button>
