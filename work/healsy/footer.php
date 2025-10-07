@@ -45,7 +45,8 @@
 			<div class="f_nav">
 				<li style="display: none;"><a href="https://walterwalker.kr/" class="link" target="_blank">WALTERWALKER</a></li>
 				<li style="display: none;"><a href="https://walterwalker.kr/opctfactory/main.php" class="link" target="_blank">OPCT FACTORY</a></li>
-				<li><a class="link privacy_btn">PRIVACY POLICY</a></li>
+				<li><a class="link privacy_btn">HOMEPAGE PRIVACY POLICY</a></li>
+				<li><a href="privacy-app.php" class="link app_privacy_btn">APP PRIVACY POLICY</a></li>
 			</div>
 		</div>
 		<div class="f_right">
@@ -104,38 +105,102 @@
 				<button type="button" class="close_btn modal_close"></button>
 				<p class="form_tit">CONTACT US</p>
 			</div>
-			<div class="input_wrap">
-				<div class="input_box">
-					<label for="frm_first_name" class="label">First Name</label>
-					<input id="frm_first_name" type="text" class="input" placeholder="Enter your first name" required >
+			<form id="frmSendMailForm" name="frmSendMailForm" target="ifrmProcess" action="/mail/send_mail.php" method="post">
+				<div class="input_wrap">
+					<div class="input_box">
+						<label for="frm_first_name" class="label">First Name</label>
+						<input id="frm_first_name" name="cs_firstName" type="text" class="input" placeholder="Enter your first name" required >
+					</div>
+					<div class="input_box">
+						<label for="frm_last_name" class="label">Last Name</label>
+						<input id="frm_last_name" name="cs_lastName" type="text" class="input" placeholder="Enter your last name" required >
+					</div>
+					<div class="input_box">
+						<label for="frm_email" class="label">Email</label>
+						<input id="frm_email" name="cs_email" type="text" class="input" placeholder="Enter your email" required >
+					</div>
+					<div class="input_box">
+						<label for="frm_phone" class="label">Phone Number</label>
+						<input id="frm_phone" name="cs_phoneNumber" type="text" class="input" placeholder="Enter your number" required >
+					</div>
+					<div class="input_box full">
+						<label for="frm_message" class="label">Message</label>
+						<textarea id="frm_message" name="cs_message" class="textarea" placeholder="Enter your message" required ></textarea>
+					</div>
+					<div style="margin-top: -20px">
+						<p style="font-size: 12px; color: #999;">
+							This site is protected by reCAPTCHA and the Google
+							<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and
+							<a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.
+						</p>
+					</div>
 				</div>
-				<div class="input_box">
-					<label for="frm_last_name" class="label">Last Name</label>
-					<input id="frm_last_name" type="text" class="input" placeholder="Enter your last name" value="NameName" required >
+				<!-- reCAPTCHA v3 hidden field -->
+				<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+				<div class="button_box">
+					<button type="submit" class="send_btn" id="send-mail">
+						<span class="txt">SEND EMAIL</span>
+						<span class="arrow"></span>
+					</button>
+					<button type="button" class="close_btn modal_close">CLOSE</button>
 				</div>
-				<div class="input_box">
-					<label for="frm_email" class="label">Email</label>
-					<input id="frm_email" type="text" class="input" placeholder="Enter your email" required >
-				</div>
-				<div class="input_box">
-					<label for="frm_phone" class="label">Phone Number</label>
-					<input id="frm_phone" type="text" class="input" placeholder="Enter your number" required >
-				</div>
-				<div class="input_box full">
-					<label for="frm_message" class="label">Message</label>
-					<textarea id="frm_message" class="textarea" placeholder="Enter your message" required ></textarea>
-				</div>
-			</div>
-			<div class="button_box">
-				<button type="button" class="send_btn">
-					<span class="txt">SEND EMAIL</span>
-					<span class="arrow"></span>
-				</button>
-				<button type="button" class="close_btn modal_close">CLOSE</button>
-			</div>
+			</form>
 		</div>
 	</div>
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LcNOWorAAAAALSFf93772LHa5wrey11eMXxpjmP"></script>
+<script>
+
+document.getElementById('frmSendMailForm').addEventListener('submit', function (e) {
+	e.preventDefault(); // 폼 제출을 잠시 멈춤
+
+	startLoading();
+
+	grecaptcha.ready(function () {
+		grecaptcha.execute('6LcNOWorAAAAALSFf93772LHa5wrey11eMXxpjmP', { action: 'submit' })
+			.then(function (token) {
+				// 토큰을 숨겨진 필드에 넣고 폼을 제출
+				document.getElementById('g-recaptcha-response').value = token;
+				document.getElementById('frmSendMailForm').submit(); // 토큰 세팅 후 실제 제출
+			});
+	});
+});
+
+function startLoading() {
+	const sendBtn = document.querySelector('#send-mail');
+	if (sendBtn) {
+		sendBtn.disabled = true;
+		const txtSpan = sendBtn.querySelector('.txt');
+		if (txtSpan) txtSpan.textContent = 'Sending...';
+	}
+}
+
+function endLoading(message) {
+	const sendBtn = document.querySelector('#send-mail');
+	if (sendBtn) {
+		sendBtn.disabled = false;
+		const txtSpan = sendBtn.querySelector('.txt');
+		if (txtSpan) txtSpan.textContent = 'SEND EMAIL';
+	}
+
+	// 메시지 alert
+	alert(message);
+
+	// 모달 닫기
+	$("body").removeClass("hidden");
+	$(".modal").removeClass("show");
+	//const modal = document.getElementById('contact_modal');
+	//if (modal) modal.style.display = 'none';
+
+	// 폼 초기화
+	const form = document.getElementById('frmSendMailForm');
+	if (form) form.reset();
+}
+</script>
+
+<iframe name="ifrmProcess" src="" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
 
 <div class="modal" id="privacy_modal">
 	<div class="modal_box contact_box">
@@ -145,7 +210,7 @@
 		<div class="txtbox">			
 			<div class="tit_box">
 				<button type="button" class="close_btn modal_close"></button>
-				<p class="form_tit">Privacy policy</p>
+				<p class="form_tit">Homepage Privacy policy</p>
 			</div>
 			<div class="contbox">
 				<div class="item">
@@ -304,3 +369,134 @@
 		</div>
 	</div>
 </div>
+
+<!-- <div class="modal" id="app_privacy_modal">
+	<div class="modal_box contact_box">
+		<div class="logobox">
+			<img src="img/logo.png" alt="" class="logo">
+		</div>
+		<div class="txtbox">			
+			<div class="tit_box">
+				<button type="button" class="close_btn modal_close"></button>
+				<p class="form_tit">Privacy policy for Healsy Orthotics Foot Scan</p>
+			</div>
+			<div class="contbox">
+				<div class="item">
+					<p class="tit">Effective Date 10.Jul.2025</p>
+				</div>
+				<div class="item">
+					<p class="tit">INTRODUCTION</p>
+					<p class="desc">
+					Healsy Orthotics Foot Scan ("we", "our", or "us") is committed to protecting your privacy and complying with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). This Privacy Policy explains how we collect, use, and protect data collected through our mobile application ("the App").
+					</p>
+				</div>
+				<div class="item">
+					<p class="tit">DATA COLLECTION AND USE</p>
+					<div class="descwrap">
+						<div class="descbox">
+							<p class="txt">
+								The App does not require user registration or sign-up.
+							</p>
+							<p class="txt">
+								The App does not collect or store any personal information directly on your device.
+							</p>
+							<p class="txt">
+								The App allows podiatrists to scan patients’ feet and capture lower limb photographs solely for clinical use to assist in prescribing custom orthotics.
+							</p>
+							<p class="txt">
+								All scan data and images are immediately and securely uploaded to AWS (Amazon Web Services) cloud storage and are not stored locally on your device.
+							</p>
+						</div>	
+					</div>			
+				</div>
+				<div class="item">
+					<p class="tit">PURPOSE OF DATA COLLECTION</p>
+					<div class="descwrap">
+						<div class="descbox">
+							<p class="txt">
+								The data collected via the App is intended exclusively for use by qualified podiatrists within clinical settings in Australia.
+							</p>
+							<p class="txt">
+								The App does not provide medical advice, diagnosis, or treatment directly to patients.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<p class="tit">DATA STORAGE AND SECURITY</p>
+					<div class="descwrap">
+						<div class="descbox">
+							<p class="txt">
+								All collected data is securely transmitted using encryption protocols (e.g., HTTPS/TLS) and stored on AWS cloud servers.
+							</p>
+							<p class="txt">
+								We implement industry-standard security measures to protect data from unauthorized access, misuse, loss, or disclosure.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<p class="tit">PATIENT CONSENT</p>
+					<div class="descwrap">
+						<div class="descbox">
+							<p class="txt">
+								As the App is intended for use only by healthcare professionals, it is the responsibility of each clinic or podiatrist to obtain informed consent from patients before collecting any scan data or images.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<p class="tit">DATA SHARING AND DISCLOSURE</p>
+					<div class="descwrap">
+						<div class="descbox">
+							<p class="txt">
+								We do not sell, rent, or share any collected data with third parties.
+							</p>
+							<p class="txt">
+								Data is accessible only to authorized podiatrists and their clinics using the App for clinical purposes.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<p class="tit">NO PAYMENTS OR IN_APP PURCHASES</p>
+					<div class="descwrap">
+						<div class="descbox">
+							<p class="txt">
+								The App does not contain any payment systems or in-app purchase features.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<p class="tit">ACCESS AND CORRECTION</p>
+					<div class="descwrap">
+						<div class="descbox">
+							<p class="txt">
+								Because no personal accounts are created and no personal information is stored directly within the App, there is no user data available for access or correction via the App.
+							</p>
+							<p class="txt">
+								Any inquiries regarding patient data should be directed to the respective clinic or podiatrist who collected the data.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<p class="tit">CHANGE TO THIS PRIVACY POLICY</p>
+					<p class="desc">
+						We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The most current version will always be available within the App or on our website.
+					</p>
+				</div>
+				<div class="item">
+					<p class="tit">CONTACT US</p>
+					<p class="desc">
+						If you have any queries or concerns about our privacy policy or our data practices, please contact us at contact@heasly.com.au
+					</p>
+				</div>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="close_btn modal_close">CLOSE</button>
+			</div>
+		</div>
+	</div>
+</div> -->

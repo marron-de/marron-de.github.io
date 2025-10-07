@@ -193,19 +193,58 @@ $(document).ready(function () {
 });
 
 
-// Privacy Policy modal
+// Policy modal
 $(document).ready(function () {
 	$(".footer .privacy_btn").click(function () {
-		$("body").addClass("hidden")
-		$("#privacy_modal").addClass("show")
-	})
-});
-$(document).ready(function () {
+	  $("body").addClass("hidden");
+	  $("#privacy_modal").addClass("show");
+	});
+  
 	$("#privacy_modal .privacy_btn").click(function () {
-		$("body").removeClass("hidden")
-		$("#privacy_modal").removeClass("show")
-	})
-});
+	  $("body").removeClass("hidden");
+	  $("#privacy_modal").removeClass("show");
+	});
+  
+	// 동적 바인딩을 위해 .on() 사용
+	$(document).on("click", ".footer .app_privacy_btn", function () {
+	  $("body").addClass("hidden");
+	  $("#app_privacy_modal").addClass("show");
+	});
+  
+	$("#app_privacy_modal .app_privacy_btn").click(function () {
+	  $("body").removeClass("hidden");
+	  $("#app_privacy_modal").removeClass("show");
+	});
+  });  
+  
+
+// // Privacy Policy modal
+// $(document).ready(function () {
+// 	$(".footer .privacy_btn").click(function () {
+// 		$("body").addClass("hidden")
+// 		$("#privacy_modal").addClass("show")
+// 	})
+// });
+// $(document).ready(function () {
+// 	$("#privacy_modal .privacy_btn").click(function () {
+// 		$("body").removeClass("hidden")
+// 		$("#privacy_modal").removeClass("show")
+// 	})
+// });
+
+// // App Privacy Policy modal
+// $(document).ready(function () {
+// 	$(".footer .app_privacy_btn").click(function () {
+// 		$("body").addClass("hidden")
+// 		$("#app_privacy_modal").addClass("show")
+// 	})
+// });
+// $(document).ready(function () {
+// 	$("#app_privacy_modal .app_privacy_btn").click(function () {
+// 		$("body").removeClass("hidden")
+// 		$("#app_privacy_modal").removeClass("show")
+// 	})
+// });
 
 
 // main
