@@ -87,7 +87,7 @@
 	<script src="js/common.js"></script>
 	<script>
   		 $(function() {
-			$('.nav_box .nav > li').eq(6).addClass('active');
+			$('.nav_box .nav > li').eq(7).addClass('active');
 		});
 	</script>
 
