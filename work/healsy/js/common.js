@@ -91,12 +91,26 @@ $(document).mouseup(function (e) {
 
 
 // tab function
-const tabs_swiper = new Swiper('.tabs_swiper', {
+const tabs_swiper = new Swiper('.tabs_swiper:not(.ver2)', {
 	observer: true, 	
 	observeParents: true, 
 
 	slidesPerView: 'auto',
 	spaceBetween: 22,
+	speed: 500,
+
+	breakpoints: {
+		1080: {
+			spaceBetween: 0,
+		},
+	}
+})
+const tabs_swiper2 = new Swiper('.tabs_swiper.ver2', {
+	observer: true, 	
+	observeParents: true, 
+
+	slidesPerView: 'auto',
+	spaceBetween: 15,
 	speed: 500,
 
 	breakpoints: {
@@ -207,7 +221,7 @@ $(document).ready(function () {
   
 	// 동적 바인딩을 위해 .on() 사용
 	$(document).on("click", ".footer .app_privacy_btn", function () {
-	  $("body").addClass("hidden");
+	//   $("body").addClass("hidden"); // 페이지 이동후 뒤로가기 시 오류발생 -> 제거
 	  $("#app_privacy_modal").addClass("show");
 	});
   
@@ -557,8 +571,6 @@ document.querySelectorAll('.tab_navbox .tab_nav .link').forEach(link => {
 });
 
 
-
-
 // tech
 $(function () {
 	const steps = ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8'];
@@ -827,3 +839,29 @@ $(document).ready(function () {
     wrap.toggleClass('active'); 
   });
 });
+
+
+// orthotic
+if (window.innerWidth <= 1080) {
+	$('.ors2_swiper').each(function () {
+		const swiperEl = $(this)[0];
+
+		new Swiper(swiperEl, {
+			observer: true,
+			observeParents: true,
+			speed: 500,
+			loop: true,
+			spaceBetween: 20,
+
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+
+			pagination: {
+				el: $(swiperEl).find('.pagination')[0],
+				clickable: true,
+			},
+		});
+	});
+}
