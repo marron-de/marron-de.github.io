@@ -32,7 +32,7 @@
 						</p>
 					</div>
 					<p class="s_title">
-						Precision <br class="tabelt">Orthotics Solutions
+						Precision <br class="tablet">Orthotics Solutions
 					</p>
 					<p class="s_sub pc">
 						A Stepwise System for Clinical Practice

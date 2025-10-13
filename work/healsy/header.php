@@ -20,8 +20,8 @@
 				<li><a href="/useCases.php" class="link" data-text="USE CASES">
 					<span class="txt">USE CASES</span> 
 				</a></li>
-				<li><a href="/orthotic.php" class="link" data-text="ORTHOTIC">
-					<span class="txt">ORTHOTIC</span>
+				<li><a href="/orthotic.php" class="link" data-text="ORTHOTICS">
+					<span class="txt">ORTHOTICS</span>
 				</a></li>
 				<li><a href="/orderGuide.php" class="link" data-text="ORDER GUIDE">
 					<span class="txt">ORDER GUIDE</span>
@@ -54,7 +54,7 @@
 		<li><a href="/newPlatform.php" class="link">NEW PLATFORM</a></li>
 		<li><a href="/tech.php" class="link">TECH</a></li>
 		<li><a href="/useCases.php" class="link">USE CASES</a></li>
-		<li><a href="/orthotic.php" class="link">ORTHOTIC</a></li>
+		<li><a href="/orthotic.php" class="link">ORTHOTICS</a></li>
 		<li><a href="/orderGuide.php" class="link">ORDER GUIDE</a></li>
 		<li><a href="/clinic.php" class="link">CLINIC</a></li>
 		<!--<li class="button"><a href="#" class="link">ORTHOTICS ORDER</a></li>-->
