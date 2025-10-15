@@ -16,7 +16,7 @@
 <body>
 
 
-	<div class="wrap service_wrap service1_wrap">
+	<div class="wrap service_wrap">
 
 		<?php include "../header.php" ?>
 

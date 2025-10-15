@@ -62,8 +62,8 @@
 						</p>
 						<p class="sub">Quick & Simple</p>
 						<p class="desc">
-							Modular system with 6 arch types considering width, heel alignment, flexibility, and contact area. 18 modules tailored for different purposes <br>
-							more precise than Pre-mold, faster and more cost-efficient than Full-custom.
+							Three arch types (High, Mid, Low) to suit patient need <br>
+							Three product lines (Motion, Perform, Slim) depending on activity and footwear
 						</p>
 					</div>	
 					<p class="mob_tit tablet">Pre-mold</p>

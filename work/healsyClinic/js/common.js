@@ -206,7 +206,7 @@ class Marquee {
   }
   slowDownAnimations() {
     for (const a of this.animations) {
-      a.playbackRate = this.SLOWDOWN_RATE;
+    //   a.playbackRate = this.SLOWDOWN_RATE; // 멈춤 삭제
     }
   }
   resumeAnimationSpeed() {
@@ -394,6 +394,7 @@ $('.team_swiper').each(function () {
 		// },
         breakpoints: {
             1080: {
+        		slidesPerView: 2,
                 spaceBetween: PCGap,
             }
         },

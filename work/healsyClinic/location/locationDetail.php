@@ -89,15 +89,9 @@
 												<img src="../img/location_thum4.png" alt="" class="img">
 											</div>
 										</div>
-
 										<div class="swiper-slide item">
 											<div class="imgbox">
-												<img src="../img/location_thum1.png" alt="" class="img">
-											</div>
-										</div>
-										<div class="swiper-slide item">
-											<div class="imgbox">
-												<img src="../img/location_thum2.png" alt="" class="img">
+												<img src="../img/location_thum5.png" alt="" class="img">
 											</div>
 										</div>
 									</div>

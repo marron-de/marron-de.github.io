@@ -30,7 +30,7 @@
 		<header class="header white" id="header">
 			<div class="inner h_inner">
 				<div class="h_logo">
-					<a href="index.php">
+					<a href="/index.php">
 						<img src="img/logo_w.png" alt="" class="logo logo_w" />
 						<img src="img/logo_b.png" alt="" class="logo logo_b" />
 					</a>
@@ -188,47 +188,56 @@
 												<div class="swiper-wrapper">
 													<div class="swiper-slide item">
 														<div class="imgbox">
-															<img src="img/ms3_1_thum.png" alt="" class="img">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
 														<div class="txtbox">
-															<p class="tit">Elizabeth Yang</p>
-															<p class="desc">Physiotherapist & Director</p>
+															<p class="tit">Brian Park</p>
+															<p class="desc">Physiotherapist</p>
 														</div>
 													</div>
 													<div class="swiper-slide item">
 														<div class="imgbox">
-															<img src="img/ms3_1_thum.png" alt="" class="img">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
 														<div class="txtbox">
-															<p class="tit">Elizabeth Yang</p>
-															<p class="desc">Physiotherapist & Director</p>
+															<p class="tit">John Yo Han, Sung</p>
+															<p class="desc">Physiotherapist</p>
 														</div>
 													</div>
 													<div class="swiper-slide item">
 														<div class="imgbox">
-															<img src="img/ms3_1_thum.png" alt="" class="img">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
 														<div class="txtbox">
-															<p class="tit">Elizabeth Yang</p>
-															<p class="desc">Physiotherapist & Director</p>
+															<p class="tit">Tony Choo</p>
+															<p class="desc">Podiatrist</p>
 														</div>
 													</div>
 													<div class="swiper-slide item">
 														<div class="imgbox">
-															<img src="img/ms3_1_thum.png" alt="" class="img">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
 														<div class="txtbox">
-															<p class="tit">Elizabeth Yang</p>
-															<p class="desc">Physiotherapist & Director</p>
+															<p class="tit">Jacky Liu</p>
+															<p class="desc">Podiatrist</p>
 														</div>
 													</div>
 													<div class="swiper-slide item">
 														<div class="imgbox">
-															<img src="img/ms3_1_thum.png" alt="" class="img">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
 														<div class="txtbox">
-															<p class="tit">Elizabeth Yang</p>
-															<p class="desc">Physiotherapist & Director</p>
+															<p class="tit">Jun Park</p>
+															<p class="desc">Exercise Physiologist</p>
+														</div>
+													</div>
+													<div class="swiper-slide item">
+														<div class="imgbox">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
+														</div>
+														<div class="txtbox">
+															<p class="tit">YeonJu, Park</p>
+															<p class="desc">Clinical Pilates Instructor</p>
 														</div>
 													</div>
 												</div>
@@ -649,6 +658,24 @@
 					<!-- data-reverse="true" -->
 					<div class="marquee" data-duration="1.5">
 						<div class="marquee_group">
+							<!-- 원본 -->
+							<div class="item">
+								<img src="img/logo_b.png" alt="" class="img">
+							</div>
+							<div class="item">
+								<img src="img/sample_logo1.png" alt="" class="img">
+							</div>
+							<div class="item">
+								<img src="img/sample_logo2.png" alt="" class="img">
+							</div>
+							<div class="item">
+								<img src="img/sample_logo4.png" alt="" class="img">
+							</div>
+							<div class="item">
+								<img src="img/sample_logo5.png" alt="" class="img">
+							</div>
+
+							<!-- 복제본 -->
 							<div class="item">
 								<img src="img/logo_b.png" alt="" class="img">
 							</div>

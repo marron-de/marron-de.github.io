@@ -92,6 +92,7 @@ const ms3_sec_swiper1 = new Swiper('.ms3_sec_swiper1', {
 	},
 	breakpoints: !isTouchDevice ? {
 		1080: {
+			slidesPerView: 2.685,
 			spaceBetween: 40,
 			navigation: {
 				nextEl: '.ms3_1 .pc .next_btn',
@@ -138,20 +139,15 @@ const ms3_sec_swiper2 = new Swiper('.ms3_sec_swiper2', {
 	// scrollbar: {
 	// 	el: '.ms3_2 .scrollbar',
 	// },
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
+	// autoplay: {
+	// 	delay: 3000,
+	// 	disableOnInteraction: false,
+	// },
 	breakpoints: !isTouchDevice ? {
 		1080: {
 			spaceBetween: 60,
 		}
 	} : {},
-	// breakpoints: {
-	// 	1080: {
-	// 		spaceBetween: 60,
-	// 	},
-	// }
 })
 
 const ms3_sec_swiper3 = new Swiper('.ms3_sec_swiper3', {

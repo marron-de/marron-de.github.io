@@ -40,7 +40,8 @@
 						<div class="item">
 							<a href="locationDetail.php" class="link">
 								<div class="imgbox">
-									<img src="../img/location_img1.png" alt="" class="img">
+									<img src="../img/location_img1.png" alt="" class="img pc">
+									<img src="../img/location_img1_mob.png" alt="" class="img tablet">
 								</div>
 								<div class="txtbox">
 									<p class="tit">Healsy Clinic</p>
