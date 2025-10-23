@@ -308,6 +308,32 @@ function serviceTab(idx) {
 	
 	$(window).scrollTop(0);
 }
+$(document).ready(function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+
+    if (tabParam) {
+        const $targetTab = $('.service_nav .tab_nav[data-tab="' + tabParam + '"]');
+        if ($targetTab.length) {
+            const tab = $targetTab.data('tab');
+            const serviceNum = 1; // 예: 첫 번째 서비스 탭이면 1, 필요에 맞게 수정
+
+            // 탭 버튼 활성화
+            $('.service_nav .tab_nav').removeClass('on');
+            $targetTab.addClass('on');
+
+            // 컨텐츠 활성화
+            $('.service_content').removeClass('on');
+            $('.service_content' + tab).addClass('on');
+
+            // Swiper 초기화 후 바로 슬라이드 이동
+            if (serviceSwipers[serviceNum]) {
+                serviceSwipers[serviceNum].slideTo($('.service_conts' + serviceNum + ' .contbox' + tab).index(), 0);
+            }
+        }
+    }
+});
+
 
 
 // mobile service modal

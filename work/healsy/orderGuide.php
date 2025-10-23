@@ -165,7 +165,7 @@
 							<img src="img/os1_arrow.png" alt="" class="arrow">
 						</div>
 					</div>
-					<div class="bottm_box">
+					<!-- <div class="bottm_box">
 						<p class="tit">Pre-mold</p>
 						<div class="descbox">
 							<p class="desc">
@@ -178,7 +178,7 @@
 								Quick screening and fitting with arch height measurement tools
 							</p>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</section>
 

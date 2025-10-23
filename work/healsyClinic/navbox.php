@@ -21,7 +21,7 @@
 		<ul id="nav" class="nav">
 			<li><a href="/about/about.php" class="link">About</a></li>
 			<li><a href="/ourTeam/ourTeam.php" class="link">Our Team</a></li>
-			<li><a href="/service/service.php" class="link">Service</a></li>
+			<li><a href="/service/service.php?tab=1" class="link">Service</a></li>
 			<li><a href="/reference/reference.php" class="link">Reference</a></li>
 			<li><a href="/news/news.php" class="link">News</a></li>
 			<li><a href="/location/location.php" class="link">Location</a></li>

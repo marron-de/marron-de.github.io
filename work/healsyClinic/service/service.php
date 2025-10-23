@@ -30,7 +30,7 @@
 				</div>
 				<div class="swiper tab_navbox tabs_swiper service_nav" data-index="0">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide tab_nav on" data-tab="1">
+						<div class="swiper-slide tab_nav" data-tab="1">
 							<span class="link" data-text="Physiotherapy">
 								Physiotherapy
 							</span>
@@ -78,7 +78,7 @@
 					</div>
 				</div>
 				<div class="inner service_contents">
-					<div class="service_content service_content1 on">
+					<div class="service_content service_content1">
 						<?php include "service_content1.php" ?>
 					</div>
 					<div class="service_content service_content2">
