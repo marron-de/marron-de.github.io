@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onTEST 모바일</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal mobModal examSave_modal show">
+            <div class="modal_box">
+                <p class="modal_title">
+					시험 결과를 저장중입니다.
+                </p>
+                <p class="modal_desc">
+					완료전까지 창을 닫지 마세요.
+                </p>
+				<div class="savebox">
+					<div class="progress">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+							<circle cx="50" cy="50" r="47.5"></circle>
+							<circle cx="50" cy="50" r="47.5" id="gauge"></circle>
+						</svg>
+					</div>
+					<div class="txtbox">
+						<p class="desc">결과 처리중..</p>
+						<p class="time">
+							<span class="num">5</span><span class="small">초</span>
+						</p>
+					</div>
+				</div>
+            </div>
+        </div>
+	
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+	<script>
+		$(function () {
+			const bar = $('.examSave_modal .savebox #gauge');
+			const num = $('.examSave_modal .savebox .num');
+			const desc = $('.examSave_modal .savebox .desc');
+			const r = 47.5;
+			const circumference = 2 * Math.PI * r;
+			const duration = 5000; // 5초
+			const start = performance.now();
+
+			bar.css({
+				'stroke-dasharray': circumference,
+				'stroke-dashoffset': circumference
+			});
+
+			function animate(now) {
+				const elapsed = now - start;
+				const progress = Math.min(elapsed / duration, 1);
+				const offset = circumference * (1 - progress);
+				bar.css('stroke-dashoffset', offset <= 0.5 ? 0 : offset);
+
+				const remain = Math.ceil(5 - (progress * 5));
+				if (remain > 0) {
+					num.text(remain);
+				} else {
+					num.text('완료');
+					$('.small').hide();
+					desc.text('결과 저장 완료!');
+				}
+
+				if (progress < 1) {
+					requestAnimationFrame(animate);
+				}
+			}
+
+			requestAnimationFrame(animate);
+		});
+	</script>
+
+
+
+</body>
+
+</html>

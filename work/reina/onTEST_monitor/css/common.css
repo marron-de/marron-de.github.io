@@ -1,0 +1,176 @@
+
+:root {	
+	--transition: all 0.4s ease;
+}
+
+  
+/* 리셋 */
+ * { margin: 0; padding: 0; outline: none; box-sizing: border-box; -webkit-tap-highlight-color: transparent;}
+body {margin: 0; padding: 0; -ms-overflow-style: none; scrollbar-width: none; }
+body::-webkit-scrollbar {display: none;}
+html { scroll-behavior: smooth; }
+html, body {font: 400 16px/1.3 'Pretendard', sans-serif;  color: #000017; width: 100%; position: relative;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent;}
+img {max-width: 100%;}
+button { font-family: inherit; border: none; background-color: transparent; outline: 0;  cursor: pointer; }
+input,textarea,button,select {font-family: inherit;}
+body.hidden { overflow: hidden;} 
+.wrap {width: 100%; position: relative;}
+.container {width: 100%; min-height: 100vh; position: relative; display: flex; flex-direction: column;}
+.container.padding { padding-top:56px;}
+.page_inner {width: 100%; max-width: 100%; padding: 0 16px;}
+.section {width: 100%; position: relative;}
+.section.h_full {flex: 1;}
+::-webkit-scrollbar {width: 5px; height: 5px;}
+::-webkit-scrollbar-thumb {background: #000; border-radius: 100px; cursor: pointer; margin: 0 16px; }
+::-webkit-scrollbar-track {background: #fff; border-radius: 100px;}
+.port_view {display: block ;}
+.land_view {display: none !important;}
+
+
+/* 공통 - header */
+.header { position: fixed; left: 0; top: 0; width: 100%; height: 56px; border-bottom: 1px solid #dfe5ec; background: #fff; z-index: 50;}
+.header .h_inner {width: 100%; height: 100%; display: flex;  align-items: center; justify-content: space-between;  gap: 16px;  padding: 0 16px;}
+.header .logobox { width: 99px; display: flex; align-items: center;  justify-content: center;}
+.header .sidebox{display: flex; align-items: center; gap: 16px;}
+.header .sidebox .btn { font-size: 12px; line-height: 150%; height: 28px;}
+.header .sidebox .timer {display: flex; align-items: center; gap: 8px;}
+.header .sidebox .timer .icon{width: 20px;}
+.header .sidebox .timer .clock{display: flex; align-items: center; gap: 8px;}
+.header .sidebox .timer .clock .min,
+.header .sidebox .timer .clock .sec{font-weight: 700;font-size: 16px;line-height: 150%;color: #000; padding: 0 4px; border-radius: 8px;width: 32px;height: 32px; background: #f4f6f8; display: flex; align-items: center; justify-content: center;}
+.header .sidebox .timer .clock .dot{font-weight: 700;font-size: 13px;line-height: 169%;color: #383b40;}
+
+
+/* 공통 - form */
+.footer {position: relative; width: 100%;}
+.footer .f_inner {padding: 0 16px 16px; display: flex; align-items: center; justify-content: center; gap: 12px;}
+.footer .f_txt{font-weight: 400;font-size: 11px;line-height: 145%;color: #627383;}
+.footer .f_bar{width: 1px; height: 12px; background: #e5e8ec;}
+
+
+/* 공통 - form */
+.form_box {display: flex; flex-direction: column; gap: 40px;}
+.form_line {width: 100%; height: 1px; background: #dfe5ec;}  
+
+
+/* 공통 - input */
+.input_box { position: relative; width: 100%; display: flex; flex-direction: column; gap: 12px;}
+.input_box.auto {width: auto;}
+.input_box .input_text {  width: 100%;  height: 48px;  background: #f4f6f8;   border: 1px solid #f4f6f8;  border-radius: 8px;  padding: 0 16px;  font-size: 14px;  line-height: 157%;  color: #383b40;}
+.input_box .input_text::placeholder {color: #adb2bb;}
+.input_box .input_text:read-only {background: #f0f1f8; color: #adb2bb;}
+.input_box textarea.input_text {height: 120px; padding: 13px 16px; resize: none;}
+.input_box textarea.input_text::-webkit-scrollbar {display: none;}
+.input_box .label_text { font-weight: 800;  font-size: 14px;  line-height: 157%;  color: #000;  display: block;  word-break: keep-all;}
+.input_btn { font-weight: 700; font-size: 14px; line-height: 157%;  color: #000;  height: 48px;  border: 1px solid #adb2bb;  border-radius: 8px; background: #fff;  padding: 0 24px; display: flex; align-items: center; justify-content: center; gap: 6px;}
+.input_btn.icon_ver{width: 48px; padding: 0;}
+.input_btn.icon_ver .icon {width: 24px;}
+
+.input_flex {display: flex; align-items: center; gap: 12px; --gap:12px}
+.input_flex.between {justify-content: space-between;}
+.input_flex.alifn_top {align-items: flex-start;}
+.input_flex .input_box {flex: 1; flex-direction: unset;}
+.input_flex .input_box.column {flex: unset; flex-direction: column;}
+.input_flex .select_box {flex: 1;}
+.input_flex .input_text {flex: 1; }
+.input_flex .full {flex: 1;}
+.input_flex .nofull {flex: unset;}
+
+
+/* 공통 - check box */
+.check_wrap { position: relative; display: flex; align-items: center; gap: 12px;} 
+.check_box { position: relative; display: flex; align-items: center; gap: 6px;}
+.check_box .input_check { display: inline-block; width: 24px; aspect-ratio: 1 / 1;  appearance: none; background: url(../img/checkbox_off.png) no-repeat center / contain;  cursor: pointer; }
+.check_box .input_check:checked { background-image: url(../img/checkbox_on.png);}
+.check_box .label_check { flex: 1;  display: inline-block;  font-size: 13px;  line-height: 154%;  color: #131720; word-break: keep-all; cursor: pointer;}
+.check_box .label_check.center {line-height: 100%;}
+.check_box .label_check .bold {font-weight: 700;}
+.check_box .label_check .underline {text-decoration: underline;text-decoration-skip-ink: none; text-underline-offset:2px;}
+.check_box .label_check .point {color: #01a4ff;}
+
+
+/* 공통 - radio button */
+.radio_wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;}
+.radio_box { display: flex; align-items: center; gap: 6px;}
+.radio_box .input_radio {background: url(../img/ico_radio.png) no-repeat center / contain; width: 24px; height: 24px; appearance: none; cursor: pointer;}
+.radio_box .input_radio:checked {background-image: url(../img/ico_radio_on.png);}
+.radio_box .label_radio { font-size: 13px; line-height: 154%; color: #131720; cursor: pointer;}
+ 
+
+/* 공통 - select */
+.select_box .select { appearance: none; font-size: 14px; line-height: 157%;  color: #000;  cursor: pointer;  border: 1px solid #f4f6f8; border-radius: 8px;  width: 100%;  height: 48px;  padding: 0 48px 0 16px;  background: url(../img/select_arrow.png) no-repeat right 16px top 50% / 24px #f4f6f8;}
+.select_box.wid100 .select {width: 100%;}
+
+
+/* 공통 - button */
+.btn { display: flex; align-items: center; justify-content: center; gap: 4px;  border-radius: 8px; width: 96px; height: 48px;  font-weight: 700; font-size: 14px; line-height: 157%; text-align: center; color: #ffffff; cursor: pointer; border: 1px solid #000; background: #000; transition: var(--transition);}
+.btn.typeA {border-color : #01a4ff; background: #01a4ff; color: #fff;}
+.btn.typeB {border-color : #000; background: #fff; color: #000;}
+.btn.typeC {border-color : #adb2bb; background: #fff; color: #383b40; font-weight: 400;}
+.btn.typeD {border-color : #adb2bb; background: #fff; color: #000; font-weight: 700;}
+.btn.typeE {border-color : #f9471e; background: #fff; color: #f9471e; font-weight: 700;}
+.btn.typeF {border-color : #f9471e; background: rgba(249, 71, 30, 0.1); color: #f9471e; font-weight: 700;}
+.btn.full {width: 100%;}
+.btn.auto {width: auto; padding: 0 16px;}
+.btn.big { height: 56px;  font-weight: 800; font-size: 16px; line-height: 150%;}
+
+
+/* 공통 - icon button */
+.icon_btn {display: flex; align-items: center; justify-content: center; width: 24px; aspect-ratio: 1/1;}
+
+
+/* 공통 - alert txt */
+.alert_txt {font-size: 12px;line-height: 150%;color: #747983; display: flex; align-items: center; gap: 4px;}
+.alert_txt .icon{width: 16px;}
+.alert_txt .point{color: #01a4ff}
+
+/* 공통 - alert text */
+.alert_text {display: flex; align-items: flex-start; gap: 4px; font-weight: 400;font-size: 11px;line-height: 145%; border: 1px solid;border-radius: 8px; padding: 12px;}
+.alert_text .icon{width: 16px;}
+.alert_text .txt{flex: 1;}
+.alert_text.typeA {border-color: #01a4ff; background: #e8f7ff; color: #01a4ff;}
+.alert_text.typeB {border-color: #f9471e; background: #ffefeb; color: #f9471e;}
+
+
+/* 공통 - modal */
+.modal { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; background: rgba(0, 0, 0, 0.5); transition: var(--transition); pointer-events: none; opacity: 0; }
+.modal.show { pointer-events: auto; opacity: 1;}
+.modal .modal_box { position: absolute; left: 50%; top: 50%;  transform: translate(-50%, -50%);  border-radius: 16px;  background: #ffffff;  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.09);  padding: 40px 16px 24px; width: 400px;  max-width: calc(100% - 16px * 2);  max-height: 90%; display: flex;  flex-direction: column;   align-items: center;  transition: var(--transition); margin-top: 40px;  opacity: 0;  overflow: hidden;}
+.modal.show .modal_box { margin-top: 0; opacity: 1;}
+.modal .modal_box.size_big {width: 1080px;}
+.modal .modal_box .modal_title { font-weight: 700;font-size: 16px;line-height: 150%;text-align: center;color: #000;}
+.modal .modal_box .modal_desc { font-size: 14px; line-height: 157%; text-align: center; color: #000; margin-top: 4px;}
+.modal .modal_box .modal_btnbox {display: flex; justify-content: center; gap: 12px; margin-top:24px;}
+.modal .modal_box .modal_btnbox .btn {min-width: 100px;}
+.modal .modal_box .modal_btnbox .btn.typeD {font-weight: 400;}
+
+
+/* 공통 - element layout */
+.el_layout {display: flex;  align-items: center;  justify-content: space-between; gap: 12px;}
+.el_layout .leftbox, .el_layout .rightbox {display: flex; align-items: center;  gap: 12px;  flex: 1;}
+.el_layout .rightbox { justify-content: flex-end;}
+
+
+/* 공통 - 모바일 가로형 */
+@media screen and (orientation: landscape) { 	
+
+	.container.padding{ padding-top:48px;}
+
+	.port_view {display: none!important;}
+	.land_view {display: block!important;}
+
+	.header { height: 48px;}
+	.header .logobox { width: 89px;}
+	
+	.footer .f_inner {padding: 0 16px 12px;}
+
+	.input_box .input_text {height: 40px; font-size: 13px; line-height: 154%;}
+
+	.btn { height: 44px; }
+
+	.modal .modal_box {width: 328px;}
+	.modal .modal_box .modal_btnbox .btn {height: 48px;}	
+
+}
