@@ -50,7 +50,7 @@
 			<div id="fullpage">
 				<section class="section main_section ms1 move topArea" data-aos="fade" id="section0">
 					<div class="vidbox">
-						<video id="ms1_video" class="video" src="video/main_video.mp4" loop muted autoplay playsinline data-autoplay></video>
+						<video id="ms1_video" class="video" src="http://healsyclinic.com.au/video/Healsy_Store_V1_v2.mp4" loop muted autoplay playsinline data-autoplay></video>
 					</div>
 					<div class="txtbox inner full move" data-aos="fade-left" data-aos-duration="500" aos-anchor>
 						<p class="tit">Tailored Orthotic Solutions</p>
@@ -529,6 +529,7 @@
 					</div>
 				</section>
 
+				<!--
 				<section class="section main_section ms4" id="section3">
 					<div class="m_contbox inner">
 						<div class="titbox">
@@ -595,6 +596,7 @@
 						</div>
 					</div>
 				</section>
+				-->
 
 				<section class="section main_section ms5" id="section4">
 					<div class="m_contbox contbox inner">
@@ -604,7 +606,7 @@
 							</div>
 							<div class="mapbox">
 								<!-- <img src="img/map_img.png" alt="" class="map"> -->
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.3087390101623!2d150.98405907570262!3d-33.72683177328124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a1bcf0bdbe8d%3A0xa2c33fd3c9776b5e!2zU2hvcCAyMy8xNSBEZSBDbGFtYmUgRHIsIENhc3RsZSBIaWxsIE5TVyAyMTU0IOyYpOyKpO2KuOugiOydvOumrOyVhA!5e0!3m2!1sko!2skr!4v1759156742485!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6636.617460488626!2d150.986634!3d-33.726832!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a1bcf0bdbe8d%3A0xa2c33fd3c9776b5e!2sShop%2023%2F15%20De%20Clambe%20Dr%2C%20Castle%20Hill%20NSW%202154%2C%20Australia!5e0!3m2!1sen!2skr!4v1762837092604!5m2!1sen!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
 							</div>
 							<div class="infobox">
 								<p class="address">Shop 23, 15 De Clambe Drive Castle Hill NSW 2154
@@ -657,7 +659,6 @@
 					<!-- data-reverse="true" -->
 					<div class="marquee" data-duration="1.5">
 						<div class="marquee_group">
-							<!-- 원본 -->
 							<div class="item">
 								<img src="img/logo_b.png" alt="" class="img">
 							</div>
@@ -674,7 +675,6 @@
 								<img src="img/sample_logo5.png" alt="" class="img">
 							</div>
 
-							<!-- 복제본 -->
 							<div class="item">
 								<img src="img/logo_b.png" alt="" class="img">
 							</div>
@@ -691,7 +691,7 @@
 								<img src="img/sample_logo5.png" alt="" class="img">
 							</div>
 						</div>
-					</div>			
+					</div>	
 					<?php include "footer.php" ?>
 				</section>
 			</div>

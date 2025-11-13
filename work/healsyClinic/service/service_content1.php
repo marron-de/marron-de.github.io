@@ -39,6 +39,7 @@
 				guidance</li>
 		</ul>
 	</li>
+	<!-- 숨김
 	<li>
 		<div class="acc_tit">
 			<span class="txt">Common condition we treat</span>
@@ -59,6 +60,7 @@
 			<li class="acc_tabBtn" onclick="serviceTab('3_12')">Ankle and foot</li>
 		</ul>
 	</li>
+	-->
 	<div class="btnbox">
 		<button type="button" class="button">Save</button>
 	</div>
