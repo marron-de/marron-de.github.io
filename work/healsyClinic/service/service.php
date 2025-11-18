@@ -71,8 +71,8 @@
 							</span>
 						</div>
 						<div class="swiper-slide tab_nav" data-tab="9">
-							<span class="link" data-text="NDIS / Workcover / DVA / CTP">
-								NDIS / Workcover / DVA / CTP
+							<span class="link" data-text="NDIS / Workcover / DVA / CTP / EPC">
+								NDIS / Workcover / DVA / CTP / EPC
 							</span>
 						</div>
 					</div>

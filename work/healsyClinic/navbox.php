@@ -8,7 +8,7 @@
 				</a>
 				<div class="h_nav">
 					<div class="h_side">
-						<a href="" class="side_btn">Appointments</a>
+						<a href="/booking/booking.php" class="side_btn">Appointments</a>
 					</div>
 				</div>
 				<button type="button" class="menu_close"></button>
@@ -26,7 +26,7 @@
 			<!-- <li><a href="/news/news.php" class="link">News</a></li> -->
 			<li><a href="/location/location.php" class="link">Location</a></li>
 			<li class="last"><a href="/contact/contact.php" class="link">Contact</a></li>
-			<li class="button"><a href="" class="link">Appointments</a></li>
+			<li class="button"><a href="/booking/booking.php" class="link">Appointments</a></li>
 		</ul>
 	</div>
 </div>

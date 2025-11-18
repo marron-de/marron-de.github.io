@@ -32,11 +32,14 @@
 					<div class="topbox">
 						<div class="txtbox">
 							<p class="tit">Jacky Liu</p>
-							<p class="desc">Podiatrist</p>
-							<button type="button" class="button">
+							<p class="desc">Podiatrist </p>
+							<p class="certi">
+								Bachelor of Health Science (Podiatry)
+							</p>
+							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
 								<span class="txt">BOOK NOW</span>
-							</button>
+							</a>
 						</div>
 						<div class="imgbox">
 							<img src="../img/teamDetail_img.png" alt="" class="img">
@@ -54,12 +57,6 @@
 								<br><br>
 								Combining his technical expertise with a gentle and attentive approach, Jacky prides himself on providing treatments with the utmost care and minimal discomfort. Ensuring every patient feels supported and confident in their foot health.
 							</p>
-						</div>
-						<div class="contitem">
-							<p class="tit">Licenses & Certifications</p>
-							<div class="descbox">
-								<p class="desc dot">Bachelor of Health Science (Podiatry)</p>
-							</div>
 						</div>
 					</div>
 					<div class="btnbox">

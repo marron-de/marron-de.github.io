@@ -1,4 +1,3 @@
-
 <div class="service_select service_select1">
 	<button type="button" class="sel_btn">
 		<span class="txt">Assessment</span>
@@ -39,7 +38,6 @@
 				guidance</li>
 		</ul>
 	</li>
-	<!-- 숨김
 	<li>
 		<div class="acc_tit">
 			<span class="txt">Common condition we treat</span>
@@ -52,7 +50,7 @@
 			<li class="acc_tabBtn" onclick="serviceTab('3_4')">Shoulder</li>
 			<li class="acc_tabBtn" onclick="serviceTab('3_5')">Elbow / forearm</li>
 			<li class="acc_tabBtn" onclick="serviceTab('3_6')">Wrist / hand</li>
-			<li class="acc_tabBtn" onclick="serviceTab('3_7')">Upper / mid / lower back</li>
+			<li class="acc_tabBtn" onclick="serviceTab('3_7')">Spinal Pain (Upper, Mid, and Lower Back)</li>
 			<li class="acc_tabBtn" onclick="serviceTab('3_8')">Hip / groin</li>
 			<li class="acc_tabBtn" onclick="serviceTab('3_9')">Thigh</li>
 			<li class="acc_tabBtn" onclick="serviceTab('3_10')">Knee</li>
@@ -60,7 +58,6 @@
 			<li class="acc_tabBtn" onclick="serviceTab('3_12')">Ankle and foot</li>
 		</ul>
 	</li>
-	-->
 	<div class="btnbox">
 		<button type="button" class="button">Save</button>
 	</div>
@@ -293,7 +290,7 @@
 							<span class="txt">Rehabilitation</span>
 						</p>
 						<p class="desc">Rehabilitation is the structured process of restoring function and reducing
-							disability after injury, surgery, or illness through individualized physiotherapy programs.
+							disability after injury, surgery, or illness through individualised physiotherapy programs.
 						</p>
 					</div>
 					<div class="descbox">
@@ -326,47 +323,72 @@
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">1.</span>
-							<span class="txt">Understanding this common brain injury</span>
+							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2">A concussion is a type of traumatic brain injury (TBI) caused by a bump,
-							blow, or jolt to the head, or by a hit to the body that causes the head and brain to move
-							rapidly back and forth. This sudden movement can cause the brain to bounce around or twist
-							within the skull, stretching and damaging brain cells and creating chemical changes in the
-							brain. Despite common misconceptions, a concussion does not always involve a loss of
-							consciousness. In fact, most concussions occur without the person being knocked out. They
-							are considered a mild traumatic brain injury (mTBI) but can still have serious and lasting
-							effects if not managed properly.</p>
+						<p class="desc ver2 lt-0">A concussion is a mild traumatic brain injury (mTBI) caused by a bump,
+							blow, or jolt to the head, or a hit to the body that causes the head and brain to move
+							rapidly back and forth. This sudden movement can cause the brain to bounce or twist inside
+							the skull, stretching and damaging brain cells and creating chemical changes in the brain.
+							Concussions are not always associated with loss of consciousness; in fact, most occur
+							without it. <br>
+							Common types of concussions and related issues include</p>
+						<div class="descitem no_spacing">
+							<p class="desc dot">
+								<span class="bold">Sport-Related Concussion</span><br>
+								Concussions that occur during athletic activities, often from direct impacts, falls, or
+								collisions in contact sports like rugby, football, hockey, or from falls in cycling,
+								skiing, etc.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Post-Traumatic Headache</span><br>
+								Headaches that develop after a concussion, which can be persistent and mimic tension
+								headaches or migraines.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Post-Concussion Syndrome</span><br>
+								When concussion symptoms persist for weeks, months, or even longer after the initial
+								injury. This includes ongoing headaches, dizziness, fatigue, irritability, and cognitive
+								difficulties.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Vestibular Concussion</span><br>
+								Concussions primarily affecting the balance system, leading to prominent dizziness,
+								vertigo, unsteadiness, and nausea.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Oculomotor Concussion</span><br>
+								Concussions primarily affecting the visual system, leading to eye strain, blurred
+								vision, difficulty tracking, and sensitivity to light.
+							</p>
+						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI)</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2">Concussions often result from forces that cause rapid acceleration or
-							deceleration of the head, leading to the brain colliding with the inside of the skull.
-							Common scenarios include</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">Concussions often result from</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Sports Injuries</span><br>
-								Direct blows to the head (e.g., football tackles, soccer headers, hockey checks), falls
-								in sports like cycling or gymnastics, or collisions with other players or equipment.
+								<span class="bold">Direct Impact to the Head</span><br>
+								- Falls : Tripping, slipping, or falling from a height where the head strikes a surface.
+								<br>
+								- Sports Injuries : Collisions with other players, ground, or equipment; direct blows to
+								the head (e.g., from a ball, punch). <br>
+								- Motor Vehicle Accidents : Head striking the dashboard, steering wheel, or window;
+								sudden acceleration-deceleration forces causing whiplash, even without direct head
+								impact. <br>
+								- Assaults : Direct blows to the head.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Falls</span><br>
-								Especially common in older adults, young children, or individuals with balance issues.
+								<span class="bold">Indirect Forces (Whiplash Mechanism)</span><br>
+								A sudden, violent jerk or twist of the body that causes the head to accelerate and
+								decelerate rapidly, even if the head itself does not strike anything. This commonly
+								occurs in whiplash injuries from car accidents or violent shaking.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Motor Vehicle Accidents</span><br>
-								Whiplash-type injuries where the head is jolted violently forward and backward, or
-								direct impact to the head.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Workplace Accidents</span><br>
-								Falls from heights, impacts from falling objects, or slips and trips.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Assaults</span><br>
-								Direct blows to the head.
+								<span class="bold">Blast Injuries</span><br>
+								Exposure to explosive forces, particularly in military contexts, can cause concussions.
 							</p>
 						</div>
 					</div>
@@ -375,96 +397,96 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2">Concussion symptoms can appear immediately after the injury or develop
-							hours to days later. They are often subtle and can vary widely from person to person. They
-							generally fall into four categories</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">Concussion symptoms can vary widely, appear immediately or develop
+							hours/days later, and may include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
 								<span class="bold">Physical Symptoms</span><br>
-								Headache (most common), Nausea or vomiting, Dizziness or balance problems, Fatigue or
-								low energy, Vision problems (blurry, double vision, sensitivity to light), Sensitivity
-								to noise
+								Headache (often described as pressure or throbbing), nausea or vomiting, dizziness or
+								balance problems, visual problems (blurry vision, sensitivity to light, double vision),
+								sensitivity to noise, fatigue or low energy.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Cognitive Symptoms</span><br>
-								Feeling "foggy" or "slowed down", Difficulty concentrating or remembering, Confusion or
-								disorientation, Difficulty thinking clearly
+								Feeling "foggy" or "slowed down," difficulty thinking clearly, trouble concentrating,
+								memory problems (forgetting recent events or conversations).
 							</p>
 							<p class="desc dot">
 								<span class="bold">Emotional Symptoms</span><br>
-								Irritability or mood swings, Anxiety or nervousness, Sadness or depression, Increased
-								emotionality
+								Irritability, sadness, anxiety, nervousness, more emotional than usual.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Sleep Symptoms</span><br>
-								Drowsiness or sleeping more than usual, Difficulty falling asleep or staying asleep,
-								Sleeping less than usual
+								Drowsiness, sleeping more or less than usual, trouble falling asleep.
 							</p>
 						</div>
-						<p class="desc ver2">It's crucial to seek medical attention if a concussion is suspected, as
-							symptoms can worsen or linger. In rare cases, more serious brain injuries can mimic
-							concussion symptoms.</p>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Concussion</span>
 						</p>
-						<p class="desc ver2 lt-0">Physiotherapists play a vital role in concussion management and
-							rehabilitation, particularly after initial medical clearance. Our evidence-based approach
-							focuses on safely and effectively guiding your recovery. Here's how physiotherapy can help
+						<p class="desc ver2">
+							Physiotherapy plays a crucial role in the accurate diagnosis, acute management, and
+							comprehensive rehabilitation of concussions, aiding recovery and preventing persistent
+							symptoms. Our approach is evidence-based, individualised, and focuses on safe, progressive
+							return to activity. Here's how physiotherapy can help
 						</p>
-						<div class="descitem">
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								We perform a thorough assessment to evaluate your balance, eye movements (oculomotor
-								function), neck stability, dizziness, headaches, and cognitive function related to
-								exertion.
+								<span class="bold">Thorough Assessment</span><br>
+								A detailed evaluation including neurological screening, balance testing (vestibular
+								system), eye movement assessment (oculomotor system), neck examination, and symptom
+								provocation to understand the unique presentation of your concussion and identify
+								contributing factors.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Personalised Management Plan</span><br>
+								Based on your specific symptoms and assessment findings, we'll create a tailored plan
+								for your recovery.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Graduated Return to Activity</span><br>
+								We guide you through a structured, stepwise progression back to daily activities,
+								school/work, and sport, ensuring symptoms do not worsen at each stage. This includes
+								<br>
+								- Physical Activity Progression : Gradually increasing light physical activity to
+								tolerance. <br>
+								- Cognitive Activity Progression : Slowly reintroducing mental tasks and screen time.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Vestibular Rehabilitation</span><br>
-								If you experience dizziness or balance issues, specific exercises can retrain your
-								vestibular system (inner ear and its connections to the brain) to improve balance and
-								reduce dizziness.
+								Specific exercises to reduce dizziness, vertigo, and improve balance, especially helpful
+								for concussions affecting the inner ear system.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Oculomotor (Vision) Training</span><br>
-								Exercises designed to improve eye tracking, focus, and coordination, which can reduce
-								symptoms like blurred vision, reading difficulties, and eye strain.
+								<span class="bold">Oculomotor (Vision) Therapy</span><br>
+								Exercises to improve eye tracking, coordination, and reduce symptoms like blurred
+								vision, eye strain, and headaches related to visual dysfunction.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Cervical (Neck) Treatment</span><br>
-								Many concussion symptoms (e.g., headaches, dizziness) can originate from the neck.
-								Physiotherapy techniques like manual therapy, mobilization, and specific exercises can
-								address neck pain, stiffness, and associated symptoms.
+								<span class="bold">Neck Management</span><br>
+								Often, neck injuries (like whiplash) accompany concussions. Manual therapy, soft tissue
+								release, and targeted exercises for the neck can reduce headache, stiffness, and
+								referred pain, which can be mistaken for or exacerbate concussion symptoms.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Graduated Return-to-Activity Protocols</span><br>
-								We guide you through a carefully planned, step-by-step progression back to daily
-								activities, work, school, and sport. This ensures your brain has time to heal and
-								prevents a relapse of symptoms. This often includes
-								<br>
-								- Rest and Active Recovery : Guiding appropriate rest, followed by gradual
-								reintroduction of light activity. <br>
-								- Return-to-Learn / Work : Helping you manage cognitive demands in academic or work
-								environments.
-								<br>
-								- Return-to-Sport : A structured program to safely reintroduce sport-specific
-								activities.
+								<span class="bold">Exertion Testing & Return to Sport Protocol</span><br>
+								For athletes, we conduct controlled exertion tests and guide them through structured
+								return-to-sport protocols to ensure safe participation and minimise the risk of
+								re-injury.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Exercise Tolerance Training</span><br>
-								Gradually increasing your tolerance to physical activity without triggering symptoms.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Education and Self-Management</span><br>
+								<span class="bold">Education & Self-Management</span><br>
 								Empowering you with knowledge about concussion recovery, symptom management strategies,
-								and when to seek further help.
+								sleep hygiene, and energy conservation techniques to optimise healing and prevent
+								symptom exacerbation.
 							</p>
 						</div>
 					</div>
-					<p class="desctit mt">Physiotherapy is crucial for optimizing your recovery, preventing prolonged
-						symptoms (Post-Concussion Syndrome), and safely returning you to your full activities.</p>
+					<p class="desctit mt">By providing expert guidance and specialised rehabilitation, physiotherapy
+						aims to resolve your concussion symptoms, restore function, and help you safely return to your
+						full quality of life.</p>
 				</div>
 			</div>
 		</div>
@@ -478,74 +500,94 @@
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">1.</span>
-							<span class="txt">Understanding and Managing Your Pain</span>
+							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2">Headaches are a common ailment, but migraines are a specific type of severe
-							headache that can be debilitating. While all migraines are headaches, not all headaches are
-							migraines. Understanding the differences and the underlying causes is key to effective
-							management.</p>
-						<div class="descitem">
+						<p class="desc ver2">Headaches and migraines are distinct but often related conditions
+							characterised by pain in the head or face. Headaches typically involve general head pain,
+							while migraines are more severe, often accompanied by other symptoms. Both can significantly
+							impact daily life, but physiotherapy can often identify and address underlying
+							musculoskeletal contributions. <br>
+							Common types of headaches and migraines include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Headaches</span><br>
-								Broadly defined as pain in any region of the head. Common types include <br>
-								- Tension Headaches : The most common type, often described as a constant, dull ache or
-								pressure around the head, like a tight band. They can be triggered by stress, fatigue,
-								or poor posture. <br>
-								- Cervicogenic Headaches : Headaches referred from structures in the neck (cervical
-								spine). Pain often starts in the neck or back of the head and radiates to the front,
-								side, or around the eye. Neck movement can worsen them. <br>
-								- Cluster Headaches : Rare but extremely painful headaches that occur in "clusters" or
-								cycles. They are characterized by severe, sharp pain usually behind or around one eye,
-								often accompanied by tearing, redness, nasal congestion, or drooping eyelid on the
-								affected side.
+								<span class="bold">Tension-Type Headache (TTH)</span><br>
+								The most common type, characterised by mild to moderate pain that feels like a tight
+								band around the head, often accompanied by tightness in the neck, shoulders, and scalp.
+								It's frequently linked to stress, poor posture, and muscle tension.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Migraines</span><br>
-								More than just a bad headache, migraines are a complex neurological condition. They are
-								typically characterized by <br>
-								- Moderate to severe throbbing or pulsing pain, often on one side of the head (though it
-								can be on both). <br>
-								- Associated symptoms like nausea, vomiting, and extreme sensitivity to light
-								(photophobia) and sound (phonophobia). <br>
-								- Auras: About 20-25% of people experience an "aura" before or during a migraine. These
-								are reversible neurological symptoms, most commonly visual disturbances (e.g., flashing
-								lights, zigzags, blind spots) but can also include tingling or numbness.
+								<span class="bold">Cervicogenic Headache (CGH)</span><br>
+								Headaches that originate from issues in the neck, specifically the upper cervical spine
+								joints, muscles, or nerves. Pain usually starts in the neck or back of the head and
+								refers to the forehead, temples, or around the eyes. Movement or sustained neck postures
+								often aggravate it.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Migraine</span><br>
+								A severe type of headache characterised by throbbing pain, usually on one side of the
+								head, often accompanied by nausea, vomiting, and extreme sensitivity to light
+								(photophobia) and sound (phonophobia). Some migraines include an "aura" (visual
+								disturbances) before the pain. While not purely musculoskeletal, neck tension can often
+								trigger or worsen a migraine attack.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Cluster Headache</span><br>
+								A rare but extremely severe type of headache characterised by intense, piercing pain
+								usually around one eye or temple, often with symptoms like tearing, nasal congestion, or
+								drooping eyelid on the affected side. These occur in "clusters" over a period.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Medication Overuse Headache (MOH)</span><br>
+								Chronic daily headaches that develop from the overuse of acute headache medications,
+								creating a cycle of pain and medication use.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI) / Triggers</span>
+							<span class="txt">Common Mechanism of Injury / Contributing Factors</span>
 						</p>
-						<p class="desc ver2">Unlike traumatic injuries, headaches and migraines often don't have a
-							single "mechanism of injury" but rather a combination of triggers or underlying predisposing
-							factors.</p>
-						<div class="descitem">
+						<p class="desc ver2">Headaches and migraines are often triggered or exacerbated by various
+							factors, including</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Tension/Cervicogenic Headaches</span><br>
-								- Sustained poor posture : Especially common with prolonged computer use, phone use, or
-								reading. <br>
-								- Muscle tension and stiffness : In the neck, shoulders, and upper back. <br>
-								- Stress and anxiety : Leading to increased muscle tension. <br>
-								- Fatigue or lack of sleep. <br>
-								- Jaw clenching or teeth grinding (TMJ dysfunction).
+								<span class="bold">Musculoskeletal Dysfunction (especially for TTH & CGH)</span><br>
+								- Poor Posture : Prolonged forward head posture, slouching, "text neck," or improper
+								ergonomic setup, leading to chronic strain on neck and upper back muscles and joints.
+								<br>
+								- Muscle Tension : Tightness and trigger points in the neck, shoulder, and jaw muscles
+								(e.g., trapezius, sternocleidomastoid, suboccipitals). <br>
+								- Joint Stiffness : Restricted movement in the upper cervical and thoracic spine joints.
+								<br>
+								- Whiplash/Neck Trauma : Past neck injuries can predispose individuals to chronic
+								headaches.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Migraines</span><br>
-								The exact mechanism is still being researched, but it involves changes in the brain,
-								including nerve pathways and brain chemicals. Triggers can vary widely for individuals
-								and may include <br>
-								- Stress : A very common trigger. <br>
-								- Hormonal changes : Especially in women (menstrual cycle, pregnancy, menopause). <br>
-								- Sleep patterns : Too much, too little, or irregular sleep. <br>
-								- Dietary factors : Certain foods (e.g., aged cheeses, processed meats, artificial
-								sweeteners, caffeine withdrawal, alcohol) or skipping meals. <br>
-								- Sensory stimuli : Bright lights, strong smells, loud noises. <br>
-								- Weather changes : Barometric pressure changes. <br>
-								- Physical exertion. <br>
-								- Medication overuse : Paradoxically, overusing acute headache medications can lead to
-								more frequent headaches.
+								<span class="bold">Stress</span><br>
+								High levels of emotional or psychological stress leading to increased muscle tension and
+								altered pain perception.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Fatigue & Sleep Disturbances</span><br>
+								Insufficient or poor-quality sleep can trigger headaches.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Dehydration</span><br>
+								Lack of adequate fluid intake.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Dietary Triggers</span><br>
+								Certain foods, caffeine withdrawal, or irregular meal times (more common with
+								migraines).
+							</p>
+							<p class="desc dot">
+								<span class="bold">Environmental Factors</span><br>
+								Bright lights, strong smells, loud noises (especially for migraines).
+							</p>
+							<p class="desc dot">
+								<span class="bold">Hormonal Fluctuations</span><br>
+								More common in women, linked to menstrual cycles or menopause (migraines).
 							</p>
 						</div>
 					</div>
@@ -554,91 +596,93 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 lt-2">While specific symptoms define different headache types, there's often
-							overlap.</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2 no_justify">Symptoms vary significantly by type but can include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Headaches (General)</span> <br>
-								- Dull, aching, throbbing, or pressure-like pain. <br>
-								- Pain in the forehead, temples, back of the head, or neck. <br>
-								- Muscle tenderness in the neck or shoulders.
+								<span class="bold">Pain Location</span> <br>
+								- TTH : Band-like pressure around the head, tightness in neck/shoulders. <br>
+								- CGH : Pain originating in the neck, referring to the forehead, temples, eyes. <br>
+								- Migraine : Throbbing, usually unilateral (one-sided) pain.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Migraines (Specific)</span><br>
-								- Pulsating/throbbing pain (often severe). <br>
-								- Unilateral pain (one side of the head) is common, but can be bilateral. <br>
-								- Nausea and/or vomiting. <br>
-								- Photophobia (sensitivity to light). <br>
-								- Phonophobia (sensitivity to sound). <br>
-								- Osmophobia (sensitivity to smell). <br>
-								- Aura symptoms (visual disturbances, sensory changes) preceding the headache. <br>
-								- Worsening pain with physical activity. <br>
-								- Fatigue, difficulty concentrating, neck stiffness before or after the attack.
+								<span class="bold">Pain Characteristics</span><br>
+								Aching, dull, throbbing, sharp, piercing.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Associated Symptoms (especially with Migraines)</span><br>
+								Nausea, vomiting, extreme sensitivity to light (photophobia), sensitivity to sound
+								(phonophobia), visual disturbances (aura), dizziness.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Neck Symptoms</span><br>
+								Stiffness, reduced range of motion, muscle tenderness in the neck and upper back.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Scalp Tenderness</span><br>
+								Sensitivity of the scalp.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Fatigue & Irritability</span><br>
+								Often accompany or follow headache episodes.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">4.</span>
-							<span class="txt">How Physiotherapy Can Help</span>
+							<span class="txt">How Physiotherapy Can Help with Headaches / Migraines</span>
 						</p>
-						<p class="desc ver2">Physiotherapy is an incredibly effective, evidence-based approach for
-							managing and preventing various types of headaches, particularly tension and cervicogenic
-							headaches, and can also play a supportive role in migraine management. <br>
-							Here's how physiotherapy can help</p>
-						<div class="descitem">
+						<p class="desc ver2">Physiotherapy is highly effective in treating many types of headaches,
+							particularly Tension-Type and Cervicogenic Headaches, and can significantly reduce the
+							frequency and intensity of migraines by addressing musculoskeletal triggers. Our goal is to
+							identify the root cause of your pain and provide you with tools for long-term relief and
+							prevention. <br>Here's how physiotherapy can help</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								Your physiotherapist will conduct a thorough assessment of your neck, upper back,
-								posture, jaw, and movement patterns to identify potential contributing factors to your
-								headaches. They will also delve into your headache history, frequency, intensity, and
-								triggers.
+								<span class="bold">Thorough Assessment</span><br>
+								A comprehensive examination of your neck, upper back, shoulders, posture, and jaw to
+								identify muscle imbalances, joint restrictions, nerve irritation, and postural
+								contributing factors. We'll also assess your specific headache triggers and patterns.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Manual Therapy</span><br>
-								Hands-on techniques to release muscle tension, improve joint mobility in the neck and
-								upper back, and reduce nerve irritation. This can include massage, joint mobilization,
-								and soft tissue release.
+								Hands-on techniques to <br>
+								- Reduce Muscle Tension : Massage, trigger point release, and stretching for tight
+								muscles in the neck, shoulders, and suboccipital region. <br>
+								- Improve Joint Mobility : Gentle joint mobilisations and manipulations (if appropriate)
+								to restore normal movement in the upper cervical and thoracic spine, reducing stiffness
+								and nerve irritation.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Targeted Exercise Prescription</span><br>
-								- Strengthen deep neck muscles to improve stability and endurance. <br>
-								- Improve posture and ergonomic habits. <br>
-								- Increase flexibility in tight muscles of the neck, shoulders, and chest. <br>
-								- Enhance range of motion in the cervical and thoracic spine.
+								A personalised exercise program to <br>
+								- Strengthen Weak Muscles : Focusing on deep neck flexors, scapular stabilisers, and
+								postural muscles to improve neck stability and endurance.<br>
+								- Improve Posture : Exercises and advice to correct and maintain optimal posture in
+								sitting, standing, and during daily activities. <br>
+								- Increase Flexibility : Stretches for tight muscles in the neck, chest, and shoulders.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Ergonomic and Postural Advice</span><br>
-								Guidance on optimizing your workstation setup, sleeping posture, and daily habits to
-								reduce strain on your neck and head.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Stress Management Techniques</span><br>
-								While we don't treat stress directly, physiotherapists can teach relaxation techniques
-								and breathing exercises that help reduce muscle tension often associated with
-								stress-induced headaches.
+								<span class="bold">Ergonomic & Lifestyle Advice</span><br>
+								Guidance on optimising your workspace, sleeping posture, and daily habits to reduce
+								strain on your neck and minimise headache triggers. This includes advice on stress
+								management and sleep hygiene.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Dry Needling / Acupuncture</span><br>
-								Can be used to release trigger points in tight muscles contributing to headache pain.
+								Can be used to release stubborn trigger points in muscles contributing to headaches.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Education</span><br>
-								Understanding your headache triggers, learning self-management strategies, and knowing
-								when to seek further medical advice are crucial for long-term relief. We'll empower you
-								with the knowledge to manage your condition effectively.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Migraine Support</span><br>
-								While we don't "cure" migraines, physiotherapy can help manage neck stiffness and
-								tension that often accompany or trigger migraine attacks, and can provide strategies to
-								improve overall resilience to triggers.
+								<span class="bold">Education & Self-Management</span><br>
+								Empowering you with a deep understanding of your headache type, triggers, and effective
+								strategies for self-treatment and prevention. This includes teaching you specific
+								exercises, relaxation techniques, and strategies for managing acute episodes.
 							</p>
 						</div>
 					</div>
-					<p class="desctit mt">By addressing the musculoskeletal contributors and providing comprehensive
-						self-management tools, physiotherapy aims to reduce the frequency, intensity, and duration of
-						your headaches, improving your overall quality of life.</p>
+					<p class="desctit mt justify">By addressing the underlying physical drivers and empowering you with
+						self-management strategies, physiotherapy aims to reduce the frequency and intensity of your
+						headaches and migraines, improving your comfort and quality of life.</p>
 				</div>
 			</div>
 		</div>
@@ -664,7 +708,7 @@
 								<span class="bold">Mechanical Neck Pain</span><br>
 								This is the most common type, often due to poor posture, muscle strain, or joint
 								stiffness in the neck and upper back. It's usually aggravated by certain movements or
-								sustained positions.
+								sustained positions
 							</p>
 							<p class="desc dot">
 								<span class="bold">Cervicogenic Headaches</span><br>
@@ -674,8 +718,8 @@
 							<p class="desc dot">
 								<span class="bold">Whiplash</span><br>
 								An injury to the neck caused by a sudden, forceful back-and-forth movement of the head,
-								typically from a car accident or fall. <br class="pc">
-								It can affect muscles, ligaments, discs, and nerves.
+								typically from a car accident or fall. <br class="pc"> It can affect muscles, ligaments,
+								discs, and nerves.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Radiculopathy (Pinched Nerve)</span><br>
@@ -699,7 +743,7 @@
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI)</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
 						<p class="desc ver2">Neck pain often results from</p>
 						<div class="descitem">
@@ -740,9 +784,9 @@
 						</p>
 						<p class="desc ver2 lt-2">Symptoms of neck pain can vary widely in intensity and type. They may
 							include</p>
-						<div class="descitem">
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Localized Pain</span><br>
+								<span class="bold">Localised Pain</span><br>
 								Aching, stiffness, or sharp pain in the neck itself.
 							</p>
 							<p class="desc dot">
@@ -796,7 +840,7 @@
 							</p>
 							<p class="desc dot">
 								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, joint mobilization, and soft
+								- Manual Therapy : Hands-on techniques such as massage, joint mobilisation, and soft
 								tissue release to reduce muscle tension, improve joint movement, and alleviate nerve
 								irritation. <br>
 								- Dry Needling/Acupuncture : Can be used to release trigger points in tight muscles that
@@ -806,8 +850,8 @@
 							</p>
 							<p class="desc dot">
 								<span class="bold">Restoring Movement & Strength</span><br>
-								- Targeted Exercise Prescription : We'll design a personalized exercise program to
-								strengthen weak muscles (especially deep neck stabilizers), stretch tight muscles, and
+								- Targeted Exercise Prescription : We'll design a personalised exercise program to
+								strengthen weak muscles (especially deep neck stabilisers), stretch tight muscles, and
 								improve the overall flexibility and range of motion in your neck and upper back. <br>
 								- Postural Correction : Guidance on maintaining optimal posture in various activities
 								(sitting, standing, sleeping) to reduce strain.
@@ -854,97 +898,92 @@
 							<span class="num">1.</span>
 							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2">The shoulder is one of the most mobile joints in the body, capable of a
-							remarkable range of motion. This flexibility, however, comes at the cost of stability,
-							making it highly susceptible to injury and pain. Shoulder pain can significantly impact
-							daily activities, from reaching overhead to sleeping comfortably. Your shoulder is a complex
-							ball-and-socket joint formed by three main bones: the upper arm bone (humerus), the shoulder
-							blade (scapula), and the collarbone (clavicle). It's supported by a network of muscles
-							(especially the rotator cuff), tendons, and ligaments that work together to allow movement
-							and provide stability. Shoulder pain arises when any of these structures are irritated,
-							inflamed, or damaged. <br>
-							Common types of shoulder pain and conditions include</p>
-						<div class="descitem">
+						<p class="desc ver2">The shoulder is a highly mobile ball-and-socket joint, renowned for its
+							extensive range of motion. It comprises three main bones (humerus, scapula, clavicle) and is
+							stabilised by a complex network of muscles (especially the rotator cuff), ligaments, and
+							tendons. This intricate design allows for overhead reaching, lifting, and various arm
+							movements crucial for daily life and sport. Shoulder pain arises when any of these
+							structures become irritated, inflamed, or damaged, often due to overuse, injury, or
+							degeneration. <br>
+							Common types of shoulder pain and related issues include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Rotator Cuff Injuries</span><br>
-								This is very common, involving damage to one or more of the four muscles and their
-								tendons that surround the shoulder joint. This can range from tendinitis (inflammation
-								of the tendons) to partial or full tears due to overuse or acute injury.
+								<span class="bold">Rotator Cuff Tendinopathy/Tear</span><br>
+								Inflammation (tendinopathy) or tears in one or more of the four rotator cuff tendons,
+								often caused by repetitive overhead activities, heavy lifting, or acute injury (e.g.,
+								fall onto an outstretched arm). Symptoms include pain with movement, weakness, and
+								difficulty sleeping on the affected side.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Shoulder Impingement Syndrome</span><br>
-								Occurs when the rotator cuff tendons or bursa (a fluid-filled sac that reduces friction)
-								get compressed or "impinged" between the top of the arm bone and the acromion (part of
-								the shoulder blade) during arm elevation.
+								Occurs when the rotator cuff tendons or bursa get "pinched" between the top of the arm
+								bone (humerus) and the acromion (part of the shoulder blade) during arm elevation. This
+								causes pain, especially when reaching overhead or out to the side.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Frozen Shoulder (Adhesive Capsulitis)</span><br>
-								Characterized by stiffness and pain in the shoulder joint, which gradually worsen over
-								time, severely limiting range of motion. It often progresses through painful,
-								stiffening, and thawing stages.
+								A condition characterised by significant pain and progressive stiffness in the shoulder
+								joint, leading to a severe restriction in range of motion. It typically progresses
+								through painful, stiffening, and thawing phases.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Bursitis</span><br>
-								Inflammation of the bursa, often due to repetitive motion or direct trauma.
+								Inflammation of the bursa, a fluid-filled sac that reduces friction between bones,
+								tendons, and muscles. Subacromial bursitis is common in the shoulder, causing pain with
+								movement, especially overhead.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Osteoarthritis (Degenerative Joint Disease)</span><br>
-								Wear and tear of the joint cartilage, leading to pain, stiffness, and reduced movement,
-								particularly common in older adults.
+								<span class="bold">Dislocation/Subluxation</span><br>
+								When the humerus completely comes out of the shoulder socket (dislocation) or partially
+								comes out (subluxation). This is often due to trauma and can damage surrounding
+								ligaments.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Shoulder Instability/Dislocation</span><br>
-								Occurs when the head of the humerus comes partially (subluxation) or completely
-								(dislocation) out of the shoulder socket.
+								<span class="bold">AC Joint Sprain/Separation</span><br>
+								Injury to the acromioclavicular (AC) joint, where the collarbone (clavicle) meets the
+								shoulder blade (scapula), often caused by a direct fall onto the shoulder.
 							</p>
 							<p class="desc dot">
-								<span class="bold">AC Joint Injury (Acromioclavicular Joint)</span><br>
-								An injury to the joint where the collarbone meets the shoulder blade, often from a fall
-								directly onto the shoulder.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Biceps Tendinitis</span><br>
-								Inflammation or irritation of the biceps tendon, which runs through the front of the
-								shoulder.
+								<span class="bold">Osteoarthritis</span><br>
+								Degenerative "wear and tear" of the shoulder joint cartilage, leading to pain,
+								stiffness, and reduced movement, more common in older adults.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
-							<span class="num">1.</span>
-							<span class="txt">Common Mechanism of Injury (MOI)</span>
+							<span class="num">2.</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2">Shoulder injuries can result from various factors, often involving
-							repetitive movements, sudden trauma, or age-related degeneration</p>
+						<p class="desc ver2">Shoulder pain frequently results from</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Overhead Activities/Repetitive Motion</span><br>
-								Sports like swimming, throwing (baseball, cricket), tennis, or occupations requiring
-								frequent overhead reaching (painters, electricians) can lead to overuse injuries like
-								rotator cuff tendinitis or impingement.
+								<span class="bold">Overuse/Repetitive Strain</span><br>
+								- Sports : Repetitive overhead activities in sports like swimming, tennis, baseball,
+								volleyball, or weightlifting. <br>
+								- Occupational Activities : Jobs requiring frequent overhead work, heavy lifting, or
+								sustained arm positions (e.g., painters, carpenters, hairstylists).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Falls</span><br>
-								Falling directly onto the shoulder, landing on an outstretched arm, or falling from a
-								height can cause fractures, dislocations, or rotator cuff tears.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Direct Impact</span><br>
-								A blow to the shoulder from contact sports or accidents.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Lifting Heavy Objects</span><br>
-								Especially if done improperly or with a sudden, jerky motion.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Age-Related Degeneration</span><br>
-								Over time, the tendons and cartilage in the shoulder can wear down, making them more
-								susceptible to injury or leading to conditions like osteoarthritis.
+								<span class="bold">Acute Trauma/Falls</span><br>
+								- Falls onto an Outstretched Arm : A common cause of rotator cuff tears, dislocations,
+								or fractures. <br>
+								- Direct Impact : A direct blow to the shoulder from a fall, collision, or contact
+								sport.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Poor Posture</span><br>
-								Chronic slouching or rounded shoulders can alter the mechanics of the shoulder joint,
-								increasing the risk of impingement or muscle strain.
+								Prolonged slouching or rounded shoulders can alter shoulder mechanics, leading to
+								impingement and rotator cuff strain over time.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Muscle Imbalance/Weakness</span><br>
+								Imbalances between stronger chest muscles and weaker back/rotator cuff muscles can lead
+								to instability and injury.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Degeneration</span><br>
+								Age-related wear and tear on tendons, cartilage, and joints.
 							</p>
 						</div>
 					</div>
@@ -953,40 +992,41 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 no_justify">Shoulder pain symptoms vary depending on the underlying cause,
-							but commonly include</p>
-						<div class="descitem">
+						<p class="desc ver2 no_justify">Symptoms of shoulder pain vary widely depending on the
+							underlying cause. <br>
+							They may include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Pain</span><br>
-								Can be dull and aching, sharp, or shooting. It may be localized to the shoulder joint or
-								radiate down the arm or up into the neck.
+								<span class="bold">Localised Pain</span><br>
+								Aching, throbbing, or sharp pain in the shoulder joint, front, side, or sometimes
+								radiating down the arm.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Stiffness</span><br>
-								Difficulty moving the shoulder through its full range, especially common with frozen
-								shoulder or arthritis.
+								<span class="bold">Pain with Movement</span><br>
+								Aggravated by specific arm movements, especially overhead lifting, reaching behind the
+								back, or rotating the arm.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Stiffness and Reduced Range of Motion</span><br>
+								Difficulty lifting the arm, reaching, or performing daily tasks like dressing or hair
+								care.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Weakness</span><br>
-								Difficulty lifting the arm, reaching overhead, or performing daily tasks. This can be a
-								sign of a rotator cuff tear or nerve involvement.
+								Difficulty lifting or rotating the arm, or feeling of "giving way."
 							</p>
 							<p class="desc dot">
-								<span class="bold">Clicking, Popping, or Grinding Sensations</span><br>
-								Often felt with movement, especially in cases of instability or degenerative changes.
+								<span class="bold">Clicking, Popping, or Grinding Sounds</span><br>
+								With shoulder movement, particularly with joint instability or degeneration.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Limited Range of Motion</span><br>
-								Inability to raise the arm fully, rotate it outwards, or reach behind the back.
+								<span class="bold">Difficulty Sleeping</span><br>
+								Pain aggravated by lying on the affected side.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain with Specific Movements</span><br>
-								Worsening pain when reaching overhead, reaching behind the back, or sleeping on the
-								affected side.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Night Pain</span><br>
-								Pain that disrupts sleep, a common symptom of rotator cuff issues.
+								<span class="bold">Numbness or Tingling (less common for pure shoulder
+									issues)</span><br>
+								May occur if nerve compression is present, possibly from the neck.
 							</p>
 						</div>
 					</div>
@@ -995,56 +1035,63 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Shoulder Pain</span>
 						</p>
-						<p class="desc ver2">Physiotherapy is often the first line of treatment for shoulder pain,
-							providing effective, non-surgical solutions to reduce pain, restore function, and prevent
-							recurrence. Our goal is to get you back to your normal activities pain-free. <br>
-							Here's how physiotherapy can help</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-5">Physiotherapy is exceptionally effective in diagnosing, treating, and
+							preventing recurrence of shoulder pain, helping you regain strength, mobility, and function.
+							Our comprehensive approach focuses on identifying the specific cause of your pain and
+							empowering you with strategies for lasting recovery. <br>Here's how physiotherapy can help
+						</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								Your physiotherapist will conduct a thorough examination of your shoulder, neck, upper
-								back, and posture to identify the precise source of your pain, contributing factors, and
-								any underlying movement dysfunctions.
+								<span class="bold">Thorough Assessment</span><br>
+								A detailed examination of your shoulder complex, neck, upper back, and posture to
+								pinpoint the source of your pain, assess muscle strength, joint mobility, movement
+								patterns, and identify contributing factors.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, joint mobilization (gently
-								moving the shoulder joint), and soft tissue release to reduce muscle tension, improve
-								joint movement, and alleviate pain. <br>
-								- Dry Needling / Acupuncture : Can be used to target specific trigger points in muscles
-								contributing to shoulder pain. <br>
-								- Modalities: Applying heat or ice, or using electrotherapy (like TENS) to help manage
-								pain and inflammation.
+								- Manual Therapy : Hands-on techniques such as soft tissue massage, joint mobilisation
+								(including the shoulder, neck, and upper back), and stretches to reduce muscle spasm,
+								improve joint movement, and alleviate pain. <br>
+								- Dry Needling/Acupuncture : Can be used to release trigger points in tight shoulder and
+								upper back muscles that contribute to pain and stiffness. <br>
+								- Modalities : Application of heat, ice, or electrotherapy (like TENS) to help reduce
+								pain and inflammation during acute phases.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Restoring Movement & Strength</span><br>
-								- Targeted Exercise Prescription : We'll design a personalized exercise program to :
-								Improve range of motion (flexibility and mobility) in your shoulder, Strengthen the
-								rotator cuff muscles and other surrounding muscles (e.g., scapular stabilizers) to
-								improve stability and control, Enhance posture and body mechanics to reduce strain on
-								the shoulder. <br>
-								- Functional Training: Gradual progression of exercises to mimic daily activities, work
-								tasks, or sports-specific movements, ensuring a safe return to full function.
+								- Targeted Exercise Prescription : We design a personalised exercise program to
+								strengthen weak rotator cuff muscles, scapular stabilisers, and surrounding musculature,
+								while stretching tight structures to restore full range of motion. <br>
+								- Graded Exposure & Progressive Loading : Guiding you through safe and progressive
+								exercises to improve tolerance to movement and gradually increase the load on your
+								shoulder. <br>
+								- Movement Pattern Retraining : Correcting inefficient or painful movement patterns to
+								optimise shoulder mechanics during daily activities and sports.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Postural Correction & Ergonomic Advice</span><br>
+								Guidance on maintaining optimal posture and assessing your workspace, sleeping habits,
+								and recreational activities to suggest modifications that support shoulder health and
+								prevent future injuries.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Education & Self-Management</span><br>
-								Empowering you with a clear understanding of your condition, common triggers, and
-								effective self-management techniques. This includes advice on activity modification,
-								pain management strategies, and prevention exercises to maintain long-term shoulder
-								health.
+								Empowering you with a clear understanding of your condition, pain triggers, and
+								effective self-management techniques. This includes teaching you specific exercises,
+								stretches, and activity modification strategies you can use at home to maintain progress
+								and prevent re-injury.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Post-Surgical Rehabilitation</span><br>
-								If surgery is necessary (e.g., rotator cuff repair), your physiotherapist will guide you
-								through a structured rehabilitation program to optimize healing, regain strength and
-								movement, and safely return to your desired activities.
+								<span class="bold">Pre and Post-Surgical Rehabilitation</span><br>
+								If surgery is required, we provide structured rehabilitation programs to optimise
+								recovery, restore function, and ensure a safe return to desired activities.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By identifying the root cause of your shoulder pain and providing a
-					tailored rehabilitation program, physiotherapy empowers you to regain full use of your arm, reduce
-					pain, and prevent future issues.</p>
+				<p class="desctit mt justify">By addressing the underlying issues, improving mechanics, and providing
+					you with the tools for self-care, physiotherapy aims to reduce your shoulder pain, restore full
+					function, and help you return to your daily activities, work, and sports pain-free.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_5">
@@ -1057,95 +1104,92 @@
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">1.</span>
-							<span class="txt">What They Are & Common Types</span>
+							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2">Elbow & Forearm Pain : Understanding and Healing Your Arm <br class="pc">
-							The elbow is a crucial hinge joint connecting your upper arm bone (humerus) to the two bones
-							in your forearm (radius and ulna). The forearm itself extends from the elbow to the wrist,
-							housing a complex network of muscles, tendons, and nerves that control movements of the
-							elbow, wrist, and fingers. Due to their interconnectedness and constant use in daily
-							activities, work, and sports, the elbow and forearm are frequently sites of pain and injury.
-							Pain in the elbow or forearm can originate from various structures, including muscles,
-							tendons, ligaments, bones, or nerves.</p>
-						<div class="descitem">
+						<p class="desc ver2">The elbow is a complex hinge joint, allowing for bending and straightening
+							of the arm, while the forearm's two bones (radius and ulna) permit rotation of the hand.
+							This region is vital for gripping, lifting, carrying, and performing fine motor tasks. It's
+							stabilised by strong ligaments, and numerous muscles originating in the forearm cross the
+							elbow joint to control hand and wrist movements. Pain in the elbow or forearm often results
+							from overuse, repetitive strain, or direct trauma affecting these intricate structures. <br>
+							Common types of elbow/forearm pain and related issues include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Tendinopathies (Overuse Injuries)</span><br>
-								- Tennis Elbow (Lateral Epicondylitis) : Pain on the outer part of the elbow, stemming
-								from overuse or degeneration of the tendons connecting forearm extensor muscles to the
-								elbow. Often exacerbated by gripping and wrist extension. <br>
-								- Golfer's Elbow (Medial Epicondylitis) : Pain on the inner part of the elbow, caused by
-								overuse or degeneration of the tendons connecting forearm flexor muscles to the elbow.
-								Worsened by gripping and wrist flexion.
+								<span class="bold">Lateral Epicondylitis (Tennis Elbow)</span><br>
+								This is the most common condition, characterised by pain on the outer side of the elbow
+								where the forearm extensor muscles attach. It's caused by overuse and repetitive
+								gripping, wrist extension, or forearm rotation, leading to degeneration of the tendon.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Nerve Compression Syndromes</span><br>
-								- Cubital Tunnel Syndrome : Compression or irritation of the ulnar nerve as it passes
-								around the inner elbow. Leads to numbness, tingling, and weakness in the little finger
-								and half of the ring finger, often exacerbated by prolonged elbow bending. <br>
-								- Radial Tunnel Syndrome : Compression of the radial nerve in the forearm, causing
-								aching pain or tenderness on the outer forearm, often mistaken for tennis elbow. <br>
-								- Pronator Teres Syndrome : Compression of the median nerve by the pronator teres muscle
-								in the forearm, leading to pain in the forearm and numbness/tingling in the thumb,
-								index, middle, and half of the ring finger.
+								<span class="bold">Medial Epicondylitis (Golfer's Elbow)</span><br>
+								Less common than tennis elbow, this involves pain on the inner side of the elbow where
+								the forearm flexor and pronator muscles attach. It's typically due to repetitive wrist
+								flexion, gripping, or forearm pronation.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Bursitis</span><br>
-								Olecranon Bursitis (Student's Elbow) : Inflammation of the fluid-filled sac at the very
-								tip of the elbow, typically causing swelling and pain at the back of the elbow.
+								<span class="bold">Cubital Tunnel Syndrome</span><br>
+								Occurs when the ulnar nerve, which passes through the cubital tunnel on the inner side
+								of the elbow, becomes compressed or irritated. This can cause numbness, tingling, or
+								weakness in the little finger and half of the ring finger, and sometimes pain in the
+								forearm.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Ligament Injuries</span><br>
-								Elbow Sprains : Damage to the ligaments supporting the elbow joint, often seen in
-								throwing athletes (e.g., Ulnar Collateral Ligament - UCL injury) due to repetitive
-								stress.
+								<span class="bold">Radial Tunnel Syndrome</span><br>
+								Compression of the radial nerve in the forearm, often causing aching pain on the top or
+								outer side of the forearm, similar to tennis elbow but usually without local tenderness.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Fractures</span><br>
-								Breaks in the bones of the elbow or forearm (humerus, radius, ulna), usually caused by
-								direct trauma or falls.
+								<span class="bold">Olecranon Bursitis (Student's Elbow)</span><br>
+								Inflammation of the bursa located over the bony tip of the elbow (olecranon). It often
+								presents as swelling, tenderness, and sometimes pain, usually caused by direct trauma or
+								prolonged leaning on the elbow.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Muscle Strains</span><br>
-								Overstretching or tearing of the muscles in the forearm due to sudden force or overuse.
+								<span class="bold">Ligament Sprains</span><br>
+								Injuries to the ligaments supporting the elbow joint, often from falls or overuse,
+								particularly in throwing athletes (e.g., UCL injury).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Compartment Syndrome (Acute/Chronic)</span><br>
-								Increased pressure within the muscle compartments of the forearm, potentially impairing
-								blood supply and nerve function. Acute is a medical emergency; chronic can occur with
-								repetitive exercise.
+								<span class="bold">Osteoarthritis</span><br>
+								Degenerative "wear and tear" of the elbow joint cartilage, less common than in other
+								major joints but can occur, especially in those with a history of trauma or heavy use.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI)</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2">Elbow and forearm pain most frequently result from repetitive strain or
-							direct trauma.</p>
+						<p class="desc ver2">Elbow and forearm pain frequently results from</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Repetitive Overuse</span><br>
-								- Sports : Throwing sports (baseball, javelin), racquet sports (tennis, badminton),
-								golf, and activities requiring strong, repetitive gripping or wrist movements. <br>
-								- Occupations : Manual labor (carpenters, plumbers, mechanics), typing, assembly line
-								work, or prolonged use of hand tools. <br>
-								- Hobbies : Knitting, gardening, playing musical instruments. <br>
-								- Improper technique : Using incorrect form during sports or work tasks can place undue
-								stress on the elbow and forearm structures.
+								<span class="bold">Overuse & Repetitive Strain (Most Common)</span><br>
+								- Sports : Repetitive gripping, throwing, swinging (tennis, golf, baseball, racket
+								sports), or weightlifting. <br>
+								- Occupational Activities : Jobs requiring repetitive hand/wrist movements, gripping,
+								using tools (e.g., carpenters, plumbers, chefs, computer users, hairdressers).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Direct Trauma</span><br>
-								- Falls : Falling onto an outstretched arm (FOOSH injury) is a common cause of
-								fractures, dislocations, or sprains in the elbow and forearm. <br>
-								- Direct impact : A blow to the elbow or forearm can cause bruising, fractures, or
-								bursitis.
+								<span class="bold">Sudden Trauma/Impact</span><br>
+								- Falls onto an Outstretched Arm : Can lead to fractures, dislocations, or ligament
+								sprains around the elbow. <br>
+								- Direct Blow : An impact directly to the elbow or forearm.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Sustained Pressure/Postures</span><br>
-								- Leaning on the elbow for prolonged periods (Olecranon Bursitis). <br>
-								- Repetitive or sustained awkward wrist or forearm positions (contributing to nerve
-								entrapments or muscle imbalances).
+								<span class="bold">Poor Ergonomics</span><br>
+								Improper setup of workspaces, tools, or sports equipment leading to awkward postures or
+								excessive strain on the forearm muscles.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Muscle Imbalance/Weakness</span><br>
+								Weakness in the muscles supporting the forearm and wrist can lead to overload of the
+								tendons around the elbow.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Nerve Compression</span><br>
+								Sustained pressure or repeated stretching of nerves (e.g., ulnar nerve in the cubital
+								tunnel).
 							</p>
 						</div>
 					</div>
@@ -1154,47 +1198,40 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 no_justify lt-5">Symptoms can vary widely depending on the specific
-							condition but often include</p>
-						<div class="descitem">
+						<p class="desc ver2 no_justify lt-0">Symptoms of elbow and forearm pain can vary depending on
+							the underlying cause.
+							<br>They may include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Pain</span><br>
-								Can range from a dull ache to sharp, burning, or shooting pain. <br>
-								- Localized pain : At the outer or inner elbow (Tennis/Golfer's Elbow), or along the
-								forearm. <br>
-								- Pain with movement : Aggravated by specific arm, wrist, or hand actions (e.g.,
-								gripping, lifting, turning a doorknob, typing).
+								<span class="bold">Localised Pain</span><br>
+								Aching, sharp, or burning pain on the outer (tennis elbow) or inner (golfer's elbow)
+								side of the elbow. Pain can also be felt along the forearm.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Pain with Movement</span><br>
+								Aggravated by gripping, lifting, carrying, twisting the forearm, or extending/flexing
+								the wrist.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Tenderness</span><br>
-								Pain when pressing on the affected area (e.g., bony epicondyles for tendinopathies).
-							</p>
-							<p class="desc dot">
-								<span class="bold">Stiffness</span><br>
-								Difficulty fully straightening or bending the elbow, or rotating the forearm.
+								Pain upon touching specific bony points around the elbow or along the forearm muscles.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Weakness</span><br>
-								Reduced grip strength, difficulty lifting or carrying objects, or performing fine motor
-								tasks.
+								Difficulty gripping objects, turning doorknobs, or lifting.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Stiffness</span><br>
+								Reduced range of motion in the elbow or wrist.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Numbness, Tingling, or Burning</span><br>
+								If a nerve is compressed (e.g., Cubital Tunnel Syndrome), these sensations may radiate
+								into the hand (specifically the little and ring fingers for ulnar nerve).
 							</p>
 							<p class="desc dot">
 								<span class="bold">Swelling</span><br>
-								Visible swelling around the elbow or forearm, particularly with bursitis, fractures, or
-								acute injury.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Numbness, Tingling, or Burning Sensations</span><br>
-								Often indicative of nerve involvement, these sensations may radiate into the forearm,
-								wrist, hand, or fingers.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Clicking, Popping, or Grinding Sensations</span><br>
-								With elbow movement, can suggest joint surface issues or loose bodies.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Limited Range of Motion</span><br>
-								Inability to move the elbow or forearm through its full, normal arc.
+								Especially with bursitis or acute trauma.
 							</p>
 						</div>
 					</div>
@@ -1203,70 +1240,67 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Elbow & Forearm Pain</span>
 						</p>
-						<p class="desc ver2 lt-5">Physiotherapy is highly effective in treating most elbow and forearm
-							conditions, providing pain relief, restoring function, and preventing recurrence. Our
-							approach focuses on a thorough assessment to identify the precise cause of your pain and
-							developing a personalized, evidence-based rehabilitation plan. <br>
-							Here's how physiotherapy can help</p>
+						<p class="desc ver2 lt-2">Physiotherapy is highly effective in diagnosing, treating, and
+							preventing recurrence of elbow and forearm pain, helping you regain strength, mobility, and
+							function. Our comprehensive approach focuses on identifying the specific cause of your pain,
+							addressing contributing factors, and empowering you with strategies for lasting recovery.
+							<br>Here's how physiotherapy can help</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								We will conduct a detailed examination of your entire upper limb (neck, shoulder, elbow,
-								forearm, wrist, and hand) to pinpoint the source of your pain and identify any
-								contributing factors such as muscle imbalances, joint stiffness, nerve compression, or
-								postural issues.
+								<span class="bold">Thorough Assessment</span><br>
+								A detailed examination of your elbow, forearm, wrist, hand, shoulder, and neck to
+								pinpoint the source of your pain. We'll assess muscle strength, joint mobility, nerve
+								function, and identify aggravating activities and ergonomic factors.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques like massage, soft tissue release, joint
-								mobilizations, and nerve gliding exercises to reduce pain, inflammation, and improve
-								tissue mobility. <br>
-								- Dry Needling / Acupuncture : Can be used to release trigger points in tight or
-								overactive muscles in the forearm and arm that contribute to pain. <br>
-								- Therapeutic Modalities : Applying ice or heat, or using electrotherapy (like TENS) to
-								help manage acute pain and swelling.
+								- Manual Therapy : Hands-on techniques such as soft tissue massage, trigger point
+								release, joint mobilisation of the elbow, wrist, and even the neck / upper back if
+								contributing. <br>
+								- Dry Needling/Acupuncture : Can be used to release stubborn trigger points in tight
+								forearm muscles. <br>
+								- Modalities : Application of heat, ice, electrotherapy (like TENS), or therapeutic
+								ultrasound to help reduce pain and inflammation during acute phases.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Restoring Movement & Strength</span><br>
-								Targeted Exercise Prescription: We'll design a personalized exercise program to <br>
-								- Improve flexibility and range of motion in your elbow, forearm, and wrist. <br>
-								- Strengthen weak or imbalanced muscles (e.g., forearm extensors/flexors, rotator cuff)
-								to enhance stability and endurance. <br>
-								- Implement eccentric loading exercises (crucial for tendinopathies like Tennis/Golfer's
-								Elbow) to promote tendon healing and strengthen the tendon structure. <br>
-								- Address postural imbalances that may increase stress on the elbow and forearm.
+								- Targeted Exercise Prescription : We design a personalised exercise program to
+								strengthen weak forearm, wrist, and grip muscles, while stretching tight structures to
+								improve flexibility and range of motion. This often includes eccentric exercises for
+								tendinopathies. <br>
+								- Graded Exposure & Progressive Loading : Guiding you through safe and progressive
+								exercises and activities to improve tissue tolerance and gradually increase the load on
+								your elbow/forearm. <br>
+								- Movement Pattern Retraining : Correcting inefficient or painful movement patterns
+								during daily activities, work, or sports.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Activity Modification & Ergonomic Advice</span><br>
-								We'll help you identify and modify the activities, techniques (e.g., in sports or at
-								work), or tools that aggravate your condition. This includes providing ergonomic
-								assessments and advice for your workstation, sports equipment, or daily tasks to reduce
-								strain.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Bracing / Taping</span><br>
-								Recommendation and application of supportive braces (e.g., tennis elbow brace) or
-								therapeutic taping to offload stressed tendons, support ligaments, or stabilize the
-								joint during recovery.
+								<span class="bold">Ergonomic & Activity Modification Advice</span><br>
+								Guidance on optimising your workspace, tool use, sports technique, and daily habits to
+								reduce strain on your elbow and prevent future flare-ups. This includes advice on proper
+								grip, posture, and lifting techniques.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Education & Self-Management</span><br>
-								Empowering you with a clear understanding of your condition, common triggers, and
-								effective self-management techniques. Learning how to manage your symptoms, prevent
-								future flare-ups, and progress your exercises independently is key to long-term success.
+								Empowering you with a clear understanding of your condition, pain triggers, and
+								effective self-management techniques. This includes teaching you specific exercises,
+								stretches, and activity modification strategies you can use at home.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Post-Surgical Rehabilitation</span><br>
-								If surgery is necessary (e.g., for complex fractures or severe nerve compression), your
-								physiotherapist will guide you through a structured rehabilitation program to optimize
-								healing, regain strength, movement, and safely return to your desired activities.
+								<span class="bold">Bracing/Taping Advice</span><br>
+								Recommendation and application of supportive bracing or taping if beneficial for pain
+								relief and support during recovery.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Nerve Gliding Exercises</span><br>
+								Specific exercises to improve the mobility of compressed or irritated nerves.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By identifying the specific cause of your elbow or forearm pain and
-					providing a tailored rehabilitation program, physiotherapy empowers you to reduce pain, regain full
-					function, and return to your work, sports, and daily life without limitations.</p>
+				<p class="desctit mt justify">By addressing the underlying issues, improving mechanics, and providing
+					you with the tools for self-care, physiotherapy aims to reduce your elbow/forearm pain, restore full
+					function, and help you return to your daily activities, work, and sports pain-free.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_6">
@@ -1279,105 +1313,86 @@
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">1.</span>
-							<span class="txt">What They Are & Common Types</span>
+							<span class="txt">What It Is & Common Types</span>
 						</p>
 						<p class="desc ver2">
-							Wrist & Hand Pain: Understanding and Healing Your Hand and Wrist. <br>
-							The wrist is a complex joint connecting the forearm to the hand, which itself contains 27
-							bones, numerous small joints, and an intricate network of muscles, tendons, ligaments, and
-							nerves. This intricate design allows for remarkable dexterity, strength, and sensory
-							perception, making the hand and wrist essential for nearly all daily activities. Due to
-							their constant use and exposure, the wrist and hand are highly susceptible to pain, injury,
-							and overuse conditions. Pain in the wrist or hand can stem from problems with bones, joints,
-							ligaments, tendons, or nerves.
+							The Wrist and Hand complex consists of 27 small bones, numerous joints, ligaments, tendons,
+							and nerves, making it a masterpiece of fine motor control and dexterity. The wrist (carpus)
+							acts as a flexible bridge between the forearm and the hand, allowing for a wide range of
+							movements. The hand is essential for gripping, feeling, and performing countless daily
+							tasks. Pain arises when any of these structures are strained, inflamed, or compressed.
+							<br>Common types of wrist and hand pain and related issues include
 						</p>
-						<div class="descitem">
+						<div class="descitem no_spacing">
 							<p class="desc dot">
 								<span class="bold">Carpal Tunnel Syndrome (CTS)</span><br>
-								Compression of the median nerve as it passes through the carpal tunnel in the wrist.
-								This typically causes numbness, tingling, and pain in the thumb, index, middle, and half
-								of the ring finger, often worsening at night or with repetitive hand movements.
+								The most common nerve entrapment condition, where the median nerve is compressed as it
+								passes through the wrist tunnel. This causes pain, numbness, and tingling, typically in
+								the thumb, index, middle, and half of the ring finger.
 							</p>
 							<p class="desc dot">
 								<span class="bold">De Quervain's Tenosynovitis</span><br>
-								Inflammation of the tendons on the thumb side of the wrist, particularly those involved
-								in thumb movement. It causes pain and tenderness at the base of the thumb and wrist,
-								often aggravated by gripping or pinching.
+								Inflammation of the tendons on the thumb side of the wrist, often caused by repetitive
+								gripping, lifting, or twisting motions. It causes pain and tenderness when moving the
+								thumb or wrist.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Trigger Finger/Thumb</span><br>
-								A condition where a finger or thumb gets "stuck" in a bent position and then suddenly
-								straightens with a "snap" or "pop." It's caused by inflammation or a nodule in the
-								tendon sheath, preventing smooth gliding of the tendon.
+								<span class="bold">Tendonitis / Tenosynovitis</span><br>
+								Inflammation or irritation of any of the many tendons that control finger and wrist
+								movement, often due to overuse.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Ganglion Cysts</span><br>
-								Non-cancerous, fluid-filled lumps that commonly develop along the tendons or joints of
-								the wrist or hand. While often harmless, they can cause pain if they press on a nerve or
-								interfere with joint movement.
+								<span class="bold">Arthritis</span><br>
+								- Osteoarthritis (OA) : "Wear and tear" typically affecting the base of the thumb (CMC
+								joint) or finger joints, causing pain, stiffness, and bony enlargement. <br>
+								- Rheumatoid Arthritis (RA) : An autoimmune condition often affecting the small joints
+								of the hand and wrist symmetrically, causing pain, swelling, and potential joint
+								deformity.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Osteoarthritis</span><br>
-								Degenerative "wear and tear" of the joint cartilage. It commonly affects the thumb base
-								joint (CMC joint), causing pain, stiffness, swelling, and reduced grip strength. It can
-								also affect other small joints in the hand.
+								<span class="bold">Trigger Finger/Thumb (Stenosing Tenosynovitis)</span><br>
+								A condition where a tendon sheath becomes inflamed, causing the finger or thumb to
+								catch, lock, or pop when attempting to straighten it.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Rheumatoid Arthritis</span><br>
-								An autoimmune disease that causes chronic inflammation of the joints, commonly affecting
-								the small joints of the wrist and hand. It leads to pain, swelling, stiffness
-								(especially in the morning), and can cause joint deformity.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Wrist Sprains/Fractures</span><br>
-								Injuries to the ligaments or bones of the wrist, often from a fall onto an outstretched
-								hand (FOOSH injury). Fractures of the scaphoid bone (a small bone in the wrist) are
-								common but can be difficult to diagnose.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Tendonitis/Tenosynovitis</span><br>
-								General inflammation or irritation of tendons and their protective sheaths in the wrist
-								or hand due to overuse or repetitive strain.
+								<span class="bold">Sprains and Fractures</span><br>
+								Acute injuries, such as a Scaphoid fracture (a common wrist bone fracture often
+								resulting from a fall onto an outstretched hand) or ligament sprains.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI)</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2 lt-5">Wrist and hand injuries frequently arise from repetitive movements,
-							sustained awkward postures, or direct trauma.</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">Wrist and hand pain often results from</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Repetitive Strain / Overuse</span><br>
-								- Work-related : Typing, using a mouse, assembly line work, gripping tools,
-								hairdressing, gaming. <br>
-								- Sports : Golf, tennis, bowling, climbing, cycling, weightlifting, gymnastics. <br>
-								- Hobbies : Knitting, gardening, playing musical instruments. <br>
-								- These repetitive actions can lead to inflammation and irritation of btendons and
-								nerves (e.g., Carpal Tunnel Syndrome, De Quervain's Tenosynovitis).
+								<span class="bold">Repetitive Strain and Overuse</span><br>
+								Activities involving prolonged or repeated gripping, typing, texting, assembly line
+								work, or use of hand tools. This is a primary cause of conditions like CTS and De
+								Quervain's.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Direct Trauma</span><br>
-								- Falls: Falling directly onto an outstretched hand (FOOSH) is a very common cause of
-								wrist fractures (e.g., Colles' fracture, scaphoid fracture) and sprains. <br>
-								- Direct Impact : Blows to the hand or wrist from accidents or contact sports.
+								<span class="bold">Sudden Trauma / Falls</span><br>
+								- Falling Onto an Outstretched Hand : A very common mechanism for spraining wrist
+								ligaments or fracturing bones (like the scaphoid or distal radius).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Awkward Positions</span><br>
-								Maintaining the wrist in bent or awkward positions for prolonged periods can compress
-								nerves or strain tendons.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Vibrating Tools</span><br>
-								Prolonged use of vibrating tools can contribute to nerve and circulation issues in the
-								hand.
+								<span class="bold">Awkward / Sustained Positions</span><br>
+								Holding the wrist bent for long periods, such as when sleeping, working with
+								non-ergonomic tools, or poor keyboard/mouse setup.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Systemic Conditions</span><br>
-								Underlying conditions like diabetes, thyroid issues, or rheumatoid arthritis can
-								predispose individuals to certain hand/wrist problems.
+								Underlying inflammatory conditions (like Rheumatoid Arthritis) or metabolic issues (like
+								Diabetes) can predispose individuals to nerve entrapment or tendon irritation.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Sports Injuries</span><br>
+								Repetitive impact or rotational forces common in sports like golf, tennis, or contact
+								sports can lead to tendon and ligament damage.
 							</p>
 						</div>
 					</div>
@@ -1386,50 +1401,42 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2">Symptoms of wrist and hand pain can vary widely depending on the specific
-							condition and the structures involved. Common symptoms include</p>
+						<p class="desc ver2">Symptoms of wrist and hand pain can range from a dull ache to debilitating
+							sharp pain and functional loss. <br>They may include</p>
 						<div class="descitem">
 							<p class="desc dot">
 								<span class="bold">Pain</span><br>
-								Can be localized (e.g., thumb side of wrist for De Quervain's), diffuse, sharp, aching,
-								burning, or throbbing. Pain may worsen with specific movements or activities.
+								Aching, burning, or sharp pain localised to the wrist, a specific finger, the thumb, or
+								radiating into the forearm.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Stiffness</span><br>
-								Difficulty moving the wrist or fingers, especially in the morning or after periods of
-								rest.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Numbness, Tingling, or Pins and Needles</span><br>
-								Often indicative of nerve compression (e.g., Carpal Tunnel Syndrome, Cubital Tunnel
-								Syndrome radiating to the hand). Sensations may affect specific fingers or parts of the
-								hand.
+								<span class="bold">Numbness and Tingling</span><br>
+								Often following a specific nerve path (e.g., in the fingers and hand with Carpal Tunnel
+								Syndrome), often worse at night.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Weakness</span><br>
-								Reduced grip strength, difficulty pinching, or weakness in performing fine motor tasks.
+								Difficulty with grip strength, dropping objects, or struggling with fine motor tasks
+								(like buttoning a shirt or opening jars).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Swelling</span><br>
-								Visible swelling in the wrist, hand, or fingers.
+								<span class="bold">Stiffness and Reduced Mobility</span><br>
+								Trouble making a full fist, limited ability to bend the wrist, or pain with specific
+								movements.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Clicking, Popping, or Catching</span><br>
-								Sensations felt during movement, particularly with Trigger Finger/Thumb or joint
-								instability.
+								<span class="bold">Swelling and Tenderness</span><br>
+								Localised puffiness or extreme pain when pressing on a specific area (e.g., over an
+								inflamed tendon).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Reduced Range of Motion</span><br>
-								Inability to fully bend, straighten, or rotate the wrist, or to fully flex/extend the
-								fingers.
+								<span class="bold">Clicking, Catching, or Locking</span><br>
+								A sensation that a finger or the wrist joint is momentarily stuck, often associated with
+								Trigger Finger or underlying joint instability.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Burning Sensation</span><br>
-								Can be associated with nerve irritation.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Visible Lump</span><br>
-								Such as with a ganglion cyst.
+								<span class="bold">Visible Deformity or Bumps</span><br>
+								May indicate a ganglion cyst, arthritis, or an old fracture site.
 							</p>
 						</div>
 					</div>
@@ -1438,74 +1445,53 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Wrist & Hand Pain</span>
 						</p>
-						<p class="desc ver2 lt-2">Physiotherapy is highly effective in diagnosing and treating most
-							wrist and hand conditions, providing pain relief, restoring function, and preventing
-							recurrence. Our detailed assessment helps identify the precise cause of your pain and guide
-							a personalized, evidence-based rehabilitation plan. <br>
-							Here's how physiotherapy can help</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Physiotherapy plays a crucial role in treating acute injuries and
+							chronic conditions of the wrist and hand, often providing an effective alternative to
+							injections or surgery. Our goal is to relieve pain, restore full function and dexterity, and
+							enable you to confidently resume all your daily and work activities.
+							<br>Here's how physiotherapy can help</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								We will conduct a thorough examination of your wrist, hand, fingers, forearm, elbow, and
-								even your neck and shoulder, as issues further up the kinetic chain can refer pain or
-								contribute to wrist/hand problems. We'll assess your strength, flexibility, nerve
-								function, and movement patterns.
+								<span class="bold">Thorough Assessment and Diagnosis</span><br>
+								We conduct a detailed examination, including specialised orthopaedic tests, nerve
+								tension checks, grip strength assessment, and evaluation of your daily postures and work
+								habits, to pinpoint the exact structure causing the pain.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, joint mobilizations (gentle
-								movements of the small bones/joints), and soft tissue release to reduce pain,
-								inflammation, and improve tissue mobility. <br>
-								- Dry Needling / Acupuncture : Can be used to release trigger points in tight or
-								overactive muscles in the forearm and hand that contribute to pain. <br>
-								- Therapeutic Modalities : Applying ice or heat, or using electrotherapy (like TENS) to
-								help manage acute pain and swelling.
+								<span class="bold">Pain and Swelling Reduction</span><br>
+								- Manual Therapy : Gentle joint mobilisation and soft tissue techniques to reduce
+								swelling, improve joint movement, and alleviate muscle tension in the forearm. <br>
+								- Activity Modification : Identifying and adjusting painful activities or movements to
+								allow irritated structures to heal. <br>
+								- Taping / Bracing / Splinting : Applying temporary support or providing custom
+								recommendations for braces/splints to offload aggravated nerves or tendons (e.g., for
+								CTS or De Quervain's).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Restoring Movement & Strength</span><br>
-								Targeted Exercise Prescription: We'll design a personalized exercise program to <br>
-								- Improve flexibility and range of motion in your wrist, hand, and fingers. <br>
-								- Strengthen the small muscles of the hand and forearm, improving grip strength, pinch
-								strength, and overall dexterity. <br>
-								- Address any underlying muscle imbalances. <br>
-								- Nerve Gliding Exercises : Specific movements to help free up compressed or irritated
-								nerves, reducing numbness and tingling. <br>
-								- Fine Motor Control Exercises : Activities designed to improve coordination and
-								precision for daily tasks.
+								<span class="bold">Restoring Strength, Movement, and Dexterity</span><br>
+								- Targeted Exercise Prescription : Custom exercises to restore range of motion, improve
+								grip and pinch strength, and enhance the fine motor control needed for delicate tasks.
+								<br>
+								- Tendon and Nerve Gliding Exercises : Specific movements to help irritable tendons and
+								nerves slide smoothly within their tunnels, reducing friction and compression (highly
+								effective for CTS and tendonitis).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Activity Modification & Ergonomic Advice</span><br>
-								We'll help you identify and modify the activities, techniques, or tools that aggravate
-								your condition. This includes providing ergonomic assessments for your workstation
-								(keyboard, mouse setup), advice on proper gripping, lifting, and posture during work or
-								hobbies.
+								<span class="bold">Ergonomic and Posture Advice</span><br>
+								Evaluating your work desk setup, tools, or hobbies (e.g., keyboard, mouse, or phone use)
+								to suggest modifications that ensure a neutral and strain-free wrist posture.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Splinting / Bracing</span><br>
-								Recommendation and fitting of custom or off-the-shelf splints or braces to support the
-								wrist or hand, reduce strain, and promote healing (e.g., for Carpal Tunnel Syndrome or
-								De Quervain's).
-							</p>
-							<p class="desc dot">
-								<span class="bold">Education & Self-Management</span><br>
-								Empowering you with a clear understanding of your condition, common triggers, and
-								effective self-management techniques. Learning how to manage your symptoms, protect your
-								joints, and perform your exercises consistently is crucial for long-term hand and wrist
-								health.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Post-Surgical Rehabilitation</span><br>
-								If surgery is necessary (e.g., for Carpal Tunnel release, fracture repair, or severe
-								arthritis), your physiotherapist will guide you through a structured rehabilitation
-								program to optimize healing, regain strength, movement, and safely return to your daily
-								activities and work.
+								<span class="bold">Rehabilitation Post-Fracture or Surgery</span><br>
+								Providing structured, progressive rehabilitation programs following a fracture or
+								procedure, ensuring the safe return of strength, movement, and functional independence.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By addressing the specific cause of your wrist or hand pain and providing
-					a tailored rehabilitation program, physiotherapy empowers you to reduce pain, regain full function,
-					and return to your work, sports, and daily life without limitations.</p>
+				<p class="desctit mt justify">By combining pain-relieving strategies with empowering strengthening
+					exercises and ergonomic education, physiotherapy aims to resolve your symptoms, restore the full
+					functionality of your hand and wrist, and prevent future recurrence.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_7">
@@ -1513,144 +1499,76 @@
 				<img src="../img/service1_cont_img3_7.jpg" alt="" class="img">
 			</div>
 			<div class="txtbox">
-				<p class="title">Upper / mid / lower back</p>
+				<p class="title">Spinal Pain (Upper, Mid, and Lower Back)</p>
 				<div class="descwrap">
 					<div class="descbox">
+						<div class="desc">
+							Since the spine functions as a single unit, pain often stems from issues in adjacent areas.
+							We treat pain across the entire back, from the shoulder blades down to the pelvis.
+						</div>
 						<p class="desctit">
 							<span class="num">1.</span>
-							<span class="txt">What They Are & Common Types</span>
+							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2 lt-0">Back Pain: Understanding and Healing Your Upper, Mid, and Lower Back
-							<br>
-							Back pain is one of the most common complaints worldwide, affecting a vast majority of
-							people at some point in their lives. It can range from a dull ache to sharp, debilitating
-							pain, significantly impacting daily activities, work, and quality of life. Understanding
-							that back pain can originate from different regions of the spine - the upper (thoracic), mid
-							(thoracic/lumbar junction), and lower (lumbar) back - is key to effective diagnosis and
-							treatment. Your spine is a complex column of bones (vertebrae), cushioning discs, muscles,
-							and ligaments, designed to support your body, allow movement, and protect your spinal cord.
-							Pain arises when any of these structures, or the nerves exiting the spine, become irritated,
-							strained, or damaged.</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">The Spine is the central pillar of the body, encompassing the neck
+							(Cervical), mid-back (Thoracic), and lower back (Lumbar) regions. It provides structure,
+							allows for mobility, and protects the spinal cord. Pain arises when any of its complex
+							components—vertebrae, discs, joints, muscles, or nerves—become irritated or damaged.
+							<br>Common conditions we treat across the spine include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">General Types of Back Pain</span><br>
-								- Mechanical Back Pain : The most common type, referring to pain arising from the
-								muscles, ligaments, facet joints, or discs. It's often related to movement, posture, or
-								activity. <br>
-								- Radicular Pain (Sciatica) : Pain that radiates along the path of a nerve, often caused
-								by compression or irritation of a spinal nerve root. It is typically sharp, shooting, or
-								burning, and can be accompanied by numbness, tingling, or weakness.
+								<span class="bold">Lower Back (Lumbar)</span><br>
+								Sciatica / Radiculopathy (Pinched Nerve), Herniated Disc, Mechanical Low Back Pain,
+								Spinal Stenosis, Spondylolisthesis.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Specific Conditions by Region</span><br>
+								<span class="bold">Mid Back (Thoracic)</span><br>
+								Postural Pain, Scheuermann’s Disease, Rib Pain/Joint Dysfunction, Stiffness
+								(Hypomobility), referred pain from the neck.
 							</p>
-							<p class="desc number">
-								<span class="num">1.</span>
-								<span class="bold">
-									<span class="mob_bold">Lower Back Pain (Lumbar Spine) : </span>
-									<br class="tablet">
-									The lumbar spine bears the most weight and is the most common site of back pain.
-									<br>
-									- Lumbar Muscle Strain / Ligament Sprain : Overstretching or tearing of muscles and
-									ligaments from heavy lifting, sudden movements, or overuse. <br>
-									- Herniated Disc (Slipped Disc / Bulging Disc) : When the soft inner material of a
-									spinal disc pushes out, potentially compressing nearby nerves. This can cause
-									localized pain or radiating pain (sciatica). <br>
-									- Degenerative Disc Disease : Age-related wear and tear of the spinal discs, leading
-									to pain, stiffness, and sometimes nerve compression. <br>
-									- Facet Joint Osteoarthritis : Degeneration of the small joints connecting
-									vertebrae, causing localized pain and stiffness that worsens with certain movements.
-									<br>
-									- Spinal Stenosis : Narrowing of the spinal canal, which can compress the spinal
-									cord or nerves, leading to leg pain, numbness, or weakness, especially with walking.
-									<br>
-									- Spondylolisthesis : When one vertebra slips forward over another, often causing
-									instability and pain.
-								</span>
-							</p>
-							<p class="desc number">
-								<span class="num">2.</span>
-								<span class="bold">
-									<span class="mob_bold">Mid Back Pain (Thoracolumbar Junction) :</span> <br
-										class="tablet">
-									Pain around the lower ribs to just below the shoulder blades. <br>
-									- Often a transition zone, so can be affected by issues from both the lumbar and
-									thoracic spine. <br>
-									- Commonly associated with muscular imbalances or postural stress.
-								</span>
-							</p>
-							<p class="desc number">
-								<span class="num">3.</span>
-								<span class="bold">
-									<span class="mob_bold">Upper Back Pain (Thoracic Spine) :</span> <br class="tablet">
-									The thoracic spine is relatively stable due to its attachment to the rib cage. <br>
-									- Muscle Strain/Imbalance : Very common due to poor posture, prolonged sitting
-									(especially at computers), or lifting. Often presents as aching, burning, or
-									tightness between the shoulder blades. <br>
-									- Rib Joint Dysfunction : Stiffness or irritation of the joints where the ribs
-									attach to the spine, which can cause sharp, localized pain that worsens with deep
-									breaths or twisting. <br>
-									- Rounded Shoulders (Kyphosis) : Poor posture can lead to excessive rounding of the
-									upper back, straining muscles and ligaments.
-								</span>
+							<p class="desc dot">
+								<span class="bold">Upper Back / Shoulders</span><br>
+								Muscle Strain (e.g., Rhomboids/Trapezius), Shoulder Blade Pain, Tension Headaches
+								(originating from the neck/upper back), Thoracic Outlet Syndrome.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI) <span class="pc">/ Contributing
-									Factors</span></span>
+							<span class="txt">Common Mechanism of Injury</span></span>
 						</p>
-						<p class="desc ver2 lt-0">Back pain often results from a combination of factors, rather than a
-							single acute injury.</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">Spinal pain often results from a combination of forces and habits</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Poor Posture</span><br>
-								Prolonged sitting or standing with a slouched or unnatural posture (e.g., "text neck" or
-								rounded shoulders) places excessive stress on spinal discs, joints, and muscles over
-								time. This is a major contributor to upper, mid, and lower back pain.
+								<span class="bold">Poor Posture and Prolonged Positions</span><br>
+								Slouching while sitting, working at a desk with an incorrect setup, or "text neck" puts
+								chronic, uneven strain on all spinal segments, especially the Mid and Upper Back.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Improper Lifting Techniques</span><br>
-								Lifting heavy objects by bending the back instead of the knees puts immense strain on
-								the lower back, often leading to disc injuries or muscle strains.
+								<span class="bold">Improper Lifting / Twisting</span><br>
+								Sudden, forceful, or repetitive movements, particularly when lifting with a rounded
+								spine, commonly injure the muscles, discs, and joints of the Lower Back.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Sudden Movements/Trauma</span><br>
-								- Twisting: Sudden, uncontrolled twisting motions of the torso. <br>
-								- Falls : Landing awkwardly on the back or buttocks. <br>
-								- Motor Vehicle Accidents : Especially rear-end collisions that cause whiplash or sudden
-								jolts to the torso.
+								<span class="bold">Repetitive Strain and Overuse</span><br>
+								Activities that involve repeated bending, reaching, or rotating (common in manual labour
+								or sports) can strain the surrounding muscles and ligaments in any spinal region.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Repetitive Motions</span><br>
-								Activities involving repeated bending, twisting, or lifting.
+								<span class="bold">Weak Core and Stabilising Muscles</span><br>
+								 Insufficient strength in the deep core, hip, and shoulder blade muscles means the spine
+								lacks stable support, leading to overuse of other structures.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Lack of Physical Activity <br class="tablet">/ Weak Core
-									Muscles</span><br>
-								A sedentary lifestyle and weak core (abdominal and back) muscles reduce spinal support,
-								making it more vulnerable to injury.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Overuse/Overexertion</span><br>
-								Pushing the back too hard during exercise, manual labor, or sports without adequate
-								conditioning.
+								<span class="bold">Trauma</span><br>
+								Falls, accidents, or sudden impacts can cause acute sprains, whiplash (affecting the
+								upper back/neck), or fractures.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Stress</span><br>
-								High levels of stress can lead to increased muscle tension in the back, particularly the
-								upper and mid-back.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Obesity</span><br>
-								Excess body weight puts additional strain on the lumbar spine.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Age-Related Changes</span><br>
-								Discs and joints naturally undergo degenerative changes over time, increasing
-								susceptibility to pain.
+								High stress levels frequently lead to chronic tension and muscle guarding in the Upper
+								Back and shoulders, triggering pain and headaches.
 							</p>
 						</div>
 					</div>
@@ -1659,95 +1577,95 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2">Symptoms vary depending on the location and specific cause of the pain</p>
-						<div class="descitem">
+						<p class="desc ver2">Symptoms of back pain are highly varied based on the location</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Lower Back Pain</span><br>
-								- Dull ache or sharp, piercing pain in the lower back. <br>
-								- Stiffness, especially in the morning or after prolonged sitting/standing. <br>
-								- Pain that radiates down one or both legs (sciatica), possibly accompanied by numbness,
-								tingling, or weakness in the leg or foot. <br>
-								- Pain that worsens with bending, lifting, twisting, coughing, or sneezing. <br>
-								- Difficulty standing straight or walking.
+								<span class="bold">Localised Pain</span><br>
+								A dull ache, sharp stiffness, or burning sensation felt specifically at the site of the
+								pain (e.g., right between the shoulder blades, or deep in the lumbar area).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Mid Back Pain</span><br>
-								- Aching or burning pain between the shoulder blades or in the middle of the back. <br>
-								- Stiffness or tightness. <br>
-								- Pain that may wrap around to the chest or abdomen. <br>
-								- Often aggravated by prolonged sitting, especially at a computer.
+								<span class="bold">Radiating Pain</span><br>
+								Pain, numbness, or tingling that travels down the leg (Sciatica - from the lower back)
+								or down the arm (from the upper back / neck junction).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Upper Back Pain</span><br>
-								- Aching, soreness, or tightness between the shoulder blades. <br>
-								- Pain or stiffness with neck and shoulder movements. <br>
-								- Headaches (cervicogenic) can sometimes be related to upper back stiffness. <br>
-								- Pain that may feel worse after prolonged hunching or computer use.
+								<span class="bold">Stiffness and Reduced Motion</span><br>
+								Difficulty bending, standing up straight, looking over the shoulder, or sitting
+								comfortably for long periods (common across all regions).
+							</p>
+							<p class="desc dot">
+								<span class="bold">Rib or Chest Pain</span><br>
+								Sharp, localised pain when taking a deep breath, coughing, or twisting, often indicating
+								Mid Back (thoracic) joint or rib irritation.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Headaches</span><br>
+								Tension or cervicogenic headaches that start at the base of the skull and refer over the
+								head, stemming from Upper Back / Neck tightness.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Muscle Spasm</span><br>
+								Involuntary, painful tightening and knotting of the large spinal muscles, often severely
+								limiting movement.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">4.</span>
-							<span class="txt">How Physiotherapy Can Help with Back Pain</span>
+							<span class="txt">How Physiotherapy Can Help with Spinal Pain</span>
 						</p>
-						<p class="desc ver2">Physiotherapy is a highly effective, evidence-based approach to managing
-							and resolving back pain across all regions of the spine. Our holistic approach focuses on
-							understanding the specific cause of your pain, alleviating symptoms, and empowering you with
-							strategies to prevent future episodes. <br>Here's how physiotherapy can help</p>
+						<p class="desc ver2 lt-0">Physiotherapy is the most effective and recommended non-surgical
+							treatment for the vast majority of spinal issues. Our goal is to relieve your immediate
+							pain, restore healthy movement patterns, and give you the strength and knowledge to prevent
+							recurrence. <br>Here's how physiotherapy can help across the entire back</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								Your physiotherapist will conduct a thorough examination of your entire spine (neck,
-								upper, mid, and lower back), posture, movement patterns, muscle strength, flexibility,
-								and nerve function to accurately diagnose the source of your pain.
+								<span class="bold">Thorough Assessment</span><br>
+								We conduct a detailed examination of your posture, movement mechanics, core stability,
+								and nerve function to pinpoint the root cause of your pain, not just the symptoms.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, joint mobilizations (gentle
-								movements to restore spinal joint mobility), and soft tissue release to reduce muscle
-								spasm, stiffness, and pain. <br>
-								- Dry Needling / Acupuncture : Can be used to release trigger points in tight or painful
-								back muscles. <br>
-								- Therapeutic Modalities : Applying heat or ice, or using electrotherapy (like TENS) to
-								help manage acute pain and inflammation.
+								- Manual Therapy : Hands-on techniques, including massage, joint mobilisations, and
+								specific spinal manipulation, to release muscle tension, restore mobility to stiff
+								segments (especially the Mid Back), and reduce nerve irritation. <br>
+								- Dry Needling / Acupuncture : Used to release painful trigger points and muscle knots
+								in the tight muscles of the Upper and Lower Back.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Restoring Movement & Strength</span><br>
-								Targeted Exercise Prescription : We'll design a personalized exercise program to <br>
-								- Improve spinal mobility and flexibility. <br>
-								- Strengthen core muscles (deep abdominals and back muscles) to provide better support
-								for your spine. <br>
-								- Strengthen other key muscle groups (e.g., glutes, shoulders) to improve overall body
-								mechanics. <br>
-								- Improve posture and body awareness to reduce strain. <br>
-								- Nerve Gliding Exercises : Specific exercises to help free up irritated or compressed
-								nerves, reducing radiating pain, numbness, and tingling.
+								<span class="bold">Restoring Stability and Movement</span><br>
+								- Targeted Exercise Prescription : A personalised program focusing on strengthening the
+								deep core stabilisers (for the lower spine) and the scapular stabilisers (for the upper
+								spine). This provides a resilient foundation for the entire back. <br>
+								- Mobility Exercises : Specific movements and stretches to improve the flexibility of
+								the thoracic spine and hips, which often compensate for poor posture.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Ergonomic & Postural Advice</span><br>
-								Guidance on optimizing your workstation, sleeping positions, and daily habits to
-								minimize strain on your back. We'll help you develop sustainable habits for long-term
-								spinal health.
+								<span class="bold">Ergonomic and Postural Correction</span><br>
+								Guidance on achieving optimal posture while sitting, standing, and lifting. This
+								includes evaluating your office or work setup to eliminate chronic strain triggers in
+								the neck and mid-back.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Education & Self-Management</span><br>
-								Empowering you with a clear understanding of your condition, common triggers, and
-								effective self-management techniques. This includes teaching you safe lifting
-								techniques, stretches, and exercises you can perform independently to maintain progress
-								and prevent recurrence.
+								<span class="bold">Nerve Pain Management</span><br>
+								Specific positions, stretches, and nerve gliding techniques designed to gently de-stress
+								and manage the symptoms of Sciatica or arm pain originating from the spine.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Activity Modification</span><br>
-								Advising on how to modify daily activities, work tasks, or sports techniques to reduce
-								stress on your back during the healing process and beyond.
+								<span class="bold">Education and Self-Management</span><br>
+								Empowering you with a clear understanding of your body, proper body mechanics for daily
+								tasks (e.g., safe lifting), and a comprehensive home exercise program to maintain your
+								progress and confidently manage your back health long-term.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By identifying the root cause of your back pain and providing a tailored
-					rehabilitation program, physiotherapy empowers you to reduce pain, regain full function, and return
-					to your daily activities, work, and hobbies with confidence and less risk of future episodes.</p>
+				<p class="desctit mt justify">By integrating targeted pain relief strategies (including manual therapy)
+					with restorative exercise prescription and ergonomic education, physiotherapy aims to resolve spinal
+					symptoms, restore optimal function across the entire back, and empower you with the self-management
+					tools necessary for long-term prevention of recurrence.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_8">
@@ -1762,110 +1680,84 @@
 							<span class="num">1.</span>
 							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2 lt-0">Hip & Groin Pain : Understanding and Healing Your Lower Body <br>
-							The hip joint is one of the body's largest weight-bearing joints, a robust ball-and-socket
-							structure that connects your leg to your pelvis. Its design allows for a wide range of
-							motion crucial for walking, running, jumping, and various daily activities. The groin area,
-							located where the abdomen meets the thigh, involves muscles (adductors, hip flexors),
-							ligaments, and tendons that are essential for leg movement and stability. Due to their
-							complex mechanics and central role in movement, both the hip and groin are common sites for
-							pain and injury. Pain in the hip or groin can originate from issues within the hip joint
-							itself (intra-articular) or from the surrounding muscles, tendons, ligaments, and bursae
-							(extra-articular). Pain can also be referred from the lower back.</p>
+						<p class="desc ver2 lt-0">The Hip Joint is one of the body's largest weight-bearing joints—a
+							stable ball-and-socket structure connecting the pelvis and the thigh bone (femur). It's
+							designed for powerful movement and stability during standing, walking, and running. The
+							Groin refers to the area where the abdomen meets the thigh, housing major muscles, tendons,
+							and ligaments that support the hip and leg. Pain here is complex, often arising from the
+							joint itself or surrounding soft tissues. <br>Common types of hip and groin pain and related
+							issues include</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Hip Osteoarthritis (OA)</span><br>
-								Degenerative "wear and tear" of the cartilage in the hip joint, leading to pain,
-								stiffness (especially in the morning or after rest), and reduced range of motion. It
-								typically worsens with activity.
+								<span class="bold">Osteoarthritis (OA)</span><br>
+								The progressive "wear and tear" of the cartilage lining the hip socket, leading to deep,
+								aching pain, stiffness, and reduced rotation, often felt in the groin area.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Tendinopathies</span><br>
-								- Gluteal Tendinopathy (Greater Trochanteric Pain Syndrome) : Pain on the outer side of
-								the hip and upper thigh, caused by overuse or degeneration of the gluteal tendons
-								(gluteus medius and minimus) that attach to the hip bone. Often painful when lying on
-								the affected side, walking, or going up stairs. <br>
-								- Adductor Tendinopathy / Groin Strain : Pain in the inner thigh/groin region, often
-								seen in athletes involved in kicking, sprinting, or rapid changes of direction. It's an
-								injury to the adductor muscles or their tendons. <br>
-								- Hip Flexor Tendinopathy : Pain at the front of the hip (often associated with
-								iliopsoas tendon) due to overuse, common in runners, dancers, or those who sit for long
-								periods.
+								<span class="bold">Gluteal Tendinopathy / Bursitis (Greater Trochanteric Pain
+									Syndrome)</span><br>
+								Pain and tenderness on the outer side of the hip/thigh, often caused by compression and
+								overuse of the gluteal tendons (especially the Gluteus Medius). Bursitis often occurs
+								alongside it.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Hip Impingement <br class="tablet">(Femoroacetabular Impingement -
-									FAI)</span><br>
-								Occurs when there's abnormal contact between the ball (femoral head) and socket
-								(acetabulum) of the hip joint during movement. This can cause pain in the groin or front
-								of the hip, especially with deep bending (squatting) or internal rotation.
+								<span class="bold">Hip Flexor Strain</span><br>
+								A tear or overstretching of the muscles at the front of the hip (like the Iliopsoas),
+								common in athletes requiring explosive leg movements (e.g., kicking, sprinting).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Bursitis</span><br>
-								- Trochanteric Bursitis : Inflammation of the bursa located on the outer hip (over the
-								greater trochanter), causing pain and tenderness, similar to gluteal tendinopathy. <br>
-								- Iliopsoas Bursitis : Inflammation of the bursa at the front of the hip, often
-								associated with hip flexor issues.
+								<span class="bold">Hip Labral Tear</span><br>
+								An injury to the ring of cartilage (labrum) surrounding the hip socket. This can cause
+								sharp, catching, or clicking pain deep in the groin, often aggravated by deep bending or
+								twisting.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Muscle Strains</span><br>
-								- Groin Strains : Acute tears or pulls of the adductor muscles on the inner thigh,
-								common in sports involving sudden acceleration or changes of direction. <br>
-								- Hamstring Strains : Though primarily affecting the back of the thigh, high hamstring
-								strains can cause pain close to the sitting bone and deep in the gluteal fold, sometimes
-								confused with hip pain.
+								<span class="bold">Adductor (Groin) Strain</span><br>
+								Injury to the inner thigh muscles, resulting in pain in the inner groin, typically
+								sustained during sudden sideways movements or lunging.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Referred Pain</span><br>
-								Pain that originates from another area but is felt in the hip or groin, most commonly
-								from the lower back (e.g., sciatica, facet joint dysfunction) or the sacroiliac (SI)
-								joint.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Stress Fractures</span><br>
-								Small cracks in bones, often in the femoral neck or pelvis, from repetitive impact
-								(e.g., in long-distance runners).
+								<span class="bold">Femoroacetabular Impingement (FAI)</span><br>
+								A condition where extra bone growth on the hip socket or femoral head causes abnormal
+								contact, leading to joint damage and pain with hip flexion.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI) <br class="tablet"> / Contributing
-								Factors</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2 lt-2">Hip and groin pain often result from a combination of acute trauma,
-							chronic overuse, or underlying biomechanical issues.</p>
+						<p class="desc ver2 lt-2">Hip and groin pain often results from</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Overuse / Repetitive Strain</span><br>
-								- Running and jumping sports : High-impact activities place significant stress on hip
-								joints and surrounding tendons. <br>
-								- Sports involving kicking, twisting, or rapid changes of direction : Football, soccer,
-								hockey, basketball are common culprits for groin strains and tendinopathies. <br>
-								- Prolonged sitting : Can lead to tight hip flexors and weak gluteal muscles, affecting
-								hip mechanics. <br>
-								- Occupations : Jobs requiring prolonged standing, walking, lifting, or repetitive
-								bending.
+								<span class="bold">Overuse and Repetitive Load</span><br>
+								Running, cycling, or climbing stairs can cause cumulative stress, leading to conditions
+								like tendinopathy (glutes, hip flexors) or OA over time.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Acute Trauma</span><br>
-								- Falls : Falling directly onto the hip can cause fractures, dislocations, or labral
-								tears. <br>
-								- Direct Impact : Blows to the hip area in contact sports. <br>
-								- Sudden forceful movements : A sudden lunge, kick, or twist can strain muscles or
-								sprain ligaments.
+								<span class="bold">Sudden, Explosive Movements</span><br>
+								Sprinting, kicking, or rapid changes of direction place immense strain on the groin and
+								hip flexor muscles, often resulting in acute muscle strains / tears.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Age-Related Changes</span><br>
-								- Osteoarthritis : The natural degeneration of joint cartilage over time.
+								<span class="bold">Trauma / Falls</span><br>
+								Direct falls onto the side of the hip (causing bursitis or fractures) or impacts that
+								force the hip into an awkward position.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Biomechanical Factors</span><br>
-								- Muscle Imbalances : Weakness in the gluteal muscles or core, or tightness in hip
-								flexors or adductors, can alter hip mechanics and increase strain. <br>
-								- Poor Posture : Can affect alignment and load distribution on the hip. <br>
-								- Changes in Training : Sudden increases in training volume, intensity, or a change in
-								footwear/surface.
+								<span class="bold">Biomechanical Imbalances</span><br>
+								Weakness in key stabilising muscles, particularly the Gluteal muscles, which causes the
+								hip joint to move incorrectly, leading to strain on the joint and surrounding tendons.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Prolonged Sitting</span><br>
+								Spending long periods in a seated position can shorten the hip flexor muscles, altering
+								pelvic posture and increasing the risk of strain when standing or exercising.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Age-Related Degeneration</span><br>
+								The natural process of wear and tear that is the primary contributor to Osteoarthritis.
 							</p>
 						</div>
 					</div>
@@ -1874,49 +1766,42 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 lt-2">Symptoms of hip and groin pain vary widely depending on the specific
-							condition and structures involved, but may include</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Symptoms of hip and groin pain can be confusing, as pain from the hip
+							joint often refers to the groin. <br>They may include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Pain Location</span><br>
-								- Front of the hip/groin : Common with hip flexor issues, hip impingement, or hip joint
-								problems (like OA). <br>
-								- Outer hip / thigh : Characteristic of gluteal tendinopathy or trochanteric bursitis.
-								<br>
-								- Buttock/Deep Gluteal : Can be hamstring issues, deep gluteal pain syndrome, or
-								referred from the lower back/SI joint. <br>
-								- Inner thigh/groin : Typical of adductor strains or tendinopathy.
+								<span class="bold">Localised Deep Pain</span><br>
+								A deep ache felt inside the groin or buttock, often a sign that the pain is coming from
+								the hip joint itself (e.g., OA or FAI).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Characteristics</span><br>
-								Can be aching, sharp, throbbing, burning, or dull. May be worse with activity, after
-								prolonged sitting, or at night.
+								<span class="bold">Pain on the Side of the Hip</span><br>
+								Tenderness and pain felt directly on the bony prominence on the side of the hip (the
+								greater trochanter), often worse when lying on that side or walking (Gluteal
+								Tendinopathy / Bursitis).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Stiffness</span><br>
-								Especially in the morning or after rest, common with osteoarthritis or tendinopathies.
+								<span class="bold">Inner Thigh Pain</span><br>
+								Pain along the inside of the leg, especially when bringing the legs together or
+								stretching them apart (Adductor / Groin Strain).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Reduced Range of Motion</span><br>
-								Difficulty moving the leg in certain directions (e.g., bringing knee to chest, rotating
-								leg inwards/outwards, crossing legs).
+								<span class="bold">Stiffness and Restricted Motion</span><br>
+								Difficulty tying shoelaces, putting on socks, or crossing the legs due to limited hip
+								rotation or bending.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Weakness</span><br>
-								Difficulty with activities like walking, climbing stairs, standing on one leg, or
-								pushing off.
+								<span class="bold">Clicking, Catching, or Locking</span><br>
+								Sensations felt deep in the hip joint, often associated with a Labral Tear or FAI.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Clicking, Popping, or Catching</span><br>
-								Sensations within the hip joint, sometimes indicating cartilage or labral issues.
+								<span class="bold">Pain with Weight-Bearing</span><br>
+								Increased pain when walking, standing, or shifting weight onto the affected leg.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Limping (Antalgic Gait)</span><br>
-								A change in walking pattern to avoid pain.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Radiating Pain</span><br>
-								Pain that travels down the leg, which could indicate nerve involvement (e.g., sciatica).
+								<span class="bold">Referred Pain</span><br>
+								Pain that travels down the front of the thigh to the knee, often mistaken for a primary
+								knee problem.
 							</p>
 						</div>
 					</div>
@@ -1925,122 +1810,57 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Hip & Groin Pain</span>
 						</p>
-						<p class="desc ver2 lt-5">Physiotherapy is an incredibly effective, evidence-based approach to
-							assessing, treating, and managing most hip and groin conditions. Our goal is to identify the
-							root cause of your pain, alleviate symptoms, restore function, and prevent recurrence,
-							helping you return to your daily activities, work, and sports with confidence. <br>Here's
-							how physiotherapy can help</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">Physiotherapy is essential for accurate diagnosis and effective
+							rehabilitation of hip and groin conditions, focusing on pain relief, restoring range of
+							motion, and building powerful stability from the core down to the knee. <br>Here's how
+							physiotherapy can help</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								<span class="pc">
-									Your physiotherapist will conduct a thorough examination of your hip, groin, lower
-									back, pelvis, knee, and ankle, as issues in these areas can all contribute to
-									hip/groin pain. We'll assess your posture, walking pattern, muscle strength,
-									flexibility, joint mobility, and nerve function.
-								</span>
-								<span class="tablet">
-									Your physiotherapist will conduct a thorough examination of your entire spine (neck,
-									upper, mid, and lower back), posture, movement patterns, muscle strength,
-									flexibility, and nerve function to accurately diagnose the source of your pain.
-								</span>
+								<span class="bold">Thorough Assessment and Diagnosis</span><br>
+								We conduct a detailed examination, including specialised movement tests, analysis of
+								your walking/running pattern (gait analysis), and assessment of hip and core strength to
+								accurately distinguish between joint, tendon, and muscular sources of pain.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Relief Strategies</span><br>
-								<span class="pc">
-									- Manual Therapy : Hands-on techniques such as massage, soft tissue release, joint
-									mobilizations (to improve hip or spinal joint movement), and gentle stretching to
-									reduce pain, muscle spasm, and stiffness. <br>
-									- Dry Needling / Acupuncture : Can be used to target specific trigger points in
-									tight or overactive muscles contributing to hip or groin pain (e.g., glutes,
-									adductors, hip flexors). <br>
-									- Therapeutic Modalities : Applying ice or heat to manage acute pain and
-									inflammation.
-								</span>
-								<span class="tablet">
-									- Manual Therapy : Hands-on techniques such as massage, joint mobilizations (gentle
-									movements to restore spinal joint mobility), and soft tissue release to reduce
-									muscle spasm, stiffness, and pain. <br>
-									- Dry Needling / Acupuncture : Can be used to release trigger points in tight or
-									painful back muscles. <br>
-									- Therapeutic Modalities : Applying heat or ice, or using electrotherapy (like TENS)
-									to help manage acute pain and inflammation.
-								</span>
+								<span class="bold">Pain Relief and Inflammation Management</span><br>
+								- Manual Therapy : Hands-on techniques, including deep tissue release to tight muscles
+								(e.g., hip flexors, deep rotators) and gentle joint mobilisations to improve hip joint
+								health and reduce stiffness. <br>
+								- Activity Modification : Identifying and adjusting activities (e.g., running technique,
+								sitting positions) that aggravate the hip or groin to allow irritated structures to
+								heal. <br>
+								- Modalities : Using ice or heat to manage acute pain and tendon inflammation.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Restoring Movement & Strength</span><br>
-								<span class="pc">
-									Targeted Exercise Prescription : We'll design a personalized exercise program to
-									<br>
-									- Improve hip joint mobility and flexibility. <br>
-									- Strengthen key stabilizing muscles around the hip and pelvis (especially gluteal
-									muscles and deep hip rotators). <br>
-									- Improve core stability and strength, which is vital for pelvic and hip control.
-									<br>
-									- Address muscle imbalances in the hip and thigh (e.g., strengthening weak adductors
-									or hip flexors, or stretching tight ones). <br>
-									- Incorporate eccentric loading exercises for tendinopathies to promote tendon
-									healing and strength. <br>
-									- Functional Rehabilitation : Progressing exercises to mimic your daily activities,
-									work tasks, and sports-specific movements (e.g., running drills, jumping, changing
-									direction).
-								</span>
-								<pc class="tablet">
-									Targeted Exercise Prescription : We'll design a personalized exercise program to
-									<br>
-									- Improve spinal mobility and flexibility. <br>
-									- Strengthen core muscles (deep abdominals and back muscles) to provide better
-									support for your spine. <br>
-									- Strengthen other key muscle groups (e.g., glutes, shoulders) to improve overall
-									body mechanics. <br>
-									- Improve posture and body awareness to reduce strain. <br>
-									- Nerve Gliding Exercises : Specific exercises to help free up irritated or
-									compressed nerves, reducing radiating pain, numbness, and tingling.
-								</pc>
-							</p>
-							<p class="desc dot pc">
-								<span class="bold">Gait Analysis & Biomechanical Correction</span><br>
-								Assessment of your walking or running pattern to identify and correct any underlying
-								biomechanical inefficiencies that may be contributing to your pain.
-							</p>
-							<p class="desc dot tablet">
-								<span class="bold">Ergonomic & Postural Advice</span><br>
-								Guidance on optimizing your workstation, sleeping positions, and daily habits to
-								minimize strain on your back. We'll help you develop sustainable habits for long-term
-								spinal health.
+								<span class="bold">Restoring Stability and Strength</span><br>
+								- Targeted Exercise Prescription : The core of recovery, focusing intensely on
+								strengthening the crucial Gluteal muscles (Medius and Maximus), which are vital for
+								controlling hip and pelvic stability during movement. <br>
+								- Core and Pelvic Stability Training : Exercises to integrate the core and hip muscles,
+								ensuring the pelvis remains stable during high-load activities.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Education & Self-Management</span><br>
-								<span class="pc">
-									Empowering you with a clear understanding of your condition, common triggers, and
-									effective self-management strategies. Learning how to manage your symptoms, perform
-									your exercises consistently, and prevent future issues is crucial for long-term
-									health.
-								</span>
-								<span class="tablet">
-									Empowering you with a clear understanding of your condition, common triggers, and
-									effective self-management techniques. This includes teaching you safe lifting
-									techniques, stretches, and exercises you can perform independently to maintain
-									progress and prevent recurrence.
-								</span>
+								<span class="bold">Improving Flexibility and Biomechanics</span><br>
+								Specific stretching exercises to address common tightness in the hip flexors and
+								adductors, along with guidance on improving squatting and lifting mechanics to reduce
+								stress on the joint.
 							</p>
-							<p class="desc dot pc">
-								<span class="bold">Post-Surgical Rehabilitation</span><br>
-								If surgery is necessary (e.g., hip arthroscopy for impingement, hip replacement), your
-								physiotherapist will guide you through a structured rehabilitation program to optimize
-								healing, regain strength, movement, and safely return to your desired activities.
+							<p class="desc dot">
+								<span class="bold">Osteoarthritis and FAI Management</span><br>
+								Providing education and a carefully graded exercise program proven to reduce pain and
+								delay the progression of joint issues by maintaining strength and mobility.
 							</p>
-							<p class="desc dot tablet">
-								<span class="bold">Activity Modification</span><br>
-								Advising on how to modify daily activities, work tasks, or sports techniques to reduce
-								stress on your back during the healing process and beyond.
+							<p class="desc dot">
+								<span class="bold">Return to Sport Rehabilitation</span><br>
+								Developing a structured, progressive program with advanced agility and power drills to
+								safely restore function after strains or tears, minimising the risk of recurrence.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By identifying the specific cause of your hip or groin pain and providing
-					a tailored rehabilitation program, physiotherapy empowers you to reduce pain, regain full function,
-					and return to your work, sports, and daily life without limitations.</p>
+				<p class="desctit mt justify">By addressing biomechanical faults and building robust strength around
+					this powerful joint, physiotherapy aims to resolve your pain, restore your full range of movement,
+					and help you return to your fitness goals and daily life without limitation.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_9">
@@ -2055,105 +1875,76 @@
 							<span class="num">1.</span>
 							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2 lt-0">Thigh Pain: Understanding and Healing Your Upper Leg <br>The thigh is
-							the region of the leg between the hip and the knee. It contains the large, strong femur
-							(thigh bone) and some of the body's most powerful muscle groups: the quadriceps (at the
-							front), hamstrings (at the back), and adductors (on the inner thigh). These muscles are
-							crucial for walking, running, jumping, balancing, and supporting your body weight. Due to
-							the high demands placed on them during daily activities and sports, the thigh muscles and
-							surrounding structures are prone to injury and pain. Pain in the thigh can arise from
-							various structures, including muscles, tendons, bones, or nerves, or it can be referred from
-							the hip or lower back.</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">The Thigh is the largest and strongest segment of the lower limb,
+							centred around the femur (thigh bone). It is home to the body's largest muscle groups: the
+							Quadriceps (front), the Hamstrings (back), and the Adductors (inner thigh/groin). These
+							powerful muscles are vital for walking, running, jumping, and stability. Thigh pain
+							typically stems from muscle, tendon, or bone injury, or is often referred from the hip or
+							lower back. <br>Common types of thigh pain and related issues include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Muscle Strains (Pulls)</span><br>
-								These are very common, involving overstretching or tearing of muscle fibers. <br>
-								- Hamstring Strain : The most common thigh injury, usually occurring at the back of the
-								thigh during sprinting, sudden acceleration, or overstretching. Symptoms range from mild
-								discomfort to severe sharp pain, often with bruising. <br>
-								- Quadriceps Strain : Affects the front of the thigh, often from kicking, jumping, or
-								sprinting. <br>
-								- Adductor (Groin) Strain : Involves the inner thigh muscles, common in sports requiring
-								rapid changes of direction or forceful kicking.
+								<span class="bold">Muscle Strains</span><br>
+								Tears in the muscle fibres, categorised by location and severity. <br>
+								- Hamstring Strain : The most common athletic thigh injury, causing sharp pain and
+								tenderness at the back of the thigh, often occurring during sprinting or explosive
+								movements. <br>
+								- Quadriceps Strain : Affecting the front of the thigh, often the Rectus Femoris muscle,
+								common in kicking sports or sudden acceleration. <br>
+								- Adductor (Groin) Strain : Affecting the inner thigh muscles, causing pain during
+								side-to-side movements or when bringing the legs together.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Contusions (Corked Thigh)</span><br>
-								A bruise caused by a direct blow or impact to the thigh, commonly to the quadriceps.
-								This leads to localized pain, swelling, tenderness, and often a visible bruise.
+								<span class="bold">Contusion (Corked Thigh / Dead Leg)</span><br>
+								A severe bruise resulting from a direct, blunt impact to the muscle, causing bleeding,
+								deep pain, and swelling (haematoma) in the muscle belly, most common in the Quadriceps.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Tendinopathies</span><br>
-								Overuse or degeneration of the tendons connecting muscles to bone. <br>
-								- Proximal Hamstring Tendinopathy : Pain deep in the buttock region where the hamstrings
-								attach to the sitting bone (ischial tuberosity), often aggravated by prolonged sitting
-								or running. <br>
-								- Quadriceps Tendinopathy : Pain just above the kneecap where the quadriceps tendon
-								inserts, common in jumping sports.
+								<span class="bold">Iliotibial Band (ITB) Syndrome</span><br>
+								Although primarily causing outer knee pain, the ITB itself is a thick fibrous band
+								running along the outer thigh. Irritation can cause pain and snapping sensation along
+								the side of the thigh and hip.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Referred Pain</span><br>
-								Pain felt in the thigh that actually originates from a problem elsewhere, most commonly
-								the lower back (e.g., sciatica radiating down the back of the thigh) or the hip joint.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Nerve Entrapment</span><br>
-								- Meralgia Paresthetica : Compression of the lateral femoral cutaneous nerve as it
-								passes through the groin area, causing burning pain, numbness, or tingling on the outer
-								aspect of the thigh. Often linked to tight clothing, weight gain, or certain postures.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Stress Fractures</span><br>
-								Small cracks in the femur (thigh bone), usually due to repetitive high-impact loading,
-								such as in long-distance runners.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Compartment Syndrome</span><br>
-								Increased pressure within the muscle compartments of the thigh. Can be acute (medical
-								emergency) or chronic (exertional), causing pain, tightness, and sometimes numbness
-								during exercise.
+								Pain felt in the thigh, but originating from the lower back (e.g., Sciatica or Femoral
+								Nerve irritation) or the hip joint (e.g., Osteoarthritis).
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI) <br class="tablet"> / Contributing
-								Factors</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2 lt-0">Thigh pain often results from a combination of acute trauma, chronic
-							overuse, or underlying biomechanical issues.</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-0">Thigh pain often results from</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Sudden Overload/Explosive Movements</span><br>
-								- Sprinting, jumping, kicking : Common causes of hamstring or quadriceps strains due to
-								rapid muscle contraction or stretch. <br>
-								- Rapid changes of direction : Frequently lead to adductor (groin) strains.
+								<span class="bold">Sudden, High-Speed Contraction</span><br>
+								- Sprinting : Accelerating or reaching maximum speed is a classic mechanism for
+								Hamstring Strains. <br>
+								- Kicking / Jumping : Explosive hip flexion and knee extension can cause Quadriceps
+								Strains.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Direct Impact</span><br>
-								A direct blow to the thigh (e.g., from sports collision, fall) can cause a muscle
-								contusion (corked thigh).
+								<span class="bold">Direct Trauma</span><br>
+								A forceful collision or blow (e.g., knee-to-thigh impact in contact sports) leads to a
+								Contusion (Corked Thigh).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Repetitive Strain / Overuse</span><br>
-								- Running, cycling, repetitive squatting/lunging : Can lead to tendinopathies in the
-								hamstrings or quadriceps. <br>
-								- Sudden increase in training volume or intensity : Overloads muscles and tendons that
-								are not adequately conditioned.
+								<span class="bold">Overstretching / Sudden Change of Directio</span><br>
+								Lunging, slipping, or rapid directional changes place extreme tension on the Hamstrings
+								and Adductors.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Poor Biomechanics & Muscle Imbalances</span><br>
-								- Weakness : Especially in the gluteal muscles or core, can lead to increased reliance
-								on thigh muscles and improper movement patterns. <br>
-								- Tightness : Tight hamstrings or quadriceps can increase injury risk during sudden
-								movements. <br>
-								- Poor Running / Movement Form : Can place excessive stress on specific thigh muscles or
-								tendons.
+								<span class="bold">Overuse and Biomechanics</span><br>
+								Repetitive use without adequate rest, or underlying issues like muscle imbalance (e.g.,
+								Hamstrings weaker than Quads), poor running technique, or weak gluteal muscles, can
+								contribute to strains and ITB issues.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Prolonged Postures</span><br>
-								Certain seated positions or tight clothing can compress nerves (e.g., Meralgia
-								Paresthetica).
+								<span class="bold">Inadequate Warm-up or Fatigue</span><br>
+								Muscles that are cold or fatigued are less able to absorb load, making them
+								significantly more vulnerable to strain and tearing.
 							</p>
 						</div>
 					</div>
@@ -2162,47 +1953,42 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 lt-2">Symptoms of thigh pain vary depending on the specific condition and
-							the structures involved</p>
+						<p class="desc ver2 lt-2">Symptoms of thigh pain can vary greatly, from a deep bruise to a
+							debilitating sharp tear</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Pain Location</span><br>
-								- Back of thigh : Common with hamstring strains or proximal hamstring tendinopathy. <br>
-								- Front of thigh : Indicative of quadriceps strains or tendinopathy. <br>
-								- Inner thigh / groin : Suggests adductor (groin) strain. <br>
-								- Outer thigh (burning/numbness) : Points towards Meralgia Paresthetica. <br>
-								- Pain that radiates from hip / buttock or lower back : Suggests referred pain.
+								<span class="bold">Sharp, Sudden Pain</span><br>
+								An immediate, severe sensation often described as a "pop" or "snap" during a dynamic
+								activity, which is a key sign of a muscle tear (strain).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Characteristics</span><br>
-								Can be sharp (acute strain), aching (tendinopathy, contusion), burning (nerve), or deep
-								and dull (stress fracture). Pain often worsens with specific movements, activity, or
-								direct touch.
+								<span class="bold">Pain with Muscle Contraction</span><br>
+								Pain when trying to flex the knee (Hamstrings) or extend the knee (Quadriceps), or when
+								trying to squeeze the legs together (Adductors).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Swelling & Bruising</span><br>
-								Common with muscle strains and contusions.
+								<span class="bold">Bruising and Swelling</span><br>
+								Visible discolouration (bruising) and palpable lump or swelling at the site of injury,
+								especially with severe strains or contusions.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Tenderness</span><br>
-								Pain upon touching the injured area.
+								<span class="bold">Difficulty Weight-Bearing</span><br>
+								Inability or severe pain when walking, running, or standing on the affected leg.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Weakness</span><br>
-								Difficulty with activities like walking, climbing stairs, pushing off, or sprinting.
+								<span class="bold">Stiffness and Tightness</span><br>
+								A feeling of tightness or restricted movement, particularly when trying to stretch the
+								injured muscle.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Stiffness</span><br>
-								Reduced flexibility in the thigh muscles, making movements like bending the knee or
-								straightening the leg difficult.
+								<span class="bold">Numbness, Tingling, or Burning</span><br>
+								Sensations that can indicate nerve irritation, often signifying that the pain is
+								referred from the lower back (Sciatica or Femoral Nerve involvement).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Numbness or Tingling</span><br>
-								Sensations on the skin, often associated with nerve irritation or compression.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Limited Range of Motion</span><br>
-								Inability to fully bend or straighten the knee or hip without pain.
+								<span class="bold">Pain with Sitting</span><br>
+								Discomfort or pain in the back of the thigh / buttock, which can sometimes indicate a
+								high (proximal) Hamstring Tendinopathy.
 							</p>
 						</div>
 					</div>
@@ -2211,70 +1997,54 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Thigh Pain</span>
 						</p>
-						<p class="desc ver2 lt-5">Physiotherapy is highly effective in diagnosing and treating most
-							thigh pain conditions, providing pain relief, restoring function, and preventing recurrence.
-							Our comprehensive approach focuses on accurately identifying the cause of your pain and
-							developing a tailored rehabilitation plan. <br>Here's how physiotherapy can help</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Physiotherapy is critical for the accurate diagnosis, optimal healing,
+							and functional rehabilitation of thigh injuries, helping to minimise the risk of re-injury.
+							Our phased approach respects the tissue healing time while ensuring the muscle regains full
+							strength and power. <br>Here's how physiotherapy can help</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								Your physiotherapist will conduct a thorough examination of your entire lower limb (hip,
-								knee, ankle, foot), pelvis, and lower back to understand how these areas contribute to
-								your thigh pain. We'll assess your strength, flexibility, movement patterns, gait, and
-								nerve function.
+								<span class="bold">Accurate Diagnosis and Early Management (R.I.C.E.)</span><br>
+								We precisely assess the location and severity (Grade 1, 2, or 3) of the muscle strain or
+								contusion. Initial treatment focuses on rest, controlled ice, compression, and elevation
+								to manage swelling and restrict bleeding, which is vital for a good outcome.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, soft tissue release (especially
-								for muscle strains / contusions), and joint mobilizations (for associated hip or knee
-								stiffness) to reduce pain and muscle spasm. <br>
-								- Dry Needling / Acupuncture : Can target specific trigger points in tight or injured
-								thigh muscles to alleviate pain and promote healing. <br>
-								- Therapeutic Modalities : Applying ice or heat to manage acute pain and inflammation.
+								<span class="bold">Pain Relief and Tissue Healing</span><br>
+								- Soft Tissue Release : Gentle manual therapy to reduce muscle guarding and tension in
+								adjacent areas. <br>
+								- Modalities : Use of therapeutic ultrasound or electrotherapy (if appropriate) to
+								promote muscle tissue repair. <br>
+								- Activity Guidance : Clear advice on when and how to start moving the injured leg
+								without compromising the healing tissue.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Restoring Movement & Strength</span><br>
-								Targeted Exercise Prescription : We'll design a personalized, progressive exercise
-								program to <br>
-								- Improve flexibility and range of motion of the thigh muscles and surrounding joints.
-								<br>
-								- Strengthen the injured muscles (quadriceps, hamstrings, adductors) through controlled
-								loading. This often includes eccentric strengthening (e.g., Nordic hamstring curls)
-								which is crucial for tendinopathies and preventing hamstring re-injury. <br>
-								- Strengthen complementary muscle groups, particularly the gluteal muscles and core
-								stabilizers, to improve hip and pelvic control and reduce strain on the thigh. <br>
-								- Neuromuscular Control : Exercises to improve balance, coordination, and the brain's
-								ability to control muscle movements.
+								<span class="bold">Phased Strength and Flexibility Restoration</span><br>
+								- Restoring Range of Motion (Phase 1) : Gentle, pain-free mobility exercises to prevent
+								excessive scar tissue formation and stiffness. <br>
+								- Progressive Strengthening (Phase 2 & 3) : A carefully graded exercise program,
+								starting with light isometric (static) exercises and progressing to powerful, eccentric
+								(lengthening) loading and high-speed functional movements, which is essential to
+								bulletproof the muscle against future strains.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Biomechanical Analysis & Correction</span><br>
-								Assessment of your walking, running, jumping, or sport-specific movements to identify
-								and correct any underlying biomechanical inefficiencies or faulty techniques that may be
-								contributing to your pain.
+								<span class="bold">Biomechanical and Running Analysis</span><br>
+								We evaluate your walking, running, or sport-specific technique to identify predisposing
+								factors like pelvic instability, poor foot mechanics, or muscle imbalances between the
+								quadriceps and hamstrings.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Activity Modification & Ergonomic Advice</span><br>
-								Guidance on modifying aggravating activities, adjusting training loads, and optimizing
-								ergonomic setups to reduce stress on your thigh during recovery and prevent future
-								issues.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Education & Self-Management</span><br>
-								Empowering you with a clear understanding of your condition, common triggers, and
-								effective self-management strategies. This includes teaching proper warm-up/cool-down
-								routines, stretching techniques, and appropriate loading principles for your muscles.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Progressive Return to Sport / Activity</span><br>
-								A carefully structured, gradual program to safely return you to your desired level of
-								activity, sport, or work, minimizing the risk of re-injury.
+								<span class="bold">Prevention and Return to Sport</span><br>
+								Developing a customised maintenance program that includes specific strength and
+								flexibility exercises (like the Nordic Hamstring Curl) to minimise recurrence. We guide
+								you through a structured, safe return-to-sport progression, ensuring your thigh has the
+								power and endurance needed for your specific activity.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By addressing the specific cause of your thigh pain and providing a
-					tailored rehabilitation program, physiotherapy empowers you to reduce pain, regain full strength and
-					function, and return to your activities with confidence.</p>
+				<p class="desctit mt justify">By employing specific strengthening and loading protocols, physiotherapy
+					aims to ensure the injured thigh muscle heals strong, flexible, and fully capable of handling the
+					demands of daily life and sport.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_10">
@@ -2289,112 +2059,78 @@
 							<span class="num">1.</span>
 							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2 lt-0">Knee Pain: Understanding and Healing Your Knee Joint <br>The knee is
-							the largest and one of the most complex joints in the body, acting as a crucial hinge
-							between the thigh bone (femur) and the shin bone (tibia). It also includes the kneecap
-							(patella). Supported by strong ligaments, cushioning cartilages (menisci), and powerful
-							muscles (quadriceps and hamstrings), the knee is designed for stability and mobility,
-							enabling movements like walking, running, jumping, and squatting. Given the significant
-							forces it endures, the knee is highly susceptible to various injuries and pain conditions.
-							Knee pain can arise from direct injury, overuse, mechanical problems, or conditions like
-							arthritis.</p>
+						<p class="desc ver2 lt-0">The Knee is the largest and one of the most complex joints in the
+							body, connecting the thigh bone (femur) to the shin bone (tibia). It also includes the
+							kneecap (patella), which sits in front. The knee is stabilised by four main ligaments
+							(cruciates and collaterals) and cushioned by two pieces of cartilage (menisci). It's
+							designed to bear weight and allow for smooth movement during walking, running, jumping, and
+							squatting. Knee pain arises when any of these structures are irritated, inflamed, or
+							damaged. <br>Common types of knee pain and related issues include</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Ligament Injuries</span><br>
-								Damage to the strong bands of tissue connecting bones. <br>
-								- ACL (Anterior Cruciate Ligament) Injury : A common rupture or sprain of the ligament
-								that runs diagonally in the middle of the knee, vital for stability. Often occurs during
-								sudden stops, changes in direction, or landing awkwardly. <br>
-								- PCL (Posterior Cruciate Ligament) Injury : Less common than ACL, usually from a direct
-								blow to the front of the knee. <br>
-								- MCL (Medial Collateral Ligament) Injury : Damage to the ligament on the inside of the
-								knee, often from a blow to the outside of the knee. <br>
-								- LCL (Lateral Collateral Ligament) Injury : Damage to the ligament on the outside of
-								the knee, less common, usually from a blow to the inside of the knee.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Meniscus Tears</span><br>
-								The menisci are C-shaped pieces of cartilage that act as shock absorbers between the
-								thigh and shin bones. Tears can occur from twisting the knee or from degenerative
-								changes over time.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Patellofemoral Pain Syndrome <br class="tablet"> (Runner's Knee /
-									Anterior Knee Pain)</span><br>
-								Pain around or behind the kneecap, often worse with activities like running, jumping,
-								squatting, or going up/down stairs. It's often due to imbalances in the muscles
-								surrounding the knee or poor kneecap tracking.
-							</p>
-							<p class="desc dot">
 								<span class="bold">Osteoarthritis (OA)</span><br>
-								Degenerative "wear and tear" of the cartilage in the knee joint, leading to pain,
-								stiffness (especially in the morning or after rest), swelling, and reduced range of
-								motion. It typically worsens with activity and cold weather.
+								A "wear and tear" condition where the cartilage cushioning the joint gradually breaks
+								down, leading to pain, stiffness, and swelling. It is the most common form of knee
+								arthritis.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Tendinopathies</span><br>
-								Overuse or degeneration of tendons around the knee. <br>
-								- Patellar Tendinopathy (Jumper's Knee) : Pain below the kneecap, common in sports
-								involving repetitive jumping and landing. <br>
-								- Quadriceps Tendinopathy : Pain above the kneecap, affecting the quadriceps tendon.
-								<br>
-								- IT Band Syndrome (Iliotibial Band Friction Syndrome) : Pain on the outside of the
-								knee, often in runners or cyclists, caused by friction of the IT band over the outer
-								bony prominence of the knee.
+								<span class="bold">Patellofemoral Pain Syndrome (PFPS)</span><br>
+								Often called "runner's knee," this is pain around or under the kneecap. It's usually
+								caused by repetitive stress or incorrect tracking of the kneecap, often due to muscle
+								imbalances in the hip or thigh.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Bursitis</span><br>
-								Inflammation of a bursa (fluid-filled sac) around the knee, causing localized pain and
-								swelling. Common types include prepatellar bursitis (front of kneecap) or pes anserine
-								bursitis (inner knee below joint line).
+								<span class="bold">Meniscal Tears</span><br>
+								Injury to the C-shaped cartilage in the knee, often caused by a sudden twisting motion
+								while the foot is planted. Symptoms include sharp pain, swelling, and sometimes a
+								locking or catching sensation.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Referred Pain</span><br>
-								Pain felt in the knee that actually originates from another area, most commonly the
-								lower back or hip joint.
+								<span class="bold">Ligament Sprains / Tears</span><br>
+								Injuries to the crucial stabilising ligaments, such as the ACL (Anterior Cruciate
+								Ligament) or MCL (Medial Collateral Ligament), typically resulting from direct impact or
+								sudden changes in direction during sport.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Tendonitis / Tendinopathy</span><br>
+								Inflammation or irritation of the tendons around the knee, such as the Patellar Tendon
+								(Jumper's Knee) or Quadriceps Tendon, usually due to overuse or a sudden increase in
+								activity.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI) <br class="tablet"> / Contributing
-								Factors</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2 lt-2">Knee pain often results from</p>
+						<p class="desc ver2 lt-2">Knee pain and injury often result from</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Acute Trauma / Direct Impact</span><br>
-								- Twisting injuries : Often occur when the foot is planted and the body twists, leading
-								to meniscus or ligament (ACL, MCL) tears. Common in sports like football, basketball,
-								skiing. <br>
-								- Direct blow to the knee : Can cause fractures, dislocations, or ligament injuries
-								(e.g., PCL injury from dashboard impact in car accident). <br>
-								- Falls : Landing awkwardly can result in fractures or sprains
+								<span class="bold">Overuse and Repetitive Stress</span><br>
+								Activities involving repeated bending or loading of the knee, such as running, cycling,
+								or stair climbing, which can lead to tendonitis or PFPS.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Repetitive Overload / Overuse</span><br>
-								- Running, jumping, squatting, cycling : Repetitive stress can lead to patellofemoral
-								pain, IT band syndrome, or various tendinopathies. <br>
-								- Occupations : Jobs requiring prolonged standing, kneeling, squatting, or heavy
-								lifting. <br>
-								- Sudden increase in activity : Rapidly increasing training volume or intensity without
-								adequate conditioning.
+								<span class="bold">Sudden Trauma / Twisting</span><br>
+								- Sports Injuries : Direct blows to the knee, landing awkwardly from a jump, or sudden
+								stopping and pivoting movements (common in soccer, basketball, skiing) are frequent
+								causes of ligament and meniscal tears. <br>
+								- Falls : Landing directly on the knee or twisting the leg during a fall.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Biomechanical Factors</span><br>
-								- Muscle Imbalances : Weakness in the gluteal muscles (hip stabilizers), quadriceps, or
-								hamstrings can alter knee mechanics and increase stress. <br>
-								- Poor Foot Mechanics : Overpronation (flat feet) or high arches can affect alignment up
-								to the knee. <br>
-								- Inappropriate Footwear : Worn-out shoes or shoes not suited for the activity. <br>
-								- Obesity : Excess body weight significantly increases load on the knee joints.
+								<span class="bold">Biomechanical Issues</span><br>
+								Problems with alignment or movement patterns that put excessive or abnormal strain on
+								the knee joint. This often relates to weak hip or core muscles, or flat feet.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Age-Related Changes</span><br>
-								- Osteoarthritis : The natural degeneration of cartilage over time. <br>
-								- Degenerative Meniscus Tears : Can occur with minimal trauma as cartilage weakens with
-								age.
+								<span class="bold">Age-Related Degeneration</span><br>
+								The natural wear and tear process that contributes to conditions like Osteoarthritis.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Sustained Positions</span><br>
+								Prolonged kneeling or squatting, which can put excessive pressure on the joint
+								structures.
 							</p>
 						</div>
 					</div>
@@ -2403,47 +2139,41 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 lt-2">Symptoms of knee pain vary widely depending on the underlying cause
-							but commonly include</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Symptoms of knee pain can vary widely depending on the underlying
+							structure involved.
+							<br>They may include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Pain Location</span><br>
-								Can be generalized, or localized to the front (around kneecap), inside, outside, or back
-								of the knee.
+								<span class="bold">Localised Pain</span><br>
+								A dull ache, sharp stabbing pain, or burning sensation in, around, or behind the
+								kneecap.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Characteristics</span><br>
-								Aching, sharp, burning, throbbing, or dull. May worsen with specific activities (e.g.,
-								stairs, squatting, running), after prolonged rest, or at night.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Swelling</span><br>
-								Visible swelling around the knee joint (effusion) or localized swelling (bursitis).
+								<span class="bold">Swelling and Inflammation</span><br>
+								Fluid build-up around the joint, making it appear puffy or warm to the touch
 							</p>
 							<p class="desc dot">
 								<span class="bold">Stiffness</span><br>
-								Difficulty bending or straightening the knee, especially after rest.
+								Difficulty fully bending or straightening the knee, often worse after periods of rest or
+								in the morning (common with OA).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Clicking, Popping, Catching, or Giving Way</span><br>
-								Sensations within the joint, often indicating meniscus tears or instability.
+								<span class="bold">Instability ("Giving Way")</span><br>
+								A feeling that the knee is unreliable or might buckle, often associated with ligament
+								injuries.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Weakness</span><br>
-								Difficulty supporting weight, walking, or performing activities that require knee
-								strength.
+								<span class="bold">Clicking, Popping, or Grinding</span><br>
+								Sounds or sensations during movement (crepitus), particularly if cartilage or the
+								meniscus is involved.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Limited Range of Motion</span><br>
-								Inability to fully extend or bend the knee.
+								<span class="bold">Locking or Catching</span><br>
+								A feeling that the knee is momentarily stuck, which can be a sign of a meniscal tear.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Instability</span><br>
-								Feeling like the knee is "giving out" or "buckling".
-							</p>
-							<p class="desc dot">
-								<span class="bold">Redness or Warmth</span><br>
-								Suggests inflammation.
+								<span class="bold">Difficulty with Activities</span><br>
+								Pain or inability to climb stairs, squat, run, or tolerate standing for long periods.
 							</p>
 						</div>
 					</div>
@@ -2452,79 +2182,53 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Knee Pain</span>
 						</p>
-						<p class="desc ver2 lt-2">Physiotherapy is an incredibly effective, evidence-based approach to
-							diagnosing, treating, and managing most knee conditions, providing pain relief, restoring
-							function, and preventing recurrence. Our comprehensive approach focuses on understanding the
-							specific cause of your pain and developing a tailored rehabilitation plan to get you back to
-							your desired activities. <br>Here's how physiotherapy can help</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Physiotherapy is the primary treatment for most knee conditions and is
+							highly effective in reducing pain, restoring mobility, and helping you avoid surgery (where
+							possible). Our approach focuses on not just treating the knee but also addressing underlying
+							issues in the hip and foot that contribute to the problem. <br>Here's how physiotherapy can
+							help</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								Your physiotherapist will conduct a detailed examination of your knee, hip, ankle, and
-								lower back to pinpoint the source of your pain and identify any contributing
-								biomechanical factors, muscle imbalances, or movement dysfunctions. We'll assess your
-								strength, flexibility, joint mobility, balance, and gait.
+								<span class="bold">Thorough Assessment</span><br>
+								We will conduct a detailed examination of your knee, hip, ankle, and walking/running
+								mechanics to accurately diagnose the injury and identify biomechanical factors
+								contributing to your pain (e.g., poor muscle activation or alignment).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, soft tissue release, and gentle
-								joint mobilizations to reduce pain, stiffness, and muscle spasm around the knee and
-								surrounding areas. <br>
-								- Dry Needling / Acupuncture : Can target specific trigger points in tight or painful
-								muscles contributing to knee pain. <br>
-								- Therapeutic Modalities : Applying ice or heat to manage acute pain and inflammation.
+								<span class="bold">Pain and Swelling Management</span><br>
+								- Manual Therapy : Gentle joint mobilisations to improve movement and reduce stiffness,
+								and soft tissue release to relieve muscle tension around the thigh and calf. <br>
+								- Modalities : Use of ice, heat, or TENS to manage acute pain and swelling.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Restoring Movement & Strength</span><br>
-								Targeted Exercise Prescription: We'll design a personalized, progressive exercise
-								program to <br>
-								- Improve knee joint mobility and flexibility. <br>
-								- Strengthen the muscles around the knee (quadriceps, hamstrings, calves) and
-								importantly, the hip and gluteal muscles, which are crucial for knee stability and
-								proper alignment. <br>
-								- Enhance core strength for overall body control. <br>
-								- Improve balance and proprioception (the body's sense of position), especially
-								important after ligament or meniscal injuries. <br>
-								- Neuromuscular Control : Exercises to retrain efficient movement patterns and improve
-								the coordination between muscles.
+								<span class="bold">Restoring Strength and Stability</span><br>
+								- Targeted Exercise Prescription : We design a personalised program to strengthen
+								crucial muscles like the quadriceps, hamstrings, and, most importantly, the hip
+								stabilisers (glutes). Stronger hip muscles help control the knee's movement and
+								alignment. <br>
+								- Balance and Proprioception Training : Specific exercises to improve your joint
+								awareness and reaction time, which is vital for preventing re-injury, especially after
+								ligament sprains.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Biomechanical Analysis & Correction</span><br>
-								Assessment of your walking, running, jumping, or sport-specific movements to identify
-								and correct any underlying inefficiencies or faulty techniques that may be contributing
-								to your knee pain. This is vital for conditions like Patellofemoral Pain Syndrome or IT
-								Band Syndrome.
+								<span class="bold">Movement Correction and Biomechanics</span><br>
+								- Gait Analysis : Assessing your walking or running style to identify and correct faulty
+								movement patterns that place stress on the knee. <br>
+								- Foot / Ankle Management : Advice on footwear or referrals for custom orthotics if foot
+								mechanics are a contributing factor.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Activity Modification & Ergonomic Advice</span><br>
-								Guidance on modifying aggravating activities, adjusting training loads, and optimizing
-								footwear or exercise techniques to reduce stress on your knee during recovery and
-								prevent future issues.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Education & Self-Management</span><br>
-								Empowering you with a clear understanding of your condition, common triggers, and
-								effective self-management strategies. Learning proper warm-up/cool-down routines,
-								exercise progression, and listening to your body are key to long-term knee health.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Bracing / Taping</span><br>
-								Recommendation and application of supportive braces or therapeutic taping to provide
-								stability, reduce pain, and facilitate proper movement during recovery.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Post-Surgical Rehabilitation</span><br>
-								If surgery is necessary (e.g., ACL reconstruction, meniscus repair, knee replacement),
-								your physiotherapist will guide you through a structured, phased rehabilitation program
-								to optimize healing, regain strength, movement, and safely return to your desired
-								activities.
+								<span class="bold">Activity Modification and Return to Sport</span><br>
+								Guidance on how to safely modify your daily activities or training load as your knee
+								heals. We provide structured rehabilitation programs to ensure a safe and full return to
+								your job or sport, minimising the risk of future problems.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By identifying the specific cause of your knee pain and providing a
-					tailored rehabilitation program, physiotherapy empowers you to reduce pain, regain full strength and
-					function, and return to your work, sports, and daily life without limitations.</p>
+				<p class="desctit mt justify">By treating the source of your pain and giving you the tools to manage
+					your knee health, physiotherapy aims to reduce your pain, improve your mobility, and restore your
+					confidence in moving well.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_11">
@@ -2539,107 +2243,76 @@
 							<span class="num">1.</span>
 							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2 lt-0">Shin & Calf Pain: Understanding and Healing Your Lower Leg <br>The
-							shin (tibia and fibula bones) and calf (gastrocnemius and soleus muscles) form the lower
-							leg, playing a critical role in weight-bearing, propulsion during walking and running, and
-							stabilizing the ankle and foot. The calf muscles, in particular, are essential for pointing
-							your toes, pushing off the ground, and absorbing impact. Due to the high demands placed on
-							them during daily activities, sports, and exercise, the shin and calf are common sites for
-							various pain and injury conditions. Pain in the shin or calf can arise from muscles,
-							tendons, bones, or nerves, often due to overuse, impact, or sudden movements.</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">The Shin and Calf make up the lower leg, connecting the knee to the
+							ankle and foot. The Shin (or tibia) is the large bone at the front, surrounded by muscle
+							groups responsible for lifting the foot (ankle dorsiflexion). The Calf is at the back,
+							dominated by the powerful Gastrocnemius and Soleus muscles, which are crucial for pushing
+							off the ground (plantarflexion) during walking and running. Pain here often involves bone
+							irritation (stress), muscle tears, or overuse of tendons. <br>Common types of shin and calf
+							pain and related issues include</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Shin Splints <br class="tablet">(Medial Tibial Stress Syndrome -
-									MTSS)</span><br>
-								This is one of the most common causes of shin pain, typically felt along the inner edge
-								of the shin bone. It's an overuse injury resulting from repetitive stress on the tibia
-								and the connective tissues surrounding it, often due to increased running, jumping, or
-								weight-bearing activity.
+								<span class="bold">Medial Tibial Stress Syndrome (MTSS)</span><br>
+								Commonly known as Shin Splints. This is a painful, generalised condition involving
+								overuse and irritation of the tissues and bone surface along the inner edge of the shin
+								bone (tibia). It's very common in runners and those new to exercise.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Calf Strains <br class="tablet">(Gastrocnemius / Soleus
-									Strain)</span><br>
-								A common muscle injury, particularly in the gastrocnemius (the larger, outer calf
-								muscle). Occurs when the muscle fibers are overstretched or torn, often during sudden
-								acceleration, pushing off, or jumping. Causes sharp pain in the back of the lower leg.
+								<span class="bold">Calf Muscle Strain / Tear</span><br>
+								A rupture of the muscle fibres in the calf, often the Gastrocnemius, resulting in a
+								sudden, sharp pain usually felt during explosive movements like sprinting or jumping.
+								Often referred to as a "tennis leg."
 							</p>
 							<p class="desc dot">
 								<span class="bold">Achilles Tendinopathy</span><br>
-								Pain and stiffness in the Achilles tendon, which connects the calf muscles to the heel
-								bone. It's an overuse injury caused by repetitive stress or sudden increases in
-								activity, often felt as aching or burning pain just above the heel.
+								An overuse injury causing pain, stiffness, and thickening of the large Achilles tendon
+								that connects the calf muscles to the heel bone.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Stress Fractures (Tibia or Fibula)</span><br>
-								Tiny cracks in the shin bone (tibia) or fibula, caused by repetitive impact or excessive
-								loading without adequate recovery time. Leads to localized, deep aching pain that
-								worsens with activity and improves with rest.
+								<span class="bold">Stress Fractures</span><br>
+								A small crack in the bone (most commonly the tibia) caused by repetitive, excessive
+								force. Pain is highly localised and often worsens during activity and may be present at
+								rest.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Compartment Syndrome <br class="tablet">(Exertional /
-									Chronic)</span><br>
-								Increased pressure within the muscle compartments of the lower leg during exercise. This
-								can compress blood vessels and nerves, causing pain, tightness, numbness, or weakness in
-								the shin or calf during activity, which typically resolves with rest.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Referred Pain</span><br>
-								Pain felt in the shin or calf that originates from another area, most commonly the lower
-								back (e.g., sciatica radiating down the leg) or conditions affecting the hip or knee.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Popliteal Cyst (Baker's Cyst)</span><br>
-								A fluid-filled sac that forms at the back of the knee, which can sometimes extend down
-								into the calf, causing a feeling of tightness or swelling.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Nerve Entrapment</span><br>
-								Less common, but specific nerves in the lower leg can become compressed, causing pain,
-								numbness, or tingling.
+								<span class="bold">Compartment Syndrome</span><br>
+								A less common, but serious, condition where swelling or bleeding within the tight,
+								muscular compartments of the lower leg causes a dangerous build-up of pressure,
+								typically resulting in severe pain, tightness, and sometimes numbness.
 							</p>
 						</div>
 					</div>
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI) <br class="tablet">/ Contributing
-								Factors</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2 lt-2">Shin and calf pain frequently result from</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Shin and calf pain often result from</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Repetitive Impact / Overuse</span><br>
-								- Running and jumping sports : Especially on hard surfaces, significantly increasing the
-								load on the shin bone and calf muscles (e.g., shin splints, Achilles tendinopathy,
-								stress fractures). <br>
-								- Sudden increase in training load : Rapidly increasing duration, intensity, or
-								frequency of running, walking, or sports activities without allowing the body to adapt.
-								<br>
-								- Changes in footwear : Switching to less supportive shoes or worn-out footwear. <br>
-								- Hard training surfaces : Running on concrete or asphalt rather than softer surfaces.
+								<span class="bold">Sudden Increase in Load / Intensity</span><br>
+								A rapid jump in running mileage, pace, or frequency of exercise is the primary cause of
+								Shin Splints and Achilles Tendinopathy, as the tissues don't have time to adapt.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Sudden, Explosive Movements</span><br>
-								- Sprinting, jumping, pushing off, sudden acceleration/deceleration : Common causes of
-								acute calf muscle strains.
+								<span class="bold">Change in Training Surface or Footwear</span><br>
+								Running on hard surfaces (like concrete) or using worn-out or inappropriate running
+								shoes increases impact forces, stressing the shin bone and tendons.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Direct Trauma</span><br>
-								A direct blow to the shin or calf can cause contusions (bruises) or, less commonly,
-								fractures.
+								<span class="bold">Biomechanical Issues</span><br>
+								Excessive foot pronation (flat feet) or weak hip/gluteal muscles alter the mechanics of
+								the lower leg, increasing rotation and strain on the shin and calf.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Biomechanical Factors</span><br>
-								- Foot mechanics : Overpronation (flat feet) or excessively high arches can alter load
-								distribution in the lower leg. <br>
-								- Muscle imbalances : Weakness in the glutes, hips, or core, or tightness in the calf
-								muscles or hamstrings, can affect how forces are absorbed through the lower leg. <br>
-								- Poor running form : Inefficient running mechanics can place excessive stress on
-								specific shin or calf structures.
+								<span class="bold">Explosive Movements</span><br>
+								Sudden acceleration, lunging, or jumping can overload the calf muscles, leading to acute
+								tears (strains).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Inadequate Warm-up / Cool-down</span><br>
-								Not properly preparing muscles for activity or assisting recovery afterwards.
+								<span class="bold">Inadequate Recovery</span><br>
+								Not allowing sufficient rest between intense training sessions means muscles and bone
+								tissues cannot repair and strengthen, leading to cumulative overuse injuries.
 							</p>
 						</div>
 					</div>
@@ -2648,54 +2321,43 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 lt-2">Symptoms of shin and calf pain vary depending on the specific
-							condition but commonly include</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Symptoms in the shin and calf can vary significantly depending on
+							whether the injury is muscular, tendinous, or bony</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Pain Location</span><br>
-								- Inner shin bone : Classic for shin splints. <br>
-								- Back of lower leg / calf : Calf strains, Achilles tendinopathy. <br>
-								- Localized, sharp pain along a bone : Suggests a stress fracture. <br>
-								- Diffuse aching or burning during exercise : May indicate exertional compartment
-								syndrome.
+								<span class="bold">Diffuse Pain</span><br>
+								Generalised aching or burning along the inner border of the shin (MTSS/Shin Splints),
+								typically worse at the beginning of exercise and potentially subsiding, but returning
+								later.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Characteristics</span><br>
-								Can be dull and aching, sharp, burning, or throbbing. Often worse with activity and
-								eases with rest (except for some stress fractures or compartment syndrome which can
-								linger/build).
+								<span class="bold">Sharp, Localised Pain</span><br>
+								Intense pain that begins abruptly during exercise, often accompanied by a "pop" or
+								"snap" sensation (Calf Strain/Tear).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Tenderness</span><br>
-								Pain when touching or pressing on the affected area.
+								<span class="bold">Pinpoint Tenderness</span><br>
+								Extreme sensitivity to touch over a small, specific area on the shin bone, which is a
+								key indicator of a Stress Fracture.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Swelling</span><br>
-								May be visible, particularly with calf strains, Achilles tendinopathy, or compartment
-								syndrome.
+								<span class="bold">Stiffness and Tightness</span><br>
+								A feeling of tension in the calf muscles, especially in the morning or after prolonged
+								rest, common with Achilles Tendinopathy.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Stiffness</span><br>
-								Especially in the calf muscles or Achilles tendon, often worse in the morning.
+								<span class="bold">Pain with Push-Off</span><br>
+								Discomfort when pushing your toes off the ground or climbing stairs, due to pain in the
+								calf or Achilles tendon.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Weakness</span><br>
-								Difficulty pushing off with the foot, climbing stairs, or performing activities that
-								require calf strength.
+								<span class="bold">Swelling and Bruising</span><br>
+								Visible swelling or bruising in the calf with a severe muscle tear.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Numbness or Tingling</span><br>
-								Sensations in the shin, foot, or toes, which can indicate nerve compression.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Cramping</span><br>
-								In the calf during or after activity (can be muscle fatigue, dehydration, or a sign of
-								nerve / circulation issues).
-							</p>
-							<p class="desc dot">
-								<span class="bold">Popping Sensation</span><br>
-								A sudden "pop" or "snap" may indicate an acute muscle tear (e.g., calf strain) or
-								Achilles tendon rupture.
+								<span class="bold">Cramping/Numbness During Exercise</span><br>
+								Tightness and cramping that builds rapidly during activity, forcing you to stop, which
+								may indicate Compartment Syndrome.
 							</p>
 						</div>
 					</div>
@@ -2704,80 +2366,53 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Shin & Calf Pain</span>
 						</p>
-						<p class="desc ver2">Physiotherapy is a highly effective, evidence-based approach to diagnosing,
-							treating, and managing most shin and calf conditions. Our comprehensive assessment helps
-							identify the precise cause of your pain and guides a personalized rehabilitation plan to get
-							you back to your desired activities, pain-free. <br>Here's how physiotherapy can help</p>
+						<p class="desc ver2">Physiotherapy is crucial for accurately identifying the cause of lower leg
+							pain (is it a muscle strain, shin splints, or a stress fracture) and implementing a safe,
+							phased return to activity. Our treatment focuses on healing, correcting underlying faults,
+							and preventing recurrence. <br>Here's how physiotherapy can help</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								Your physiotherapist will conduct a detailed examination of your lower leg, ankle, foot,
-								knee, hip, and even your lower back, as issues in these areas can all contribute to shin
-								/ calf pain. We'll assess your strength, flexibility, joint mobility, balance, walking /
-								running gait, and specific movement patterns.
+								<span class="bold">Accurate Diagnosis and Load Management</span><br>
+								We perform specific tests to differentiate between muscle tears, shin splints, and
+								potential stress fractures. We provide immediate guidance on modifying your training
+								load to allow the injured tissue to start healing effectively.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, soft tissue release (for tight
-								calf muscles or fascial restrictions), and joint mobilizations (for ankle or foot
-								stiffness) to reduce pain and muscle tension. <br>
-								- Dry Needling / Acupuncture : Can target specific trigger points in tight or injured
-								calf muscles or shin muscles to alleviate pain and promote healing. <br>
-								- Therapeutic Modalities : Applying ice or heat to manage acute pain and inflammation.
+								<span class="bold">Pain and Inflammation Reduction</span><br>
+								- Manual Therapy : Deep soft tissue massage, trigger point therapy, and gentle joint
+								mobilisations to relieve tension in the calf and surrounding muscles and reduce stress
+								on the shin bone. <br>
+								- Taping : Application of supportive or muscle-facilitation taping to reduce strain on
+								the shin, calf, or Achilles tendon during the early phase of rehabilitation.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Restoring Movement & Strength</span><br>
-								Targeted Exercise Prescription: We'll design a personalized, progressive exercise
-								program to <br>
-								- Improve flexibility and range of motion of the calf muscles, Achilles tendon, and
-								ankle joint. <br>
-								- Strengthen the calf muscles (gastrocnemius, soleus), shin muscles, and other key lower
-								limb muscles (e.g., glutes, quadriceps) for improved propulsion and shock absorption.
-								<br>
-								- Incorporate eccentric loading exercises (e.g., calf raises with controlled lowering)
-								which are crucial for treating Achilles tendinopathy and some muscle strains. <br>
-								- Enhance balance and proprioception through specific exercises. <br>
-								- Gait & Running Analysis : Assessment of your walking or running pattern to identify
-								and correct any underlying biomechanical inefficiencies or faulty techniques that may be
-								contributing to your pain.
+								<span class="bold">Biomechanical Correction and Strengthening</span><br>
+								- Targeted Exercise Prescription : We design a personalised program to strengthen the
+								deep calf muscles, the shin muscles (to help lift the foot), and, crucially, the hip and
+								gluteal muscles to improve pelvic and knee control. <br>
+								- Foot and Ankle Assessment : Evaluation of your foot posture (pronation/supination) and
+								providing advice on appropriate footwear or, if necessary, referring for orthotics to
+								correct faulty mechanics that contribute to shin pain.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Activity Modification & Load Management</span><br>
-								Guidance on how to modify aggravating activities, adjust training loads (duration,
-								intensity, frequency), and use proper warm-up/cool-down routines to allow healing and
-								prevent recurrence. This is critical for overuse injuries like shin splints and stress
-								fractures.
+								<span class="bold">Graded Exposure and Return to Activity</span><br>
+								This is essential for all overuse injuries. We create a structured, progressive plan to
+								safely reintroduce running or exercise, monitoring symptoms closely to ensure tissues
+								adapt without becoming re-injured. This involves specific exercises to build tissue
+								tolerance.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Footwear & Orthotic Advice</span><br>
-								Assessment of your current footwear and recommendations for appropriate shoes. In some
-								cases, custom or off-the-shelf orthotics may be advised to address foot biomechanics.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Education & Self-Management</span><br>
-								Empowering you with a clear understanding of your condition, common triggers, and
-								effective self-management strategies. Learning how to listen to your body, progress your
-								exercises safely, and implement preventive measures is crucial for long-term lower leg
-								health.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Bracing / Taping</span><br>
-								Application of therapeutic tape or braces to provide support, reduce pain, and
-								facilitate proper muscle function during recovery.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Post-Surgical Rehabilitation</span><br>
-								If surgery is necessary (e.g., for severe Achilles rupture or compartment syndrome
-								release), your physiotherapist will guide you through a structured, phased
-								rehabilitation program to optimize healing, regain strength, movement, and safely return
-								to your desired activities.
+								<span class="bold">Education and Prevention</span><br>
+								Empowering you with knowledge about optimal running form, proper warm-up/cool-down
+								routines, and self-management strategies to maintain strong, injury-resistant lower legs
+								for the long term.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By identifying the specific cause of your shin or calf pain and providing
-					a tailored rehabilitation program, physiotherapy empowers you to reduce pain, regain full strength
-					and function, and return to your work, sports, and daily life without limitations.</p>
+				<p class="desctit mt justify">By addressing the specific cause of your pain and correcting the
+					biomechanical factors that overload the lower leg, physiotherapy helps you recover fully and return
+					to your activities safely and permanently.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox3_12">
@@ -2792,58 +2427,43 @@
 							<span class="num">1.</span>
 							<span class="txt">What It Is & Common Types</span>
 						</p>
-						<p class="desc ver2 lt-0">Ankle & Foot Pain: Understanding and Healing Your Foundations <br>Your
-							ankle is a complex hinge joint that connects your lower leg to your foot, allowing for
-							upward and downward movement, as well as some side-to-side motion. The foot is an intricate
-							structure comprising 26 bones, 33 joints, and over 100 muscles, tendons, and ligaments,
-							designed to absorb shock, adapt to uneven surfaces, and propel your body forward. Together,
-							the ankle and foot form the crucial foundation for all standing, walking, running, and
-							jumping activities. Due to the significant forces they endure and their intricate mechanics,
-							the ankle and foot are highly susceptible to pain, injury, and overuse conditions. Pain in
-							the ankle or foot can arise from bones, joints, ligaments, tendons, muscles, or nerves,
-							often due to acute injury, repetitive stress, or underlying biomechanical issues.</p>
+						<p class="desc ver2">The Ankle and Foot together contain 26 bones, 33 joints, and over 100
+							muscles, tendons, and ligaments, designed to absorb shock, adapt to uneven terrain, and act
+							as a rigid lever for pushing off. The Ankle Joint primarily allows for up-and-down movement
+							(plantar and dorsiflexion), while the numerous small joints in the foot allow for complex
+							arch adjustments and stability. Pain arises when these delicate structures are overstressed
+							or traumatised. <br>Common types of ankle and foot pain and related issues include</p>
 						<div class="descitem">
 							<p class="desc dot">
 								<span class="bold">Ankle Sprains</span><br>
-								Very common, especially lateral (inversion) ankle sprains, which occur when the foot
-								rolls inwards, stretching or tearing the ligaments on the outside of the ankle. They
-								range from mild (Grade I) to severe (Grade III, complete tear).
+								The most common injury, occurring when the ankle is twisted or rolled, typically
+								damaging the ligaments on the outside of the ankle. Sprains are graded by severity.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Plantar Fasciitis</span><br>
-								One of the most common causes of heel pain, characterized by inflammation or
-								degeneration of the plantar fascia, a thick band of tissue running along the bottom of
-								the foot from the heel to the toes. Pain is typically worse with the first steps in the
-								morning or after prolonged rest, and with prolonged standing or activity.
+								Inflammation and degeneration of the thick band of tissue (plantar fascia) that runs
+								across the bottom of the foot, connecting the heel bone to the toes. This causes sharp,
+								stabbing pain, often worst with the first steps in the morning.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Achilles Tendinopathy</span><br>
-								Pain and stiffness in the Achilles tendon, which connects the calf muscles to the heel
-								bone. It's an overuse injury, often felt as aching or burning pain just above the heel,
-								exacerbated by activity.
+								Pain and stiffness in the Achilles tendon (connecting the calf to the heel), usually an
+								overuse injury common in runners, walkers, or those with tight calves.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Stress Fractures (Foot / Ankle)</span><br>
-								Tiny cracks in the bones, commonly in the metatarsals (foot bones) or tibia/fibula
-								(lower leg bones near the ankle), caused by repetitive impact or excessive loading
-								without adequate recovery. Leads to localized, deep aching pain that worsens with
-								activity.
+								<span class="bold">Tendonitis (e.g., Peroneal or Tibialis Posterior)</span><br>
+								Inflammation of the tendons that help control the arch and stabilise the ankle, usually
+								due to overuse or abnormal foot mechanics.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Shin Splints <br class="tablet"> (Medial Tibial Stress Syndrome -
-									MTSS)</span><br>
-								While affecting the shin, symptoms often extend to the ankle, characterized by pain
-								along the inner edge of the shin bone, related to overuse.
+								<span class="bold">Bunion / Hallux Valgus</span><br>
+								A bony bump that forms on the joint at the base of the big toe, causing pain, especially
+								with footwear.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Achilles Tendon Rupture</span><br>
-								A complete tear of the Achilles tendon, causing sudden, severe pain, a "pop" sensation,
-								and inability to push off the foot.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Bunions (Hallux Valgus)</span><br>
-								A bony bump that forms on the joint at the base of the big toe, causing the big toe to
-								deviate outwards. Can lead to pain, swelling, and difficulty with footwear.
+								<span class="bold">Stress Fractures</span><br>
+								Small cracks in the bones of the foot or ankle, often in the metatarsals, caused by
+								repetitive loading without adequate rest.
 							</p>
 							<p class="desc dot">
 								<span class="bold">Morton's Neuroma</span><br>
@@ -2857,12 +2477,6 @@
 								which can affect shock absorption and weight distribution.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Osteoarthritis</span><br>
-								Degenerative "wear and tear" of the cartilage in the ankle or foot joints, leading to
-								pain, stiffness, and reduced movement, particularly in older adults or following
-								previous trauma.
-							</p>
-							<p class="desc dot">
 								<span class="bold">Referred Pain</span><br>
 								Pain felt in the ankle or foot that originates from another area, most commonly the
 								lower back (e.g., sciatica radiating down the leg).
@@ -2872,48 +2486,35 @@
 					<div class="descbox">
 						<p class="desctit">
 							<span class="num">2.</span>
-							<span class="txt">Common Mechanism of Injury (MOI) <br class="tablet">/ Contributing
-								Factors</span>
+							<span class="txt">Common Mechanism of Injury</span>
 						</p>
-						<p class="desc ver2 lt-2">Ankle and foot pain frequently arise from</p>
-						<div class="descitem">
+						<p class="desc ver2 lt-2">Ankle and foot pain often results from</p>
+						<div class="descitem no_spacing">
 							<p class="desc dot">
-								<span class="bold">Acute Trauma</span><br>
-								- Twisting or rolling the ankle : The most common cause of ankle sprains, often from
-								landing awkwardly, stepping on an uneven surface, or during sports. <br>
-								- Direct impact : Dropping an object on the foot, or collisions in sports, can cause
-								fractures or contusions. <br>
-								- Falls from height : Can lead to more severe fractures in the ankle or heel bone.
+								<span class="bold">Twisting / Rolling Accidents</span><br>
+								Landing awkwardly from a jump, stepping into a hole, or slipping, which forces the ankle
+								into an unnatural position, leading to acute Ankle Sprains.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Repetitive Strain / Overuse</span><br>
-								- Running and jumping sports : High-impact activities place significant stress on the
-								foot and ankle, leading to conditions like plantar fasciitis, Achilles tendinopathy, or
-								stress fractures. <br>
-								- Prolonged standing or walking : Especially on hard surfaces or with inappropriate
-								footwear. <br>
-								- Sudden increase in activity : Rapidly increasing the duration, intensity, or frequency
-								of exercise without adequate adaptation.
+								<span class="bold">Overuse and Repetitive Impact</span><br>
+								High-impact activities like running, marching, or prolonged standing, especially on hard
+								surfaces, are the primary drivers for Plantar Fasciitis, Achilles Tendinopathy, and
+								Stress Fractures.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Biomechanical Factors</span><br>
-								- Foot Arch Problems : Overpronation (flat feet) or excessively high arches can alter
-								the mechanics of the foot and ankle, leading to increased stress on certain structures.
-								<br>
-								- Muscle Imbalances : Weakness in muscles controlling the foot and ankle, or tightness
-								in the calf muscles, can affect stability and shock absorption. <br>
-								- Poor Running/Walking Form : Inefficient gait mechanics can place excessive stress on
-								specific foot or ankle structures.
-							</p>
-							<p class="desc dot pc">
 								<span class="bold">Inappropriate Footwear</span><br>
-								Wearing shoes that lack support, cushioning, or are too tight can contribute to a
-								variety of foot and ankle problems (e.g., bunions, Morton's neuroma, plantar fasciitis).
+								Wearing shoes that lack arch support, have poor cushioning, or high heels can
+								dramatically alter foot mechanics and increase stress on the tendons and fascia.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Age-Related Changes</span><br>
-								Degeneration of joints and tendons occurs naturally over time, increasing susceptibility
-								to conditions like osteoarthritis or Achilles tendinopathy.
+								<span class="bold">Biomechanical Faults</span><br>
+								Underlying issues such as excessively flat feet (over-pronation) or high arches alter
+								the way forces are distributed during walking, contributing to overuse injuries.
+							</p>
+							<p class="desc dot">
+								<span class="bold">Muscle Imbalance</span><br>
+								Weakness in the stabilising muscles of the lower leg (like the Peroneals) makes the
+								ankle joint inherently unstable and prone to recurrent sprains.
 							</p>
 						</div>
 					</div>
@@ -2922,57 +2523,37 @@
 							<span class="num">3.</span>
 							<span class="txt">Common Symptoms</span>
 						</p>
-						<p class="desc ver2 lt-2">Symptoms of ankle and foot pain vary widely depending on the specific
-							condition but commonly include</p>
+						<p class="desc ver2 lt-2">Symptoms in the ankle and foot can vary greatly depending on the
+							structure involved</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Pain Location</span><br>
-								Can be localized to the heel, arch, ball of foot, toes, ankle joint (inner, outer,
-								front, back), or generalized.
+								<span class="bold">Sharp, Immediate Pain & Swelling</span><br>
+								A sudden onset of pain accompanied by rapid swelling and bruising, typically following a
+								twisting event (Ankle Sprain).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Characteristics</span><br>
-								Aching, sharp, burning, shooting, throbbing, or dull. Often worse with activity, first
-								steps in the morning, after rest, or with specific movements.
+								<span class="bold">Morning Pain</span><br>
+								Severe, sharp, stabbing pain on the bottom of the heel or foot with the first steps out
+								of bed or after sitting for a period (Plantar Fasciitis).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Swelling & Bruising</span><br>
-								Common after ankle sprains, fractures, or acute injuries.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Stiffness</span><br>
-								Difficulty moving the ankle or foot, especially in the morning or after prolonged
-								inactivity.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Tenderness</span><br>
-								Pain upon touching or pressing on the affected area.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Weakness</span><br>
-								Difficulty pushing off, walking, balancing, or performing activities that require
-								foot/ankle strength.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Numbness or Tingling</span><br>
-								Sensations in the foot or toes, often indicative of nerve compression (e.g., Carpal
-								Tunnel Syndrome of the foot, Morton's Neuroma).
+								<span class="bold">Pain with Push-Off</span><br>
+								A dull ache or stiffness in the back of the heel and lower calf, especially when walking
+								up hills or stairs (Achilles Tendinopathy).
 							</p>
 							<p class="desc dot">
 								<span class="bold">Instability</span><br>
-								Feeling like the ankle is "giving way" or "rolling".
+								A feeling that the ankle is weak, "wobbly," or prone to giving way, especially when
+								walking on uneven ground (post-sprain instability).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Clicking or Popping</span><br>
-								Sensations within the joint, sometimes associated with ligament or tendon issues.
+								<span class="bold">Localised Tenderness</span><br>
+								Extreme sensitivity and pain when pressing on a specific small area on a foot bone,
+								often worsening during activity (Stress Fracture).
 							</p>
 							<p class="desc dot">
-								<span class="bold">Difficulty Weight-Bearing</span><br>
-								Inability to put full weight on the foot.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Altered Gait</span><br>
-								Limping or a noticeable change in walking pattern to avoid pain.
+								<span class="bold">Altered Walking Pattern</span><br>
+								Limping or changing the way you walk to avoid putting pressure on a painful area.
 							</p>
 						</div>
 					</div>
@@ -2981,80 +2562,62 @@
 							<span class="num">4.</span>
 							<span class="txt">How Physiotherapy Can Help with Ankle & Foot Pain</span>
 						</p>
-						<p class="desc ver2">Physiotherapy is highly effective in diagnosing, treating, and managing
-							most ankle and foot conditions, providing pain relief, restoring function, and preventing
-							recurrence. Our comprehensive approach focuses on accurately identifying the cause of your
-							pain and developing a tailored rehabilitation plan to get you back to your desired
-							activities. <br>Here's how physiotherapy can help</p>
+						<p class="desc ver2">Physiotherapy is essential for effective treatment of both acute ankle
+							injuries and chronic foot overuse syndromes. Our approach focuses on restoring stability,
+							optimising foot mechanics, and building strong, resilient tissues to prevent future
+							problems. <br>Here's how physiotherapy can help</p>
 						<div class="descitem">
 							<p class="desc dot">
-								<span class="bold">Comprehensive Assessment</span><br>
-								Your physiotherapist will conduct a detailed examination of your foot, ankle, lower leg,
-								knee, hip, and even your lower back, as issues higher up the kinetic chain can
-								significantly impact the foot and ankle. We'll assess your strength, flexibility, joint
-								mobility, balance, foot posture, and gait analysis.
+								<span class="bold">Thorough Assessment and Diagnosis</span><br>
+								We conduct a detailed examination, including specific orthopaedic tests, gait analysis,
+								and assessment of your foot posture and footwear to accurately diagnose the injury and
+								identify underlying mechanical contributors.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Pain Relief Strategies</span><br>
-								- Manual Therapy : Hands-on techniques such as massage, soft tissue release (for tight
-								calf or foot muscles), and joint mobilizations (to improve ankle and foot joint
-								movement) to reduce pain and stiffness. <br>
-								- Dry Needling / Acupuncture : Can target specific trigger points in tight or injured
-								muscles of the lower leg and foot. <br>
-								- Therapeutic Modalities : Applying ice or heat to manage acute pain and inflammation.
+								<span class="bold">Pain and Inflammation Reduction</span><br>
+								- Manual Therapy : Gentle joint mobilisation to restore movement in the stiff ankle and
+								foot joints, and soft tissue release to tight calf muscles and restricted tendons. <br>
+								- Taping & Bracing : Applying supportive taping techniques or providing recommendations
+								for walking boots/braces to protect healing ligaments and unload inflamed fascia or
+								tendons. <br>
+								- Modalities : Use of ice, dry needling, or other modalities to manage acute pain and
+								swelling.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Restoring Movement & Strength</span><br>
-								Targeted Exercise Prescription: We'll design a personalized, progressive exercise
-								program to <br>
-								- Improve ankle and foot joint mobility and flexibility. <br>
-								- Strengthen the muscles of the foot, ankle, and lower leg (e.g., calf muscles, shin
-								muscles, foot intrinsic muscles) for improved stability and propulsion. <br>
-								- Enhance balance and proprioception (the body's awareness of its position in space),
-								which is crucial after ankle sprains to prevent re-injury. <br>
-								- Strengthen hip and core muscles to improve overall lower limb stability and reduce
-								stress on the foot and ankle. <br>
-								- Eccentric Loading Exercises : Especially for Achilles tendinopathy and some other
-								tendinopathies of the foot.
+								<span class="bold">Restoring Stability and Strength</span><br>
+								- Targeted Exercise Prescription : A carefully graded program focused intensely on
+								proprioception (balance) training to restore the body's awareness of the ankle's
+								position, which is crucial after a sprain. <br>
+								- Strengthening : Exercises to strengthen the lower leg muscles (especially the peroneal
+								and calf muscles) to provide dynamic stability and support the arch.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Biomechanical Analysis & Correction</span><br>
-								Assessment of your walking or running gait, jumping mechanics, or specific sport
-								movements to identify and correct any underlying inefficiencies or faulty techniques
-								that may be contributing to your pain.
+								<span class="bold">Biomechanical Correction and Overuse Management</span><br>
+								- Footwear and Orthotic Advice : Clear guidance on choosing appropriate shoes for
+								activity, and determining if temporary or custom orthotics are needed to support the
+								arch and correct faulty foot mechanics. <br>
+								- Tissue Loading Program : For chronic conditions like Plantar Fasciitis and Achilles
+								Tendinopathy, we implement specific, evidence-based strengthening exercises designed to
+								gradually increase the tissue's tolerance to load.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Footwear & Orthotic Advice</span><br>
-								Comprehensive assessment of your current footwear and recommendations for appropriate
-								shoes for your foot type and activity level. In many cases, custom or off-the-shelf
-								orthotics may be advised to support foot arches, improve alignment, and redistribute
-								pressure.
-							</p>
-							<p class="desc dot">
-								<span class="bold">Activity Modification & Load Management</span><br>
-								Guidance on how to modify aggravating activities, adjust training loads (duration,
-								intensity, frequency), and use proper warm-up/cool-down routines to allow healing and
-								prevent recurrence. This is vital for overuse injuries.
-							</p>
-							<p class="desc dot pc">
 								<span class="bold">Education & Self-Management</span><br>
 								Empowering you with a clear understanding of your condition, common triggers, and
 								effective self-management strategies. Learning how to tape an ankle, perform exercises
 								correctly, and manage daily loads is key to long-term foot and ankle health.
 							</p>
 							<p class="desc dot">
-								<span class="bold">Post-Surgical Rehabilitation</span><br>
-								If surgery is necessary (e.g., for Achilles rupture repair, severe fracture), your
-								physiotherapist will guide you through a structured, phased rehabilitation program to
-								optimize healing, regain strength, movement, and safely return to your desired
-								activities.
+								<span class="bold">Return to Sport Rehabilitation</span><br>
+								Developing a structured program with agility and plyometric drills to ensure the ankle
+								can withstand high impact and changes in direction before a full return to sport.
 							</p>
 						</div>
 					</div>
 				</div>
-				<p class="desctit mt justify">By identifying the specific cause of your ankle or foot pain and providing
-					a tailored rehabilitation program, physiotherapy empowers you to reduce pain, regain full strength
-					and function, and return to your work, sports, and daily life without limitations.</p>
+				<p class="desctit mt justify">By stabilising the joint, correcting biomechanical stressors, and
+					strengthening the entire lower kinetic chain (foot, ankle, and hip), physiotherapy aims to resolve
+					your pain, restore confidence in your balance, and ensure your feet and ankles can handle the
+					demands of your active life.</p>
 			</div>
 		</div>
 	</div>

@@ -10,7 +10,7 @@
         </div>
 		<div class="h_navbox">
 			<div class="h_side">
-				<a href="" class="side_btn">Appointments</a>
+				<a href="/booking/booking.php" class="side_btn">Appointments</a>
 			</div>
 		</div>
 		<button type="button" class="menu_open"></button>

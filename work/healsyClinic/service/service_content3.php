@@ -62,11 +62,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Thermal modalities</p>
-				<p class="desc ver3">Experience accelerated recovery and pain relief with our advanced Game Ready®
-					system. This technology combines active compression with adjustable cold therapy to effectively
-					reduce swelling, minimize pain, and optimize tissue healing following acute injuries or
-					post-operative procedures. It's a key tool in speeding up your recovery process, allowing you to
-					return to activity sooner and more comfortably.</p>
+				<p class="desc ver3">Experience accelerated recovery and pain relief with our advanced Game Ready® system. This technology combines active compression with adjustable cold therapy to effectively reduce swelling, minimise pain, and optimise tissue healing following acute injuries or post-operative procedures. It's a key tool in speeding up your recovery process, allowing you to return to activity sooner and more comfortably.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_2">
@@ -75,11 +71,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Individualised Strengthening & Conditioning Programmes</p>
-				<p class="desc ver3">Our core offering, this service designs personalized exercise programs to build
-					foundational strength, endurance, and overall physical capacity. Whether you're recovering from an
-					injury, managing a chronic condition, or simply aiming for better general fitness, we'll identify
-					your unique needs and create a progressive plan to improve muscle function, stability, and movement
-					efficiency for all aspects of your life.</p>
+				<p class="desc ver3">Our core offering, this service designs personalised exercise programs to build foundational strength, endurance, and overall physical capacity. Whether you're recovering from an injury, managing a chronic condition, or simply aiming for better general fitness, we'll identify your unique needs and create a progressive plan to improve muscle function, stability, and movement efficiency for all aspects of your life.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_3">
@@ -88,11 +80,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Performance & Sports-Specific <br>Training Programmes and Guidance</p>
-				<p class="desc ver3">Elevate your athletic potential with training programs meticulously tailored to the
-					demands of your specific sport or activity. Beyond general fitness, we focus on developing the
-					power, speed, agility, and endurance required for your performance goals. Our guidance integrates
-					advanced exercise techniques with biomechanical analysis to optimize your movement, maximize
-					performance, and reduce sport-specific injury risks.</p>
+				<p class="desc ver3">Elevate your athletic potential with training programs meticulously tailored to the demands of your specific sport or activity. Beyond general fitness, we focus on developing the power, speed, agility, and endurance required for your performance goals. Our guidance integrates advanced exercise techniques with biomechanical analysis to optimise your movement, maximise performance, and reduce sport-specific injury risks.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_4">
@@ -101,11 +89,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Pre / Post-Game Management & Guidance</p>
-				<p class="desc ver3">Support your body before and after competition with our specialized management
-					strategies. Pre-game preparation focuses on optimizing mobility, activating key muscles, and
-					preventing acute injuries. Post-gamemanagement aims to accelerate recovery, reduce muscle soreness,
-					and address any immediate concerns, ensuring you're ready for your next training session or
-					competition. This service is designed to keep you performing consistently at your best.</p>
+				<p class="desc ver3">Support your body before and after competition with our specialised management strategies. Pre-game preparation focuses on optimising mobility, activating key muscles, and preventing acute injuries. Post-gamemanagement aims to accelerate recovery, reduce muscle soreness, and address any immediate concerns, ensuring you're ready for your next training session or competition. This service is designed to keep you performing consistently at your best.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_5">
@@ -114,12 +98,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">In-Season & Off-Season Management Programme</p>
-				<p class="desc ver3">For athletes, year-round strategic planning is crucial. Our In-Season Programme
-					focuses on maintaining peak performance, managing fatigue, and preventing injuries during
-					competitive periods, allowing you to stay on the field. The Off-Season Programme is designed for
-					structured development, building strength, power, and addressing long-term weaknesses, setting the
-					foundation for a stronger, more resilient next season. This holistic approach optimizes your entire
-					athletic year.</p>
+				<p class="desc ver3">For athletes, year-round strategic planning is crucial. Our In-Season Programme focuses on maintaining peak performance, managing fatigue, and preventing injuries during competitive periods, allowing you to stay on the field. The Off-Season Programme is designed for structured development, building strength, power, and addressing long-term weaknesses, setting the foundation for a stronger, more resilient next season. This holistic approach optimises your entire athletic year.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_6">
@@ -128,12 +107,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Injury Prevention</p>
-				<p class="desc ver3">Proactive care is paramount. Our Injury Prevention service identifies your
-					individual risk factors for common injuries through comprehensive screening and movement analysis.
-					We then create targeted exercise programs to address muscle imbalances, mobility restrictions, and
-					suboptimal movement patterns. By building your body's resilience and enhancing your protective
-					mechanisms, we help you stay ahead of injuries and maintain consistent participation in your
-					activities.</p>
+				<p class="desc ver3">Proactive care is paramount. Our Injury Prevention service identifies your individual risk factors for common injuries through comprehensive screening and movement analysis. We then create targeted exercise programs to address muscle imbalances, mobility restrictions, and suboptimal movement patterns. By building your body's resilience and enhancing your protective mechanisms, we help you stay ahead of injuries and maintain consistent participation in your activities.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_7">
@@ -142,11 +116,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Rehabilitation & Return to Sport / Activity</p>
-				<p class="desc ver3">This service bridges the gap between injury recovery and full, confident
-					participation. Following an injury or surgery, we guide you through a structured, progressive
-					rehabilitation program, focusing on restoring strength, power, agility, and sport-specific
-					movements. Our aim is to ensure your body is fully prepared for the demands of your chosen sport or
-					activity, minimizing the risk of re-injury and getting you back stronger than before.</p>
+				<p class="desc ver3">This service bridges the gap between injury recovery and full, confident participation. Following an injury or surgery, we guide you through a structured, progressive rehabilitation program, focusing on restoring strength, power, agility, and sport-specific movements. Our aim is to ensure your body is fully prepared for the demands of your chosen sport or activity, minimising the risk of re-injury and getting you back stronger than before.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_8">
@@ -155,12 +125,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Pre & Post-Operative Strengthening</p>
-				<p class="desc ver3">Optimize your surgical journey with our specialized programs. Pre-operative
-					(Prehab) strengthening prepares your body for surgery by maximizing existing strength, flexibility,
-					and muscle control, which can significantly accelerate your post-operative recovery. Following
-					surgery, our Post-operative strengthening provides carefully graded exercises and expert guidance to
-					help you safely regain full strength, range of motion, and function, ensuring the best possible
-					outcome from your procedure.</p>
+				<p class="desc ver3">Optimise your surgical journey with our specialised programs. Pre-operative (Prehab) strengthening prepares your body for surgery by maximising existing strength, flexibility, and muscle control, which can significantly accelerate your post-operative recovery. Following surgery, our Post-operative strengthening provides carefully graded exercises and expert guidance to help you safely regain full strength, range of motion, and function, ensuring the best possible outcome from your procedure.</p>
 			</div>
 		</div>
 	</div>

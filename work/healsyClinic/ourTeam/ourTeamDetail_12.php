@@ -31,9 +31,9 @@
 					</div>
 					<div class="topbox">
 						<div class="txtbox">
-							<p class="tit">Minnie Edwards</p>
+							<p class="tit">Ciara Lawne</p>
 							<p class="desc">
-								Clinical Pilates Instructor
+								Retail Assistant
 							</p>
 							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
@@ -47,9 +47,11 @@
 					<div class="contbox">
 						<div class="contitem">
 							<p class="desc lt1">
-								Minnie graduated with first-class honours in dance and choreography in 2020, which propelled her training in Pilates teaching. Her approach to movement is rooted in the belief that it’s never a one-size-fits-all practice. The strength of Pilates lies in its ability to adapt to the unique needs of each individual, making it a highly beneficial and versatile form of bodywork. Minnie cultivates a space that helps you feel at home in your body, with classes that blend classical and contemporary Pilates repertoire. She creates flow through movement while giving anatomical knowledge designed to help you feel at ease, connected, and capable.
+								Hi, I’m Ciara Lawne. I’m currently pursuing a Bachelor of Chiropractic Science. I have a strong interest in health, human movement, and empowering individuals to feel their best. Over the past few years, my experience in both retail and as a receptionist at an allied health clinic has provided me with invaluable skills in client care and a profound understanding of the healthcare environment.
 								<br><br>
-								Specialising in Pilates for orthopaedic conditions and sports massage therapy, Minnie has a deep understanding of body mechanics which she applies to assess and address movement patterns, tailor Pilates programmes, rehabilitation techniques, and exercises that support performance and recovery. Whether you’re a beginner building a solid foundation or an experienced practitioner refining technique and deepening your connection to movement, Minnie’s classes are designed for you. Her aim is for you to experience the transformative benefits of Pilates in a space where you can restore, rekindle, and revive.
+								These roles have honed my ability to connect with clients, manage administrative tasks efficiently, and contribute to a supportive clinic atmosphere. I am passionate about creating positive interactions and ensuring every client feels welcomed and understood.
+								<br><br>
+								In my free time, I maintain an active lifestyle by going to the gym, preparing healthy meals, or enjoying the beach. These activities foster balance during my studies and continuously fuel my passion for overall well-being. I am eager to connect with others and actively contribute to a space dedicated to helping people lead healthier, more comfortable lives.
 							</p>
 						</div>
 					</div>

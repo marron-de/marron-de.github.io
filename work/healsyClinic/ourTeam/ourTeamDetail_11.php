@@ -31,9 +31,9 @@
 					</div>
 					<div class="topbox">
 						<div class="txtbox">
-							<p class="tit">Minnie Edwards</p>
+							<p class="tit">Kacey Shin</p>
 							<p class="desc">
-								Clinical Pilates Instructor
+								Retail Assistant
 							</p>
 							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
@@ -46,10 +46,12 @@
 					</div>
 					<div class="contbox">
 						<div class="contitem">
-							<p class="desc lt1">
-								Minnie graduated with first-class honours in dance and choreography in 2020, which propelled her training in Pilates teaching. Her approach to movement is rooted in the belief that it’s never a one-size-fits-all practice. The strength of Pilates lies in its ability to adapt to the unique needs of each individual, making it a highly beneficial and versatile form of bodywork. Minnie cultivates a space that helps you feel at home in your body, with classes that blend classical and contemporary Pilates repertoire. She creates flow through movement while giving anatomical knowledge designed to help you feel at ease, connected, and capable.
+							<p class="desc">
+								Kacey, a University of New South Wales student, brings several years of experience in delivering personalised solutions across various customer service and client-facing roles. As Healsy's Retail Assistant, she blends a strong interest in health, design, and human connection to craft meaningful experiences for every customer entering our clinic.
 								<br><br>
-								Specialising in Pilates for orthopaedic conditions and sports massage therapy, Minnie has a deep understanding of body mechanics which she applies to assess and address movement patterns, tailor Pilates programmes, rehabilitation techniques, and exercises that support performance and recovery. Whether you’re a beginner building a solid foundation or an experienced practitioner refining technique and deepening your connection to movement, Minnie’s classes are designed for you. Her aim is for you to experience the transformative benefits of Pilates in a space where you can restore, rekindle, and revive.
+								At Healsy, Kacey is instrumental in guiding clients through our insole selection process. Her expertise spans everything from pressure scans and 3D foot assessments to clearly explaining which materials and features best suit individual needs. Renowned for her clear communication and approachable manner, Kacey ensures each customer feels fully supported and confident in their choices.
+								<br><br>
+								Passionate about translating complex clinical information into practical, easy-to-understand advice, Kacey believes that comfort, posture, and performance truly start from the ground up. She is proud to be part of a team that combines innovation with genuine care to significantly improve people’s daily movement and overall well-being.
 							</p>
 						</div>
 					</div>

@@ -31,9 +31,9 @@
 					</div>
 					<div class="topbox">
 						<div class="txtbox">
-							<p class="tit">Minnie Edwards</p>
+							<p class="tit">Joy Lee</p>
 							<p class="desc">
-								Clinical Pilates Instructor
+								Administrative Staff
 							</p>
 							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
@@ -46,10 +46,12 @@
 					</div>
 					<div class="contbox">
 						<div class="contitem">
-							<p class="desc lt1">
-								Minnie graduated with first-class honours in dance and choreography in 2020, which propelled her training in Pilates teaching. Her approach to movement is rooted in the belief that it’s never a one-size-fits-all practice. The strength of Pilates lies in its ability to adapt to the unique needs of each individual, making it a highly beneficial and versatile form of bodywork. Minnie cultivates a space that helps you feel at home in your body, with classes that blend classical and contemporary Pilates repertoire. She creates flow through movement while giving anatomical knowledge designed to help you feel at ease, connected, and capable.
+							<p class="desc">
+								With over eight years in healthcare administration and management, including two years specialising in physiotherapy practice operations, I possess a comprehensive understanding of delivering seamless, supportive, and compassionate client service. I am dedicated to cultivating a professional yet welcoming clinic environment where every client feels genuinely heard, valued, and cared for.
 								<br><br>
-								Specialising in Pilates for orthopaedic conditions and sports massage therapy, Minnie has a deep understanding of body mechanics which she applies to assess and address movement patterns, tailor Pilates programmes, rehabilitation techniques, and exercises that support performance and recovery. Whether you’re a beginner building a solid foundation or an experienced practitioner refining technique and deepening your connection to movement, Minnie’s classes are designed for you. Her aim is for you to experience the transformative benefits of Pilates in a space where you can restore, rekindle, and revive.
+								My diverse background in the health industry has honed my communication, organisational, and problem-solving abilities. This expertise enables me to confidently manage front-desk coordination, intricate scheduling, and patient inquiries with both efficiency and empathy. I firmly believe that genuine connection and trust are the cornerstones of exceptional healthcare.
+								<br><br>
+								As a Administrator, my primary goal is to ensure each client feels comfortable and confident throughout their entire treatment journey. Outside of my professional life, I cherish spending time in nature and playing golf, activities that help me maintain a balanced and focused perspective.
 							</p>
 						</div>
 					</div>

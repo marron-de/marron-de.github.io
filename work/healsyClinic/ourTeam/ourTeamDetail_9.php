@@ -31,9 +31,9 @@
 					</div>
 					<div class="topbox">
 						<div class="txtbox">
-							<p class="tit">Minnie Edwards</p>
+							<p class="tit">Erin Mcgiffen</p>
 							<p class="desc">
-								Clinical Pilates Instructor
+								Administrative Staff
 							</p>
 							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
@@ -47,9 +47,9 @@
 					<div class="contbox">
 						<div class="contitem">
 							<p class="desc lt1">
-								Minnie graduated with first-class honours in dance and choreography in 2020, which propelled her training in Pilates teaching. Her approach to movement is rooted in the belief that it’s never a one-size-fits-all practice. The strength of Pilates lies in its ability to adapt to the unique needs of each individual, making it a highly beneficial and versatile form of bodywork. Minnie cultivates a space that helps you feel at home in your body, with classes that blend classical and contemporary Pilates repertoire. She creates flow through movement while giving anatomical knowledge designed to help you feel at ease, connected, and capable.
+								With eight years of comprehensive experience in the health and fitness industry, I bring a diverse and valuable skill set to our team. My background includes six years in reception and administration, a Bachelor of Exercise and Sport Science, and four years as a certified Level 2 Sports Trainer. In this role, I actively provided vital injury management, essential sports strapping, and critical first aid services.
 								<br><br>
-								Specialising in Pilates for orthopaedic conditions and sports massage therapy, Minnie has a deep understanding of body mechanics which she applies to assess and address movement patterns, tailor Pilates programmes, rehabilitation techniques, and exercises that support performance and recovery. Whether you’re a beginner building a solid foundation or an experienced practitioner refining technique and deepening your connection to movement, Minnie’s classes are designed for you. Her aim is for you to experience the transformative benefits of Pilates in a space where you can restore, rekindle, and revive.
+								This extensive experience has familiarised me with numerous sports, common injuries, and the profound support physiotherapy offers, from both a professional's and an athlete's perspective. Such insights have equipped me to excel in clear communication, demonstrate genuine empathy, effectively manage high-pressure situations, and provide tailored support to patients. I take immense pride in being approachable and fostering a professional, supportive environment where every client feels truly understood, respected, and valued throughout their recovery journey.
 							</p>
 						</div>
 					</div>

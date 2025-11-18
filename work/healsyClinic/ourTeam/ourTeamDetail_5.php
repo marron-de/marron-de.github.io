@@ -32,13 +32,15 @@
 					<div class="topbox">
 						<div class="txtbox">
 							<p class="tit">Jun Park</p>
-							<p class="desc">
-								Accredited Exercise physiologist
+							<p class="desc">Accredited Exercise physiologist</p>
+							<p class="certi">
+								Master of Clinical Exercise Physiology <br>
+								Bachelor of Exercise & Sports Science
 							</p>
-							<button type="button" class="button">
+							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
 								<span class="txt">BOOK NOW</span>
-							</button>
+							</a>
 						</div>
 						<div class="imgbox">
 							<img src="../img/teamDetail_img.png" alt="" class="img">
@@ -46,7 +48,6 @@
 					</div>
 					<div class="contbox">
 						<div class="contitem">
-							<p class="tit">A&nbsp; self-introduction</p>
 							<p class="desc lt1">
 								With over 11 years of dedicated experience in the health and fitness industry, Jun is deeply committed to facilitating lasting improvements in strength, mobility, and overall well-being through evidence-based exercise and rehabilitation. For the past five years, Jun has specialised in delivering personalised personal training and exercise physiology services, expertly integrating clinical exercise science into bespoke programs tailored to each client’s unique needs and goals.
 								<br><br>
@@ -54,13 +55,6 @@
 								<br><br>
 								As Jun embarks on this next professional chapter within our multidisciplinary environment, they are eager to expand their reach and expertise. They are passionate about continuing to guide clients towards healthier, stronger, and more confident versions of themselves — whether through consistent exercise routines, targeted rehabilitation, or sustainable long-term lifestyle changes. Jun takes immense pride in offering a professional, personalised, and science-driven approach to every session, ensuring each client moves better, feels stronger, and ultimately lives a healthier, more fulfilling life.
 							</p>
-						</div>
-						<div class="contitem">
-							<p class="tit">Licenses & Certifications</p>
-							<div class="descbox">
-								<p class="desc dot">Master of Clinical Exercise Physiology</p>
-								<p class="desc dot">Bachelor of Exercise & Sports Science</p>
-							</div>
 						</div>
 					</div>
 					<div class="btnbox">

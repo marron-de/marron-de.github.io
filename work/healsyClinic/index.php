@@ -36,7 +36,7 @@
 				</div>
 				<div class="h_navbox">
 					<div class="h_side">
-						<a href="" class="side_btn">Appointments</a>
+						<a href="/booking/booking.php" class="side_btn">Appointments</a>
 					</div>
 				</div>
 				<button type="button" class="menu_open"></button>
@@ -50,7 +50,7 @@
 			<div id="fullpage">
 				<section class="section main_section ms1 move topArea" data-aos="fade" id="section0">
 					<div class="vidbox">
-						<video id="ms1_video" class="video" src="http://healsyclinic.com.au/video/Healsy_Store_V1_v2.mp4" loop muted autoplay playsinline data-autoplay></video>
+						<video id="ms1_video" class="video" src="video/Healsy_Store_V1_v2.mp4" loop muted autoplay playsinline data-autoplay></video>
 					</div>
 					<div class="txtbox inner full move" data-aos="fade-left" data-aos-duration="500" aos-anchor>
 						<p class="tit">Tailored Orthotic Solutions</p>
@@ -185,7 +185,7 @@
 										<div class="rightbox">
 											<div class="swiper ms3_sec_swiper1">
 												<div class="swiper-wrapper">
-													<div class="swiper-slide item">
+													<a href="ourTeam/ourTeamDetail_1.php" class="swiper-slide item">
 														<div class="imgbox">
 															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
@@ -193,8 +193,8 @@
 															<p class="tit">Brian Park</p>
 															<p class="desc">Physiotherapist</p>
 														</div>
-													</div>
-													<div class="swiper-slide item">
+													</a>
+													<a href="ourTeam/ourTeamDetail_2.php" class="swiper-slide item">
 														<div class="imgbox">
 															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
@@ -202,8 +202,8 @@
 															<p class="tit">John Yo Han, Sung</p>
 															<p class="desc">Physiotherapist</p>
 														</div>
-													</div>
-													<div class="swiper-slide item">
+													</a>
+													<a href="ourTeam/ourTeamDetail_3.php" class="swiper-slide item">
 														<div class="imgbox">
 															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
@@ -211,8 +211,8 @@
 															<p class="tit">Tony Choo</p>
 															<p class="desc">Podiatrist</p>
 														</div>
-													</div>
-													<div class="swiper-slide item">
+													</a>
+													<a href="ourTeam/ourTeamDetail_4.php" class="swiper-slide item">
 														<div class="imgbox">
 															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
@@ -220,8 +220,8 @@
 															<p class="tit">Jacky Liu</p>
 															<p class="desc">Podiatrist</p>
 														</div>
-													</div>
-													<div class="swiper-slide item">
+													</a>
+													<a href="ourTeam/ourTeamDetail_5.php" class="swiper-slide item">
 														<div class="imgbox">
 															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
@@ -229,8 +229,8 @@
 															<p class="tit">Jun Park</p>
 															<p class="desc">Exercise Physiologist</p>
 														</div>
-													</div>
-													<div class="swiper-slide item">
+													</a>
+													<a href="ourTeam/ourTeamDetail_7.php" class="swiper-slide item">
 														<div class="imgbox">
 															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
@@ -238,7 +238,7 @@
 															<p class="tit">YeonJu, Park</p>
 															<p class="desc">Clinical Pilates Instructor</p>
 														</div>
-													</div>
+													</a>
 												</div>
 											</div>
 										</div>
@@ -611,7 +611,7 @@
 							<div class="infobox">
 								<p class="address">Shop 23, 15 De Clambe Drive Castle Hill NSW 2154
 								</p>
-								<p class="time">Monday to Friday: 7:30am – 8pm l Saturday : 9am – 3pm l Sunday: Closed</p>
+								<p class="time">Monday to Friday: 7:30am – 8pm l Saturday : 9am – 5pm l Sunday: Closed</p>
 								<div class="descbox">
 									<div class="descitem">
 										<span class="tit">Email</span>

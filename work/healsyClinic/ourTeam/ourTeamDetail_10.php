@@ -31,9 +31,9 @@
 					</div>
 					<div class="topbox">
 						<div class="txtbox">
-							<p class="tit">Minnie Edwards</p>
+							<p class="tit">Marisa Carnevale</p>
 							<p class="desc">
-								Clinical Pilates Instructor
+								Administrative Staff
 							</p>
 							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
@@ -47,9 +47,11 @@
 					<div class="contbox">
 						<div class="contitem">
 							<p class="desc lt1">
-								Minnie graduated with first-class honours in dance and choreography in 2020, which propelled her training in Pilates teaching. Her approach to movement is rooted in the belief that it’s never a one-size-fits-all practice. The strength of Pilates lies in its ability to adapt to the unique needs of each individual, making it a highly beneficial and versatile form of bodywork. Minnie cultivates a space that helps you feel at home in your body, with classes that blend classical and contemporary Pilates repertoire. She creates flow through movement while giving anatomical knowledge designed to help you feel at ease, connected, and capable.
+								Hi, I’m Marisa, one of the receptionists here at the clinic, and likely among the first friendly faces you’ll encounter. With over 16 years in healthcare reception, I genuinely enjoy contributing to a team dedicated to helping individuals feel and move better. My role centers on ensuring your clinic experience is seamless, welcoming, and stress-free. This includes everything from efficient appointment booking and answering questions to maintaining smooth operations behind the scenes.
 								<br><br>
-								Specialising in Pilates for orthopaedic conditions and sports massage therapy, Minnie has a deep understanding of body mechanics which she applies to assess and address movement patterns, tailor Pilates programmes, rehabilitation techniques, and exercises that support performance and recovery. Whether you’re a beginner building a solid foundation or an experienced practitioner refining technique and deepening your connection to movement, Minnie’s classes are designed for you. Her aim is for you to experience the transformative benefits of Pilates in a space where you can restore, rekindle, and revive.
+								I understand that visiting a clinic can sometimes be daunting, particularly when managing pain or recovering from an injury. Therefore, my priority is always to cultivate a calm, friendly environment where you feel consistently supported and cared for from the moment you arrive.
+								<br><br>
+								Outside of work, I love staying active with tennis, exploring new places through travel, and discovering fantastic dining experiences. These passions help me maintain a balanced and positive outlook. I look forward to ensuring your time at our clinic is a comfortable and positive one.
 							</p>
 						</div>
 					</div>
