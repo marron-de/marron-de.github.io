@@ -49,7 +49,7 @@
 								<div class="descbox">
 									<div class="descitem">
 										<span class="tit">Email</span>
-										<span class="desc">contact@healsyclinic.com.au</span>
+										<span class="desc">info@healsyclinic.com.au</span>
 									</div>
 									<div class="descitem">
 										<span class="tit">Tel</span>

@@ -13,7 +13,7 @@
 				<div class="info_bottom">
 					<div class="item">
 						<span class="tit">Mail.</span>
-						<span class="desc">contact@healsyclinic.com.au</span>
+						<span class="desc">info@healsyclinic.com.au</span>
 					</div>
 					<div class="item">
 						<span class="tit">Tel.</span>

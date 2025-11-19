@@ -615,7 +615,7 @@
 								<div class="descbox">
 									<div class="descitem">
 										<span class="tit">Email</span>
-										<span class="desc">contact@healsyclinic.com.au</span>
+										<span class="desc">info@healsyclinic.com.au</span>
 									</div>
 									<div class="descitem">
 										<span class="tit">Tel</span>
@@ -632,19 +632,19 @@
 								<div class="form_box">
 									<div class="input_box">
 										<label class="label_text">Name</label>
-										<input type="text" class="input_text" placeholder="Please enter your name.">
+										<input type="text" class="input_text" placeholder="Please enter your name">
 									</div>
 									<div class="input_box">
 										<label class="label_text">Email</label>
-										<input type="text" class="input_text" placeholder="Please enter your email.">
+										<input type="text" class="input_text" placeholder="Please enter your email">
 									</div>
 									<div class="input_box">
 										<label class="label_text">Telephone</label>
-										<input type="text" class="input_text" placeholder="+1234567890" value="+1234567890">
+										<input type="text" class="input_text" placeholder="Please enter your contact number">
 									</div>
 									<div class="input_box ver2">
 										<label class="label_text">Message</label>
-										<textarea class="input_text" placeholder="Please enter your message."></textarea>
+										<textarea class="input_text" placeholder="Please enter your message"></textarea>
 									</div>
 								</div>
 								<div class="form_btnbox">

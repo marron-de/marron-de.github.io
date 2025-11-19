@@ -47,7 +47,6 @@
 					</div>
 					<div class="contbox">
 						<div class="contitem">
-							<p class="tit">A&nbsp; self-introduction</p>
 							<p class="desc">
 								Jacky was born in New Zealand and grew up in Auckland, where he completed his Bachelor of Podiatry in 2016. After graduating, he moved to Sydney, Australia, drawn by the opportunity to further develop his podiatric skills and expand his career in a dynamic healthcare environment.
 								<br><br>
