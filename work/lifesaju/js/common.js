@@ -742,21 +742,41 @@ $(function () {
 
 
 // 25.09.14 작업
-// countUp
+// countUp 
 $(document).ready(function() {
   const CountUpCtor = window.countUp && window.countUp.CountUp;
   if (!CountUpCtor) return console.error('CountUp not found');
 
   $('.countup').each(function() {
     const el = $(this);
-    const target = el.data('target') || 0;
-    const duration = (el.data('time') || 2000) / 1000;
-    const delay = el.data('delay') || 0;
 
-    const counter = new CountUpCtor(this, target, {
+    const start = el.data('start');
+    const end = el.data('end');
+    const target = el.data('target');
+
+    const duration = (parseInt(el.data('time'), 10) || 2000) / 1000;
+    const delay = parseInt(el.data('delay'), 10) || 0;
+
+    // 옵션 객체를 "필요한 값만" 넣어서 생성
+    const options = {
       duration: duration,
-      separator: ',',
-    });
+      separator: ','
+    };
+
+    // start가 있을 때만 startVal 추가
+    if (!isNaN(parseInt(start, 10))) {
+      options.startVal = parseInt(start, 10);
+    }
+
+    // endValue 결정 (target 또는 end), 없으면 0
+    let endValue = 0;
+    if (!isNaN(parseInt(end, 10))) {
+      endValue = parseInt(end, 10);
+    } else if (!isNaN(parseInt(target, 10))) {
+      endValue = parseInt(target, 10);
+    }
+
+    const counter = new CountUpCtor(this, endValue, options);
 
     setTimeout(() => {
       if (!counter.error) counter.start();
@@ -891,4 +911,194 @@ $(document).ready(function() {
 
     $(this).val(parts.join('-'));
   });
+});
+
+
+
+// 25.11.18 작업
+// AOS
+AOS.init({
+	duration: 1000,
+	easing: 'ease', 
+})
+
+// vibration
+document.querySelectorAll('.vibration').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        btn.classList.add('active');
+        setTimeout(() => {
+            btn.classList.remove('active');
+        }, 300);
+    });
+});
+
+
+// 인스타 제너럴 유도 카카오 팝업
+$(".insta_wrap .intro_section .cardbox .card").click(function () {
+	$(".insta_wrap .intro_section .cardbox .card").removeClass("selected")
+	$(this).addClass("selected")
+	$(".insta_wrap").addClass("selected");
+  	$(".instaKakao_modal").addClass("show");
+})
+$(document).mouseup(function (e) {
+	if ($(".instaKakao_modal .modal_box").has(e.target).length === 0 ) {
+		$(".insta_wrap").removeClass("selected")
+	}
+});
+
+
+// 인스타 제너럴 유도 상세 팝업
+function instaDetailModal() {
+	$(".instaDetail_modal").addClass("show");
+}
+
+
+// 인스타 제너럴 유도 상세 팝업
+function instaKakaoModal() {
+	$(".instaKakao_modal").addClass("show");
+}
+
+
+// 100원 상담
+document.addEventListener("DOMContentLoaded", function() {
+  const countEl = document.querySelector(".consult100_wrap .intro_section #count");
+  
+  if (!countEl) return;
+
+  const confettibox = document.querySelector(".consult100_wrap .intro_section .imgbox");
+
+  const startValue = parseInt(countEl.textContent.replace(/,/g, ""), 10) || 10000;
+  const endValue = 100;
+  const duration = parseInt(countEl.dataset.time, 10) || 2000; 
+
+  let startTime = null;
+
+  function animateCount(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+	
+    const current = Math.floor(startValue - (startValue - endValue) * progress);
+    countEl.textContent = current.toLocaleString();
+
+    if (progress < 1) {
+      requestAnimationFrame(animateCount);
+    } else {
+      // 100원 도달 시 콘페티
+      if (window.confetti) {
+        const rect = confettibox.getBoundingClientRect();
+        const x = (rect.left + rect.width / 2) / window.innerWidth;
+        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { x: x, y: y }
+        });
+      }
+    }
+  }
+
+  requestAnimationFrame(animateCount);
+});
+
+
+// 100원 상담 하단 버튼 카운트 다운
+document.addEventListener("DOMContentLoaded", function() {
+  const countEl = document.querySelector(".consult100_wrap .fixbtnbox .count_down");
+  
+  if (!countEl) return;
+  
+  const duration = parseInt(countEl.dataset.time, 10) || 2000; 
+  const startValue = parseInt(countEl.textContent.replace(/,/g, ""), 10) || 10000;
+  const endValue = 100;
+
+  let startTime = null;
+
+  function animateCount(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1); // 0 ~ 1
+
+    const current = Math.floor(startValue - (startValue - endValue) * progress);
+    countEl.textContent = current.toLocaleString();
+
+    if (progress < 1) {
+      requestAnimationFrame(animateCount);
+    }
+  }
+
+  requestAnimationFrame(animateCount);
+});
+
+
+// 100원 상담 상세 카운트다운
+document.addEventListener("DOMContentLoaded", function() {
+  const countEl = document.querySelector(".consult100_wrap .detail_section .count_down");
+  if (!countEl) return;
+
+  const duration = parseInt(countEl.dataset.time, 10) || 3000;
+  const startValue = parseInt(countEl.textContent.replace(/,/g, ""), 10) || 10000;
+  const endValue = 100;
+
+  let startTime = null;
+
+ // 극강 감속 (지수형)
+  function easeOutExpo(t) {
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+
+    let progress = Math.min(elapsed / duration, 1);
+    progress = easeOutExpo(progress);
+
+    const range = startValue - endValue;
+    let current = Math.ceil(startValue - range * progress);
+
+    if (parseInt(countEl.textContent.replace(/,/g, ""), 10) !== current) {
+      countEl.textContent = current.toLocaleString();
+    }
+
+    if (elapsed < duration) {
+      requestAnimationFrame(animate);
+    } else {
+      countEl.textContent = endValue.toLocaleString();
+    }
+  }
+
+  requestAnimationFrame(animate);
+});
+
+
+// 100원 상담 상세 구매 슬라이드
+const people_slider = new Swiper(".people_slider", {
+	direction: "vertical",
+	loop: true,
+	speed: 500,		
+	observer: true,  
+	observeParents: true,  
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+});
+
+
+// 결제수단 없음 팝업
+function pointModal() {
+	$(".point_modal").addClass("show");
+}
+
+// 결제수단 없음 팝업 슬라이드
+const point_swiper = new Swiper(".point_swiper", {
+	speed: 500,		
+	observer: true,  
+	observeParents: true,  
+	pagination: {
+		el: '.point_swiper .pagination',
+		clickable: true,
+	},
 });

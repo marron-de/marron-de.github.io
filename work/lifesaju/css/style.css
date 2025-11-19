@@ -1426,7 +1426,7 @@ line-height: 150%;letter-spacing: -0.02em;text-align: center;color: var(--text-2
 
 
 
-/* 250912 추가작업 */
+/* 25.09.14 추가작업 */
 /* 캐릭터키우기 */
 .character_wrap.web_left .container {height: calc(var(--vh) * 100 - 6rem);}
 .character_wrap.web_left .navigaion {margin: 0;}
@@ -1593,3 +1593,199 @@ line-height: 150%;letter-spacing: -0.02em;text-align: center;color: var(--text-2
 .coupon_wrap .coupon_listbox .coupon_list > .item .price{font-weight: 700;font-size: 2.8rem;line-height: 140%;color: var(--text-1);}
 .coupon_wrap .coupon_listbox .coupon_list > .item .desc{font-weight: 600;font-size: 1.4rem; line-height: 140%;color: var(--text-1);}
 .coupon_wrap .coupon_listbox .coupon_list > .item .info{font-weight: 500;font-size: 1.2rem;line-height: 150%;color: #8c8c8c; margin-top: 0.8rem;}
+
+
+
+
+/* 25.11.18 추가작업 */
+[data-aos=fade-up] {transform: translate3d(0,50px,0)}
+[data-aos=fade-down] {transform: translate3d(0,-50px,0)}
+[data-aos=fade-right] { transform: translate3d(-50px,0,0)}
+[data-aos=fade-left] {transform: translate3d(50px,0,0)}
+.vibration.active { animation: vibrate 0.3s ease;}
+
+@keyframes typing { from {width: 0%;} to {width: 100%; }}
+@keyframes cursor-blink { 0%,  100% {opacity: 0;} 50% { opacity: 1;}}
+@keyframes vibrate {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-2deg); }
+  50%  { transform: rotate(2deg); }
+  75%  { transform: rotate(-2deg); }
+  100%  { transform: rotate(0deg);}
+}
+@keyframes vibrateModal {
+  0%   { transform: translate(-50%, 0) rotate(0deg); }
+  20%  { transform: translate(-50%, 0) rotate(-2deg); }
+  40%  { transform: translate(-50%, 0) rotate(2deg); }
+  60%  { transform: translate(-50%, 0) rotate(-2deg); }
+  80%  { transform: translate(-50%, 0) rotate(2deg); }
+  100%  { transform: translate(-50%, 0) rotate(0deg);}
+}
+
+/* 인스타 제너럴 유도 */
+.insta_wrap .intro_section { position: relative;  width: 100%;  min-height: calc(var(--vh) * 100);;  background: linear-gradient(180deg, #000 0%, #650000 100%);  display: flex;  flex-direction: column;  align-items: center; justify-content: center; padding-bottom: 8rem;}
+.insta_wrap .intro_section > .inner { padding: 0 1rem; display: flex; flex-direction: column; align-items: center; gap: 10rem;}
+.insta_wrap .intro_section .titbox {  display: flex;  flex-direction: column;  align-items: center;  margin-bottom: 1rem;overflow: hidden;}
+.insta_wrap .intro_section .titbox .txt {  font-weight: 600;  font-size: 2.8rem;   line-height: 150%;  text-align: center;  color: var(--white);}
+.insta_wrap .intro_section .cardbox { display: flex;  justify-content: center;  gap: 1rem;}
+.insta_wrap .intro_section .cardbox .card { width: 33.333%; display: flex;  align-items: center;  justify-content: center; cursor: pointer; border-radius: 0.6rem; transition: all 0.4s ease;}
+.insta_wrap .intro_section .cardbox .card .img{width: 100%;}
+.insta_wrap .intro_section .typingbox {  display: inline-flex;  justify-content: center;   align-items: center;  height: fit-content;  gap: 0.313rem;   }
+.insta_wrap .intro_section .typingbox .cursor{display: inline-block;  width: 0.3rem;
+  height: 2rem; background-color: rgba(255, 255, 255, 0.7); animation: cursor-blink 0.4s ease-in-out 6 forwards;}
+.insta_wrap .intro_section .typingbox .cursor.transparent {background-color: transparent;}
+.insta_wrap .intro_section .typingbox .text{white-space: nowrap;  overflow: hidden;border-right: none; animation: typing 2.5s steps(22, end);font-family: var(--second-family);  font-weight: 400;  font-size: 1.9rem;  line-height: 130%;   text-align: center;  color: rgba(255, 255, 255, 0.7);}
+.insta_wrap.selected .intro_section .cardbox .card:not(.selected) { opacity: 0.8;  filter: brightness(0.6);}
+.insta_wrap.selected .intro_section .cardbox .card.selected {box-shadow: 0 0 1rem 0.2rem rgba(255, 251, 202, 0.7);}
+
+
+/* 카카오 로그인 모달 (공통) */
+.modal.kakao_modal {  background: none;}
+.modal.kakao_modal .modal_box { padding: 5rem 2.5rem 3.6rem; border-radius: 0;  overflow: unset;  background: none; box-shadow: none;}
+.modal.kakao_modal .modal_box::before {content: ""; position: absolute;left: 0; top: 0; width: 100%; height: 100%; border-radius: 1.2rem 1.2rem 0 0; position: absolute;  left: 0; top: 0; pointer-events: none; background: var(--white);  z-index: -1; box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.18);}
+.kakao_modal .people_banner { font-weight: 400;  font-size: 1.6rem;  line-height: 100%;   letter-spacing: -0.02em;  text-align: center;  color: rgba(255, 255, 255, 0.7);   padding: 0.8rem 3.5rem;  background: rgba(0, 0, 0, 0.5);  border-radius: 10rem;   position: absolute;  left: 50%;  bottom: calc(100% + 1rem);  transform: translateX(-50%);  white-space: nowrap;}
+.kakao_modal .people_banner .bold{font-weight: 500;}
+.kakao_modal .titbox {display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 2.7rem; padding: 0 0.4rem;}
+.kakao_modal .titbox .tit{font-weight: 700;font-size: 2rem;line-height: 100%;letter-spacing: -0.02em;color: var(--text-1);}
+.kakao_modal .titbox .desc{font-weight: 500;font-size: 1.4rem; line-height: 100%; letter-spacing: -0.02em;
+color: var(--text-2);}
+.kakao_modal .kakao_btn{position: relative; font-weight: 600;font-size: 1.8rem;line-height: 130%;color: #191919; border-radius: 1.2rem; width: 100%;height: 5.4rem;background: #fee500;}
+.kakao_modal .kakao_btn .icon{background: url(../img/kakao_button.png) no-repeat center/contain; width: 2.5rem; aspect-ratio: 1/1; position: absolute; left: 3rem; top: 50%; transform: translateY(-50%);}
+
+
+/* 인스타 제너럴 유도 상세 */
+.insta_wrap .detail_section {width: 100%;  height: calc(var(--vh) * 100);;  background: linear-gradient(180deg, #000 0%, #650000 100%);  display: flex;  flex-direction: column; align-items: center; padding-top: 10rem; overflow: auto;}
+.insta_wrap .detail_section > .inner { padding: 0 3.2rem;}
+.insta_wrap .detail_section .topbox { display: flex;  flex-direction: column;  align-items: center; gap: 4rem; margin-bottom: 4rem;}
+.insta_wrap .detail_section .topbox .card{ width: 14.2rem; display: block;box-shadow: 0 0 1.6rem 0.2rem rgba(255, 251, 202, 0.7); border-radius: 0.6rem;}
+.insta_wrap .detail_section .topbox .tit { font-weight: 400;  font-size: 1.6rem;   line-height: 130%; text-align: center;  color: #bdbdbd;}
+.insta_wrap .detail_section .topbox .tit .bold { font-weight: 700;  font-size: 2.3rem;  line-height: 130%;  color: var(--white);}
+.insta_wrap .detail_section .contbox{background: #1f0202; border-radius: 1.2rem; padding: 2.5rem 3.37rem; font-weight: 400; font-size: 16px; line-height: 145%; color: var(--white);}
+.insta_wrap .detail_section .bntbox { position: sticky;  bottom: 0;   width: calc(100% + 3.2rem * 2);  margin: 0 -3.2rem;  padding: 8rem 2.5rem 4rem;  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #650000 32%);}
+.insta_wrap .detail_section .bntbox .button { border-radius: 1.2rem;  width: 100%;  height: 5.4rem;  background: var(--primary);  font-weight: 600;  font-size: 1.8rem;  line-height: 130%;  color: var(--white);}
+
+
+/* 인스타 제너럴 유도 상세 팝업 */
+.modal.instaDetail_modal .modal_box {  width: calc(100% - 1.4rem * 2);  bottom: 1.4rem;  border-radius: 2rem;  left: 50%;  transform: translate(-50%, 0);}
+.modal.instaDetail_modal.show .modal_box { transform: translate(-50%, 0);  animation: vibrateModal 0.3s ease 0.3s;}
+.modal.instaDetail_modal .modal_box .modal_close {  position: absolute; right: 1rem;  top: 1.2rem;  width: 2.2rem;  display: flex;  align-items: center; justify-content: center;}
+.modal.instaDetail_modal .modal_box .modal_body{padding: 4.8rem 2.7rem 2.5rem;}
+.modal.instaDetail_modal .modal_box .modal_body .title{font-weight: 700;  font-size: 2.3rem;   line-height: 140%;  letter-spacing: -0.02em; color: var(--text-1);margin-bottom: 4rem;}
+.modal.instaDetail_modal .modal_box .modal_body .cardbox{display: flex; gap: 2.3rem;}
+.modal.instaDetail_modal .modal_box .modal_body .cardbox .card { width: 33.333%;  display: flex;   align-items: center; justify-content: center;}
+.modal.instaDetail_modal .modal_box .modal_body .cardbox .card .img {width: 100%;}
+.modal.instaDetail_modal .modal_box .modal_btnbox{padding: 2.5rem 1rem;}
+.modal.instaDetail_modal .modal_box .modal_btnbox .btn{background: var(--primary); height: 5.4rem;}
+
+
+/* 100원 상담 공통 */
+.consult100_wrap .fixheadbox {position: sticky; bottom: 0; display: flex; flex-direction: column; gap: 2rem; padding-top: 4.6rem;}
+.consult100_wrap .fixheadbox .top .back_btn{background: url(../img/ico_back4.png) no-repeat center / contain;  width: 2.2rem; aspect-ratio: 1 / 1;  display: flex;}
+.consult100_wrap .fixheadbox .bottom .title{font-size: 2.2rem;line-height: 130%;font-weight: 600;color: #000; }
+.consult100_wrap .fixheadbox .bottom .title .color{font-weight: 700; color: var(--secondary);}
+.consult100_wrap .fixbtnbox {  position: sticky;  bottom: 0;   width: calc(100% + 4rem);   margin-left: -2rem;  margin-right: -2rem;  display: flex;  flex-direction: column;  padding: 2.5rem 2.5rem 0.8rem;  min-height: 11.7rem;  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #fff 25%);}
+.consult100_wrap .fixbtnbox .pri_btn {  border-radius: 1.2rem;   width: 100%;  height: 5.4rem;  background: var(--primary);  font-weight: 600;  font-size: 1.8rem;  line-height: 130%; color: var(--white);}
+.consult100_wrap .fixbtnbox .sub_btn {  width: 100%; height: 3rem;  font-weight: 600;  font-size: 1.2rem; line-height: 130%; text-decoration: underline;  color: #9a9a9a;}
+.consult100_wrap .fixbtnbox .people_slider {margin-bottom: 1rem;height: 3.4rem;}
+.consult100_wrap .fixbtnbox .people_slider .swiper-slide {font-weight: 500;font-size: 1.4rem;line-height: 3.4rem;letter-spacing: -0.02em;text-align: center;color: var(--text-2);}
+.consult100_wrap .fixbtnbox .people_slider .swiper-slide .bold {font-weight: 700;}
+
+
+/* 100원 상담 */
+.consult100_wrap .intro_section{ position: relative;  width: 100%;  min-height: calc(var(--vh) * 100);;  display: flex;  flex-direction: column;  align-items: center; padding-top: 12rem; justify-content: center; }
+.consult100_wrap .intro_section > .inner { flex: 1; display: flex;  flex-direction: column;  align-items: center;  justify-content: space-between;}
+.consult100_wrap .intro_section .txtbox { display: flex;  flex-direction: column;   align-items: center; margin-bottom: 7rem;}
+.consult100_wrap .intro_section .txtbox .badge {  background: rgba(0, 0, 0, 0.12);   border-radius: 10rem;  padding: 0.4rem 1rem;  min-width: 13.2rem;  font-weight: 500;   font-size: 1.5rem;  line-height: 154%;  text-align: center;  color: #000;   margin-bottom: 1.6rem;}
+.consult100_wrap .intro_section .txtbox .tit {  font-weight: 700;  font-size: 3rem;   line-height: 130%;  text-align: center;  color: #000;  margin-bottom: 1rem;}
+.consult100_wrap .intro_section .txtbox .sub {  font-weight: 400;  font-size: 1.8rem;   line-height: 171%;  text-align: center; color: #000;}
+.consult100_wrap .intro_section .imgbox {flex: 1; display: flex; align-items: flex-start; justify-content: center; width: 100%;}
+.consult100_wrap .intro_section .imgbox .img{width: 19.7rem; max-width: 57%;}
+.consult100_wrap .modal.kakao_modal {background: rgba(0, 0, 0, 0.15);}
+
+
+/* 100원 상담 목록 */
+.consult100_wrap .list_section .fixheadbox {margin-bottom: 2.5rem;}
+.consult100_wrap .list_section { position: relative;  width: 100%;  min-height: calc(var(--vh) * 100);;  display: flex;  flex-direction: column; }
+.consult100_wrap .list_section > .inner { flex: 1; display: flex; flex-direction: column; }
+.consult100_wrap .list_section .contbox { display: flex;  flex-wrap: wrap;  gap: 1.6rem; }
+.consult100_wrap .list_section .contbox .item { width: calc((100% - 1.6rem) / 2);   display: flex; flex-direction: column; gap: 1rem;}
+.consult100_wrap .list_section .contbox .item .imgbox{position: relative; border: 3px solid #19a7ff; border-radius: 1.2rem; display: flex; align-items: center; justify-content: center; overflow: hidden;}
+.consult100_wrap .list_section .contbox .item .imgbox .img{width: 100%; height: 100%; object-fit: cover;}
+.consult100_wrap .list_section .contbox .item .imgbox .check{background: url(../img/consult_check.png) no-repeat center/contain; width: 2.2rem; aspect-ratio: 1/1; position: absolute; left: 0.8rem ;top: 0.8rem; appearance: none;}
+.consult100_wrap .list_section .contbox .item .imgbox .check:checked{background-image: url(../img/consult_check_on.png);}
+.consult100_wrap .list_section .contbox .item .txtbox .title{font-weight: 700;font-size: 1.4rem;line-height: 130%;color: var(--text-1); display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.6rem;}
+.consult100_wrap .list_section .contbox .item .txtbox .title .badge{font-family: var(--second-family);font-weight: 700;font-size: 1rem;letter-spacing: 0.04em;text-align: center;color: var(--white); display: inline-flex; align-items: center; justify-content: center; padding: 0.2rem 0.4rem; border-radius: 0.4rem;}
+.consult100_wrap .list_section .contbox .item .txtbox .title .badge.typeA{background: #884dac;}
+.consult100_wrap .list_section .contbox .item .txtbox .title .badge.typeB{background: var(--primary);}
+.consult100_wrap .list_section .contbox .item .txtbox .title .badge.typeC{background: #e5a604;}
+.consult100_wrap .list_section .contbox .item .txtbox .price {font-weight: 700; font-size: 1.6rem; line-height: 130%; letter-spacing: -0.04em; color: #a4a4a4; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem;}
+.consult100_wrap .list_section .contbox .item .txtbox .price .ori{text-decoration: line-through;}
+.consult100_wrap .list_section .contbox .item .txtbox .price .arrow {background: url(../img/consult_arrow.png) no-repeat center/contain; width: 1.1rem; aspect-ratio: 1/1; display: block;}
+.consult100_wrap .list_section .contbox .item .txtbox .price .sale{color: var(--secondary);}
+.consult100_wrap .list_section .contbox .item .txtbox .desc { font-weight: 500;   font-size: 1.2rem; line-height: 130%;  color: #c0c0c0;}
+.consult100_wrap .list_section .fixbtnbox {margin-top: auto;}
+
+
+/* 100원 상담 목록 */
+.consult100_wrap .detail_section .fixheadbox {margin-bottom: 6.3rem;}
+.consult100_wrap .detail_section { position: relative;  width: 100%;  min-height: calc(var(--vh) * 100);;  display: flex;  flex-direction: column; }
+.consult100_wrap .detail_section > .inner { flex: 1; display: flex; flex-direction: column; }
+.consult100_wrap .detail_section .contbox {display: flex; flex-direction: column; gap:1.6rem; padding: 0 1.5rem; margin-bottom: 4rem;}
+.consult100_wrap .detail_section .contbox .imgbox{position: relative; display: flex; align-items: center; justify-content: center; border-radius: 1.2rem; overflow: hidden;}
+.consult100_wrap .detail_section .contbox .imgbox .img{width: 100%; height: 100%; object-fit: cover;}
+.consult100_wrap .detail_section .contbox .imgbox .count{font-weight: 600;font-size: 1.2rem;line-height: 100%;text-align: center;color: var(--primary);border-radius: 0.4rem;
+padding: 0.4rem 0.6rem;background: var(--white); position: absolute; top: 1.1rem; left: 1.3rem;}
+.consult100_wrap .detail_section .contbox .txtbox .titbox{display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; margin-bottom: 1.3rem;}
+.consult100_wrap .detail_section .contbox .txtbox .titbox .title{font-weight: 600;
+font-size: 2.2rem;line-height: 130%;color: var(--text-1); display: flex; align-items: center; gap: 0.6rem;}
+.consult100_wrap .detail_section .contbox .txtbox .titbox .title .badge {display: flex; align-items: center; justify-content: center; padding: 0.6rem 0.8rem; border-radius: 0.6rem; font-family: var(--second-family); font-weight: 700;font-size: 1.6rem; line-height: 100%; letter-spacing: 0.04em;text-align: center;color: var(--white);}
+.consult100_wrap .detail_section .contbox .txtbox .titbox .title .badge.typeA{ background: #884dac;}
+.consult100_wrap .detail_section .contbox .txtbox .titbox .title .badge.typeB{background: var(--primary);}
+.consult100_wrap .detail_section .contbox .txtbox .titbox .title .badge.add_infotypeC{background: #e5a604;}
+.consult100_wrap .detail_section .contbox .txtbox .titbox .cate {display: block; align-items: center; gap:0.3rem}
+.consult100_wrap .detail_section .contbox .txtbox .titbox .cate .badge{border: 1px solid var(--text-2);border-radius: 1.2rem;padding: 0.3rem 1.2rem;font-weight: 600;font-size: 1.2rem;line-height: 130%;color: var(--text-2);}
+.consult100_wrap .detail_section .contbox .txtbox .pricebox{display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.2rem;}
+.consult100_wrap .detail_section .contbox .txtbox .pricebox .top{font-weight: 600;
+font-size: 1.8rem;line-height: 130%;letter-spacing: -0.04em;color: #a4a4a4; display: flex; align-items: center; gap: 0.2rem;}
+.consult100_wrap .detail_section .contbox .txtbox .pricebox .top .line{text-decoration: line-through;}
+.consult100_wrap .detail_section .contbox .txtbox .pricebox .top .sale{color: var(--secondary);}
+.consult100_wrap .detail_section .contbox .txtbox .pricebox .price{font-weight: 700;
+font-size: 3.4rem;line-height: 130%;letter-spacing: -0.04em;color: var(--text-1);}
+.consult100_wrap .detail_section .contbox .txtbox .share_banner{font-weight: 600;
+font-size: 1.4rem;line-height: 130%;color: var(--text-2);border-radius: 8px;
+padding: 1.6rem 1.3rem; background: var(--bg);}
+.consult100_wrap .detail_section .fixbtnbox {margin-top: auto;}
+
+
+/* 결제수단 없음 팝업 */
+.modal.point_modal .modal_box .modal_close {  position: absolute; right: 1.8rem;  top: 1.2rem;  width: 2.2rem;  display: flex;  align-items: center; justify-content: center;}
+.modal.point_modal .modal_box .modal_body{padding: 4.4rem 2rem 0;}
+.modal.point_modal .modal_box .modal_body .titbox{display: flex; flex-direction: column; align-items: center;  gap:1.2rem; margin-bottom: 2.4rem;}
+.modal.point_modal .modal_box .modal_body .titbox .tit{font-weight: 600;font-size: 1.8rem;
+line-height: 100%;letter-spacing: -0.02em;text-align: center;color: var(--text-1);}
+.modal.point_modal .modal_box .modal_body .titbox .desc{font-weight: 400;font-size: 1.4rem;line-height: 100%;letter-spacing: -0.02em;color: var(--text-2);}
+.modal.point_modal .modal_box .modal_body .titbox .desc .bold{}
+.modal.point_modal .modal_box .modal_body .point_swiper { width: 100%;}
+.modal.point_modal .modal_box .modal_body .point_swiper .swiper-slide{display: flex; align-items: center; justify-content: center;}
+.modal.point_modal .modal_box .modal_body .point_swiper .swiper-slide .img{width: 100%; max-width: 9rem;}
+.modal.point_modal .modal_box .modal_body .point_swiper .pagination{display: flex;align-items: center; justify-content: center; gap: 0.5rem; position: relative; left: auto; right: auto; top: auto; bottom: auto; margin: 0; margin-top: 3.2rem;}
+.modal.point_modal .modal_box .modal_body .point_swiper .pagination .swiper-pagination-bullet {width: 0.7rem; height: 0.7rem; border-radius: 10rem; background: var(--grey); opacity: 1; margin: 0; transition: all 0.4s ease;}
+.modal.point_modal .modal_box .modal_body .point_swiper .pagination .swiper-pagination-bullet-active { width: 1.6rem; background: var(--text-2);}
+.modal.point_modal .modal_box .modal_btnbox{padding: 2.5rem 2rem;}
+.modal.point_modal .modal_box .modal_btnbox .btn{ height: 5rem; border-radius: 0.6rem;}
+    
+
+/* 복채지원금 */
+.lucky_wrap .intro_section{ position: relative;  width: 100%;  min-height: calc(var(--vh) * 100);  display: flex;  flex-direction: column;  align-items: center; justify-content: center; padding-top: 12rem; }
+.lucky_wrap .intro_section > .inner { flex: 1; display: flex;  flex-direction: column;  align-items: center;  justify-content: space-between;}
+.lucky_wrap .intro_section .txtbox { display: flex;  flex-direction: column;   align-items: center; gap: 1.7rem; margin-bottom: 9rem;}
+.lucky_wrap .intro_section .txtbox .sub {font-weight: 500;font-size: 2.2rem;line-height: 154%;text-align: center;color: #000;}
+.lucky_wrap .intro_section .txtbox .tit {  font-weight: 700;  font-size: 3.4rem;   line-height: 130%;  text-align: center;  color: #000; }
+.lucky_wrap .intro_section .imgbox {flex: 1; display: flex; align-items: flex-start; justify-content: center;}
+.lucky_wrap .intro_section .imgbox .img {  width: calc(100% + 2rem);  max-width: unset;   margin: -10rem 0;}
+.lucky_wrap .intro_section .imgbox::before {content: ""; position: absolute;}
+.lucky_wrap .intro_section .btnbox { width: calc(100% + 4rem); margin-left: -2rem; margin-right: -2rem;  display: flex;  flex-direction: column;  padding: 0 2.5rem 0.8rem; min-height: 9.2rem;}
+.lucky_wrap .intro_section .btnbox .pri_btn {  border-radius: 1.2rem;   width: 100%;  height: 5.4rem;  background: var(--primary);  font-weight: 600;  font-size: 1.8rem;  line-height: 130%; color: var(--white);}
+.lucky_wrap .intro_section .btnbox .sub_btn {  width: 100%; height: 3rem;  font-weight: 600;  font-size: 1.2rem; line-height: 130%; text-decoration: underline;  color: #9a9a9a;}
+.lucky_wrap .intro_section .btnbox .people_badge {font-weight: 500;font-size: 1.4rem;line-height: 3.4rem;letter-spacing: -0.02em;text-align: center;color: var(--text-2); overflow: hidden;}
+.lucky_wrap .intro_section .btnbox .people_badge .bold {font-weight: 700;}
