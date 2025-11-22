@@ -139,10 +139,10 @@ const ms3_sec_swiper2 = new Swiper('.ms3_sec_swiper2', {
 	// scrollbar: {
 	// 	el: '.ms3_2 .scrollbar',
 	// },
-	// autoplay: {
-	// 	delay: 3000,
-	// 	disableOnInteraction: false,
-	// },
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
 	breakpoints: !isTouchDevice ? {
 		1080: {
 			spaceBetween: 60,
