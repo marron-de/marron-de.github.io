@@ -31,7 +31,7 @@
 			<div class="txtbox">
 				<p class="title">Sports / Remedial Massage</p>
 				<p class="desc ver3">
-					Sports and Remedial Massage is a targeted therapeutic treatment that focuses on assessing and treating musculoskeletal pain, injuries, and dysfunction. Unlike relaxation massage, it employs a range of deeper techniques – including trigger point therapy, myofascial release, deep tissue massage, and stretching - to identify and alleviate specific areas of tension, scar tissue, and adhesions within muscles, tendons, and ligaments.
+					Sports and remedial massage is a targeted therapeutic treatment that focuses on assessing and treating musculoskeletal pain, injuries, and dysfunction. Unlike relaxation massage, it uses a range of deeper techniques, including trigger point therapy, myofascial release, deep tissue massage, and stretching. Aims to identify and alleviate specific areas of tension, scar tissue, and adhesions within muscles, tendons, and ligaments.
 					<br><br>
 					Whether you're an athlete seeking to enhance performance, speed up recovery, and prevent injuries, or someone experiencing chronic muscle tension, posture-related pain (e.g., from desk work), or discomfort after an injury, this treatment can help. It promotes improved circulation, reduces muscle soreness, increases flexibility, and assists in the body's natural healing process, helping you move more freely and comfortably.
 				</p>

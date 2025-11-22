@@ -27,17 +27,16 @@
 			<section class="section ss1">
 				<div class="inner">
 					<div class="sub_titbox">
-						<p class="sub_title">Practitioner.</p>
+						<p class="sub_title">Practitioner</p>
 					</div>
 					<div class="topbox">
 						<div class="txtbox">
-							<p class="tit">Jun Park</p>
+							<p class="tit">Jonathan Phlek Duch</p>
 							<p class="desc">Accredited Exercise physiologist</p>
 							<p class="certi">
-								Master of Clinical Exercise Physiology <br>
-								Bachelor of Exercise & Sports Science
+								Bachelor of Exercise Physiology, ESSA
 							</p>
-							<a href="/booking/booking.php" type="button" class="button">
+							<a href="booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
 								<span class="txt">BOOK NOW</span>
 							</a>
@@ -48,12 +47,10 @@
 					</div>
 					<div class="contbox">
 						<div class="contitem">
-							<p class="desc lt1">
-								With over 11 years of dedicated experience in the health and fitness industry, Jun is deeply committed to facilitating lasting improvements in strength, mobility, and overall well-being through evidence-based exercise and rehabilitation. For the past five years, Jun has specialised in delivering personalised personal training and exercise physiology services, expertly integrating clinical exercise science into bespoke programs tailored to each client’s unique needs and goals.
+							<p class="desc lt2">
+								Jonathan is an Exercise Physiologist driven by a genuine passion for helping people improve their health, confidence, and quality of life through movement. His approach is grounded in the belief that exercise should be accessible, meaningful, and empowering for everyone. With a strong background in competitive powerlifting, martial arts, and freestyle wrestling, Jonathan understands the mechanics of training smart and the value of cultivating resilience, humility, and consistency—qualities he instils in his clients. His journey into this profession was sparked by realising the positive impact he could make by sharing his knowledge of health and fitness. This insight led him to pursue and complete a Bachelor of Exercise Physiology at UNSW.
 								<br><br>
-								Jun's diverse background includes extensive partnerships and contracts with various fitness facilities, where they have not only delivered specialised Exercise Physiology services but also led and mentored teams of personal trainers. This leadership experience underscores a commitment to excellence and a collaborative spirit.
-								<br><br>
-								As Jun embarks on this next professional chapter within our multidisciplinary environment, they are eager to expand their reach and expertise. They are passionate about continuing to guide clients towards healthier, stronger, and more confident versions of themselves — whether through consistent exercise routines, targeted rehabilitation, or sustainable long-term lifestyle changes. Jun takes immense pride in offering a professional, personalised, and science-driven approach to every session, ensuring each client moves better, feels stronger, and ultimately lives a healthier, more fulfilling life.
+								His clinical experience highlighted exercise as vital healthcare for chronic conditions, solidifying his dedication to safe, effective and highly personalised exercise programs focused on trust and supportive environment. Above all, Jonathan’s passion lies in helping people overcome barriers, feel confident in their bodies, and build sustainable habits for long-term wellbeing. It is truly a privilege for him to guide others toward feeling stronger, calmer, and more capable in their everyday life.
 							</p>
 						</div>
 					</div>

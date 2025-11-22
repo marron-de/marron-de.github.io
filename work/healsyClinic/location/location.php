@@ -27,7 +27,7 @@
 			<section class="section ss1">
 				<div class="inner">
 					<div class="sub_titbox">
-						<p class="sub_title">Location.</p>
+						<p class="sub_title">Location</p>
 					</div>
 					<div class="schwrap">
 						<div class="schbox">

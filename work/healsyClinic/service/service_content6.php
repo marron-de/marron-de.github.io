@@ -115,7 +115,9 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Sport-Specific Performance Support</p>
-				<p class="desc ver3">Want to perform better in rugby, golf, basketball, football, running, or hiking?Healsy orthotics are tailored to suit the specific movements and load demands of each sport.They reduce foot fatigue and improve biomechanical efficiency — helping you move stronger, longer.</p>
+				<p class="desc ver3">
+					Want to perform better in rugby, golf, basketball, football, running, or hiking? Healsy orthotics are tailored to suit the specific movements and load demands of each sport. They reduce foot fatigue and improve biomechanical efficiency — helping you move stronger and longer.
+				</p>
 			</div>
 		</div>
 	</div>

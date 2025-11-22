@@ -89,7 +89,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Pre / Post-Game Management & Guidance</p>
-				<p class="desc ver3">Support your body before and after competition with our specialised management strategies. Pre-game preparation focuses on optimising mobility, activating key muscles, and preventing acute injuries. Post-gamemanagement aims to accelerate recovery, reduce muscle soreness, and address any immediate concerns, ensuring you're ready for your next training session or competition. This service is designed to keep you performing consistently at your best.</p>
+				<p class="desc ver3">Support your body before and after competition with our specialised management strategies. Pre-game preparation focuses on optimising mobility, activating key muscles, and preventing acute injuries. Post-game management aims to accelerate recovery, reduce muscle soreness, and address any immediate concerns, ensuring you're ready for your next training session or competition. This service is designed to keep you performing consistently at your best.</p>
 			</div>
 		</div>
 		<div class="swiper-slide contbox contbox2_5">

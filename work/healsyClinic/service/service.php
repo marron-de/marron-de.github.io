@@ -26,7 +26,7 @@
 		<div class="container">
 			<section class="section ss1">
 				<div class="sub_titbox inner">
-					<p class="sub_title">Service.</p>
+					<p class="sub_title">Services</p>
 				</div>
 				<div class="swiper tab_navbox tabs_swiper service_nav" data-index="0">
 					<div class="swiper-wrapper">
@@ -71,8 +71,8 @@
 							</span>
 						</div>
 						<div class="swiper-slide tab_nav" data-tab="9">
-							<span class="link" data-text="NDIS / Workcover / DVA / CTP / EPC">
-								NDIS / Workcover / DVA / CTP / EPC
+							<span class="link" data-text="NDIS / Workcover / DVA / CTP / GPCCMP">
+								NDIS / Workcover / DVA / CTP / GPCCMP
 							</span>
 						</div>
 					</div>

@@ -128,7 +128,7 @@
 				<p class="desc ver1">Inserting fine needles into trigger points or tight muscle bands to relieve
 					pain and tension.</p>
 				<div class="descbox mt">
-					<p class="desc">Common Condditions Treated</p>
+					<p class="desc">Common Conditions Treated</p>
 					<div class="descitem">
 						<p class="desc dot">Myofascial Pain</p>
 						<p class="desc dot">Chronic Heel Pain</p>
@@ -147,7 +147,7 @@
 				<p class="desc ver1">Expert analysis of your current footwear and professional recommendations
 					tailored to your foot type and condition.</p>
 				<div class="descbox mt">
-					<p class="desc">Common Condditions Treated</p>
+					<p class="desc">Common Conditions Treated</p>
 					<div class="descitem">
 						<p class="desc dot">Foot Pain</p>
 						<p class="desc dot">Postural Issues</p>
@@ -169,7 +169,7 @@
 					<div class="descitem">
 						<p class="desc dot">Doppler Assessment</p>
 						<p class="desc dot">Monofilament(10g) Assessment</p>
-						<p class="desc dot">Tuning Folk Assessment</p>
+						<p class="desc dot">Tuning Fork Assessment</p>
 						<p class="desc dot">Pressure Plate Assessment</p>
 						<p class="desc dot">Early signs and symptoms of Diabetes Neuropathy Assessment</p>
 						<p class="desc dot">Footwear Assessment</p>
@@ -187,7 +187,7 @@
 				<p class="desc ver1">Specialised assessment and treatment for children with developmental,
 					structural, or pain-related lower limb issues.</p>
 				<div class="descbox mt">
-					<p class="desc">Common Condditions Treated</p>
+					<p class="desc">Common Conditions Treated</p>
 					<div class="descitem">
 						<p class="desc dot">Flat Feet</p>
 						<p class="desc dot">Toe Walking</p>

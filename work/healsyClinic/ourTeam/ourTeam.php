@@ -27,7 +27,7 @@
 			<section class="section ss1">
 				<div class="inner">
 					<div class="sub_titbox">
-						<p class="sub_title">Our Team.</p>
+						<p class="sub_title">Our Team</p>
 					</div>
 					<div class="team_boxs">
 						<div class="team_box">
@@ -197,11 +197,10 @@
 												<img src="../img/team_thum1-2.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">Jun Park</p>
+												<p class="tit">Jonathan Phlek Duch</p>
 												<p class="sub">Accredited Exercise physiologist</p>
 												<p class="desc">
-													Master of Clinical Exercise Physiology<span class="tablet">, </span><br class="pc">
-													Bachelor of Exercise & Sports Science
+													Bachelor of Exercise Physiology, ESSA
 												</p>
 												<div class="more_box">
 													<a href="ourTeamDetail_5.php" class="more_btn">
@@ -392,7 +391,7 @@
 												<img src="../img/team_thum1-2.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">Kacey Shins</p>
+												<p class="tit">Kacey Shin</p>
 												<p class="sub"></p>
 												<p class="desc"></p>
 												<div class="more_box">

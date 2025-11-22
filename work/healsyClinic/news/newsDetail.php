@@ -27,7 +27,7 @@
 			<section class="section ss1">
 				<div class="inner">
 					<div class="sub_titbox">
-						<p class="sub_title">News.</p>
+						<p class="sub_title">News</p>
 					</div>
 					<div class="titbox">
 						<p class="tit">We’re Now Open on Saturdays</p>

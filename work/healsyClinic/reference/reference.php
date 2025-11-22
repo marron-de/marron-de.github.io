@@ -27,7 +27,7 @@
 			<section class="section ss1">
 				<div class="inner">
 					<div class="sub_titbox">
-						<p class="sub_title">Healsy Story.</p>
+						<p class="sub_title">Healsy Story</p>
 					</div>
 					<div class="contbox">
 						<div class="item">

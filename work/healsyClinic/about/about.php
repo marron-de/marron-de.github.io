@@ -28,7 +28,7 @@
 				<div class="inner">
 					<div class="topbox">
 						<div class="txtbox">
-							<p class="sub_title">About.</p>
+							<p class="sub_title">About</p>
 						</div>
 						<div class="imgbox">
 							<img src="../img/about_img.jpg" alt="" class="img pc">

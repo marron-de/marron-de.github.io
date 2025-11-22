@@ -71,9 +71,7 @@
 			<div class="txtbox">
 				<p class="title">Assessment</p>
 				<p class="desc">
-					We aim for gathering all relevant information that being necessary to make optimal diagnosis and
-					treatment strategies accordingly from patient’s background information to patient’s concern specific
-					information.
+					We aim to gather all relevant information necessary to make an optimal diagnosis and develop appropriate treatment strategies, ranging from the patient’s background information to their specific concerns.
 				</p>
 			</div>
 		</div>
@@ -84,9 +82,7 @@
 			<div class="txtbox">
 				<p class="title">Diagnosis</p>
 				<p class="desc">
-					Based on the assessment, we aiming to make precise diagnosis as much as possible with considering
-					other potential possible other hypothesis based on patient’s specific context and pathophysiology of
-					the condition.
+					Based on the assessment, we aim to make the most precise diagnosis possible while considering other potential hypotheses relevant to the patient’s specific context and the pathophysiology of their condition.
 				</p>
 			</div>
 		</div>
@@ -108,8 +104,7 @@
 			<div class="txtbox">
 				<p class="title">Follow-up management</p>
 				<p class="desc">
-					To track down how much the treating condition has been improved employing objective outcome
-					measurement and re-adjust ongoing management planning based on the outcome.
+					We monitor the progress of the treated condition using objective outcome measures and adjust the ongoing management plan accordingly based on the results.
 				</p>
 			</div>
 		</div>
@@ -120,8 +115,7 @@
 			<div class="txtbox">
 				<p class="title">Referral</p>
 				<p class="desc">
-					If the progress is being determined that requires further investigation, we make referral to
-					appropriate professionals including other allied health professionals, GPs and specialist.
+					If progress indicates the need for further investigation, we will refer the patient to the appropriate professionals, including other allied health providers, GPs, and specialists.
 				</p>
 			</div>
 		</div>
@@ -133,8 +127,7 @@
 			<div class="txtbox">
 				<p class="title">Soft tissue mobilisation</p>
 				<p class="desc">
-					As a hands-on technique used to treat muscles, fascia, ligaments, and tendons—the "soft tissues" of
-					the body. The goal is to reduce pain, improve mobility, increase circulation, and promote healing.
+					Soft tissue mobilisation is a hands-on technique used to treat muscles, fascia, ligaments, and tendons, the “soft tissues” of the body. Its goals are to reduce pain, improve mobility, increase circulation, and promote healing.
 				</p>
 			</div>
 		</div>

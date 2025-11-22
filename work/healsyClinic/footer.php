@@ -12,7 +12,7 @@
 				</p>
 				<div class="info_bottom">
 					<div class="item">
-						<span class="tit">Mail.</span>
+						<span class="tit">E-mail.</span>
 						<span class="desc">info@healsyclinic.com.au</span>
 					</div>
 					<div class="item">
@@ -29,8 +29,8 @@
 			<p class="f_copyright">
 				<img src="/img/copy_logo.png" alt="" class="logo">
 				<span class="txtarea">
-					<span class="txt">WALTER WALKER AU No.2 Pty Limited</span>
-					<span class="txt">@ 2025. All right reserved.</span>
+					<span class="txt">WALTER WALKER AU No.1 Pty Limited @ 2025.</span>
+					<span class="txt">All right reserved.</span>
 				</span>
 			</p>
 		</div>
@@ -51,7 +51,7 @@
 			</div>
 			<div class="contbox">
 				<div class="item">
-					<p class="tit">At Healsy Orthotics</p>
+					<p class="tit">At Healsy Physiotherapy and Podiatry Clinic</p>
 					<p class="desc">
 						we are committed to protecting your privacy. This policy outlines how we collect, use, store, and disclose your personal information in accordance with the Australian Privacy Principles.
 					</p>

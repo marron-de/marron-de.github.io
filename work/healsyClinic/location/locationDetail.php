@@ -27,7 +27,7 @@
 			<section class="section ss1">
 				<div class="inner">
 					<div class="sub_titbox">
-						<p class="sub_title">Healsy Clinic.</p>
+						<p class="sub_title">Healsy Clinic</p>
 					</div>
 					<div class="titbox">
 						<p class="title">Clinic Info</p>
@@ -71,27 +71,47 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide item">
 											<div class="imgbox">
-												<img src="../img/location_thum1.png" alt="" class="img">
+												<img src="../img/location_thum1.jpg" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="imgbox">
-												<img src="../img/location_thum2.png" alt="" class="img">
+												<img src="../img/location_thum2.jpg" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="imgbox">
-												<img src="../img/location_thum3.png" alt="" class="img">
+												<img src="../img/location_thum3.jpg" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="imgbox">
-												<img src="../img/location_thum4.png" alt="" class="img">
+												<img src="../img/location_thum4.jpg" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="imgbox">
-												<img src="../img/location_thum5.png" alt="" class="img">
+												<img src="../img/location_thum5.jpg" alt="" class="img">
+											</div>
+										</div>
+										<div class="swiper-slide item">
+											<div class="imgbox">
+												<img src="../img/location_thum6.jpg" alt="" class="img">
+											</div>
+										</div>
+										<div class="swiper-slide item">
+											<div class="imgbox">
+												<img src="../img/location_thum7.jpg" alt="" class="img">
+											</div>
+										</div>
+										<div class="swiper-slide item">
+											<div class="imgbox">
+												<img src="../img/location_thum8.jpg" alt="" class="img">
+											</div>
+										</div>
+										<div class="swiper-slide item">
+											<div class="imgbox">
+												<img src="../img/location_thum9.jpg" alt="" class="img">
 											</div>
 										</div>
 									</div>

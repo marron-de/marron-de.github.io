@@ -27,7 +27,7 @@
 			<section class="section ss1">
 				<div class="inner">
 					<div class="sub_titbox">
-						<p class="sub_title">Contact Us.</p>
+						<p class="sub_title">Contact Us</p>
 					</div>
 					<form action="" class="form">
 						<div class="form_box">
@@ -47,7 +47,10 @@
 							</div>
 							<div class="rightbox">
 								<div class="input_box ver2">
-									<label class="label_text">Message</label>
+									<div class="label_box">
+										<label class="label_text">How Can We Help?</label>
+										<p class="label_desc">Send Us Your Inquiry</p>
+									</div>
 									<textarea class="input_text" placeholder="Please enter your message"></textarea>
 								</div>
 							</div>
