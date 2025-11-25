@@ -335,7 +335,6 @@ $(document).ready(function () {
 });
 
 
-
 // mobile service modal
 $(document).ready(function () {
     $(".service_wrap .service_select .sel_btn").click(function () {
@@ -538,7 +537,7 @@ const location_swiper = new Swiper('.location_swiper', {
 	observer: true,
 	observeParents: true,
 	slidesPerView: 'auto',
-	spaceBetween: 10,
+	spaceBetween: 30,
 	speed: 500,
 	loop:true,
 	navigation: {
@@ -562,7 +561,6 @@ const location_swiper = new Swiper('.location_swiper', {
 	},
 	breakpoints: {
 		1080: {
-			spaceBetween: 30,
 			navigation: {
 				nextEl: '.location_slidebox .pc .next_btn',
 				prevEl: '.location_slidebox .pc .prev_btn',

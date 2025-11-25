@@ -41,8 +41,8 @@
 							</span>
 						</div>
 						<div class="swiper-slide tab_nav" data-tab="3">
-							<span class="link" data-text="Strengthening & Conditioning">
-								Strengthening & Conditioning
+							<span class="link" data-text="Strength & Conditioning">
+								Strength & Conditioning
 							</span>
 						</div>
 						<div class="swiper-slide tab_nav" data-tab="4">

@@ -1,7 +1,7 @@
 
 <div class="service_select service_select3">
 	<button type="button" class="sel_btn">
-		<span class="txt">Strengthening & Conditioning</span>
+		<span class="txt">Strength & Conditioning</span>
 		<span class="arrow"></span>
 	</button>
 </div>
@@ -15,7 +15,7 @@
 			<span class="arrow"></span>
 		</div>
 		<ul class="acc_cont" style="display: block;">
-			<li class="acc_tabBtn on" onclick="serviceTab('1_1')">Strengthening & Conditioning</li>
+			<li class="acc_tabBtn on" onclick="serviceTab('1_1')">Strength & Conditioning</li>
 		</ul>
 	</li>
 	<li>
@@ -49,7 +49,7 @@
 				<img src="../img/service3_cont_img1_1.jpg" alt="" class="img">
 			</div>
 			<div class="txtbox">
-				<p class="title">Strengthening & Conditioning</p>
+				<p class="title">Strength & Conditioning</p>
 				<p class="desc ver1 ver3">We go beyond just treating pain. We empower you with tailored Strengthening &
 					Conditioning strategies to enhance performance, accelerate recovery, and build lasting resilience.
 					Our expert physiotherapists integrate cutting-edge techniques with evidence-based programs to help

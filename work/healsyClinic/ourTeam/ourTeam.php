@@ -57,7 +57,7 @@
 													APA Titled Sports and Exercise Physiotherapist<span class="tablet">, </span>
 													MACP, APAM<span class="tablet">, </span><br class="pc">
 													Master of Sports and Exercise Physiotherapy<span class="tablet">, </span><br class="pc">
-													Bachelor of Applied Science (Phtsiotherapy)
+													Bachelor of Applied Science (Physiotherapy)
 												</p>
 												<div class="more_box">
 													<a href="ourTeamDetail_1.php" class="more_btn">

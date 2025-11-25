@@ -48,7 +48,7 @@
 								</p>
 								<div class="descbox">
 									<div class="descitem">
-										<span class="tit">Email</span>
+										<span class="tit">E-mail</span>
 										<span class="desc">info@healsyclinic.com.au</span>
 									</div>
 									<div class="descitem">

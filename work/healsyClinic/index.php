@@ -226,8 +226,17 @@
 															<img src="img/ms3_1_thum2.png" alt="" class="img">
 														</div>
 														<div class="txtbox">
-															<p class="tit">Jun Park</p>
+															<p class="tit">Jonathan Phlek Duch</p>
 															<p class="desc">Exercise Physiologist</p>
+														</div>
+													</a>
+													<a href="ourTeam/ourTeamDetail_6.php" class="swiper-slide item">
+														<div class="imgbox">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
+														</div>
+														<div class="txtbox">
+															<p class="tit">Minnie Edwards</p>
+															<p class="desc">Clinical Pilates Instructor</p>
 														</div>
 													</a>
 													<a href="ourTeam/ourTeamDetail_7.php" class="swiper-slide item">
@@ -237,6 +246,51 @@
 														<div class="txtbox">
 															<p class="tit">YeonJu, Park</p>
 															<p class="desc">Clinical Pilates Instructor</p>
+														</div>
+													</a>
+													<a href="ourTeam/ourTeamDetail_8.php" class="swiper-slide item">
+														<div class="imgbox">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
+														</div>
+														<div class="txtbox">
+															<p class="tit">Joy Lee</p>
+															<p class="desc">Administrative Staff</p>
+														</div>
+													</a>
+													<a href="ourTeam/ourTeamDetail_9.php" class="swiper-slide item">
+														<div class="imgbox">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
+														</div>
+														<div class="txtbox">
+															<p class="tit">Erin Mcgiffen</p>
+															<p class="desc">Administrative Staff</p>
+														</div>
+													</a>
+													<a href="ourTeam/ourTeamDetail_10.php" class="swiper-slide item">
+														<div class="imgbox">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
+														</div>
+														<div class="txtbox">
+															<p class="tit">Marisa Carnevale</p>
+															<p class="desc">Administrative Staff</p>
+														</div>
+													</a>
+													<a href="ourTeam/ourTeamDetail_11.php" class="swiper-slide item">
+														<div class="imgbox">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
+														</div>
+														<div class="txtbox">
+															<p class="tit">Kacey Shin</p>
+															<p class="desc">Retail Assistant</p>
+														</div>
+													</a>
+													<a href="ourTeam/ourTeamDetail_12.php" class="swiper-slide item">
+														<div class="imgbox">
+															<img src="img/ms3_1_thum2.png" alt="" class="img">
+														</div>
+														<div class="txtbox">
+															<p class="tit">Ciara Lawne</p>
+															<p class="desc">Retail Assistant</p>
 														</div>
 													</a>
 												</div>
@@ -603,10 +657,10 @@
 							<div class="infobox">
 								<p class="address">Shop 23, 15 De Clambe Drive Castle Hill NSW 2154
 								</p>
-								<p class="time">Monday to Friday: 7:30am – 8pm l Saturday : 9am – 5pm l Sunday: Closed</p>
+								<p class="time">Monday to Friday: 7:30am - 8pm l Saturday : 9am - 5pm l Sunday: Closed</p>
 								<div class="descbox">
 									<div class="descitem">
-										<span class="tit">Email</span>
+										<span class="tit">E-mail</span>
 										<span class="desc">info@healsyclinic.com.au</span>
 									</div>
 									<div class="descitem">

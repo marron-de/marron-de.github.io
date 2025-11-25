@@ -42,7 +42,7 @@
 								<br>
 								Master of Sports and Exercise Physiotherapy
 								<br>
-								Bachelor of Applied Science (Phtsiotherapy)
+								Bachelor of Applied Science (Physiotherapy)
 							</p>
 							<a href="/booking/booking.php" type="button" class="button">
 								<img src="../img/ico_calendar.png" alt="" class="icon">
