@@ -50,7 +50,7 @@
 			</div>
 			<div class="txtbox">
 				<p class="title">Strength & Conditioning</p>
-				<p class="desc ver1 ver3">We go beyond just treating pain. We empower you with tailored Strengthening &
+				<p class="desc ver1 ver3">We go beyond just treating pain. We empower you with tailored Strength &
 					Conditioning strategies to enhance performance, accelerate recovery, and build lasting resilience.
 					Our expert physiotherapists integrate cutting-edge techniques with evidence-based programs to help
 					you achieve your physical goals, whether on the field, at work, or in daily life.</p>
