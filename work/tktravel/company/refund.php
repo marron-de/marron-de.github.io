@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK TRAVEL</title>
+
+    <?php include "../script.php" ?>
+
+</head>
+
+<body>
+
+
+    <div class="wrap company_wrap">     
+
+
+    	<?php include "../common/header.php" ?>
+
+    	<?php include "../common/navbox.php" ?>
+
+
+		<!-- section -->
+		<div class="container">
+
+			<section class="sub_section co_sec">
+				<div class="inner layout">
+					<div class="side_area fixed">			
+    					<?php include "../common/side_menu_co.php" ?>
+    					<?php include "../common/customer_banner.php" ?>
+					</div>
+					<div class="cont_area">
+						<div class="sub_titbox2 no_border">
+							<div class="mob_view">
+								<p class="s_tit">회사소개</p>
+								<div class="breadcrumb">
+									<a href="<?php echo $path ?>index.php" class="home"></a>
+									<span class="bar"></span>
+									<span class="catetit">회사소개</span>
+									<span class="bar"></span>
+									<div class="catebox">
+										<button type="button" class="catetit cate_btn">
+											<span class="txt">취소 및 환불 정책</span>
+											<span class="arrow"></span>
+										</button>
+										<div class="popup cate_popup">
+											<div class="linkbox">
+												<a href="<?php echo $path ?>company/about.php" class="link">회사소개</a>
+												<a href="<?php echo $path ?>company/location.php" class="link">오시는길</a>
+												<a href="<?php echo $path ?>company/partner.php" class="link">제휴문의</a>
+												<a href="<?php echo $path ?>company/terms.php" class="link">서비스이용약관</a>
+												<a href="<?php echo $path ?>company/privacy.php" class="link">개인정보처리방침</a>
+												<a href="<?php echo $path ?>company/refund.php" class="link">취소 및 환불 정책</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="s_subtit">취소 및 환불 정책</p>							
+						</div>
+						<div class="contbox">
+							<div class="term_box">
+								<div class="term_area">
+									<div class="term_txtbox">
+										<p class="title">[취소 및 환불규정]</p>
+										<p class="dot_txt desc">
+											예약 취소는 체험 예약일 7일 전까지만 가능하며 7일 전 취소에 한하여 100%를 환불 합니다. 체험 예약일 6일 전부터는 취소가 불가하며 환불되지 않습니다.
+										</p>
+										<p class="dot_txt desc">
+											예약을 변경하시는 경우에도 1항의 환불규정이 동일하게 적용되며, 고객이 직접 기존 예약 취소 후 다시 예약해야 합니다.
+										</p>
+										<p class="dot_txt desc">
+											아래의 경우를 포함하여 체험 예약일의 예약 시간 이후로는 체험 상품 의 이용료는 환불되지 않습니다. <br>
+											- 체험 상품의 서비스 전-중-후 모든 과정 중에서 발생하는 손님의 단순 변심으로 인한 환불 요청 <br>
+											- 상품 별로 지정된 분장 및 헤어 스타일링, 장신구 등이 손님의 취향과 다름을 사유로 환불 요청
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+        </div>
+
+
+    	<?php include "../common/fixed_nav.php" ?>
+
+    	<?php include "../common/mob_nav.php" ?> <!-- 모바일 노출 -->
+
+    	<?php include "../common/footer.php" ?>
+
+		
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+	<script>
+  		 $(function() {
+			$('.side_menu .side_menulist .menuitem').eq(5).addClass('active');
+		});
+	</script>
+
+
+
+</body>
+
+</html>
