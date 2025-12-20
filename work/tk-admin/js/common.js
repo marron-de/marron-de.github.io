@@ -456,3 +456,14 @@ $(document).ready(function () {
 		initialSlide: index_mob,
 	})
 });
+
+
+/* 251220 추가작업 */
+// connect popup
+function connect_popup() {
+	$(".popup").removeClass("show");
+	$("#connect_popup").addClass("show");
+	if ($(window).width() <= 1080) {
+		$("body").addClass("popup_hidden");	
+	}
+}
