@@ -20,7 +20,7 @@ $(document).ready(function() {
 });
 
 
-// ms4 swiper
+// ms2 swiper
 const ms2_swiper = new Swiper('.ms2_swiper', {
 	observer: true,
 	observeParents: true,
@@ -41,7 +41,7 @@ const ms4_swiper = new Swiper('.ms4_swiper', {
 	speed: 500,
 	direction: 'vertical',
 	slidesPerView: 'auto',
-	spaceBetween: 0,
+	spaceBetween: 40,
 	breakpoints: {
 		599: {
 			direction: 'horizontal',

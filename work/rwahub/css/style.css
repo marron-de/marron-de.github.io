@@ -36,9 +36,17 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display: none;}
 
+@keyframes float {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-2rem); }
+	100% { transform: translateY(0); }
+}
+
+.floating {animation: float 3s ease-in-out infinite;}
+
   
 /*header*/
-.header { position: relative; width: 100%; }
+.header { position: relative; width: 100%; z-index: 50;}
 .header .h_inner { height: 100%; display: flex; flex-direction: column;  gap: 0.625rem;  padding: 1rem 0;}
 .header .h_lang {margin-left: auto; box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.25); background: var(--lightgray); border-radius: 0.25rem; padding: 0.25rem; display: flex; gap: 0.5rem;}
 .header .h_lang .lang_link { border: 1px solid transparent;  border-radius: 0.25rem;  padding: 0.25rem 1rem; font-weight: 600;  font-size: 0.875rem;  line-height: 143%;  text-align: center;  color: #1e2737;}
@@ -49,8 +57,10 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 
 /* footer */
 .footer {position: relative; width: 100%; background: var(--navy);  }
-.footer .f_inner {display: flex; justify-content: center; gap: 1.5rem; padding: 1.188rem 0;}
-.footer .f_inner .f_txt{font-size: 0.75rem;line-height: 183%;color: #fff;}
+.footer .f_inner {display: flex; flex-direction: column; gap: 0.25rem; padding: 1.188rem 0;}
+.footer .f_txtbox {display: flex; justify-content: center; flex-wrap: wrap; gap: 0.25rem 1.5rem;}
+.footer .f_txtbox:nth-child(1) {margin-bottom: 1rem;}
+.footer .f_txtbox .f_txt{font-size: 0.75rem;line-height: 183%;color: #fff; text-align: center;}
 
 
 /* fixed bottom */
@@ -79,7 +89,7 @@ font-size: 1.25rem; color: var(--gray);}
 .m_titbox .m_txt2 {font-weight: 700; font-size: 3rem; color: var(--navy);}
 
 .ms1 {margin-top: 3rem; margin-bottom: 1rem;}
-.ms1 .ms1_bg { position: absolute;  width: 55%;  top: -24%; right: 5%;  mix-blend-mode: hard-light;}
+.ms1 .ms1_bg { position: absolute;  width: 55%;  top: -24%; right: 5%;  mix-blend-mode: hard-light; animation: float 3s ease-in-out infinite;}
 .ms1 .ms1_bg .img {width: 100%;}
 .ms1 .contbox {display: flex; align-items: flex-end; justify-content: space-between;}
 .ms1 .contbox .leftbox {width: 30rem;}
@@ -277,8 +287,10 @@ border-radius: 1rem; padding: 2.5rem 2.375rem; backdrop-filter: blur(0.75rem); b
 	.header .h_lang .lang_link { border-radius: 0.4rem; padding: 0.4rem 1.6rem;  font-size: 1rem; line-height: 100%;}
 	.header .h_logo { width: 12rem;}
 
-	.footer .f_inner { padding: 1.6rem 0; flex-direction: column; align-items: center;  gap: 0;}
-	.footer .f_inner .f_txt { font-size: 1rem; line-height: 220%;}
+	.footer .f_inner { padding: 1.6rem; gap: 0.4rem; }
+	.footer .f_txtbox { flex-direction: column; align-items: center;  gap: 0;}
+	.footer .f_txtbox:nth-child(1) {margin-bottom: 1.6rem;}
+	.footer .f_txtbox .f_txt { font-size: 1rem; line-height: 220%;}
 
 	.fixed_bottom > .inner { padding: 0.8rem 1.6rem; gap: 1rem;}
 	.fixed_bottom .leftbox { gap: 0.8rem;}
@@ -308,8 +320,8 @@ border-radius: 1rem; padding: 2.5rem 2.375rem; backdrop-filter: blur(0.75rem); b
 	.ms1 .contbox .rightbox .snsbox .link { width: 4rem; border-radius: 0.8rem;}
 
 	.ms2 { padding: 0.4rem 0 0;}
-	.ms2 .ms2_swiper { width: calc(100% + 2rem * 2); margin: 0 -2rem; padding: 3.6rem 3.8rem; }
-	.ms2 .ms2_swiper .item { width: 100%; min-height: 27rem; padding: 6rem 2rem 4rem; border-radius: 1.6rem; backdrop-filter: blur(2.5rem); gap: 8rem; }
+	.ms2 .ms2_swiper { width: calc(100% + 2rem * 2); margin: 0 -2rem; padding: 3.6rem 3.8rem; pointer-events: none;}
+	.ms2 .ms2_swiper .item { width: 100%; min-height: 27rem; padding: 6rem 2rem 4rem; border-radius: 1.6rem; /* backdrop-filter: blur(2.5rem); */ backdrop-filter: none;  background: rgba(255, 255, 255, 0.8); gap: 8rem; }
 	.ms2 .ms2_swiper .item:last-child {margin-bottom:0 !important}
 	.ms2 .ms2_swiper .item .tit { font-size: 2.4rem;}
 	.ms2 .ms2_swiper .item .desc { font-size: 1.6rem;}
@@ -322,16 +334,17 @@ border-radius: 1rem; padding: 2.5rem 2.375rem; backdrop-filter: blur(0.75rem); b
 	.ms3 .contbox .item.reverse { flex-direction: column;}
 	.ms3 .contbox .item.reverse .txtbox { padding: 6rem 4rem 0 1rem; }
 
-	.ms4 { background: url(../img/ms4_bg_mobile.jpg) no-repeat top center/cover; padding: 6rem 0 7rem;}
-	.ms4 .ms4_swiper { width: 100%; margin: 0; padding: 0; }
-	.ms4 .ms4_swiper .item { width: calc(100% - 2rem * 2); border-radius: 1.6rem;  padding: 4rem; backdrop-filter: blur(1.2rem);  gap: 1rem;  margin: 0 2rem;}
-	.ms4 .ms4_swiper .item + .item {margin-top: -20rem;}
+	.ms4 { background: url(../img/ms4_bg_mobile.jpg) no-repeat top center/cover; padding: 6rem 0;}
+	.ms4 .ms4_swiper { width: 100%; height: auto; margin: 0; padding: 0; pointer-events: none;}
+	.ms4 .ms4_swiper .item { width: calc(100% - 2rem * 2); border-radius: 1.6rem;  padding: 4rem 3.8rem; /* backdrop-filter: blur(1.2rem); */ backdrop-filter: none;  background: rgba(255, 255, 255, 0.8); gap: 1rem;  margin: 0 2rem;}
+	/* .ms4 .ms4_swiper .item + .item {margin-top: -20rem;} */
 	.ms4 .ms4_swiper .item .tit { padding: 1.6rem 0; font-size: 3.6rem;}
 	.ms4 .ms4_swiper .item .txt {  padding-left: 2.4rem; font-size: 1.6rem;}
 	.ms4 .ms4_swiper .item .arrow { width: 2.4rem;}
-	.ms4 .ms4_swiper .item.hover { width: 100%; margin: -20rem 0 25rem;  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.25); padding: 5rem 6rem;}
+	.ms4 .ms4_swiper .item.hover {width: calc(100% - 2rem * 2); margin: 0 2rem; box-shadow: none; padding: 4rem 3.8rem;}
+	/* .ms4 .ms4_swiper .item.hover { width: 100%; margin: -20rem 0 25rem;  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.25); padding: 5rem 6rem;}
 	.ms4 .ms4_swiper .item:first-child {margin-top: 0;}
-	.ms4 .ms4_swiper .item.hover:last-child {margin-top: 5rem; margin-bottom: 0;}
+	.ms4 .ms4_swiper .item.hover:last-child {margin-top: 5rem; margin-bottom: 0;} */
 
 	.ms5 { padding: 0 0 4.3rem; }
 	.ms5 .contbox { gap: 4rem; padding: 0 1.5rem;}
@@ -388,6 +401,7 @@ border-radius: 1rem; padding: 2.5rem 2.375rem; backdrop-filter: blur(0.75rem); b
 	.ms3 .contbox .item .txtbox {padding-left: 2.4rem; }
 	.ms3 .contbox .item.reverse .txtbox {padding-right: 2.4rem; }
 	.ms3 .contbox .item.reverse .txtbox .desc {word-break: keep-all;}
+	.ms4 .ms4_swiper .item { padding: 4rem 3.4rem;}
 
 	
 	/* 영문 */
