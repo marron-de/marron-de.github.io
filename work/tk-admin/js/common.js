@@ -467,3 +467,14 @@ function connect_popup() {
 		$("body").addClass("popup_hidden");	
 	}
 }
+
+
+// 251224 수정작업
+$(document).on('click', '.good_write_info .productInfoBox .productInfoAddBtn', function () {
+    $(this).closest('.productInfoBox').addClass('show');
+});
+
+$(document).on('click', '.good_write_info .productInfoBox .productInfoSaveBtn', function () {
+    $(this).closest('.productInfoBox').removeClass('show');
+});
+
