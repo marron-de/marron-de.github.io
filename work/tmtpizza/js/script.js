@@ -1,15 +1,18 @@
-// menu tab
-$(document).ready(function () {
-  $('.tab-menu li').click(function () {
-    const category = $(this).data('category');
+/* 기존코드 */
 
-    $('.tab-menu li').removeClass('active');
-    $(this).addClass('active');
+// 공통코드로 대체
+// // menu tab
+// $(document).ready(function () {
+//   $('.tab-menu li').click(function () {
+//     const category = $(this).data('category');
 
-    $('.menu-page').hide();
-    $(`.menu-page[data-page="${category}"]`).fadeIn(150);
-  });
-});
+//     $('.tab-menu li').removeClass('active');
+//     $(this).addClass('active');
+
+//     $('.menu-page').hide();
+//     $(`.menu-page[data-page="${category}"]`).fadeIn(150);
+//   });
+// });
 
 // store map
 // 샘플 매장 리스트 — 실제로 네이버 플레이스에서 검색해서 수집함
@@ -20,18 +23,19 @@ var stores = [
   {name: "TMT피자 포항 문덕점", city: "경북", lat: 36.021, lng: 129.383}
 ];
 
+// 공통코드로 대체
 // community tab
-$(document).ready(function () {
-  $('.community-menu li').click(function () {
-    const category = $(this).data('category');
+// $(document).ready(function () {
+//   $('.community-menu li').click(function () {
+//     const category = $(this).data('category');
 
-    $('.community-menu li').removeClass('active');
-    $(this).addClass('active');
+//     $('.community-menu li').removeClass('active');
+//     $(this).addClass('active');
 
-    $('.community-page').hide();
-    $(`.community-page[data-page="${category}"]`).fadeIn(150);
-  });
-});
+//     $('.community-page').hide();
+//     $(`.community-page[data-page="${category}"]`).fadeIn(150);
+//   });
+// });
 
 // 창업문의 tab
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// toggle
+// faq toggle
 document.addEventListener('click', function (e) {
   const btn = e.target.closest('.faq_question');
   if (!btn) return;
@@ -92,13 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 모달 열기
     openBtn.addEventListener('click', (e) => {
         e.preventDefault(); // anchor 기본 동작 막기
-        modal.removeAttribute('hidden');
+      	modal.classList.add('show');
     });
 
     // 모달 닫기
     closeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            modal.setAttribute('hidden', '');
+			modal.classList.remove('show');
         });
     });
 });
@@ -160,4 +164,121 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+});
+
+
+
+/* 251230 추가작업 */
+// header navbox button 
+$(document).ready(function () {
+	$(".header .menu_open").on("click", function () {
+		$("body").addClass("hidden");
+		$(".header").addClass("open");
+		$(".navbox").addClass("open");
+	});
+	$(".navbox .menu_close").on("click", function () {
+		$("body").removeClass("hidden");
+		$(".header").removeClass("open");
+		$(".navbox").removeClass("open");
+	});
+});
+$(document).mouseup(function (e) {
+	if ($(".navbox").has(e.target).length === 0) {
+		$("body").removeClass("hidden");
+		$(".header").removeClass("open");
+		$(".navbox").removeClass("open");
+	}
+});
+
+// accordion function
+(function ($) {
+
+	const lnbUI = {
+		click: function (target, speed) {
+			let _self = this,
+				$target = $(target);
+			_self.speed = speed || 400;
+
+			$target.each(function () {
+				if (findChildren($(this))) {
+					return;
+				}
+				$(this).addClass('noDepth');
+			});
+
+			function findChildren(obj) {
+				return obj.find('> ul').length > 0;
+			}
+
+			$target.on('click', '.acc_tit', function (e) {
+				e.stopPropagation();
+				let $this = $(this),
+					$depthTarget = $this.next(),
+					$siblings = $this.parent().siblings();
+
+				$this.parent('li').find('ul li').removeClass('show');
+				$siblings.removeClass('show');
+				$siblings.find('ul').slideUp(400);
+
+				if ($depthTarget.css('display') == 'none') {
+					_self.activeOn($this);
+					$depthTarget.slideDown(_self.speed);
+				} else {
+					$depthTarget.slideUp(_self.speed);
+					_self.activeOff($this);
+				}
+
+			})
+
+		},
+		activeOff: function ($target) {
+			$target.parent().removeClass('show');
+		},
+		activeOn: function ($target) {
+			$target.parent().addClass('show');
+		},
+
+	};
+
+	// navbox
+	$(function () {
+		lnbUI.click('.accordion li', 400)
+	});
+
+}(jQuery));
+
+// tab function
+$(document).ready(function () {
+	$(".tab_nav").click(function () {
+		let clickedTab = $(this);
+		let tabWrap = clickedTab.closest(".tab_wrap");
+		let allTabs = tabWrap.find(".tab_nav");
+		let allContents = tabWrap.find(".tab_cont");
+		let idx = allTabs.index(clickedTab);
+
+		allTabs.removeClass("on");
+		clickedTab.addClass("on");
+		allContents.removeClass("on");
+		allContents.eq(idx).addClass("on");
+	});
+});
+
+// layout
+$(window).on('resize', function() {
+    const windowWidth = $(window).width();
+    const maxWidth = 1280;
+    const widthPercentage = 0.9;
+
+    let calculatedWidth = windowWidth * widthPercentage;
+    if (calculatedWidth > maxWidth) {
+        calculatedWidth = maxWidth;
+    }
+
+    const marginLeft = (windowWidth - calculatedWidth) / 2;
+
+    $('body').css('--margin-left', marginLeft + 'px');
+    $('body').css('--margin-right', marginLeft + 'px');
+});
+$(document).ready(function() {
+    $(window).trigger('resize');
 });

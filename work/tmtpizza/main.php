@@ -1,62 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T.M.T PIZZA</title>
-    <link href="css/default.css" rel="stylesheet">
-    <link href="css/swiper-bundle.min.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- link로 파비콘 삽입 안드로이드/아이폰 -->
+
+    <?php include "script.php" ?>
+	
 </head>
+
 <body>
-    <div id="wrap">
-        <!-- header -->
-        <header>
-            <div class="header_in">
-                <a href="#" class="logo"><img src="img/main/logo.png" alt="T.M.T PIZZA logo"></a>
-                <ul class="menu_list">
-                    <li class="main_menu">
-                        <a href="sub_01_brand.html">브랜드</a>
-                    </li>
-                    <li class="main_menu">
-                        <a href="sub_02_menu.html">메뉴</a>
-                    </li>
-                    <li class="main_menu">
-                        <a href="sub_03_store.html">매장찾기</a>
-                    </li>
-                    <li class="main_menu">
-                        <a href="sub_04_franchise.html">창업문의</a>
-                    </li>
-                    <li class="main_menu">
-                        <a href="sub_05_community.html">커뮤니티</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <!-- contents -->
-        <div id="contents">
-             <section id="hero">
+
+
+    <div class="wrap main_wrap">
+
+    	<?php include "header.php" ?>
+
+		<!-- container -->
+        <div class="container">
+
+            <section id="hero" class="main_section main_hero">
                 <video autoplay muted playsinline loop>
-                    <source src="img/main/main_01_sample.mp4" type="mp4">
-                    <source src="img/main/main_01_sample.mp4" type="video/webm">
+                    <source src="<?php echo $path ?>img/main/main_01_sample.mp4" type="mp4">
+                    <source src="<?php echo $path ?>img/main/main_01_sample.mp4" type="video/webm">
                 </video>
                 <div class="hero_box">
-                    <div class="tmt_pizza"><img src="img/main/T.M.T 1.png" alt="티엠티피자"></div>
+                    <div class="tmt_pizza">
+						<img src="<?php echo $path ?>img/main/T.M.T 1.png" alt="티엠티피자">
+					</div>
                     <p>
                         <span>T</span>OO<br>
                         <span>M</span>UCH<br>
-                        <span>T</span>OPPING</p>
+                        <span>T</span>OPPING
+					</p>
                 </div>
-            </section> <!-- 주로 홈페이지 메인에 보이는 창을 HERO라고 이름 지음 -->
-            <section id="brand">
-                <div class="brand_box">
+            </section>
+
+            <section id="brand" class="main_section main_brand">
+                <div class="inner brand_box">
                     <ul class="br_list">
-                        <li><img src="img/main/gpgp.png" alt="good price, good pizza"></li>
+                        <li><img src="<?php echo $path ?>img/main/gpgp.png" alt="good price, good pizza"></li>
                         <li class="br_card card_01">
-                            <img src="img/main/br_list_1.jpg" alt="TOGETHER">
+                            <img src="<?php echo $path ?>img/main/br_list_1.jpg" alt="TOGETHER">
                             <div class="card_text">
                                 <p class="br_tit">TOGETHER</p>
                                 <p class="br_txt">
@@ -67,7 +54,7 @@
                             </div>
                         </li>
                         <li class="br_card card_02">
-                            <img src="img/main/br_list_2.jpg" alt="MAKE">
+                            <img src="<?php echo $path ?>img/main/br_list_2.jpg" alt="MAKE">
                             <div class="card_text">
                                 <p class="br_tit">MAKE</p>
                                 <p class="br_txt">
@@ -78,7 +65,7 @@
                             </div>
                         </li>
                         <li class="br_card card_03">
-                            <img src="img/main/br_list_3.jpg" alt="TREND">
+                            <img src="<?php echo $path ?>img/main/br_list_3.jpg" alt="TREND">
                             <div class="card_text">
                                 <p class="br_tit">TREND</p>
                                 <p class="br_txt">
@@ -91,14 +78,15 @@
                     </ul>
                 </div>
             </section>
-            <section id="intro_menu">
-                <div class="itr_menu_inner">
-                    <h1><img src="img/main/main_menu.png" alt="메인메뉴"></h1>
+
+            <section id="menu" class="main_section main_menu">
+                <div class="inner itr_menu_inner">
+                    <h1><img src="<?php echo $path ?>img/main/main_menu.png" alt="메인메뉴"></h1>
                     <ul class="itr_menu_box">
                         <li class="itr_menu_list">
                             <a href="sub_02_menu.html">
                                 <div class="menu_img">
-                                    <img src="img/sub_02/menu_19_pepperoni.png" alt="꽉채운페퍼로니피자">
+                                    <img src="<?php echo $path ?>img/sub_02/menu_19_pepperoni.png" alt="꽉채운페퍼로니피자">
                                     <ul class="menu_price">
                                         <li>
                                             <span class="col_s size_cip">S</span>
@@ -127,7 +115,7 @@
                         <li class="itr_menu_list">
                             <a href="sub_02_menu.html">
                                 <div class="menu_img">
-                                    <img src="img/main/sweetphotato.png" alt="달콤고구마무스피자">
+                                    <img src="<?php echo $path ?>img/main/sweetphotato.png" alt="달콤고구마무스피자">
                                     <ul class="menu_price">
                                         <li>
                                             <span class="col_s size_cip">S</span>
@@ -156,7 +144,7 @@
                         <li class="itr_menu_list">
                             <a href="sub_02_menu.html">
                                 <div class="menu_img">
-                                    <img src="img/sub_02/menu_03_nacho.png" alt="나쵸피자">
+                                    <img src="<?php echo $path ?>img/sub_02/menu_03_nacho.png" alt="나쵸피자">
                                     <ul class="menu_price">
                                         <li>
                                             <span class="col_s size_cip">S</span>
@@ -182,7 +170,7 @@
                                 </ul>
                                 <ul class="menu_effect">
                                     <li class="new_eff">
-                                        <img src="img/main/new_effect.svg" alt="신메뉴">
+                                        <img src="<?php echo $path ?>img/main/new_effect.svg" alt="신메뉴">
                                         <p class="eff_txt">NEW</p>
                                     </li>
                             </ul>
@@ -191,7 +179,7 @@
                         <li class="itr_menu_list">
                             <a href="sub_02_menu.html">
                                 <div class="menu_img">
-                                    <img src="img/sub_02/menu_01_tmt.png" alt="티엠티피자">
+                                    <img src="<?php echo $path ?>img/sub_02/menu_01_tmt.png" alt="티엠티피자">
                                     <ul class="menu_price">
                                         <li>
                                             <span class="col_s size_cip">S</span>
@@ -217,7 +205,7 @@
                                 </ul>
                                 <ul class="menu_effect">
                                     <li class="best_eff">
-                                        <img src="img/main/best_effect.svg" alt="베스트 메뉴">
+                                        <img src="<?php echo $path ?>img/main/best_effect.svg" alt="베스트 메뉴">
                                         <p class="eff_txt">BEST</p>
                                     </li>
                                 </ul>
@@ -230,9 +218,10 @@
                 </div>
                 <div class="img_slide"></div>
             </section>
-            <section id="contact">
-                <div class="contact_inner">
-                    <img src="img/main/main_contact.png" alt="contact us">
+
+            <section id="contact" class="main_section main_contact">
+                <div class="inner contact_inner">
+                    <img src="<?php echo $path ?>img/main/main_contact.png" alt="contact us">
                     <ul class="contact_box">
                         <li class="contact_video"><iframe width="960" height="580" src="https://www.youtube.com/embed/ZwW_Aq2lIyE?si=hSh5HMj4avUyv2Di" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
                         <li class="contact_text">
@@ -247,15 +236,16 @@
                     </ul>
                 </div>
             </section>
-            <section id="community">
-                <ul class="comm_inner">
-                    <li><img class="commu_tit" src="img/main/main_community.png" alt="community"></li>
+
+            <section id="community" class="main_section main_community">
+                <ul class="inner comm_inner">
+                    <li><img class="commu_tit" src="<?php echo $path ?>img/main/main_community.png" alt="community"></li>
                     <li class="commu_box">
                         <ul class="event_box">
                             <li class="event_list">
                                 <a href="#">
                                     <div class="photo_box">
-                                        <img src="img/main/event_1.png" alt="신메뉴 에그마요 피자 출시!">
+                                        <img src="<?php echo $path ?>img/main/event_1.png" alt="신메뉴 에그마요 피자 출시!">
                                     </div> 
                                     <div class="text_box">
                                         <p class="event_tit"><strong>[신메뉴]</strong></p>
@@ -266,7 +256,7 @@
                             <li class="event_list">
                                 <a href="#">
                                     <div class="photo_box">
-                                        <img src="img/main/event_2.png" alt="2025 우수가맹점 경산 옥산점">
+                                        <img src="<?php echo $path ?>img/main/event_2.png" alt="2025 우수가맹점 경산 옥산점">
                                     </div>
                                     <div class="text_box">
                                         <p class="event_tit"><strong>[2025 우수가맹점]</strong></p>
@@ -277,7 +267,7 @@
                             <li class="event_list">
                                 <a href="#">
                                     <div class="photo_box">
-                                        <img src="img/main/event_3.png" alt="신메뉴 바삭바삭 나쵸피자 출시!">
+                                        <img src="<?php echo $path ?>img/main/event_3.png" alt="신메뉴 바삭바삭 나쵸피자 출시!">
                                     </div>
                                     <div class="text_box">
                                         <p class="event_tit"><strong>[신메뉴]</strong></p>
@@ -290,53 +280,18 @@
                     <li class="comm_btn"><button><a href="sub_05_community.html">자세히 보기</a></button></li>
                 </ul>
             </section>
+
         </div>
-        <!-- footer -->
-        <footer>
-            <div class="f_inner">
-                <div class="f_logo_box"><img class="f_logo" src="img/main/f_logo.png" alt="푸터 로고"></div>
-                <div class="f_info">
-                    <ul class="f_info_top">
-                        <li><a href="#"><span>개인정보 처리방침</span></a></li>
-                        <li><a href="#">이메일수집거부</a></li>
-                    </ul>
-                    <ul class="f_info_bottom">
-                        <li>
-                            <p><span class="f_line">주식회사 티엠티컴퍼니</span></p>
-                            <p><span class="f_line">대표:최연호</span></p>
-                            <p><span>사업자등록번호 : 766-88-03240</span></p>
-                        </li>
-                        <li>
-                            <p><span class="f_line">울산광역시 남구 팔등로 51번길 30, 1층(신정동)</span></p>
-                            <p><span>가맹전화 : 1833-9455</span></p>
-                        </li>
-                        <li>
-                            <p><span>COPYRIGHT &copy; 2025 TMT PIZZA COMPANY.ALL RIGHTS RESERVED. Design by I.V Design.</span></p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="f_sns">
-                    <ul>
-                        <li class="f_insta"><a href="https://www.instagram.com/tmtpizza_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="img/main/f_ins_btn.png" alt="인스타그램 바로가기 버튼"></a></li>
-                        <li class="f_ytb"><a href="#"><img src="img/main/f_ytb_btn.png" alt="유튜브 바로가기 버튼"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <!-- quick menu -->
-        <ul id="quick_menu">
-            <li>
-                <a href="sub_04_franchise.html#franchise" class="franchise_now">
-                    <p>창업<br>문의</p>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="scroll_top">
-                    <div class="top_btn_img"><img src="img/main/top_arrow.svg" alt="스크롤 탑 버튼"></div>
-                    <p>TOP</p>
-                </a>
-            </li>
-        </ul>
+
+    	<?php include "footer.php" ?>
+
     </div>
+
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+
 </body>
+
 </html>
