@@ -42,7 +42,7 @@
 							</a>
 						</div>
 						<div class="imgbox">
-							<img src="../img/teamDetail_img.png" alt="" class="img">
+							<img src="../img/profile_pc_detail_jacky.png" alt="" class="img">
 						</div>
 					</div>
 					<div class="contbox">

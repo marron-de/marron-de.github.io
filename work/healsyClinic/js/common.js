@@ -378,9 +378,11 @@ $('.team_swiper').each(function () {
     let tablet_prevBtn = box.find('.tablet .prev_btn')[0];
 
 	let navigationOptions;
-	const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+	// const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+	const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 	const isWideScreen = window.innerWidth > 1080;
-	const isPC = !isTouchDevice && isWideScreen;
+	// const isPC = !isTouchDevice && isWideScreen;
+	const isPC = !isCoarsePointer && isWideScreen;
 	if (isPC) {
 		navigationOptions = {
 			nextEl: pc_nextBtn,
@@ -450,10 +452,11 @@ $('.team_swiper').each(function () {
 			return;
 		}
 
-		const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+		// const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+		const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;		
 		const isWideScreen = window.innerWidth > 1080;
-
-		const isPC = !isTouchDevice && isWideScreen;
+		// const isPC = !isTouchDevice && isWideScreen;
+		const isPC = !isCoarsePointer && isWideScreen;
 
 		if (isPC) {
 			let paginationVisible = false;

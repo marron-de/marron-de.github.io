@@ -44,7 +44,7 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_brian_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Brian Park</p>
@@ -67,12 +67,12 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_brian.png" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_john_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">John Yo Han, Sung</p>
@@ -89,7 +89,7 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_john.png" alt="" class="img">
 											</div>
 										</div>
 									</div>
@@ -120,7 +120,7 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_tony_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Tony Choo</p>
@@ -140,12 +140,12 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_tony.png" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_jacky_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Jacky Liu</p>
@@ -163,7 +163,7 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_jacky.png" alt="" class="img">
 											</div>
 										</div>
 									</div>
@@ -194,7 +194,7 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_johnathan_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Jonathan Phlek Duch</p>
@@ -210,7 +210,7 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_johnathan.png" alt="" class="img">
 											</div>
 										</div>
 									</div>
@@ -241,7 +241,7 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_minnie_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Minnie Edwards</p>
@@ -255,12 +255,12 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_minnie.png" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_yeonju_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">YeonJu, Park</p>
@@ -274,7 +274,7 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_yeonju.png" alt="" class="img">
 											</div>
 										</div>
 									</div>
@@ -305,7 +305,7 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_joy_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Joy Lee</p>
@@ -319,12 +319,12 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_joy.png" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_erin_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Erin Mcgiffen</p>
@@ -338,12 +338,12 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_erin.png" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_marisa_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Marisa Carnevale</p>
@@ -357,7 +357,7 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_marisa.png" alt="" class="img">
 											</div>
 										</div>
 									</div>
@@ -388,7 +388,7 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_kacey_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Kacey Shin</p>
@@ -402,12 +402,12 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_kacey.png" alt="" class="img">
 											</div>
 										</div>
 										<div class="swiper-slide item">
 											<div class="hovebox">
-												<img src="../img/team_thum1-2.png" alt="" class="img">
+												<img src="../img/profile_pc_list_ciara_f.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
 												<p class="tit">Ciara Lawne</p>
@@ -421,7 +421,7 @@
 												</div>
 											</div>
 											<div class="imgbox">
-												<img src="../img/team_thum1-1.png" alt="" class="img">
+												<img src="../img/profile_pc_list_ciara.png" alt="" class="img">
 											</div>
 										</div>
 									</div>
@@ -450,7 +450,8 @@
 
 
 	<!-- JS -->
-	<script src="../js/common.js"></script>
+	<!-- <script src="../js/common.js"></script> -->
+	<script src="../js/common.js?v=<?= filemtime('../js/common.js') ?>"></script>
 	<script>
   		 $(function() {
 			$('.nav_box .nav > li').eq(1).addClass('active');
