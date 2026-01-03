@@ -99,14 +99,18 @@ include_once(G5_THEME_PATH.'/head.php');
 		<section id="brand" class="main_section main_brand">
 			<div class="inner brand_box">
 				<ul class="br_list">
-					<li><img src="<?php echo G5_THEME_URL ?>/img/main/gpgp.png" alt="good price, good pizza"></li>
+					<li>
+						<img src="<?php echo G5_THEME_URL ?>/img/main/gpgp.png" alt="good price, good pizza" class="pc">
+						<img src="<?php echo G5_THEME_URL ?>/img/main/gpgp_mob.png" alt="good price, good pizza" class="tablet">
+					</li>
 					<li class="br_card card_01">
 						<img src="<?php echo G5_THEME_URL ?>/img/main/br_list_1.jpg" alt="TOGETHER">
 						<div class="card_text">
 							<p class="br_tit">TOGETHER</p>
 							<p class="br_txt">
-								고객님, 점주님들과 <br>
-								소통하며 <span>함께</span>나아가는 <br>
+								고객님, 점주님들과 <br class="pc">
+								소통하며 <br class="tablet">
+								<span>함께</span> 나아가는 <br class="pc">
 								브랜드입니다
 							</p>
 						</div>
@@ -116,8 +120,8 @@ include_once(G5_THEME_PATH.'/head.php');
 						<div class="card_text">
 							<p class="br_tit">MAKE</p>
 							<p class="br_txt">
-								합리적인 가격에 <br>
-								최상의 퀄리티를 <br>
+								합리적인 가격에 <br class="pc">
+								최상의  <br class="tablet">퀄리티를 <br class="pc">
 								<span>만들어</span>냅니다
 							</p>
 						</div>
@@ -127,8 +131,9 @@ include_once(G5_THEME_PATH.'/head.php');
 						<div class="card_text">
 							<p class="br_tit">TREND</p>
 							<p class="br_txt">
-								끊임없이 도전하고 <br>
-								시도하며 <span>시장 흐름</span>을<br>
+								끊임없이 도전하고 <br class="pc">
+								시도하며  <br class="tablet">
+								<span>시장 흐름</span>을<br class="pc">
 								빠르게 앞서 갑니다
 							</p>
 						</div>
@@ -168,6 +173,20 @@ include_once(G5_THEME_PATH.'/head.php');
 									Fully Loaded Pepperoni Pizza
 								</li>
 							</ul>
+							<ul class="menu_price tablet">
+								<li>
+									<span class="col_s size_cip">S</span>
+									<p>10,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_r size_cip">R</span>
+									<p>17,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_l size_cip">L</span>
+									<p>21,900 <span>원</span></p>
+								</li>
+							</ul>
 						</a>
 					</li>
 					<li class="itr_menu_list">
@@ -195,6 +214,20 @@ include_once(G5_THEME_PATH.'/head.php');
 								</li>
 								<li class="m_name_en">
 									Sweet photato Mousse Pizza
+								</li>
+							</ul>
+							<ul class="menu_price tablet">
+								<li>
+									<span class="col_s size_cip">S</span>
+									<p>10,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_r size_cip">R</span>
+									<p>17,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_l size_cip">L</span>
+									<p>21,900 <span>원</span></p>
 								</li>
 							</ul>
 						</a>
@@ -231,7 +264,21 @@ include_once(G5_THEME_PATH.'/head.php');
 									<img src="<?php echo G5_THEME_URL ?>/img/main/new_effect.svg" alt="신메뉴">
 									<p class="eff_txt">NEW</p>
 								</li>
-						</ul>
+							</ul>					
+							<ul class="menu_price tablet">
+								<li>
+									<span class="col_s size_cip">S</span>
+									<p>10,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_r size_cip">R</span>
+									<p>17,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_l size_cip">L</span>
+									<p>21,900 <span>원</span></p>
+								</li>
+							</ul>
 						</a>
 					</li>
 					<li class="itr_menu_list">
@@ -265,6 +312,20 @@ include_once(G5_THEME_PATH.'/head.php');
 								<li class="best_eff">
 									<img src="<?php echo G5_THEME_URL ?>/img/main/best_effect.svg" alt="베스트 메뉴">
 									<p class="eff_txt">BEST</p>
+								</li>
+							</ul>			
+							<ul class="menu_price tablet">
+								<li>
+									<span class="col_s size_cip">S</span>
+									<p>10,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_r size_cip">R</span>
+									<p>17,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_l size_cip">L</span>
+									<p>21,900 <span>원</span></p>
 								</li>
 							</ul>
 						</a>
@@ -340,7 +401,7 @@ include_once(G5_THEME_PATH.'/head.php');
 					</ul>
 				</li>
 				<li class="comm_btn">
-					<button><a href="/community">자세히 보기</a></button>
+					<button><a href="/news">자세히 보기</a></button>
 				</li>
 			</ul>
 		</section>

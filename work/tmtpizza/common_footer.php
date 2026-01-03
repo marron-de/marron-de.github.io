@@ -15,23 +15,25 @@
 						<span class="f_line">주식회사 티엠티컴퍼니</span>
 					</p>
 					<p>
-						<span class="f_line">대표:최연호</span>
+						<span class="f_line mob_line_hide">대표:최연호</span>
 					</p>
-					<p>
+					<p class="mob_w100">
 						<span>사업자등록번호 : 766-88-03240</span>
 					</p>
 				</li>
 				<li>
 					<p>
-						<span class="f_line">울산광역시 남구 팔등로 51번길 30, 1층(신정동)</span>
+						<span class="f_line mob_line_hide">울산광역시 남구 팔등로 51번길 30, 1층(신정동)</span>
 					</p>
-					<p>
+					<p class="mob_w100">
 						<span>가맹전화 : 1833-9455</span>
 						</p>
 				</li>
 				<li>
-					<p>
-						<span>COPYRIGHT &copy; 2025 TMT PIZZA COMPANY.ALL RIGHTS RESERVED. Design by I.V Design.</span>
+					<p class="copy">
+						<span>
+							COPYRIGHT &copy; 2025 TMT PIZZA COMPANY.ALL RIGHTS RESERVED. Design by I.V Design.
+						</span>
 					</p>
 				</li>
 			</ul>

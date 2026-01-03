@@ -16,12 +16,12 @@
 
 // store map
 // 샘플 매장 리스트 — 실제로 네이버 플레이스에서 검색해서 수집함
-var stores = [
-  {name: "TMT피자 서울 건대점", city: "서울", lat: 37.540, lng: 127.070},
-  {name: "TMT피자 부산 서면점", city: "부산", lat: 35.157, lng: 129.059},
-  {name: "TMT피자 대구 성서계대점", city: "대구", lat: 35.893, lng: 128.587},
-  {name: "TMT피자 포항 문덕점", city: "경북", lat: 36.021, lng: 129.383}
-];
+// var stores = [
+//   {name: "TMT피자 서울 건대점", city: "서울", lat: 37.540, lng: 127.070},
+//   {name: "TMT피자 부산 서면점", city: "부산", lat: 35.157, lng: 129.059},
+//   {name: "TMT피자 대구 성서계대점", city: "대구", lat: 35.893, lng: 128.587},
+//   {name: "TMT피자 포항 문덕점", city: "경북", lat: 36.021, lng: 129.383}
+// ];
 
 // 공통코드로 대체
 // community tab
@@ -91,44 +91,45 @@ document.addEventListener('click', function (e) {
 document.addEventListener('DOMContentLoaded', () => {
     const openBtn = document.querySelector('.privacy_open');
     const modal = document.getElementById('privacy_modal');
-    const closeBtns = modal.querySelectorAll('.modal_close, .modal_confirm');
 
-    // 모달 열기
-    openBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // anchor 기본 동작 막기
-      	modal.classList.add('show');
-    });
+    if (openBtn && modal) { // 요소가 존재할 때만 실행
+        const closeBtns = modal.querySelectorAll('.modal_close, .modal_confirm');
 
-    // 모달 닫기
-    closeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-			modal.classList.remove('show');
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('show');
         });
-    });
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('show');
+            });
+        });
+    }
 });
 
 // form
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.inquiry_form');
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    if (form) { // 요소가 존재할 때만 실행
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                alert('상담 신청이 정상적으로 접수되었습니다.');
+                form.reset();
+            } else {
+                alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
             }
         });
-
-        if (response.ok) {
-            alert('상담 신청이 정상적으로 접수되었습니다.');
-            form.reset();
-        } else {
-            alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
-        }
-    });
+    }
 });
 
 // 퀵메뉴 - 창업문의
@@ -174,12 +175,12 @@ $(document).ready(function () {
 	$(".header .menu_open").on("click", function () {
 		$("body").addClass("hidden");
 		$(".header").addClass("open");
-		$(".navbox").addClass("open");
+		$(".nav_box").addClass("open");
 	});
-	$(".navbox .menu_close").on("click", function () {
+	$(".nav_box .menu_close").on("click", function () {
 		$("body").removeClass("hidden");
 		$(".header").removeClass("open");
-		$(".navbox").removeClass("open");
+		$(".nav_box").removeClass("open");
 	});
 });
 $(document).mouseup(function (e) {
@@ -281,4 +282,25 @@ $(window).on('resize', function() {
 });
 $(document).ready(function() {
     $(window).trigger('resize');
+});
+
+
+// mobile menu
+// tab function
+$(document).ready(function () {
+	$(".menu_cont .tmt_menu_box .tmt_list_box .menu-item").click(function () {
+		let item = $(this);
+		let otherbox = $(".menu_cont .tmt_menu_box .tmt_list_box .menu-item .menu_info");
+		let targetbox = item.find(".menu_info");
+		
+		$("body").addClass("hidden")
+		otherbox.removeClass("show");
+		targetbox.addClass("show");
+	});
+});
+$(document).mouseup(function (e) {
+	if ($(".menu_cont .tmt_menu_box .tmt_list_box .menu-item .menu_info").has(e.target).length === 0) {		
+		$("body").removeClass("hidden")
+		$(".menu_cont .tmt_menu_box .tmt_list_box .menu-item .menu_info").removeClass("show")
+	}
 });

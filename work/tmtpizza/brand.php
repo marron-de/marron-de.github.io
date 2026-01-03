@@ -15,8 +15,10 @@
 		<section class="sub_section brand_cont1">
 			<h1><strong>&quot;TOO MUCH TOPPING&quot;</strong></h1>
 			<p>
-				&quot; 같은 가격을 주고 먹더라도 더 맛있게, 더 푸짐하게 <br>
-				그리고 다양한 서비스와 함껨 즐기실 수 있도록 하겠습니다. &quot;
+				&quot; 같은 가격을 주고 먹더라도 더 맛있게, 
+				<br class="tablet">더 푸짐하게 <br class="pc">
+				그리고 다양한 서비스와  <br class="tablet">
+				함께 즐기실 수 있도록 하겠습니다. &quot;
 			</p>
 			<div class="br_con_img01"><img src="<?php echo G5_THEME_URL ?>/img/sub_01/brand_pizza.png" alt="피자 연출컷 이미지"></div>
 		</section>
@@ -52,7 +54,7 @@
 						<li class="iden_t_box">
 							<p class="iden_tit">LOGO</p>
 							<p class="iden_txt">
-								티엠티 피자의 로고는 &apos;Too Much Topping&apos;이라는 이름처럼, <br>
+								티엠티 피자의 로고는 &apos;Too Much Topping&apos;이라는 이름처럼, <br class="pc">
 								푸짐함과 신선함, 그리고 자신감 있는 브랜드 정신을 담았습니다.
 							</p>
 						</li>
@@ -71,7 +73,7 @@
 						<li class="iden_t_box">
 							<p class="iden_tit">COLOR</p>
 							<p class="iden_txt">
-								대담한 색상 대비와 단단한 타이포그래피로 <br>
+								대담한 색상 대비와 단단한 타이포그래피로 <br class="pc">
 								합리적이면서도 즐거운 피자 브랜드의 아이덴티티를 표현합니다.
 							</p>
 						</li>
@@ -92,7 +94,7 @@
 						<li class="iden_t_box">
 							<p class="iden_tit">SLOGUN</p>
 							<p class="iden_txt">
-								가득 채운 정성과 합리적인 즐거움을 전하는 우리의 다짐입니다. <br>
+								가득 채운 정성과 합리적인 즐거움을 전하는 우리의 다짐입니다. <br class="pc">
 								한 조각마다 푸짐한 행복을 담아, 모두가 만족할 수 있는 피자를 만듭니다.
 							</p>
 						</li>

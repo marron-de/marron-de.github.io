@@ -10,7 +10,7 @@
 			<li><a href="/menu.php" class="link">메뉴</a></li>
 			<li><a href="/store" class="link">매장찾기</a></li>
 			<li><a href="/franchise.php" class="link">창업문의</a></li>
-			<li><a href="/community" class="link">커뮤니티</a></li>
+			<li><a href="/news" class="link">커뮤니티</a></li>
 		</ul>
 		<div class="h_side">
 			<button type="button" class="menu_open"></button>
@@ -55,19 +55,10 @@
 			</a>
 		</div>
 		<div class="item">
-			<a href="/community" class="link">
+			<a href="/news" class="link">
 				<span class="txt">커뮤니티</span>
 				<span class="arrow"></span>
 			</a>
-		</div>
-	</div>
-	<div class="bottombox">
-		<div class="btnbox">
-			<a href="/" class="btn typeC">메뉴</a>
-		</div>
-		<div class="btnbox">
-			<a href="/" class="btn typeB">메뉴</a>
-			<a href="/" class="btn typeB">메뉴</a>
 		</div>
 	</div>
 </div>

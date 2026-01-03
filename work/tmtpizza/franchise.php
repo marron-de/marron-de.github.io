@@ -9,7 +9,7 @@
 		<section class="franchise_hero">
 			<h1>
 				<strong>T.M.T</strong> <span>PIZZA</span><br>
-				자리 있을 때 <strong>창업</strong>하세요!
+				자리 있을 때 <br class="tablet"><strong>창업</strong>하세요!
 			</h1>
 			<ul class="benefit_5zero">
 				<li class="bene_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/5_zero.png" alt="5무"></li>
@@ -85,10 +85,12 @@
 		
 		<section class="j_curve franchise_cont2">
 			<h2 class="fran_tit">
-				배달시장? Why not?<br>
+				배달시장? <br class="tablet">
+				Why not?
+				<br>
 				<span class="color_gr">We Are T.M.T!</span>
 			</h2>
-			<p class="fran_subtit">T.M.T PIZZA는 불황을 모르고 수직 상승중! 계속해서 성장하는 수치가 이를 증명합니다.</p>
+			<p class="fran_subtit">T.M.T PIZZA는 불황을 모르고 수직 상승중! <br class="tablet">계속해서 성장하는 수치가 이를 증명합니다.</p>
 			<ul class="j_curve_box">
 				<li class="j_graph"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/J_curve.png" alt="제이커브 그래프"></li>
 				<li class="j_eff"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/J-curve_02.png" alt="T.M.T PIZZA의 성장 곡선은 J-커브의 정석을 따르고 있습니다. 탄탄하게 올랐고, 안정적으로 본사 시스템을 구축했습니다."></li>
@@ -97,8 +99,9 @@
 		
 		<section class="strategy franchise_cont3">
 			<h2 class="fran_tit">
-				<span class="color_gr">T.M.T</span>는 <span class="color_gr">매출이 잘나오는</span><br>
-				<span class="color_pu">방법</span>을 알고 있습니다.
+				<span class="color_gr">T.M.T</span>는 <span class="color_gr">매출이
+				<br class="tablet"> 잘나오는</span><br class="pc">
+				<span class="color_pu">방법</span>을 <br class="tablet">알고 있습니다.
 			</h2>
 			<ul class="strategy_box">
 				<!-- 비법 1 -->
@@ -145,7 +148,9 @@
 					</ul>
 					<p class="stra_bott_txt">
 						<strong>10평대 소형 평수에서 일어나는 매출의 기적</strong><br>
-						많은 매장들이 <span class="st_bott_pu">&quot;증명&quot;</span>했고, 여전히 <span class="st_bott_pu">&quot;증명&quot;</span>하고 있습니다
+						많은 매장들이 <span class="st_bott_pu">&quot;증명&quot;</span>했고, 
+						<br class="tablet">
+						여전히 <span class="st_bott_pu">&quot;증명&quot;</span>하고 있습니다
 					</p>
 					<div class="stra_eff"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/stra_eff_02.png" alt="비법 1."></div>
 				</li>
@@ -199,7 +204,7 @@
 				</li>
 			</ul>
 			<p class="comm_sub_txt">
-				이처럼 수 많은 매장 데이터 모델을 바탕으로<br>
+				이처럼 수 많은 매장 데이터 모델을 바탕으로<br class="pc">
 				소형 매장에서 매출이 잘나오는 <span class="st_gr">&quot;공식&quot;</span>과 <span class="st_pu">&quot;답&quot;</span>을 T.M.T PIZZA는 알고 있습니다.
 			</p>
 		</section>
@@ -210,7 +215,8 @@
 			<ul class="sec04_con_box">
 				<li class="sec04_top">
 					<div class="sec04_titbox">
-						<p class="sec04_tit">투자 자금 평균 회수 기간 단, <span>5개월</span></p>
+						<p class="sec04_tit">투자 자금 평균 회수 기간 <br class="tablet">
+							단, <span>5개월</span></p>
 						<p class="sec04_txt">(* 인건비 등 매장 상황에 따라 회수 기간이 변동 될 수 있습니다.)</p>
 					</div>
 					<ul class="sce04_vs_box">
@@ -268,7 +274,8 @@
 						<li>5무 정책</li>
 					</ul>
 					<p class="comm_sub_txt">
-						&quot;4박자&quot;를 통해 부담을 덜어드리고 &quot;리스크를 최소화&quot;해드립니다.<br>
+						&quot;4박자&quot;를 통해 부담을 덜어드리고 <br class="tablet">
+						&quot;리스크를 최소화&quot;해드립니다.<br>
 						T.M.T PIZZA로 마음 놓고 장사만 하세요!
 					</p>
 				</li>
@@ -277,8 +284,9 @@
 		
 		<section class="franchise_cont5">
 			<h2 class="fran_tit">
-				<span class="color_gr">T.M.T</span>는 <span class="color_gr">매출이 잘나오는</span><br>
-				<span class="color_pu">방법</span>을 알고 있습니다.
+				<span class="color_gr">T.M.T</span>는 <span class="color_gr">매출이 잘나오는</span><br class="pc"> 
+				<span class="color_pu">방법</span>을 <br class="tablet">
+				 알고 있습니다.
 			</h2>
 			<p class="fran_subtit">많은 혜택 챙겨 가시려면 지금 서두르세요</p>
 			<ul class="sec05_card_box">
@@ -312,11 +320,12 @@
 		
 		<section class="franchise_cont6">
 			<h2 class="fran_tit">
-				<span class="color_gr">T.M.T PIZZA</span> <span class="color_pu">창업 비용</span>
+				<span class="color_gr">T.M.T PIZZA</span>  <br class="tablet">
+				<span class="color_pu">창업 비용</span>
 			</h2>
 			<p class="fran_subtit">
 				현실적인 비용 설계와 체계적 지원으로, <br>
-				오직 개설비용만 들어가는 합리적 투자가치를 실현합니다.
+				오직 개설비용만 들어가는  <br class="tablet">합리적 투자가치를 실현합니다.
 			</p>
 			<!-- 컨트롤 영역 -->
 			<div class="cost_controls" role="tablist">
@@ -353,27 +362,31 @@
 							<tr>
 								<th scope="row">가맹비</th>
 								<td>티엠티피자 브랜드 상표 및 상호 사용</td>
-								<td class="highlight"><span class="cost_eff">500</span>만 원 &rarr; <span class="cost_eff">0</span>원(한시적 면제)</td>
+								<td class="highlight"><span class="cost_eff">500</span>만 원 &rarr; <span class="cost_eff">0</span>원
+								<br class="tablet">(한시적 면제)</td>
 							</tr>
 							<tr>
 								<th scope="row">교육비</th>
 								<td>본사 교육 1주(운영시스템/조리 교육/현장실습)+슈퍼바이저 매장 파견 2일</td>
-								<td class="highlight"><span class="cost_eff">300</span>만 원 &rarr; <span class="cost_eff">0</span>원(한시적 면제)</td>
+								<td class="highlight"><span class="cost_eff">300</span>만 원 &rarr; <span class="cost_eff">0</span>원
+								<br class="tablet">(한시적 면제)</td>
 							</tr>
 							<tr>
 								<th scope="row">로열티</th>
 								<td>-</td>
-								<td class="highlight"><span class="cost_eff">0</span>원(한시적 면제)</td>
+								<td class="highlight"><span class="cost_eff">0</span>원
+								<br class="tablet">(한시적 면제)</td>
 							</tr>
 							<tr>
 								<th scope="row">보증금</th>
 								<td>계약이행보증금, 물류보증금</td>
-								<td class="highlight"><span class="cost_eff">100</span>만 원 &rarr; <span class="cost_eff">0</span>원(한시적 면제)</td>
+								<td class="highlight"><span class="cost_eff">100</span>만 원 &rarr; <span class="cost_eff">0</span>원
+								<br class="tablet">(한시적 면제)</td>
 							</tr>
 							<tr>
 								<th scope="row">주방집기/기물</th>
 								<td>냉장고, 냉동고, 테이블 냉장고, 쇼케이스, 작업대, 집기류 등 필요 물품</td>
-								<td class="highlight"><span class="cost_eff">1,010</span>만 원(중고 가능)</td>
+								<td class="highlight"><span class="cost_eff">1,010</span>만 원<br class="tablet">(중고 가능)</td>
 							</tr>
 							<tr>
 								<th scope="row">간판</th>
@@ -383,12 +396,12 @@
 							<tr>
 								<th scope="row">인테리어</th>
 								<td>주방, 내부 바닥, 벽, 천정, 가벽, 필름, 폐기물, 전기 공사 등</td>
-								<td class="highlight"><span class="cost_eff">19,000</span>만 원(자체시공 가능)</td>
+								<td class="highlight"><span class="cost_eff">19,000</span>만 원<br class="tablet">(자체시공 가능)</td>
 							</tr>
 							<tr>
 								<th scope="row">전용 오븐기</th>
 								<td>티엠티 전용 오븐기</td>
-								<td class="highlight"><span class="cost_eff">300</span>만 원(중고기준)</td>
+								<td class="highlight"><span class="cost_eff">300</span>만 원<br class="tablet">(중고기준)</td>
 							</tr>
 							<tr>
 								<th scope="row">전용 롤러기</th>
@@ -401,17 +414,17 @@
 							<tr>
 								<th scope="row">가맹비</th>
 								<td>티엠티피자 브랜드 상표 및 상호 사용</td>
-								<td class="highlight"><span class="cost_eff">500</span>만 원 &rarr; <span class="cost_eff">0</span>원(한시적 면제)</td>
+								<td class="highlight"><span class="cost_eff">500</span>만 원 &rarr; <span class="cost_eff">0</span>원<br class="tablet">(한시적 면제)</td>
 							</tr>
 							<tr>
 								<th scope="row">교육비</th>
 								<td>본사 교육 1주(운영시스템/조리 교육/현장실습)+오픈바이저 매장 파견 2일</td>
-								<td class="highlight"><span class="cost_eff">300</span>만 원 &rarr; <span class="cost_eff">0</span>원(한시적 면제)</td>
+								<td class="highlight"><span class="cost_eff">300</span>만 원 &rarr; <span class="cost_eff">0</span>원<br class="tablet">(한시적 면제)</td>
 							</tr>
 							<tr>
 								<th scope="row">로열티</th>
 								<td>-</td>
-								<td class="highlight"><span class="cost_eff">0</span>원(한시적 면제)</td>
+								<td class="highlight"><span class="cost_eff">0</span>원<br class="tablet">(한시적 면제)</td>
 							</tr>
 							<tr>
 								<th scope="row">주방집기/기물</th>
@@ -444,7 +457,7 @@
 		</section>
 		
 		<section class="franchise_cont7">
-			<h2 class="fran_tit">성공의 첫걸음,<br><span class="color_gr">T.M.T PIZZA</span> <span class="color_pu">창업 절차</span></h2>
+			<h2 class="fran_tit">성공의 첫걸음,<br><span class="color_gr">T.M.T PIZZA</span> <br class="tablet"> <span class="color_pu">창업 절차</span></h2>
 			<ul class="process_box">
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_01.png" alt="창업 상담문의 아이콘"></div>
@@ -550,7 +563,8 @@
 		<section id="franchise" class="franchise_cont9">
 			<h2 class="fran_tit">창업 문의</h2>
 			<p class="fran_subtit">
-				T.M.T PIZZA는 점주님들의 상권을 최우선으로 여깁니다.<br>
+				T.M.T PIZZA는 점주님들의 <br class="tablet">
+				상권을 최우선으로 여깁니다.<br>
 				무분별한 출점으로 인한 상권침해가 발생되지 않도록 하는 것이 회사의 방침입니다.
 			</p>
 			<div class="contact_form_box">

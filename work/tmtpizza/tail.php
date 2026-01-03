@@ -22,7 +22,7 @@ if(G5_COMMUNITY_USE === false) {
 <!-- } 콘텐츠 끝 -->
 
 <?php
-if ($bo_table == "store" || $bo_table == "community")  {
+if ($bo_table == "store" || $bo_table == "news" || $bo_table == "story")  {
 ?>
 
 </div></div>

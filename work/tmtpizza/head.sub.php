@@ -37,7 +37,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 <meta charset="utf-8">
 
 <!-- 기본검색 시작 -->
-<link rel="shortcut icon" href="theme/tmtpizza/favicon/favicon.ico">
+<link rel="shortcut icon" href="<?php echo G5_THEME_URL ?>/favicon/favicon.ico">
 <meta name="title" content="티엠티피자">
 <meta name="keyword" content="티엠티, TMT, 피자, 피자맛집, 투머치, 프랜차이즈, 가맹, 가성비, 배달, 배달의민족, 요기요, 쿠팡이츠, 리뷰이벤트, 할인, 페퍼로니, 치즈, 힙합">
 <meta name="description" content="울산에서 시작된 투머치 한 토핑 피자, 초록이들의 진심, 투머치토핑피자">
