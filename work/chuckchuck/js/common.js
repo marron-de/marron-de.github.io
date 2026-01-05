@@ -423,6 +423,7 @@ const franchise_swiper2 = new Swiper('.franchise_swiper2', {
 	slidesPerView: 'auto',
 	spaceBetween: 20,
 	grabCursor: true,
+	allowTouchMove: false,
 	navigation: {
 		nextEl: '.franchise_swiper .next_btn',
 		prevEl: '.franchise_swiper .prev_btn',
@@ -436,6 +437,7 @@ const franchise_swiper2 = new Swiper('.franchise_swiper2', {
 		1080: {
 			direction: 'horizontal',
 			spaceBetween: 30,
+			allowTouchMove: true,
 		},
 	},
 });
