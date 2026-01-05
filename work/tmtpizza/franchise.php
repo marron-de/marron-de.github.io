@@ -110,16 +110,20 @@
 					<ul class="stra_con_box">
 						<li class="stra_box">
 							<p class="stra_con_L">
-								억소리 나는<br>
-								<span class="stra_pu_01">창업비용</span> 및<br>
-								<span class="stra_pu_01">높은 진입장벽</span><br>
-								<strong class="stra_gr">타파</strong>
+								<span class="center">
+									억소리 나는<br>
+									<span class="stra_pu_01">창업비용</span> 및<br>
+									<span class="stra_pu_01">높은 진입장벽</span><br>
+									<strong class="stra_gr">타파</strong>
+								</span>
 							</p>
 							<div class="stra_img st_img_01"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/stra_icon_01.png" alt="돈주머니 아이콘"></div>
 							<p class="stra_con_R">
-								<span class="stra_pu_01">대형브랜드</span> 와<br>
-								맞먹는<br>
-								<strong class="stra_gr">높은 매출</strong>
+								<span class="center">
+									<span class="stra_pu_01">대형브랜드</span> 와<br>
+									맞먹는<br>
+									<strong class="stra_gr">높은 매출</strong>
+								</span>
 							</p>
 						</li>
 					</ul>
@@ -135,14 +139,18 @@
 					<ul class="stra_con_box">
 						<li class="stra_box">
 							<p class="stra_con_L">
-								<span class="stra_pu_02">투자리스크</span><br>
-								<strong class="stra_gr">DOWN</strong>
+								<span class="center">
+									<span class="stra_pu_02">투자리스크</span><br>
+									<strong class="stra_gr">DOWN</strong>
+								</span>
 							</p>
 							<div class="stra_img st_img_02"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/stra_icon_02.png" alt="가게 아이콘"></div>
 							<p class="stra_con_R">
-								<span class="stra_pu_02">많은 투자라고</span><br>
-								<span class="stra_pu_02">높은 매출?</span><br>
-								<strong class="stra_gr">NO!</strong>
+								<span class="center">
+									<span class="stra_pu_02">많은 투자라고</span><br>
+									<span class="stra_pu_02">높은 매출?</span><br>
+									<strong class="stra_gr">NO!</strong>
+								</span>
 							</p>
 						</li>
 					</ul>
@@ -160,15 +168,19 @@
 					<ul class="stra_con_box">
 						<li class="stra_box">
 							<p class="stra_con_L">
-								<span class="stra_pu_01">요식업,<br>매장운영</span>이<br>
-								처음이세요?<br>
-								<strong class="stra_gr">걱정마세요</strong>
+								<span class="center">
+									<span class="stra_pu_01">요식업,<br>매장운영</span>이<br>
+									처음이세요?<br>
+									<strong class="stra_gr">걱정마세요</strong>
+								</span>
 							</p>
 							<div class="stra_img st_img_03"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/stra_icon_03.png" alt="기계 아이콘"></div>
 							<p class="stra_con_R">
-								<span class="stra_pu_01">연령불문...!</span><br>
-								피자 한 판 <br> 만드는 시간 <br>
-								<strong class="stra_gr">단, 3분!</strong>
+								<span class="center">
+									<span class="stra_pu_01">연령불문...!</span><br>
+									피자 한 판 <br> 만드는 시간 <br>
+									<strong class="stra_gr">단, 3분!</strong>
+								</span>
 							</p>
 						</li>
 					</ul>
@@ -184,15 +196,19 @@
 					<ul class="stra_con_box">
 						<li class="stra_box">
 							<p class="stra_con_L">
-								<span class="stra_pu_02">황금비율</span> <br>
-								<strong class="stra_gr">시크릿</strong><br>
-								<strong class="stra_gr">도우</strong>
+								<span class="center">
+									<span class="stra_pu_02">황금비율</span> <br>
+									<strong class="stra_gr">시크릿</strong><br>
+									<strong class="stra_gr">도우</strong>
+								</span>
 							</p>
 							<div class="stra_img st_img_04"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/stra_icon_04.png" alt="하트 아이콘"></div>
 							<p class="stra_con_R">
-								<span class="stra_pu_02">터질듯한</span><br>
-								<strong class="stra_gr">투머치</strong><br>
-								<strong class="stra_gr">토핑</strong>
+								<span class="center">
+									<span class="stra_pu_02">터질듯한</span><br>
+									<strong class="stra_gr">투머치</strong><br>
+									<strong class="stra_gr">토핑</strong>
+								</span>
 							</p>
 						</li>
 					</ul>
@@ -763,7 +779,6 @@
 
 
 <!-- JS -->
-<script src="js/script.js"></script>
 <script>
 	(function(d) {
 		var config = {
