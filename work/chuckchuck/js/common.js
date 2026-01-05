@@ -18,17 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuOpen = document.querySelector('.header .menu_open');
     const menuClose = document.querySelector('.navbox .menu_close');
 
-    menuOpen.addEventListener('click', () => {
-        body.classList.add('hidden');
-        header.classList.add('open');
-        navbox.classList.add('open');
-    });
+	if (menuOpen) {
+		menuOpen.addEventListener('click', () => {
+			body.classList.add('hidden');
+			header.classList.add('open');
+			navbox.classList.add('open');
+		});
+	}
 
-    menuClose.addEventListener('click', () => {
-        body.classList.remove('hidden');
-        header.classList.remove('open');
-        navbox.classList.remove('open');
-    });
+	if (menuClose) {
+		menuClose.addEventListener('click', () => {
+			body.classList.remove('hidden');
+			header.classList.remove('open');
+			navbox.classList.remove('open');
+		});
+	}
 
     document.addEventListener('mouseup', (e) => {
         if (!navbox.contains(e.target)) {
@@ -37,6 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
             navbox.classList.remove('open');
         }
     });
+});
+
+
+// hader back button
+document.addEventListener('DOMContentLoaded', () => {
+  const backBtn = document.querySelector('.header .h_side .back_btn');
+  if (!backBtn) return;
+
+  backBtn.addEventListener('click', () => {
+    if (window.history.length > 1) {
+      history.back();
+    }
+  });
 });
 
 
@@ -160,6 +177,71 @@ window.addEventListener('resize', updateLayout);
 document.addEventListener('DOMContentLoaded', updateLayout);
 
 
+// count up
+document.addEventListener('DOMContentLoaded', () => {
+  const countEls = document.querySelectorAll('.countup');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { // 화면에 보이면
+        const el = entry.target;
+        const end = Number(el.dataset.count);
+        const duration = Number(el.dataset.time) || 2000;
+        let startTime = null;
+
+        function animate(time) {
+          if (!startTime) startTime = time;
+          const progress = Math.min((time - startTime) / duration, 1);
+
+          const value = Math.floor(end * progress);
+          el.textContent = value.toLocaleString();
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+
+        requestAnimationFrame(animate);
+        obs.unobserve(el); // 한 번 실행 후 관찰 종료
+      }
+    });
+  }, { threshold: 0.2 }); // 10% 보이면 실행
+
+  countEls.forEach(el => observer.observe(el));
+});
+
+
+// form file
+document.addEventListener('DOMContentLoaded', () => {
+  const fileBoxes = document.querySelectorAll('.file_box');
+
+  fileBoxes.forEach(box => {
+    const fileInput = box.querySelector('.input_file');
+    const fileNameInput = box.querySelector('.file_name');
+    const uploadBtn = box.querySelector('.upload_btn');
+
+    uploadBtn.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    fileNameInput.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        fileNameInput.value = file.name;
+        box.classList.add('attached');
+      } else {
+        fileNameInput.value = '';
+        box.classList.remove('attached');
+      }
+    });
+  });
+});
+
+
 
 /* main */
 function cloneSlides(selector, multiply = 3) {
@@ -188,6 +270,7 @@ const ms3_swiper = new Swiper('.ms3_swiper', {
 	// observeParents: true,
 	speed: 500,
 	loop: true,
+	grabCursor: true,
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: false,
@@ -200,7 +283,6 @@ const ms3_swiper = new Swiper('.ms3_swiper', {
 
 // main section4
 const ms4_swiper = new Swiper('.ms4_swiper', {
-	loop: true,
 	speed: 500,
 	slidesPerView: 'auto',
 	spaceBetween: 20,
@@ -214,29 +296,10 @@ const ms4_swiper = new Swiper('.ms4_swiper', {
 
 // main section8
 // 수동 복제
-function cloneSlides(selector, multiply = 3) {
-	const container = document.querySelector(selector);
-	if (!container) return;
-
-	const wrapper = container.querySelector('.swiper-wrapper');
-	const slides = Array.from(wrapper.children)
-		.filter(slide => !slide.hasAttribute('data-clone'));
-
-	const originalCount = slides.length;
-	const cloneCount = originalCount * (multiply - 1);
-
-	for (let i = 0; i < cloneCount; i++) {
-		const clone = slides[i % originalCount].cloneNode(true);
-		clone.setAttribute('data-clone', 'true');
-		wrapper.appendChild(clone);
-	}
-
-	return originalCount; // 원본 개수 반환
-}
 const originalMS8 = cloneSlides('.ms8_swiper', 3);
 const ms8_swiper = new Swiper('.ms8_swiper', {
 	loop: true,
-	speed: 800,
+	speed: 1000,
 	slidesPerView: 'auto',
 	spaceBetween: 24,
 	initialSlide: 2,
@@ -258,11 +321,13 @@ const ms8_swiper = new Swiper('.ms8_swiper', {
 });
 
 
+
 /* about */
-// about story
+// about swiper
 const about_swiper = new Swiper('.about_swiper', {
 	speed: 500,
 	spaceBetween: 40,
+	grabCursor: true,
 	navigation: {
 		nextEl: '.about_swiper .next_btn',
 		prevEl: '.about_swiper .prev_btn',
@@ -279,28 +344,99 @@ const about_swiper = new Swiper('.about_swiper', {
 });
 
 
-/* service */
-// count up
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.countup').forEach(el => {
-    const end = Number(el.dataset.count);
-    const duration = Number(el.dataset.time) || 2000;
 
-    let startTime = null;
+/* franchise */
+// franchise swiper
+function renderPagination(swiper, originalCount) {
+	const fixedCurrent = (swiper.realIndex % originalCount) + 1;
 
-    function animate(time) {
-      if (!startTime) startTime = time;
-      const progress = Math.min((time - startTime) / duration, 1);
+	const currentStr = ('0' + fixedCurrent).slice(-2);
+	const totalStr = ('0' + originalCount).slice(-2);
 
-      const value = Math.floor(end * progress);
-      el.textContent = value.toLocaleString();
+	return `<span class="current">${currentStr}</span> / <span class="total">${totalStr}</span>`;
+}
+function initBullets(total) {
+    const paging = document.querySelector('.franchise_swiper .pagination');
+    let html = '';
 
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
+    for (let i = 1; i <= total; i++) {
+        html += `<span class="swiper-pagination-bullet" data-index="${i}"></span>`;
     }
+    paging.innerHTML = html;
+}
+function updateBullets(swiper, total) {
+    const bullets = document.querySelectorAll('.franchise_swiper .pagination .swiper-pagination-bullet');
+    const current = (swiper.realIndex % total) + 1;
 
-    requestAnimationFrame(animate);
-  });
+    bullets.forEach((b, i) => {
+        b.classList.toggle('swiper-pagination-bullet-active', (i + 1) === current);
+    });
+}
+const originalFS1 = cloneSlides('.franchise_swiper', 3);
+const franchise_swiper = new Swiper('.franchise_swiper', {
+	loop:true,
+	speed: 500,
+	spaceBetween: 40,
+	centeredSlides: true,
+	grabCursor: true,
+	navigation: {
+		nextEl: '.franchise_swiper .next_btn',
+		prevEl: '.franchise_swiper .prev_btn',
+	},
+	// pagination: {
+	// 	el: '.franchise_swiper .pagination',
+	// 	clickable: true,
+	// },
+	pagination: {
+		el: '.franchise_swiper .pagination',
+		clickable: true,
+		renderCustom: function (swiper) {
+			return renderPagination(swiper, originalFS1);
+		},
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	on: {
+        init(swiper) {
+            initBullets(originalFS1);
+            updateBullets(swiper, originalFS1);
+        },
+        slideChange(swiper) {
+            updateBullets(swiper, originalFS1);
+        }
+    },
+	breakpoints: {
+		1080: {
+			spaceBetween: 123,
+		},
+	},
+});
+
+// franchise swiper2
+// const originalFS2 = cloneSlides('.franchise_swiper2', 3);
+const franchise_swiper2 = new Swiper('.franchise_swiper2', {
+	direction: 'vertical',
+	loop:true,
+	speed: 500,
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	grabCursor: true,
+	navigation: {
+		nextEl: '.franchise_swiper .next_btn',
+		prevEl: '.franchise_swiper .prev_btn',
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+		reverseDirection: true
+	},
+	breakpoints: {
+		1080: {
+			direction: 'horizontal',
+			spaceBetween: 30,
+		},
+	},
 });
 
