@@ -26,60 +26,74 @@
 		<!-- main section -->
 		<div class="container">
 
+			<!-- 260106 수정작업 start -->
 			<section class="main_section ms1 slidebox">
 				<div class="inner swiper ms1_swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide item">
-							<div class="bg">
+							<a href="" class="bg link">
 								<!-- pc용 -->
-								<img src="<?php echo $path ?>img/ms1_bg1.jpg" alt="" class="pc"> 
+								<img src="<?php echo $path ?>img/ms1_new_bg1.jpg" alt="" class="pc"> 
 								<!-- 모바일용 -->
-								<img src="<?php echo $path ?>img/ms1_bg1_mob.jpg" alt="" class="tablet">
-							</div>
-							<div class="inner txtbox">
-								<span class="badge Paperlogy">OPEN</span>
-								<p class="title Paperlogy">
-									여행대장 홈페이지 <br>
-									리뉴얼 오픈
-								</p>
-								<p class="desc Paperlogy">
-									<span class="pc">여행대장 </span> 
-									홈페이지가 새롭게 오픈되었습니다.
-								</p>
-							</div>
+								<img src="<?php echo $path ?>img/ms1_new_bg1_mob.jpg" alt="" class="tablet">
+							</a>
 						</div>
 						<div class="swiper-slide item">
-							<div class="bg">
+							<a href="" class="bg link">
 								<!-- pc용 -->
-								<img src="<?php echo $path ?>img/ms1_bg2.jpg" alt="" class="pc"> 
+								<img src="<?php echo $path ?>img/ms1_new_bg2.jpg" alt="" class="pc"> 
 								<!-- 모바일용 -->
-								<img src="<?php echo $path ?>img/ms1_bg2_mob.jpg" alt="" class="tablet">
-							</div>
-							<div class="inner txtbox">
-								<span class="badge Paperlogy">EVENT</span>
-								<p class="title Paperlogy">
-									특가 항공 타고 떠나는 <br>
-									여행심화반 제주편
-								</p>
-								<p class="desc Paperlogy">내 취향대로 진짜 제주도를 즐기다!</p>
-							</div>
+								<img src="<?php echo $path ?>img/ms1_new_bg2_mob.jpg" alt="" class="tablet">
+							</a>
 						</div>
 						<div class="swiper-slide item">
-							<div class="bg">
+							<a href="" class="bg link">
 								<!-- pc용 -->
-								<img src="<?php echo $path ?>img/ms1_bg3.jpg" alt="" class="pc"> 
+								<img src="<?php echo $path ?>img/ms1_new_bg3.jpg" alt="" class="pc"> 
 								<!-- 모바일용 -->
-								<img src="<?php echo $path ?>img/ms1_bg3_mob.jpg" alt="" class="tablet">
-							</div>
-							<div class="inner txtbox">
-								<span class="badge Paperlogy">SALE</span>
-								<p class="title Paperlogy">
-									이집트 패키지 투어! <br>
-									최대 57% 할인 석찬순 특가
-								</p>
-								<p class="desc Paperlogy">박당 약 4만원대</p>
-							</div>
-						</div>						
+								<img src="<?php echo $path ?>img/ms1_new_bg3_mob.jpg" alt="" class="tablet">
+							</a>
+						</div>
+						<div class="swiper-slide item">
+							<a href="" class="bg link">
+								<!-- pc용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg4.jpg" alt="" class="pc"> 
+								<!-- 모바일용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg4_mob.jpg" alt="" class="tablet">
+							</a>
+						</div>
+						<div class="swiper-slide item">
+							<a href="" class="bg link">
+								<!-- pc용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg5.jpg" alt="" class="pc"> 
+								<!-- 모바일용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg5_mob.jpg" alt="" class="tablet">
+							</a>
+						</div>
+						<div class="swiper-slide item">
+							<a href="" class="bg link">
+								<!-- pc용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg6.jpg" alt="" class="pc"> 
+								<!-- 모바일용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg6_mob.jpg" alt="" class="tablet">
+							</a>
+						</div>
+						<div class="swiper-slide item">
+							<a href="" class="bg link">
+								<!-- pc용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg7.jpg" alt="" class="pc"> 
+								<!-- 모바일용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg7_mob.jpg" alt="" class="tablet">
+							</a>
+						</div>
+						<div class="swiper-slide item">
+							<a href="" class="bg link">
+								<!-- pc용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg8.jpg" alt="" class="pc"> 
+								<!-- 모바일용 -->
+								<img src="<?php echo $path ?>img/ms1_new_bg8_mob.jpg" alt="" class="tablet">
+							</a>
+						</div>					
 					</div>
 					<div class="controls">
 						<div class="swiper-pagination paging fraction white"></div>
@@ -88,6 +102,7 @@
 					</div>
 				</div>
 			</section>
+			<!-- 260106 수정작업 end -->
 
 			<section class="main_section ms2">
 				<div class="inner">
@@ -3860,13 +3875,14 @@
 				</div>
 			</section>
 
+			<!-- 260106 수정작업 start -->
 			<section class="main_section ms16">
 				<div class="inner">
 					<div class="m_titbox row_ver">
 						<div class="left">
 							<p class="m_txt1">EVENT 특가</p>
 							<p class="m_txt2">
-								<span class="bold">여행대장</span> 단독 프로모션 할인
+								<span class="bold">TK 트래블</span> 단독 프로모션 할인
 							</p>
 						</div>
 						<div class="right">
@@ -3879,49 +3895,29 @@
 					<div class="swiper m_event_swiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide item">
-								<div class="bg">
-									<img src="<?php echo $path ?>img/ms16_banner_bg1.jpg" alt="" class="pc">
-									<img src="<?php echo $path ?>img/ms16_banner_bg1_mob.jpg" alt="" class="tablet">
-								</div>
-								<div class="txtbox">
-									<p class="sub">아름다운 자연 몰디브에서 모히또 한 잔</p>
-									<p class="tit">
-										죽기전에 꼭 가봐야 할 휴양지 <br>
-										몰디브 신혼여행 패키지
-									</p>
-								</div>								
+								<a href="" class="bg link">
+									<img src="<?php echo $path ?>img/ms16_banner_new_bg1.jpg" alt="" class="pc">
+									<img src="<?php echo $path ?>img/ms16_banner_new_bg1_mob.jpg" alt="" class="tablet">
+								</a>
 							</div>
 							<div class="swiper-slide item">
-								<div class="bg">
-									<img src="<?php echo $path ?>img/ms16_banner_bg2.jpg" alt="" class="pc">
-									<img src="<?php echo $path ?>img/ms16_banner_bg2_mob.jpg" alt="" class="tablet">
-								</div>
-								<div class="txtbox">
-									<p class="sub">아름다운 자연 몰디브에서 모히또 한 잔</p>
-									<p class="tit">
-										죽기전에 꼭 가봐야 할 휴양지 <br>
-										몰디브 신혼여행 패키지
-									</p>
-								</div>								
+								<a href="" class="bg link">
+									<img src="<?php echo $path ?>img/ms16_banner_new_bg2.jpg" alt="" class="pc">
+									<img src="<?php echo $path ?>img/ms16_banner_new_bg1_mob.jpg" alt="" class="tablet">
+								</a>
 							</div>
 							<div class="swiper-slide item">
-								<div class="bg">
-									<img src="<?php echo $path ?>img/ms16_banner_bg3.jpg" alt="" class="pc">
-									<img src="<?php echo $path ?>img/ms16_banner_bg3_mob.jpg" alt="" class="tablet">
-								</div>
-								<div class="txtbox">
-									<p class="sub">아름다운 자연 몰디브에서 모히또 한 잔</p>
-									<p class="tit">
-										죽기전에 꼭 가봐야 할 휴양지 <br>
-										몰디브 신혼여행 패키지
-									</p>
-								</div>							
+								<a href="" class="bg link">
+									<img src="<?php echo $path ?>img/ms16_banner_new_bg3.jpg" alt="" class="pc">
+									<img src="<?php echo $path ?>img/ms16_banner_new_bg1_mob.jpg" alt="" class="tablet">
+								</a>
 							</div>
 						</div>
 						<div class="swiper-pagination paging fraction black"></div>
 					</div>
 				</div>
 			</section>
+			<!-- 260106 수정작업 end -->
 
 			<!--
 			<section class="main_section ms17">				
