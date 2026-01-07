@@ -19,9 +19,11 @@
 .ms1 .contbox .txtbox .txtimg {display: flex; align-items: center; justify-content: center; max-width: 32.5rem;}
 .ms1 .contbox .imgbox { display: flex;  align-items: center;  justify-content: center;   width: 65%;  max-width: 51.563rem;  margin-right: -11.15%;}
 .ms1 .bottom_txt { display: flex; flex-direction: column;  align-items: center;  gap: 1.75rem;  margin-top: -2.5rem;}
-.ms1 .bottom_txt .line {width: 2px; height: 3.875rem; background: #25382e;}
+.ms1 .bottom_txt .line {display: block; width: 2px; height: 3.875rem; background: #25382e;}
 .ms1 .bottom_txt .txt { font-family: var(--second-family);  font-weight: 600;   font-size: 2.5rem;  line-height: 100%;  text-align: center;  color: #25382e;}
+.ms1 .bottom_txt .txt span {display: inline-block;}
 
+.ms2 {background: url(../img/ms1_bg.jpg) no-repeat center / cover;}
 .ms2 .vidbox {position: relative; width: 100%; aspect-ratio: 1920/1080;font-size: 0;} 
 .ms2 .vidbox .video {width: 100%; height: 100%; object-fit: cover; cursor: pointer;}
 
@@ -51,7 +53,8 @@
 .ms4 .ms4_swiper .item .txtbox { position: relative; width: 100%; min-height: 13.75rem;  border: 1px solid #fff; background: rgba(255, 255, 255, 0.5);  border-radius: 0.625rem; padding: 4.625rem 0.5rem 2.375rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;}
 .ms4 .ms4_swiper .item .txtbox .tit { font-family: var(--second-family); font-weight: 600; font-size: 1.375rem;  line-height: 100%;  text-transform: uppercase; text-align: center;  color: #000;}
 .ms4 .ms4_swiper .item .txtbox .desc { font-weight: 400;  font-size: 1.375rem;   line-height: 136%; text-transform: uppercase; text-align: center;  color: #000;}
-.ms4 .truck_img { margin-top: 4.813rem; display: flex;  align-items: center;  justify-content: center; width: 100%; max-width: 75rem;}
+.ms4 .truck_img { margin-top: 4.813rem; display: flex;  align-items: center;  justify-content: center; width: 100%; max-width: 75rem; opacity: 1; transform: translateX(140%);}
+.ms4 .truck_img.aos-animate {transform: translateX(0%);}
 
 .ms5 {background: url(../img/ms5_bg.jpg) no-repeat center/cover;}
 .ms5 .contbox {display: flex; align-items: flex-end; gap: 6.875rem;}
@@ -80,7 +83,7 @@
 .ms6 .contbox .mapbox { position: absolute; left: 50%; top: 50%;  transform: translate(-50%, -50%); width: 100%; height: 100%;}
 .ms6 .contbox .mapbox .imgbox { position: absolute;  left: 50%;  bottom: -0.438rem;  transform: translateX(-50%); width: 55%; max-width: 43.938rem;}
 .ms6 .contbox .mapbox .txtbox {position: absolute;  left: 50%; top: 42%; transform: translate(-50%, -50%); text-align: center; width: 90%;}
-.ms6 .contbox .mapbox .txtbox .m_txt2 {line-height: 125%;}
+.ms6 .contbox .mapbox .txtbox .m_txt2 {line-height: 125%; font-weight: 600;}
 .ms6 .contbox .mapbox .pointbox { position: absolute; left: 0; top: 0; width: 100%;  height: 100%;}
 .ms6 .contbox .mapbox .pointbox .point { position: absolute;  width: 2.375rem;  aspect-ratio: 1 / 1;  background: rgba(11, 57, 11, 0.3);  border-radius: 50%;  padding: 0.313rem; display: flex; align-items: center; justify-content: center; box-sizing: content-box;}
 .ms6 .contbox .mapbox .pointbox .point::before { content: "";  width: 100%;  aspect-ratio: 1 / 1;  background: #0b390b;  border-radius: 50%;}
@@ -146,6 +149,7 @@
 .ms9 .contbox .carditem .txtbox {flex: 1; display: flex; flex-direction: column; gap: 1.75rem; padding-top: 0.625rem;}
 .ms9 .contbox .carditem .txtbox .tit {font-weight: 600;font-size: 1.25rem;line-height: 140%;text-transform: uppercase;color: #000;}
 .ms9 .contbox .carditem .txtbox .date { font-weight: 400;  font-size: 0.875rem;  line-height: 100%;  text-transform: uppercase; color: #444;}
+.ms9 .contbox .top_cardboxs { display: flex; flex-direction: column; gap: 2.5rem;}
 .ms9 .contbox .top_cardbox {position: relative;}
 .ms9 .contbox .top_cardbox .bg { background: linear-gradient(to right, #3910A1 0%, #0CB629 25%, #F5A62D 50%, #DE3415 72%, #3910A1 100%); background-size: 300% 100%;  animation: gradientMove 5s linear infinite;  position: absolute;  left: 50%;  top: 50%;  transform: translate(-50%, -50%); width: calc(100% + 0.25rem); height: calc(100% + 0.25rem);}
 .ms9 .contbox .top_cardbox .top_card {width: 100%;}
@@ -233,7 +237,10 @@ body.down .about_wrap .header { background: rgba(173, 184, 177, 0.8);}
 .service_sec1 .itembox3 .txtbox .txt .color { font-weight: 600; color: #166146;}
 .service_sec1 .itembox4 { flex: 1; max-width: 45.313rem; padding: 4.5rem 1.375rem 5rem;}
 .service_sec1 .itembox4 .imgbox { position: absolute; left: -41%;  bottom: 0;  width: 96%;  max-width: 43.313rem;  display: flex;  align-items: center; justify-content: center;}
-.service_sec1 .itembox4 .talkbox { margin-left: auto;  max-width: 23.75rem;  display: flex; align-items: center; justify-content: center;}
+.service_sec1 .itembox4 .talkbox { margin-left: auto;  max-width: 23.75rem;   display: flex; flex-direction: column; align-items: flex-start; gap: 2.313rem;}
+.service_sec1 .itembox4 .talkbox .talkitem { display: flex;  align-items: center;  justify-content: center;  height: 6.813rem;}
+.service_sec1 .itembox4 .talkbox .talkitem:nth-child(even) {margin-left: auto;}
+.service_sec1 .itembox4 .talkbox .talkitem img { max-width: unset; width: unset;  height: 100%;}
 
 .service_sec2 {border-bottom: 1px solid #999;}
 .service_sec2 > .inner {padding: 2rem 2.313rem 2.188rem;}
@@ -261,7 +268,12 @@ body.down .about_wrap .header { background: rgba(173, 184, 177, 0.8);}
 
 
 /* store */
-.store_sec1 {padding: 4.125rem 0 8.313rem;}
+.store_wrap .header {background: #adb8b1;}
+body.down .store_wrap .header { background: rgba(173, 184, 177, 0.8);}
+.store_wrap .header::after {display: none;}
+.store_wrap .container {padding-top: 0;}
+
+.store_sec1 {padding: calc(7.5rem + 4.125rem) 0 8.313rem;}
 .store_sec1 .titbox{ display: flex; flex-direction: column; align-items: center; gap: 1.938rem; margin-bottom: 3.75rem; text-align: center;}
 .store_sec1 .titbox .search_box {  width: 100%;  max-width: 46.25rem;  height: 4rem;  border: 2px solid #166146;  border-radius: 10rem;  background: #fff;  display: flex;  align-items: center;  justify-content: space-between;  padding: 0 1.5rem;  gap: 1rem;}
 .store_sec1 .titbox .search_box .search_input { flex: 1;  font-weight: 400;  font-size: 1.25rem;  line-height: 100%;  color: #166146;  border: none;  background: none;}
@@ -275,7 +287,11 @@ body.down .about_wrap .header { background: rgba(173, 184, 177, 0.8);}
 .store_sec1 .tblbox .tbl_tr .tbl_td:nth-child(2) {flex: 1; padding-left: 3.625rem;}
 .store_sec1 .tblbox .tbl_tr.tbl_head { border-top: 2px solid #166146;}
 .store_sec1 .tblbox .tbl_tr.tbl_head .tbl_td:nth-child(2) { padding-left: calc(24.5% + 3.625rem);}
-.store_sec1 .paging {margin-top: 3.938rem;}
+.store_sec1 .paging {margin-top: 3.938rem; transition-delay: 3.8s; transform: translate3d(0, 0, 0)}
+.store_sec1 .paging.aos-animate {transform: translate3d(0, 0, 0)}
+
+.store_sec1 .tblbox .tbl_tr[data-aos=fade-up] .tbl_td{transition: all 0.6s ease-out; transition-delay: var(--aos-delay); transform: translate3d(5rem, 0, 0); opacity: 0;}
+.store_sec1 .tblbox .tbl_tr[data-aos=fade-up].aos-animate .tbl_td{transform: translate3d(0, 0, 0); opacity: 1;}
 
 
 
@@ -304,7 +320,17 @@ body.down .about_wrap .header { background: rgba(173, 184, 177, 0.8);}
 .franchise_sec1 .itembox2 .titbox .tit { font-family: var(--second-family); font-weight: 300;  font-size: 5rem;  line-height: 100%; color: #000;}
 .franchise_sec1 .itembox2 .titbox .tit .color { font-weight: 600; color: #166146;}
 .franchise_sec1 .itembox2 .titbox .tit.bottom_tit {text-align: right;}
-.franchise_sec1 .itembox2 .desc {font-weight: 400;font-size: 1.5rem;line-height: 150%;color: #333; padding: 0 2.188rem;}
+.franchise_sec1 .itembox2 .desc {font-weight: 400;font-size: 1.5rem;line-height: 150%;color: #333; padding: 0 2.188rem; display: flex; flex-direction: column; align-items: flex-start; opacity: 1;         transition-delay: 0s !important;}
+.franchise_sec1 .itembox2 .desc.aos-animate .row { display: inline-block; white-space: nowrap; clip-path: inset(0 100% 0 0); animation: typing 0.4s steps(var(--word), end) forwards;}
+@keyframes typing { to {clip-path: inset(0 0 0 0);} }
+.franchise_sec1 .itembox2 .desc.aos-animate .row:nth-of-type(1) { animation-delay: 1.6s; }
+.franchise_sec1 .itembox2 .desc.aos-animate .row:nth-of-type(2) { animation-delay: 2s; }
+.franchise_sec1 .itembox2 .desc.aos-animate .row:nth-of-type(3) { animation-delay: 2.4s; }
+.franchise_sec1 .itembox2 .desc.aos-animate .row:nth-of-type(4) { animation-delay: 2.8s; }
+.franchise_sec1 .itembox2 .desc.aos-animate .row:nth-of-type(5) { animation-delay: 3.2s; }
+.franchise_sec1 .itembox2 .desc.aos-animate .row:nth-of-type(6) { animation-delay: 3.6s; }
+.franchise_sec1 .itembox2 .desc.tablet_view {display: none;}
+
 
 .franchise_sec2 {background: #e7eeea; border-bottom: 1px solid #999;}
 .franchise_sec2::before { content: "";  background: url(../img/franchise_ss2_bg_txt.png) no-repeat center / contain;  position: absolute;  left: 50%;  top: 7.438rem;  transform: translateX(-50%);  width: 51%;  max-width: 60.438rem;  aspect-ratio: 967 / 331;}
@@ -323,21 +349,21 @@ body.down .about_wrap .header { background: rgba(173, 184, 177, 0.8);}
 .franchise_sec2 .franchise_swiper .pagination {  position: relative;  left: unset;   right: unset;  top: unset; bottom: unset; margin-top: 2.375rem;}
 
 .franchise_sec3 {  border-bottom: 1px solid #999;}
-.franchise_sec3 > .inner { padding: 3.063rem 0 0;}
+.franchise_sec3 > .inner { padding: 3.063rem 0 0; overflow: hidden;}
 .franchise_sec3 .titbox {display: flex; align-items: flex-end; justify-content: space-between; padding-left: 2.938rem; padding-right: 1.25rem; margin-bottom: 2.688rem;}
 .franchise_sec3 .titbox .tit { font-family: var(--second-family);  font-weight: 400;  font-size: 3.75rem; line-height: 100%; color: #0b390b;}
 .franchise_sec3 .titbox .date { font-size: 1.25rem; line-height: 100%; color: #0b390b;  padding-bottom: 0.25rem;}
 .franchise_sec3 .pricebox .number { font-family: var(--second-family);  font-weight: 700;  font-size: 6.25rem;  line-height: 100%;  color: #166146;  text-align: right;   padding-right: 0.875rem;}
 .franchise_sec3 .pricebox .number .countup { font-size: 9.375rem; line-height: 100%;}
-.franchise_sec3 .franchise_swiper2 { padding: 4.688rem 0 7.188rem;}
-.franchise_sec3 .franchise_swiper2 .swiper-wrapper {margin-left: -2.5rem;}
-.franchise_sec3 .franchise_swiper2 .item {position: relative; width: 20.625rem; }
-.franchise_sec3 .franchise_swiper2 .item::before {  content: "";  background: url(../img/franchise_ss3_item_shadow.png) no-repeat center / contain;  width: 114.7%;  aspect-ratio: 376 / 208;  position: absolute;  top: -1.188rem;  left: 50%;  transform: translateX(-50%);}
-.franchise_sec3 .franchise_swiper2 .item .box {position: relative; width: 100%; border: 1px solid #d0dcd6;
+.franchise_sec3 .franchise_marquee { padding: 4.688rem 0 7.188rem;}
+.franchise_sec3 .franchise_marquee .marquee_group {gap: 1.875rem;}
+.franchise_sec3 .franchise_marquee .item {position: relative; width: 20.625rem; }
+.franchise_sec3 .franchise_marquee .item::before {  content: "";  background: url(../img/franchise_ss3_item_shadow.png) no-repeat center / contain;  width: 114.7%;  aspect-ratio: 376 / 208;  position: absolute;  top: -1.188rem;  left: 50%;  transform: translateX(-50%);}
+.franchise_sec3 .franchise_marquee .item .box {position: relative; width: 100%; border: 1px solid #d0dcd6;
 border-radius: 0.625rem; background: #ecf2ef; display: flex; flex-direction: column; gap: 1.188rem; padding: 1.688rem 1.5rem 1.375rem;}
-.franchise_sec3 .franchise_swiper2 .item .box .tit {font-family: var(--second-family);font-weight: 600;font-size: 1.25rem;line-height: 100%;color: #014a28;}
-.franchise_sec3 .franchise_swiper2 .item .box .price {font-family: var(--second-family);font-weight: 600;font-size: 1.5rem;line-height: 100%;color: #166146;}
-.franchise_sec3 .franchise_swiper2 .item .box .price .big {font-size: 2.375rem;line-height: 100%;}
+.franchise_sec3 .franchise_marquee .item .box .tit {font-family: var(--second-family);font-weight: 600;font-size: 1.25rem;line-height: 100%;color: #014a28;}
+.franchise_sec3 .franchise_marquee .item .box .price {font-family: var(--second-family);font-weight: 600;font-size: 1.5rem;line-height: 100%;color: #166146;}
+.franchise_sec3 .franchise_marquee .item .box .price .big {font-size: 2.375rem;line-height: 100%;}
 
 .franchise_sec4 {border-bottom: 1px solid #999;}
 .franchise_sec4 > .inner {padding: 3.688rem 1.563rem 5rem;}
