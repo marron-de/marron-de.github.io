@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 실적 수정 모달 -->
+		<div id="editePerformance_modal" class="modal mobtbl show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">실적 수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="PerformanceWrite_fm" id="PerformanceWrite_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width:150px" />
+									<col style="width:300px" />
+									<col style="width:150px" />
+									<col style="width:300px" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="사용일">사용일</th>
+										<td data-th="사용일">
+											<div class="input_box input_datebox">
+												<input type="text" class="input_text size_md icon_ver icon_date calender_btn" readonly="readonly" value="2026-01-08">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="고객명">고객명</th>
+										<td data-th="고객명">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="홍길동">
+											</div>
+										</td>
+										<th data-th="연락처">연락처</th>
+										<td data-th="연락처">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="01012345678">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="국적">국적</th>
+										<td data-th="국적">
+											<div class="select_box">
+												<select class="select size_md">
+													<option value="KO">한국</option>
+													<option value="HK">Hong Kong</option>
+													<option value="TW">Taiwan</option>
+													<option value="SG">Singapore</option>
+													<option value="CN">China</option>
+													<option value="MO">Macau</option>
+													<option value="MY">Malaysia</option>
+													<option value="ID">Indonesia</option>
+													<option value="TH">Thailand</option>
+													<option value="PH">Philippines</option>
+													<option value="VN">Vietnam</option>
+													<option value="JP">Japan</option>
+													<option value="US">USA</option>
+													<option value="GB">United Kingdom</option>
+													<option value="DE">Germany</option>
+													<option value="CA">Canada</option>
+													<option value="FR">France</option>
+													<option value="ETC">ETC</option>
+												</select>
+											</div>
+										</td>
+										<th data-th="인원/수량">인원/수량</th>
+										<td data-th="인원/수량">
+											<div class="tbl_inline gap3">
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">인원</span>
+													<input class="input_text size_md align_right people_input" type="text" size="5" maxlength="3" value="2">
+													<span class="label_text input_txt size_md">명 </span>
+												</div>
+												<div class="input_box input_flex">
+													<span class="label_text input_txt size_md">수량</span>
+													<input class="input_text size_md align_right people_input" type="text" size="5" maxlength="3" value="1">
+													<span class="label_text input_txt size_md">개</span>
+												</div>
+											</div>
+										</td>
+									</tr>									
+									<tr>
+										<th data-th="상품명">상품명</th>
+										<td data-th="상품명" colspan="3">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="홍천 대명 소노 비발디파크 스키 2일 1박 투어">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="선택행사명">선택행사명</th>
+										<td data-th="선택행사명" colspan="3">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="(얼리버드) [06:30] SKI보드워크 홍대입구역 8번 출구">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="원가">원가</th>
+										<td data-th="원가" colspan="3">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="537,400">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="B2B">B2B</th>
+										<td data-th="B2B" colspan="3">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="620,000">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="B2C">B2C</th>
+										<td data-th="B2C" colspan="3">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="700,000">
+											</div>
+										</td>
+									</tr>	
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
+	<script src="../js/common.js"></script>
+
+</body>
+
+</html>
