@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<link rel="stylesheet" href="../css/datepicker.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 임시추가 -->
+		<div style="width: 90%; max-width: 320px; padding: 5rem 0; margin: 0 auto;"> 
+			<!-- datepicker -->
+			<div class="input_box">
+				<input type="text" class="input_text size_md datepicker">
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<script>
+		// datepicker
+		$(document).ready(function () {
+			if ($(".datepicker").length) {
+				$.datepicker.setDefaults({
+					closeText: "닫기",
+					prevText: "이전달",
+					nextText: "다음달",
+					currentText: "오늘",
+					monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+					monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+					dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+					dayNamesShort: ["S", "M", "T", "W", "T", "F", "S"],
+					dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+					weekHeader: "주",
+					dateFormat: "yy-mm-dd",
+					firstDay: 0,
+					isRTL: false,
+					// yearSuffix: "년",
+					showMonthAfterYear: true,
+					showOtherMonths: true,
+
+					changeMonth: true,
+					changeYear: true,
+					 onChangeMonthYear: function () {
+						setTimeout(function () {
+							$(".ui-datepicker-year option").each(function () {
+								const year = $(this).val();
+								$(this).text(year + "년");
+							});
+						}, 0);
+					},
+					beforeShow: function () {
+						setTimeout(function () {
+							$(".ui-datepicker-year option").each(function () {
+								const year = $(this).val();
+								$(this).text(year + "년");
+							});
+						}, 0);
+					}
+				});
+
+				const today = new Date();
+				const year = today.getFullYear();
+				const month = String(today.getMonth() + 1).padStart(2, '0');
+				const day = String(today.getDate()).padStart(2, '0');
+				const formatted = `${year}-${month}-${day}`;
+				$(".datepicker.today").attr("placeholder", formatted);
+
+				$(".datepicker").datepicker({
+					// maxDate: 'today'
+				});
+			}
+		});	
+	</script>
+
+
+</body>
+
+</html>
