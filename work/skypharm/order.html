@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예성약품</title>
+
+    <!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-ui.min.js">
+	</script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/Pretendard.css">
+	<link rel="stylesheet" href="css/Paperlogy.css">
+
+</head>
+
+<body>
+
+    <div class="wrap order_wrap">
+
+
+    	<!-- header -->
+		<header class="header" id="header">
+			<div class="h_toparea">
+				<div class="inner">
+					<div class="leftbox">
+						<p class="tit">Online Order System</p>
+					</div>
+					<div class="rightbox">
+						<span class="label">대표거래처</span>
+						<div class="infobox">
+							<p class="infotxt">
+								거래상호처 : <span class="bold">바다약국</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt">
+								접속사용자 : <span class="bold">정재원</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt last">
+								PM 04:28 2025.12.25
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="h_bottomarea">
+				<div class="inner">
+					<div class="h_logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="" />
+						</a>
+					</div>
+					<ul class="h_nav">
+						<li><a href="order.html" class="link">주문하기</a></li>
+						<li><a href="orderList.html" class="link">주문내역</a></li>
+						<li><a href="orderPending.html" class="link">미출고</a></li>
+						<li><a href="ledgerList.html" class="link">원장내역</a></li>
+						<li><a href="shippingStatus.html" class="link">출고현황</a></li>
+						<li><a href="productSummary.html" class="link">제품집계</a></li>
+						<li><a href="financeCost.html" class="link">금융비용</a></li>
+						<li><a href="cardPayment.html" class="link">카드결제</a></li>
+						<li><a href="notice.html" class="link">공지사항</a></li>
+						<li><a href="#none" class="link">약가검색</a></li>
+					</ul>
+					<div class="h_side">
+						<a href="" class="sidebtn">
+							<img src="img/ic_logout.png" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</a>
+						<a href="" class="sidebtn">
+							<img src="img/ic_mypage.png" alt="" class="icon">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+        <!-- container -->
+        <div class="container">
+
+            <section class="section order_section">
+                <div class="inner contwrap">
+					<div class="contitem contleft">
+						<div class="contbox">
+							<div class="headbox">
+								<img src="img/ic_list.png" alt="" class="icon">
+								<p class="tit">최근 20개 구매내역</p>
+							</div>
+							<div class="tblbox">
+								<table class="tbl list_tbl">
+									<colgroup>
+										<col style="width: 85px;">
+										<col style="width: 45px;">
+										<col style="width: 108px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="일자">일자</th>
+											<th data-th="수량">수량</th>
+											<th data-th="단가(원)" class="align_right">단가(원)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">5</td>
+											<td data-th="단가(원)" class="align_right">5,900</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">9</td>
+											<td data-th="단가(원)" class="align_right">6,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">3</td>
+											<td data-th="단가(원)" class="align_right">12,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">1</td>
+											<td data-th="단가(원)" class="align_right">53,200</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">5</td>
+											<td data-th="단가(원)" class="align_right">9,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">5</td>
+											<td data-th="단가(원)" class="align_right">35,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">8</td>
+											<td data-th="단가(원)" class="align_right">5,900</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">4</td>
+											<td data-th="단가(원)" class="align_right">6,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">5</td>
+											<td data-th="단가(원)" class="align_right">12,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">9</td>
+											<td data-th="단가(원)" class="align_right">53,200</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">6</td>
+											<td data-th="단가(원)" class="align_right">9,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">5</td>
+											<td data-th="단가(원)" class="align_right">35,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">2</td>
+											<td data-th="단가(원)" class="align_right">5,900</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">5</td>
+											<td data-th="단가(원)" class="align_right">6,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">8</td>
+											<td data-th="단가(원)" class="align_right">12,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">9</td>
+											<td data-th="단가(원)" class="align_right">53,200</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">4</td>
+											<td data-th="단가(원)" class="align_right">9,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">1</td>
+											<td data-th="단가(원)" class="align_right">35,800</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">2</td>
+											<td data-th="단가(원)" class="align_right">5,900</td>
+										</tr>
+										<tr>
+											<td data-th="일자">2025.12.25</td>
+											<td data-th="수량">5</td>
+											<td data-th="단가(원)" class="align_right">6,800</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="contitem contcenter">
+						<div class="tab_navbox">
+							<div class="tab_nav on">
+								<a href="#none" class="link">
+									<img src="img/order_tab_icon1.png" alt="" class="icon">
+									<span class="txt">전체제품</span>
+								</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">
+									<img src="img/order_tab_icon2.png" alt="" class="icon">
+									<span class="txt">전문제품</span>
+								</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">
+									<img src="img/order_tab_icon3.png" alt="" class="icon">
+									<span class="txt">일반제품</span>
+								</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">
+									<img src="img/order_tab_icon4.png" alt="" class="icon">
+									<span class="txt">할인제품</span>
+								</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">
+									<img src="img/order_tab_icon5.png" alt="" class="icon">
+									<span class="txt">추천제품</span>
+								</a>
+							</div>
+							<div class="tab_nav">
+								<a href="#none" class="link">
+									<img src="img/order_tab_icon6.png" alt="" class="icon">
+									<span class="txt">찜리스트</span>
+								</a>
+							</div>
+						</div>
+						<div class="tbl_wrap">
+							<div class="tbl_toparea">
+								<div class="topbox">
+									<div class="input_box input_item g8">
+										<input type="text" class="input_text input_prdname" placeholder="제품명">
+										<input type="text" class="input_text wid_120" placeholder="규격">
+										<input type="text" class="input_text wid_120" placeholder="제약사">
+										<div class="select_box wid_120">
+											<select class="select">
+												<option value="">제품명 정렬</option>
+											</select>
+										</div>
+										<button type="button" class="button typeC wid_120">검색</button>
+									</div>
+								</div>
+								<p class="tbl_note">
+									⚠ 제품명 검색항목에서 [제품명], [보험코드], [표준코드], [고유코드] 검색이 됩니다.
+								</p>
+							</div>
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 48px;">
+									<col style="width: 210px;">
+									<col style="width: 110px;">
+									<col style="width: 80px;">
+									<col style="width: 90px;">
+									<col style="width: 40px;">
+									<col style="width: 84px;">
+									<col style="width: 48px;">
+									<col style="width: 48px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="순번">순번</th>
+										<th data-th="제품명">제품명</th>
+										<th data-th="규격">규격</th>
+										<th data-th="가격">가격</th>
+										<th data-th="수량(담기)">수량(담기)</th>
+										<th data-th="재고">재고</th>
+										<th data-th="구분">구분</th>
+										<th data-th="성분">성분</th>
+										<th data-th="찜">찜</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="순번">1</td>
+										<td data-th="제품명" class="align_left">(신)리퀴드씨엠</td>
+										<td data-th="규격" class="align_left">30ml/60P</td>
+										<td data-th="가격" class="align_right">55,000</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">82</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">2</td>
+										<td data-th="제품명" class="align_left">(출)메노페릴정</td>
+										<td data-th="규격" class="align_left">200mg/500T</td>
+										<td data-th="가격" class="align_right">7,000</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">45</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">3</td>
+										<td data-th="제품명" class="align_left">폴리덴트의치접착크림</td>
+										<td data-th="규격" class="align_left">60G</td>
+										<td data-th="가격" class="align_right">5,720</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">26</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">4</td>
+										<td data-th="제품명" class="align_left">네스프프리필드시린지주 120mcg</td>
+										<td data-th="규격" class="align_left">120mcg/0.5mL/1S</td>
+										<td data-th="가격" class="align_right">51,000</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">523</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">5</td>
+										<td data-th="제품명" class="align_left">네스프프리필드시린지주 20mcg</td>
+										<td data-th="규격" class="align_left">20mcg/0.5mL/1S</td>
+										<td data-th="가격" class="align_right">17,411</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">25</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="999" class="reply_td">
+											<div class="tbl_inline g8">
+												<img src="img/ic_reply.png" alt="" class="icon">
+												<p class="tit">2026년01월01일 - 17,302원 - 급여인하</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">6</td>
+										<td data-th="제품명" class="align_left">네스프프리필드시린지주 30mcg</td>
+										<td data-th="규격" class="align_left">30mcg/0.5mL/1S</td>
+										<td data-th="가격" class="align_right">31,274</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">15</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">7</td>
+										<td data-th="제품명" class="align_left">노보믹스50플렉스펜주100단위</td>
+										<td data-th="규격" class="align_left">5PACK</td>
+										<td data-th="가격" class="align_right">57,215</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">623</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">8</td>
+										<td data-th="제품명" class="align_left">뉴라스타프리필드시린지주</td>
+										<td data-th="규격" class="align_left">0.6ml/1관</td>
+										<td data-th="가격" class="align_right">764,324</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">265</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">9</td>
+										<td data-th="제품명" class="align_left">디티부스터에스에스아이주</td>
+										<td data-th="규격" class="align_left">0.5ml/5관</td>
+										<td data-th="가격" class="align_right">67,500</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">8</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">10</td>
+										<td data-th="제품명" class="align_left">램시마주</td>
+										<td data-th="규격" class="align_left">100mg/1V</td>
+										<td data-th="가격" class="align_right">329,991</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">4</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">11</td>
+										<td data-th="제품명" class="align_left">레버미어플렉스펜주100단위</td>
+										<td data-th="규격" class="align_left">5펜</td>
+										<td data-th="가격" class="align_right">70,055</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">5</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">12</td>
+										<td data-th="제품명" class="align_left">리브감마에스앤주</td>
+										<td data-th="규격" class="align_left">0.5g/10V</td>
+										<td data-th="가격" class="align_right">94,670</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">1</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">13</td>
+										<td data-th="제품명" class="align_left">멘비오</td>
+										<td data-th="규격" class="align_left">5V</td>
+										<td data-th="가격" class="align_right">495,000</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">2</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">14</td>
+										<td data-th="제품명" class="align_left">비오휼린주N.P.H</td>
+										<td data-th="규격" class="align_left">100단위/1V</td>
+										<td data-th="가격" class="align_right">11,204</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">6</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="순번">15</td>
+										<td data-th="제품명" class="align_left">빅토자펜주</td>
+										<td data-th="규격" class="align_left">200mg/500T</td>
+										<td data-th="가격" class="align_right">94,670</td>
+										<td data-th="수량(담기)">
+											<div class="input_box input_item g3">
+												<input type="text" class="input_text">
+												<button type="button" class="iconbutton">
+													<img src="img/ic_down.png" alt="" class="icon">
+												</button>
+											</div>
+										</td>
+										<td data-th="재고">42</td>
+										<td data-th="구분">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeC">생</span>
+											</div></td>
+										<td data-th="성분">
+											<button type="button" class="iconbutton">
+												<img src="img/ic_search.png" alt="" class="icon">
+											</button>
+										</td>
+										<td data-th="찜">
+											<button type="button" class="iconbutton2">
+												<img src="img/ic_wishcheck.png" alt="" class="icon">
+											</button>
+										</td>
+									</tr>
+								</tbody>
+								
+							</table>
+						</div>
+						<div class="pagination">
+							<button type="button" class="page page_btn start"></button>
+							<button type="button" class="page page_btn prev"></button>
+							<a href="" class="page page_link on">1</a>
+							<a href="" class="page page_link">2</a>
+							<a href="" class="page page_link">3</a>
+							<a href="" class="page page_link">4</a>
+							<a href="" class="page page_link">5</a>
+							<a href="" class="page page_link">6</a>
+							<a href="" class="page page_link">7</a>
+							<a href="" class="page page_link">8</a>
+							<a href="" class="page page_link">9</a>
+							<a href="" class="page page_link">10</a>
+							<button type="button" class="page page_btn next"></button>
+							<button type="button" class="page page_btn end"></button>
+						</div>
+					</div>
+					<div class="contitem contright">
+						<div class="rightcont1">
+							<div class="headbox">
+								<p class="tit">[생]네스프프리필드시린지주</p>
+							</div>
+							<div class="infobox">
+								<div class="item">
+									<p class="tit">코드</p>
+									<p class="desc">43114</p>
+								</div>
+								<div class="item">
+									<p class="tit">규격</p>
+									<p class="desc">120mcg/0.5mL/1S</p>
+								</div>
+								<div class="item">
+									<p class="tit">단위</p>
+									<p class="desc">1정</p>
+								</div>
+								<div class="item">
+									<p class="tit">구분</p>
+									<p class="desc">보험,전문,생물</p>
+								</div>
+								<div class="item">
+									<p class="tit">보험코드</p>
+									<p class="desc"><span class="color1">641600030</span></p>
+								</div>
+								<div class="item">
+									<p class="tit">표준코드</p>
+									<p class="desc"><span class="color2">8806416000359</span></p>
+								</div>
+								<table class="tbl list_tbl">
+									<colgroup>
+										<col style="width: 108px;">
+										<col style="width: 85px;">
+										<col style="width: 45px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="변경일자" class="align_left">변경일자</th>
+											<th data-th="적용단가">적용단가</th>
+											<th data-th="상태">상태</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="변경일자" class="align_left">2025.12.25</td>
+											<td data-th="적용단가">102원</td>
+											<td data-th="상태">급여</td>
+										</tr>
+										<tr>
+											<td data-th="변경일자" class="align_left">2025.12.25</td>
+											<td data-th="적용단가">103원</td>
+											<td data-th="상태">급여</td>
+										</tr>
+										<tr>
+											<td data-th="변경일자" class="align_left">2025.12.25</td>
+											<td data-th="적용단가">104원</td>
+											<td data-th="상태">급여</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="rightcont2">
+							<div class="headbox">
+								<p class="tit">장바구니</p>
+								<button type="button" class="btn more_btn">자세히</button>
+								<button type="button" class="btn sort_btn">가↓</button>
+							</div>
+							<div class="listbox">
+								<div class="item">
+									<p class="tit">[병의원] 폴리덴트의치 <br>접착크림 60G</p>
+									<div class="input_box input_item g4">
+										<input type="text" class="input_text">
+										<button type="button" class="input_btn">변경</button>
+									</div>
+								</div>
+								<div class="item">
+									<p class="tit">[생]램시마주 100mg/1V</p>
+									<div class="input_box input_item g4">
+										<input type="text" class="input_text">
+										<button type="button" class="input_btn">변경</button>
+									</div>
+								</div>
+								<div class="item lastitem">
+									<p class="tit">삼성서울의원</p>
+									<div class="total">
+										<p class="price">247,400원</p>
+										<button type="button" class="iconbutton">
+											<img src="img/ic_trash.png" alt="" class="icon">
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="totalbox">
+								<div class="items">
+									<div class="item">
+										<p class="tit">수량</p>
+										<p class="desc">2</p>
+									</div>
+									<div class="item">
+										<p class="tite">총 주문금액</p>
+										<p class="desc total_desc">486,200원</p>
+									</div>
+								</div>
+								<div class="btns">
+									<button type="button" class="button typeB">주문취소</button>
+									<button type="button" class="button typeA">주문완료</button>
+								</div>
+							</div>
+						</div>
+						<div class="rightcont3">
+							<div class="input_box column">
+								<p class="label_text">주문 요청사항</p>
+								<textarea class="input_text" placeholder="주문 관련 요구사항은 60글자이내로&#13;&#10;작성해주세요.&#13;&#10주문완료 마지막에 입력해 주세요."></textarea>
+							</div>
+						</div>
+					</div>
+                </div>
+            </section>
+			
+        </div>
+
+    	<!-- footer -->
+		<footer class="footer">
+			<div class="inner f_inner">
+				<div class="f_logo">
+					<img src="img/logo_footer.png" alt="" class="logo">
+				</div>
+				<div class="f_contbox">
+					<div class="leftbox">
+						<p class="info_company">
+							대표이사: 홍길동 <br>
+							사업자번호: 123-45-67890 <br>
+							전화: 02-2201-0427/ 팩스: 02-2201-0487/ 전자우편: help@skypharm.co.kr <br>
+							주소: 서울 성동구 성수일로 77, 4층 412호(성수동1가, 서울숲 IT 밸리)
+						</p>
+						<p class="info_crawling">
+							자동화 도구(크롤러, 봇, 매크로 등)를 활용한 무단 크롤링(Crawling) 행위는 시스템 과부하 및 정상적인 서비스 제공을 방해하므로 금지되어 있습니다. <br>
+							위반 시 서비스 이용 제한, 손해배상 청구, 민형사상 법적 조치가 취해질 수 있습니다.
+						</p>
+						<p class="copyright">
+							Copyright ⓒ <span class="bold">skypharm.co.kr</span> All right reserved
+						</p>
+					</div>
+					<div class="rightbox">
+						<p class="tit">contact us.</p>
+						<p class="email">help@skypharm.co.kr</p>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

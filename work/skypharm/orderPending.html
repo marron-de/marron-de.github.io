@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예성약품</title>
+
+    <!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-ui.min.js">
+	</script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/Pretendard.css">
+	<link rel="stylesheet" href="css/Paperlogy.css">
+
+</head>
+
+<body>
+
+    <div class="wrap orderPending_wrap">
+
+
+    	<!-- header -->
+		<header class="header" id="header">
+			<div class="h_toparea">
+				<div class="inner">
+					<div class="leftbox">
+						<p class="tit">Online Order System</p>
+					</div>
+					<div class="rightbox">
+						<span class="label">대표거래처</span>
+						<div class="infobox">
+							<p class="infotxt">
+								거래상호처 : <span class="bold">바다약국</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt">
+								접속사용자 : <span class="bold">정재원</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt last">
+								PM 04:28 2025.12.25
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="h_bottomarea">
+				<div class="inner">
+					<div class="h_logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="" />
+						</a>
+					</div>
+					<ul class="h_nav">
+						<li><a href="order.html" class="link">주문하기</a></li>
+						<li><a href="orderList.html" class="link">주문내역</a></li>
+						<li><a href="orderPending.html" class="link">미출고</a></li>
+						<li><a href="ledgerList.html" class="link">원장내역</a></li>
+						<li><a href="shippingStatus.html" class="link">출고현황</a></li>
+						<li><a href="productSummary.html" class="link">제품집계</a></li>
+						<li><a href="financeCost.html" class="link">금융비용</a></li>
+						<li><a href="cardPayment.html" class="link">카드결제</a></li>
+						<li><a href="notice.html" class="link">공지사항</a></li>
+						<li><a href="#none" class="link">약가검색</a></li>
+					</ul>
+					<div class="h_side">
+						<a href="" class="sidebtn">
+							<img src="img/ic_logout.png" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</a>
+						<a href="" class="sidebtn">
+							<img src="img/ic_mypage.png" alt="" class="icon">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+        <!-- container -->
+        <div class="container">
+
+            <section class="section orderPending_section">
+                <div class="inner">
+					<p class="page_title">웹주문 미출고내역 조회</p>
+					<div class="tbl_wrap">
+						<div class="tbl_top">
+							<div class="leftbox"></div>
+							<div class="rightbox">
+								<div class="input_box input_item g8">
+									<input type="text" class="input_text wid_260" placeholder="제품">
+									<button type="button" class="button typeC sch_btn">검색</button>
+								</div>
+							</div>
+						</div>
+						<table class="tbl">
+							<colgroup>
+							<col style="width: 95px;">	
+								<col style="width: 50px;">	
+								<col style="width: 60px;">	
+								<col style="width: 71px;">	
+								<col style="width: 407px;">	
+								<col style="width: 207px;">	
+								<col style="width: 108px;">	
+								<col style="width: 94px;">	
+								<col style="width: 94px;">	
+								<col style="width: 94px;">		
+							</colgroup>
+							<thead>
+								<tr>
+									<th data-th="주문일자">주문일자</th>
+									<th data-th="번호">번호</th>
+									<th data-th="순번">순번</th>
+									<th data-th="코드">코드</th>
+									<th data-th="제품">제품</th>
+									<th data-th="규격" class="align_left">규격</th>
+									<th data-th="단위" class="align_left">단위</th>
+									<th data-th="주문수량">주문수량</th>
+									<th data-th="출고수량">출고수량</th>
+									<th data-th="취소수량">취소수량</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">1</td>
+									<td data-th="순번">3</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">120mg/30정</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">2</td>
+									<td data-th="순번">9</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">120mg/30정</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">10</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">3</td>
+									<td data-th="순번">5</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">1000T</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">10</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">4</td>
+									<td data-th="순번">6</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">1.5g/1산제</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">1</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">5</td>
+									<td data-th="순번">7</td>
+									<td data-th="코드">36555</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">[생]페가시스주135mcg 프로클릭</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">1000T</td>
+									<td data-th="단위" class="align_left">0.5mL/펜</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">6</td>
+									<td data-th="순번">5</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">75ml/10EA</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">7</td>
+									<td data-th="순번">1</td>
+									<td data-th="코드">26797</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">가다실프리필드시린지[인유두종바이러스4가<br>(6111618형)백신 (유전자재조합)]</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">1.5g/1산제</td>
+									<td data-th="단위" class="align_left">1</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">1</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">8</td>
+									<td data-th="순번">2</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">100308HS3D-V(VTA)</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">9</td>
+									<td data-th="순번">5</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">DOUBLE</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">10</td>
+									<td data-th="순번">6</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">75ml/10EA</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">11</td>
+									<td data-th="순번">9</td>
+									<td data-th="코드">26797</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">가다실프리필드시린지[인유두종바이러스4가<br>(6111618형)백신 (유전자재조합)]</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">1.5g/1산제</td>
+									<td data-th="단위" class="align_left">1</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">1</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">12</td>
+									<td data-th="순번">5</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">100308HS3D-V(VTA)</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">2</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">13</td>
+									<td data-th="순번">2</td>
+									<td data-th="코드">26797</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">
+												가다실프리필드시린지[인유두종바이러스4가 <br>
+												(6111618형)백신 (유전자재조합)]
+											</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">1관</td>
+									<td data-th="단위" class="align_left">1</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">2</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">14</td>
+									<td data-th="순번">3</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">1000T</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">3</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+								<tr>	
+									<td data-th="주문일자">2025.12.25</td>
+									<td data-th="번호">15</td>
+									<td data-th="순번">6</td>
+									<td data-th="코드">00068</td>
+									<td data-th="제품" class="align_left">
+										<div class="tbl_inline g9">
+											<div class="tbl_inline g2">
+												<span class="badge typeA">보</span>
+												<span class="badge typeB">전</span>
+												<span class="badge typeD">비</span>
+											</div>
+											<span class="txt">바리겐정</span>
+										</div>
+									</td>
+									<td data-th="규격" class="align_left">75ml/10EA</td>
+									<td data-th="단위" class="align_left">1정</td>
+									<td data-th="주문수량">1</td>
+									<td data-th="출고수량">0</td>
+									<td data-th="취소수량">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                </div>
+            </section>
+			
+        </div>
+
+    	<!-- footer -->
+		<footer class="footer">
+			<div class="inner f_inner">
+				<div class="f_logo">
+					<img src="img/logo_footer.png" alt="" class="logo">
+				</div>
+				<div class="f_contbox">
+					<div class="leftbox">
+						<p class="info_company">
+							대표이사: 홍길동 <br>
+							사업자번호: 123-45-67890 <br>
+							전화: 02-2201-0427/ 팩스: 02-2201-0487/ 전자우편: help@skypharm.co.kr <br>
+							주소: 서울 성동구 성수일로 77, 4층 412호(성수동1가, 서울숲 IT 밸리)
+						</p>
+						<p class="info_crawling">
+							자동화 도구(크롤러, 봇, 매크로 등)를 활용한 무단 크롤링(Crawling) 행위는 시스템 과부하 및 정상적인 서비스 제공을 방해하므로 금지되어 있습니다. <br>
+							위반 시 서비스 이용 제한, 손해배상 청구, 민형사상 법적 조치가 취해질 수 있습니다.
+						</p>
+						<p class="copyright">
+							Copyright ⓒ <span class="bold">skypharm.co.kr</span> All right reserved
+						</p>
+					</div>
+					<div class="rightbox">
+						<p class="tit">contact us.</p>
+						<p class="email">help@skypharm.co.kr</p>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예성약품</title>
+
+    <!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-ui.min.js">
+	</script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/Pretendard.css">
+	<link rel="stylesheet" href="css/Paperlogy.css">
+
+</head>
+
+<body>
+
+    <div class="wrap shippingStatus_wrap">
+
+
+    	<!-- header -->
+		<header class="header" id="header">
+			<div class="h_toparea">
+				<div class="inner">
+					<div class="leftbox">
+						<p class="tit">Online Order System</p>
+					</div>
+					<div class="rightbox">
+						<span class="label">대표거래처</span>
+						<div class="infobox">
+							<p class="infotxt">
+								거래상호처 : <span class="bold">바다약국</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt">
+								접속사용자 : <span class="bold">정재원</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt last">
+								PM 04:28 2025.12.25
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="h_bottomarea">
+				<div class="inner">
+					<div class="h_logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="" />
+						</a>
+					</div>
+					<ul class="h_nav">
+						<li><a href="order.html" class="link">주문하기</a></li>
+						<li><a href="orderList.html" class="link">주문내역</a></li>
+						<li><a href="orderPending.html" class="link">미출고</a></li>
+						<li><a href="ledgerList.html" class="link">원장내역</a></li>
+						<li><a href="shippingStatus.html" class="link">출고현황</a></li>
+						<li><a href="productSummary.html" class="link">제품집계</a></li>
+						<li><a href="financeCost.html" class="link">금융비용</a></li>
+						<li><a href="cardPayment.html" class="link">카드결제</a></li>
+						<li><a href="notice.html" class="link">공지사항</a></li>
+						<li><a href="#none" class="link">약가검색</a></li>
+					</ul>
+					<div class="h_side">
+						<a href="" class="sidebtn">
+							<img src="img/ic_logout.png" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</a>
+						<a href="" class="sidebtn">
+							<img src="img/ic_mypage.png" alt="" class="icon">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+        <!-- container -->
+        <div class="container">
+
+            <section class="section shippingStatus_section">
+                <div class="inner">
+					<p class="page_title">주문 내역 제품별 조회</p>
+					<div class="tbl_wrap">
+						<div class="tbl_top">
+							<div class="leftbox"></div>
+							<div class="rightbox">
+								<div class="input_box wid_190">
+									<input type="text" class="input_text" placeholder="제품명">
+								</div>
+								<div class="input_box input_item g6">
+									<p class="input_txt period_txt">출고구분</p>
+									<div class="select_box wid_94">
+										<select class="select">
+											<option value="">전체</option>
+										</select>
+									</div>
+									<div class="select_box wid_114">
+										<select class="select">
+											<option value="">명세일자</option>
+										</select>
+									</div>
+								</div>
+								<div class="input_box input_item g3 dateinput_box">
+									<p class="input_txt period_txt">조회기간</p>
+									<div class="input_item g4">
+										<input type="text" class="input_text datepicker today" value="2025.12.25" readonly>
+										<button type="button" class="date_btn"></button>
+									</div>
+									<span class="input_txt">~</span>
+									<div class="input_item g4">
+										<input type="text" class="input_text datepicker today" value="2025.12.25" readonly>
+										<button type="button" class="date_btn"></button>
+									</div>
+								</div>
+								<div class="select_box wid_114">
+									<select class="select">
+										<option value="">일자+번호</option>
+									</select>
+								</div>
+								<div class="input_item g7">
+									<button type="button" class="button typeC sch_btn">검색</button>
+									<button type="button" class="iconbutton2 excel_btn">
+										<img src="img/ic_excel.png" alt="" class="icon">
+									</button>
+								</div>
+							</div>
+						</div>
+						<table class="tbl">
+							<colgroup>
+								<col style="width: 48px;">	
+								<col style="width: 74px;">	
+								<col style="width: 36px;">	
+								<col style="width: 74px;">	
+								<col style="width: 36px;">	
+								<col style="width: 74px;">	
+								<col style="width: 238px;">	
+								<col style="width: 130px;">	
+								<col style="width: 40px;">	
+								<col style="width: 78px;">	
+								<col style="width: 78px;">	
+								<col style="width: 115px;">
+								<col style="width: 84px;">	
+								<col style="width: 70px;">	
+								<col style="width: 104px;">	
+							</colgroup>
+							<thead>
+								<tr>
+									<th data-th="번호">번호</th>
+									<th data-th="명세일자">명세일자</th>
+									<th data-th="번호">번호</th>
+									<th data-th="출고일자">출고일자</th>
+									<th data-th="순번">순번</th>
+									<th data-th="보험코드">보험코드</th>
+									<th data-th="제품" class="align_left">제품</th>
+									<th data-th="규격">규격</th>
+									<th data-th="수량">수량</th>
+									<th data-th="단가" class="align_right">단가</th>
+									<th data-th="금액" class="align_right">금액</th>
+									<th data-th="표준코드">표준코드</th>
+									<th data-th="제조번호">제조번호</th>
+									<th data-th="유효기한">유효기한</th>
+									<th data-th="일렬번호">일렬번호</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>	
+									<td data-th="번호">1</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">1</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">1</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">코싹엘정(A)</td>
+									<td data-th="규격" class="align_left">120mg/30정</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">82,727</td>
+									<td data-th="금액" class="align_right">82,727</td>
+									<td data-th="표준코드">643506740</td>
+									<td data-th="제조번호">960914</td>
+									<td data-th="유효기한">20280515</td>
+									<td data-th="일렬번호">
+										<div class="tbl_inline g4">
+											<div class="badge typeA">검</div>
+											<div class="input_box wid_full">
+												<input type="text" class="input_text" value="일련번호" readonly>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>	
+									<td data-th="번호">2</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">2</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">2</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">코싹엘정(A)</td>
+									<td data-th="규격" class="align_left">120mg/30정</td>
+									<td data-th="수량">10</td>
+									<td data-th="단가" class="align_right">554</td>
+									<td data-th="금액" class="align_right">554</td>
+									<td data-th="표준코드">643506740</td>
+									<td data-th="제조번호">960914</td>
+									<td data-th="유효기한">20280515</td>
+									<td data-th="일렬번호">
+										<div class="tbl_inline g4">
+											<div class="badge typeA">검</div>
+											<div class="input_box wid_full">
+												<input type="text" class="input_text" value="일련번호" readonly>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>	
+									<td data-th="번호">3</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">3</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">3</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">마그밀정</td>
+									<td data-th="규격" class="align_left">1000T</td>
+									<td data-th="수량">10</td>
+									<td data-th="단가" class="align_right">26,945</td>
+									<td data-th="금액" class="align_right">26,945</td>
+									<td data-th="표준코드"></td>
+									<td data-th="제조번호">AAAA</td>
+									<td data-th="유효기한">20291231</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">4</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">4</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">4</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">향.베나치오세립</td>
+									<td data-th="규격" class="align_left">1.5g/1산제</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">2,924</td>
+									<td data-th="금액" class="align_right">2,924</td>
+									<td data-th="표준코드">비보험</td>
+									<td data-th="제조번호">111111</td>
+									<td data-th="유효기한">20291231</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">5</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">5</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">5</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">마그밀정</td>
+									<td data-th="규격" class="align_left">1000T</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">5,536</td>
+									<td data-th="금액" class="align_right">5,536</td>
+									<td data-th="표준코드"></td>
+									<td data-th="제조번호">AAAA</td>
+									<td data-th="유효기한">20291231</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">6</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">6</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">6</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">출력명)베나치오에프액 75ml/20개</td>
+									<td data-th="규격" class="align_left">75ml/10EA</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">2,727</td>
+									<td data-th="금액" class="align_right">2,727</td>
+									<td data-th="표준코드">비보험</td>
+									<td data-th="제조번호">22222</td>
+									<td data-th="유효기한">20291231</td></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">7</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">7</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">7</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">향.베나치오세립</td>
+									<td data-th="규격" class="align_left">1.5g/1산제</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">8,018</td>
+									<td data-th="금액" class="align_right">8,018</td>
+									<td data-th="표준코드">비보험</td>
+									<td data-th="제조번호">3333</td>
+									<td data-th="유효기한">20291231</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">8</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">8</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">8</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">Hypersoft 3D 100308HS3D-V</td>
+									<td data-th="규격" class="align_left">100308HS3D-V(VTA)</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">5,536</td>
+									<td data-th="금액" class="align_right">5,536</td>
+									<td data-th="표준코드">비보험</td>
+									<td data-th="제조번호">3333</td>
+									<td data-th="유효기한">20291231</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">9</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">9</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">9</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">PICC SET</td>
+									<td data-th="규격" class="align_left">DOUBLE</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">25,149</td>
+									<td data-th="금액" class="align_right">25,149</td>
+									<td data-th="표준코드">E2021450</td>
+									<td data-th="제조번호">D0001</td>
+									<td data-th="유효기한">20201212</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">10</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">10</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">10</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">출력명)베나치오에프액 75ml/20개</td>
+									<td data-th="규격" class="align_left">75ml/10EA</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">145,455</td>
+									<td data-th="금액" class="align_right">145,455</td>
+									<td data-th="표준코드">J4210109</td>
+									<td data-th="제조번호"></td>
+									<td data-th="유효기한"></td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">11</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">11</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">11</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">향.베나치오세립</td>
+									<td data-th="규격" class="align_left">1.5g/1산제</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">142,155</td>
+									<td data-th="금액" class="align_right">142,155</td>
+									<td data-th="표준코드"></td>
+									<td data-th="제조번호">AAA</td>
+									<td data-th="유효기한">20291231</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">12</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">12</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">12</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">Hypersoft 3D 100308HS3D-V</td>
+									<td data-th="규격" class="align_left">100308HS3D-V(VTA)</td>
+									<td data-th="수량">2</td>
+									<td data-th="단가" class="align_right">18,827</td>
+									<td data-th="금액" class="align_right">18,827</td>
+									<td data-th="표준코드">661903720</td>
+									<td data-th="제조번호">123123123</td>
+									<td data-th="유효기한">20281212</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">13</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">13</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">13</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">가다실프리필드시린지[인유두종바이러스4가<br>(6111618형)백신 (유전자재조합)]</td>
+									<td data-th="규격" class="align_left">1관</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">47,273</td>
+									<td data-th="금액" class="align_right">47,273</td>
+									<td data-th="표준코드">654400520㉥</td>
+									<td data-th="제조번호">111222333</td>
+									<td data-th="유효기한">20291212</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">14</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">14</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">14</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">마그밀정</td>
+									<td data-th="규격" class="align_left">1000T</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">3,682</td>
+									<td data-th="금액" class="align_right">3,682</td>
+									<td data-th="표준코드"></td>
+									<td data-th="제조번호">a1</td>
+									<td data-th="유효기한">20291212</td>
+									<td data-th="일렬번호"></td>
+								</tr>
+								<tr>	
+									<td data-th="번호">15</td>
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="번호">15</td>
+									<td data-th="출고일자">2025.12.25</td>
+									<td data-th="순번">15</td>
+									<td data-th="보험코드">2025.12.25</td>
+									<td data-th="제품" class="align_left">출력명)베나치오에프액 75ml/20개</td>
+									<td data-th="규격" class="align_left">75ml/10EA</td>
+									<td data-th="수량">1</td>
+									<td data-th="단가" class="align_right">10,000</td>
+									<td data-th="금액" class="align_right">10,000</td>
+									<td data-th="표준코드">657802060</td>
+									<td data-th="제조번호"></td>
+									<td data-th="유효기한"></td>
+									<td data-th="일렬번호"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                </div>
+            </section>
+			
+        </div>
+
+    	<!-- footer -->
+		<footer class="footer">
+			<div class="inner f_inner">
+				<div class="f_logo">
+					<img src="img/logo_footer.png" alt="" class="logo">
+				</div>
+				<div class="f_contbox">
+					<div class="leftbox">
+						<p class="info_company">
+							대표이사: 홍길동 <br>
+							사업자번호: 123-45-67890 <br>
+							전화: 02-2201-0427/ 팩스: 02-2201-0487/ 전자우편: help@skypharm.co.kr <br>
+							주소: 서울 성동구 성수일로 77, 4층 412호(성수동1가, 서울숲 IT 밸리)
+						</p>
+						<p class="info_crawling">
+							자동화 도구(크롤러, 봇, 매크로 등)를 활용한 무단 크롤링(Crawling) 행위는 시스템 과부하 및 정상적인 서비스 제공을 방해하므로 금지되어 있습니다. <br>
+							위반 시 서비스 이용 제한, 손해배상 청구, 민형사상 법적 조치가 취해질 수 있습니다.
+						</p>
+						<p class="copyright">
+							Copyright ⓒ <span class="bold">skypharm.co.kr</span> All right reserved
+						</p>
+					</div>
+					<div class="rightbox">
+						<p class="tit">contact us.</p>
+						<p class="email">help@skypharm.co.kr</p>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

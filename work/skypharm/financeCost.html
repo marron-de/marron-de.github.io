@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예성약품</title>
+
+    <!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-ui.min.js">
+	</script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/Pretendard.css">
+	<link rel="stylesheet" href="css/Paperlogy.css">
+
+</head>
+
+<body>
+
+    <div class="wrap financeCost_wrap">
+		
+
+    	<!-- header -->
+		<header class="header" id="header">
+			<div class="h_toparea">
+				<div class="inner">
+					<div class="leftbox">
+						<p class="tit">Online Order System</p>
+					</div>
+					<div class="rightbox">
+						<span class="label">대표거래처</span>
+						<div class="infobox">
+							<p class="infotxt">
+								거래상호처 : <span class="bold">바다약국</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt">
+								접속사용자 : <span class="bold">정재원</span>
+							</p>
+							<div class="bar"></div>
+							<p class="infotxt last">
+								PM 04:28 2025.12.25
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="h_bottomarea">
+				<div class="inner">
+					<div class="h_logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="" />
+						</a>
+					</div>
+					<ul class="h_nav">
+						<li><a href="order.html" class="link">주문하기</a></li>
+						<li><a href="orderList.html" class="link">주문내역</a></li>
+						<li><a href="orderPending.html" class="link">미출고</a></li>
+						<li><a href="ledgerList.html" class="link">원장내역</a></li>
+						<li><a href="shippingStatus.html" class="link">출고현황</a></li>
+						<li><a href="productSummary.html" class="link">제품집계</a></li>
+						<li><a href="financeCost.html" class="link">금융비용</a></li>
+						<li><a href="cardPayment.html" class="link">카드결제</a></li>
+						<li><a href="notice.html" class="link">공지사항</a></li>
+						<li><a href="#none" class="link">약가검색</a></li>
+					</ul>
+					<div class="h_side">
+						<a href="" class="sidebtn">
+							<img src="img/ic_logout.png" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</a>
+						<a href="" class="sidebtn">
+							<img src="img/ic_mypage.png" alt="" class="icon">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+        <!-- container -->
+        <div class="container">
+
+            <section class="section financeCost_section">
+                <div class="inner">
+					<p class="page_title">금융 비용 할인 조회</p>
+					<div class="costbox">
+						<div class="leftbox">
+							<p class="tit">현잔액</p>
+							<p class="price">1,758,480</p>
+						</div>
+						<div class="rightbox">
+							<table class="tbl const_tbl">
+								<colgroup>
+									<col style="width: 140px;">	
+									<col style="width: 220px;">	
+									<col style="width: 120px;">	
+									<col style="width: 280px;">		
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="구분">구분</th>
+										<th data-th="할인율">할인율</th>
+										<th data-th="비용할인액" class="align_right">비용할인액</th>
+										<th data-th="수금예정액" class="align_right">수금예정액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="구분">1개월</td>
+										<td data-th="할인율">1.8%</td>
+										<td data-th="비용할인액" class="align_right"><span class="bold">22,509</span></td>
+										<td data-th="수금예정액" class="align_right"><span class="bold">1,730,331</span></td>
+									</tr>
+									<tr>
+										<td data-th="구분">2개월</td>
+										<td data-th="할인율">1.2%</td>
+										<td data-th="비용할인액" class="align_right"><span class="bold">5,640</span></td>
+										<td data-th="수금예정액" class="align_right"><span class="bold">502,360</span></td>
+									</tr>
+									<tr>
+										<td data-th="구분">3개월</td>
+										<td data-th="할인율">0.6%</td>
+										<td data-th="비용할인액" class="align_right"><span class="bold">0</span></td>
+										<td data-th="수금예정액" class="align_right"><span class="bold">38,000</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="tbl_wrap">
+						<div class="tbl_top">
+							<div class="leftbox"></div>
+							<div class="rightbox">
+								<div class="radio_wrap">
+									<div class="radio_box">
+										<input type="radio" name="collect_term" id="collect_1m" class="input_radio">
+										<label for="collect_1m" class="label_radio">1개월 수금기준</label>
+									</div>
+									<div class="radio_box">
+										<input type="radio" name="collect_term" id="collect_2_3m" class="input_radio" checked>
+										<label for="collect_2_3m" class="label_radio">2·3개월 수금기준</label>
+									</div>
+								</div>
+								<button type="button" class="button typeC sch_btn">검색</button>
+							</div>
+						</div>
+						<table class="tbl">
+							<colgroup>
+								<col style="width: 86px;">	
+								<col style="width: 160px;">	
+								<col style="width: 274px;">	
+								<col style="width: 110px;">	
+								<col style="width: 130px;">	
+								<col style="width: 82px;">	
+								<col style="width: 120px;">	
+								<col style="width: 82px;">	
+								<col style="width: 120px;">	
+								<col style="width: 116px;">		
+							</colgroup>
+							<thead>
+								<tr>
+									<th data-th="명세일자">명세일자</th>
+									<th data-th="명세번호">명세번호</th>
+									<th data-th="항목" class="align_left">항목</th>
+									<th data-th="명세서금액" class="align_right">명세서금액</th>
+									<th data-th="1개월" class="align_right">1개월</th>
+									<th data-th="1개월 금액" class="align_right">금액</th>
+									<th data-th="2개월" class="align_right">2개월</th>
+									<th data-th="2개월 금액" class="align_right">금액</th>
+									<th data-th="3개월" class="align_right">3개월</th>
+									<th data-th="3개월 금액" class="align_right">금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">8</td>
+									<td data-th="항목" class="align_left">플로손점안액 (플루오로메톨론) (1회용)</td>
+									<td data-th="명세서금액" class="align_right">322</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">6</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">6</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">6</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">7</td>
+									<td data-th="항목" class="align_left">유나잘탄정5/160밀리그램_장영훈_중복제품</td>
+									<td data-th="명세서금액" class="align_right">2,964</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">53</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">53</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">53</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">3</td>
+									<td data-th="항목" class="align_left">펙소스타정(병)</td>
+									<td data-th="명세서금액" class="align_right">609</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">11</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">11</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">11</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">7</td>
+									<td data-th="항목" class="align_left">펙소스타정(병)</td>
+									<td data-th="명세서금액" class="align_right">609</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">11</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">11</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">11</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">6</td>
+									<td data-th="항목" class="align_left">콜대원콜드큐시럽</td>
+									<td data-th="명세서금액" class="align_right">300</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">5</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">5</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">5</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">5</td>
+									<td data-th="항목" class="align_left">삼성로수바스타틴정5밀리그램 (로수바스타틴칼슘)</td>
+									<td data-th="명세서금액" class="align_right">882</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">16</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">16</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">16</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">3</td>
+									<td data-th="항목" class="align_left">펙소스타정(병)</td>
+									<td data-th="명세서금액" class="align_right">609</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">11</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">11</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">11</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">12</td>
+									<td data-th="항목" class="align_left">유나잘탄정5/160mg/28T</td>
+									<td data-th="명세서금액" class="align_right">2,766</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">50</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">50</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">50</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">10</td>
+									<td data-th="항목" class="align_left">구연산펜타닐주사액(마약)</td>
+									<td data-th="명세서금액" class="align_right">20,710</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">373</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">373</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">373</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">7</td>
+									<td data-th="항목" class="align_left">[병의원]폴리덴트의치접착크림</td>
+									<td data-th="명세서금액" class="align_right">57,200</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">1,030</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">1,030</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">1,030</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">5</td>
+									<td data-th="항목" class="align_left">가나톤정50밀리그람 (염산이토프리드)</td>
+									<td data-th="명세서금액" class="align_right">5,200</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">94</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">94</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">94</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">4</td>
+									<td data-th="항목" class="align_left">티파스정</td>
+									<td data-th="명세서금액" class="align_right">405</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">7</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">7</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">7</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">3</td>
+									<td data-th="항목" class="align_left">비타코린정</td>
+									<td data-th="명세서금액" class="align_right">1,100</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">20</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">20</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">20</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">1</td>
+									<td data-th="항목" class="align_left">[생]빅토자펜주</td>
+									<td data-th="명세서금액" class="align_right">18,000</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">324</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">324</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">324</td>
+								</tr>
+								<tr>	
+									<td data-th="명세일자">2025.12.25</td>
+									<td data-th="명세번호">11</td>
+									<td data-th="항목" class="align_left">+6베자코린정 500T</td>
+									<td data-th="명세서금액" class="align_right">18,500</td>
+									<td data-th="1개월" class="align_right">1.8%</td>
+									<td data-th="1개월 금액" class="align_right">333</td>
+									<td data-th="2개월" class="align_right">1.8%</td>
+									<td data-th="2개월 금액" class="align_right">333</td>
+									<td data-th="3개월" class="align_right">1.8%</td>
+									<td data-th="3개월 금액" class="align_right">333</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                </div>
+            </section>
+			
+        </div>
+
+    	<!-- footer -->
+		<footer class="footer">
+			<div class="inner f_inner">
+				<div class="f_logo">
+					<img src="img/logo_footer.png" alt="" class="logo">
+				</div>
+				<div class="f_contbox">
+					<div class="leftbox">
+						<p class="info_company">
+							대표이사: 홍길동 <br>
+							사업자번호: 123-45-67890 <br>
+							전화: 02-2201-0427/ 팩스: 02-2201-0487/ 전자우편: help@skypharm.co.kr <br>
+							주소: 서울 성동구 성수일로 77, 4층 412호(성수동1가, 서울숲 IT 밸리)
+						</p>
+						<p class="info_crawling">
+							자동화 도구(크롤러, 봇, 매크로 등)를 활용한 무단 크롤링(Crawling) 행위는 시스템 과부하 및 정상적인 서비스 제공을 방해하므로 금지되어 있습니다. <br>
+							위반 시 서비스 이용 제한, 손해배상 청구, 민형사상 법적 조치가 취해질 수 있습니다.
+						</p>
+						<p class="copyright">
+							Copyright ⓒ <span class="bold">skypharm.co.kr</span> All right reserved
+						</p>
+					</div>
+					<div class="rightbox">
+						<p class="tit">contact us.</p>
+						<p class="email">help@skypharm.co.kr</p>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>
