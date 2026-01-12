@@ -305,6 +305,49 @@ const ms4_swiper = new Swiper('.ms4_swiper', {
 	},
 });
 
+
+// main truck
+gsap.registerPlugin(ScrollTrigger);
+const mm = gsap.matchMedia();
+mm.add("(min-width: 1081px)", () => {
+	const truck = document.querySelector(".ms4 .truck_img");
+	if (!truck) return; // 요소 없으면 그냥 종료
+	gsap.fromTo(
+		".ms4 .truck_img", {
+			xPercent: 140
+		}, {
+			xPercent: 0,
+			scrollTrigger: {
+				trigger: ".ms4",
+				start: "top 50%",
+				end: "bottom bottom",
+				scrub: 1.5,
+				invalidateOnRefresh: true
+			}
+		}
+	);
+});
+
+mm.add("(max-width: 1080px)", () => {
+	const truck = document.querySelector(".ms4 .truck_img");
+	if (!truck) return; // 요소 없으면 그냥 종료
+	gsap.fromTo(
+		".ms4 .truck_img", {
+			xPercent: 100
+		}, {
+			xPercent: 5,
+			scrollTrigger: {
+				trigger: ".ms4",
+				start: "top 50%",
+				end: "bottom bottom",
+				scrub: 1.5,
+				invalidateOnRefresh: true
+			}
+		}
+	);
+});
+
+
 // main section8
 // 수동 복제
 const originalMS8 = cloneSlides('.ms8_swiper', 3);
