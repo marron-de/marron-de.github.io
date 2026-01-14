@@ -32,7 +32,7 @@
 					<a href="" class="link">K-POP 콘서트</a>
 				</div>
 				<div class="swiper-slide item calendar">
-					<a href="<?php echo $path ?>schedule/schedule.php" class="link">
+					<a href="<?php echo $path ?>schedule/schedule2.php" class="link">
 						<img src="<?php echo $path ?>img/ic_calendar.png" alt="" class="icon">
 						<span class="txt">출발일정</span>
 					</a>
@@ -194,7 +194,7 @@
 						</li>
 						<li class="bar"></li>
 						<li class="mob_show">
-							<a href="<?php echo $path ?>schedule/schedule.php" class="title">
+							<a href="<?php echo $path ?>schedule/schedule2.php" class="title">
 								<span class="tit">출발일정</span>
 							</a>
 						</li>
