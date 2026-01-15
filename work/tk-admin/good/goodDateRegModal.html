@@ -100,19 +100,19 @@
 										<td data-th="행사생성조건" colspan="3">
 											<div class="radio_wrap">
 												<span class="radio_box size_md">
-													<input type="radio" name="ins_cond" id="ins_cond_1" class="input_radio" value="auto" checked="true">
-													<label for="ins_cond_1" class="label_radio">요일별</label>
+													<input type="radio" name="ins_cond" id="ins_cond_1" class="input_radio" value="auto" checked="true" onclick="onClickInsCond('auto');">
+													<label for="ins_cond_1" class="label_radio" onclick="onClickInsCond('auto');">요일별</label>
 												</span>
 												<span class="radio_box size_md">
-													<input type="radio" value="private" name="ins_cond" id="ins_cond_2" class="input_radio">
-													<label for="ins_cond_2" class="label_radio">일자별</label>
+													<input type="radio" value="private" name="ins_cond" id="ins_cond_2" class="input_radio" onclick="onClickInsCond('private');">
+													<label for="ins_cond_2" class="label_radio" onclick="onClickInsCond('private');">일자별</label>
 												</span>
 											</div>
 										</td>
 									</tr>
                                     <tr>
 										<td data-th="행사생성조건" colspan="3">
-											<div class="tbl_inline gap2">
+											<div id="createCondAuto" class="tbl_inline gap2">
 												<div class="input_box input_flex flex_auto">
 													<input type="text" name="d_start" id="d_start" class="input_text size_md icon_ver icon_date calender_btn" value="2025-08-12" readonly="readonly">
 													<span class="label_text input_txt size_md">~</span>
@@ -151,6 +151,321 @@
 														<input name="week_date_all" id="week_date_all" type="checkbox" class="input_check" value="" checked=""> 
 														<label for="week_date_all" class="label_check"><span class="text-primary">전체</span></label></span>
 													</span>
+												</div>
+											</div>
+											<!-- 260115 수정작업 -->
+											<div id="createCondPrivate" class="tbl_inline" style="display: none;">
+												<div class="calender">
+													<div class="cal_head">
+														<div class="leftbox"></div>
+														<div class="centerbox">
+															<button type="button" class="paging_btn prev_btn">
+																<i class="ph ph-caret-left"></i>
+															</button>
+															<p class="cal_date">
+																<span class="cal_year">2025년</span>
+																<span class="cal_month">8월</span>
+															</p>
+															<button type="button" class="paging_btn next_btn">
+																<i class="ph ph-caret-right"></i>
+															</button>
+														</div>
+														<div class="rightbox"></div>
+													</div>
+													<div class="cal_body">
+														<div class="week_day">
+															<div class="day red">
+																<span class="txt">일</span>
+															</div>
+															<div class="day">
+																<span class="txt">월</span>
+															</div>
+															<div class="day">
+																<span class="txt">화</span>
+															</div>
+															<div class="day">
+																<span class="txt">수</span>
+															</div>
+															<div class="day">
+																<span class="txt">목</span>
+															</div>
+															<div class="day">
+																<span class="txt">금</span>
+															</div>
+															<div class="day blue">
+																<span class="txt">토</span>
+															</div>
+														</div>
+														<div class="week_date">
+															<div class="date red disabled">
+																<div class="top">
+																	<span class="num">27</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">28</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>				
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">29</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">30</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">31</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">1</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date blue">
+																<div class="top">
+																	<span class="num">2</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+														</div>
+														<div class="week_date">
+															<div class="date red">
+																<div class="top">
+																	<span class="num">3</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>							
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">4</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">8</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">6</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date today">
+																<div class="top">
+																	<span class="num">7</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">8</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date blue">
+																<div class="top">
+																	<span class="num">9</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+														</div>
+														<div class="week_date">
+															<div class="date red">
+																<div class="top">
+																	<span class="num">10</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">11</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">12</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">13</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">14</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">15</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date blue">
+																<div class="top">
+																	<span class="num">16</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+														</div>
+														<div class="week_date">
+															<div class="date red">
+																<div class="top">
+																	<span class="num">17</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">18</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">19</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">20</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">21</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">22</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date blue">
+																<div class="top">
+																	<span class="num">23</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+														</div>
+														<div class="week_date">
+															<div class="date red">
+																<div class="top">
+																	<span class="num">24</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">25</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">26</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">27</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">28</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date">
+																<div class="top">
+																	<span class="num">29</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date blue">
+																<div class="top">
+																	<span class="num">30</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+														</div>
+														<div class="week_date">
+															<div class="date red">
+																<div class="top">
+																	<span class="num">31</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">1</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">2</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">3</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">4</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date disabled">
+																<div class="top">
+																	<span class="num">5</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+															<div class="date blue disabled">
+																<div class="top">
+																	<span class="num">6</span>
+																	<div class="check_box size_md"><input type="checkbox" name="" id="" class="input_check"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- 260115 수정작업 -->
+													<p class="txt red note_txt">
+														<i class="ph ph-warning-circle"></i>
+														행사일정을 선택해주세요
+													</p>
 												</div>
 											</div>
 										</td>
@@ -348,6 +663,19 @@
 		replaceModule('../common/calender_popup.html', '#calender_popup');
 	</script>
     <script src="../js/common.js"></script>
+
+	<script>
+		// 260115 수정작업
+		function onClickInsCond(param) { 
+			if(param == 'auto') {
+				$("#createCondAuto").show();
+				$("#createCondPrivate").hide();
+			} else if(param == 'private') {
+				$("#createCondAuto").hide();
+				$("#createCondPrivate").show();
+			}
+		}
+	</script>
 
 </body>
 
