@@ -24,7 +24,54 @@
 			<div class="tab_contbox tmt_menu_box menu-pages">
 				
 				<ul class="tab_cont on tmt_list_box menu-page" data-page="pizza">
-					<!-- 01 -->
+					<!-- 00 -->
+					<!-- 트러플머쉬룸피자 -->
+					<li class="menu-item">
+						<ul class="menu_list new_pizza">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_00_truffle.png" alt="에그마요 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">트러플머쉬룸 피자</p>
+								<p class="menu_name_en">TRUFFLE MUSHROOM</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>트러플머쉬룸 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+								우아한 트러플 향기와 <br>
+								2가지 종류의 버섯으로 씹는 즐거움!<br>
+								감칠맛 나는 불고기까지 한 번에 즐기세요
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>13,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>20,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>24,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="menu_effect">
+							<li class="best_eff">
+								<div class="eff_box">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/new_effect.svg" alt="신메뉴">
+									<p class="eff_txt">NEW</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- 티엠티피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_01_tmt.png" alt="티엠티 피자"></li>
@@ -49,15 +96,15 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>13,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>20,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>24,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -71,6 +118,7 @@
 							</li>
 						</ul>
 					</li>
+					<!-- 에그마요피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_02_egg.png" alt="에그마요 피자"></li>
@@ -93,28 +141,29 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>13,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>20,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>24,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
-						<ul class="menu_effect">
+						<!-- <ul class="menu_effect">
 							<li class="best_eff">
 								<div class="eff_box">
 									<img src="<?php echo G5_THEME_URL ?>/img/main/new_effect.svg" alt="신메뉴">
 									<p class="eff_txt">NEW</p>
 								</div>
 							</li>
-						</ul>
+						</ul> -->
 					</li>
+					<!-- 나쵸피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_03_nacho.png" alt="나쵸 피자"></li>
@@ -139,58 +188,23 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>13,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>20,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>24,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_04_bulgogi.png" alt="소불고기 피자"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">소불고기 피자</p>
-								<p class="menu_name_en">BEEF BUIGOGI PIZZA</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>소불고기 피자</h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									한국인이라면 불고기를 싫어할 수 없잖아요?<br>
-									돼지고기가 아닌 진짜 소고기로 만든 불고기<br>
-									&quot;돼지고기가 아닌 진짜 소.고.기&quot;
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- 02 -->
+
+					<!-- 01 -->
+					<!-- 그릴드스테이크피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_05_grilled.png" alt="그릴드 스테이크 피자"></li>
@@ -215,133 +229,21 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>15,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>22,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>26,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_06_hot_bul.png" alt="핫불고기 피자"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">핫불고기 피자</p>
-								<p class="menu_name_en">HOT BULGOGI PIZZA</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>핫불고기 피자</h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									소불고기에 매운맛을 추가한<br>
-									매운 불고기 핫불고기 피자<br>
-									&quot;불고기에 매운맛 추가인데 맛 없을수가..&quot;
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_07_hot_shrimp.png" alt="핫칠리 쉬림프 피자"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">핫칠리 쉬림프 피자</p>
-								<p class="menu_name_en">HOT CHILI SHRIMP PIZZA</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>핫칠리<br>쉬림프 피자</h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									맛있는 베이컨과 칠리소스에 버무려진 새우가 쏘옥<br>
-									&quot;베이컨 위에 칠리소스를 머금은 새우가<br>
-									입 안에서 탭댄스를 춘다..&quot;
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_08_bacon_shrimp.png" alt="베이컨 쉬림프 피자"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">베이컨 쉬림프 피자</p>
-								<p class="menu_name_en">BACON SHRIMP PIZZA</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>베이컨<br>쉬림프 피자</h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									매콤새콤달콤한 칠리소스를 머금은 새우가<br>
-									한가득 올라간 피자<br>
-									&quot;매콤새콤달콤한 칠리소스를 머금은 새우가 입안에서<br>
-									힙합댄스를 춘다..&quot;
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- 03 -->
+					<!-- 스파이시핫치킨피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_09_spicy_chicken.png" alt="스파이시 핫치킨 피자"></li>
@@ -366,93 +268,214 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>14,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>21,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>25,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
+					<!-- 핫칠리쉬림프피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_10_honey_corn.png" alt="허니 콘치즈 피자"></li>
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_07_hot_shrimp.png" alt="핫칠리 쉬림프 피자"></li>
 							<li class="menu_text">
-								<p class="menu_name_kr">허니 콘치즈 피자</p>
-								<p class="menu_name_en">HONEY CORN CHEESE PIZZA</p>
+								<p class="menu_name_kr">핫칠리 쉬림프 피자</p>
+								<p class="menu_name_en">HOT CHILI SHRIMP PIZZA</p>
 							</li>
 						</ul>
 						<ul class="menu_info">
 							<li class="menu_in_tit">
-								<h2>허니 콘치즈 피자</h2>
+								<h2>핫칠리<br>쉬림프 피자</h2>
 							</li>
 							<li class="menu_in_txt">
 								<p>
-									달달한 연유 드레싱으로 아이들에게 인기만점 메뉴<br>
-									&quot;톡톡 터지는 옥수수콘과 달콤한 연유가 만난<br>달콤한 피자&quot;
+									맛있는 베이컨과 칠리소스에 버무려진 새우가 쏘옥<br>
+									&quot;베이컨 위에 칠리소스를 머금은 새우가<br>
+									입 안에서 탭댄스를 춘다..&quot;
 								</p>
 							</li>
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>14,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>21,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>25,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
+					<!-- 핫불고기피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_11_pineapple.png" alt="통하와이안 피자"></li>
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_06_hot_bul.png" alt="핫불고기 피자"></li>
 							<li class="menu_text">
-								<p class="menu_name_kr">통하와이안 피자</p>
-								<p class="menu_name_en">PINEAPPLE PIZZA</p>
+								<p class="menu_name_kr">핫불고기 피자</p>
+								<p class="menu_name_en">HOT BULGOGI PIZZA</p>
 							</li>
 						</ul>
 						<ul class="menu_info">
 							<li class="menu_in_tit">
-								<h2>통하와이안 피자</h2>
+								<h2>핫불고기 피자</h2>
 							</li>
 							<li class="menu_in_txt">
 								<p>
-									파인애플이 통으로 올라간 상큼 발랄한 피자<br>
-									&quot;파인애플 피자가 호불호가 갈린다?<br>
-									이해할 수 없습니다!&quot;
+									소불고기에 매운맛을 추가한<br>
+									매운 불고기 핫불고기 피자<br>
+									&quot;불고기에 매운맛 추가인데 맛 없을수가..&quot;
 								</p>
 							</li>
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>14,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>21,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>25,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
+
+					<!-- 02 -->
+					<!-- 베이컨쉬림프피자 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_08_bacon_shrimp.png" alt="베이컨 쉬림프 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">베이컨 쉬림프 피자</p>
+								<p class="menu_name_en">BACON SHRIMP PIZZA</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>베이컨<br>쉬림프 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									매콤새콤달콤한 칠리소스를 머금은 새우가<br>
+									한가득 올라간 피자<br>
+									&quot;매콤새콤달콤한 칠리소스를 머금은 새우가 입안에서<br>
+									힙합댄스를 춘다..&quot;
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>14,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>21,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>25,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li> 
+					<!-- 소불고기피자 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_04_bulgogi.png" alt="소불고기 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">소불고기 피자</p>
+								<p class="menu_name_en">BEEF BUIGOGI PIZZA</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>소불고기 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									한국인이라면 불고기를 싫어할 수 없잖아요?<br>
+									돼지고기가 아닌 진짜 소고기로 만든 불고기<br>
+									&quot;돼지고기가 아닌 진짜 소.고.기&quot;
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>13,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>20,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>24,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 할라핫페퍼로니피자 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_13_hot_pepperoni.png" alt="할라 핫 페퍼로니 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">할라 핫 페퍼로니 피자</p>
+								<p class="menu_name_en">HOT PEPPERONI PIZZA</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>할라<br>핫 페퍼로니 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									매운소스 베이스에 할라피뇨를 더한<br>
+									매콤한 페퍼로니 피자<br>
+									&quot;매운 한국인의 입맛에 맞춘 메뉴&quot;
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>12,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>19,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>23,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>	
+					<!-- 베이컨포테이토피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_12_bacon_potato.png" alt="베이컨 포테이토 피자"></li>
@@ -477,132 +500,214 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>12,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>19,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>23,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
+
+					<!-- 03 -->
+					<!-- 통하와이안피자 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_11_pineapple.png" alt="통하와이안 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">통하와이안 피자</p>
+								<p class="menu_name_en">PINEAPPLE PIZZA</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>통하와이안 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									파인애플이 통으로 올라간 상큼 발랄한 피자<br>
+									&quot;파인애플 피자가 호불호가 갈린다?<br>
+									이해할 수 없습니다!&quot;
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>12,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>19,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>23,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 허니콘치즈피자 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_10_honey_corn.png" alt="허니 콘치즈 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">허니 콘치즈 피자</p>
+								<p class="menu_name_en">HONEY CORN CHEESE PIZZA</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>허니 콘치즈 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									달달한 연유 드레싱으로 아이들에게 인기만점 메뉴<br>
+									&quot;톡톡 터지는 옥수수콘과 달콤한 연유가 만난<br>달콤한 피자&quot;
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>12,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>19,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>23,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 콤비네이션피자 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_20_combination.png" alt="콤비네이션 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">콤비네이션 피자</p>
+								<p class="menu_name_en">COMBINATION PIZZA</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>콤비네이션 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									고기 토핑이 듬뿍 들어간 콤비네이션!<br>
+									피자 메뉴의 정석!<br>
+									&quot;베이직 is 베스트!&quot;
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>11,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>18,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>22,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 꽉채운페퍼로니피자 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_19_pepperoni.png" alt="꽉채운 페퍼로니 피자"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">꽉채운 페퍼로니 피자</p>
+								<p class="menu_name_en">PEPPERONI PIZZA</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>꽉채운<br>페퍼로니 피자</h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									전세계 판매 1위 메뉴 페퍼로니 피자<br>
+									전체 메뉴별 티엠티 피자 다음으로 수요층이 많은 메뉴<br>
+									&quot;꽉꽉 빈틈없이 채운 페퍼로니로 뉴욕을 느껴봐요&quot;
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_s m_cip">S</span>
+										<p>11,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>18,900<span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l m_cip">L</span>
+										<p>22,900<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
 					<!-- 04 -->
+					<!-- 베이컨체다치즈피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_13_hot_pepperoni.png" alt="할라 핫 페퍼로니 피자"></li>
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_18_bacon_cheddar.png" alt="베이컨 체다 치즈 피자"></li>
 							<li class="menu_text">
-								<p class="menu_name_kr">할라 핫 페퍼로니 피자</p>
-								<p class="menu_name_en">HOT PEPPERONI PIZZA</p>
+								<p class="menu_name_kr">베이컨 체다 치즈 피자</p>
+								<p class="menu_name_en">BACON CHEDDAR CHEESE PIZZA</p>
 							</li>
 						</ul>
 						<ul class="menu_info">
 							<li class="menu_in_tit">
-								<h2>할라<br>핫 페퍼로니 피자</h2>
+								<h2>베이컨<br>체다 치즈 피자</h2>
 							</li>
 							<li class="menu_in_txt">
 								<p>
-									매운소스 베이스에 할라피뇨를 더한<br>
-									매콤한 페퍼로니 피자<br>
-									&quot;매운 한국인의 입맛에 맞춘 메뉴&quot;
+									짭쪼롬한 베이컨과 체다치즈의 놀라운 조화 <br>
+									단짠단짠의 짠을 맡고 있는 효자 메뉴 <br>
+									&quot;오늘 밤 맥주 한 잔~?&quot;
 								</p>
 							</li>
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>11,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>22,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_14_real_cheese.png" alt="리얼 치즈 피자"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">리얼 치즈 피자</p>
-								<p class="menu_name_en">REAL CHEESE PIZZA</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>리얼 치즈 피자</h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									T.M.T PIZZA의<br>
-									고급진 치즈맛을 느낄 수 있는 피자.<br>
-									&quot;자연산 100% 진짜 치즈&quot;
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_15_vegetable.png" alt="싱싱 야채 피자"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">싱싱 야채 피자</p>
-								<p class="menu_name_en">VEGETABLE PIZZA</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>싱싱 야채 피자</h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									싱싱한 야채가 메인 재료인 피자<br>
-									다이어트 하시는 분들에게 필수 메뉴<br>
-									&quot;다이어트? 티엠티가 도와드리겠습니다.&quot;
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
+					<!-- 포테이토피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_16_potato.png" alt="포테이토 피자"></li>
@@ -626,21 +731,21 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>11,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>22,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<!-- 05 -->
+					<!-- 달콤고구마무스피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_17_sweet_potato.png" alt="달콤 고구마무스 피자"></li>
@@ -665,132 +770,99 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>11,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>22,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
+					<!-- 싱싱야채피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_18_bacon_cheddar.png" alt="베이컨 체다 치즈 피자"></li>
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_15_vegetable.png" alt="싱싱 야채 피자"></li>
 							<li class="menu_text">
-								<p class="menu_name_kr">베이컨 체다 치즈 피자</p>
-								<p class="menu_name_en">BACON CHEDDAR CHEESE PIZZA</p>
+								<p class="menu_name_kr">싱싱 야채 피자</p>
+								<p class="menu_name_en">VEGETABLE PIZZA</p>
 							</li>
 						</ul>
 						<ul class="menu_info">
 							<li class="menu_in_tit">
-								<h2>베이컨<br>체다 치즈 피자</h2>
+								<h2>싱싱 야채 피자</h2>
 							</li>
 							<li class="menu_in_txt">
 								<p>
-									짭쪼롬한 베이컨과 체다치즈의 놀라운 조화 <br>
-									단짠단짠의 짠을 맡고 있는 효자 메뉴 <br>
-									&quot;오늘 밤 맥주 한 잔~?&quot;
+									싱싱한 야채가 메인 재료인 피자<br>
+									다이어트 하시는 분들에게 필수 메뉴<br>
+									&quot;다이어트? 티엠티가 도와드리겠습니다.&quot;
 								</p>
 							</li>
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>11,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>22,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
+					
+					<!-- 05 -->
+					<!-- 리얼치즈피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_19_pepperoni.png" alt="꽉채운 페퍼로니 피자"></li>
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_14_real_cheese.png" alt="리얼 치즈 피자"></li>
 							<li class="menu_text">
-								<p class="menu_name_kr">꽉채운 페퍼로니 피자</p>
-								<p class="menu_name_en">PEPPERONI PIZZA</p>
+								<p class="menu_name_kr">리얼 치즈 피자</p>
+								<p class="menu_name_en">REAL CHEESE PIZZA</p>
 							</li>
 						</ul>
 						<ul class="menu_info">
 							<li class="menu_in_tit">
-								<h2>꽉채운<br>페퍼로니 피자</h2>
+								<h2>리얼 치즈 피자</h2>
 							</li>
 							<li class="menu_in_txt">
 								<p>
-									전세계 판매 1위 메뉴 페퍼로니 피자<br>
-									전체 메뉴별 티엠티 피자 다음으로 수요층이 많은 메뉴<br>
-									&quot;꽉꽉 빈틈없이 채운 페퍼로니로 뉴욕을 느껴봐요&quot;
+									T.M.T PIZZA의<br>
+									고급진 치즈맛을 느낄 수 있는 피자.<br>
+									&quot;자연산 100% 진짜 치즈&quot;
 								</p>
 							</li>
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
+										<p>11,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>22,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_20_combination.png" alt="콤비네이션 피자"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">콤비네이션 피자</p>
-								<p class="menu_name_en">COMBINATION PIZZA</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>콤비네이션 피자</h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									고기 토핑이 듬뿍 들어간 콤비네이션!<br>
-									피자 메뉴의 정석!<br>
-									&quot;베이직 is 베스트!&quot;
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- 06 -->
+					<!-- 고르곤졸라씬피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_21_thin_gorgonzola.png" alt="고르곤졸라 씬피자"></li>
@@ -812,21 +884,18 @@
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>22,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
+					<!-- 바질베이컨씬피자 -->
 					<li class="menu-item">
 						<ul class="menu_list">
 							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_22_thin_basil.png" alt="바질 베이컨 씬피자"></li>
@@ -849,16 +918,12 @@
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
-										<span class="col_s m_cip">S</span>
-										<p>10,900<span>원</span></p>
-									</li>
-									<li>
 										<span class="col_r m_cip">R</span>
-										<p>10,900<span>원</span></p>
+										<p>19,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>10,900<span>원</span></p>
+										<p>23,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -890,15 +955,15 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>17,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>24,900<span>원</span></p>
+										<p>25,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>28,900<span>원</span></p>
+										<p>29,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -933,15 +998,15 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>17,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>24,900<span>원</span></p>
+										<p>25,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>28,900<span>원</span></p>
+										<p>29,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -976,15 +1041,15 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>17,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>24,900<span>원</span></p>
+										<p>25,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>28,900<span>원</span></p>
+										<p>29,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -1011,15 +1076,15 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>17,900<span>원</span></p>
+										<p>18,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>24,900<span>원</span></p>
+										<p>25,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>28,900<span>원</span></p>
+										<p>29,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -1047,15 +1112,15 @@
 								<ul class="menu_pirce">
 									<li>
 										<span class="col_s m_cip">S</span>
-										<p>21,900<span>원</span></p>
+										<p>20,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r m_cip">R</span>
-										<p>26,900<span>원</span></p>
+										<p>27,900<span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l m_cip">L</span>
-										<p>30,900<span>원</span></p>
+										<p>31,900<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -1211,11 +1276,11 @@
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
-										<span class="col_r m_cip">R</span>
+										<span class="col_r m_ea">반마리</span>
 										<p>7,400<span>원</span></p>
 									</li>
 									<li>
-										<span class="col_l m_cip">L</span>
+										<span class="col_l m_ea">한마리</span>
 										<p>14,000<span>원</span></p>
 									</li>
 								</ul>
@@ -1234,25 +1299,25 @@
 							<li class="menu_in_tit">
 								<h2>핫윙&amp;봉</h2>
 							</li>
-							<li class="menu_in_txt">
+							<!-- <li class="menu_in_txt">
 								<p>
 									4ea - 4,000원<br>
 									6ea - 5,500원<br>
 									8ea - 7,000원
 								</p>
-							</li>
+							</li> -->
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
-										<span class="col_s m_cip">S</span>
+										<span class="col_s m_ea">4ea</span>
 										<p>4,000<span>원</span></p>
 									</li>
 									<li>
-										<span class="col_r m_cip">R</span>
+										<span class="col_r m_ea">6ea</span>
 										<p>5,500<span>원</span></p>
 									</li>
 									<li>
-										<span class="col_l m_cip">L</span>
+										<span class="col_l m_ea">8ea</span>
 										<p>7,000<span>원</span></p>
 									</li>
 								</ul>
@@ -1271,25 +1336,25 @@
 							<li class="menu_in_tit">
 								<h2>새우링</h2>
 							</li>
-							<li class="menu_in_txt">
+							<!-- <li class="menu_in_txt">
 								<p>
 									4ea - 4,000원<br>
 									6ea - 5,500원<br>
 									8ea - 7,000원
 								</p>
-							</li>
+							</li> -->
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
-										<span class="col_s m_cip">S</span>
+										<span class="col_s m_ea">4ea</span>
 										<p>4,000<span>원</span></p>
 									</li>
 									<li>
-										<span class="col_r m_cip">R</span>
+										<span class="col_r m_ea">6ea</span>
 										<p>5,500<span>원</span></p>
 									</li>
 									<li>
-										<span class="col_l m_cip">L</span>
+										<span class="col_l m_ea">8ea</span>
 										<p>7,000<span>원</span></p>
 									</li>
 								</ul>
@@ -1308,25 +1373,25 @@
 							<li class="menu_in_tit">
 								<h2>치즈스틱</h2>
 							</li>
-							<li class="menu_in_txt">
+							<!-- <li class="menu_in_txt">
 								<p>
 									4ea - 4,000원<br>
 									6ea - 5,500원<br>
 									8ea - 7,000원
 								</p>
-							</li>
+							</li> -->
 							<li class="menu_in_pirce">
 								<ul class="menu_pirce">
 									<li>
-										<span class="col_s m_cip">S</span>
+										<span class="col_s m_ea">4ea</span>
 										<p>4,000<span>원</span></p>
 									</li>
 									<li>
-										<span class="col_r m_cip">R</span>
+										<span class="col_r m_ea">6ea</span>
 										<p>5,500<span>원</span></p>
 									</li>
 									<li>
-										<span class="col_l m_cip">L</span>
+										<span class="col_l m_ea">8ea</span>
 										<p>7,000<span>원</span></p>
 									</li>
 								</ul>
@@ -1337,17 +1402,153 @@
 				
 				<ul class="tab_cont tmt_list_box menu-page" data-page="drink">
 					<!-- 01 -->
-					<li class="menu-item">
+					 <li class="menu-item">
 						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/drink_01_coca.png" alt="코키콜라"></li>
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_05_pickle.png" alt="티엠티피자 오이피클"></li>
 							<li class="menu_text">
-								<p class="menu_name_kr">코카콜라</p>
-								<p class="menu_name_en">COCA COLA</p>
+								<p class="menu_name_kr">티엠티피자 오이피클</p>
+								<p class="menu_name_en">TMT PIZZA PICKLE</p>
 							</li>
 						</ul>
 						<ul class="menu_info">
 							<li class="menu_in_tit">
-								<h2>코카콜라</h2>
+								<h2>티엠티피자 오이피클<h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									-
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>500<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_04_yogurt.png" alt="티엠티피자 요거트소스"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">티엠티피자 요거트소스</p>
+								<p class="menu_name_en">TMT PIZZA YOGURT SAUCE</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>티엠티피자<br>요거트소스<h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									-
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>500<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_03_garlic.png" alt="티엠티피자 갈릭디핑소스"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">티엠티피자 갈릭디핑소스</p>
+								<p class="menu_name_en">TMT PIZZA GARLIC DIPPING SAUCE</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>티엠티피자<br>갈릭디핑소스<h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									-
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>300<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_02_parmasan.png" alt="티엠티피자 파마산골드"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">티엠티피자 파마산골드</p>
+								<p class="menu_name_en">TMT PIZZA PARMASAN GOLD</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>티엠티피자<br>파마산골드<h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									-
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>300<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 02 -->
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_01_hot.png" alt="티엠티피자 핫소스"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">티엠티피자 핫소스</p>
+								<p class="menu_name_en">TMT PIZZA HOT SAUCE</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>티엠티피자 핫소스<h2>
+							</li>
+							<li class="menu_in_txt">
+								<p>
+									-
+								</p>
+							</li>
+							<li class="menu_in_pirce">
+								<ul class="menu_pirce">
+									<li>
+										<span class="col_r m_cip">R</span>
+										<p>100<span>원</span></p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item">
+						<ul class="menu_list">
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/drink_03_pepsi.png" alt="펩시제로"></li>
+							<li class="menu_text">
+								<p class="menu_name_kr">펩시제로</p>
+								<p class="menu_name_en">PEPSI ZERO</p>
+							</li>
+						</ul>
+						<ul class="menu_info">
+							<li class="menu_in_tit">
+								<h2>펩시제로<h2>
 							</li>
 							<li class="menu_in_txt">
 								<p>
@@ -1359,10 +1560,6 @@
 									<li>
 										<span class="col_r m_cip">R</span>
 										<p>2,000<span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l m_cip">L</span>
-										<p>2,500<span>원</span></p>
 									</li>
 								</ul>
 							</li>
@@ -1401,15 +1598,15 @@
 					</li>
 					<li class="menu-item">
 						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/drink_03_pepsi.png" alt="펩시제로"></li>
+							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/drink_01_coca.png" alt="코키콜라"></li>
 							<li class="menu_text">
-								<p class="menu_name_kr">펩시제로</p>
-								<p class="menu_name_en">PEPSI ZERO</p>
+								<p class="menu_name_kr">코카콜라</p>
+								<p class="menu_name_en">COCA COLA</p>
 							</li>
 						</ul>
 						<ul class="menu_info">
 							<li class="menu_in_tit">
-								<h2>펩시제로<h2>
+								<h2>코카콜라</h2>
 							</li>
 							<li class="menu_in_txt">
 								<p>
@@ -1422,141 +1619,9 @@
 										<span class="col_r m_cip">R</span>
 										<p>2,000<span>원</span></p>
 									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_01_hot.png" alt="티엠티피자 핫소스"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">티엠티피자 핫소스</p>
-								<p class="menu_name_en">TMT PIZZA HOT SAUCE</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>티엠티피자 핫소스<h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									-
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
 									<li>
-										<span class="col_r m_cip">R</span>
-										<p>2,000<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- 02 -->
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_02_parmasan.png" alt="티엠티피자 파마산골드"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">티엠티피자 파마산골드</p>
-								<p class="menu_name_en">TMT PIZZA PARMASAN GOLD</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>티엠티피자<br>파마산골드<h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									-
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>2,000<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_03_garlic.png" alt="티엠티피자 갈릭디핑소스"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">티엠티피자 갈릭디핑소스</p>
-								<p class="menu_name_en">TMT PIZZA GARLIC DIPPING SAUCE</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>티엠티피자<br>갈릭디핑소스<h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									-
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>2,000<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_04_yogurt.png" alt="티엠티피자 요거트소스"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">티엠티피자 요거트소스</p>
-								<p class="menu_name_en">TMT PIZZA YOGURT SAUCE</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>티엠티피자<br>요거트소스<h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									-
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>2,000<span>원</span></p>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="menu-item">
-						<ul class="menu_list">
-							<li class="menu_img"><img src="<?php echo G5_THEME_URL ?>/img/sub_02/sauce_05_pickle.png" alt="티엠티피자 오이피클"></li>
-							<li class="menu_text">
-								<p class="menu_name_kr">티엠티피자 오이피클</p>
-								<p class="menu_name_en">TMT PIZZA PICKLE</p>
-							</li>
-						</ul>
-						<ul class="menu_info">
-							<li class="menu_in_tit">
-								<h2>티엠티피자 오이피클<h2>
-							</li>
-							<li class="menu_in_txt">
-								<p>
-									-
-								</p>
-							</li>
-							<li class="menu_in_pirce">
-								<ul class="menu_pirce">
-									<li>
-										<span class="col_r m_cip">R</span>
-										<p>2,000<span>원</span></p>
+										<span class="col_l m_cip">L</span>
+										<p>2,500<span>원</span></p>
 									</li>
 								</ul>
 							</li>

@@ -81,17 +81,16 @@ include_once(G5_THEME_PATH.'/head.php');
 
 		<section id="hero" class="main_section main_hero">
 			<video autoplay muted playsinline loop>
-				<source src="<?php echo G5_THEME_URL ?>/img/main/main_01_sample.mp4" type="mp4">
-				<source src="<?php echo G5_THEME_URL ?>/img/main/main_01_sample.mp4" type="video/webm">
+				<source src="<?php echo G5_THEME_URL ?>/img/main/main_01_man.mp4" type="video/mp4">
+				<source src="<?php echo G5_THEME_URL ?>/img/main/main_01_man.mp4" type="video/webm">
 			</video>
 			<div class="hero_box">
 				<div class="tmt_pizza">
 					<img src="<?php echo G5_THEME_URL ?>/img/main/T.M.T 1.png" alt="티엠티피자">
 				</div>
 				<p>
-					<span>T</span>OO<br>
-					<span>M</span>UCH<br>
-					<span>T</span>OPPING
+					<span>T.M.T</span><br>
+					PIZZA
 				</p>
 			</div>
 		</section>
@@ -146,141 +145,7 @@ include_once(G5_THEME_PATH.'/head.php');
 			<div class="inner itr_menu_inner">
 				<h1><img src="<?php echo G5_THEME_URL ?>/img/main/main_menu.png" alt="메인메뉴"></h1>
 				<ul class="itr_menu_box">
-					<li class="itr_menu_list">
-						<a href="/menu.php">
-							<div class="menu_img">
-								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_19_pepperoni.png" alt="꽉채운페퍼로니피자">
-								<ul class="menu_price">
-									<li>
-										<span class="col_s size_cip">S</span>
-										<p>10,900 <span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r size_cip">R</span>
-										<p>17,900 <span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l size_cip">L</span>
-										<p>21,900 <span>원</span></p>
-									</li>
-								</ul>
-							</div>
-							<ul class="menu_name">
-								<li class="m_name_kr">
-									꽉채운페퍼로니피자
-								</li>
-								<li class="m_name_en">
-									Fully Loaded Pepperoni Pizza
-								</li>
-							</ul>
-							<ul class="menu_price tablet">
-								<li>
-									<span class="col_s size_cip">S</span>
-									<p>10,900 <span>원</span></p>
-								</li>
-								<li>
-									<span class="col_r size_cip">R</span>
-									<p>17,900 <span>원</span></p>
-								</li>
-								<li>
-									<span class="col_l size_cip">L</span>
-									<p>21,900 <span>원</span></p>
-								</li>
-							</ul>
-						</a>
-					</li>
-					<li class="itr_menu_list">
-						<a href="/menu.php">
-							<div class="menu_img">
-								<img src="<?php echo G5_THEME_URL ?>/img/main/sweetphotato.png" alt="달콤고구마무스피자">
-								<ul class="menu_price">
-									<li>
-										<span class="col_s size_cip">S</span>
-										<p>10,900 <span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r size_cip">R</span>
-										<p>17,900 <span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l size_cip">L</span>
-										<p>21,900 <span>원</span></p>
-									</li>
-								</ul>
-							</div>
-							<ul class="menu_name">
-								<li class="m_name_kr">
-									달콤고구마무스피자
-								</li>
-								<li class="m_name_en">
-									Sweet photato Mousse Pizza
-								</li>
-							</ul>
-							<ul class="menu_price tablet">
-								<li>
-									<span class="col_s size_cip">S</span>
-									<p>10,900 <span>원</span></p>
-								</li>
-								<li>
-									<span class="col_r size_cip">R</span>
-									<p>17,900 <span>원</span></p>
-								</li>
-								<li>
-									<span class="col_l size_cip">L</span>
-									<p>21,900 <span>원</span></p>
-								</li>
-							</ul>
-						</a>
-					</li>
-					<li class="itr_menu_list">
-						<a href="/menu.php">
-							<div class="menu_img">
-								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_03_nacho.png" alt="나쵸피자">
-								<ul class="menu_price">
-									<li>
-										<span class="col_s size_cip">S</span>
-										<p>10,900 <span>원</span></p>
-									</li>
-									<li>
-										<span class="col_r size_cip">R</span>
-										<p>17,900 <span>원</span></p>
-									</li>
-									<li>
-										<span class="col_l size_cip">L</span>
-										<p>21,900 <span>원</span></p>
-									</li>
-								</ul>
-							</div>
-							<ul class="menu_name">
-								<li class="m_name_kr">
-									나쵸피자
-								</li>
-								<li class="m_name_en">
-									Nacho pizza
-								</li>
-							</ul>
-							<ul class="menu_effect">
-								<li class="new_eff">
-									<img src="<?php echo G5_THEME_URL ?>/img/main/new_effect.svg" alt="신메뉴">
-									<p class="eff_txt">NEW</p>
-								</li>
-							</ul>					
-							<ul class="menu_price tablet">
-								<li>
-									<span class="col_s size_cip">S</span>
-									<p>10,900 <span>원</span></p>
-								</li>
-								<li>
-									<span class="col_r size_cip">R</span>
-									<p>17,900 <span>원</span></p>
-								</li>
-								<li>
-									<span class="col_l size_cip">L</span>
-									<p>21,900 <span>원</span></p>
-								</li>
-							</ul>
-						</a>
-					</li>
+					<!-- 티엠티피자 -->
 					<li class="itr_menu_list">
 						<a href="/menu.php">
 							<div class="menu_img">
@@ -288,15 +153,15 @@ include_once(G5_THEME_PATH.'/head.php');
 								<ul class="menu_price">
 									<li>
 										<span class="col_s size_cip">S</span>
-										<p>10,900 <span>원</span></p>
+										<p>13,900 <span>원</span></p>
 									</li>
 									<li>
 										<span class="col_r size_cip">R</span>
-										<p>17,900 <span>원</span></p>
+										<p>20,900 <span>원</span></p>
 									</li>
 									<li>
 										<span class="col_l size_cip">L</span>
-										<p>21,900 <span>원</span></p>
+										<p>24,900 <span>원</span></p>
 									</li>
 								</ul>
 							</div>
@@ -317,15 +182,159 @@ include_once(G5_THEME_PATH.'/head.php');
 							<ul class="menu_price tablet">
 								<li>
 									<span class="col_s size_cip">S</span>
-									<p>10,900 <span>원</span></p>
+									<p>13,900 <span>원</span></p>
 								</li>
 								<li>
 									<span class="col_r size_cip">R</span>
-									<p>17,900 <span>원</span></p>
+									<p>20,900 <span>원</span></p>
 								</li>
 								<li>
 									<span class="col_l size_cip">L</span>
-									<p>21,900 <span>원</span></p>
+									<p>24,900 <span>원</span></p>
+								</li>
+							</ul>
+						</a>
+					</li>
+					<!-- 트러플머쉬룸피자 -->
+					<li class="itr_menu_list">
+						<a href="/menu.php">
+							<div class="menu_img">
+								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_00_truffle.png" alt="트러플머쉬룸피자">
+								<ul class="menu_price">
+									<li>
+										<span class="col_s size_cip">S</span>
+										<p>13,900 <span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r size_cip">R</span>
+										<p>20,900 <span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l size_cip">L</span>
+										<p>24,900 <span>원</span></p>
+									</li>
+								</ul>
+							</div>
+							<ul class="menu_name">
+								<li class="m_name_kr">
+									트러플머쉬룸피자
+								</li>
+								<li class="m_name_en">
+									Truffle Mushroom Pizza
+								</li>
+							</ul>
+							<ul class="menu_effect">
+								<li class="new_eff">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/new_effect.svg" alt="신메뉴">
+									<p class="eff_txt">NEW</p>
+								</li>
+							</ul>					
+							<ul class="menu_price tablet">
+								<li>
+									<span class="col_s size_cip">S</span>
+									<p>11,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_r size_cip">R</span>
+									<p>18,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_l size_cip">L</span>
+									<p>22,900 <span>원</span></p>
+								</li>
+							</ul>
+						</a>
+					</li>
+					<!-- 에그마요피자 -->
+					<li class="itr_menu_list">
+						<a href="/menu.php">
+							<div class="menu_img">
+								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_02_egg.png" alt="에그마요피자">
+								<ul class="menu_price">
+									<li>
+										<span class="col_s size_cip">S</span>
+										<p>13,900 <span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r size_cip">R</span>
+										<p>20,900 <span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l size_cip">L</span>
+										<p>24,900 <span>원</span></p>
+									</li>
+								</ul>
+							</div>
+							<ul class="menu_name">
+								<li class="m_name_kr">
+									에그마요피자
+								</li>
+								<li class="m_name_en">
+									Egg Mayo Pizza
+								</li>
+							</ul>
+							<ul class="menu_price tablet">
+								<li>
+									<span class="col_s size_cip">S</span>
+									<p>11,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_r size_cip">R</span>
+									<p>18,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_l size_cip">L</span>
+									<p>22,900 <span>원</span></p>
+								</li>
+							</ul>
+						</a>
+					</li>
+					<!-- 나쵸피자 -->
+					<li class="itr_menu_list">
+						<a href="/menu.php">
+							<div class="menu_img">
+								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_03_nacho.png" alt="나쵸피자">
+								<ul class="menu_price">
+									<li>
+										<span class="col_s size_cip">S</span>
+										<p>13,900 <span>원</span></p>
+									</li>
+									<li>
+										<span class="col_r size_cip">R</span>
+										<p>20,900 <span>원</span></p>
+									</li>
+									<li>
+										<span class="col_l size_cip">L</span>
+										<p>24,900 <span>원</span></p>
+									</li>
+								</ul>
+							</div>
+							<ul class="menu_name">
+								<li class="m_name_kr">
+									나쵸피자
+								</li>
+								<li class="m_name_en">
+									Nacho Pizza
+								</li>
+							</ul>
+							<!-- <ul class="menu_effect">
+								<li class="new_eff">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/new_effect.svg" alt="신메뉴">
+									<p class="eff_txt">NEW</p>
+								</li>
+							</ul>					 -->
+							<ul class="menu_price tablet">
+								<li>
+									<span class="col_s size_cip">S</span>
+									<p>13,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_r size_cip">R</span>
+									<p>20,900 <span>원</span></p>
+								</li>
+								<li>
+									<span class="col_l size_cip">L</span>
+									<p>24,900 <span>원</span></p>
 								</li>
 							</ul>
 						</a>
@@ -344,11 +353,11 @@ include_once(G5_THEME_PATH.'/head.php');
 			<div class="inner contact_inner">
 				<img src="<?php echo G5_THEME_URL ?>/img/main/main_contact.png" alt="contact us">
 				<ul class="contact_box">
-					<li class="contact_video"><iframe width="960" height="580" src="https://www.youtube.com/embed/ZwW_Aq2lIyE?si=hSh5HMj4avUyv2Di" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+					<li class="contact_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/bkNrHx_uJOg?si=GFAkzCqsdfZQPmAp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
 					<li class="contact_text">
 						<p>
 						수 많은 점주님들이<br>
-						<span class="con_tx_c1">티엠티</span><span class="con_tx_c2">피자</span>를<br>
+						<span class="con_tx_c1">T.M.T</span> <span class="con_tx_c2">PIZZA</span>를<br>
 						<strong>선택</strong>할 수 밖에 없었던<br>
 						<strong>진짜 이유!</strong>
 						</p>
@@ -368,33 +377,33 @@ include_once(G5_THEME_PATH.'/head.php');
 						<li class="event_list">
 							<a href="#none">
 								<div class="photo_box">
-									<img src="<?php echo G5_THEME_URL ?>/img/main/event_1.png" alt="신메뉴 에그마요 피자 출시!">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/event_4.jpeg" alt="신메뉴 트러플머쉬룸 피자 출시!">
 								</div> 
 								<div class="text_box">
 									<p class="event_tit"><strong>[신메뉴]</strong></p>
-									<p class="event_txt">에그마요 피자 출시!</p>
+									<p class="event_txt">트러플머쉬룸 피자 출시!</p>
 								</div>
 							</a>
 						</li>
 						<li class="event_list">
 							<a href="#none">
 								<div class="photo_box">
-									<img src="<?php echo G5_THEME_URL ?>/img/main/event_2.png" alt="2025 우수가맹점 경산 옥산점">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/event_5.png" alt="2025 우수가맹점 울산 신천점">
 								</div>
 								<div class="text_box">
 									<p class="event_tit"><strong>[2025 우수가맹점]</strong></p>
-									<p class="event_txt">경산 옥산점</p>
+									<p class="event_txt">울산 신천점</p>
 								</div>
 							</a>
 						</li>
 						<li class="event_list">
 							<a href="#none">
 								<div class="photo_box">
-									<img src="<?php echo G5_THEME_URL ?>/img/main/event_3.png" alt="신메뉴 바삭바삭 나쵸피자 출시!">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/event_6.png" alt="미미네 유기견 보호소 봉사활동">
 								</div>
 								<div class="text_box">
-									<p class="event_tit"><strong>[신메뉴]</strong></p>
-									<p class="event_txt">바삭바삭 나쵸피자 출시!</p>
+									<p class="event_tit"><strong>[봉사]</strong></p>
+									<p class="event_txt">미미네 행복한 보호소 봉사활동</p>
 								</div>
 							</a>
 						</li>

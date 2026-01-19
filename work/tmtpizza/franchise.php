@@ -241,19 +241,19 @@
 							<ul class="vs_list">
 								<li>
 									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_R">4,000만 원</p>
 								</li>
 								<li>
-									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_L">임대료</p>
+									<p class="vs_R">150만 원</p>
 								</li>
 								<li>
-									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_L">수익률</p>
+									<p class="vs_R">13~14%</p>
 								</li>
 								<li>
-									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_L">물류비</p>
+									<p class="vs_R">40%</p>
 								</li>
 							</ul>
 						</li>
@@ -263,19 +263,19 @@
 							<ul class="vs_list">
 								<li>
 									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_R">1억 7,000만 원</p>
 								</li>
 								<li>
-									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_L">임대료</p>
+									<p class="vs_R">50~80만 원</p>
 								</li>
 								<li>
-									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_L">수익률</p>
+									<p class="vs_R">18~22%</p>
 								</li>
 								<li>
-									<p class="vs_L">월 매출</p>
-									<p class="vs_R">가격</p>
+									<p class="vs_L">물류비</p>
+									<p class="vs_R">30%</p>
 								</li>
 							</ul>
 						</li>
@@ -322,14 +322,14 @@
 				</li>
 				<li class="sec05_cards">
 					<ul class="s05_card_3">
-						<li class="sec05_card_tit">동구점 직원 5명<br>개별 매장 오픈</li>
+						<li class="sec05_card_tit">일하던 직원 5명<br>개별 매장 오픈</li>
 						<li class="sec05_card_txt">가까이서 지켜본 직원들이<br>스스로 기회를 선택했습니다.</li>
 						<li class="sec05_card_num">03</li>
 					</ul>
 				</li>                            
 			</ul>
 			<p class="comm_sub_txt">
-				&quot;맛과 시스템&quot;,둘 다 확시하니까요.<br>
+				&quot;맛과 시스템&quot;,둘 다 확실하니까요.<br>
 				사람들이 &apos;먼저&apos; 움직이는 브랜드는 이유가 있습니다.
 			</p>
 		</section>
@@ -362,100 +362,100 @@
 
 						<colgroup>
 							<col style="width: 20%;">
-							<col style="width: 55%;">
 							<col style="width: 25%;">
+							<col style="width: 55%;">
 						</colgroup>
 
 						<thead>
 							<tr>
 								<th scope="col">종류</th>
-								<th scope="col">내용</th>
 								<th scope="col">비용</th>
+								<th scope="col">내용</th>
 							</tr>
 						</thead>
 						<!-- 신규 창업 -->
 						<tbody class="cost_body cost_active cost_new_box" data-content="new">
 							<tr>
 								<th scope="row">가맹비</th>
-								<td>티엠티피자 브랜드 상표 및 상호 사용</td>
 								<td class="highlight"><span class="cost_eff">500</span>만 원 &rarr; <span class="cost_eff">0</span>원
 								<br class="tablet">(한시적 면제)</td>
+								<td>티엠티피자 브랜드 상표 및 상호 사용</td>
 							</tr>
 							<tr>
 								<th scope="row">교육비</th>
-								<td>본사 교육 1주(운영시스템/조리 교육/현장실습)+슈퍼바이저 매장 파견 2일</td>
 								<td class="highlight"><span class="cost_eff">300</span>만 원 &rarr; <span class="cost_eff">0</span>원
 								<br class="tablet">(한시적 면제)</td>
+								<td>본사 교육 1주(운영시스템/조리 교육/현장실습)+오픈바이저 매장 파견 2일</td>
 							</tr>
 							<tr>
 								<th scope="row">로열티</th>
-								<td>-</td>
-								<td class="highlight"><span class="cost_eff">0</span>원
+								<td class="highlight"><span class="cost_eff"> 30</span>만 원 &rarr; <span class="cost_eff">0</span>원
 								<br class="tablet">(한시적 면제)</td>
+								<td>-</td>
 							</tr>
 							<tr>
 								<th scope="row">보증금</th>
-								<td>계약이행보증금, 물류보증금</td>
 								<td class="highlight"><span class="cost_eff">100</span>만 원 &rarr; <span class="cost_eff">0</span>원
 								<br class="tablet">(한시적 면제)</td>
-							</tr>
-							<tr>
-								<th scope="row">주방집기/기물</th>
-								<td>냉장고, 냉동고, 테이블 냉장고, 쇼케이스, 작업대, 집기류 등 필요 물품</td>
-								<td class="highlight"><span class="cost_eff">1,010</span>만 원<br class="tablet">(중고 가능)</td>
-							</tr>
-							<tr>
-								<th scope="row">간판</th>
-								<td>채널간판, 원형 로고 간판, 시트지, 아크릴 박스 등</td>
-								<td class="highlight"><span class="cost_eff">300</span>만 원</td>
+								<td>계약이행보증금, 물류보증금</td>
 							</tr>
 							<tr>
 								<th scope="row">인테리어</th>
+								<td class="highlight"><span class="cost_eff">1,900</span>만 원<br class="tablet">(자체시공 가능)</td>
 								<td>주방, 내부 바닥, 벽, 천정, 가벽, 필름, 폐기물, 전기 공사 등</td>
-								<td class="highlight"><span class="cost_eff">19,000</span>만 원<br class="tablet">(자체시공 가능)</td>
+							</tr>
+							<tr>
+								<th scope="row">주방집기/기물</th>
+								<td class="highlight"><span class="cost_eff">1,010</span>만 원<br class="tablet">(중고 가능)</td>
+								<td>냉장고, 냉동고, 테이블 냉장고, 쇼케이스, 작업대, 집기류 등 필요 물품</td>
+							</tr>
+							<tr>
+								<th scope="row">간판</th>
+								<td class="highlight"><span class="cost_eff">300</span>만 원</td>
+								<td>채널간판, 원형 로고 간판, 시트지, 아크릴 박스 등</td>
 							</tr>
 							<tr>
 								<th scope="row">전용 오븐기</th>
-								<td>티엠티 전용 오븐기</td>
 								<td class="highlight"><span class="cost_eff">300</span>만 원<br class="tablet">(중고기준)</td>
+								<td>티엠티 전용 오븐기</td>
 							</tr>
 							<tr>
 								<th scope="row">전용 롤러기</th>
-								<td>티엠티 전용 롤러기</td>
 								<td class="highlight"><span class="cost_eff">170</span>만 원</td>
+								<td>티엠티 전용 롤러기</td>
 							</tr>
 						</tbody>
 						<!-- 업종 변경 -->
 						<tbody class="cost_body" data-content="change">
 							<tr>
 								<th scope="row">가맹비</th>
-								<td>티엠티피자 브랜드 상표 및 상호 사용</td>
 								<td class="highlight"><span class="cost_eff">500</span>만 원 &rarr; <span class="cost_eff">0</span>원<br class="tablet">(한시적 면제)</td>
+								<td>티엠티피자 브랜드 상표 및 상호 사용</td>
 							</tr>
 							<tr>
 								<th scope="row">교육비</th>
-								<td>본사 교육 1주(운영시스템/조리 교육/현장실습)+오픈바이저 매장 파견 2일</td>
 								<td class="highlight"><span class="cost_eff">300</span>만 원 &rarr; <span class="cost_eff">0</span>원<br class="tablet">(한시적 면제)</td>
+								<td>본사 교육 1주(운영시스템/조리 교육/현장실습)+오픈바이저 매장 파견 2일</td>
 							</tr>
 							<tr>
 								<th scope="row">로열티</th>
+								<td class="highlight"><span class="cost_eff">30</span>만 원 &rarr; <span class="cost_eff">0</span>원<br class="tablet">(한시적 면제)</td>
 								<td>-</td>
-								<td class="highlight"><span class="cost_eff">0</span>원<br class="tablet">(한시적 면제)</td>
-							</tr>
-							<tr>
-								<th scope="row">주방집기/기물</th>
-								<td>냉장고, 냉동고, 테이블 냉장고, 쇼케이스, 작업대, 집기류 등 필요 물품</td>
-								<td class="highlight">기물 없을 시 중고 구매 가능</td>
-							</tr>
-							<tr>
-								<th scope="row">간판</th>
-								<td>채널간판, 원형 로고 간판, 시트지, 아크릴 박스 등</td>
-								<td class="highlight"><span class="cost_eff">300</span>만 원</td>
 							</tr>
 							<tr>
 								<th scope="row">인테리어</th>
-								<td>매장, 홀 인테리어 시공</td>
 								<td class="highlight">상담 후 결정</td>
+								<td>매장, 홀 인테리어 시공</td>
+							</tr>
+							<tr>
+								<th scope="row">주방집기/기물</th>
+								<td class="highlight">기물 없을 시 중고 구매 가능</td>
+								<td>냉장고, 냉동고, 테이블 냉장고, 쇼케이스, 작업대, 집기류 등 필요 물품</td>
+							</tr>
+							<tr>
+								<th scope="row">간판</th>
+								<td class="highlight"><span class="cost_eff">300</span>만 원</td>
+								<td>채널간판, 원형 로고 간판, 시트지, 아크릴 박스 등</td>
 							</tr>
 						</tbody>
 						<!-- 합계 -->
@@ -478,43 +478,43 @@
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_01.png" alt="창업 상담문의 아이콘"></div>
 					<p class="process_tit">창업 상담 문의</p>
-					<p class="process_txt"> 홈페이지 또는 유선문의<br>(1833-9455)</p>
+					<p class="process_txt">홈페이지 또는 유선문의<br>(1833-9455)</p>
 				</li>
 				<li class="porcess_list pro_arr"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/arrow_light.png" alt="화살표 아이콘"></li>
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_02.png" alt="창업 상담문의 아이콘"></div>
-					<p class="process_tit">창업 상담 문의</p>
-					<p class="process_txt"> 홈페이지 또는 유선문의<br>(1833-9455)</p>
+					<p class="process_tit">상권분석 / 점포 선정</p>
+					<p class="process_txt">AI데이터 기반을 통해<br>희망 상권 분석 후 점포 선정</p>
 				</li>
 				<li class="porcess_list pro_arr"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/arrow_light.png" alt="화살표 아이콘"></li>
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_03.png" alt="창업 상담문의 아이콘"></div>
-					<p class="process_tit">창업 상담 문의</p>
-					<p class="process_txt"> 홈페이지 또는 유선문의<br>(1833-9455)</p>
+					<p class="process_tit">계약 체결</p>
+					<p class="process_txt">가맹점 계약 승인 및 가맹계약석,<br>정보공개서 제공, 오픈 준비 설명</p>
 				</li>
 				<li class="porcess_list pro_arr"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/arrow_light.png" alt="화살표 아이콘"></li>
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_04.png" alt="창업 상담문의 아이콘"></div>
-					<p class="process_tit">창업 상담 문의</p>
-					<p class="process_txt"> 홈페이지 또는 유선문의<br>(1833-9455)</p>
+					<p class="process_tit">매장 실측 / 인테리어 공사</p>
+					<p class="process_txt">최적의 동선을 위한 실측 및<br>시공 진행, 공사 감리</p>
 				</li>
 				<li class="porcess_list pro_arr"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/arrow_light.png" alt="화살표 아이콘"></li>
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_05.png" alt="창업 상담문의 아이콘"></div>
-					<p class="process_tit">창업 상담 문의</p>
-					<p class="process_txt"> 홈페이지 또는 유선문의<br>(1833-9455)</p>
+					<p class="process_tit">교육</p>
+					<p class="process_txt">가맹 오픈을 위한<br>이론, 현장 교육, 노하우 전수</p>
 				</li>
 				<li class="porcess_list pro_arr"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/arrow_light.png" alt="화살표 아이콘"></li>
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_06.png" alt="창업 상담문의 아이콘"></div>
-					<p class="process_tit">창업 상담 문의</p>
-					<p class="process_txt"> 홈페이지 또는 유선문의<br>(1833-9455)</p>
+					<p class="process_tit">가맹 오픈</p>
+					<p class="process_txt">오픈 시 원활한 운영을 위해<br>베테랑 전문가 현장 지원</p>
 				</li>
 				<li class="porcess_list pro_arr"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/arrow_light.png" alt="화살표 아이콘"></li>
 				<li class="porcess_list">
 					<div class="process_icon"><img src="<?php echo G5_THEME_URL ?>/img/sub_04/process_icon_07.png" alt="창업 상담문의 아이콘"></div>
-					<p class="process_tit">창업 상담 문의</p>
-					<p class="process_txt"> 홈페이지 또는 유선문의<br>(1833-9455)</p>
+					<p class="process_tit">지속적 관리</p>
+					<p class="process_txt">본사의 정기적 방문 및<br>손익분석 지원</p>
 				</li>
 			</ul>
 		</section>
@@ -555,7 +555,7 @@
 					<div class="faq_answer" style="display: none;">
 						<p>
 							<span class="faq_a">A</span>
-							현재 선착순으로 5무 정책을 통해 비용을 면제 중이며, 매장 개설비만 부담사히면 됩니다.
+							현재 선착순으로 5무 정책을 통해 비용을 면제 중이며, 매장 개설비만 부담하시면 됩니다.
 						</p>
 					</div>
 				</li>
@@ -616,8 +616,22 @@
 								<select id="region" name="region" required>
 									<option value="">시/도 선택</option>
 									<option value="seoul">서울</option>
-									<option value="gyeonggi">경기</option>
 									<option value="busan">부산</option>
+									<option value="daegu">대구</option>
+									<option value="incheon">인천</option>
+									<option value="gwangju">광주</option>
+									<option value="daejeon">대전</option>
+									<option value="ulsan">울산</option>
+									<option value="sejong">세종</option>
+									<option value="gyeonggi_do">경기도</option>
+									<option value="gyeongnam">경남</option>
+									<option value="gyeongbuk">경북</option>
+									<option value="jeollanam-do">전남</option>
+									<option value="jeollabuk-do">전북</option>
+									<option value="chungnam">충남</option>
+									<option value="chungbuk">충북</option>
+									<option value="gangwon_do">강원도</option>
+									<option value="jeju_do">제주도</option>
 								</select>
 							</li>
 							<!-- 유입 경로 -->

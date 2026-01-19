@@ -46,7 +46,7 @@
 					</a>
 				</li>
 				<li class="f_ytb">
-					<a href="#none">
+					<a href="https://www.youtube.com/@tmtcompany_official">
 						<img src="<?php echo G5_THEME_URL ?>/img/main/f_ytb_btn.png" alt="유튜브 바로가기 버튼">
 					</a>
 				</li>
