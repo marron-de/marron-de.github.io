@@ -1516,3 +1516,38 @@ $(function () {
     });
   });
 });
+
+
+// 260120 추가작업
+// 제품 상세 공유하기 팝업
+$(document).ready(function () {
+	$(".pr_sec.view .share_btn").click(function (e) {
+		e.preventDefault(); 
+		$("body").addClass('hidden');
+		$("body").addClass('modal_open');
+		$('#share_popup').addClass('show');
+	})
+});
+
+$(document).ready(function () {
+	$("#share_popup .copy_btn").on("click", function () {
+		
+		if (navigator.clipboard) {
+			navigator.clipboard.writeText(window.location.href).then(function () {
+				alert("URL이 복사되었습니다.");
+			});
+		} else {
+			const temp = $("<input>");
+			$("body").append(temp);
+			temp.val(window.location.href).select();
+			document.execCommand("copy");
+			temp.remove();
+			alert("URL이 복사되었습니다.");
+
+			$("body").removeClass('hidden');
+			$("body").removeClass('modal_open');
+			$('#share_popup').removeClass('show');
+		}
+
+	});
+});
