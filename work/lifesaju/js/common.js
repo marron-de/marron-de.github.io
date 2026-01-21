@@ -920,7 +920,11 @@ $(document).ready(function() {
 AOS.init({
 	duration: 1000,
 	easing: 'ease', 
+	startEvent: 'DOMContentLoaded'
 })
+window.addEventListener('load', function() {
+  AOS.refresh();
+});
 
 // vibration
 document.querySelectorAll('.vibration').forEach(function (btn) {
@@ -1102,3 +1106,181 @@ const point_swiper = new Swiper(".point_swiper", {
 		clickable: true,
 	},
 });
+
+
+
+
+// 26.01.20 작업
+// marquees
+const marquees = Array.from(document.querySelectorAll(".marquee"));
+class Marquee {
+  constructor({ el }) {
+    this.el = el;
+    this.marqueeAnimation = [
+      { transform: "translateX(0)" },
+      { transform: `translateX(calc(-100% - var(--gap,0)))` }
+    ];
+
+    this.marqueeTiming = {
+      duration: this.el.dataset.duration * 10000,
+      direction: this.el.dataset.reverse ? "reverse" : "normal",
+      iterations: Infinity
+    };
+    this.animations = [];
+    this.SLOWDOWN_RATE = 0.2;
+    this.cloneMarqueeGroup();
+    this.init();
+  }
+
+  init() {
+    for (const m of this.marquee_groups) {
+      let q = m.animate(this.marqueeAnimation, this.marqueeTiming);
+
+      this.animations.push(q);
+    }
+
+    this.initEvents();
+  }
+  slowDownAnimations() {
+    for (const a of this.animations) {
+      a.playbackRate = this.SLOWDOWN_RATE;
+    }
+  }
+  resumeAnimationSpeed() {
+    for (const a of this.animations) {
+      a.playbackRate = true;
+    }
+  }
+  initEvents() {
+    this.el.addEventListener("mouseenter", () => this.slowDownAnimations());
+    this.el.addEventListener("mouseleave", () => this.resumeAnimationSpeed());
+  }
+
+  cloneMarqueeGroup() {
+    let clone = this.el.querySelector(".marquee_group").cloneNode(true);
+    clone.classList.add("clone");
+    this.el.appendChild(clone);
+    this.marquee_groups = Array.from(
+      this.el.querySelectorAll(".marquee_group")
+    );
+  }
+}
+for (const m of marquees) new Marquee({ el: m });
+
+
+// 제너럴사주 결제수단 등록 팝업 슬라이드
+function cloneSlides(selector, multiply = 3) {
+	const container = document.querySelector(selector);
+	if (!container) return;
+
+	const wrapper = container.querySelector('.swiper-wrapper');
+	const slides = Array.from(wrapper.children)
+		.filter(slide => !slide.hasAttribute('data-clone'));
+
+	const originalCount = slides.length;
+	const cloneCount = originalCount * (multiply - 1);
+
+	for (let i = 0; i < cloneCount; i++) {
+		const clone = slides[i % originalCount].cloneNode(true);
+		clone.setAttribute('data-clone', 'true');
+		wrapper.appendChild(clone);
+	}
+
+	return originalCount; // 원본 개수 반환
+}
+function initBullets(total) {
+    const paging = document.querySelector('.sajupay_swiper .pagination');
+    let html = '';
+
+    for (let i = 1; i <= total; i++) {
+        html += `<span class="swiper-pagination-bullet" data-index="${i}"></span>`;
+    }
+    paging.innerHTML = html;
+}
+function updateBullets(swiper, total) {
+    const bullets = document.querySelectorAll('.sajupay_swiper .pagination .swiper-pagination-bullet');
+    const current = (swiper.realIndex % total) + 1;
+
+    bullets.forEach((b, i) => {
+        b.classList.toggle('swiper-pagination-bullet-active', (i + 1) === current);
+    });
+}
+const originalSajupay = cloneSlides('.sajupay_swiper', 3);
+const sajupay_swiper = new Swiper(".sajupay_swiper", {
+	speed: 500,
+	observer: true,
+	observeParents: true,
+	loop: true,
+	centeredSlides: true,
+	slidesPerView: 'auto',
+	grabCursor: true, 
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: '.sajupay_swiper .pagination',
+		clickable: true,
+	},
+	on: {
+		init(swiper) {
+			initBullets(originalSajupay);
+			updateBullets(swiper, originalSajupay);
+      		runCountUp(swiper);
+		},
+		slideChange(swiper) {
+			updateBullets(swiper, originalSajupay);
+		},
+		slideChangeTransitionEnd(swiper) {
+			runCountUp(swiper);
+		}
+	}
+});
+function runCountUp(swiper) {
+  const activeSlide = swiper.el.querySelector('.swiper-slide-active');
+  const countEl = activeSlide.querySelector('.count');
+
+  if (!countEl) return;
+
+  const start = Number(countEl.dataset.start);
+  const end = Number(countEl.dataset.end);
+  const duration = Number(countEl.dataset.time);
+
+  let startTime = null;
+  countEl.textContent = start.toLocaleString();
+
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = timestamp - startTime;
+    const percent = Math.min(progress / duration, 1);
+    const value = Math.floor(start + (end - start) * percent);
+
+    countEl.textContent = value.toLocaleString();
+
+    if (percent < 1) {
+      requestAnimationFrame(animate);
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+
+
+// 제너럴 사주 메인
+const saju_main_banner = new Swiper(".saju_main_banner", {
+	speed: 500,
+	observer: true,
+	observeParents: true,
+	loop: true,
+	grabCursor: true, 
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: '.saju_main_banner .pagination',
+		clickable: true,
+	},
+});
+
+
