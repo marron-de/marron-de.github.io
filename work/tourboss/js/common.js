@@ -1613,3 +1613,17 @@ $(document).ready(function () {
 
 	});
 });
+
+
+
+// 260121 추가작업
+// 효과 구현을 위해 임시 추가하였고 실제로는 상품로드 완료되면 동작하게 작업 
+setTimeout(function () {
+	$('.prd_listbox')
+		.removeClass('is_loading')
+}, 1000);
+
+setTimeout(function () {
+	$('.prd_slidebox')
+		.removeClass('is_loading')
+}, 1000);

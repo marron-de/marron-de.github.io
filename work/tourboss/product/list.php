@@ -207,7 +207,8 @@
 								<button type="button" class="mob_filter_btn tablet"></button>
 							</div>
 						</div>
-						<div class="prd_listbox">
+						<!-- 260121 추가작업 : is_loading 클래스 추가 -->
+						<div class="prd_listbox is_loading">
 							<a href="<?php echo $path ?>product/view.php" class="item event_ing">
 								<div class="imgbox">
 									<img src="<?php echo $path ?>img/prd_pic1.jpg" alt="" class="img">

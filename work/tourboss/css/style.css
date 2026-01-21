@@ -1190,3 +1190,95 @@ border-radius: 10rem; width: 1.25rem;aspect-ratio: 1/1; display: flex;align-item
 #share_popup .sns_box .item .link { display: flex; flex-direction: column;  align-items: center;  gap: 0.313rem;}
 #share_popup .sns_box .item .link .icon {width: 2.5rem;}
 #share_popup .sns_box .item .link .txt { font: var(--14_label_normal_r); letter-spacing: 0.01em;  color: var(--basic-darkgray);}
+
+
+
+/* 260121 추가작업 */
+@keyframes skeleton-loading {
+    0% {left: -10rem }
+    100% {left: 100%}
+}
+
+.prd_listbox .item .imgbox,
+.prd_listbox .item .txtbox .topbox,
+.prd_listbox .item .txtbox .titbox,
+.prd_listbox .item .txtbox .pricebox,
+.pr_sec.list .prd_listbox .item .txtbox .bottombox,
+.prd_listbox .item .txtbox .bottombox .schedule_btn,
+.prd_listbox .item .txtbox .servicebox { position: relative; overflow: hidden;}
+
+.prd_listbox .item .imgbox::before,
+.prd_listbox .item .txtbox .topbox::before,
+.prd_listbox .item .txtbox .titbox::before,
+.prd_listbox .item .txtbox .pricebox::before,
+.pr_sec.list .prd_listbox .item .txtbox .bottombox::before,
+.prd_listbox .item .txtbox .bottombox .schedule_btn::before,
+.prd_listbox .item .txtbox .servicebox::before {content: ""; position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%; background-color: #efefef; opacity: 0; z-index: 12; transition: var(--transition);}
+
+.prd_listbox .item .imgbox::after,
+.prd_listbox .item .txtbox .topbox::after,
+.prd_listbox .item .txtbox .titbox::after,
+.prd_listbox .item .txtbox .pricebox::after,
+.pr_sec.list .prd_listbox .item .txtbox .bottombox::after,
+.prd_listbox .item .txtbox .bottombox .schedule_btn::after,
+.prd_listbox .item .txtbox .servicebox::after {content: "";  position: absolute;  top: 0; left: 0; width: 100%; height: 100%;  background: linear-gradient(90deg, transparent, #fff, transparent); animation: skeleton-loading 1.2s infinite; z-index: 12; opacity: 0;transition: var(--transition);}
+
+.prd_listbox.is_loading .item .txtbox .topbox,
+.prd_listbox.is_loading .item .txtbox .titbox,
+.prd_listbox.is_loading .item .txtbox .pricebox,
+.pr_sec.list .prd_listbox.is_loading .item .txtbox .bottombox,
+.prd_listbox.is_loading .item .txtbox .servicebox { border-radius: 0.75rem}
+
+.prd_listbox.is_loading .item .txtbox .bottombox .schedule_btn {border-color: #efefef;}
+
+.prd_listbox.is_loading .item .imgbox::before,
+.prd_listbox.is_loading .item .txtbox .topbox::before,
+.prd_listbox.is_loading .item .txtbox .titbox::before,
+.prd_listbox.is_loading .item .txtbox .pricebox::before,
+.pr_sec.list .prd_listbox.is_loading .item .txtbox .bottombox::before,
+.prd_listbox.is_loading .item .txtbox .bottombox .schedule_btn::before,
+.prd_listbox.is_loading .item .txtbox .servicebox::before {opacity: 1;}
+
+.prd_listbox.is_loading .item .imgbox::after,
+.prd_listbox.is_loading .item .txtbox .topbox::after,
+.prd_listbox.is_loading .item .txtbox .titbox::after,
+.prd_listbox.is_loading .item .txtbox .pricebox::after,
+.pr_sec.list .prd_listbox.is_loading .item .txtbox .bottombox::after,
+.prd_listbox.is_loading .item .txtbox .bottombox .schedule_btn::after,
+.prd_listbox.is_loading .item .txtbox .servicebox::after {opacity: 1;}
+
+
+.prd_swiper .item .imgbox,
+.prd_swiper .item .txtbox .titbox,
+.prd_swiper .item .txtbox .pricebox,
+.prd_swiper .item .txtbox .detailbox,
+.prd_swiper .item .txtbox .badgebox { position: relative; overflow: hidden;}
+
+.prd_swiper .item .imgbox::before,
+.prd_swiper .item .txtbox .titbox::before,
+.prd_swiper .item .txtbox .pricebox::before,
+.prd_swiper .item .txtbox .detailbox::before,
+.prd_swiper .item .txtbox .badgebox::before {content: ""; position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%; background-color: #efefef; opacity: 0; z-index: 12; transition: var(--transition);}
+
+.prd_swiper .item .imgbox::after,
+.prd_swiper .item .txtbox .titbox::after,
+.prd_swiper .item .txtbox .pricebox::after,
+.prd_swiper .item .txtbox .detailbox::after,
+.prd_swiper .item .txtbox .badgebox::after {content: "";  position: absolute;  top: 0; left: 0; width: 100%; height: 100%;  background: linear-gradient(90deg, transparent, #fff, transparent); animation: skeleton-loading 1.2s infinite; z-index: 12; opacity: 0;transition: var(--transition);}
+
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .titbox,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .pricebox,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .detailbox,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .badgebox { border-radius: 0.75rem}
+
+.prd_slidebox.is_loading .prd_swiper .item .imgbox::before,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .titbox::before,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .pricebox::before,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .detailbox::before,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .badgebox::before {opacity: 1;}
+
+.prd_slidebox.is_loading .prd_swiper .item .imgbox::after,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .titbox::after,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .pricebox::after,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .detailbox::after,
+.prd_slidebox.is_loading .prd_swiper .item .txtbox .badgebox::after {opacity: 1;}

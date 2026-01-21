@@ -358,7 +358,8 @@
 					</div>
 					<div class="bestprd_box">
 						<p class="title">많이 찾으시는 인기 상품</p>
-						<div class="slidebox prd_slidebox on">
+						<!-- 260121 추가작업 : is_loading 클래스 추가 -->
+						<div class="slidebox prd_slidebox on is_loading">
 							<div class="swiper prd_swiper">
 								<div class="swiper-wrapper">
 									<a href="<?php echo $path ?>product/view.php" class="swiper-slide item">
@@ -642,7 +643,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="prd_listbox">
+						<!-- 260121 추가작업 : is_loading 클래스 추가 -->
+						<div class="prd_listbox is_loading">
 							<a href="<?php echo $path ?>product/view.php" class="item">
 								<div class="imgbox">
 									<img src="<?php echo $path ?>img/prd_pic1.jpg" alt="" class="img">
