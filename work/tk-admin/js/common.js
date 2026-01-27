@@ -478,3 +478,46 @@ $(document).on('click', '.good_write_info .productInfoBox .productInfoSaveBtn', 
     $(this).closest('.productInfoBox').removeClass('show');
 });
 
+
+// 260127 추가작업
+document.addEventListener('DOMContentLoaded', () => {
+  const banners = document.querySelectorAll('.top_banner');
+
+  banners.forEach(banner => {
+    const input = banner.querySelector('.input');
+    const preview = banner.querySelector('.preview');
+    const labelTxt = banner.querySelector('.label .txt');
+    const deleteBtn = banner.querySelector('.delete_btn');
+
+    // 파일 선택 시
+    input.addEventListener('change', () => {
+      const file = input.files[0];
+      if (!file) return;
+
+      // 이미지 파일만 허용
+      if (!file.type.startsWith('image/')) {
+        alert('이미지 파일만 업로드 가능합니다.');
+        input.value = '';
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = e => {
+        preview.innerHTML = `<img src="${e.target.result}" class="img" alt="">`;
+        banner.classList.add('attached');
+        if (labelTxt) labelTxt.style.display = 'none';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // 삭제 버튼
+    deleteBtn.addEventListener('click', () => {
+      input.value = '';
+      preview.innerHTML = '';
+      banner.classList.remove('attached');
+      if (labelTxt) labelTxt.style.display = '';
+    });
+  });
+});
+
+
