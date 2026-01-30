@@ -957,7 +957,7 @@ $(document).on("change", '.pr_sec.view .vc_sec_option input[name="prd_opt"]', fu
 // mobile detail info popup
 $(document).ready(function () {
 	$(".pr_sec.view .pr_result .mob_side_box .opt_btn").on("click", function () {
-		$("body").addClass('filter_open');
+		$("body").addClass('pr_side_open');
 		$(".pr_sec.view .pr_result").addClass('show');
 	});
 });

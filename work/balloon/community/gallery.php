@@ -207,7 +207,7 @@
 									<button type="button" class="page page_btn next"></button>
 								</div>	
 								<div class="btnbox">
-									<button type="button" class="button typeA auto">작성하기</button>
+									<a href="<?php echo $path ?>community/board_write.php" class="button typeA auto">작성하기</a>
 								</div>
 							</div>
 						</div>	

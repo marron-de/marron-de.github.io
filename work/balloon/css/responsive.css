@@ -178,9 +178,13 @@
 	body.menu {overflow: hidden;}
 	body.pop_open {overflow: hidden;}
 	body.filter_open {overflow: hidden;}
+	body.pr_side_open {overflow: hidden;}
+	body.re_side_open {overflow: hidden;}
 	body::before { content: "";  position: fixed;  left: 0;  top: 0;  width: 100%;  height: 100%; background-color: rgba(0,0,0,0.4); z-index: 99;  transition: var(--transition); opacity: 0; pointer-events: none;cursor: pointer;}
 	body.pop_open::before { opacity: 1;  pointer-events: auto;} 
 	body.filter_open::before { opacity: 1;  pointer-events: auto;} 
+	body.pr_side_open::before { opacity: 1;  pointer-events: auto;} 
+	body.re_side_open::before { opacity: 1;  pointer-events: auto;} 
 	body.menu::before { display: none;} 
 
 	.pc {display: none !important;}
@@ -484,7 +488,7 @@
 	.breadcrumb .bar { height: 1rem;}
 	.breadcrumb .catebox .cate_btn { gap: 0.5rem;}
 	.breadcrumb .catebox .cate_btn .arrow {  width: 1.4rem;}
-	.breadcrumb .catebox .cate_popup { position: fixed; left: 0;  top: unset;  bottom: 0; border-radius: 2rem 2rem 0 0; padding: 4.4rem 2rem 2rem; min-width: unset; width: 100%; max-height: 88vh; transform: translateY(2.5rem);}
+	.breadcrumb .catebox .cate_popup { position: fixed; left: 0;  top: unset;  bottom: 0; border-radius: 2rem 2rem 0 0; padding: 4.4rem 2rem 2rem; min-width: unset; width: 100%; max-height: 88vh; transform: translateY(2.5rem); z-index: 120;}
 	.breadcrumb .catebox.show .cate_popup {transform: translateY(0);}
 	.breadcrumb .catebox .cate_popup .linkbox {padding-bottom: 1.6rem;}
 	.breadcrumb .catebox .cate_popup .linkbox::before {content: "메뉴 선택"; display: block; font:var(--18_headline_sb); margin-bottom: 1.6rem; color: var(--basic-black);}
@@ -1010,6 +1014,7 @@
 	.pr_sec.view .vc_sec_review .vc_box1 .rv_list .contbox .rv_card .card_cont .content .txtbox .review_more .icon { width: 1.4rem;}
 	.pr_sec.view .vc_sec_review .vc_box1 .rv_list .contbox .rv_card .card_cont .content .imgbox {gap: 1rem;}
 	.pr_sec.view .vc_sec_review .vc_box1 .rv_list .contbox .rv_card .card_cont .content .imgbox .img { width: calc((100% - 1rem*4)/5); border-radius: 0.4rem;}
+	.pr_sec.view .vc_sec_review .vc_box1 .pagination {justify-content: center;}
 	.pr_sec.view .vc_sec_review .vc_box2 .prd_swiper .item { width: calc(20rem + 8px); padding-right: 8px;}
 	.pr_sec.view .pr_result { position: fixed;  top: auto;  left: 0;  bottom: 0;  width: 100%; border: none; border-radius: 2rem 2rem 0 0; padding: 2rem; background: var(--basic-white); box-shadow: var(--box-shadow); z-index: 70;}
 	.pr_sec.view .pr_result.show {z-index: 100;}
@@ -1144,12 +1149,10 @@
 	.re_sec .side_area .mob_side_box .btn_box {display: flex; align-items: center; justify-content: space-between; gap: 1.2rem;}
 	.re_sec .side_area .mob_side_box .btn_box .total{ font: var(--18_headline_sb); color: var(--basic-black);}
 	.re_sec .side_area .mob_side_box .btn_box .reserve_btn {height: 4.4rem;font-weight: 500;}
-	.re_sec .side_area { position: fixed;  top: auto;  left: 0;  bottom: 0;  width: 100%; border: none; border-radius: 2rem 2rem 0 0; padding: 2rem; background: var(--basic-white); box-shadow: var(--box-shadow); z-index: 70;}
+	.re_sec .side_area { position: fixed;  top: auto;  left: 0;  bottom: 0;  width: 100%; border: none; border-radius: 2rem 2rem 0 0; padding: 2rem; background: var(--basic-white); box-shadow: var(--box-shadow); z-index: 100;}
 	.re_sec .side_area .side_box { position: fixed; left: 0;  bottom: 0; border-radius: 2rem 2rem 0 0; padding: 4.4rem 2rem 2rem;  min-width: unset;  width: 100%; max-height: 88vh;transform: translateY(2.5rem); box-shadow: var(--box-shadow); background: var(--basic-white); transition: var(--transition); opacity: 0;  pointer-events: none; gap: 1.6rem;}
 	.re_sec .side_area.show .side_box {opacity: 1; pointer-events: unset; transform: translateY(0);}
 	.re_sec .side_area .side_box::before { content: ""; position: absolute; left: 50%; top: 1.6rem; width: 5rem; height: 0.4rem; border-radius: 10rem; background: var(--basic-border); transform: translateX(-50%);}
-	body.re_side_open {overflow: hidden;}
-	body.re_side_open .header::after { opacity: 1;  pointer-events: auto;} 
 	.re_sec .side_area .side_box .titbox {display: none;}
 	.re_sec .side_area .side_box .info_box {  gap: 0.8rem;}
 	.re_sec .side_area .side_box .info_box .item .tit { width: 10rem;}
@@ -1334,6 +1337,7 @@
 	.my_sec .my_reserve .contbox .item .btnbox { flex-wrap: wrap; gap: 0.6rem 0.8rem;}
 	.my_sec .my_reserve .contbox .item .btnbox .button { flex: unset; width: calc((100% - 0.8rem) / 2);height: 3.2rem; font: var(--14_label_normal_m); border-radius: 0.6rem;}
 	.my_sec .my_reserve .contbox .no_item .no_post {padding: 8rem 0;}
+	.my_sec .pagination {justify-content: center;}
 
 
 }
