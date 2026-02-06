@@ -590,6 +590,16 @@
 								</div>
 							</a>
 						</div>
+						<!-- 260206 추가작업 -->
+						<div class="pagination">
+							<button type="button" class="page page_btn prev"></button>
+							<a href="" class="page page_link active">1</a>
+							<a href="" class="page page_link">2</a>
+							<span class="page page_ellipsis">...</span>
+							<a href="" class="page page_link">9</a>
+							<a href="" class="page page_link">10</a>
+							<button type="button" class="page page_btn next"></button>
+						</div>
 					</div>
 				</div>
 			</section>
