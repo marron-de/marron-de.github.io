@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:212px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -79,33 +80,45 @@ if (!defined('_EYOOM_')) exit;
                                     <ul class="cost_list">
                                         <li>
                                             <div class="tit">
-                                                <span>예술대 포트폴리오 수강비</span>
-                                                <span class="cost">850,000원 (월)</span>
+                                                <span>
+													예술대 포트폴리오 수강비
+													<small>1회</small>
+												</span>
+                                                <span class="cost">회당 106,250원</span>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>
-                                                <ul>
-                                                    <li>
-                                                        <p>‧ 수업기간</p>
-                                                        <p>1개월 (총8회)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 강의시간</p>
-                                                        <p>회차당 1시간+@ (카톡개별응대)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 선생님</p>
-                                                        <p>1명</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 수업정원</p>
-                                                        <p>1:1관리</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 교재비</p>
-                                                        <p>없음</p>
-                                                    </li>
-                                                </ul>
+												<div class="de_box">
+													<ul>
+														<li>
+															<p>‧ 수업기간</p>
+															<p>1개월 (총8회)</p>
+														</li>
+														<li>
+															<p>‧ 강의시간</p>
+															<p>회차당 1시간+@ (카톡개별응대)</p>
+														</li>
+														<li>
+															<p>‧ 선생님</p>
+															<p>1명</p>
+														</li>
+														<li>
+															<p>‧ 수업정원</p>
+															<p>1:1관리</p>
+														</li>
+														<li>
+															<p>‧ 교재비</p>
+															<p>없음</p>
+														</li>
+													</ul>
+													<div class="side">
+														<p class="price">850,000원</p>
+														<div class="price ver2">
+															<small>1/회</small>
+															<span>106,250원</span>
+														</div>
+													</div>
+												</div>
                                             </div>
                                         </li>
                                     </ul>

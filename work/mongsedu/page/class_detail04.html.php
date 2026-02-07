@@ -83,9 +83,9 @@ if (!defined('_EYOOM_')) exit;
                         <ul class="panel">
                             <li id="content-1" style="display:block;">
                                 <div class="frame-25 class_sec1">
-                                    <div class="frame-26">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">국제학교 입학 테스트 수업 소개</span>
+                                            <span class="frame-title">국제학교 입학 테스트 수업 소개</span>
                                             <!-- <div class="tags-28">
                                                 <span class="best-29">몽선생 CLASS</span>
                                             </div> -->
@@ -97,9 +97,9 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="line-2a"></div>
                                 <div class="frame-25 class_sec2">
-                                    <div class="frame-26">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">몽선생 국제학교 입학 테스트 수업이 특별한 4가지</span>
+                                            <span class="frame-title">몽선생 국제학교 입학 테스트 수업이 특별한 4가지</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
@@ -151,9 +151,9 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="line-2a"></div>
                                 <div class="frame-25 class_sec3">
-                                    <div class="frame-26">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">국제학교 입학 테스트 대비반 수업 커리큘럼</span>
+                                            <span class="frame-title">국제학교 입학 테스트 대비반 수업 커리큘럼</span>
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">

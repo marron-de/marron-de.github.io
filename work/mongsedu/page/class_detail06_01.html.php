@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:160px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -79,33 +80,45 @@ if (!defined('_EYOOM_')) exit;
                                     <ul class="cost_list">
                                         <li>
                                             <div class="tit">
-                                                <span>1:1 영어기초반 수강비</span>
-                                                <span class="cost">800,000원 (월) - 1개월</span>
+                                                <span>
+													1:1 영어기초반 수강비
+													<small>1개월</small>
+												</span>
+                                                <span class="cost">회당 800,000원</span>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>
-                                                <ul>
-                                                    <li>
-                                                        <p>‧ 수업기간</p>
-                                                        <p>1개월</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 강의시간</p>
-                                                        <p>회차당 1시간</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 선생님</p>
-                                                        <p>1명 (원어민)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 수업정원</p>
-                                                        <p>1:1 수업</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 교재비</p>
-                                                        <p>별도 (25,000원)</p>
-                                                    </li>
-                                                </ul>
+												<div class="de_box">
+													<ul>
+														<li>
+															<p>‧ 수업기간</p>
+															<p>1개월</p>
+														</li>
+														<li>
+															<p>‧ 강의시간</p>
+															<p>회차당 1시간</p>
+														</li>
+														<li>
+															<p>‧ 선생님</p>
+															<p>1명 (원어민)</p>
+														</li>
+														<li>
+															<p>‧ 수업정원</p>
+															<p>1:1 수업</p>
+														</li>
+														<li>
+															<p>‧ 교재비</p>
+															<p>별도 (25,000원)</p>
+														</li>
+													</ul>
+													<div class="side">
+														<p class="price">800,000원</p>
+														<div class="price ver2">
+															<small>1/회</small>
+															<span>800,000원</span>
+														</div>
+													</div>
+												</div>
                                             </div>
                                         </li>
                                     </ul>

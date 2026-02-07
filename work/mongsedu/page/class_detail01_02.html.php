@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:120px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -83,30 +83,28 @@ if (!defined('_EYOOM_')) exit;
                                     <ul class="mentor_list">
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_cls_amy.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t18.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <span>Amy <small>원어민 선생님</small></span>
-                                                <p>· Douglas County High School(US)</p> 
-                                                <p>· Middlesex University London (UK)</p>
-                                                <p>· 글로벌교육기업 아카데믹 디렉터</p>
+                                                <p class="name">Amy <small>원어민 선생님</small></p>
+                                                <p class="desc">Middlesex University London</p> 
+                                                <p class="tag">글로벌교육기업 아카데미 디렉터</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_cls_rua.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t17.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <span>Rua <small>원어민 선생님</small></span>
-                                                <p>· 듀오링고 만점에 가까운 실력자</p> 
-                                                <p>· 캐나다 교포, 거주 15년 +</p>
-                                                <p>· 라이팅과 스피킹 집중 수업</p>
+                                                <p class="name">Rua <small>원어민 선생님</small></p>
+                                                <p class="desc">캐나다 교포, 거주 15년</p> 
+                                                <p class="tag">라이팅 & 스피킹 집중 수업</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <div class="guide">
                                         <ul>
-                                            <li>⚠️ 선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
+                                            <li>*선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
                                         </ul>
                                     </div>
                                     <!-- <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/detail_class01_mentor.png" alt=""> -->
@@ -125,8 +123,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">듀오링고 수업 소개</span >
-                                    <span class="day-paid-153"></span>
+                                    <span class="day-paid">듀오링고 수업 소개</span>
+                                    <span class="day-paid-153">2개월</span>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>

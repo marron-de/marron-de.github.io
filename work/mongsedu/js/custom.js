@@ -96,6 +96,7 @@ $(document).ready(function () {
 	});
 });
 
+
 // tab swiper
 $(document).ready(function () {
 	const index = parseInt($('.swiper.tab_swiper').attr('data-index'), 10) || 0;
@@ -121,6 +122,7 @@ $(document).mouseup(function (e) {
 		$(".cm_modal").removeClass("show")
 	}
 });
+
 
 // popup
 $(document).ready(function () {
@@ -239,7 +241,6 @@ $(document).mouseup(function (e) {
 	}
 });
 
-
 // header nav
 $(function () {
   const search = window.location.search;
@@ -247,12 +248,15 @@ $(function () {
   if (search.indexOf('pid=class_') !== -1) {
     $('.header .h_inner .h_nav:not(.h_side) > li').eq(3).addClass('active');
   }
+
+  if (search.indexOf('pid=procedure_') !== -1) {
+    $('.header .h_inner .h_nav:not(.h_side) > li').eq(2).addClass('active');
+  }
 });
 
 
 
-
-// 메인
+/* 메인 */
 function main_sch_popup() {
 	$(".main-contents .mv_wrap .text_area .sch_popup").addClass("show");
 }
@@ -290,7 +294,66 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 });
 
 
-// 상세	
+
+/* 상세	*/
 $(".page-detail .tooltip .close_btn").click(function () {
 	$(".page-detail .tooltip").addClass("hide")
+})
+
+// 탭 버튼 활성화
+$(function () {
+	const tabs = $('.tab.sticky .tab_tit li a');
+	if (!tabs.length) return;
+
+	const triggerOffset = 100;
+
+	$(window).on('scroll', function () {
+		const scrollTop = $(window).scrollTop();
+		const triggerLine = scrollTop + triggerOffset;
+
+		let currentId = null;
+
+		tabs.each(function () {
+			const target = $(this).attr('href');
+			const targetEl = $(target);
+			if (!targetEl.length) return;
+
+			if (triggerLine >= targetEl.offset().top) {
+				currentId = target;
+			}
+		});
+
+		if (!currentId) {
+			currentId = tabs.eq(0).attr('href');
+		}
+
+		tabs.removeClass('show');
+		tabs.filter('[href="' + currentId + '"]').addClass('show');
+	});
+});
+
+
+// 학교 리스트
+$(".school_moreview").click(function () {
+	$(this).toggleClass('on');
+	$(this).parent('div').siblings('.school_listbox').toggleClass('on');
+})
+$(".school_moreview2").click(function () {
+	$(this).closest('.school_listbox').addClass('on');
+})
+
+
+// 질문 스와이퍼
+const question_swiper = new Swiper('.question_swiper', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 'auto',
+	speed: 500,
+	spaceBetween: 10,
+	grabCursor: true,	
+	breakpoints: {
+		1080: {
+			spaceBetween: 8,
+		},
+	},
 })

@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:136px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -80,94 +81,121 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>해외대학 대비반 패키지 수강료 <small>2개월</small></span>
-                                                <span class="cost">700,000원 (월)</span>
+                                                <span class="cost">회당 29,167원</span>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>
-                                                <ul>
-                                                    <li>
-                                                        <p>‧ 수업기간</p>
-                                                        <p>2개월 (총24회)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 강의시간</p>
-                                                        <p>회차당 1시간 30분 (전공이론), 1시간(에세이토론)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 선생님</p>
-                                                        <p>4명</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 수업정원</p>
-                                                        <p>최대 6인</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 교재비</p>
-                                                        <p>25,000원 (수강료 불포함)</p>
-                                                    </li>
-                                                </ul>
+												<div class="de_box">
+													<ul>
+														<li>
+															<p>‧ 수업기간</p>
+															<p>2개월 (총24회)</p>
+														</li>
+														<li>
+															<p>‧ 강의시간</p>
+															<p>회차당 1시간 30분 (전공이론), 1시간(에세이토론)</p>
+														</li>
+														<li>
+															<p>‧ 선생님</p>
+															<p>4명</p>
+														</li>
+														<li>
+															<p>‧ 수업정원</p>
+															<p>최대 6인</p>
+														</li>
+														<li>
+															<p>‧ 교재비</p>
+															<p>25,000원 (수강료 불포함)</p>
+														</li>
+													</ul>
+													<div class="side">
+														<p class="price">700,000원</p>
+														<div class="price ver2">
+															<small>1/회</small>
+															<span>29,167원</span>
+														</div>
+													</div>
+												</div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="tit">
                                                 <span>전공이론 수업(단독 수강시) 수강료 <small>2개월</small></span>
-                                                <span class="cost">500,000원</span>
+                                                <span class="cost">회당 41,667원</span>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>
-                                                <ul>
-                                                    <li>
-                                                        <p>‧ 수업기간</p>
-                                                        <p>2개월 (총12회)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 강의시간</p>
-                                                        <p>회차당 1시간 30분</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 선생님</p>
-                                                        <p>2명</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 수업정원</p>
-                                                        <p>최대 6인</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 교재비</p>
-                                                        <p>없음</p>
-                                                    </li>
-                                                </ul>
+												<div class="de_box">
+													<ul>
+														<li>
+															<p>‧ 수업기간</p>
+															<p>2개월 (총12회)</p>
+														</li>
+														<li>
+															<p>‧ 강의시간</p>
+															<p>회차당 1시간 30분</p>
+														</li>
+														<li>
+															<p>‧ 선생님</p>
+															<p>2명</p>
+														</li>
+														<li>
+															<p>‧ 수업정원</p>
+															<p>최대 6인</p>
+														</li>
+														<li>
+															<p>‧ 교재비</p>
+															<p>없음</p>
+														</li>
+													</ul>
+													<div class="side">
+														<p class="price">500,000원</p>
+														<div class="price ver2">
+															<small>1/회</small>
+															<span>41,667원</span>
+														</div>
+													</div>
+												</div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="tit">
                                                 <span>에세이토론 수업(단독 수강시) 수강료 <small>2개월</small></span>
-                                                <span class="cost">400,000원</span>
+                                                <span class="cost">개월당 33,334원</span>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>
-                                                <ul>
-                                                    <li>
-                                                        <p>‧ 수업기간</p>
-                                                        <p>2개월 (총12회)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 강의시간</p>
-                                                        <p>회차당 1시간</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 선생님</p>
-                                                        <p>2명</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 수업정원</p>
-                                                        <p>최대 6인</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 교재비</p>
-                                                        <p>25,000</p>
-                                                    </li>
-                                                </ul>
+												<div class="de_box">
+													<ul>
+														<li>
+															<p>‧ 수업기간</p>
+															<p>2개월 (총12회)</p>
+														</li>
+														<li>
+															<p>‧ 강의시간</p>
+															<p>회차당 1시간</p>
+														</li>
+														<li>
+															<p>‧ 선생님</p>
+															<p>2명</p>
+														</li>
+														<li>
+															<p>‧ 수업정원</p>
+															<p>최대 6인</p>
+														</li>
+														<li>
+															<p>‧ 교재비</p>
+															<p>25,000</p>
+														</li>
+													</ul>
+													<div class="side">
+														<p class="price">400,000원</p>
+														<div class="price ver2">
+															<small>1/회</small>
+															<span>33,334원</span>
+														</div>
+													</div>
+												</div>
                                             </div>
                                         </li>
                                     </ul>

@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:212px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -79,24 +80,22 @@ if (!defined('_EYOOM_')) exit;
                                         <span>검증된 전문 선생님을 만나보세요!</span>
                                     </div>
                                 </div>
-                                <div class="line-2a"></div>
                                 <div class="class_curri">
                                     <ul class="mentor_list">
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_cls_jsh.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t12.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <span>조수호 <small>선생님</small></span>
-                                                <p>· 싱가포르 예술대 학사</p> 
-                                                <p>· 미대 입시 과외 경력4년</p>
-                                                <p>· 해외 기업 (그래픽) 실무경력</p>
+                                                <p class="name">조수호 <small>멘토</small></p>
+                                                <p class="desc">라셀 예술대 그래픽 전공</p> 
+                                                <p class="tag">포트폴리오 전문</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <div class="guide">
                                         <ul>
-                                            <li>⚠️ 선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
+                                            <li>*선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
                                         </ul>
                                     </div>
                                 </div>

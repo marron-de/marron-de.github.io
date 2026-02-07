@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:150px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -74,10 +75,10 @@ if (!defined('_EYOOM_')) exit;
                     <div class="classDetail_list tabs_cont">
                         <ul class="panel">
                             <li id="content-1" style="display:block;">
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25  class_sec1">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">IELTS 소규모 과외 수업 소개</span>
+                                            <span class="frame-title">IELTS 소규모 과외 수업 소개</span>
                                             <!-- <div class="tags-28">
                                                 <span class="best-29">몽선생 CLASS</span>
                                             </div> -->
@@ -88,18 +89,17 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25  class_sec2">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">몽선생 IELTS 소규모 과외 수업이 특별한 4가지</span>
+                                            <span class="frame-title">몽선생 IELTS 소규모 과외 수업이 특별한 4가지</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/round_Raphael.png" alt="">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit22.png" alt="">
                                                 <span>&nbsp;</span>
                                                 <p>
                                                     꼼꼼한 학습관리!<br/>
-                                                    검증된 몽선생이 제작한<br/>
                                                     검증된 몽선생이 제작한<br/>
                                                     아이엘츠 6.0 목표, 과외반
                                                 </p>
@@ -138,10 +138,10 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25  class_sec3">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">IELTS 소규모 과외 커리큘럼</span>
+                                            <span class="frame-title">IELTS 소규모 과외 커리큘럼</span>
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
@@ -307,9 +307,13 @@ if (!defined('_EYOOM_')) exit;
                                         <p>교재 자세히보기</p>
                                     </div> -->
                                     <div class="text_area">
-                                        <span>IELTS 소규모 그룹 수업 학습 목표</span>
-                                        <p>1. 전 영역에서 시험 전략과 실전 능력을 균형 있게 강화</p>
-                                        <p>2. 소수 정예 수업을 통해 맞춤형 피드백과 모의시험으로 성적 향상과 자신감 동시 향상</p>
+										<p class="title">
+											<span class="color">IELTS 소규모 그룹 수업</span> 학습 목표
+										</p>
+										<div class="descbox">
+											<p>1. 전 영역에서 시험 전략과 실전 능력을 균형 있게 강화</p>
+											<p>2. 소수 정예 수업을 통해 맞춤형 피드백과 모의시험으로 성적 향상과 자신감 동시 향상</p>
+										</div>
                                     </div>
                                 </div>
                             </li>
@@ -326,7 +330,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">IELTS 소규모 과외 수업</span >
+                                    <span class="day-paid">IELTS 소규모 과외 수업</span>
+									<span class="day-paid-153">(3개월)</span>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -336,7 +341,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">IELTS 소규모 과외 수업 <small>(3개월)</small> - 1000,000 원 <small>(월)</small></span>
+                                        <span class="span-text-15a">1,000,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">
@@ -354,8 +359,7 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </div>
     <div class="frame">

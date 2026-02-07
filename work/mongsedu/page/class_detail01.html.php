@@ -76,9 +76,9 @@ if (!defined('_EYOOM_')) exit;
                         <ul class="panel">
                             <li id="content-1" style="display:block;">
                                 <div class="frame-25 class_sec1">
-                                    <div class="frame-26">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">듀오링고 수업 소개</span>
+                                            <span class="frame-title">듀오링고 수업 소개</span>
                                             <div class="tags-28">
                                                 <span class="best-29">몽선생 CLASS</span>
                                             </div>
@@ -91,9 +91,9 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="line-2a"></div>
                                 <div class="frame-25 class_sec2">
-                                    <div class="frame-26">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">몽선생 듀오링고의 특별한 4가지 이유</span>
+                                            <span class="frame-title">몽선생 듀오링고의 특별한 4가지 이유</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
@@ -149,9 +149,9 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="line-2a"></div>
                                 <div class="frame-25 class_sec3">
-                                    <div class="frame-26">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">듀오링고 DET 수업 커리큘럼</span>
+                                            <span class="frame-title">듀오링고 DET 수업 커리큘럼</span>
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
@@ -318,7 +318,7 @@ if (!defined('_EYOOM_')) exit;
                                     </div> -->
                                     <div class="text_area">
 										<p class="title">
-											듀오링고 DET 수업 학습 목표
+											<span class="color">듀오링고 DET</span> 수업 학습 목표
 										</p>
 										<div class="descbox">
 											<p>
@@ -344,8 +344,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">듀오링고 수업 소개</span >
-                                    <span class="day-paid-153"></span>
+                                    <span class="day-paid">듀오링고 수업 소개</span>
+                                    <span class="day-paid-153">2개월</span>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>

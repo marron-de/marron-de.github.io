@@ -181,8 +181,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">듀오링고 수업 소개</span >
-                                    <span class="day-paid-153"></span>
+                                    <span class="day-paid">듀오링고 수업 소개</span>
+                                    <span class="day-paid-153">2개월</span>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>

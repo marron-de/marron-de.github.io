@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:120px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -126,8 +126,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">듀오링고 수업 소개</span >
-                                    <span class="day-paid-153"></span>
+                                    <span class="day-paid">듀오링고 수업 소개</span>
+                                    <span class="day-paid-153">2개월</span>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>

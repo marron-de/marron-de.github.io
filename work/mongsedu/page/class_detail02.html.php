@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:136px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -74,10 +75,10 @@ if (!defined('_EYOOM_')) exit;
                     <div class="classDetail_list tabs_cont">
                         <ul class="panel">
                             <li id="content-1" style="display:block;">
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec1">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">해외대학 대비반 수업 소개</span>
+                                            <span class="frame-title">해외대학 대비반 수업 소개</span>
                                         </div>
                                         <span class="field-trip-service">
                                             해외 대학에 입학하는 학생들이 전공 관련 기본 이론을 미리 학습하고, 에세이 작성 및 토론 능력을 강화하여 실제 대학 입학 후 수업 환경에 빠르게 적응할 수 있도록 돕는 것을 목표로 합니다. 이를 통해 학생들은 유학을 미리 준비하고 전공 수업에서 자신 있게 참여할 수 있는 기반을 마련할 수 있습니다.
@@ -85,14 +86,14 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec2">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">몽선생 해외대학 대비반 수업이 특별한 4가지</span>
+                                            <span class="frame-title">몽선생 해외대학 대비반 수업이 특별한 4가지</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_round_hsj.png" alt="">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit09.png" alt="">
                                                 <span>실전 수업대비</span>
                                                 <p>
                                                     검증된 몽선생이 준비한<br/>
@@ -103,29 +104,29 @@ if (!defined('_EYOOM_')) exit;
                                                 <li>
                                                     <span>01</span>
                                                     <p>
-                                                        <b>1학년에 나오는 전공 이론 과목 핵심 강의</b><br/>
-                                                        미리 알고 대비하면 학점관리가 더욱 쉬워져요
+                                                        <b>1학년에 나오는 전공 <br class="pc">이론 과목 핵심 강의</b><br/>
+                                                        미리 알고 대비하면 <br class="pc">학점관리가 더욱 쉬워져요
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <span>02</span>
                                                     <p>
-                                                        <b>해외대학의 필수요소! 에세이 능력 키우기</b><br/>
-                                                        비즈니스 에세이, 이메일 등 필수 라이팅 실력 강화
+                                                        <b>해외대학의 필수요소! <br class="pc">에세이 능력 키우기</b><br/>
+                                                        비즈니스 에세이, 이메일 등 <br class="pc">필수 라이팅 실력 강화
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <span>03</span>
                                                     <p>
-                                                        <b>상황별 영어토론/롤플레이로 스피킹 강화</b><br/>
-                                                        실제 대학 생활 적응과 커뮤니케이션 능력 향상하기
+                                                        <b>상황별 영어토론/롤플레이로 <br class="pc">스피킹 강화</b><br/>
+                                                        실제 대학 생활 적응과 <br class="pc">커뮤니케이션 능력 향상하기
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <span>04</span>
                                                     <p>
-                                                        <b>전공 필수 영단어! 어휘 집중 훈련</b><br/>
-                                                        평소에 쓰이지 않는 어려운 전공단어를 미리 학습하기
+                                                        <b>전공 필수 영단어! <br class="pc">어휘 집중 훈련</b><br/>
+                                                        평소에 쓰이지 않는 어려운 <br class="pc">전공단어를 미리 학습하기
                                                     </p>
                                                 </li>
                                             </ul>
@@ -133,10 +134,10 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec3">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">해외대학 대비반 패키지 수업 커리큘럼</span>
+                                            <span class="frame-title">해외대학 대비반 패키지 수업 커리큘럼</span>
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
@@ -337,14 +338,17 @@ if (!defined('_EYOOM_')) exit;
                                         <p>교재 자세히보기</p>
                                     </div> -->
                                     <div class="text_area">
-                                        <span>해외대학 대비반 수업 학습 목표</span>
-                                        <p>
-                                            해외대학 1학년에서 나오는 전공 이론 5과목을 수강하고, 전공 예습 및 과제 훈련 <br/>
-                                            해외대학 수업에 필수적인 영어 토론, 에세이, 발표 능력을 체계적으로 훈련
-                                        </p>
+										<div class="title">
+											<span class="color">해외대학 대비반</span> 수업 학습 목표
+										</div>
+                                        <div class="descbox">
+                                        	<p>
+												해외대학 1학년에서 나오는 전공 이론 5과목을 수강하고, 전공 예습 및 과제 훈련 <br/>
+												해외대학 수업에 필수적인 영어 토론, 에세이, 발표 능력을 체계적으로 훈련
+											</p>
+										</div>
                                     </div>
-                                </div>
-                                
+                                </div>                                
                             </li>
                         </ul>
                     </div>
@@ -360,6 +364,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-151">
                                 <div class="frame-152">
                                     <span class="day-paid">해외대학 대비반 수업</span >
+									<div class="day-paid-153">(2개월)</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -369,9 +374,9 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">해외대학 대비반 패키지 수강료 <small>(2개월)</small> - 700,000 원 <small>(월)</small></span>
-                                        <span class="span-text-15a" style="margin-top:.25em;">전공이론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 500,000 원 <small>(월)</small></span>
-                                        <span class="span-text-15a" style="margin-top:.25em;">에세이토론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 400,000 원 <small>(월)</small></span>
+                                        <span class="span-text-15a">해외대학 대비반 패키지 700,000원</span>
+                                        <span class="span-text-15a">전공이론 수업(단독 수강시) - 500,000원</span>
+                                        <span class="span-text-15a">에세이토론 수업(단독 수강시) - 400,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

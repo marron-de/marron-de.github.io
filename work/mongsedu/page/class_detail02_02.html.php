@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:136px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -79,46 +80,42 @@ if (!defined('_EYOOM_')) exit;
                                         <span>검증된 전문 선생님을 만나보세요!</span>
                                     </div>
                                 </div>
-                                <div class="line-2a"></div>
                                 <div class="class_curri">
                                     <ul class="mentor_list">
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_cls_hsj.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t9.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <span>홍수진 <small>선생님</small></span>
-                                                <p>· 서강 대학교 학사 및 SHAPE MBA 졸업</p> 
-                                                <p>· 한국외대 TESOL 자격 수료</p>
-                                                <p>· 비즈니스 학부 강습 경력 다수</p>
+                                                <p class="name">홍수진 <small>실장</small></p>
+                                                <p class="desc">교육업 경력 10년</p> 
+                                                <p class="tag">수업/CLASS 전문</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_cls_ksy.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t8.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <span>김소연 <small>선생님</small></span>
-                                                <p>· 영국 Essex 대학교 졸업</p>
-                                                <p>· 해외대학 교직원 출신 경력 5년</p>
-                                                <p>· 상경계열/ 회계학 강습 경력 다수</p>
+                                                <p class="name">김소연 <small>실장</small></p>
+                                                <p class="desc">칭화대 국제관계 석사</p> 
+                                                <p class="tag">미국/아시아 전문</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_cls_dennis.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t11.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <span>데니스 <small>선생님</small></span>
-                                                <p>· 현 국내 대기업 AI 개발자</p>
-                                                <p>· 연세대 컴퓨터과학 학사 졸업</p>
-                                                <p>· 프로그래밍, IT학부 강습 경력 다수</p>
+                                                <p class="name">Dennis <small> 멘토</small></p>
+                                                <p class="desc">연세대학교 컴퓨터과학 전공</p> 
+                                                <p class="tag">컴퓨터공학 대비반 전담</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <div class="guide">
                                         <ul>
-                                            <li>⚠️ 선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
+                                            <li>*선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
                                         </ul>
                                     </div>
                                 </div>

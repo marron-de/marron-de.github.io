@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:212px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -74,10 +75,10 @@ if (!defined('_EYOOM_')) exit;
                     <div class="classDetail_list tabs_cont">
                         <ul class="panel">
                             <li id="content-1" style="display:block;">
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec1">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">예술대 포트폴리오 수업소개</span>
+                                            <span class="frame-title">예술대 포트폴리오 수업소개</span>
                                         </div>
                                         <span class="field-trip-service">
                                             실제 예술대 졸업한 선생님과 함께 각 전공에서 요구하는 스타일과 평가 기준에 맞춰 아이디어 기획, 작업 과정, 최종 작품 완성까지 전 과정을 단계별로 함께 진행하며, 꾸준한 피드백과 보완을 통해 합격 기준에 맞는 포트폴리오를 완성하도록 돕습니다.
@@ -85,14 +86,14 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec2">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">몽선생 예술대 클래스의 차별점 4가지</span>
+                                            <span class="frame-title">몽선생 예술대 클래스의 차별점 4가지</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/round_jsh.png" alt="">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit12.png" alt="">
                                                 <span>국내 유일한</span>
                                                 <p>
                                                     라셀 한국대표사무소!<br/>
@@ -134,10 +135,10 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec3">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">예술대 수업 커리큘럼</span>
+                                            <span class="frame-title">예술대 수업 커리큘럼</span>
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
@@ -177,12 +178,6 @@ if (!defined('_EYOOM_')) exit;
                                                         </div>
                                                     </div>
                                                 </li>
-                                            </ul>
-                                        </div>
-                                        <div class="guide">
-                                            <ul>
-                                                <!-- <li>* <span class="alert">몽선생 유학 수속의 경우 분납 결제가 가능합니다.</span> 그 외 수강생의 경우 일시납만 가능합니다. 환불 규정은 교습비 반환 기준을 따릅니다.</li> -->
-                                                <!-- <li>* 전공이론 수업과 에세이토론반 개별로도 등록이 가능합니다.</li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -302,10 +297,15 @@ if (!defined('_EYOOM_')) exit;
                                         <p>교재 자세히보기</p>
                                     </div> -->
                                     <div class="text_area">
-                                        <span>[예술대 수업 TIP] 이런점이 정말 좋아요</span>
-                                        <p>1. 포트폴리오 주요 구성요소(아이디어·발전과정·최종작)를 예시 제공</p>
-                                        <p>2. 제시된 ‘작품 주제’를 선택해 스케치 → 구도 → 컬러까지 지도관리</p>
-                                        <p>3. 강사와 함께 작업 과정을 점검받고, 부족한 부분을 수정하며 완성도 높이기</p>
+										<div class="title">
+											<span class="color">[예술대 수업 TIP] </span>
+											이런점이 정말 좋아요
+										</div>
+                                        <div class="descbox">
+											<p>1. 포트폴리오 주요 구성요소(아이디어·발전과정·최종작)를 예시 제공</p>
+											<p>2. 제시된 ‘작품 주제’를 선택해 스케치 → 구도 → 컬러까지 지도관리</p>
+											<p>3. 강사와 함께 작업 과정을 점검받고, 부족한 부분을 수정하며 완성도 높이기</p>
+										</div>
                                     </div>
                                 </div>
                             </li>

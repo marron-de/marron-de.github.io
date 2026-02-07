@@ -5,29 +5,9 @@
 if (!defined('_EYOOM_')) exit;
 ?>
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
-<style>
-    .mal-lei-si-a-dae-hag {
-        background: url("../theme/eb4_basic/image/sub/thumb_prcd22.png") no-repeat center;
-        background-size: cover;
-    }
-    .day-paid {
-        color:#979797;
-    }
-   .day-paid-153 {
-        color:#212121;
-    }
-    .line-156 {
-        position: relative;
-        width: 74px;
-        height: 3px;
-        margin: -2px 0 0 102px;
-        background: url("https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-11-03/JHDYgm0oW4.png") no-repeat center;
-        background-size: cover;
-        z-index: 514;
-    }
-</style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container">
+
+<div class="sub-page page-procedure detail page-detail">
+    <div class="main-container" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -47,6 +27,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -75,120 +56,198 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div>
                 </div>
-                <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1" style="display:none;">
-                        <div class="tab">
+                <div class="section-c">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="#" class="show" id="tab-1">컨설팅 기본 정보</a></li>
-                                <li><a href="#" id="tab-2">컨설팅 가능 대학교</a></li>
-                                <li><a href="#" id="tab-3">컨설팅 비용</a></li>
-                                <li><a href="#" id="tab-4">서비스 내용</a></li>
+                                <li><a href="#sec01" class="show">서비스 소개</a></li>
+                                <li><a href="#sec02">학교 리스트</a></li>
+                                <li><a href="#sec03">서비스 포함 내용</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="classDetail_list tabs_cont">
+                    <div class="classDetail_list">
                         <ul class="panel">
                             <li id="content-1">
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">컨설팅 기본 정보</span>
-                                    <div class="frame-2c info">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f1"></div>
-                                                <span class="school-visit-counseling">종합예술대학 한국 공식사무소 관리 (국내 단 한곳)</span >
-                                            </div>
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f2"></div>
-                                                <span class="school-visit-counseling">수수료 0원! 추가 비용없이 수속접수 대행</span >
-                                            </div>
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f3"></div>
-                                                <span class="school-visit-counseling">원서접수, 서류관리 및 학교 행정 일괄</span >
-                                            </div>
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f4"></div>
-                                                <span class="school-visit-counseling">포트폴리오 및 자소서 기본 가이드 </span >
-                                            </div>
-                                        </div>
+								<div class="frame-section ver2 mb" id="sec01">
+									<div class="frame-27">
+										<span class="field-trip-intro">서비스안내</span>
+									</div>
+									<span class="field-trip-service">예술대 무료수속 서비스는 어떠한 비용을 지불하지 않고, 보다 쉽고 편리하게 입학준비가 가능합니다. 담당 실장님이 배정되어 1:1관리되고, 서류준비/원서접수 그 외 학교 행정을 상세히 관리받을 수 있습니다.</span >
+								</div>
+								<div class="frame-section ver2 mb">
+									<div class="frame-titbox">
+										<p class="frame-title">한눈에 보는 컨설팅 기본 정보</p>
+									</div>
+									<div class="experbox">
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon1.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														종합예술대학 한국 공식사무소 관리 (국내 단 한곳)
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon2.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														수수료 0원! 추가 비용없이 수속접수 대행
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon3.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														원서접수, 서류관리 및 학교 행정 일괄
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon4.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														포트폴리오 및 자소서 기본 가이드
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="frame-section ver3">
+									<div class="frame-titbox">
+										<p class="frame-title">
+											컨설팅 <span class="color">Point</span>
+										</p>
+									</div>
+									<div class="pointbox">
+										<p class="txt">라셀 종합예술대학의 Official 공식 사무소! (일반 유학원과 미술학원에서 진행할 수 없는 특별한 어드미션 혜택 이용이 가능합니다)</p>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+                                <div class="frame-section" id="sec02">
+                                    <div class="frame-titbox between">
+                                        <span class="frame-title">컨설팅 가능 대학교</span >
                                     </div>
-                                </div>
-                                <div class="frame-25 point">
-                                    <div class="frame-26">
-                                        <div class="frame-27">
-                                            <span class="field-trip-intro">컨설팅 <b class="Allan"><img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/point.svg" alt="Point"></b></span>
-                                            <!-- <div class="tags-28">
-                                                <span class="best-29">BEST</span>
-                                            </div> -->
-                                        </div>
-                                        <span class="field-trip-service">라셀 종합예술대학의 Official 공식 사무소! (일반 유학원과 미술학원에서 진행할 수 없는 특별한 어드미션 혜택 이용이 가능합니다)</span >
-                                    </div>
-                                </div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
-                                        <div class="frame-27">
-                                            <span class="field-trip-intro">서비스안내</span>
-                                            <!-- <div class="tags-28">
-                                                <span class="best-29">BEST</span>
-                                            </div> -->
-                                        </div>
-                                        <span class="field-trip-service">예술대 무료수속 서비스는 어떠한 비용을 지불하지 않고, 보다 쉽고 편리하게 입학준비가 가능합니다. 담당 실장님이 배정되어 1:1관리되고, 서류준비/원서접수 그 외 학교 행정을 상세히 관리받을 수 있습니다. </span >
-                                    </div>
+									<div class="school_listbox on">
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_Lasalle.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">라살르 예술대</p>
+												<p class="desc">Lasalle College of the Arts</p>
+											</div>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_LaSalle2.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">라셀 컬리지</p>
+												<p class="desc">LaSalle College</p>
+											</div>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_UAS.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">UAS</p>
+												<p class="desc">UAS University of Arts Singapore</p>
+											</div>
+										</div>
+									</div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-39">
-                                    <div class="frame-3a">
-                                        <span class="school-list-for-field-trip">선택 가능대학교</span >
-                                        <!-- <div class="frame-3b">
-                                            <span class="view-all-30">30개 전체보기</span>
-                                            <div class="frame-3c"></div>
-                                        </div> -->
-                                    </div>
-                                    <div class="univ_list">
-                                        <ul>
-                                            <li>
-                                                <!-- <span>일반 사립대 :</span> -->
-                                                <p>
-                                                    Lasalle College of the Arts, 라셀컬리지<br/>
-                                                    UAS, 싱가포르 종합예술대학교
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="frame-section ver2" id="sec03">
+                                    <span class="frame-title">서비스 포함 내용</span>
+									<ul class="service_box">
+										<li class="service_item">
+											<p class="tit">
+												1. 입학 서류 안내 및 검토
+											</p>
+											<div class="icon"></div>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												2. 포트폴리오 기본 양식 가이드 - 최초 1회
+											</p>
+											<div class="icon"></div>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												3. 에세이 기본 양식 가이드 - 최초 1회
+											</p>
+											<div class="icon"></div>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												4. 원서접수, 학사일정 관리 일괄
+											</p>
+											<div class="icon"></div>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												5. 학교 소통 및 입학 궁금즘 관리
+											</p>
+											<div class="icon"></div>
+										</li>
+									</ul>
+									<div class="note_txtbox">
+										<p class="note_txt">* 1:1 관리를 원칙으로 하며, 학생 개인 면담 후 추가 되는 수업이 있을 수 있습니다.</p>
+										<div class="note_txt">* 자세한 서비스 내용은 상담 시 서비스내역을 통해 상세 확인할 수 있습니다.</div>
+									</div>
                                 </div>
-                                <div class="line-9f"></div>
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">컨설팅 서비스 내용</span>
-                                    <div class="frame-2c">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">1. 입학 서류 안내 및 검토</span >
-                                                <div class="frame-2f"></div>
-                                            </div>
-                                            <div class="frame-30">
-                                                <span class="curriculum-facility-tour">2. 포트폴리오 기본 양식 가이드 - 최초 1회</span >
-                                                <div class="frame-31"></div>
-                                            </div>
-                                            <div class="frame-32">
-                                                <span class="local-team-counseling-interpreting">3. 에세이 기본 양식 가이드 - 최초 1회</span >
-                                                <div class="frame-33"></div>
-                                            </div>
-                                            <div class="frame-34">
-                                                <span class="residential-area-tour">4. 원서접수, 학사일정 관리 일괄</span >
-                                                <div class="frame-35"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">5. 학교 소통 및 입학 궁금즘 관리</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="frame-section ver2 mt">
+									<div class="frame-titbox between">
+                                    	<span class="frame-title">수속하기 전, 담당자와 상담하기</span>
+										<a href="https://pf.kakao.com/_fxmxmWV" class="kakao_link" target="_blank">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_kakao.png" alt="" class="icon">
+											<span class="txt">빠른 상담</span>
+										</a>
+									</div>
+									<div class="swiper question_swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
 
-                                    <div class="guide">
-                                        <ul>
-                                            <li>* 1:1 관리를 원칙으로 하며, 학생 개인 면담 후 추가 되는 수업이 있을 수 있습니다.</li>
-                                            <li>* 자세한 서비스 내용은 상담 시 서비스내역을 통해 상세 확인할 수 있습니다</li>
-                                        </ul>
-                                    </div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+										</div>
+									</div>
                                 </div>
                             </li>
                         </ul>
@@ -197,20 +256,14 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="floating_cont sidebar">
                 <div class="floating_wrap">
-                    <div class="sseom-neol">
-                        <div class="mal-lei-si-a-dae-hag"></div>
+                    <div class="sseom-neol ver2">
+                        <div class="mal-lei-si-a-dae-hag prcd02"></div>
                     </div>
                     <div class="frame-14f">
                         <div class="frame-150">
-                            <div class="frame-151">
-                                <div class="frame-152">
-                                    <span class="day-paid" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail22'" style="cursor:pointer;">입학컨설팅</span>
-                                    <span class="day-paid-153" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail22_1'" style="cursor:pointer;">무료수속</span>
-                                </div>
-                                <div class="group-154">
-                                    <div class="line-155"></div>
-                                    <div class="line-156"></div>
-                                </div>
+                            <div class="tab_navbox frame-151">
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22" class="tab_nav frame-152">입학컨설팅</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22_1" class="tab_nav on frame-152">무료수속</a>
                             </div>
                             <div class="frame-157">
                                 <div class="frame-158">
@@ -220,13 +273,12 @@ if (!defined('_EYOOM_')) exit;
                                             <span class="time-15c">(대학 원서비 별도 납부)</span>
                                         </div>
                                     </div>
+									<p class="desc">
+										 서류체크, 원서접수 학교행정 간편서비스
+									</p>
                                 </div>
                                 <div class="frame-15d">
                                     <div class="frame-15e">
-                                        <span class="interview">
-                                            서류체크, 원서접수 학교행정 간편서비스
-                                        </span>
-                                        <div class="line-15f"></div>
                                         <span class="interview">
                                             예술대 무료수속 서비스는 어떠한 비용을 지불하지 않고, 보다 쉽고 편리하게 입학준비가 가능합니다. 담당 실장님이 배정되어 1:1관리되고, 서류준비/원서접수 그 외 학교 행정을 상세히 관리받을 수 있습니다. 
                                         </span >

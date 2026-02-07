@@ -7,85 +7,128 @@ if (!defined('_EYOOM_')) exit;
 
 
 <div class="sub-page page-procedure">
-	<div class="banner_area procedure long">
-        <div class="container">
-            <img class="mobile" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_procedure_banner_m.png" alt="" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_banner'">
-            <div class="photo" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_banner'">
-                <div class="rectangle"></div>
-                <div class="ellipse"></div>
-                <div class="title"></div>
-                <div class="title-9">
-                    <span class="consultation">교직원들이 만든 유학원</span>
-                    <div class="title-a">
-                    <span class="consultation-b">몽선생의 컨설팅은 </span
-                    ><span class="different-points">이런점이 달라요!</span>
-                    </div>
-                </div>
-                <!-- <div class="nav">
-                    <div class="frame-c"><div class="chevron-left"></div></div>
-                    <div class="frame-d"><div class="chevron-right"></div></div>
-                </div> -->
-            </div>
+	<div class="banner_area ver2 procedure long">
+        <div class="container" data-aos="fade-up">
+			<div class="banner">
+				<a href="<?php echo G5_URL ?>/page/?pid=procedure_banner" class="link">
+					<div class="bgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_bg.jpg" alt="" class="pc img">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_bg_mob.jpg" alt="" class="tablet img">
+					</div>
+					<div class="txtbox">
+						<p class="sub">교직원들이 만든 전문적인 교육업체</p>
+						<p class="tit">
+							몽선생의 컨설팅은 
+							<span class="color">이런점이 달라요!</span>
+						</p>
+					</div>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_img.png" alt="" class="pc img">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_img_mob.png" alt="" class="tablet img">
+					</div>
+				</a>
+			</div>
         </div>
     </div>
+
     <div class="counsel_link">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="procedure_link">
-                <div class="empty">
-                    <div class="empty-1"><div class="rectangle"></div></div>
-                    <span class="singapore-art-school">싱가포르 예술대</span>
-                    <div class="text"><span class="number-one">1</span></div>
-                </div>
-                <div class="empty">
-                    <div class="empty-3"><div class="rectangle-4"></div></div>
-                    <span class="singapore-art-school">싱가포르 국립대</span>
-                    <div class="text"><span class="number-2">2</span></div>
-                </div>
-                <div class="empty">
-                    <div class="empty-7"><div class="rectangle-8"></div></div>
-                    <span class="singapore-art-school">싱가포르 사립대</span>
-                    <div class="text"><span class="number-3">3</span></div>
-                </div>
-                <div class="empty">
-                    <div class="div-a"><div class="rectangle-b"></div></div>
-                    <span class="singapore-art-school">UC 계열 주립대</span>
-                    <div class="text"><span class="number-4">4</span></div>
-                </div>
-                <div class="empty">
-                    <div class="div-e"><div class="rectangle-f"></div></div>
-                    <span class="singapore-art-school">말라야 국립대</span>
-                    <div class="text"><span class="number-5">5</span></div>
-                </div>
-                <div class="empty">
-                    <div class="empty-12"><div class="rectangle-13"></div></div>
-                    <span class="singapore-art-school">홍콩 대학</span>
-                </div>
-                <div class="empty">
-                    <div class="div-15"><div class="rectangle-16"></div></div>
-                    <span class="singapore-art-school">말레이시아 사립대</span>
-                </div>
-                <div class="empty">
-                    <div class="div-18"><div class="rectangle-19"></div></div>
-                    <span class="singapore-art-school">말레이시아 국제학교</span>
-                </div>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon1.png" alt="" class="icon">
+						<span class="count">1</span>
+					</div>
+					<p class="tit">말레이시아 국제학교</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon2.png" alt="" class="icon">
+						<span class="count">2</span>
+					</div>
+					<p class="tit">싱가포르 국제학교</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon3.png" alt="" class="icon">
+						<span class="count">3</span>
+					</div>
+					<p class="tit">싱가포르 국립대</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon4.png" alt="" class="icon">
+						<span class="count">4</span>
+					</div>
+					<p class="tit">싱가포르 사립대</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon5.png" alt="" class="icon">
+						<span class="count">5</span>
+					</div>
+					<p class="tit">싱가포르 예술대</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon6.png" alt="" class="icon">
+					</div>
+					<p class="tit">말레이시아 사립대</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
+					</div>
+					<p class="tit">말라야 국립대</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon8.png" alt="" class="icon">
+					</div>
+					<p class="tit">홍콩 대학</p>
+				</li>
+				<li>
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
+					</div>
+					<p class="tit">UC 계열 주립대</p>
+				</li>
             </div>
         </div>
     </div>
 
-    <div class="msection counsel_area ci">
-        <div class="container">
-            <div class="ms title_area">
-                <span>국제학교 <b>입학/수속 서비스</b></span>
-                <p>무료수속부터 답사 동행까지! 다양한 입학 지원서비스</p>
+    <div class="msection counsel_area tabs hover_effect pro_sec1">
+        <div class="container" data-aos="fade-up">
+            <div class="ms title_area green between">
+				<div class="title">
+					<span class="tit">국제학교 <span class="color1">입학/수속 서비스</span></span>
+				</div>
+                <div class="tab">
+                    <ul class="tab_tit">
+                        <li><a href="#" class="show" id="tab-11">말레이시아</a></li>
+                        <li><a href="#" id="tab-12">싱가포르</a></li>
+                        <li><a href="#" id="tab-13">베트남/태국</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="counsel_list procedure">
+			<div class="counsel_list tabs_cont ver2">
                 <ul class="panel">
-                    <li>
+                    <li id="content-11">
                         <ul>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail03'">
                                 <div class="img_area">
                                     <p class="nation">수수료 0원</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure03.png" alt="ZERO 무료 수속">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure01.jpg" alt="ZERO 무료 수속">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color1">유학원 수수료 ZERO</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">국제학교 무료수속</p>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -94,10 +137,19 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail02'">
                                 <div class="img_area">
                                     <p class="nation">수속 서비스</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure02.png" alt="입학 수속 서비스">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure03.jpg" alt="입학 수속 서비스">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color3">입학수속 서비스</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">명문국제학교</p>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -109,7 +161,16 @@ if (!defined('_EYOOM_')) exit;
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail05'">
                                 <div class="img_area">
                                     <p class="nation">현지 서비스</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure05.png" alt="현지 학교/거주지 답사">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure02.jpg" alt="현지 학교/거주지 답사">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color2">현지 지사장 동행</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">답사 프로그램</p>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -121,7 +182,16 @@ if (!defined('_EYOOM_')) exit;
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail01'">
                                 <div class="img_area">
                                     <p class="nation">현지 서비스</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure01.png" alt="초기정착 서비스">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure04.jpg" alt="초기정착 서비스">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color2">1달 관리</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">초기정착 서비스</p>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -133,7 +203,13 @@ if (!defined('_EYOOM_')) exit;
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail04'">
                                 <div class="img_area">
                                     <p class="nation">입학시험 대비</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure04.png" alt="국제학교 입학시험 대비반">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure05.jpg" alt="국제학교 입학시험 대비반">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color4">국제학교</span>
+										</div>
+										<p class="title">입학시험 대비반</p>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -144,16 +220,25 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                         </ul>
                     </li>
+                    <li id="content-12">
+                        <ul>
+						</ul>
+					</li>
+                    <li id="content-13">
+                        <ul>
+						</ul>
+					</li>
                 </ul>
-            </div>
+			</div>
         </div>
     </div>
 
-    <div class="msection counsel_area ci sec">
-        <div class="container">
-            <div class="ms title_area">
-                <span>아시아대학 <b>입학수속/컨설팅</b></span>
-                <p>최다 합격생 배출! 현지 대학출신 선생님 관리</p>
+    <div class="msection counsel_area ci hover_effect pro_sec2">
+        <div class="container" data-aos="fade-up">
+            <div class="ms title_area green">
+				<div class="title">
+					<span class="tit">아시아대학 <span class="color1">입학수속/컨설팅</span></span>
+				</div>
             </div>
             <div class="counsel_list procedure asia">
                 <ul class="panel">
@@ -161,8 +246,15 @@ if (!defined('_EYOOM_')) exit;
                         <ul>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail21'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure11.png" alt="무료 수속서비스">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure11h.png" alt="무료 수속서비스">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln01.jpg" alt="무료 수속서비스">
+									<div class="img_txtbox">
+										<p class="sub">교직원 출신 관리</p>
+										<p class="tit">
+											<span class="color color1">싱가포르 사립대</span><br>
+											무료 입학수속
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -173,8 +265,15 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail22'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure12.png" alt="수속서비스 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure12h.png" alt="수속서비스 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln02.jpg" alt="수속서비스 안내">
+									<div class="img_txtbox">
+										<p class="sub">국내 유일! 대표사무소</p>
+										<p class="tit">
+											<span class="color color2">싱가포르 예술대</span><br>
+											입학 컨설팅
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -185,8 +284,15 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail23'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure13.png" alt="싱가포르 국립대 입학 컨설팅">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure13h.png" alt="싱가포르 국립대 입학 컨설팅">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln03.jpg" alt="NUS 출신 관리! 입학 컨설팅">
+									<div class="img_txtbox">
+										<p class="sub">NUS 출신 관리!</p>
+										<p class="tit">
+											<span class="color color3">싱가포르 국립대</span><br>
+											입학 컨설팅
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -197,8 +303,15 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail24'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure15.png" alt="홍콩대학 입학 컨설팅 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure15h.png" alt="홍콩대학 입학 컨설팅 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln04.jpg" alt="홍콩대학 입학 컨설팅 안내">
+									<div class="img_txtbox">
+										<p class="sub">HKU 의대생 관리</p>
+										<p class="tit">
+											<span class="color color4">홍콩대학</span><br>
+											입학컨설팅
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="홍콩">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -209,8 +322,15 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail25'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure16.png" alt="말레이시아 사립대 무료 수속서비스 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure16h.png" alt="말레이시아 사립대 무료 수속서비스 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln05.jpg" alt="무료 입학 수속 서비스">
+									<div class="img_txtbox">
+										<p class="sub">교직원 출신 관리</p>
+										<p class="tit">
+											<span class="color color5">말레이시아 사립대</span><br>
+											무료 입학수속
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -221,8 +341,15 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail26'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure17.png" alt="말레이시아 국립대 접수대행 서비스 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure17h.png" alt="말레이시아 국립대 접수대행 서비스 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln06.jpg" alt="무료 입학 수속 서비스">
+									<div class="img_txtbox">
+										<p class="sub">말레이시아의 서울대</p>
+										<p class="tit">
+											<span class="color color6">말레이시아 국립대</span><br>
+											입학 컨설팅
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -233,8 +360,14 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail27'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure18.png" alt="호주 모나쉬대학 말레이시아 캠퍼스 수속서비스 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure18h.png" alt="호주 모나쉬대학 말레이시아 캠퍼스 수속서비스 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln07.jpg" alt="모나쉬대학 입학 수속 서비스">
+									<div class="img_txtbox">
+										<p class="tit">
+											<span class="color color7">호주 모나쉬<br>말레이시아 캠퍼스</span><br>
+											입학수속
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -245,8 +378,14 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail28'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure20.png" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure20h.png" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln08.jpg" alt="한국 글로벌 캠퍼스 입학 컨설팅">
+									<div class="img_txtbox">
+										<p class="tit">
+											<span class="color color8">송도<br>글로벌 캠퍼스</span><br>
+											입학 컨설팅
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -257,8 +396,17 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail29'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure29.png" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure29h.png" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln09.jpg" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
+									<div class="img_txtbox">
+										<p class="tit">
+											<span class="color color9">
+												서강 <br>
+												글로벌 패스웨이
+											</span><br>
+											무료 입학수속
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -269,8 +417,15 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail30'">
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure30.png" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
-                                    <img class="hover" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure29h.png" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln10.jpg" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
+									<div class="img_txtbox">
+										<p class="sub bk">한국 특례입학</p>
+										<p class="tit bk">
+											<span class="color color10">3특/12특</span><br>
+											한국 대학 특례입학
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
@@ -286,68 +441,139 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection counsel_area ci sec">
-        <div class="container">
+    <div class="msection counsel_area sec pro_sec3 hover_effect">
+        <div class="container" data-aos="fade-up">
             <div class="ms title_area">
-                <span>미국+아시아 <b>입학수속/컨설팅</b></span>
-                <p>몽선생 SPECIAL! 아시아와 미국 동시준비</p>
+				<div class="title">
+					<span class="tit">미국+아시아 <span class="color1">입학수속/컨설팅</span></span>
+				</div>
             </div>
-            <div class="counsel_list procedure s4">
+            <div class="counsel_list ver3 procedure s4">
                 <ul class="panel">
                     <li>
                         <ul class="mentor_list">
                             <li>
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure21.png" alt="한국에서 미국대학 편입준비">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure01.jpg" alt="한국에서 미국대학 편입준비">
+									<div class="img_txtbox">
+										<p class="tit">
+											<span class="color gra1">한국에서</span><br>
+											<span class="color gra2">미국대학 편입준비</span>
+										</p>
+										<p class="sub">서강 글로벌 캠퍼스</p>
+									</div>
+									<div class="img_bottom3">
+										<div class="flagbox">
+											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
+										</div>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="title">한국에서 미국대학 편입준비</span>
-                                        <p>한국</p>
+										<div class="tagbox">
+											<p class="tag">한국</p>
+										</div>
                                     </a>
                                 </div>
                             </li>
                             <li>
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure22.png" alt="UC버클리 출신 관리하는 입학컨설팅">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure02.jpg" alt="UC버클리 출신 관리하는 입학컨설팅">
+									<div class="img_txtbox">
+										<p class="tit">
+											<span class="color gra3">버클리 출신 직접 관리</span>
+										</p>
+										<p class="sub">UC대학 관리형 컨설팅</p>
+									</div>
+									<div class="img_bottom3">
+										<div class="flagbox">
+											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="미국">
+										</div>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="title">UC버클리 출신 관리하는 입학컨설팅</span>
-                                        <p>미국</p>
+										<div class="tagbox">
+											<p class="tag">미국</p>
+										</div>
                                     </a>
                                 </div>
                             </li>
                             <li>
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure23.png" alt="패스웨이 과정으로 미국대학 쉽게가기">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure03.jpg" alt="패스웨이 과정으로 미국대학 쉽게가기">
+									<div class="img_txtbox">
+										<p class="tit">
+											<span class="color gra4">패스웨이로</span><br>
+											미국대학 쉽게가기
+										</p>
+										<p class="sub">낮은 내신점수? 걱정 NO</p>
+									</div>
+									<div class="img_bottom3">
+										<div class="flagbox">
+											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="미국">
+										</div>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="title">패스웨이 과정으로 미국대학 쉽게가기</span>
-                                        <p>미국</p>
+										<div class="tagbox">
+											<p class="tag">미국</p>
+										</div>
                                     </a>
                                 </div>
                             </li>
                             <li>
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure24.png" alt="국내 내신으로 미국 TOP100대학 입학">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04.jpg" alt="국내 내신으로 미국 TOP100대학 입학">
+									<div class="img_txtbox">
+										<p class="tag">너도 갈 수 있어!</p>
+										<p class="sub">내신 · 수능 반영 되니까!</p>
+										<p class="tit">
+											<span class="color gra5">미국 탑 100 대학</span>
+										</p>
+									</div>
+									<div class="img_bottom3">
+										<div class="flagbox">
+											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="미국">
+										</div>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="title">국내 내신으로 미국 TOP100대학 입학</span>
-                                        <p>미국</p>
+										<div class="tagbox">
+											<p class="tag">미국</p>
+										</div>
                                     </a>
                                 </div>
                             </li>
                             <li>
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure25.png" alt="미국+싱가포르 2개국 입학 컨설팅">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure05.jpg" alt="미국+싱가포르 2개국 입학 컨설팅">
+									<div class="img_txtbox">
+										<p class="sub">미국 · 아시아 대학 동시준비</p>
+										<p class="tit">
+											<span class="color gra6">프리미엄 합격 컨설팅</span>
+										</p>
+									</div>
+									<div class="img_bottom3">
+										<div class="flagbox">
+											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="미국">
+											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포드">
+										</div>
+									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="title">미국+싱가포르 2개국 입학 컨설팅</span>
-                                        <p>미국</p>
+										<div class="tagbox">
+											<p class="tag">미국</p>
+										</div>
+                                    </a>
                                     </a>
                                 </div>
                             </li>
@@ -358,94 +584,87 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection counsel_area ci sec">
-        <div class="container">
-            <div class="ms title_area">
-                <span><b>유학준비에 필요한 수업!</b> 몽선생이 준비했어요</span>
+	<div class="msection class_area tabs main pro_sec4">
+        <div class="container" data-aos="fade-up">
+            <div class="ms title_area red" id="row-4">
+				<div class="title">
+					<span class="tit"><span class="color1">유학준비에 필요한 수업!</span> 유학준비에 필요한 수업! 몽선생이 준비했어요</span>
+				</div>
             </div>
-            <div class="counsel_list procedure s4 big">
+            <div class="class_list s4 big">
                 <ul class="panel">
-                    <li>
-                        <ul>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail04'">
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_class.svg" alt="수속하기"> 유학CLASS</p>
-                                        <span class="title">
-                                            국제학교 입학시험<br/>
-                                            테스트 대비반
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure31.png" alt="UC버클리 출신 관리하는 입학컨설팅">
-                                </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail01'">
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_class.svg" alt="수속하기"> 유학CLASS</p>
-                                        <span class="title">
-                                            2개월 완성!<br/>
-                                            듀오링고 실전반
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure32.png" alt="UC버클리 출신 관리하는 입학컨설팅">
-                                </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'">
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_class.svg" alt="수속하기"> 유학CLASS</p>
-                                        <span class="title">
-                                            원어민 1:1과외<br/>
-                                            영어 기초문법완성
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure33.png" alt="UC버클리 출신 관리하는 입학컨설팅">
-                                </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'">
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_class.svg" alt="수속하기"> 유학CLASS</p>
-                                        <span class="title">
-                                            해외대학 미리준비<br/>
-                                            전공이론&에세이반
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure34.png" alt="UC버클리 출신 관리하는 입학컨설팅">
-                                </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'">
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <p class="class"><img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_class.svg" alt="수업듣기"> 유학CLASS</p>
-                                        <span class="title">
-                                            IELTS 과외<br/>
-                                            6.0 목표 달성반
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_procedure35.png" alt="UC버클리 출신 관리하는 입학컨설팅">
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail04'">
+						<div class="text_area">
+							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
+							<span class="title">
+								국제학교 입학시험<br/>
+								테스트 대비반
+							</span>
+						</div>
+						<div class="img_area">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class01.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class01_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
+						</div>
+					</li>
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail01'">
+						<div class="text_area">
+							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
+							<span class="title">
+								2개월 완성!<br/>
+								듀오링고 실전반
+							</span>
+						</div>
+						<div class="img_area">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class02.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class02_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
+						</div>
+					</li>
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'">
+						<div class="text_area">
+							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
+							<span class="title">
+								원어민 1:1과외<br/>
+								영어 기초문법완성
+							</span>
+						</div>
+						<div class="img_area">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class03.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class03_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
+						</div>
+					</li>
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'">
+						<div class="text_area">
+							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
+							<span class="title">
+								해외대학 미리준비<br/>
+								전공이론&에세이반
+							</span>
+						</div>
+						<div class="img_area">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class04.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class04_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
+						</div>
+					</li>
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'">
+						<div class="text_area">
+							<p class="class"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수업듣기"> 유학CLASS</p>
+							<span class="title">
+								IELTS 과외<br/>
+								6.0 목표 달성반
+							</span>
+						</div>
+						<div class="img_area">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class05.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class05_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
+						</div>
+					</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="msection faq_area">
-        <div class="container">
+    <div class="msection faq_area pro_sec5">
+        <div class="container" data-aos="fade-up">
             <div class="ms title_area">
                 <span><b>FAQ</b> 자주 묻는 질문</span>
             </div>
@@ -453,12 +672,11 @@ if (!defined('_EYOOM_')) exit;
                 <ul class="faq_list">
                     <li>
                         <div class="question">무료수속 서비스는 유학원 비용이 0원인가요?</div>
-                        <div class="answer">네 맞습니다. 무료 수속서비스는 저희 몽선생에 어떠한 비용을 납부하지 않고 학교 입학 수속을 보다 편리하게 받을 수 있습니다. 학비와 기타 비용은 모두 동일하기 때문에,
-혼자서 어렵게 할 필요 없이 무료 수속서비스를 맡기는 것이 좋습니다.</div>
+                        <div class="answer">네 맞습니다. 무료 수속서비스는 저희 몽선생에 어떠한 비용을 납부하지 않고 학교 입학 수속을 보다 편리하게 받을 수 있습니다. 학비와 기타 비용은 모두 동일하기 때문에, 혼자서 어렵게 할 필요 없이 무료 수속서비스를 맡기는 것이 좋습니다.</div>
                     </li>
                     <li>
                         <div class="question">비용 없이 무료수속을 신청하면 어떤 서비스를 받을 수 있나요?</div>
-                        <div class="answer">학교 선택부터 입학 절차까지 전 과정에 대한 올인원 지원 서비스를 받을 수 있습니다. 학생에게 맞는 학교·전공 매칭, 필요한 서류 안내, 원서 작성 지원, 그리고 출국 후 현지 정착 가이드까지유학 준비의 시작부터 정착 단계까지 모든 과정을 무료로 도와드립니다.</div>
+                        <div class="answer">학교 선택부터 입학 절차까지 전 과정에 대한 올인원 지원 서비스를 받을 수 있습니다. 학생에게 맞는 학교·전공 매칭, 필요한 서류 안내, 원서 작성 지원, 그리고 출국 후 현지 정착 가이드까지 유학 준비의 시작부터 정착 단계까지 모든 과정을 무료로 도와드립니다.</div>
                     </li>
                     <li>
                         <div class="question">대학 입학 컨설팅은 어떤 내용이 포함되어 있나요?</div>
@@ -470,8 +688,7 @@ if (!defined('_EYOOM_')) exit;
                     </li>
                     <li>
                         <div class="question">국제학교 유료수속과 무료수속의 차이점이 무엇인가요?</div>
-                        <div class="answer">협력된 국제학교의 경우, 학교가 대신 유학원 수수료를 납부해 주기 때문에 수속하는 부모님들께 따로 유학원 비용 청구가 되지 않습니다. 다만, 일부 명문 국제학교의
-경우에는 학교가 납부해주는 비용이 없기 때문에 유료수속으로 진행됩니다.</div>
+                        <div class="answer">협력된 국제학교의 경우, 학교가 대신 유학원 수수료를 납부해 주기 때문에 수속하는 부모님들께 따로 유학원 비용 청구가 되지 않습니다. 다만, 일부 명문 국제학교의 경우에는 학교가 납부해주는 비용이 없기 때문에 유료수속으로 진행됩니다.</div>
                     </li>
                     <li>
                         <div class="question">수속을 맡기게 되면 어떤식으로 관리받게 되나요?</div>
@@ -479,8 +696,7 @@ if (!defined('_EYOOM_')) exit;
                     </li>
                     <li>
                         <div class="question">예술대 무료수속과 입학컨설팅의 차이점은 무엇인가요?</div>
-                        <div class="answer">무료수속은 유학원에 비용을 납부하지 않고 서류안내, 원서접수 및 학교 행정을 보다 쉽고 간편하게 맡길 수 있으며 입학 컨설팅의 경우 포트폴리오 작품구성/관리, 인터뷰, 에세이 등의 모든 입학준비사항을
-케어받을 수 있는 서비스 입니다.</div>
+                        <div class="answer">무료수속은 유학원에 비용을 납부하지 않고 서류안내, 원서접수 및 학교 행정을 보다 쉽고 간편하게 맡길 수 있으며 입학 컨설팅의 경우 포트폴리오 작품구성/관리, 인터뷰, 에세이 등의 모든 입학준비사항을 케어받을 수 있는 서비스 입니다.</div>
                     </li>
                 </ul>
             </div>

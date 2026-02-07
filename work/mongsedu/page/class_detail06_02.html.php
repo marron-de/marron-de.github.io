@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:160px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -79,24 +80,22 @@ if (!defined('_EYOOM_')) exit;
                                         <span>검증된 전문 선생님을 만나보세요!</span>
                                     </div>
                                 </div>
-                                <div class="line-2a"></div>
                                 <div class="class_curri">
                                     <ul class="mentor_list">
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_cls_Raphael.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t17.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <span>Rua <small>원어민 선생님</small></span>
-                                                <p>· 듀오링고 만점에 가까운 실력자 </p> 
-                                                <p>· 캐나다 교포, 거주 15년 +</p>
-                                                <p>· 라이팅과 스피킹 집중 수업</p>
+                                                <p class="name">Rua <small>원어민 선생님</small></p>
+                                                <p class="desc">캐나다 교포, 거주 15년</p> 
+                                                <p class="tag">라이팅과 스피킹 집중 수업</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <div class="guide">
                                         <ul>
-                                            <li>⚠️ 선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
+                                            <li>*선생님은 상황에 따라 다르게 매칭 될 수 있어요. 수업 전에 반드시 상담을 통해 확인하고, 결정해주세요!</li>
                                         </ul>
                                     </div>
                                 </div>

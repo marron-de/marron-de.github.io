@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:150px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -123,7 +124,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">IELTS 소규모 과외 수업</span >
+                                    <span class="day-paid">IELTS 소규모 과외 수업</span>
+									<span class="day-paid-153">(3개월)</span>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -133,7 +135,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">IELTS 소규모 과외 수업 <small>(3개월)</small> - 1000,000 원 <small>(월)</small></span>
+                                        <span class="span-text-15a">1,000,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">
@@ -151,7 +153,7 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>   
             
         </div>
     </div>

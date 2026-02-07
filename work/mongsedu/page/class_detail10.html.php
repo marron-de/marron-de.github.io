@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:160px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -74,10 +75,10 @@ if (!defined('_EYOOM_')) exit;
                     <div class="classDetail_list tabs_cont">
                         <ul class="panel">
                             <li id="content-1" style="display:block;">
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec1">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">해외대학 학과목 밀착과외 수업 소개</span>
+                                            <span class="frame-title">해외대학 학과목 밀착과외 수업 소개</span>
                                             <!-- <div class="tags-28">
                                                 <span class="best-29">몽선생 CLASS</span>
                                             </div> -->
@@ -88,14 +89,14 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec2">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">몽선생 해외대학 학과목 밀착과외 수업이 특별한 4가지</span>
+                                            <span class="frame-title">몽선생 해외대학 학과목 밀착과외 수업이 특별한 4가지</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/mentor_round_mong.png" alt="">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit01.png" alt="">
                                                 <span>졸업 걱정없는 유학!</span>
                                                 <p>
                                                     검증된 몽선생이 준비한<br/>
@@ -136,10 +137,10 @@ if (!defined('_EYOOM_')) exit;
                                     </div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
+                                <div class="frame-25 class_sec3">
+                                    <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="field-trip-intro">커리큘럼 안내</span>
+                                            <span class="frame-title">커리큘럼 안내</span>
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
@@ -303,11 +304,15 @@ if (!defined('_EYOOM_')) exit;
                                         <p>교재 자세히보기</p>
                                     </div> -->
                                     <div class="text_area">
-                                        <span>밀착과외 소규모 그룹 수업 학습 목표</span>
+										<div class="title">
+											<span class="color">밀착과외 소규모 그룹 </span>수업  학습 목표
+										</div>
+                                        <div class="descbox">
                                         <p>1. 해외대학 수업·과제·시험을 수행하는 데 필요한 학업 역량 전반 강화</p>
                                         <p>2. 리딩·레포트·프레젠테이션·시험 대비를 균형 있게 훈련해 실전 학업 수행 능력 확보</p>
                                         <p>3. 소수 정예 그룹 수업을 통한 개별 맞춤 피드백으로 약점 보완과 강점 극대화</p>
                                         <p>4. 실제 과제/발표/시험 대비를 반복 훈련해 성적 향상과 학업 자신감 동시 확보</p>
+										</div>
                                     </div>
                                 </div>
                             </li>

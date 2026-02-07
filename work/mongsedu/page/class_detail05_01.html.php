@@ -12,8 +12,8 @@ if (!defined('_EYOOM_')) exit;
         width:150px;
     }
 </style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container" id="#reference-object">
+<div class="sub-page page-class detail page-detail">
+    <div class="main-container" id="#reference-object" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -33,6 +33,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -79,33 +80,45 @@ if (!defined('_EYOOM_')) exit;
                                     <ul class="cost_list">
                                         <li>
                                             <div class="tit">
-                                                <span>IELTS 소규모 과외 수업 수강비</span>
-                                                <span class="cost">1,000,000원 (월) - 3개월</span>
+                                                <span>
+													IELTS 소규모 과외 수업 수강비
+													<small>3개월</small>
+												</span>
+                                                <span class="cost">회당 1,000,000원</span>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>
-                                                <ul>
-                                                    <li>
-                                                        <p>‧ 수업기간</p>
-                                                        <p>3개월 (오프라인+온라인 병행)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 강의시간</p>
-                                                        <p>60시간</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 선생님</p>
-                                                        <p>1명</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 수업정원</p>
-                                                        <p>4명 소규모</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>‧ 교재비</p>
-                                                        <p>없음</p>
-                                                    </li>
-                                                </ul>
+												<div class="de_box">
+													<ul>
+														<li>
+															<p>‧ 수업기간</p>
+															<p>3개월 (오프라인+온라인 병행)</p>
+														</li>
+														<li>
+															<p>‧ 강의시간</p>
+															<p>60시간</p>
+														</li>
+														<li>
+															<p>‧ 선생님</p>
+															<p>1명</p>
+														</li>
+														<li>
+															<p>‧ 수업정원</p>
+															<p>4명 소규모</p>
+														</li>
+														<li>
+															<p>‧ 교재비</p>
+															<p>없음</p>
+														</li>
+													</ul>
+													<div class="side">
+														<p class="price">1,000,000원</p>
+														<div class="price ver2">
+															<small>1/회</small>
+															<span>1,000,000원</span>
+														</div>
+													</div>
+												</div>
                                             </div>
                                         </li>
                                     </ul>
@@ -132,7 +145,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">IELTS 소규모 과외 수업</span >
+                                    <span class="day-paid">IELTS 소규모 과외 수업</span>
+									<span class="day-paid-153">(3개월)</span>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -142,7 +156,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">IELTS 소규모 과외 수업 <small>(3개월)</small> - 1000,000 원 <small>(월)</small></span>
+                                        <span class="span-text-15a">1,000,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">
@@ -160,8 +174,7 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>               
         </div>
     </div>
     <div class="frame">
