@@ -8,9 +8,8 @@ if (!defined('_EYOOM_')) exit;
 
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
 
-
-<div class="sub-page page-procedure detail">
-    <div class="main-container">
+<div class="sub-page page-counsel detail page-detail">
+    <div class="main-container" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -30,6 +29,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -58,148 +58,180 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div> -->
                 </div>
-                <div class="section-c cd tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
-                        </div>
-                    </div>
+                <div class="section-c">
                     <div class="classDetail_list">
                         <ul class="panel">
                             <li id="content-1">
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담 기본안내</span>
-                                    <div class="frame-2c info">
-                                        <ul class="frame-2d">
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd1"></div>
-                                                <span>대표상담사</span>
-                                                <p>임우철 실장</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd2"></div>
-                                                <span>상담방식</span>
-                                                <p>서울 강남 (방문) 혹은 비대면 온라인</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd3"></div>
-                                                <span>장소</span>
-                                                <p>강남역 도보 1분거리 (몽선생사무실)</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd4"></div>
-                                                <span>상담비용</span>
-                                                <p>무료</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="line-2a"></div>
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담안내</span>
-                                    <div class="frame-2c cd">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">
-                                                    싱가포르 사립대 상담은 지난 10년 이상 누적관리 5천명 이상의 관리 경험과 실제 졸업한 경험을 바탕으로 <br/>
-                                                    학교 특징비교, 전공추천, 취업로드맵, 유학비용 예산까지 원스톱으로 확인해볼 수 있는 상담입니다
-                                                </span >
-                                                <div class="frame-2e sm">
-                                                    <span class="service-inclusions">대상학교</span>
-                                                    <ul>
-                                                        <li>
-                                                            <p>SIM, PSB, Kaplan, JCU, Raffles, MDIS 등</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 기본 안내</p>
+									</div>
+									<div class="experbox">
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon7.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">대표 상담사</p>
+												<p class="desc">
+													<span class="txt">
+														임우철 실장
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon8.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담방식</p>
+												<p class="desc">
+													<span class="txt">
+														서울강남 (방문) 혹은 비대면 온라인
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon9.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담장소</p>
+												<p class="desc">
+													<span class="txt">
+														강남역 도보 1분거리
+													</span>
+													<a href="https://naver.me/Ix0CWeKc" class="tag" target="_blank">지도보기</a>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon5.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담비용</p>
+												<p class="desc">
+													<span class="txt">
+														0원 무료 (1시간 상담보장)
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver3">
+									<div class="frame-titbox gap3">
+										<p class="frame-title">상담학교 리스트</p>
+										<p class="frame-desc3">
+											싱가포르 사립대 상담은 지난 10년 이상 누적관리 5천명 이상의 관리 경험과 실제 졸업한 경험을 바탕으로 학교 특징비교, 전공추천, 취업로드맵, 유학비용 예산까지 원스톱으로 확인해볼 수 있는 상담입니다
+										</p>
+									</div>
+									<div class="counselingbox">
+										<div class="box_tit">상담 가능학교</div>
+										<div class="box_list">
+											<div class="item">
+												<p class="desc">
+													<span class="txt">SIM, PSB, Kaplan, JCU, Raffles, MDIS 등</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 내용</p>
+									</div>
+									<div class="counselingbox2">
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img10.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												대학별 상세 입학조건, 학비 체크 (30분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img16.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												싱가포르 주요 사립대학교 10여개 모두 포함
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img18.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												전공별 추천학교 및 학교별 특징비교 (20분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img17.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												상경, 이공계 계열 분류 (졸업 후 취업비전까지 확인)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img12.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												입학시기 및 영어 준비 방법 안내 (10분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img15.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												대학별 학사일정 체크, 영어공인점수 및 기타 공부법 안내
+											</p>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+                                <div class="frame-section">
+                                    <div class="frame-titbox">
+                                        <div class="frame-titbox flex">
+                                            <span class="frame-title">상담사 소개</span>
+                                            <div class="frame-tag">
+                                                <span>HOT 인기멘토</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="line-38"></div>
-                                <!-- <div class="frame-39">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd02.png" alt="">
-                                </div> -->
-                                <div class="frame-2b cd">
-                                    <span class="service-inclusions">상담내용</span>
-                                    <div class="frame-2c">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">대학별 상세 입학조건, 학비 체크 (30분)</span >
-                                                <div class="frame-2f"></div>
-                                            </div>
-                                            <div class="frame-30">
-                                                <span class="curriculum-facility-tour">싱가포르 주요 사립대학교 10여개 모두 포함</span >
-                                                <div class="frame-31"></div>
-                                            </div>
-                                            <div class="frame-32">
-                                                <span class="local-team-counseling-interpreting">전공별 추천학교 및 학교별 특징비교 (20분)</span >
-                                                <div class="frame-33"></div>
-                                            </div>
-                                            <div class="frame-34">
-                                                <span class="residential-area-tour">상경, 이공계 계열 분류 (졸업 후 취업비전까지 확인)</span >
-                                                <div class="frame-35"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">입학시기 및 영어준비방법 안내 (10분)</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">대학별 학사일정 체크, 영어공인점수 및 기타 공부법 안내</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="line-9f"></div>
-                                <div class="frame-13c cd">
-                                    <div class="frame-13d">
-                                        <div class="frame-13e">
-                                            <span class="span-introduction">상담사 소개</span>
-                                            <div class="tags-13f">
-                                                <span class="span-hot-mentor">HOT 인기멘토</span>
-                                            </div>
-                                        </div>
-                                        <!-- <span class="span-description">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span > -->
                                     </div>
                                     <div class="frame-140">
                                         <div class="frame-141">
                                             <div class="frame-142">
-                                                <div class="frame-143">
-                                                    <div class="rectangle-144 cd07"></div>
-                                                </div>
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit05.png" alt="" class="img">
                                             </div>
                                             <div class="frame-145">
                                                 <span class="span-mentor">임우철 실장</span >
-                                                <span class="span-residence"> </span>
                                             </div>
                                         </div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">
                                                     <span class="span-career">주요이력</span>
-                                                    <!-- <div class="tags-149">
-                                                        <span class="span-location">말레이시아</span>
-                                                    </div> -->
+                                                    <div class="tags-149">
+                                                        <span class="span-location">싱가포르</span>
+                                                    </div>
                                                 </div>
                                                 <div class="frame-14a">
                                                     <span class="span-education">‧ 싱가포르 사립대학 졸업</span >
-                                                    <span class="span-education-14b">‧ 누적 학생관리 2천명 이상</span >
-                                                    <span class="span-consulting">‧ 싱가포르 체류경력5년+</span >
+                                                    <span class="span-education">‧ 누적 학생관리 2천명 이상</span >
+                                                    <span class="span-education">‧ 싱가포르 체류경력5년+</span >
                                                 </div>
                                             </div>
                                             <div class="line-14c"></div>
                                             <div class="frame-14d">
                                                 <span class="span-comment">멘토 코멘트</span>
                                                 <div class="frame-14e">
-                                                    <span class="span-text">미국과 싱가포르 유학경험을 통해 학생들이 현지에서 무엇이 필요한지 정확히 알고 있습니다. 싱가포르 사립대 졸업을 통해 학생들이 졸업 후 현지에서 취업까지 할 수 있도록 적극적으로 지원하도록 하겠습니다</span>
+                                                    <span class="span-text">미국과 싱가포르 유학경험을 통해 학생들이 현지에서 무엇이 필요한지 정확히 알고 있습니다. 싱가포르 사립대 졸업을 통해 학생들이 졸업 후 현지에서 취업까지 할 수 있도록 적극적으로 지원하도록 하겠습니다</span >
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="frame-a0">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd03.png" alt="">
-                                </div> -->
                             </li>
                         </ul>
                     </div>

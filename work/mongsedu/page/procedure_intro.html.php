@@ -31,68 +31,68 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="counsel_link">
+    <div class="link_area">
         <div class="container" data-aos="fade-up">
             <div class="procedure_link">
-				<li>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon1.png" alt="" class="icon">
 						<span class="count">1</span>
 					</div>
 					<p class="tit">말레이시아 국제학교</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon2.png" alt="" class="icon">
 						<span class="count">2</span>
 					</div>
 					<p class="tit">싱가포르 국제학교</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon3.png" alt="" class="icon">
 						<span class="count">3</span>
 					</div>
 					<p class="tit">싱가포르 국립대</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon4.png" alt="" class="icon">
 						<span class="count">4</span>
 					</div>
 					<p class="tit">싱가포르 사립대</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon5.png" alt="" class="icon">
 						<span class="count">5</span>
 					</div>
 					<p class="tit">싱가포르 예술대</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon6.png" alt="" class="icon">
 					</div>
 					<p class="tit">말레이시아 사립대</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
 					</div>
 					<p class="tit">말라야 국립대</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon8.png" alt="" class="icon">
 					</div>
 					<p class="tit">홍콩 대학</p>
-				</li>
-				<li>
+				</a>
+				<a href="" class="link">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
 					</div>
 					<p class="tit">UC 계열 주립대</p>
-				</li>
+				</a>
             </div>
         </div>
     </div>

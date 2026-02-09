@@ -276,7 +276,7 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                     <div class="frame-14f">
                         <div class="frame-150">
-                            <div class="tab_navbox frame-151">
+                            <div class="tab_navbox notab frame-151">
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22" class="tab_nav on frame-152">입학컨설팅</a>
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22_1" class="tab_nav frame-152">무료수속</a>
                             </div>

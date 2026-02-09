@@ -328,7 +328,7 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                     <div class="frame-14f">
                         <div class="frame-150">
-                            <div class="tab_navbox frame-151">
+                            <div class="tab_navbox notab frame-151">
                                 <div class="tab_nav on2 frame-152">무료 수속</div>
                             </div>
                             <div class="frame-157">

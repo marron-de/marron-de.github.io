@@ -29,7 +29,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="tooltip">
 									<button type="button" class="close_btn"></button>
                                     <div class="content">
-                                        <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
+                                        <span class="supporting-text">마음에 드는 상담을 공유해보세요</span >
                                     </div>
                                     <div class="div"></div>
                                 </div>
@@ -289,7 +289,7 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                     <div class="frame-14f">
                         <div class="frame-150">
-                            <div class="tab_navbox frame-151">
+                            <div class="tab_navbox notab frame-151">
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="tab_nav on frame-152">입학컨설팅</a>
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_nav frame-152">단일컨설팅</a>
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_2" class="tab_nav frame-152">자소서첨삭</a>
@@ -299,7 +299,7 @@ if (!defined('_EYOOM_')) exit;
                                     <div class="frame-159">
                                         <span class="span-text-15a">4,300,000원</span>
                                         <div class="frame-15b">
-                                            <span class="time-15c">* 합격 후 비자접수 별도납부</span>
+                                            <span class="time-15c">합격 후 비자접수 별도납부</span>
                                         </div>
                                     </div>
 									<p class="desc">

@@ -5,29 +5,9 @@
 if (!defined('_EYOOM_')) exit;
 ?>
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
-<style>
-    .mal-lei-si-a-dae-hag {
-        background: url("../theme/eb4_basic/image/sub/thumb_prcd23.png") no-repeat center;
-        background-size: cover;
-    }
-    .day-paid {
-        color:#979797;
-    }
-   .self-free-visit {
-        color:#212121;
-    }
-    .line-156 {
-        position: relative;
-        width: 76px;
-        height: 3px;
-        margin: -2px 0 0 204px;
-        background: url("https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-11-03/JHDYgm0oW4.png") no-repeat center;
-        background-size: cover;
-        z-index: 514;
-    }
-</style>
-<div class="sub-page page-procedure detail">
-    <div class="main-container">
+
+<div class="sub-page page-procedure detail page-detail">
+    <div class="main-container" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -47,8 +27,9 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
-                                        <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
+                                        <span class="supporting-text">마음에 드는 상담을 공유해보세요</span >
                                     </div>
                                     <div class="div"></div>
                                 </div>
@@ -75,114 +56,226 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div>
                 </div>
-                <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1" style="display:none;">
-                        <div class="tab">
+                <div class="section-c">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="#" class="show" id="tab-1">컨설팅 기본 정보</a></li>
-                                <li><a href="#" id="tab-2">컨설팅 가능 대학교</a></li>
-                                <li><a href="#" id="tab-3">컨설팅 비용</a></li>
-                                <li><a href="#" id="tab-4">서비스 내용</a></li>
+                                <li><a href="#sec01" class="show">서비스 소개</a></li>
+                                <li><a href="#sec02">학교 리스트</a></li>
+                                <li><a href="#sec03">서비스 포함 내용</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="classDetail_list tabs_cont">
+                    <div class="classDetail_list">
                         <ul class="panel">
                             <li id="content-1">
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">컨설팅 기본 정보</span>
-                                    <div class="frame-2c info">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f1"></div>
-                                                <span class="school-visit-counseling">NUS 국립대 및 HKU 홍콩대 출신 관리</span >
-                                            </div>
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f2"></div>
-                                                <span class="school-visit-counseling">온라인 ZOOM 실시간 소통</span >
-                                            </div>
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f3"></div>
-                                                <span class="school-visit-counseling">1주일 완성! 빠르고 효과적인 자소서 첨삭</span >
-                                            </div>
-                                            <div class="frame-2e1">
-                                                <div class="frame-2f4"></div>
-                                                <span class="school-visit-counseling">에세이 샘플 제공 및 첨삭 2회 서비스</span >
-                                            </div>
-                                        </div>
+								<div class="frame-section ver2 mb" id="sec01">
+									<div class="frame-27">
+										<span class="field-trip-intro">서비스안내</span>
+									</div>
+									<span class="field-trip-service">자소서 첨삭 서비스는 1주일 안에 빠르고 효과적으로 학생이 희망하는 전공과 분야에 따라 NUS 및 해당 대학 출신자들이 합격사례를 바탕으로 첨삭을 지도하는 서비스 입니다.</span >
+								</div>
+								<div class="frame-section ver2 mb">
+									<div class="frame-titbox">
+										<p class="frame-title">한눈에 보는 컨설팅 기본 정보</p>
+									</div>
+									<div class="experbox">
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon1.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														NUS 국립대 및 HKU 홍콩대 출신 관리
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon2.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														온라인 ZOOM 실시간 소통
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon3.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														1주일 완성! 빠르고 효과적인 자소서 첨삭
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon4.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt">
+														에세이 샘플 제공 및 첨삭 2회 서비스
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="frame-section ver3">
+									<div class="frame-titbox">
+										<p class="frame-title">
+											<span class="color">국내 1호, 사립대 교직원 출신의</span> 경험을 통한 수속관리
+										</p>
+									</div>
+									<div class="pointbox">
+										<p class="txt">국내 최다 합격사례 데이터 보유! 국내 유일, NUS출신 관리</p>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+                                <div class="frame-section mb" id="sec02">
+                                    <div class="frame-titbox between">
+                                        <span class="frame-title flex">
+											싱가포르 컨설팅 가능 대학교
+											<small>(3개 대학 선택)</small>
+										</span >
                                     </div>
+									<div class="school_listbox on">
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_NUS.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">NUS</p>
+												<p class="desc">National University of Singapore</p>
+											</div>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_NTU.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">NTU</p>
+												<p class="desc">Nanyang Technological University</p>
+											</div>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_SMU.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">SMU</p>
+												<p class="desc">Singapore Management University</p>
+											</div>
+										</div>
+									</div>
                                 </div>
-                                <div class="frame-25 point">
-                                    <div class="frame-26">
-                                        <div class="frame-27">
-                                            <span class="field-trip-intro">컨설팅 <b class="Allan"><img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/point.svg" alt="Point"></b></span>
-                                            <!-- <div class="tags-28">
-                                                <span class="best-29">BEST</span>
-                                            </div> -->
-                                        </div>
-                                        <span class="field-trip-service">1주일안에 완성! 단 2회 미팅으로 끝나는 특별한 에세이 지도</span >
+                                <div class="frame-section">
+                                    <div class="frame-titbox between">
+                                        <span class="frame-title flex">
+											홍콩 컨설팅 가능 대학교
+											<small>(3개 대학 선택)</small>
+										</span>
                                     </div>
-                                </div>
-                                <div class="frame-25">
-                                    <div class="frame-26">
-                                        <div class="frame-27">
-                                            <span class="field-trip-intro">서비스안내</span>
-                                            <!-- <div class="tags-28">
-                                                <span class="best-29">BEST</span>
-                                            </div> -->
-                                        </div>
-                                        <span class="field-trip-service">자소서 첨삭 서비스는 1주일 안에 빠르고 효과적으로 학생이 희망하는 전공과 분야에 따라 NUS 및 해당 대학 출신자들이 합격사례를 바탕으로 첨삭을 지도하는 서비스 입니다.</span>
-                                    </div>
+									<div class="school_listbox on">
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_HKU.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">HKU</p>
+												<p class="desc">The University of Hong Kong</p>
+											</div>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_HKUST.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">HKUST</p>
+												<p class="desc">The Hong Kong University of Science and Technology</p>
+											</div>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_CUHK.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">CUHK</p>
+												<p class="desc">The Chinese University of Hong Kong</p>
+											</div>
+										</div>
+									</div>
                                 </div>
                                 <div class="line-2a"></div>
-                                <div class="frame-39">
-                                    <div class="frame-3a">
-                                        <span class="school-list-for-field-trip">선택 가능대학교</span >
-                                        <!-- <div class="frame-3b">
-                                            <span class="view-all-30">30개 전체보기</span>
-                                            <div class="frame-3c"></div>
-                                        </div> -->
-                                    </div>
-                                    <div class="univ_list">
-                                        <ul>
-                                            <li>
-                                                <span>싱가포르 :</span>
-                                                <p>NUS, NTU, SMU, SUTD (4개교)</p>
-                                            </li>
-                                            <li>
-                                                <span>홍콩 :</span>
-                                                <p>HKU, HKUST, CUHK (3개교)</p>
-                                            </li>
-                                        </ul>
-                                        <p class="guide">* 위 학교에서 1개 대학 선택이 가능합니다</p>
-                                    </div>
+                                <div class="frame-section ver2" id="sec03">
+                                    <span class="frame-title">서비스 포함 내용</span>
+									<ul class="service_box">
+										<li class="service_item">
+											<p class="tit">
+												1. 학생 개인정보 파악 및 서류검토
+											</p>
+											<p class="desc">1회</p>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												2. 자소서 샘플 제공 및 가이드
+											</p>
+											<p class="desc">1회</p>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												3. 자소서 최종 첨삭 지도
+											</p>
+											<p class="desc">1~2회</p>
+										</li>
+									</ul>
+									<div class="note_txtbox">
+										<p class="note_txt">* 자소서 첨삭은 1개교 기준이며, 최대 2~3회 면담이 주어집니다.</p>
+										<div class="note_txt">* 최대한 빠르고 효과적인 서비스 제공을 위해, 학생의 학력 및 성적 파악부터 시작됩니다.</div>
+									</div>
                                 </div>
-                                <div class="line-9f"></div>
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">컨설팅 서비스 내용</span>
-                                    <div class="frame-2c">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">1. 학생 개인정보 파악 및 서류검토 - 1회</span >
-                                                <div class="frame-2f"></div>
-                                            </div>
-                                            <div class="frame-30">
-                                                <span class="curriculum-facility-tour">2. 자소서 샘플 제공 및 가이드 - 1회</span >
-                                                <div class="frame-31"></div>
-                                            </div>
-                                            <div class="frame-32">
-                                                <span class="local-team-counseling-interpreting">3. 자소서 최종 첨삭 지도  - 1~2회</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="frame-section ver2 mt">
+									<div class="frame-titbox between">
+                                    	<span class="frame-title">수속하기 전, 담당자와 상담하기</span>
+										<a href="https://pf.kakao.com/_fxmxmWV" class="kakao_link" target="_blank">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_kakao.png" alt="" class="icon">
+											<span class="txt">빠른 상담</span>
+										</a>
+									</div>
+									<div class="swiper question_swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
 
-                                    <div class="guide">
-                                        <ul>
-                                            <li>* 자소서 첨삭은 1개교 기준이며, 최대 2~3회 면담이 주어집니다. </li>
-                                            <li>* 최대한 빠르고 효과적인 서비스 제공을 위해, 학생의 학력 및 성적 파악부터 시작됩니다.</li>
-                                        </ul>
-                                    </div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+											</div>
+											<div class="swiper-slide question">
+												<p class="txt">질문 내용이 들어갑니다.</p>
+											</div>
+										</div>
+									</div>
                                 </div>
                             </li>
                         </ul>
@@ -191,21 +284,15 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="floating_cont sidebar">
                 <div class="floating_wrap">
-                    <div class="sseom-neol">
-                        <div class="mal-lei-si-a-dae-hag"></div>
+                    <div class="sseom-neol ver2">
+                        <div class="mal-lei-si-a-dae-hag prcd03"></div>
                     </div>
                     <div class="frame-14f">
                         <div class="frame-150">
-                            <div class="frame-151">
-                                <div class="frame-152">
-                                    <span class="day-paid" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail23'" style="cursor:pointer;">입학컨설팅</span>
-                                    <span class="day-paid-153" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail23_1'" style="cursor:pointer;">단일컨설팅</span>
-                                    <span class="self-free-visit" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail23_2'" style="cursor:pointer;">자소서첨삭</span>
-                                </div>
-                                <div class="group-154">
-                                    <div class="line-155"></div>
-                                    <div class="line-156"></div>
-                                </div>
+                            <div class="tab_navbox notab frame-151">
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="tab_nav frame-152">입학컨설팅</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_nav frame-152">단일컨설팅</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_2" class="tab_nav on frame-152">자소서첨삭</a>
                             </div>
                             <div class="frame-157">
                                 <div class="frame-158">
@@ -215,13 +302,12 @@ if (!defined('_EYOOM_')) exit;
                                             <span class="time-15c">추가비용 없음</span>
                                         </div>
                                     </div>
+									<p class="desc">
+										1개교 선택, 1주일 완성
+									</p>
                                 </div>
                                 <div class="frame-15d">
                                     <div class="frame-15e">
-                                        <span class="interview">
-                                            1개교 선택, 1주일 완성
-                                        </span>
-                                        <div class="line-15f"></div>
                                         <span class="interview">
                                             자소서 첨삭 서비스는 1주일 안에 빠르고 효과적으로 학생이 희망하는 전공과 분야에 따라 NUS 및 해당 대학 출신자들이 합격사례를 바탕으로 첨삭을 지도하는 서비스 입니다.
                                         </span >

@@ -8,9 +8,8 @@ if (!defined('_EYOOM_')) exit;
 
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
 
-
-<div class="sub-page page-procedure detail">
-    <div class="main-container">
+<div class="sub-page page-counsel detail page-detail">
+    <div class="main-container" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -30,6 +29,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -58,153 +58,189 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div> -->
                 </div>
-                <div class="section-c cd tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
-                        </div>
-                    </div>
+                
+                <div class="section-c">
                     <div class="classDetail_list">
                         <ul class="panel">
                             <li id="content-1">
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담 기본안내</span>
-                                    <div class="frame-2c info">
-                                        <ul class="frame-2d">
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd1"></div>
-                                                <span>대표상담사</span>
-                                                <p>김소연 실장</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd2"></div>
-                                                <span>상담방식</span>
-                                                <p>서울 강남 (방문) 혹은 비대면 온라인</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd3"></div>
-                                                <span>장소</span>
-                                                <p>강남역 도보 1분거리 (몽선생사무실)</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd4"></div>
-                                                <span>상담비용</span>
-                                                <p>무료</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="line-2a"></div>
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담안내</span>
-                                    <div class="frame-2c cd">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">
-                                                    송도, 서강 (아시아글로벌캠퍼스)는 해외로 가지않고 한국에서 미국대학을 입학하거나 편입을 할 수 있는 프로그램으로 많은 장점이 있습니다. <br/>
-                                                    한국에서 해외대학 입학하는 방법을 상세히 확인할 수 있습니다
-                                                </span >
-                                                <div class="frame-2e sm">
-                                                    <span class="service-inclusions">대상학교</span>
-                                                    <ul>
-                                                        <li>
-                                                            <span>송도</span>
-                                                            <p>유타, 뉴욕주립대, 조지메이슨, FIT  등</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>서강</span>
-                                                            <p>서강글로벌패스웨이 (편입프로그램)</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 기본 안내</p>
+									</div>
+									<div class="experbox">
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon7.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">대표 상담사</p>
+												<p class="desc">
+													<span class="txt">
+														김소연 실장
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon8.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담방식</p>
+												<p class="desc">
+													<span class="txt">
+														서울강남 (방문) 혹은 비대면 온라인
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon9.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담장소</p>
+												<p class="desc">
+													<span class="txt">
+														강남역 도보 1분거리
+													</span>
+													<a href="https://naver.me/Ix0CWeKc" class="tag" target="_blank">지도보기</a>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon5.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담비용</p>
+												<p class="desc">
+													<span class="txt">
+														0원 무료 (1시간 상담보장)
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver3">
+									<div class="frame-titbox gap3">
+										<p class="frame-title">상담학교 리스트</p>
+										<p class="frame-desc3">
+											송도, 서강 (아시아글로벌캠퍼스)는 해외로 가지않고 한국에서 미국대학을 입학하거나 편입을 할 수 있는 프로그램으로 많은 장점이 있습니다. 
+											한국에서 해외대학 입학하는 방법을 상세히 확인할 수 있습니다
+										</p>
+									</div>
+									<div class="counselingbox">
+										<div class="box_tit">상담 가능학교</div>
+										<div class="box_list">
+											<div class="item">
+												<p class="tit">송도</p>
+												<p class="desc">
+													<span class="txt">유타, 뉴욕주립대, 조지메이슨, FIT 등</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">서강</p>
+												<p class="desc">
+													<span class="txt">서강글로벌패스웨이 (편입프로그램)</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 내용</p>
+									</div>
+									<div class="counselingbox2">
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img10.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												대학별 상세 입학조건, 학비 체크 (30분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img25.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												한국에 있는 해외대학 약 5개 상세 확인
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img7.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												편입학 VS 패스웨이 프로그램 비교 (20분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img26.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												송도 글로벌 캠퍼스와 서강의 프로그램 차이비교
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img12.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												입학시기 및 영어 준비 방법 안내 (10분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img15.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												대학별 입학시기, 공인시험점수 요건 및 공부법 안내
+											</p>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+                                <div class="frame-section">
+                                    <div class="frame-titbox">
+                                        <div class="frame-titbox flex">
+                                            <span class="frame-title">상담사 소개</span>
+                                            <div class="frame-tag">
+                                                <span>HOT 인기멘토</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="line-38"></div>
-                                <!-- <div class="frame-39">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd02.png" alt="">
-                                </div> -->
-                                <div class="frame-2b cd">
-                                    <span class="service-inclusions">상담내용</span>
-                                    <div class="frame-2c">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">대학별 상세 입학조건, 학비 체크 (30분)</span >
-                                                <div class="frame-2f"></div>
-                                            </div>
-                                            <div class="frame-30">
-                                                <span class="curriculum-facility-tour">한국에 있는 해외대학 약 5개 상세 확인</span >
-                                                <div class="frame-31"></div>
-                                            </div>
-                                            <div class="frame-32">
-                                                <span class="local-team-counseling-interpreting">편입학 VS 패스웨이 프로그램 비교 (20분)</span >
-                                                <div class="frame-33"></div>
-                                            </div>
-                                            <div class="frame-34">
-                                                <span class="residential-area-tour">송도 글로벌 캠퍼스와 서강의 프로그램 차이비교</span >
-                                                <div class="frame-35"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">입학시기 및 영어준비방법 안내 (10분)</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">대학별 입학시기, 공인시험점수 요건 및 공부법 안내</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="line-9f"></div>
-                                <div class="frame-13c cd">
-                                    <div class="frame-13d">
-                                        <div class="frame-13e">
-                                            <span class="span-introduction">상담사 소개</span>
-                                            <div class="tags-13f">
-                                                <span class="span-hot-mentor">HOT 인기멘토</span>
-                                            </div>
-                                        </div>
-                                        <!-- <span class="span-description">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span > -->
                                     </div>
                                     <div class="frame-140">
                                         <div class="frame-141">
                                             <div class="frame-142">
-                                                <div class="frame-143">
-                                                    <div class="rectangle-144 cd10"></div>
-                                                </div>
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit08.png" alt="" class="img">
                                             </div>
                                             <div class="frame-145">
                                                 <span class="span-mentor">김소연 실장</span >
-                                                <span class="span-residence"> </span>
                                             </div>
                                         </div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">
                                                     <span class="span-career">주요이력</span>
-                                                    <!-- <div class="tags-149">
-                                                        <span class="span-location">말레이시아</span>
-                                                    </div> -->
+                                                    <div class="tags-149">
+                                                        <span class="span-location">한국</span>
+                                                    </div>
                                                 </div>
                                                 <div class="frame-14a">
                                                     <span class="span-education">‧ Kaplan 재단 교직원 경력 5년</span >
-                                                    <span class="span-education-14b">‧ 미국 대학 행정/수속 전문</span >
-                                                    <span class="span-consulting">‧ 영국 에식스대학교 졸업</span >
+                                                    <span class="span-education">‧ 미국 대학 행정/수속 전문</span >
+                                                    <span class="span-education">‧ 영국 에식스대학교 졸업</span >
                                                 </div>
                                             </div>
                                             <div class="line-14c"></div>
                                             <div class="frame-14d">
                                                 <span class="span-comment">멘토 코멘트</span>
                                                 <div class="frame-14e">
-                                                    <span class="span-text">아시아에서 해외대학 캠퍼스를 졸업하고, KAPLAN 교육재단에서 5년 동안 교직원으로 활동하며 실제로 같은 상황의 경험을 해왔습니다. 학생들의 진로가 정말 현실적으로 나아질 수 있도록 책임감 있는 상담을 약속합니다.</span>
+                                                    <span class="span-text">아시아에서 해외대학 캠퍼스를 졸업하고, KAPLAN 교육재단에서 5년 동안 교직원으로 활동하며 실제로 같은 상황의 경험을 해왔습니다. 학생들의 진로가 정말 현실적으로 나아질 수 있도록 책임감 있는 상담을 약속합니다.</span >
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="frame-a0">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd03.png" alt="">
-                                </div> -->
                             </li>
                         </ul>
                     </div>

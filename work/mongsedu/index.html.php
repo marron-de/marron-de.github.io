@@ -605,7 +605,7 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail05'">			
                                 <div class="img_area">
-                                    <p class="nation">싱가포르</p>
+                                    <p class="nation">말레이시아/싱가포르</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel05.jpg" alt="입학시험 모의테스트 상담" class="img">
 									<div class="shape color5"></div>
 									<div class="img_bottom">
@@ -623,7 +623,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="alert('전문적인 상담사 배정을 준비중입니다.');">	
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail11'">	
                                 <div class="img_area">
                                     <p class="nation">베트남/태국</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel04.jpg" alt="베트남/태국 국제학교" class="img">

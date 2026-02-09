@@ -8,9 +8,8 @@ if (!defined('_EYOOM_')) exit;
 
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
 
-
-<div class="sub-page page-procedure detail">
-    <div class="main-container">
+<div class="sub-page page-counsel detail page-detail">
+    <div class="main-container" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -30,6 +29,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -58,120 +58,158 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div> -->
                 </div>
-                <div class="section-c cd tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
-                        </div>
-                    </div>
+                <div class="section-c">
                     <div class="classDetail_list">
                         <ul class="panel">
                             <li id="content-1">
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담 기본안내</span>
-                                    <div class="frame-2c info">
-                                        <ul class="frame-2d">
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd1"></div>
-                                                <span>대표상담사</span>
-                                                <p>몽선생 대표원장</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd2"></div>
-                                                <span>상담방식</span>
-                                                <p>서울강남 (방문) 혹은 비대면 온라인</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd3"></div>
-                                                <span>장소</span>
-                                                <p>강남역 도보 1분거리</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd4"></div>
-                                                <span>상담비용</span>
-                                                <p>무료</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="line-2a"></div>
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담안내</span>
-                                    <div class="frame-2c cd">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">
-                                                    싱가포르에 있는 주요 30여개 중에 로컬국제학교와 글로벌 국제학교의 차이점 및 특징을 비교하고, <br/>
-                                                    비용 예산과 아이 상황에 따라 가장 입학하기 좋은 국제학교를 추천받을 수 있습니다.
-                                                </span >
-                                                <div class="frame-2e sm">
-                                                    <span class="service-inclusions">대상학교</span>
-                                                    <ul>
-                                                        <li>
-                                                            <span>글로벌 국제학교</span>
-                                                            <p>UWC, SAS, SAIS, AIS, CIS, XCL, Eton 외 20여개</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>로컬 국제학교</span>
-                                                            <p>화총, 세인트조셉 등</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 기본 안내</p>
+									</div>
+									<div class="experbox">
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon7.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">대표 상담사</p>
+												<p class="desc">
+													<span class="txt">
+														몽선생 대표원장
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon8.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담방식</p>
+												<p class="desc">
+													<span class="txt">
+														서울강남 (방문) 혹은 비대면 온라인
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon9.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담장소</p>
+												<p class="desc">
+													<span class="txt">
+														강남역 도보 1분거리
+													</span>
+													<a href="https://naver.me/Ix0CWeKc" class="tag" target="_blank">지도보기</a>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon5.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담비용</p>
+												<p class="desc">
+													<span class="txt">
+														0원 무료 (1시간 상담보장)
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver3">
+									<div class="frame-titbox gap3">
+										<p class="frame-title">상담학교 리스트</p>
+										<p class="frame-desc3">
+											싱가포르에 있는 주요 30여개 중에 로컬국제학교와 글로벌 국제학교의 차이점 및 특징을 비교하고,  비용 예산과 아이 상황에 따라 가장 입학하기 좋은 국제학교를 추천받을 수 있습니다.
+										</p>
+									</div>
+									<div class="counselingbox">
+										<div class="box_tit">상담 가능학교</div>
+										<div class="box_list ver2">
+											<div class="item">
+												<p class="tit">글로벌 국제학교</p>
+												<p class="desc">
+													<span class="txt">UWC, SAS, SAIS, AIS, CIS, XCL, Eton 외 20여개</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">로컬 국제학교</p>
+												<p class="desc">
+													<span class="txt">화총, 세인트조셉 등</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 내용</p>
+									</div>
+									<div class="counselingbox2">
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img9.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												싱가포르 국제학교 비교 분석 및 학교별 커리큘럼 (20분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img2.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												글로벌학교, 로컬국제학교 등 약 20여개 학교 상세비교
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img3.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												거주지, 비용예산 및 정착관련 상담 (20분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img4.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												학교 위치에 따른 추천거주지, 비용예산 확인
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img5.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												커리큘럼에 따른 진로로드맵 (5분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img6.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												IB, AP 등의 특징, 대학 진로상담 및 국제학교 로드맵
+											</p>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+                                <div class="frame-section">
+                                    <div class="frame-titbox">
+                                        <div class="frame-titbox flex">
+                                            <span class="frame-title">상담사 소개</span>
+                                            <div class="frame-tag">
+                                                <span>HOT 인기멘토</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="line-38"></div>
-                                <!-- <div class="frame-39">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd02.png" alt="">
-                                </div> -->
-                                <div class="frame-2b cd">
-                                    <span class="service-inclusions">상담내용</span>
-                                    <div class="frame-2c">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">싱가포르 국제학교 비교 분석 및 학교별 커리큘럼 (20분)</span >
-                                                <div class="frame-2f"></div>
-                                            </div>
-                                            <div class="frame-30">
-                                                <span class="curriculum-facility-tour">글로벌학교, 로컬국제학교 등 약 20여개 학교 상세비교</span >
-                                                <div class="frame-31"></div>
-                                            </div>
-                                            <div class="frame-32">
-                                                <span class="local-team-counseling-interpreting">거주지, 비용예산 및 정착관련 상담 (20분)</span >
-                                                <div class="frame-33"></div>
-                                            </div>
-                                            <div class="frame-34">
-                                                <span class="residential-area-tour">학교 위치에 따른 추천거주지, 비용예산 확인</span >
-                                                <div class="frame-35"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">커리큘럼에 따른 진로로드맵 (5분)</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">IB, AP 등의 특징, 대학 진로상담 및 국제학교 로드맵</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="line-9f"></div>
-                                <div class="frame-13c cd">
-                                    <div class="frame-13d">
-                                        <div class="frame-13e">
-                                            <span class="span-introduction">상담사 소개</span>
-                                            <div class="tags-13f">
-                                                <span class="span-hot-mentor">HOT 인기멘토</span>
-                                            </div>
-                                        </div>
-                                        <!-- <span class="span-description">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span > -->
                                     </div>
                                     <div class="frame-140">
                                         <div class="frame-141">
                                             <div class="frame-142">
-                                                <div class="frame-143">
-                                                    <div class="rectangle-144 cd03"></div>
-                                                </div>
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit01.png" alt="" class="img">
                                             </div>
                                             <div class="frame-145">
                                                 <span class="span-mentor">임홍철 대표원장</span >
@@ -182,30 +220,28 @@ if (!defined('_EYOOM_')) exit;
                                             <div class="frame-147">
                                                 <div class="frame-148">
                                                     <span class="span-career">주요이력</span>
-                                                    <!-- <div class="tags-149">
-                                                        <span class="span-location">말레이시아</span>
-                                                    </div> -->
+                                                    <div class="tags-149">
+                                                        <span class="span-location">싱가포르</span>
+                                                    </div>
                                                 </div>
-                                                <div class="frame-14a">
-                                                    <span class="span-education">‧ 서강대학교 경영대학원, 석사 MBA (재학)</span >
-                                                    <span class="span-education-14b">‧ 영국 Coventry 대학, 학사 Business Marketing (졸업)</span >
-                                                    <span class="span-consulting">‧ 싱가폴교육기관 교직원 경력 10년</span >
-                                                    <span class="span-coordinator">‧ 교육부 Edutrust 감사 업무 팀장 역임</span >
+                                               <div class="frame-14a">
+                                                    <span class="span-education">‧ 현) 주식회사 몽선생대표</span>
+                                                    <span class="span-education-14b">‧ 현) SM글로벌 에듀케이션 원장</span>
+                                                    <span class="span-consulting">‧ 전) 사립대학 REG 그룹, 한국사무소 소장</span>
+                                                    <span class="span-coordinator">‧ 전) 싱가포르 교육부 Edutrust 감사 업무 팀장</span>
+                                                    <span class="span-coordinator">‧ 전) 싱가포르 사립대학 총괄매니저 10년 경력</span>
                                                 </div>
                                             </div>
                                             <div class="line-14c"></div>
                                             <div class="frame-14d">
                                                 <span class="span-comment">멘토 코멘트</span>
                                                 <div class="frame-14e">
-                                                    <span class="span-text">싱가포르는 저의 제2의 고향과 같습니다. 13년 동안 체류하면서 현지에서 일어나는 많은 일들을 직접 경험했고 아이 둘을 직접 키우며 국제학교에 대한 고민을 하고 있습니다. 가장 현실적인 상담을 약속합니다</span>
+                                                    <span class="span-text">실제 경험 노하우를 바탕으로 모든 학생들이 성공유학이라는 목표를 이루도록 끈임없이 지도하는 것이 저희 유학원의 목표 입니다. 단 한명의 낙오자가 없도록 아낌없이 지원하겠습니다.</span >
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="frame-a0">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd03.png" alt="">
-                                </div> -->
                             </li>
                         </ul>
                     </div>
@@ -237,7 +273,7 @@ if (!defined('_EYOOM_')) exit;
                                             </li>
                                             <li>
                                                 <span>상담방식</span>
-                                                <p>서울 강남 (방문) 혹은 비대면 온라인</p>
+                                                <p>서울 강남 혹은 온라인상담</p>
                                             </li>
                                             <li>
                                                 <span>주요 상담분야</span>

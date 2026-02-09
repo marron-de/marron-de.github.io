@@ -18,7 +18,12 @@ if (!defined('_EYOOM_')) exit;
 		/*탭메뉴*/
 		$('.tabs').each(function(i) {
 			var oTab = $(this);
-			var tabIndex = $(this).find('.show').attr('id').match(/\d+$/);
+			var active = $(this).find('.tab_tit a.show');
+			if (!active.length) return;
+
+			var tabIndex = active.attr('id').match(/\d+$/);
+
+			// var tabIndex = $(this).find('.show').attr('id').match(/\d+$/);
 
 			$(this).find('.panel').find('#content-' + tabIndex[0]).show();
 
@@ -37,8 +42,7 @@ if (!defined('_EYOOM_')) exit;
 			return false;
 			});
 
-		});       
-
+		});   
 	</script>
 	<script>
 			$(document).ready(function(){

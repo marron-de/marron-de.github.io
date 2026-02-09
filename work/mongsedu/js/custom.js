@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', updateLayoutMargin);
 
 // tab function
 $(document).ready(function () {
-	$(".tab_nav").click(function () {
+	$(".tab_navbox:not(.notab) .tab_nav").click(function () {
 		let clickedTab = $(this);
 		let tabWrap = clickedTab.closest(".tab_wrap");
 		let allTabs = tabWrap.find(".tab_nav");
@@ -113,12 +113,12 @@ $(document).ready(function () {
 
 // modal
 $(".cm_modal .cm_modal_close").click(function () {
-	$("body").removeClass("modal_open")
+	$("body").removeClass("hidden")
 	$(".cm_modal").removeClass("show")
 })
 $(document).mouseup(function (e) {
 	if ($(".cm_modal .cm_modal_box").has(e.target).length === 0) {
-		$("body").removeClass("modal_open")
+		$("body").removeClass("hidden")
 		$(".cm_modal").removeClass("show")
 	}
 });
@@ -243,15 +243,19 @@ $(document).mouseup(function (e) {
 
 // header nav
 $(function () {
-  const search = window.location.search;
+	const search = window.location.search;
 
-  if (search.indexOf('pid=class_') !== -1) {
-    $('.header .h_inner .h_nav:not(.h_side) > li').eq(3).addClass('active');
-  }
+	if (search.indexOf('pid=counsel_') !== -1) {
+		$('.header .h_inner .h_nav:not(.h_side) > li').eq(1).addClass('active');
+	}
 
-  if (search.indexOf('pid=procedure_') !== -1) {
-    $('.header .h_inner .h_nav:not(.h_side) > li').eq(2).addClass('active');
-  }
+	if (search.indexOf('pid=procedure_') !== -1) {
+		$('.header .h_inner .h_nav:not(.h_side) > li').eq(2).addClass('active');
+	}
+
+	if (search.indexOf('pid=class_') !== -1) {
+		$('.header .h_inner .h_nav:not(.h_side) > li').eq(3).addClass('active');
+	}
 });
 
 
@@ -295,6 +299,51 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 
 
 
+/* 상담하기 */
+// 선생님 스와이퍼
+$(document).ready(function () {
+	if ($(window).width() > 1080) {
+		$('.mentor_swiper').each(function () {
+			new Swiper(this, {
+				observer: true,
+				observeParents: true,
+				// slidesPerView: 'auto',
+				slidesPerView: 4,
+				speed: 500,
+				spaceBetween: 10,
+				grabCursor: true,
+				navigation: {
+					nextEl: $(this).closest('.mentor_wrap').find('.mentor_controls .next_btn')[0],
+					prevEl: $(this).closest('.mentor_wrap').find('.mentor_controls .prev_btn')[0],
+				},
+			});
+		});
+	}
+});
+
+// 선생님 상세 팝업
+const mentorpop_swiper = new Swiper('.mentorpop_swiper', {
+	observer: true,
+	observeParents: true,
+	speed: 500,
+	spaceBetween: 40,
+	autoHeight: true,
+	navigation: {
+		nextEl: ".mentor_modal .next_btn",
+		prevEl: ".mentor_modal .prev_btn",
+	},
+})
+function mentor_modal(i) {
+	$("body").addClass('hidden');
+	$(".mentor_modal").addClass('show');
+	mentorpop_swiper.slideTo(i-1, 0);
+}
+$('.mentor_modal .next_btn, .mentor_modal .prev_btn').on('mouseup', function(e){
+	e.stopPropagation();
+});
+
+
+
 /* 상세	*/
 $(".page-detail .tooltip .close_btn").click(function () {
 	$(".page-detail .tooltip").addClass("hide")
@@ -332,7 +381,6 @@ $(function () {
 	});
 });
 
-
 // 학교 리스트
 $(".school_moreview").click(function () {
 	$(this).toggleClass('on');
@@ -341,7 +389,6 @@ $(".school_moreview").click(function () {
 $(".school_moreview2").click(function () {
 	$(this).closest('.school_listbox').addClass('on');
 })
-
 
 // 질문 스와이퍼
 const question_swiper = new Swiper('.question_swiper', {

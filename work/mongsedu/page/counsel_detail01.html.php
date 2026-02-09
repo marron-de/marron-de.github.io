@@ -8,9 +8,8 @@ if (!defined('_EYOOM_')) exit;
 
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
 
-
-<div class="sub-page page-procedure detail">
-    <div class="main-container">
+<div class="sub-page page-counsel detail page-detail">
+    <div class="main-container" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -30,6 +29,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -46,133 +46,162 @@ if (!defined('_EYOOM_')) exit;
                         <span
                             class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong">현지 거주 15년 경력자의 경험담 제공</span >
                     </div>
-                    <!-- <div class="frame-1d">
-                        <div class="tags-1e">
-                            <span class="best">BEST</span>
-                        </div>
-                        <div class="keulraeseu">
-                            <span class="yeong-eo">1:1 클래스</span>
-                        </div>
-                        <div class="frame-1f">
-                            <span class="text-16">영어</span>
-                        </div>
-                    </div> -->
                 </div>
-                <div class="section-c cd tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
-                        </div>
-                    </div>
+                <div class="section-c">
                     <div class="classDetail_list">
                         <ul class="panel">
                             <li id="content-1">
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담 기본안내</span>
-                                    <div class="frame-2c info">
-                                        <ul class="frame-2d">
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd1"></div>
-                                                <span>대표상담사</span>
-                                                <p>강종민 현지 지사장</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd2"></div>
-                                                <span>상담방식</span>
-                                                <p>서울강남 (방문) 혹은 비대면 온라인</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd3"></div>
-                                                <span>장소</span>
-                                                <p>강남역 도보 1분거리</p>
-                                            </li>
-                                            <li class="frame-2e1">
-                                                <div class="frame-cd4"></div>
-                                                <span>상담비용</span>
-                                                <p>0원 무료 (1시간 상담보장)</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="line-2a"></div>
-                                <div class="frame-2b">
-                                    <span class="service-inclusions">상담안내</span>
-                                    <div class="frame-2c cd">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">
-                                                    말레이시아 쿠알라룸프의 주요 40여개 중에 국제학교의 차이점 및 특징을 비교하고,<br/>
-                                                    비용 예산과 아이 상황에 따라 가장 입학하기 좋은 국제학교를 추천받을 수 있습니다. 
-                                                </span >
-                                                <div class="frame-2e sm">
-                                                    <span class="service-inclusions">대상학교</span>
-                                                    <ul>
-                                                        <li>
-                                                            <span>1티어</span>
-                                                            <p>가든, MKIS, ISKL, BSKL, 앨리스스미스</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>2~3티어</span>
-                                                            <p>세인트조셉, ISP, 텐비, 킹헨리, 앱솜, 오아시스, 선웨이 외 20여개</p>
-                                                        </li>
-                                                        <li><p class="guide">(말레이시아의 모든 국제학교 상담가능)</p></li>
-                                                    </ul>
-                                                </div>
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 기본 안내</p>
+									</div>
+									<div class="experbox">
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon7.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">대표 상담사</p>
+												<p class="desc">
+													<span class="txt">
+														강종민 현지 지사장
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon8.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담방식</p>
+												<p class="desc">
+													<span class="txt">
+														서울강남 (방문) 혹은 비대면 온라인
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon9.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담장소</p>
+												<p class="desc">
+													<span class="txt">
+														강남역 도보 1분거리
+													</span>
+													<a href="https://naver.me/Ix0CWeKc" class="tag" target="_blank">지도보기</a>
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon5.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="tit">상담비용</p>
+												<p class="desc">
+													<span class="txt">
+														0원 무료 (1시간 상담보장)
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver3">
+									<div class="frame-titbox gap3">
+										<p class="frame-title">상담학교 리스트</p>
+										<p class="frame-desc3">
+											말레이시아 국제학교 상담은 쿠알라룸프 주요 학교 50여개를 직접적으로 비교할 수 있고, 추천주거지와 <br>
+											유학비용예산까지 전체적인 유학정보를 현지 지사장을 통해 확인할 수 있습니다.
+										</p>
+									</div>
+									<div class="counselingbox">
+										<div class="box_tit">상담 가능학교</div>
+										<div class="box_list">
+											<div class="item">
+												<p class="tit">1 티어</p>
+												<p class="desc">
+													<span class="txt">가든, MKIS, ISKL, BSKL, 앨리스스미스</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">2~3 티어</p>
+												<p class="desc">
+													<span class="txt">세인트조셉, ISP, 텐비, 킹헨리, 앱솜, 오아시스, 선웨이 외 20여개</span>
+													<span class="small">(말레이시아의 모든 국제학교 상담가능)</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+								<div class="frame-section ver2">
+									<div class="frame-titbox">
+										<p class="frame-title">상담 내용</p>
+									</div>
+									<div class="counselingbox2">
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img1.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												말레이시아 국제학교 비교 분석 및 학교별 커리큘럼 (20분)	
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img2.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												약 40여개 학교 커리큘럼 및 연령대별 추천학교 선정
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img3.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												거주지, 비용예산 및 정착관련 상담 (20분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img4.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												학교 위치에 따른 추천거주지, 비용예산 확인
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img5.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												커리큘럼에 따른 진로로드맵 (5분)
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img6.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												영국A레벨, IB등에 따라 대학 진로상담 및 국제학교 로드맵
+											</p>
+										</div>
+									</div>
+								</div>
+                                <div class="line-2a"></div>	
+                                <div class="frame-section">
+                                    <div class="frame-titbox">
+                                        <div class="frame-titbox flex">
+                                            <span class="frame-title">상담사 소개</span>
+                                            <div class="frame-tag">
+                                                <span>HOT 인기멘토</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="line-38"></div>
-                                <!-- <div class="frame-39">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd02.png" alt="">
-                                </div> -->
-                                <div class="frame-2b cd">
-                                    <span class="service-inclusions">상담내용</span>
-                                    <div class="frame-2c">
-                                        <div class="frame-2d">
-                                            <div class="frame-2e">
-                                                <span class="school-visit-counseling">말레이시아 국제학교 비교 분석 및 학교별 커리큘럼 (20분)</span >
-                                                <div class="frame-2f"></div>
-                                            </div>
-                                            <div class="frame-30">
-                                                <span class="curriculum-facility-tour">약 40여개 학교 커리큘럼 및 연령대별 추천학교 선정</span >
-                                                <div class="frame-31"></div>
-                                            </div>
-                                            <div class="frame-32">
-                                                <span class="local-team-counseling-interpreting">거주지, 비용예산 및 정착관련 상담 (20분)       </span >
-                                                <div class="frame-33"></div>
-                                            </div>
-                                            <div class="frame-34">
-                                                <span class="residential-area-tour">학교 위치에 따른 추천거주지, 비용예산 확인</span >
-                                                <div class="frame-35"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide">커리큘럼에 따른 진로로드맵 (5분)</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                            <div class="frame-36">
-                                                <span class="shopping-medical-education-infrastructure-guide"> 영국A레벨, IB등에 따라 대학 진로상담 및 국제학교 로드맵</span >
-                                                <div class="frame-37"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="line-9f"></div>
-                                <div class="frame-13c cd">
-                                    <div class="frame-13d">
-                                        <div class="frame-13e">
-                                            <span class="span-introduction">상담사 소개</span>
-                                            <div class="tags-13f">
-                                                <span class="span-hot-mentor">HOT 인기멘토</span>
-                                            </div>
-                                        </div>
-                                        <!-- <span class="span-description">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span > -->
+                                        <span class="frame-desc">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span >
                                     </div>
                                     <div class="frame-140">
                                         <div class="frame-141">
                                             <div class="frame-142">
-                                                <div class="frame-143">
-                                                    <div class="rectangle-144 cd01"></div>
-                                                </div>
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit010.png" alt="" class="img">
                                             </div>
                                             <div class="frame-145">
                                                 <span class="span-mentor">강종민 팀장</span >
@@ -189,9 +218,9 @@ if (!defined('_EYOOM_')) exit;
                                                 </div>
                                                 <div class="frame-14a">
                                                     <span class="span-education">‧ 말레이시아 헬프 대학교 졸업 (University of Derby)</span >
-                                                    <span class="span-education-14b">‧ 세기 대학원 졸업 (University of Sunderland)</span >
-                                                    <span class="span-consulting">‧ 10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)</span >
-                                                    <span class="span-coordinator">‧ 한국 유학생들을 관리하는 현지 코디네이터로 활동</span >
+                                                    <span class="span-education">‧ 세기 대학원 졸업 (University of Sunderland)</span >
+                                                    <span class="span-education">‧ 10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)</span >
+                                                    <span class="span-education">‧ 한국 유학생들을 관리하는 현지 코디네이터로 활동</span >
                                                 </div>
                                             </div>
                                             <div class="line-14c"></div>
@@ -206,9 +235,6 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="frame-a0">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_cd03.png" alt="">
-                                </div> -->
                             </li>
                         </ul>
                     </div>
@@ -251,7 +277,7 @@ if (!defined('_EYOOM_')) exit;
                                             </li>
                                             <li>
                                                 <span>상담장소</span>
-                                                <p>서울강남 혹은 온라인상담</p>
+                                                <p>서울 강남 혹은 온라인상담</p>
                                             </li>
                                             <li>
                                                 <span>주요 상담분야</span>
