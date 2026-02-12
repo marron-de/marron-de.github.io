@@ -43,6 +43,7 @@
 							<div class="popup cate_popup">
 								<div class="linkbox">
 									<a href="<?php echo $path ?>company/about.php" class="link">회사소개</a>
+									<a href="<?php echo $path ?>certification/certification.php" class="link">인증현황</a>
 									<a href="<?php echo $path ?>flights/free.php" class="link">열기구체험</a>
 									<a href="<?php echo $path ?>reservation/list.php" class="link">예약하기</a>
 									<a href="<?php echo $path ?>community/notice.php" class="link ">커뮤니티</a>

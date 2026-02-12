@@ -30,6 +30,19 @@
 			
 			<section id="Home" class="main_section ms1">
 				<div class="balloon"><img src="<?php echo $path ?>img/ms1_balloon.png" alt="" class="img"></div>
+				<div class="swiper ms1_swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item item1">
+							<div class="img"></div>
+						</div>
+						<div class="swiper-slide item item2">
+							<div class="img"></div>
+						</div>
+						<div class="swiper-slide item item3">
+							<div class="img"></div>
+						</div>
+					</div>
+				</div>
 				<div class="inner">
 					<div class="contbox">
 						<div class="txtbox" data-aos="fade-right">
@@ -42,6 +55,12 @@
 								벌룬 어드벤처 코리아는 하늘을 안전하고 <br>
 								편안하게 경험할 수 있는 열기구 체험을 제공합니다.
 							</p>
+							<div class="ms1_controls slidebox">
+								<div class="swiper-button-prev prev_btn white"></div>      
+								<div class="swiper-pagination paging white"></div>
+								<button type="button" class="play_btn"></button>
+								<div class="swiper-button-next next_btn white"></div>
+							</div>
 						</div>
 						<div class="scroll" data-aos="fade" data-aos-delay="400" data-aos-duration="1500" data-aos-anchor="#Home">
 							<p class="txt">SCROLL</p>

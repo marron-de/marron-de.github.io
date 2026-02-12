@@ -14,6 +14,9 @@
 				<a href="<?php echo $path ?>company/about.php" class="link">About Us</a>
 			</li>
 			<li>
+				<a href="<?php echo $path ?>certification/certification.php" class="link">Certification</a>
+			</li>
+			<li>
 				<a href="<?php echo $path ?>flights/free.php" class="link">Balloon Flights</a>
 			</li>
 			<li>

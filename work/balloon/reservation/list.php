@@ -43,6 +43,7 @@
 							<div class="popup cate_popup">
 								<div class="linkbox">
 									<a href="<?php echo $path ?>company/about.php" class="link">회사소개</a>
+									<a href="<?php echo $path ?>certification/certification.php" class="link">인증현황</a>
 									<a href="<?php echo $path ?>flights/free.php" class="link">열기구체험</a>
 									<a href="<?php echo $path ?>reservation/list.php" class="link on">예약하기</a>
 									<a href="<?php echo $path ?>community/notice.php" class="link">커뮤니티</a>
@@ -478,6 +479,16 @@
 									</div>
 								</div>
 							</a>
+						</div>
+
+						<div class="pagination">
+							<button type="button" class="page page_btn prev"></button>
+							<a href="" class="page page_link active">1</a>
+							<a href="" class="page page_link">2</a>
+							<span class="page page_ellipsis">...</span>
+							<a href="" class="page page_link">9</a>
+							<a href="" class="page page_link">10</a>
+							<button type="button" class="page page_btn next"></button>
 						</div>
 					</div>
 				</div>

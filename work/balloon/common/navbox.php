@@ -40,6 +40,13 @@
 			</li>
 			<li class="line"></li>
 			<li class="nav_menuitem">
+				<a href="<?php echo $path ?>certification/certification.php" class="title">Certification</a>
+				<ul class="nav_menucont">
+					<li><a href="<?php echo $path ?>certification/certification.php" class="link">인증현황</a></li>
+				</ul>
+			</li>
+			<li class="line"></li>
+			<li class="nav_menuitem">
 				<a href="<?php echo $path ?>flights/free.php" class="title">Balloon Flights</a>
 				<ul class="nav_menucont">
 					<li><a href="<?php echo $path ?>flights/free.php" class="link">열기구자유여행</a></li>
@@ -51,7 +58,12 @@
 				</ul>
 			</li>
 			<li class="line"></li>
-			<li class="nav_menuitem"><a href="<?php echo $path ?>reservation/list.php" class="title">Book Now</a></li>
+			<li class="nav_menuitem">
+				<a href="<?php echo $path ?>reservation/list.php" class="title">Book Now</a>				
+				<ul class="nav_menucont">
+					<li><a href="<?php echo $path ?>reservation/list.php" class="link">예약하기</a></li>
+				</ul>
+			</li>
 			<li class="line"></li>
 			<li class="nav_menuitem">
 				<a href="<?php echo $path ?>" class="title">Community</a>
@@ -124,6 +136,11 @@
 								<li><a href="<?php echo $path ?>company/about.php#keymember" class="link">파일럿소개</a></li>
 								<li><a href="<?php echo $path ?>company/about.php#location" class="link">오시는길</a></li>
 							</ul>
+						</li>
+						<li>
+							<a href="<?php echo $path ?>certification/certification.php" class="title acc_tit">
+								<span class="tit">인증현황</span>
+							</a>
 						</li>
 						<li>
 							<div class="title acc_tit">

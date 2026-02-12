@@ -1113,3 +1113,47 @@ $(document).ready(function () {
     $('#tbl_allChk').prop('checked', allChecked);
   });
 });
+
+
+
+/* 08 인증현황 */
+// certificate popup
+function certificate_popup() {
+	$("body").addClass('hidden');
+	$("#certificate_popup").addClass('show');
+}
+
+
+
+// 메인 모바일 비주얼ㄴ
+const ms1_swiper = new Swiper('.ms1_swiper', {
+	observer: true,
+	observeParents: true,
+	speed: 500,	
+	loop:true,
+	effect : 'fade',
+	pagination: {
+		el: '.ms1_controls .paging',
+		clickable: true,
+	},
+    navigation: {
+      nextEl: ".ms1_controls .next_btn",
+      prevEl: ".ms1_controls .prev_btn",
+    },
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+});
+
+let isPlaying = true;
+$('.ms1_controls .play_btn').on('click', function () {
+	if (isPlaying) {
+		ms1_swiper.autoplay.stop();
+		$(this).addClass('on');
+	} else {
+		ms1_swiper.autoplay.start();
+		$(this).removeClass('on');
+	}
+	isPlaying = !isPlaying;
+});
