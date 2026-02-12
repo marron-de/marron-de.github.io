@@ -84,7 +84,7 @@
 				</a>
 			</div>
 			<ul class="h_nav">
-				<li>
+				<li class="menu_li">
 					<a href="<?php echo G5_URL ?>/page/?pid=counsel_banner" class="link">
 						<span class="txt">유학원 소개</span>
 						<span class="arrow"></span>
@@ -150,7 +150,7 @@
 				</li>
 			</ul>
 			<ul class="h_nav h_side">
-				<li>
+				<li class="menu_li">
 					<a href="<?php echo G5_URL ?>/page/?pid=univ_info_intro" class="link">
 						<div class="iconbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/menu_icon1_off.svg" alt="" class="icon2 before">
@@ -167,7 +167,7 @@
 							<a href="<?php echo G5_URL ?>/page/?pid=univ_info02" class="link">해외대학</a>
 						</li>
 						<li>
-							<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=guidebook" class="link">가이드북</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=guidebook" class="link">가이드북</a>
 						</li>
 						<li>
 							<a href="<?php echo G5_URL ?>/page/?pid=faq" class="link">자주 묻는 질문</a>
@@ -177,7 +177,7 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class="menu_li">
 					<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice" class="link">
 						<div class="iconbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/menu_icon2_off.svg" alt="" class="icon2 before">
@@ -191,10 +191,10 @@
 							<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice" class="link">공지사항/유학문의</a>
 						</li>
 						<li>
-							<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="link">상담신청</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=counsel05" class="link">상담신청</a>
 						</li>
 						<li>
-							<a href="<?php echo G5_URL ?>/page/?pid=gallery" class="link">설명회</a>
+							<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission" class="link">설명회</a>
 						</li>
 						<li>
 							<a href="http://www.smfair.kr/" class="link" target="_blank">박람회</a>
@@ -307,7 +307,7 @@
 					<a href="<?php echo G5_URL ?>/page/?pid=univ_info02" class="link">해외대학</a>
 				</li>
 				<li>
-					<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=guidebook" class="link">가이드북</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=guidebook" class="link">가이드북</a>
 				</li>
 				<li>
 					<a href="<?php echo G5_URL ?>/page/?pid=faq" class="link">자주 묻는 질문</a>
@@ -330,10 +330,10 @@
 					<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice" class="link">공지사항/유학문의</a>
 				</li>
 				<li>
-					<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="link">상담신청</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=counsel05" class="link">상담신청</a>
 				</li>
 				<li>
-					<a href="<?php echo G5_URL ?>/page/?pid=gallery" class="link">설명회</a>
+					<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission" class="link">설명회</a>
 				</li>
 				<li>
 					<a href="http://www.smfair.kr/" class="link" target="_blank">박람회</a>

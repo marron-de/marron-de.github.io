@@ -1455,9 +1455,9 @@ if (!defined('_EYOOM_')) exit;
 </div>
 
 <div class="cm_modal mentor_modal">	
-	<div class="cm_modal_box">
+	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
-		<div class="swiper mentorpop_swiper">
+		<div class="cm_modal_box swiper mentorpop_swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide item">
 					<div class="infobox">

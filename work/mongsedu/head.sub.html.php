@@ -29,6 +29,7 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/eyoom-f
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/font/Pretendard/Pretendard.css?ver='.G5_CSS_VER.'">',0);
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/swiper/swiper-bundle.min.css" type="text/css" media="screen">',0);
 add_stylesheet('<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css" media="screen">',0);
+add_stylesheet('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" type="text/css" media="screen">',0);
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/css/common.css?ver='.G5_CSS_VER.'">',0);
 ?>
 <!--[if lte IE 8]>
@@ -66,6 +67,7 @@ add_javascript('<script src="'.EYOOM_THEME_URL.'/plugins/bootstrap/js/bootstrap.
 add_javascript('<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>', 0);
 add_javascript('<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>', 0);
 add_javascript('<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>', 0);
+add_javascript('<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>', 0);
 if (!defined('G5_IS_ADMIN')) echo $config['cf_add_script'];
 ?>
 

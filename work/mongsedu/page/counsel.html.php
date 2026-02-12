@@ -7,7 +7,6 @@ if (!defined('_EYOOM_')) exit;
 // 상담 신청 기능 사용유무 체크
 if (!$config['cf_use_counsel']) alert("사용하지 않는 기능입니다.");
 
-add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/perfect-scrollbar/perfect-scrollbar.min.css" type="text/css" media="screen">',0);
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/sweetalert2/sweetalert2.min.css" type="text/css" media="screen">',0);
 
 $action_url = EYOOM_CORE_URL.'/page/proc/counsel_update.php';
@@ -44,48 +43,16 @@ $editor_js .= chk_editor_js('cs_content', $is_dhtml_editor);
 $counsel_part = explode(',', $config['cf_counsel_part']);
 ?>
 
-<style>
-.counsel-wrap .cs-form-wrap {position:relative}
-.counsel-wrap .cs-goods-box {position:absolute;top:39px;bottom:0;left:0;right:10px;border:1px solid #d5d5d5;padding:15px}
-.counsel-wrap .cs-goods-box div.row {position:relative;margin-left:-5px;margin-right:-5px}
-.counsel-wrap .cs-goods-box div.row:after {content:"";display:block;clear:both}
-.counsel-wrap .cs-goods-box .cs-goods {border:1px solid #e5e5e5;padding:20px 10px 10px;margin-bottom:15px}
-.counsel-wrap .cs-goods-box .cs-goods-name {margin-top:10px;font-size:.9375rem}
-.counsel-wrap .cs-goods-box .cs-goods .checkbox {margin-bottom:0;padding-left:0;z-index:1}
-.counsel-wrap .cs-goods-box .cs-goods .checkbox i {top:-10px}
-.counsel-wrap #cs_scroll {position:relative;overflow:hidden;height:204px;font-size:.8125rem}
-.counsel-wrap .cs-agree-box {border:1px solid #ddd;margin-bottom:30px}
-.counsel-wrap .eyoom-form header {padding:20px 15px;background:#fafafa}
-.counsel-wrap .eyoom-form header h5 {line-height:1;font-size:1rem}
-.counsel-wrap .eyoom-form footer {padding:12px 15px;text-align:right}
-.counsel-wrap .eyoom-form fieldset {padding:0}
-.counsel-wrap .eyoom-form fieldset {padding:0}
-.counsel-wrap .eyoom-form .inline-group .radio {margin-left:5px;margin-right:5px;padding-left:0}
-.counsel-wrap .eyoom-form .radio i {position:relative;top:inherit;left:inherit;display:block;margin:0 auto 1px}
-.counsel-wrap .eyoom-form .radio-text-block {display:block;font-size:.8125rem}
-.counsel-wrap .cs-agree {padding:15px}
-.counsel-wrap .cs-agree h5 {font-size:.9375rem}
-.counsel-wrap .csregister-agree label {display:inline-block;margin-right:5px}
-.counsel-wrap .cs-mobile-btn {margin-top:30px;display:none}
-@media (max-width:991px) {
-    .counsel-wrap .cs-search-wrap {width:100%;padding-right:0;margin-bottom:30px}
-    .counsel-wrap .cs-form-wrap {width:100%;padding-left:0}
-    .counsel-wrap .cs-goods-box {position:relative;overflow:hidden;top:inherit;bottom:inherit;left:inherit;right:inherit;border:0;padding:0}
-    .counsel-wrap .cs-mobile-btn {display:block}
-}
-@media (max-width:576px) {
-    .counsel-wrap .eyoom-form .col {margin-bottom:0}
-}
-</style>
-
-<div class="sub-page page-counsel form_ver">
-    <div class="counsel-wrap container">
-        <div class="counsel-title">
-            <h3>
-                <span class="blue">유학 고민,</span><br/>
-                더 이상 혼자 하지 마세요.
-            </h3>
-            <p>몽선생 상담사가 궁금증을 해결해 드립니다.</p>
+<div class="sub-page page-counsel page-form">
+    <div class="counsel_wrap container">
+        <div class="counsel_titbox" data-aos="fade-up">
+			<div class="cs_top">
+				<h3 class="tit">
+					<span class="blue">유학 고민,</span><br/>
+					더 이상 혼자 하지 마세요.
+				</h3>
+				<p class="desc">몽선생 상담사가 궁금증을 해결해 드립니다.</p>
+			</div> 
             <ul class="cs_info">
                 <li>
                     <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_picker.svg" alt="" class="icon">
@@ -117,322 +84,258 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
             </div>
         </div>
         
-        <form name="csregister" id="csregister" action="<?php echo $action_url; ?>" onsubmit="return csregister_submit(this);" method="POST" enctype="multipart/form-data" class="eyoom-form">
+        <form name="csregister" id="csregister" action="<?php echo $action_url; ?>" method="POST" enctype="multipart/form-data" class="eyoom-form eyoom_form" data-aos="fade-up">
 			<input type="hidden" name="wmode" value="<?php echo isset($wmode) && $wmode ? $wmode: ''; ?>">
-			<div class="cs-form-wrap">
-				<h5 class="cs-form-title">
+			<input type="hidden" name="cs_part" value="방문상담">
+			<input type="hidden" name="cs_company" value="회사명">
+			<input type="hidden" name="cs_subject" value="방문상담 상담신청입니다.">
+			<div class="form_wrap">
+				<h5 class="form_title">
 					원활한 상담을 위해<br/>
 					기본 정보를 작성해주세요.
 				</h5>
-				<div class="row m-b-20">
-					<div class="col col-12">
-						<div class="tabs counsel">
-							<p class="guide">원하시는 상담 종류를 선택해주세요.</p>
-							<ul>
-								<li class="active">
-									<a href="<?php echo G5_URL ?>/page/?pid=counsel">방문상담</a>
-								</li>
-								<li>
-									<a href="<?php echo G5_URL ?>/page/?pid=counsel02">화상상담</a>
-								</li>
-								<li>
-									<a href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회</a>
-								</li>
-								<li>
-									<a href="<?php echo G5_URL ?>/page/?pid=counsel04">수업/CLASS</a>
-								</li>
-							</ul>
+				<div class="form_box">
+					<div class="form_item">
+						<p class="form_label">원하시는 상담 종류를 선택해주세요.</p>
+						<ul class="tab_box">
+							<li class="on">
+								<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="linktab">방문상담</a>
+							</li>
+							<li>
+								<a href="<?php echo G5_URL ?>/page/?pid=counsel02" class="linktab">화상상담</a>
+							</li>
+							<li>
+								<a href="<?php echo G5_URL ?>/page/?pid=counsel03" class="linktab">설명회</a>
+							</li>
+							<li>
+								<a href="<?php echo G5_URL ?>/page/?pid=counsel04" class="linktab">수업/CLASS</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="form_item">
+						<p class="form_label">상담 전 아래 내용을 기재 해 주시기 바랍니다.</p>
+						<div class="input_box">
+							<input type="text" name="cs_name" class="input_text" placeholder="이름(필수)" required>
+							<input type="text" name="cs_tel" class="input_text" placeholder="연락처(필수) - 없이 입력 숫자만 입력" required>
+							<input type="text" name="cs_email" class="input_text" placeholder="이메일(선택)">
+							<!-- <div class="select_box">
+								<select name="cs_gender" class="select select2" data-placeholder="성별">
+									<option value="">성별</option>
+									<option value="1">남성</option>
+									<option value="2">여성</option>
+								</select>
+							</div>					
+							-->							
 						</div>
-						<label class="select required-mark">
-							<select name="cs_part" id="cs_part" required>
-								<option value="">상담분야 선택</option>
-								<?php foreach ($counsel_part as $k => $part) { ?>
-								<option value="<?php echo trim($part); ?>"><?php echo $part; ?></option>
-								<?php } ?>
-							</select><i></i>
-						</label>
 					</div>
-					<div class="col col-6">
-						<label class="input required-mark">
-							<i class="icon-append far fa-building"></i>
-							<input type="text" name="cs_company" placeholder="회사명(단체명)" required>
-						</label>
-					</div>
-				</div>
-				<div class="row counsel">
-					<p class="guide">상담 전 아래 내용을 기재 해 주시기 바랍니다.</p>
-					<div class="col col-6">
-						<label class="input required-mark">
-							<i class="icon-append far fa-user"></i>
-							<input type="text" name="cs_name" placeholder="이름(필수)" required>
-						</label>
-					</div>
-					<div class="col col-6">
-						<label class="input required-mark">
-							<i class="icon-append fas fa-phone"></i>
-							<input type="text" name="cs_tel" placeholder="연락처(필수) - 없이 입력 숫자만 입력" required>
-						</label>
-					</div>
-				</div>
-				<div class="row m-b-25">
-					<div class="col col-6">
-						<label class="select required-mark">
-							<i class="icon-append far fa-envelope"></i>
-							<select name="cs_gender">
-								<option value="0">성별</option>
-								<option value="1">남성</option>
-								<option value="2">여성</option>
-							</select>
-						</label>
-					</div>
-					<div class="col col-6">
-						<label class="input required-mark">
-							<i class="icon-append far fa-envelope"></i>
-							<input type="text" name="cs_email" placeholder="이메일" required>
-						</label>
-					</div>
-				</div>
-				<h6 class="f-s-16r f-w-700 m-b-10">관심분야(필수)</h6>
-				<div class="row m-b-10">
-					<div class="col col-12 flex_rdo type">
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_type">
-							<span>국제학교</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_type">
-							<span>대학</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_type">
-							<span>대학원</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_type">
-							<span>어학연수</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_type">
-							<span>캠프</span>
-						</label>
-					</div>
-				</div>
-				<br/>
-				<h6 class="f-s-16r f-w-700 m-b-10">관심국가(필수)</h6>
-				<div class="row m-b-10">
-					<div class="col col-12 flex_rdo nation">
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_nation">
-							<span>싱가포르</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_nation">
-							<span>말레이시아</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_nation">
-							<span>홍콩</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_nation">
-							<span>미국</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_nation">
-							<span>영국</span>
-						</label>
-						<label class="radio cst_radio">
-							<input type="radio" name="cs_nation">
-							<span>한국</span>
-						</label>
-					</div>
-				</div>
-				<br/>
-				<div class="row m-b-10">
-					<div class="col col-12">
-						<label class="input required-mark">
-							<i class="icon-append fas fa-pencil-alt"></i>
-							<input type="text" name="cs_subject" placeholder="제목" required>
-						</label>
-					</div>
-				</div>
-				<h6 class="f-s-16r f-w-700 m-b-10">상담 내용</h6>
-				<label class="textarea required-mark m-b-30">
-					<?php echo $editor_html; ?>
-				</label>
-				<div class="m-b-20">
-					<?php for ($i=0; $i<2; $i++) { ?>
-					<div class="row">
-						<div class="col col-12">
-							<label class="input">
-								<input type="file" class="form-control" id="cs_file_<?php echo $i+1 ?>" name="cs_file[]" value="사진선택">
-							</label>
+
+					<div class="form_item">
+						<p class="form_label">관심분야(필수)</p>
+						<div class="radio_wrap">
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type1" class="input_radio" required value="국제학교">
+								<label for="cs_type1" class="label_radio">국제학교</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type2" class="input_radio" value="대학">
+								<label for="cs_type2" class="label_radio">대학</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type3" class="input_radio" value="대학원">
+								<label for="cs_type3" class="label_radio">대학원</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type4" class="input_radio" value="어학연수">
+								<label for="cs_type4" class="label_radio">어학연수</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type5" class="input_radio" value="캠프">
+								<label for="cs_type5" class="label_radio">캠프</label>
+							</div>
 						</div>
+					</div>
+
+					<div class="form_item">
+						<p class="form_label">관심국가(필수)</p>
+						<div class="radio_wrap">
+							<div class="radio_box">
+								<input type="radio" name="cs_nation" id="cs_nation1" class="input_radio" required value="싱가포르">
+								<label for="cs_nation1" class="label_radio">싱가포르</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_nation" id="cs_nation2" class="input_radio" value="말레이시아">
+								<label for="cs_nation2" class="label_radio">말레이시아</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_nation" id="cs_nation3" class="input_radio" value="홍콩">
+								<label for="cs_nation3" class="label_radio">홍콩</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_nation" id="cs_nation4" class="input_radio" value="미국">
+								<label for="cs_nation4" class="label_radio">미국</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_nation" id="cs_nation5" class="input_radio" value="영국">
+								<label for="cs_nation5" class="label_radio">영국</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_nation" id="cs_nation6" class="input_radio" value="한국">
+								<label for="cs_nation6" class="label_radio">한국</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form_item">
+						<p class="form_label">문의사항/희망일자</p>
+						<div class="input_box">
+							<textarea name="cs_content" class="input_text" placeholder="상담 원하는 날짜와, 문의사항을 남겨주세요." required></textarea>
+							<!-- <?php echo $editor_html; ?> -->
+						</div>
+					</div>
+					
+					<!--
+					<div class="form_item">
+						<p class="form_label">첨부파일</p>
+						<?php for ($i=0; $i<2; $i++) { ?>
+						<div class="file_box">
+							<div class="file_item">
+								<input type="file" class="input_file" id="cs_file_<?php echo $i+1 ?>" name="cs_file[]" value="사진선택">
+							</div>
+						</div>
+						<?php } ?>
+					</div>
+					-->
+
+					<?php if ($is_use_captcha) { ?>
+					<div class="form_item">
+						<p class="form_label">자동등록방지</p>
+						<div class="vc-captcha"><?php echo $captcha_html; ?></div>
 					</div>
 					<?php } ?>
-				</div>
 
-				<div class="cs-agree-box m-b-30">
-					<header><h5 class="m-0 f-w-700">개인정보처리방침안내</h5></header>
-					<div class="cs-agree">
-						<div id="cs_scroll" class="panel-body ps-container">
-							<?php
-							@include_once(EYOOM_THEME_PATH . '/page/privacy.html.php')
-							?>
+					<div class="form_item flex between">
+						<div class="check_box">
+							<input type="checkbox" name="cs_agree" class="input_check" value="1" id="cs_agree" required>
+							<label for="cs_agree" class="label_check">개인정보수집 및 이용안내 동의</label>
 						</div>
-					</div>
-					<footer>
-						<fieldset class="csregister-agree">
-							<label class="checkbox" for="cs_agree">
-								<input type="checkbox" name="cs_agree" value="1" id="cs_agree"><i></i>개인정보처리방침안내의 내용에 동의합니다.
-							</label>
-						</fieldset>
-					</footer>
-				</div>
-
-				<?php if ($is_use_captcha) { ?>
-				<div class="m-b-30">
-					<label class="label">자동등록방지</label>
-					<div class="vc-captcha"><?php echo $captcha_html; ?></div>
-				</div>
-				<?php } ?>
+						<button type="button" class="agree_view" onclick="privacy_modal()">내용보기</button>
+					</div>	
 				
-				<div class="text-center">
-					<button class="btn-e btn-e-navy btn-e-xxl width-250px f-w-700" type="submit" value="상담 신청하기">상담 신청하기</button>
 				</div>
-			</div>        
+				<div class="form_btnbox">
+					<!-- <button class="form_btn submit_btn" type="submit" value="상담 신청하기" dus>상담 신청하기</button> -->
+					<button type="button" class="form_btn submit_btn" value="상담 신청하기" disabled onclick="formSubmit_modal(this.form)">상담 신청하기</button>
+				</div>
+			</div> 
         </form>
     </div>
 </div>
 
-<script src="<?php echo EYOOM_THEME_URL; ?>/plugins/perfect-scrollbar/perfect-scrollbar.jquery.min.js"></script>
+
+<div class="cm_modal privacy_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<p class="modal_tit">개인정보수집 및 이용안내</p>
+			<div class="term_box">
+				<?php @include_once(EYOOM_THEME_PATH . '/page/privacy.html.php') ?>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cm_modal formAlert_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box btn_ver">
+			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/modal_check.svg" alt="" class="modal_icon">
+			<div class="modal_txtbox">
+				<p class="modal_tit">이메일을 확인해주세요</p>
+				<p class="modal_desc">
+					예: example@email.com<br>
+					형식으로 입력해 주세요.
+				</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA cm_modal_close">확인</button>
+			</div>	
+		</div>	
+	</div>
+</div>
+
+<div class="cm_modal formSubmit_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box btn_ver">
+			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/modal_check.svg" alt="" class="modal_icon">
+			<div class="modal_txtbox">
+				<p class="modal_tit">상담을 신청할까요?</p>
+				<p class="modal_desc">
+					상담 신청 후 조금만 기다려주시면 <br>
+					담당자가 확인 후 연락드리겠습니다.
+				</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA cm_modal_close">닫기</button>
+				<button type="button" class="btn typeB" onclick="form_submit()">신청하기</button>
+			</div>	
+		</div>	
+	</div>
+</div>
+
+
 <script src="<?php echo EYOOM_THEME_URL; ?>/plugins/sweetalert2/sweetalert2.min.js"></script>
+
 <script>
-$(document).ready(function(){
-    new PerfectScrollbar('#cs_scroll');
-});
+	// 필수값 체크
+	const form = $('#csregister');
+	const btn = form.find('.submit_btn');
+	const checkRequired = () => {
+	let ok = true;
+	form.find('[required]').each(function () {
+		const el = $(this);
 
-function csregister_submit(f) {
-    if ($("select[name=cs_part]").val() == '') {
-        Swal.fire({
-            title: "중요!",
-            text: "문의 분야를 선택해 주세요.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_part.focus();
-        return false;
-    }
+		if (el.is(':checkbox')) {
+		if (!el.is(':checked')) ok = false;
+		} else if (el.is(':radio')) {
+		const name = el.attr('name');
+		if (!form.find('input[name="' + name + '"]:checked').length) ok = false;
+		} else {
+		if (!el.val()) ok = false;
+		}
+	});
+	btn.prop('disabled', !ok);
+	};
+	form.on('input change', 'input, select, textarea', checkRequired);
+	checkRequired();
 
-    if (f.cs_company.value == '') {
-        Swal.fire({
-            title: "중요!",
-            text: "회사명을 입력해 주세요.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_company.focus();
-        return false;
-    }
+	// 개인정보 모달
+	function privacy_modal() {
+		$("body").addClass('hidden');
+		$(".privacy_modal").addClass('show');
+	}
 
-    if (f.cs_name.value == '') {
-        Swal.fire({
-            title: "중요!",
-            text: "이름을 입력해 주세요.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_name.focus();
-        return false;
-    }
+	// 입력값 체크
+	function formSubmit_modal(f) {
+		// let k = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		// if (!k.test(String(f.cs_email.value).toLowerCase())) {
+		// 	$("body").addClass('hidden');
+		// 	$(".formAlert_modal").addClass('show');
+		// 	return;
+		// }
 
-    if (f.cs_tel.value == '') {
-        Swal.fire({
-            title: "중요!",
-            text: "휴대전화를 입력해 주세요.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_tel.focus();
-        return false;
-    }
+		<?php echo $captcha_js; ?>
 
-    if (f.cs_email.value == '') {
-        Swal.fire({
-            title: "중요!",
-            text: "이메일을 입력해 주세요.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_email.focus();
-        return false;
-    }
+		$("body").addClass('hidden');
+		$(".formSubmit_modal").addClass('show');
+	}
 
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(f.cs_email.value)) {
-        Swal.fire({
-            title: "중요!",
-            text: "유효하지 않은 이메일 주소입니다.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_email.focus();
-        return false;
-    }
+	// 폼 제출
+	function form_submit() {
+		$('body').removeClass('hidden');
+		$('.formSubmit_modal').removeClass('show');
+		$('#csregister').trigger('submit');
+	}
 
-    if (f.cs_subject.value == '') {
-        Swal.fire({
-            title: "중요!",
-            text: "제목을 입력해 주세요.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_subject.focus();
-        return false;
-    }
-
-    <?php echo $editor_js; ?>
-    <?php echo $captcha_js; ?>
-
-    if (f.cs_content.value == '') {
-        Swal.fire({
-            title: "중요!",
-            text: "문의내용을 입력해 주세요.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_content.focus();
-        return false;
-    }
-
-    if (!f.cs_agree.checked) {
-        Swal.fire({
-            title: "중요!",
-            text: "개인정보처리방침안내의 내용에 동의하셔야 상담 문의가 가능합니다.",
-            confirmButtonColor: "#ab0000",
-            icon: "warning",
-            confirmButtonText: "확인"
-        });
-        f.cs_agree.focus();
-        return false;
-    }
-    
-    return true;
-}
-
-function format_number() {
-    const numberInput = document.getElementById('cs_deposit');
-    const value = numberInput.value.replace(/\D/g, ''); // 숫자 이외의 문자 제거
-    
-    // 천단위 쉼표 추가
-    numberInput.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-}
 </script>

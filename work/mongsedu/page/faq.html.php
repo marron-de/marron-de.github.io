@@ -6,15 +6,15 @@ if (!defined('_EYOOM_')) exit;
 ?>
 
 
-<div class="sub-page page-procedure page-univ">
+<div class="sub-page page-counsel page-univ">
 	<div class="tit_area board">
-        <div class="container">
-            <span>학교정보</span>
+        <div class="container" data-aos="fade-up">
+            <span class="title">학교정보</span>
         </div>
     </div>
 
     <div class="univ_info tabs">
-        <ul>
+        <ul class="container" data-aos="fade">
             <li>
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info_intro">홈</a>
             </li>
@@ -25,7 +25,7 @@ if (!defined('_EYOOM_')) exit;
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info02">해외대학</a>
             </li>
             <li>
-                <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=guidebook">가이드북</a>
+                <a href="<?php echo G5_URL ?>/page/?pid=guidebook">가이드북</a>
             </li>
             <li class="active">
                 <a href="<?php echo G5_URL ?>/page/?pid=faq">자주 묻는 질문</a>
@@ -36,7 +36,7 @@ if (!defined('_EYOOM_')) exit;
         </ul>
     </div>
     <div class="msection faq_area">
-        <div class="container">
+		<div class="container" data-aos="fade-up">
             <div class="ms title_area">
                 <span><b>FAQ</b> 자주 묻는 질문</span>
             </div>
