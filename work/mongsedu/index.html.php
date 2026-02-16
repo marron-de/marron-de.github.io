@@ -44,11 +44,13 @@ if (!defined('_EYOOM_')) exit;
 							</ul>
 						</div>
 					</div>
-                    <div class="tag_area">
-                        <a href="">말레이시아 국제학교</a>
-                        <a href="">싱가폴사립대</a>
-                        <a href="">싱가폴예술대</a>
-                        <a href="">말레이시아대학</a>
+                    <div class="tag_area swiper tab_swiper" data-gappc="6" data-gapmob="6">
+						<div class="swiper-wrapper">
+							<a href="" class="swiper-slide">말레이시아 국제학교</a>
+							<a href="" class="swiper-slide">싱가폴사립대</a>
+							<a href="" class="swiper-slide">싱가폴예술대</a>
+							<a href="" class="swiper-slide">말레이시아대학</a>
+						</div>
                     </div>
                 </div>
                 <div class="swiper sampSwiper">
@@ -85,57 +87,58 @@ if (!defined('_EYOOM_')) exit;
 					</div>
                 </div>
             </div>
-			<div class="main_link">
-				<ul>
-					<li>
+			<div class="main_link swiper link_swiper" data-index="2" data-gappc="48" data-gapmob="16">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01.png" alt="상담 가능 분야">
 							<span>상담 가능 분야</span>
 						</a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink02.png" alt="상담사 소개">
 							<span>상담사 소개</span>
 						</a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink03.png" alt="상담장소">
 							<span>상담장소</span>
 						</a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink04.png" alt="최신 설명회">
 							<span>최신 설명회</span>
 						</a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink05.png" alt="유학박람회">
 							<span>유학박람회</span>
 						</a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink06.png" alt="몽선생특강">
 							<span>몽선생특강</span>
 						</a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink07.png" alt="TV 출연">
 							<span>TV 출연</span>
 						</a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink08.png" alt="몽선생 장점">
 							<span>몽선생 장점</span>
 						</a>
 					</li>
 				</ul>
+				<div class="swiper-scrollbar scrollbar"></div>
 			</div>
         </div>
     </div>
@@ -161,9 +164,9 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="presentation_list tabs_cont">
                 <ul class="panel">
-                    <li id="content-1">
-                        <ul>
-                            <li>
+                    <li id="content-1" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -198,7 +201,7 @@ if (!defined('_EYOOM_')) exit;
                                     <a class="btn confirm" href="">설명회 신청</a>
                                 </div>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
 									<p class="title">
@@ -233,7 +236,7 @@ if (!defined('_EYOOM_')) exit;
                                     <a class="btn confirm" href="">설명회 신청</a>
                                 </div>
                             </li>
-                            <li class="end">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -268,7 +271,7 @@ if (!defined('_EYOOM_')) exit;
                                     <a class="btn confirm" href="">설명회 신청</a>
                                 </div>
                             </li>
-                            <li class="end">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -305,9 +308,9 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                         </ul>
                     </li>					
-                    <li id="content-2">
-                         <ul>
-                            <li>
+                    <li id="content-2" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                         <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -344,9 +347,9 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                         </ul>
                     </li>
-                    <li id="content-3">
-                         <ul>
-                            <li>
+                    <li id="content-3" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                         <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
 									<p class="title">
@@ -383,9 +386,9 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                         </ul>                        
                     </li>
-                    <li id="content-4">
-                         <ul>
-                            <li class="end">
+                    <li id="content-4" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                         <ul class="swiper-wrapper">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -443,9 +446,9 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="counsel_list tabs_cont">
                 <ul class="panel">
-                    <li id="content-21">
-                        <ul>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail07'">
+                    <li id="content-21" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail07'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">싱가포르</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel06.jpg" alt="싱가포르 대학 상담" class="img">
@@ -464,7 +467,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail01'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail01'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">말레이시아</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel01.jpg" alt="말레이시아 국제학교">
@@ -483,7 +486,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail08'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail08'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">싱가포르</p>
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel03.jpg" alt="홍콩 대학 상담">
@@ -502,14 +505,14 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail09'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail09'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">싱가포르/홍콩</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel08.jpg" alt="송도 글로벌 캠퍼스">
 									<div class="shape color8"></div>
 									<div class="img_bottom">
 										<div class="flagbox">
-											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+											<img class="flag pc" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="홍콩">
 										</div>
 										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher8.png" alt="">
@@ -522,7 +525,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail05'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail05'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">입학시험대비</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel05.jpg" alt="입학시험 모의테스트 상담">
@@ -544,9 +547,9 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                         </ul>
                     </li>
-                    <li id="content-22">
-                        <ul>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail01'">								
+                    <li id="content-22" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail01'" class="swiper-slide">								
                                 <div class="img_area">
                                     <p class="nation">말레이시아</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel01.jpg" alt="말레이시아 국제학교" class="img">
@@ -565,7 +568,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail02'">						
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail02'" class="swiper-slide">						
                                 <div class="img_area">
                                     <p class="nation">한국</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel02.jpg" alt="한국 인가/비인가" class="img">
@@ -584,7 +587,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail03'">					
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail03'" class="swiper-slide">					
                                 <div class="img_area">
                                     <p class="nation">싱가포르</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel03.jpg" alt="싱가포르 국제학교" class="img">
@@ -603,7 +606,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail05'">			
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail05'" class="swiper-slide">			
                                 <div class="img_area">
                                     <p class="nation">말레이시아/싱가포르</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel05.jpg" alt="입학시험 모의테스트 상담" class="img">
@@ -623,7 +626,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail11'">	
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail11'" class="swiper-slide">	
                                 <div class="img_area">
                                     <p class="nation">베트남/태국</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel04.jpg" alt="베트남/태국 국제학교" class="img">
@@ -631,7 +634,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="img_bottom">
 										<div class="flagbox">
                                     		<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_biet.svg" alt="베트남">
-                                    		<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="태국">
+                                    		<img class="flag pc" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="태국" class="">
 										</div>
 										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher4.png" alt="">
 									</div>
@@ -645,9 +648,9 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                         </ul>
                     </li>
-                    <li id="content-23">
-                        <ul>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail07'">
+                    <li id="content-23" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail07'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">싱가포르</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel06.jpg" alt="싱가포르 대학 상담" class="img">
@@ -666,7 +669,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail08'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail08'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">싱가포르</p>
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel03.jpg" alt="홍콩 대학 상담">
@@ -685,14 +688,14 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail09'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail09'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">싱가포르/홍콩</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel08.jpg" alt="송도 글로벌 캠퍼스">
 									<div class="shape color8"></div>
 									<div class="img_bottom">
 										<div class="flagbox">
-											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+											<img class="flag pc" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="홍콩">
 										</div>
 										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher8.png" alt="">
@@ -705,7 +708,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail06'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail06'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">말레이시아</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel09.jpg" alt="싱가포르 대학 상담">
@@ -724,7 +727,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail10'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail10'" class="swiper-slide">
                                 <div class="img_area">
                                     <p class="nation">한국</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel10.jpg" alt="싱가포르 대학 상담">
@@ -761,9 +764,9 @@ if (!defined('_EYOOM_')) exit;
                     <span class="bold">수강생들의 성공 경험</span>을 들어보세요!
                 </p>
             </div>
-            <div class="review_list">
-                <ul>
-                    <li>
+            <div class="review_list swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
                         <a href="https://www.youtube.com/watch?v=8rPfGBfnd7Y" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review01.png" alt="NUS 합격">
@@ -784,7 +787,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="https://www.youtube.com/watch?v=eAGc-3y5N2w" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review02.png" alt="NUS 합격">
@@ -805,7 +808,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="https://www.youtube.com/watch?v=3bFjjIRr5wI" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review03.png" alt="NUS 합격">
@@ -847,9 +850,9 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="counsel_list ver2 tabs_cont">
                 <ul class="panel">
-                    <li id="content-31">
-                        <ul>
-                            <li>
+                    <li id="content-31" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln03.jpg" alt="NUS 출신 관리! 입학 컨설팅">
 									<div class="img_txtbox">
@@ -868,7 +871,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25" class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln05.jpg" alt="무료 입학 수속 서비스">
 									<div class="img_txtbox">
@@ -887,7 +890,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li class="swiper-slide"i>
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26" class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln06.jpg" alt="무료 입학 수속 서비스">
 									<div class="img_txtbox">
@@ -906,7 +909,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail27" class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln07.jpg" alt="모나쉬대학 입학 수속 서비스">
 									<div class="img_txtbox">
@@ -924,7 +927,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail28" class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln08.jpg" alt="한국 글로벌 캠퍼스 입학 컨설팅">
 									<div class="img_txtbox">
@@ -944,9 +947,9 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                         </ul>
                     </li>
-                    <li id="content-32">
-						<ul>
-							<li>
+                    <li id="content-32" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
+                        <ul class="swiper-wrapper">
+							<li class="swiper-slide">
 								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="img_area">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln03.jpg" alt="NUS 출신 관리! 입학 컨설팅">
 									<div class="img_txtbox">
@@ -965,7 +968,7 @@ if (!defined('_EYOOM_')) exit;
 									</a>
 								</div>
 							</li>
-							<li>
+							<li class="swiper-slide">
 								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25" class="img_area">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln05.jpg" alt="무료 입학 수속 서비스">
 									<div class="img_txtbox">
@@ -986,9 +989,9 @@ if (!defined('_EYOOM_')) exit;
 							</li>
 						</ul>
                     </li>
-                    <li id="content-33">
-						<ul>
-							<li>
+                    <li id="content-33" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
+                        <ul class="swiper-wrapper">
+							<li class="swiper-slide">
 								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26" class="img_area">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln06.jpg" alt="무료 입학 수속 서비스">
 									<div class="img_txtbox">
@@ -1007,7 +1010,7 @@ if (!defined('_EYOOM_')) exit;
 									</a>
 								</div>
 							</li>
-							<li>
+							<li class="swiper-slide">
 								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail27" class="img_area">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln07.jpg" alt="모나쉬대학 입학 수속 서비스">
 									<div class="img_txtbox">
@@ -1025,7 +1028,7 @@ if (!defined('_EYOOM_')) exit;
 									</a>
 								</div>
 							</li>
-							<li>
+							<li class="swiper-slide">
 								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail28" class="img_area">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln08.jpg" alt="한국 글로벌 캠퍼스 입학 컨설팅">
 									<div class="img_txtbox">
@@ -1057,9 +1060,9 @@ if (!defined('_EYOOM_')) exit;
 					<span class="tit">검증된 <span class="color1">유학 CLASS</span></span>
 				</div>
             </div>
-            <div class="class_list s4 big">
-                <ul class="panel">
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail04'">
+            <div class="class_list s4 big swiper tab_swiper" data-gappc="12" data-gapmob="10">
+                <ul class="panel swiper-wrapper">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail04'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -1072,7 +1075,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class01_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail01'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail01'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -1085,7 +1088,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class02_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -1098,7 +1101,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class03_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -1111,7 +1114,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class04_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'"class="swiper-slide">
 						<div class="text_area">
 							<p class="class"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수업듣기"> 유학CLASS</p>
 							<span class="title">
@@ -1231,9 +1234,9 @@ if (!defined('_EYOOM_')) exit;
 					<span class="txt">몽선생 유튜브 바로가기</span>
 				</a>
             </div>
-            <div class="review_list youtube">
-                <ul>
-                    <li>
+            <div class="review_list youtube swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube01.jpg" alt="">
@@ -1245,7 +1248,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube02.jpg" alt="">
@@ -1257,7 +1260,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube03.jpg" alt="">
@@ -1269,7 +1272,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube04.jpg" alt="">
@@ -1281,7 +1284,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube05.jpg" alt="">
@@ -1293,7 +1296,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube06.jpg" alt="">
@@ -1305,7 +1308,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube07.jpg" alt="">
@@ -1317,7 +1320,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="swiper-slide"i>
                         <a href="#">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube08.jpg" alt="">
@@ -1332,36 +1335,22 @@ if (!defined('_EYOOM_')) exit;
                 </ul>
             </div>
         </div>
+		<div class="container" data-aos="fade-up">
+			<div class="ytb_banner">
+				<div class="bgbox">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_ytb_banner.jpg" alt="" class="img pc">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_ytb_banner_m.jpg" alt="" class="img tablet">
+				</div>
+				<div class="txtbox">
+					<p class="tit">언론도 주목하는 몽선생</p>
+					<a href="" class="more_btn" target="_blank">
+						<span class="txt">TV 출연 방송 바로보기</span>
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_btn_arrow.svg" alt="" class="icon">
+					</a>
+				</div>
+			</div>
+		</div>
     </div>
-
-	<!--
-    <div class="msection banner_full">
-        <div class="container" data-aos="fade-up">
-            <div class="bf_slider">
-                <div class="swiper-wrapper">
-                    <a class="swiper-slide bf01" href="https://youtu.be/eGZ-7EH42Zs" target="_blank">
-                        <img src="<?php echo EYOOM_THEME_URL; ?>/image/main/banner_full01.png" alt="">
-                    </a>
-                    <a class="swiper-slide bf02" href="https://youtu.be/g8yVfuLTSjI" target="_blank">
-                        <img src="<?php echo EYOOM_THEME_URL; ?>/image/main/banner_full02.png" alt="">
-                    </a>
-                    <a class="swiper-slide bf03" href="/theme/basic/page4.php">
-                        <img src="<?php echo EYOOM_THEME_URL; ?>/image/main/banner_full03.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <script>
-                var fbswiper = new Swiper(".bf_slider", {
-                    slidesPerView: 1,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false
-                    }
-                });
-            </script>
-        </div>
-    </div>
-	-->
 
     <div class="msection award_area">
         <div class="container" data-aos="fade-up">

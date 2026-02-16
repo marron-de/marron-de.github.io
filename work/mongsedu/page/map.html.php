@@ -21,7 +21,7 @@ if (!defined('_EYOOM_')) exit;
 		</div>
         <div class="map_contbox">
 			<div class="mapbox">
-				<a href="" class="link">
+				<a href="" class="mapitem">
 					<!-- <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_img.jpg" alt="" class="map"> -->
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2238.3386110862175!2d127.02699164696185!3d37.49638757568062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15a3ebea58b%3A0xe83e525d0bf2f9a0!2z66q97ISg7IOdIOycoO2VmeybkA!5e0!3m2!1sko!2skr!4v1770855934674!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
 					<button type="button" class="copy_btn">
@@ -34,14 +34,18 @@ if (!defined('_EYOOM_')) exit;
 			<div class="mapinfo">
 				<div class="infobox">
 					<div class="item">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon1.png" alt="" class="icon">
+						<div class="iconbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon1.svg" alt="" class="icon">
+						</div>
 						<div class="txtbox">
 							<p class="sub">자차이용</p>
 							<p class="tit">무료주차 가능​</p>
 						</div>
 					</div>
 					<div class="item">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon1.png" alt="" class="icon">
+						<div class="iconbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon2.svg" alt="" class="icon">
+						</div>
 						<div class="txtbox">
 							<p class="sub">지하철</p>
 							<p class="tit subway">
@@ -58,14 +62,18 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 					</div>
 					<div class="item">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon3.png" alt="" class="icon">
+						<div class="iconbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon3.svg" alt="" class="icon">
+						</div>
 						<div class="txtbox">
 							<p class="sub">버스</p>
 							<p class="tit">강남역 서초 현대타워 앞 하차 도보 1분</p>
 						</div>
 					</div>
 					<div class="item">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon4.png" alt="" class="icon">
+						<div class="iconbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/map_info_icon4.svg" alt="" class="icon">
+						</div>
 						<div class="txtbox">
 							<p class="sub">업무 시간</p>
 							<p class="tit">평일 09:30 ~ 20:00 / 토요일 11:00~15:00​</p>

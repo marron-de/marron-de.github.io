@@ -329,7 +329,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="line-2a"></div>
                                 <div class="frame-section" id="sec04">
-                                    <div class="frame-titbox">
+                                    <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
                                             <span class="frame-title">답사 동행 팀장님 소개</span>
                                             <div class="frame-tag">
@@ -347,7 +347,16 @@ if (!defined('_EYOOM_')) exit;
                                                 <span class="span-mentor">강종민 팀장</span >
                                                 <span class="span-residence">현지 거주 15년 이상</span>
                                             </div>
-                                        </div>
+                                        </div>								
+										<div class="frame-titbox mob_show">
+											<div class="frame-titbox flex">
+												<span class="frame-title">답사 동행 선생님 소개</span>
+												<div class="frame-tag">
+													<span>HOT 인기멘토</span>
+												</div>
+											</div>
+											<span class="frame-desc">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span >
+										</div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">
@@ -383,7 +392,16 @@ if (!defined('_EYOOM_')) exit;
                                                 <span class="span-mentor">임홍철 대표원장</span >
                                                 <span class="span-residence">아시아교육 전문가</span>
                                             </div>
-                                        </div>
+                                        </div>						
+										<div class="frame-titbox mob_show">
+											<div class="frame-titbox flex">
+												<span class="frame-title">담당 원장님 소개</span>
+												<div class="frame-tag">
+													<span>HOT 인기멘토</span>
+												</div>
+											</div>
+											<span class="frame-desc">몽선생생에서는 오로지 현지 체류경험이 있고, 오랫동안 교육업에 종사한 경험자들로만 구성하여 확실하고 믿을 수 있는 유학수속 서비스를 제공합니다.</span >
+										</div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">
@@ -413,7 +431,8 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="line-2a"></div>
 								<div class="frame-section d_img">
 									<div class="frame-detailimg">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/proc_detail_img02.jpg" alt="">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/proc_detail_img02.jpg" alt="" class="pc">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/proc_detail_img02_m.jpg" alt="" class="tablet">
 									</div>
 								</div>
                             </li>
@@ -428,7 +447,7 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                     <div class="frame-14f">
                         <div class="frame-150">
-                            <div class="tab_navbox frame-151">
+                            <div class="tab_navbox notab frame-151">
                                 <div class="tab_nav on2 frame-152">무료수속 서비스</div>
                             </div>
                             <div class="frame-157">

@@ -84,7 +84,10 @@ if (!defined('_EYOOM_')) exit;
 													예술대 포트폴리오 수강비
 													<small>1회</small>
 												</span>
-                                                <span class="cost">회당 106,250원</span>
+												<div class="costbox">
+													<span class="tablet">850,000원</span>
+                                                	<span class="cost">회당 106,250원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>

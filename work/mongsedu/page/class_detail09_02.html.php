@@ -103,7 +103,7 @@ if (!defined('_EYOOM_')) exit;
                                                 <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t19.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <p class="name">Jhenna <small>원어민 선생님</small></p>
+                                                <p class="name">Jenna <small>원어민 선생님</small></p>
                                                 <p class="desc">인사이드 MBA 졸업</p> 
                                                 <p class="tag">외국계 기업 임원 출신</p>
                                             </div>

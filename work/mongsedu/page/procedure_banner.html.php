@@ -8,8 +8,8 @@ if (!defined('_EYOOM_')) exit;
 
 <div class="sub-page page-counsel prd page-procedureban">
 	<div class="banner_area prd_top">
-        <div class="container" data-aos="fade-up">
-            <div class="text_area">
+        <div class="container">
+            <div class="text_area" data-aos="fade-up">
 				<p class="tit">
 					오직 몽선생에서만 <br>
 					만날 수 있는 책임감 있는 <br>
@@ -94,7 +94,6 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="imgbox">
                         <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_prdbanner04-1.png" alt="">
-						<img src="" alt="" class="img">
 					</div>
 				</div>
 				<div class="item item2">
@@ -349,7 +348,7 @@ if (!defined('_EYOOM_')) exit;
                     누적1만명, 최다 수속생 데이터가 증명합니다.
                 </p>
                 <p class="sub_txt2">
-                    몽선생은 2015년 부터 많은 합격생을 배출하여 다양한 합격사례 데이터를 제공합니다. <br/>
+                    몽선생은 2015년 부터 많은 합격생을 배출하여 다양한 합격사례 데이터를 제공합니다. <br class="pc">
                     학생의 학력, 성적 및 여러 상황과 조건에 맞는 최적화된 학교 선택이 가능합니다.
                 </p>
             </div>
@@ -372,7 +371,7 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 					</div>
 					<p class="desc">
-						이 외에도 많은 대학 및 기관과 긴밀히 파트너쉽을 구축하여 <br>
+						이 외에도 많은 대학 및 기관과 긴밀히 파트너쉽을 구축하여 <br class="pc"> 
 						학생들이 합격할 수 있는 다양한 입시 전략 방법을 제시합니다.
 					</p>
 				</div>

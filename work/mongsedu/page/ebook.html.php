@@ -340,7 +340,8 @@ if (!defined('_EYOOM_')) exit;
 				<div class="txtbox">
 					<p class="sub">Brochures & Service Guide</p>
 					<p class="tit">
-						CLASS 수업 커리큘럼 / 전자북 <br>
+						CLASS 수업 <br class="tablet">
+						커리큘럼 / 전자북 <br>
 						국가별 무료책자 신청
 					</p>
 				</div>
@@ -348,7 +349,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
     
-    <div class="msection class_area">
+    <div class="msection class_area ebook_sec1">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area class">
 				<p class="title">
@@ -416,7 +417,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection ebook_area">
+    <div class="msection ebook_area ebook_sec2">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area class">
 				<p class="title">
@@ -504,7 +505,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection class_area">
+    <div class="msection class_area ebook_sec3">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area class">
 				<p class="title">
@@ -572,7 +573,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection class_area ci sec">
+    <div class="msection class_area ci sec ebook_sec4">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area class">
 				<p class="title">
@@ -723,14 +724,15 @@ if (!defined('_EYOOM_')) exit;
             </div>
         </div>
     </div>
-    <div class="msection ebook_form">
+
+    <div class="msection ebook_form ebook_sec5">
         <div class="container">
             <div class="frm_titbox" data-aos="fade-up">
                 <p class="sub">무료 접수 신청</p >
-                <p class="tit">몽선생의 유학정보 카달로그를 받아보고 싶다면?</p >
+                <p class="tit">몽선생의 유학정보 <br class="tablet">카달로그를 받아보고 싶다면?</p >
             </div>
             <div class="frm_form">
-				<form name="frm" id="frm" action="" method="POST" enctype="multipart/form-data" class="frm" data-aos="fade-up">
+				<form name="ebookfrm" id="ebookfrm" action="" method="POST" enctype="multipart/form-data" class="frm" data-aos="fade-up">
 					<div class="form_wrap">
 						<p class="form_tit">원활한 소통을 위해 아래 정보들을 입력해주세요.</p>
 						<div class="form_box">
@@ -761,9 +763,9 @@ if (!defined('_EYOOM_')) exit;
 									<input type="checkbox" name="frm_agree" class="input_check" id="frm_agree" required>
 									<label for="frm_agree" class="label_check">개인정보수집 및 이용안내 동의</label>
 								</div>
-								<button type="button" class="term_viw" onclick="privacy_modal()">내용보기</button>
+								<button type="button" class="term_view" onclick="privacy_modal()">내용보기</button>
 							</div>
-							<button type="button" class="form_btn submit_btn">카달로그 신청하기</button>
+							<button type="button" class="form_btn submit_btn" onclick="formSubmit_modal()">카달로그 신청하기</button>
 						</div>	
 					
 					</div>
@@ -827,6 +829,27 @@ if (!defined('_EYOOM_')) exit;
 	</div>
 </div>
 
+<div class="cm_modal formSubmit_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box btn_ver">
+			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/modal_check2.svg" alt="" class="modal_icon">
+			<div class="modal_txtbox">
+				<p class="modal_tit">카달로그를 신청할까요?</p>
+				<p class="modal_desc">
+					조금만 기기려주시면 <br>
+					이메일로 카달로그를 보내드리겠습니다. <br>
+					(테스트 모달) 
+				</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA cm_modal_close">닫기</button>
+				<button type="button" class="btn typeC" onclick="form_submit()">신청하기</button>
+			</div>	
+		</div>	
+	</div>
+</div>
+
 
 
 <script>
@@ -835,6 +858,19 @@ if (!defined('_EYOOM_')) exit;
 	function privacy_modal() {
 		$("body").addClass('hidden');
 		$(".privacy_modal").addClass('show');
+	}
+
+	/* 폼 제출 팝업 */
+	function formSubmit_modal() {
+		$("body").addClass('hidden');
+		$(".formSubmit_modal").addClass('show');
+	}
+
+	/* 폼 제출 */
+	function form_submit() {
+		$('body').removeClass('hidden');
+		$('.formSubmit_modal').removeClass('show');
+		// $('#ebookfrm').trigger('submit');
 	}
 
 </script>

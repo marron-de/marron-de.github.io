@@ -125,7 +125,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="frame-section ver3">
 									<div class="frame-titbox">
 										<p class="frame-title">
-											<span class="color">국내 1호, 사립대 교직원 출신의</span> 경험을 통한 수속관리
+											<span class="color">국내 1호, 사립대 교직원 출신의</span><br class="tablet"> 경험을 통한 수속관리
 										</p>
 									</div>
 									<div class="pointbox">
@@ -243,7 +243,108 @@ if (!defined('_EYOOM_')) exit;
 											<span class="txt">빠른 상담</span>
 										</a>
 									</div>
-									<div class="swiper question_swiper">
+									<div class="question_wrapper">
+										<div class="marquee question_box" data-duration="4">
+											<div class="marquee_group">
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+											</div>
+										</div>
+										<div class="marquee question_box pc_hide" data-duration="4" data-reverse="reverse">
+											<div class="marquee_group">
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+											</div>
+										</div>
+										<div class="marquee question_box pc_hide" data-duration="4">
+											<div class="marquee_group">
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="swiper question_swiper question_box">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide question">
 												<p class="txt">질문 내용이 들어갑니다.</p>
@@ -275,7 +376,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="txt">질문 내용이 들어갑니다.</p>
 											</div>
 										</div>
-									</div>
+									</div> -->
                                 </div>
                             </li>
                         </ul>
@@ -294,30 +395,82 @@ if (!defined('_EYOOM_')) exit;
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_nav frame-152">단일컨설팅</a>
                                 <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_2" class="tab_nav on frame-152">자소서첨삭</a>
                             </div>
-                            <div class="frame-157">
-                                <div class="frame-158">
-                                    <div class="frame-159">
-                                        <span class="span-text-15a">900,000원</span>
-                                        <div class="frame-15b">
-                                            <span class="time-15c">추가비용 없음</span>
-                                        </div>
-                                    </div>
-									<p class="desc">
-										1개교 선택, 1주일 완성
-									</p>
-                                </div>
-                                <div class="frame-15d">
-                                    <div class="frame-15e">
-                                        <span class="interview">
-                                            자소서 첨삭 서비스는 1주일 안에 빠르고 효과적으로 학생이 희망하는 전공과 분야에 따라 NUS 및 해당 대학 출신자들이 합격사례를 바탕으로 첨삭을 지도하는 서비스 입니다.
-                                        </span >
-                                    </div>
-                                    <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
-                                            <span class="service-request">서비스 요청하기</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="tab_contbox frame-157">
+								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="tab_cont">
+									<div class="frame-158">
+										<div class="frame-159">
+											<span class="span-text-15a">4,300,000원</span>
+											<div class="frame-15b">
+												<span class="time-15c">합격 후 비자접수 별도납부</span>
+											</div>
+										</div>
+										<p class="desc">
+											최대 3개 선택, 아시아명문대 통합관리
+										</p>
+									</div>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<span class="interview">
+												입학컨설팅은 싱가포르 국립대와 홍콩대학의 합격을 위하여 검증된 멘토와 전문 카운셀러를 통해 개인 맞춤별 합격전략을 구성하여 효율적으로 입학 준비를 하는 컨설팅 서비스 입니다. 
+											</span >
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
+											</div>
+										</div>
+									</div>
+								</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_cont">
+									<div class="frame-158">
+										<div class="frame-159">
+											<span class="span-text-15a">1,900,000원</span>
+											<div class="frame-15b">
+												<span class="time-15c">합격 후 비자접수 별도납부</span>
+											</div>
+										</div>
+										<p class="desc">
+											1개교 집중관리, 대학선택 가능
+										</p>
+									</div>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<span class="interview">
+												단일컨설팅은 싱가포르 국립대와 홍콩대 중에서 1개교 입학을 위해 집중하고 싶은 학생들을 위해, 학교 1개만 선택하여 컨설팅을 맡길 수 있는 서비스 입니다. 
+											</span >
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
+											</div>
+										</div>
+									</div>
+                                </a>
+								<div class="tab_cont on">
+									<div class="frame-158">
+										<div class="frame-159">
+											<span class="span-text-15a">900,000원</span>
+											<div class="frame-15b">
+												<span class="time-15c">추가비용 없음</span>
+											</div>
+										</div>
+										<p class="desc">
+											1개교 선택, 1주일 완성
+										</p>
+									</div>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<span class="interview">
+												자소서 첨삭 서비스는 1주일 안에 빠르고 효과적으로 학생이 희망하는 전공과 분야에 따라 NUS 및 해당 대학 출신자들이 합격사례를 바탕으로 첨삭을 지도하는 서비스 입니다.
+											</span >
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
+											</div>
+										</div>
+									</div>
+								</div>
                             </div>
                         </div>
                     </div>

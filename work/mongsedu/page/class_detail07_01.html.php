@@ -90,7 +90,10 @@ if (!defined('_EYOOM_')) exit;
 													입학시험 정규반 수강료
 													<small>1회</small>
 												</span>
-                                                <span class="cost">회당 80,000원</span>
+												<div class="costbox">
+													<span class="tablet">80,000원</span>
+                                                	<span class="cost">회당 80,000원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span class="tit">수업비용 포함 내용</span>
@@ -133,7 +136,10 @@ if (!defined('_EYOOM_')) exit;
 													입학시험 정규반 수강료
 													<small>1개월</small>
 												</span>
-                                                <span class="cost">회당 50,000원</span>
+												<div class="costbox">
+													<span class="tablet">300,000원</span>
+													<span class="cost">회당 50,000원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span class="tit">수업비용 포함 내용</span>

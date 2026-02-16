@@ -129,7 +129,7 @@
 									<img src="<?php echo $path ?>img/ms2_icon3.png" alt="" class="icon">
 								</div>
 							</div>
-							<div class="item">
+							<a href="<?php echo $path ?>certification/certification.php" class="item">
 								<div class="txtbox">
 									<p class="tit">공식 인증 운영사</p>
 									<p class="desc">
@@ -140,7 +140,7 @@
 								<div class="iconbox">
 									<img src="<?php echo $path ?>img/ms2_icon4.png" alt="" class="icon">
 								</div>
-							</div>
+							</a>
 						</div>
 					</div>
 					<div class="banner" data-aos="fade-left">

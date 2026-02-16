@@ -84,7 +84,10 @@ if (!defined('_EYOOM_')) exit;
 													IELTS 소규모 과외 수업 수강비
 													<small>3개월</small>
 												</span>
-                                                <span class="cost">회당 1,000,000원</span>
+												<div class="costbox">
+													<span class="tablet">1,000,000원</span>
+                                                	<span class="cost">회당 1,000,000원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>

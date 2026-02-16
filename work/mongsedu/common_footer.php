@@ -25,7 +25,8 @@
 					<a href="tel:+10-8114-9003" class="desc">010-8114-9003</a>
 					<a href="https://pf.kakao.com/_fxmxmWV" class="desc" target="_blank">카카오톡 상담하기</a>
 					<p class="desc ver2">
-						10:00 - 18:00 (점심시간 12:00 - 13:00) <br>
+						10:00 - 18:00 <br class="tablet">
+						(점심시간 12:00 - 13:00) <br>
 						주말, 공휴일 휴무
 					</p>
 				</div>
@@ -56,7 +57,8 @@
 					<span class="txt">전화 <?php echo $bizinfo['bi_cs_tel1']; ?></span>
 					<span class="divider">|</span>
 					<span class="txt">팩스 <?php echo $bizinfo['bi_cs_fax']; ?></span>
-					<span class="divider">|</span>
+					<span class="divider pc">|</span>
+					<br class="tablet">
 					<span class="txt">이메일 <?php echo $bizinfo['bi_cs_email']; ?></span>
 					<br>
 					<span class="txt">통신판매업 <?php echo $bizinfo['bi_company_sellno']; ?></span>
@@ -84,3 +86,52 @@
 		</div>
 	</div>
 </footer>
+
+
+<div class="navibar">
+	<div class="navitem">
+		<a href="<?php echo G5_URL; ?>" class="link">
+			<div class="iconbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon1_off.png" alt="" class="icon off">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon1_on.png" alt="" class="icon on">
+			</div>
+			<p class="tit">home</p>
+		</a>
+	</div>
+	<div class="navitem">
+		<a href="tel:+10-8114-9003" class="link">
+			<div class="iconbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon2_off.png" alt="" class="icon off">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon2_on.png" alt="" class="icon on">
+			</div>
+			<p class="tit">전화상담</p>
+		</a>
+	</div>
+	<div class="navitem">
+		<a href="https://pf.kakao.com/_fxmxmWV" class="link" target="_blank">
+			<div class="iconbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon3_off.png" alt="" class="icon off">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon3_on.png" alt="" class="icon on">
+			</div>
+			<p class="tit">카톡상담</p>
+		</a>
+	</div>
+	<div class="navitem">
+		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission" class="link">
+			<div class="iconbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon4_off.png" alt="" class="icon off">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon4_on.png" alt="" class="icon on">
+			</div>
+			<p class="tit">설명회</p>
+		</a>
+	</div>
+	<div class="navitem">
+		<a href="https://www.youtube.com/channel/UCbxH8_UgfZNjiyVJsWHaFDg" class="link" target="_blank">
+			<div class="iconbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon5_off.png" alt="" class="icon off">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon5_on.png" alt="" class="icon on">
+			</div>
+			<p class="tit">유튜브</p>
+		</a>
+	</div>
+</div>

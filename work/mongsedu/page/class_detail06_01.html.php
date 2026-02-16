@@ -84,7 +84,10 @@ if (!defined('_EYOOM_')) exit;
 													1:1 영어기초반 수강비
 													<small>1개월</small>
 												</span>
-                                                <span class="cost">회당 800,000원</span>
+												<div class="costbox">
+													<span class="tablet">1,800,000원</span>
+                                                	<span class="cost">회당 800,000원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>

@@ -178,6 +178,15 @@ if (!defined('_EYOOM_')) exit;
                                                 <span class="span-residence">아시아 교육 전문가</span>
                                             </div>
                                         </div>
+										<div class="frame-titbox mob_show">
+											<div class="frame-titbox flex">
+												<span class="frame-title">상담사 소개</span>
+												<div class="frame-tag">
+													<span>HOT 인기멘토</span>
+												</div>
+											</div>
+											<span class="frame-desc">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span >
+										</div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">

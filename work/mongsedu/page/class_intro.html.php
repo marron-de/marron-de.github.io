@@ -18,7 +18,7 @@ if (!defined('_EYOOM_')) exit;
 					<div class="txtbox">
 						<p class="sub">검증된 선생님을 매칭해요</p>
 						<p class="tit">
-							유학 준비 걱정 No! 
+							유학 준비 걱정 No!  <br class="tablet">
 							<span class="color">완벽한 학습 제공</span>
 						</p>
 					</div>
@@ -44,7 +44,8 @@ if (!defined('_EYOOM_')) exit;
                 </div>
 				<a href="https://pf.kakao.com/_fxmxmWV" class="kakao_btn" target="_blank">
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_kakao.png" alt="" class="icon">
-					<span class="txt">빠른 상담</span>
+					<span class="txt pc">빠른 상담</span>
+					<span class="txt tablet">몽선생 카카오톡 상담 바로가기</span>
 				</a>
             </div>
             <div class="counsel_list tabs_cont class">
@@ -75,7 +76,10 @@ if (!defined('_EYOOM_')) exit;
                                     <a href="#none">
                                         <div class="badge">
                                             <p class="best">BEST</p>
-                                            <p class="type">영어공인점수</p>
+                                            <p class="type">
+												<span class="pc">영어공인점수</span>
+												<span class="tablet">영어공인</span>
+											</p>
                                             <p class="type">소규모</p>
                                         </div>
                                         <p class="red">원어민 소규모수업</p>
@@ -91,8 +95,14 @@ if (!defined('_EYOOM_')) exit;
                                     <a href="#none">
                                         <div class="badge">
                                             <p class="best">BEST</p>
-                                            <p class="type">영어수업</p>
-                                            <p class="type">1:1수업</p>
+                                            <p class="type">
+												<span class="pc">영어수업</span>
+												<span class="tablet">영어</span>
+											</p>
+                                            <p class="type">
+												<span class="pc">1:1수업</span>
+												<span class="tablet">1:1</span>
+											</p>
                                         </div>
                                         <p class="red">원어민 선생님관리</p>
                                         <span class="title">1달안에 잡아주는 영어 기초 훈련반</span>
@@ -107,7 +117,10 @@ if (!defined('_EYOOM_')) exit;
                                     <a href="#none">
                                         <div class="badge">
                                             <!-- <p class="best">BEST</p> -->
-                                            <p class="type">영어공인점수</p>
+                                            <p class="type">
+												<span class="pc">영어공인점수</span>
+												<span class="tablet">영어공인</span>
+											</p>
                                             <p class="type">소규모</p>
                                         </div>
                                         <p class="red">고득점 강사 밀착관리</p>
@@ -123,7 +136,10 @@ if (!defined('_EYOOM_')) exit;
                                     <a href="#none">
                                         <div class="badge">
                                             <p class="best">BEST</p>
-                                            <p class="type">1:1수업</p>
+                                            <p class="type">
+												<span class="pc">1:1수업</span>
+												<span class="tablet">1:1</span>
+											</p>
                                             <p class="type">1달완성</p>
                                         </div>
                                         <p class="red">주3회로 유학생활 준비</p>
@@ -140,7 +156,7 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="badge">
                                             <!-- <p class="best">BEST</p> -->
                                             <p class="type">발표수업</p>
-                                            <p class="type">소규모그룹</p>
+                                            <p class="type">소규모</p>
                                         </div>
                                         <p class="red">실전 과제/시험 준비</p>
                                         <span class="title">미리 준비하는 대학 토론/에세이</span>
@@ -155,7 +171,10 @@ if (!defined('_EYOOM_')) exit;
                                     <a href="#none">
                                         <div class="badge">
                                             <p class="best">BEST</p>
-                                            <p class="type">전공이론</p>
+                                            <p class="type">
+												<span class="pc">전공이론</span>
+												<span class="tablet">이론</span>
+											</p>
                                             <p class="type">과제연습</p>
                                         </div>
                                         <p class="red">대학 1학년 실전연습</p>
@@ -171,8 +190,14 @@ if (!defined('_EYOOM_')) exit;
                                     <a href="#none">
                                         <div class="badge">
                                             <p class="best">BEST</p>
-                                            <p class="type">온라인수업</p>
-                                            <p class="type">1:1관리</p>
+                                            <p class="type">
+												<span class="pc">온라인수업</span>
+												<span class="tablet">온라인</span>
+											</p>
+                                            <p class="type">
+												<span class="pc">1:1관리</span>
+												<span class="tablet">1:1</span>
+											</p>
                                         </div>
                                         <p class="red">졸업생 직접 강의</p>
                                         <span class="title">완벽하게 준비하는 포트폴리오 (작품/실기)</span>
@@ -204,7 +229,7 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="badge">
                                             <p class="best">BEST</p>
                                             <p class="type">대학수업지도</p>
-                                            <p class="type">과제/시험풀이</p>
+                                            <!-- <p class="type">과제/시험풀이</p> -->
                                         </div>
                                         <p class="red">검증된 선배들 매칭</p>
                                         <span class="title">졸업걱정 NO! 해외대학 학과목 밀착과외!</span>
@@ -503,10 +528,6 @@ if (!defined('_EYOOM_')) exit;
 											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_classono.svg" alt="">
                                             <span> 1:1 수업 (50분)</span>
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>온라인 live수업</span>
-                                        </li>
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -550,13 +571,7 @@ if (!defined('_EYOOM_')) exit;
                                             <span>
                                                 소규모 수업(60분)
                                             </span>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 live수업 
-                                            </span>
-                                            <p>16시간</p>
-                                        </li>
+										</li>
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -598,16 +613,6 @@ if (!defined('_EYOOM_')) exit;
                                             <span>
                                                 1:1 수업 (60분)
                                             </span>
-                                            <!-- <p>
-                                                12회
-                                            </p> -->
-                                        </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 live수업
-                                            </span>
-                                            <p>12시간</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -655,21 +660,6 @@ if (!defined('_EYOOM_')) exit;
                                             </span>
                                             <p>30시간</p>
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 live수업	
-                                            </span>
-                                            <p>
-                                                30시간
-                                            </p>
-                                        </li>
-                                        <!-- <li>
-                                            <span>
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                                자체제작 문제집 제공 (CAT4,MAP세트)
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -711,23 +701,7 @@ if (!defined('_EYOOM_')) exit;
                                             <span>
                                                 1:1 수업(60분)
                                             </span>
-                                            <!-- <p>
-                                                24시간
-                                            </p> -->
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 live수업
-                                            </span>
-                                            <p>24시간</p>
-                                        </li>
-                                        <!-- <li>
-                                            <span>
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_group.svg" alt="">
-                                                월별 스터디 클럽
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -773,18 +747,6 @@ if (!defined('_EYOOM_')) exit;
                                                 12회
                                             </p>
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 실시간 강의
-                                            </span>
-                                        </li>
-                                        <!-- <li>
-                                            <span>
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_group.svg" alt="">
-                                                월별 스터디 클럽
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -829,23 +791,7 @@ if (!defined('_EYOOM_')) exit;
                                             <span>
                                                 소규모 수업(60~90분)
                                             </span>
-                                            <!-- <p>
-                                                24회
-                                            </p> -->
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 live수업
-                                            </span>
-                                            <p>24시간</p>
-                                        </li>
-                                        <!-- <li>
-                                            <span>
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_group.svg" alt="">
-                                                월별 스터디 클럽
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -891,19 +837,6 @@ if (!defined('_EYOOM_')) exit;
                                                 12회
                                             </p>
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 live수업
-                                            </span>
-                                            <p>12시간</p>
-                                        </li>
-                                        <!-- <li>
-                                            <span>
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_group.svg" alt="">
-                                                월별 스터디 클럽
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -949,18 +882,6 @@ if (!defined('_EYOOM_')) exit;
                                                 12회
                                             </p>
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 실시간 강의
-                                            </span>
-                                        </li>
-                                        <!-- <li>
-                                            <span>
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_group.svg" alt="">
-                                                월별 스터디 클럽
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -1006,18 +927,6 @@ if (!defined('_EYOOM_')) exit;
                                                 16회
                                             </p>
                                         </li>
-                                        <li>
-											<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_webinar.svg" alt="">
-                                            <span>
-                                                온라인 Live 실시간 강의
-                                            </span>
-                                        </li>
-                                        <!-- <li>
-                                            <span>
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_group.svg" alt="">
-                                                월별 스터디 클럽
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="text_area">
@@ -1151,12 +1060,16 @@ if (!defined('_EYOOM_')) exit;
     <div class="class_mid_banner">
         <div class="container" data-aos="fade-up">
             <div class="text_area">
-                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_matching.png" alt="">
-                <span>몽선생 클래스 수업의 장점 4가지!</span>
-                <p>
-                    누적관리 1만명, 지금까지 쌓아온 경험과 노하우로<br/>
-                    유학생에게 필요한 수업을 제공합니다.
-                </p>
+				<div class="titbox">
+					<p class="tit">
+						<span class="txt">몽선생 클래스 수업의 장점 4가지!</span>
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_matching.png" alt="" class="icon">
+					</p>
+					<p class="desc">
+						누적관리 1만명, 지금까지 쌓아온 경험과 노하우로<br/>
+						유학생에게 필요한 수업을 제공합니다.
+					</p>
+				</div>
                 <ul>
                     <li class="red">
                         <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/check_red.svg" alt="">
@@ -1189,9 +1102,21 @@ if (!defined('_EYOOM_')) exit;
                 </ul>
             </div>
             <div class="img_area">
-                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/phone_img.png" alt="" class="phone">
-                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/phone_gif.gif" alt="" class="gif">
-                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/phone_deco.png" alt="" class="deco">
+				<div class="mob_txtbox">
+					<p class="tit">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_matching.png" alt="" class="icon">
+						<span class="txt">몽선생 클래스 수업의 장점 4가지!</span>
+					</p>
+					<p class="desc">
+						누적관리 1만명, 지금까지 쌓아온 경험과 노하우로<br/>
+						유학생에게 필요한 수업을 제공합니다.
+					</p>
+				</div>
+				<div class="phonebox">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/phone_gif.gif" alt="" class="gif">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/phone_img.png" alt="" class="phone">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/phone_deco.png" alt="" class="deco">
+				</div>
             </div>
         </div>
     </div>

@@ -16,9 +16,12 @@ if (!defined('_EYOOM_')) exit;
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_ban_bg_mob.jpg" alt="" class="tablet img">
 					</div>
 					<div class="txtbox">
-						<p class="sub">교직원들이 만든 전문적인 교육업체</p>
+						<p class="sub">
+							교직원들이 만든 <br class="tablet">
+							전문적인 교육업체
+						</p>
 						<p class="tit">
-							몽선생의 컨설팅은 
+							몽선생의 컨설팅은  <br class="tablet">
 							<span class="color">이런점이 달라요!</span>
 						</p>
 					</div>
@@ -33,13 +36,13 @@ if (!defined('_EYOOM_')) exit;
 
 	<div class="title_area_wrap">
 		<div class="container stickybox" data-aos="fade" data-aos-anchor=".page-why">
-			<div class="tab sticky">
-				<ul class="tab_tit">
-					<li><a href="#sec01" class="show">교직원 출신 상담/수속</a></li>
-					<li><a href="#sec03">CLASS 학습지원</a></li>
-					<li><a href="#sec04">최다 합격생 배출</a></li>
-					<li><a href="#sec05">현지 정착지원</a></li>
-					<li><a href="#sec06">TEAM 멘토링 시스템</a></li>
+			<div class="tab sticky swiper link_swiper" data-gappc="0" data-gapmob="0">
+				<ul class="tab_tit swiper-wrapper">
+					<li class="swiper-slide"><a href="#sec01" class="show">교직원 출신 상담/수속</a></li>
+					<li class="swiper-slide"><a href="#sec03">CLASS 학습지원</a></li>
+					<li class="swiper-slide"><a href="#sec04">최다 합격생 배출</a></li>
+					<li class="swiper-slide"><a href="#sec05">현지 정착지원</a></li>
+					<li class="swiper-slide"><a href="#sec06">TEAM 멘토링 시스템</a></li>
 				</ul>
 			</div>
 		</div>
@@ -851,7 +854,8 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
 			<div class="sub_titbox">
 				<p class="sub_txt1 ver3">
-					<span class="color2">최대 수속생관리!</span> 국제학교~해외대학까지 한 번에
+					<span class="color2">최대 수속생관리!</span>  <br class="tablet">
+					국제학교~해외대학까지 한 번에
 				</p>
 			</div>
 			<div class="contbox">
@@ -943,7 +947,8 @@ if (!defined('_EYOOM_')) exit;
 				<div class="txtbox">
 					<p class="sub_txt4">Different Point</p>
 					<p class="sub_txt1">
-						한명의 상담사가 아니다! <span class="color2">TEAM으로 움직인다</span> 
+						한명의 상담사가 아니다! <br class="tablet">
+						<span class="color2">TEAM으로 움직인다</span> 
 					</p>
 					<p class="sub_txt3">
 						몽선생의 Team 멘토링 시스템은 한 명의 상담사가 고객을 관리하지 않고, 현지 학교 출신(학습담당), 유학수속 (행정담당) 으로 구분되어 팀 멘토링 시스템으로 한 명의 학생을 다수의 상담사가 관리합니다.

@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
 			<div class="search_box">
 				<div class="search_inputbox" onclick="univsch_popup()">
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_search_blue.svg" alt="" class="icon">
-					<input type="text" class="input" placeholder="원하시는 학교 정보를 쉽게 만나보세요.">
+					<input type="text" class="input" placeholder="원하시는 학교 정보를 쉽게 만나보세요." required>
 					<button type="button" class="del_btn">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_delete.svg" alt="" class="icon">
 					</button>
@@ -32,24 +32,24 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="univ_info tabs">
-        <ul class="container" data-aos="fade">
-            <li class="active">
+    <div class="univ_info tabs swiper tab_swiper" data-index="0" data-gappc="0" data-gapmob="0">
+        <ul class="container swiper-wrapper" data-aos="fade">
+            <li class="active swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info_intro">홈</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info01">국제학교</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info02">해외대학</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=guidebook">가이드북</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=faq">자주 묻는 질문</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_adv">학교 광고판</a>
             </li>
         </ul>
@@ -61,7 +61,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="ms title_area">
             		<p class="title">
 						<span class="tit">
-							<span class="color2">몽선생 추천</span>올해의 학교
+							<span class="color2">몽선생 추천</span> 올해의 학교
 						</span>
 					</p>
                 </div>
@@ -228,14 +228,14 @@ if (!defined('_EYOOM_')) exit;
 				<div class="title">
 					<span class="tit">국제학교</span>
 				</div>
-                <div class="tab">
-                    <ul class="tab_tit">
-                        <li><a href="#" class="show" id="tab-11">전체보기</a></li>
-                        <li><a href="#" id="tab-12">말레이시아</a></li>
-                        <li><a href="#" id="tab-13">싱가포르</a></li>
-                        <li><a href="#" id="tab-14">한국 비인가</a></li>
-                        <li><a href="#" id="tab-15">한국 인가</a></li>
-                        <li><a href="#" id="tab-16">태국/베트남</a></li>
+                <div class="tab swiper tab_swiper" data-gappc="16" data-gapmob="12">
+                    <ul class="tab_tit swiper-wrapper">
+                        <li class="swiper-slide"><a href="#" class="show" id="tab-11">전체보기</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-12">말레이시아</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-13">싱가포르</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-14">한국 비인가</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-15">한국 인가</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-16">태국/베트남</a></li>
                     </ul>
                 </div>
             </div>
@@ -566,13 +566,13 @@ if (!defined('_EYOOM_')) exit;
 				<div class="title">
 					<span class="tit">해외대학</span>
 				</div>
-                <div class="tab">
-                    <ul class="tab_tit">
-                        <li><a href="#" class="show" id="tab-21">전체보기</a></li>
-                        <li><a href="#" id="tab-22">싱가포르</a></li>
-                        <li><a href="#" id="tab-23">송도</a></li>
-                        <li><a href="#" id="tab-24">미국</a></li>
-                        <li><a href="#" id="tab-25">영국</a></li>
+                <div class="tab swiper tab_swiper" data-gappc="16" data-gapmob="12">
+                    <ul class="tab_tit swiper-wrapper">
+                        <li class="swiper-slide"><a href="#" class="show" id="tab-21">전체보기</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-22">싱가포르</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-23">송도</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-24">미국</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-25">영국</a></li>
                     </ul>
                 </div>
             </div>
@@ -1148,8 +1148,9 @@ if (!defined('_EYOOM_')) exit;
 
 <div id="univ_modal_1" class="cm_modal detail_modal univ_modal">	
 	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close tablet"></button>
 		<div class="cm_modal_box">
-			<button type="button" class="cm_modal_close"></button>
+			<button type="button" class="cm_modal_close pc"></button>
 			<div class="titbox">
 				<p class="title">
 					<span class="tit">Taylor’s University</span>

@@ -84,7 +84,10 @@ if (!defined('_EYOOM_')) exit;
 													1:1 영어회화(유학영어) 수강비
 													<small>2개월</small>
 												</span>
-                                                <span class="cost">회당 300,000원</span>
+												<div class="costbox">
+													<span class="tablet">600,000원</span>
+                                                	<span class="cost">회당 300,000원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>

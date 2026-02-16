@@ -16,9 +16,9 @@ if (!defined('_EYOOM_')) exit;
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_ban_bg_mob.jpg" alt="" class="tablet img">
 					</div>
 					<div class="txtbox">
-						<p class="sub">교직원들이 만든 전문적인 교육업체</p>
+						<p class="sub">교직원들이 만든 <br class="tablet">전문적인 교육업체</p>
 						<p class="tit">
-							몽선생의 컨설팅은 
+							몽선생의 컨설팅은 <br class="tablet">
 							<span class="color">이런점이 달라요!</span>
 						</p>
 					</div>
@@ -32,57 +32,58 @@ if (!defined('_EYOOM_')) exit;
     </div>
 
     <div class="link_area">
-        <div class="container" data-aos="fade-up">
-			<div class="counsel_link">
-				<a href="" class="link">
+        <div class="container swiper link_swiper" data-gappc="10" data-gapmob="16" data-aos="fade-up">
+			<div class="swiper-wrapper counsel_link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon1.png" alt="" class="icon">
 					</div>
 					<p class="tit">상담 가능 분야</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon2.png" alt="" class="icon">
 					</div>
 					<p class="tit">카톡 빠른상담</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon3.png" alt="" class="icon">
 					</div>
 					<p class="tit">방문상담</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon4.png" alt="" class="icon">
 					</div>
 					<p class="tit">상담사 소개</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon5.png" alt="" class="icon">
 					</div>
 					<p class="tit">최신 설명회</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon6.png" alt="" class="icon">
 					</div>
 					<p class="tit">유학박람회</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon7.png" alt="" class="icon">
 					</div>
 					<p class="tit">몽선생특강</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon8.png" alt="" class="icon">
 					</div>
 					<p class="tit">상담장소</p>
 				</a>
             </div>
+			<div class="swiper-scrollbar scrollbar"></div>
         </div>
     </div>
 
@@ -319,22 +320,22 @@ if (!defined('_EYOOM_')) exit;
 					<span class="tit"><span class="color2">전문적인 상담</span>을 받아보세요!</span>
 				</div>
             </div>
-			<div class="mentor_slidebox">
-				<div class="tab_wrap">
-					<div class="tab_navbox">
-						<div class="tab_nav on">
+			<div class="mentor_slidebox onlyPC">
+				<div class="tab_wrap swiper tab_swiper" data-gappc="0" data-gapmob="0">
+					<div class="tab_navbox swiper-wrapper">
+						<div class="tab_nav on swiper-slide">
 							<span class="txt">ALL</span>
 							<span class="arrow"></span>
 						</div>
-						<div class="tab_nav">
+						<div class="tab_nav swiper-slide">
 							<span class="txt">국제학교 전문</span>
 							<span class="arrow"></span>
 						</div>
-						<div class="tab_nav">
+						<div class="tab_nav swiper-slide">
 							<span class="txt">대학입시 전문</span>
 							<span class="arrow"></span>
 						</div>
-						<div class="tab_nav">
+						<div class="tab_nav swiper-slide last">
 							<span class="txt">대학입시 전문</span>
 							<span class="arrow"></span>
 						</div>
@@ -770,10 +771,11 @@ if (!defined('_EYOOM_')) exit;
 										<div class="txtbox">
 											<div class="top">
 												<p class="name">lya 멘토</p>
-												<p class="desc">Laguna State University </p>
+												<p class="desc">Laguna State University</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">국제학교 학생 영어 티칭 전문</p>
+												<p class="tag">국제학교 학생 영어 티칭
+												<span class="pc">전문</span></p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -873,9 +875,9 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(20);">
+									<div class="swiper-slide item" onclick="mentor_modal(21);">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t20.jpg" alt=""
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t21.jpg" alt=""
 												class="img">
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_biet.svg" alt="" class="flag">
@@ -1109,6 +1111,16 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="btn_box bottom">
+					<a href="#none" class="btn">
+						<p class="txt">대표원장 상담</p>
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_blue.png" alt="" class="icon">
+					</a>
+					<a href="https://pf.kakao.com/_fxmxmWV" class="btn" target="_blank">
+						<p class="txt">빠른 상담</p>
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_kakao.png" alt="" class="icon">
+					</a>
 				</div>
 			</div>
         </div>
@@ -1447,7 +1459,8 @@ if (!defined('_EYOOM_')) exit;
 				<div class="deco" data-aos="fade"></div>
 				<p class="sub">50여개 학교 참석!</p>
 				<p class="tit">
-					몽선생이 주관하는 <span class="color">유학 박람회</span> 보기
+					몽선생이 주관하는 <br class="tablet">
+					<span class="color">유학 박람회</span> 보기
 				</p>
 			</div>
 		</div>
@@ -1558,14 +1571,8 @@ if (!defined('_EYOOM_')) exit;
 								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
 								<br><br>
 								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
-								<br><br>
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
-								<br><br>
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
-							</p>
 						</div>
 					</div>
-
 				</div>
 				<div class="swiper-slide item">
 					<div class="infobox">

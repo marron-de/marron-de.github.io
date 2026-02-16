@@ -129,6 +129,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-151">
                                 <div class="frame-152">
                                     <span class="day-paid">해외대학 대비반 수업</span >
+									<div class="day-paid-153">(2개월)</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -138,9 +139,13 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">해외대학 대비반 패키지 수강료 <small>(2개월)</small> - 700,000 원 <small>(월)</small></span>
+                                        <span class="span-text-15a">해외대학 대비반 패키지 700,000원</span>
+                                        <span class="span-text-15a">전공이론 수업(단독 수강시) - 500,000원</span>
+                                        <span class="span-text-15a">에세이토론 수업(단독 수강시) - 400,000원</span>
+
+                                        <!-- <span class="span-text-15a">해외대학 대비반 패키지 수강료 <small>(2개월)</small> - 700,000 원 <small>(월)</small></span>
                                         <span class="span-text-15a" style="margin-top:.25em;">전공이론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 500,000 원 <small>(월)</small></span>
-                                        <span class="span-text-15a" style="margin-top:.25em;">에세이토론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 400,000 원 <small>(월)</small></span>
+                                        <span class="span-text-15a" style="margin-top:.25em;">에세이토론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 400,000 원 <small>(월)</small></span> -->
                                     </div>
                                 </div>
                                 <div class="frame-15d">

@@ -8,12 +8,14 @@ if (!defined('_EYOOM_')) exit;
 
 <div class="sub-page page-counsel page-classban">
 	<div class="banner_area clb_top">
-        <div class="container" data-aos="fade-up">
-            <div class="text_area">
+        <div class="container">
+            <div class="text_area" data-aos="fade-up">
                 <p class="desc">국제학교, 영어공인점수, 해외대학 준비</p>
                 <span class="tit">
-                    유학 준비에 꼭 필요한 맞춤수업!<br/>
-                    검증된 몽선생 CLASS에서 시작하세요.
+                    유학 준비에 꼭 필요한<br class="tablet">
+					 맞춤수업! <br class="pc">
+                    검증된 <br class="tablet">
+					몽선생 CLASS에서 시작하세요.
                 </span>
             </div>
             <div class="img_area">
@@ -34,7 +36,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="item">
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/class_sec1_icon1.png" alt="" class="icon">
 					<p class="tit">
-						현지 학교 출신+원어민 <br>
+						현지 학교 출신+원어민 <br class="pc">
 						직접 검증한 선생님 매칭!
 					</p>
 				</div>
@@ -81,7 +83,7 @@ if (!defined('_EYOOM_')) exit;
 						</p>
 						<p class="desc">
 							싱가포르, 캐나다, 미국, 말레이시아 등 현장 경험이 <br>
-							풍부한 선생님이 매칭이 되며 1:1 수업과 소규모 그룹수업으로 <br>
+							풍부한 선생님이 매칭이 되며 1:1 수업과 소규모 그룹수업으로 <br class="pc">
 							학생들이 빠르게 실력 향상이 될 수 있도록 관리합니다.
 						</p>
 					</div>
@@ -99,7 +101,10 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">대표원장 몽선생</p>
+											<p class="name">
+												몽선생
+												<span class="small">대표원장</span>
+											</p>
 											<p class="desc">아시아 교육 전문가</p>
 										</div>
 										<div class="bottom">
@@ -120,7 +125,10 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">이지형 부원장</p>
+											<p class="name">
+												이지형 
+												<span class="small">부원장</span>
+											</p>
 											<p class="desc">칭화대 국제관계 석사</p>
 										</div>
 										<div class="bottom">
@@ -141,7 +149,10 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">유성준 멘토</p>
+											<p class="name">
+												유성준 
+												<span class="small">멘토</span>
+											</p>
 											<p class="desc">NUS 국립대 출신</p>
 										</div>
 										<div class="bottom">
@@ -162,7 +173,10 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">이진영 멘토</p>
+											<p class="name">
+												이진영 
+												<span class="small">멘토</span>
+											</p>
 											<p class="desc">홍콩대 의대생 출신</p>
 										</div>
 										<div class="bottom">
@@ -183,7 +197,10 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">Tei 실장</p>
+											<p class="name">
+												Tei 
+												<span class="small">실장</span>
+											</p>
 											<p class="desc">싱가포르 사립대 출신</p>
 										</div>
 										<div class="bottom">
@@ -204,7 +221,10 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">김형수 팀장</p>
+											<p class="name">
+												김형수 
+												<span class="small">팀장</span>
+											</p>
 											<p class="desc">서강대 shape mba 재학중</p>
 										</div>
 										<div class="bottom">
@@ -225,7 +245,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">이수연 실장</p>
+											<p class="name">이수연 <span class="small">실장</span></p>
 											<p class="desc">말레이시아 사립대 교직원 출신</p>
 										</div>
 										<div class="bottom">
@@ -246,7 +266,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">김소연 실장</p>
+											<p class="name">김소연 <span class="small">실장</span></p>
 											<p class="desc">칭화대 국제관계 석사</p>
 										</div>
 										<div class="bottom">
@@ -269,7 +289,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">홍수진 실장</p>
+											<p class="name">홍수진 <span class="small">실장</span></p>
 											<p class="desc">교육업 경력 10년</p>
 										</div>
 										<div class="bottom">
@@ -290,7 +310,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">강종민 지사장</p>
+											<p class="name">강종민 <span class="small">지사장</span></p>
 											<p class="desc">말레이시아 세기대학원 졸업</p>
 										</div>
 										<div class="bottom">
@@ -311,7 +331,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">Dennis 멘토</p>
+											<p class="name">Dennis <span class="small">멘토</span></p>
 											<p class="desc">연세대학교 컴퓨터과학</p>
 										</div>
 										<div class="bottom">
@@ -332,7 +352,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">조수호 멘토</p>
+											<p class="name">조수호 <span class="small">멘토</span></p>
 											<p class="desc">라셀 예술대 그래픽</p>
 										</div>
 										<div class="bottom">
@@ -353,7 +373,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">이희재 멘토</p>
+											<p class="name">이희재 <span class="small">멘토</span></p>
 											<p class="desc">미국 UC 버클리대학 출신</p>
 										</div>
 										<div class="bottom">
@@ -374,7 +394,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">태정인 멘토</p>
+											<p class="name">태정인 <span class="small">멘토</span></p>
 											<p class="desc">UCLA 정치학과 졸업</p>
 										</div>
 										<div class="bottom">
@@ -395,7 +415,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">임지영 멘토</p>
+											<p class="name">임지영 <span class="small">멘토</span></p>
 											<p class="desc">미국 조지타운대학 출신</p>
 										</div>
 										<div class="bottom">
@@ -416,7 +436,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">조서연 멘토</p>
+											<p class="name">조서연 <span class="small">멘토</span></p>
 											<p class="desc">LSE 런던정경대 출신</p>
 										</div>
 										<div class="bottom">
@@ -437,7 +457,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">이은빈 멘토</p>
+											<p class="name">Rua <span class="small">원어민 선생님</span></p>
 											<p class="desc">듀오링고 만점에 가까운 실력자</p>
 										</div>
 										<div class="bottom">
@@ -458,7 +478,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">Amy 멘토</p>
+											<p class="name">Amy <span class="small">원어민 선생님</span></p>
 											<p class="desc">Middlesex University London</p>
 										</div>
 										<div class="bottom">
@@ -479,7 +499,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">Jenna 멘토</p>
+											<p class="name">Jenna <span class="small">원어민 선생님</span></p>
 											<p class="desc">인사이드 MBA 졸업</p>
 										</div>
 										<div class="bottom">
@@ -500,8 +520,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">lya 멘토</p>
-											<p class="desc">Laguna State University </p>
+											<p class="name">lya <span class="small">원어민 선생님</span></p>
+											<p class="desc">Laguna State University</p>
 										</div>
 										<div class="bottom">
 											<p class="tag">국제학교 학생 영어 티칭 전문</p>
@@ -521,7 +541,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">김연수 실장</p>
+											<p class="name">김연수 <span class="small">실장</span></p>
 											<p class="desc">-</p>
 										</div>
 										<div class="bottom">
@@ -542,7 +562,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="txtbox">
 										<div class="top">
-											<p class="name">Raphael 멘토</p>
+											<p class="name">Raphael <span class="small">원어민 선생님</span></p>
 											<p class="desc">국제학교 출신 교포 강사</p>
 										</div>
 										<div class="bottom">
@@ -661,8 +681,8 @@ if (!defined('_EYOOM_')) exit;
 						<div class="tag">care system 01</div>
 						<p class="tit">누구도 포기하지 않게 <br>꼼꼼한 학습관리 제공</p>
 						<p class="desc">
-							몽선생 CLASS에서는 개별 학습관리자를 배정하여 <br>
-							수업에 관한 피드백과 상담을 통해 <br>
+							몽선생 CLASS에서는 개별 학습관리자를 배정하여 <br class="pc">
+							수업에 관한 피드백과 상담을 통해 <br class="pc">
 							학생 개인별 1:1 학습관리를 실시합니다.
 						</p>
 					</div>
@@ -673,10 +693,10 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="txtbox">
 						<div class="tag">care system 02</div>
-						<p class="tit">실력이 정체될 때,<br>특별 교육특강 제공</p>
+						<p class="tit">실력이 정체될 때, <br class="pc">특별 교육특강 제공</p>
 						<p class="desc">
-							학생별 약점을 자연스럽게 보완할 수 있도록 <br>
-							추가 수업을 제공하여,  <br>
+							학생별 약점을 자연스럽게 보완할 수 있도록 <br class="pc">
+							추가 수업을 제공하여,  <br class="pc">
 							끝까지 성장할 수 있는 학습 지원을 제공합니다.
 						</p>
 					</div>

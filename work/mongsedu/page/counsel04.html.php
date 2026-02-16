@@ -46,7 +46,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 <div class="sub-page page-counsel page-form">
     <div class="counsel_wrap container">
         <div class="counsel_titbox" data-aos="fade-up">
-			<div class="cs_top">
+			<div class="cs_top" data-aos="fade-up">
 				<h3 class="tit">
 					<span class="blue">유학 고민,</span><br/>
 					더 이상 혼자 하지 마세요.

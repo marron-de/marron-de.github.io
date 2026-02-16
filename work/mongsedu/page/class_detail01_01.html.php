@@ -79,7 +79,10 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>듀오링고 DET 실전반 수강료 <small>2개월</small></span>
-                                                <span class="cost">회당 30,625원</span>
+												<div class="costbox">
+													<span class="tablet">490,000원</span>
+                                                	<span class="cost">회당 30,625원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>
@@ -119,7 +122,10 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>듀오링고 DET 입문반 수강료 <small>2개월</small></span>
-                                                <span class="cost">회당 25,000원</span>
+												<div class="costbox">
+													<span class="tablet">600,000원</span>
+                                                	<span class="cost">회당 25,000원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>

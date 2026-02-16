@@ -558,7 +558,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="line-2a"></div>
                                 <div class="frame-section" id="sec04">
-                                    <div class="frame-titbox">
+                                    <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
                                             <span class="frame-title">답사 동행 팀장님 소개</span>
                                             <div class="frame-tag">
@@ -577,6 +577,15 @@ if (!defined('_EYOOM_')) exit;
                                                 <span class="span-residence">현지 거주 15년 이상</span>
                                             </div>
                                         </div>
+										<div class="frame-titbox mob_show">
+											<div class="frame-titbox flex">
+												<span class="frame-title">답사 동행 팀장님 소개</span>
+												<div class="frame-tag">
+													<span>HOT 인기멘토</span>
+												</div>
+											</div>
+											<span class="frame-desc">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span >
+										</div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">
@@ -631,6 +640,17 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<div class="line-15f"></div>
+											<span class="interview">인터뷰 예시질문 제공 / 피드백관리<br/>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보존하세</span >
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="tab_cont">
 									<div class="frame-158">
@@ -638,6 +658,17 @@ if (!defined('_EYOOM_')) exit;
 											<span class="span-text-15a">480,000원</span>
 											<div class="frame-15b">
 												<span class="time-15c">오전 10시~오후 5시</span>
+											</div>
+										</div>
+									</div>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<div class="line-15f"></div>
+											<span class="interview">인터뷰 예시질문 제공 / 피드백관리<br/>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보존하세</span >
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
 											</div>
 										</div>
 									</div>
@@ -651,15 +682,15 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="frame-15d">
-									<div class="frame-15e">
-										<div class="line-15f"></div>
-										<span class="interview">인터뷰 예시질문 제공 / 피드백관리<br/>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보존하세</span >
-									</div>
-									<div class="button">
-										<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
-											<span class="service-request">서비스 요청하기</span>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<div class="line-15f"></div>
+											<span class="interview">인터뷰 예시질문 제공 / 피드백관리<br/>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보존하세</span >
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
+											</div>
 										</div>
 									</div>
 								</div>

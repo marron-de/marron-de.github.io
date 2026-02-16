@@ -16,37 +16,40 @@ if (!defined('_EYOOM_')) exit;
 	<?php /*----- footer 끝 -----*/ ?>
 	<script>
 		/*탭메뉴*/
-		$('.tabs').each(function(i) {
-			var oTab = $(this);
-			var active = $(this).find('.tab_tit a.show');
+		$('.tabs').each(function () {
+			const oTab = $(this);
+			const active = oTab.find('.tab_tit a.show');
 			if (!active.length) return;
 
-			var tabIndex = active.attr('id').match(/\d+$/);
+			const tabIndex = active.attr('id').match(/\d+$/);
 
-			// var tabIndex = $(this).find('.show').attr('id').match(/\d+$/);
+			oTab.find('.panel')
+				.find('#content-' + tabIndex[0])
+				.show();
 
-			$(this).find('.panel').find('#content-' + tabIndex[0]).show();
+			oTab.find('.tab_tit li a').on('click', function () {
 
-			$(this).find('.tab_tit li a').click(function() {
-			/*선택색인*/
+				const tabIndex = $(this).attr('id').match(/\d+$/);
 
-			var tabIndex = $(this).attr('id').match(/\d+$/);
-			/*타이틀*/
-			oTab.find('.tab_tit li a').removeClass('show');
-			$(this).addClass('show');
+				oTab.find('.tab_tit li a').removeClass('show');
+				$(this).addClass('show');
 
-			/*패널*/
-			oTab.find('.panel > li').hide();
-			oTab.find('.panel').find('#content-' + tabIndex[0]).show();
+				oTab.find('.panel > li').hide();
+				oTab.find('.panel')
+					.find('#content-' + tabIndex[0])
+					.show();
 
-			return false;
+				setTimeout(function () {
+					AOS.refreshHard();
+				}, 150);
+
+				return false;
 			});
-
-		});   
+		});
 	</script>
 	<script>
-			$(document).ready(function(){
-			// faq 
+		// FAQ
+		$(document).ready(function(){
 			$(".faq-box li .question").click(function() {
 				$(this).next('.answer').slideToggle('fast');
 				$(this).parent().toggleClass('on');

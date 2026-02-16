@@ -212,7 +212,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
                                 <div class="line-2a"></div>	
                                 <div class="frame-section">
-                                    <div class="frame-titbox">
+                                    <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
                                             <span class="frame-title">상담사 소개</span>
                                             <div class="frame-tag">
@@ -230,6 +230,15 @@ if (!defined('_EYOOM_')) exit;
                                                 <span class="span-residence">아시아 교육 전문가</span>
                                             </div>
                                         </div>
+										<div class="frame-titbox mob_show">
+											<div class="frame-titbox flex">
+												<span class="frame-title">상담사 소개</span>
+												<div class="frame-tag">
+													<span>HOT 인기멘토</span>
+												</div>
+											</div>
+											<span class="frame-desc">몽선생생에서는 오로지 현지 체류경험이 있고, 오랫동안 교육업에 종사한 경험자들로만 구성하여 확실하고 믿을 수 있는 유학수속 서비스를 제공합니다.</span >
+										</div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">

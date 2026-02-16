@@ -84,7 +84,10 @@ if (!defined('_EYOOM_')) exit;
 													해외대학 학과목 밀착과외 수강비
 													<small>2개월</small>
 												</span>
-                                                <span class="cost">회당 1,500,0000원</span>
+												<div class="costbox">
+													<span class="tablet">1,500,000원</span>
+                                                	<span class="cost">회당 1,500,0000원</span>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span>수업비용 포함 내용</span>

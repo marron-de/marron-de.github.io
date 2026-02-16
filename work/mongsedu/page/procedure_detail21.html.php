@@ -8,7 +8,6 @@ if (!defined('_EYOOM_')) exit;
 
 <div class="sub-page page-procedure detail page-detail">
     <div class="main-container" data-aos="fade">
-    <div class="main-container">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -282,7 +281,108 @@ if (!defined('_EYOOM_')) exit;
 											<span class="txt">빠른 상담</span>
 										</a>
 									</div>
-									<div class="swiper question_swiper">
+									<div class="question_wrapper">
+										<div class="marquee question_box" data-duration="4">
+											<div class="marquee_group">
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+											</div>
+										</div>
+										<div class="marquee question_box pc_hide" data-duration="4" data-reverse="reverse">
+											<div class="marquee_group">
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+											</div>
+										</div>
+										<div class="marquee question_box pc_hide" data-duration="4">
+											<div class="marquee_group">
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+												</div>
+												<div class="question">
+													<p class="txt">질문 내용이 들어갑니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="swiper question_swiper question_box">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide question">
 												<p class="txt">질문 내용이 들어갑니다.</p>
@@ -314,7 +414,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="txt">질문 내용이 들어갑니다.</p>
 											</div>
 										</div>
-									</div>
+									</div> -->
                                 </div>
                             </li>
                         </ul>
@@ -331,7 +431,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="tab_navbox notab frame-151">
                                 <div class="tab_nav on2 frame-152">무료 수속</div>
                             </div>
-                            <div class="frame-157">
+                            <div class="frame-157 default_ver">
                                 <div class="frame-158">
                                     <div class="frame-159">
                                         <span class="span-text-15a">0원</span>

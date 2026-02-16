@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
 			<div class="search_box">
 				<div class="search_inputbox" onclick="univsch_popup()">
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_search_blue.svg" alt="" class="icon">
-					<input type="text" class="input" placeholder="원하시는 학교 정보를 쉽게 만나보세요.">
+					<input type="text" class="input" placeholder="원하시는 학교 정보를 쉽게 만나보세요." required>
 					<button type="button" class="del_btn">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_delete.svg" alt="" class="icon">
 					</button>
@@ -32,24 +32,24 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="univ_info tabs">
-        <ul class="container" data-aos="fade">
-            <li>
+    <div class="univ_info tabs swiper tab_swiper" data-index="3" data-gappc="0" data-gapmob="0">
+        <ul class="container swiper-wrapper" data-aos="fade">
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info_intro">홈</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info01">국제학교</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_info02">해외대학</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=guidebook">가이드북</a>
             </li>
-            <li>
+            <li class="swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=faq">자주 묻는 질문</a>
             </li>
-            <li class="active">
+            <li class="active swiper-slide">
                 <a href="<?php echo G5_URL ?>/page/?pid=univ_adv">학교 광고판</a>
             </li>
         </ul>

@@ -12,7 +12,7 @@ if (!defined('_EYOOM_')) exit;
 		<div class="container" data-aos="fade-up">
 			<div class="banner">
 				<div class="txtbox">
-					<p class="sub">현지 경험자들과 유학준비, 당신의 유학을 책임질</p>
+					<p class="sub">현지 경험자들과 유학준비, <br class="tablet">당신의 유학을 책임질</p>
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com1_logo.svg" alt="" class="logo">
 				</div>
 				<div class="infobox">
@@ -25,7 +25,7 @@ if (!defined('_EYOOM_')) exit;
 						<p class="desc">누적관리생</p>
 						<p class="tit">10,000명+</p>
 					</div>
-					<div class="bar"></div>
+					<div class="bar pc"></div>
 					<div class="item">
 						<p class="desc">수속관리 학교</p>
 						<p class="tit">300여개+</p>
@@ -45,11 +45,11 @@ if (!defined('_EYOOM_')) exit;
 			<div class="txtbox">
 				<p class="sub_txt3">해외 교육의 출발점!</p>
 				<p class="sub_txt1 ver2">
-					몽선생의 상담사는,  <br>
-					현지 학교 출신자들이 직접 경험한 <br>
+					몽선생의 상담사는,  <br class="pc">
+					현지 학교 출신자들이 <br class="tablet">직접 경험한 <br class="pc">
 					노하우를 공유합니다.
 				</p>
-				<a href="" class="sub_btn typeA">몽선생 멘토 보러가기</a>
+				<a href="" class="sub_btn typeA pc">몽선생 멘토 보러가기</a>
 			</div>
             <div class="imgbox">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_pc.png" alt="" class="monitor">
@@ -59,6 +59,7 @@ if (!defined('_EYOOM_')) exit;
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card3.png" alt="" class="card" data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">
 				</div>
 			</div>
+			<a href="" class="sub_btn typeA tablet">몽선생 멘토 보러가기</a>
         </div>
     </div>
 
@@ -70,7 +71,7 @@ if (!defined('_EYOOM_')) exit;
     <div class="msection history com_sec4">
         <div class="container" data-aos="fade-up">
             <div class="title_area">
-                <img class="no1" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_company03.png" alt="">
+                <img class="no1" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_company03.png" alt="">
                 <span>
                     각 국가 유학 경험자와 전문가가 <br/>
                     직접 운영하는 해외교육 전문 기업입니다.
@@ -225,22 +226,22 @@ if (!defined('_EYOOM_')) exit;
                 </p>
             </div>
             <div class="img_area">
-                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/bg_mong.png">
 				<div class="mob_txt">
 					<p class="txt1">유한법인 (주)몽선생</p>
 					<p class="txt2">해외 명문대 <br>합격의 지름길</p>
 				</div>
+                <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/bg_mong.png" class="teacher">
             </div>
             <div class="cardbox">
                 <ul>
-                    <li>
+                    <li data-aos="fade-up">
                         <span>몽선생 대표원장 학력</span>
                         <p>
                             - 서강대 경영전문대학원 MBA 졸업<br/>
                             - 영국 Coventry University 대학 졸업
                         </p>
                     </li>
-                    <li>
+                    <li data-aos="fade-up">
                         <span>몽선생 대표원장 경력</span>
                         <p>
                             - 주식회사 몽선생 대표<br/>
@@ -249,7 +250,7 @@ if (!defined('_EYOOM_')) exit;
                             - 유튜브 “글로벌로드맵” 전문 강의
                         </p>
                     </li>
-                    <li>
+                    <li data-aos="fade-up">
                         <span>대표원장 미디어 활동</span>
                         <p>
                             - 여행가방 싱가포르 전문가로 출현<br/>

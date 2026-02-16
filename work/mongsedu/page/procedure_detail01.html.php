@@ -207,7 +207,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="line-2a"></div>
                                 <div class="frame-section" id="sec04">
-                                    <div class="frame-titbox">
+                                    <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
                                             <span class="frame-title">답사 동행 팀장님 소개</span>
                                             <div class="frame-tag">
@@ -226,6 +226,15 @@ if (!defined('_EYOOM_')) exit;
                                                 <span class="span-residence">현지 거주 15년 이상</span>
                                             </div>
                                         </div>
+										<div class="frame-titbox mob_show">
+											<div class="frame-titbox flex">
+												<span class="frame-title">답사 동행 팀장님 소개</span>
+												<div class="frame-tag">
+													<span>HOT 인기멘토</span>
+												</div>
+											</div>
+											<span class="frame-desc">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span >
+										</div>
                                         <div class="frame-146">
                                             <div class="frame-147">
                                                 <div class="frame-148">
@@ -255,7 +264,8 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
 								<div class="frame-section d_img">
 									<div class="frame-detailimg">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/proc_detail_img01.jpg" alt="">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/proc_detail_img01.jpg" alt="" class="pc">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/proc_detail_img01_m.jpg" alt="" class="tablet">
 									</div>
 								</div>
                             </li>
@@ -270,7 +280,7 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                     <div class="frame-14f">
                         <div class="frame-150">
-                            <div class="tab_navbox frame-151">
+                            <div class="tab_navbox notab frame-151">
                                 <div class="tab_nav on2 frame-152">초기정착 패키지</div>
                             </div>
                             <div class="frame-157">

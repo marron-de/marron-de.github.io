@@ -16,9 +16,9 @@ if (!defined('_EYOOM_')) exit;
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_bg_mob.jpg" alt="" class="tablet img">
 					</div>
 					<div class="txtbox">
-						<p class="sub">교직원들이 만든 전문적인 교육업체</p>
+						<p class="sub">교직원들이 만든 <br class="tablet">전문적인 교육업체</p>
 						<p class="tit">
-							몽선생의 컨설팅은 
+							몽선생의 컨설팅은  <br class="tablet">
 							<span class="color">이런점이 달라요!</span>
 						</p>
 					</div>
@@ -32,68 +32,69 @@ if (!defined('_EYOOM_')) exit;
     </div>
 
     <div class="link_area">
-        <div class="container" data-aos="fade-up">
-            <div class="procedure_link">
-				<a href="" class="link">
+        <div class="container swiper link_swiper" data-gappc="10" data-gapmob="16" data-aos="fade-up">
+            <div class="swiper-wrapper procedure_link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon1.png" alt="" class="icon">
 						<span class="count">1</span>
 					</div>
 					<p class="tit">말레이시아 국제학교</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon2.png" alt="" class="icon">
 						<span class="count">2</span>
 					</div>
 					<p class="tit">싱가포르 국제학교</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon3.png" alt="" class="icon">
 						<span class="count">3</span>
 					</div>
 					<p class="tit">싱가포르 국립대</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon4.png" alt="" class="icon">
 						<span class="count">4</span>
 					</div>
 					<p class="tit">싱가포르 사립대</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon5.png" alt="" class="icon">
 						<span class="count">5</span>
 					</div>
 					<p class="tit">싱가포르 예술대</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon6.png" alt="" class="icon">
 					</div>
 					<p class="tit">말레이시아 사립대</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
 					</div>
 					<p class="tit">말라야 국립대</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon8.png" alt="" class="icon">
 					</div>
 					<p class="tit">홍콩 대학</p>
 				</a>
-				<a href="" class="link">
+				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
 					</div>
 					<p class="tit">UC 계열 주립대</p>
 				</a>
             </div>
+			<div class="swiper-scrollbar scrollbar"></div>
         </div>
     </div>
 
@@ -482,7 +483,10 @@ if (!defined('_EYOOM_')) exit;
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure02.jpg" alt="UC버클리 출신 관리하는 입학컨설팅">
 									<div class="img_txtbox">
 										<p class="tit">
-											<span class="color gra3">버클리 출신 직접 관리</span>
+											<span class="color gra3">
+												버클리 출신 <br class="tablet">
+												직접 관리
+											</span>
 										</p>
 										<p class="sub">UC대학 관리형 컨설팅</p>
 									</div>
@@ -506,8 +510,8 @@ if (!defined('_EYOOM_')) exit;
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure03.jpg" alt="패스웨이 과정으로 미국대학 쉽게가기">
 									<div class="img_txtbox">
 										<p class="tit">
-											<span class="color gra4">패스웨이로</span><br>
-											미국대학 쉽게가기
+											<span class="color gra4">패스웨이<span class="white">로</span></span><br>
+											<span class="mob_color1">미국대학</span> 쉽게가기
 										</p>
 										<p class="sub">낮은 내신점수? 걱정 NO</p>
 									</div>
@@ -528,10 +532,11 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li>
                                 <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04.jpg" alt="국내 내신으로 미국 TOP100대학 입학">
-									<div class="img_txtbox">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04.jpg" alt="국내 내신으로 미국 TOP100대학 입학" class="pc">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04_m.jpg" alt="국내 내신으로 미국 TOP100대학 입학" class="tablet">
+									<div class="img_txtbox ver2">
 										<p class="tag">너도 갈 수 있어!</p>
-										<p class="sub">내신 · 수능 반영 되니까!</p>
+										<p class="sub mob_color2">내신 · 수능 반영 되니까!</p>
 										<p class="tit">
 											<span class="color gra5">미국 탑 100 대학</span>
 										</p>
@@ -544,7 +549,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
-                                        <span class="title">국내 내신으로 미국 TOP100대학 입학</span>
+                                        <span class="title">국내 내신으로 미국 TOP 100 대학 입학</span>
 										<div class="tagbox">
 											<p class="tag">미국</p>
 										</div>
@@ -554,8 +559,8 @@ if (!defined('_EYOOM_')) exit;
                             <li>
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure05.jpg" alt="미국+싱가포르 2개국 입학 컨설팅">
-									<div class="img_txtbox">
-										<p class="sub">미국 · 아시아 대학 동시준비</p>
+									<div class="img_txtbox ver3">
+										<p class="sub">미국·아시아 대학 동시준비</p>
 										<p class="tit">
 											<span class="color gra6">프리미엄 합격 컨설팅</span>
 										</p>
@@ -588,12 +593,15 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="ms title_area red" id="row-4">
 				<div class="title">
-					<span class="tit"><span class="color1">유학준비에 필요한 수업!</span> 유학준비에 필요한 수업! 몽선생이 준비했어요</span>
+					<span class="tit">
+						유학준비에 필요한 수업! <br class="tablet">
+						<span class="color1">몽선생이 준비했어요!</span> 
+					 </span>
 				</div>
             </div>
-            <div class="class_list s4 big">
-                <ul class="panel">
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail04'">
+            <div class="class_list s4 big swiper tab_swiper" data-gappc="12" data-gapmob="10">
+                <ul class="panel swiper-wrapper">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail04'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -606,7 +614,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class01_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail01'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail01'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -619,7 +627,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class02_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -632,7 +640,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class03_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'" class="swiper-slide">
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
@@ -645,7 +653,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class04_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'" class="swiper-slide">
 						<div class="text_area">
 							<p class="class"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수업듣기"> 유학CLASS</p>
 							<span class="title">

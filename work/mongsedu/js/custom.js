@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', updateLayoutMargin);
 					$siblings = $this.parent().siblings();
 
 				$this.parent('li').find('ul li').removeClass('show');
-				$siblings.removeClass('show');
-				$siblings.find('ul').slideUp(400);
+				// $siblings.removeClass('show');
+				// $siblings.find('ul').slideUp(400);
 
 				if ($depthTarget.css('display') == 'none') {
 					_self.activeOn($this);
@@ -93,21 +93,39 @@ $(document).ready(function () {
 		clickedTab.addClass("on");
 		allContents.removeClass("on");
 		allContents.eq(idx).addClass("on");
+
+		setTimeout(function () {
+			AOS.refreshHard();
+		}, 150);
+
 	});
 });
 
 
 // tab swiper
 $(document).ready(function () {
-	const index = parseInt($('.swiper.tab_swiper').attr('data-index'), 10) || 0;
+	$('.tab_swiper').each(function () {
 
-	const tab_swiper = new Swiper('.tab_swiper', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 'auto',
-		speed: 500,
-		initialSlide: index,
-	})
+		const $this = $(this);
+		const index = parseInt($this.attr('data-index'), 10) || 0;
+		const gapPc = parseInt($this.data('gappc'), 10) || 0;
+		const gapMob = parseInt($this.data('gapmob'), 10) || 0;
+
+		new Swiper(this, {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: gapMob,
+			speed: 500,
+			initialSlide: index,
+			breakpoints: {
+				1080: {
+					spaceBetween: gapPc,
+				},
+			},
+		});
+
+	});
 });
 
 
@@ -316,7 +334,7 @@ $(document).mouseup(function (e) {
 });
 
 // header nav
-$(function () {
+function setActiveMenu() {
 	const search = window.location.search;
 	
 	if (search.indexOf('pid=counsel') !== -1 && search.indexOf('pid=counsel05') === -1 && search.indexOf('pid=counsel_banner') === -1) {
@@ -346,8 +364,10 @@ $(function () {
 	if (search.indexOf('pid=counsel_banner') !== -1 || search.indexOf('pid=procedure_banner') !== -1 || search.indexOf('pid=class_banner') !== -1 ||search.indexOf('pid=company') !== -1 ||search.indexOf('pid=map') !== -1) {
 		$('.header .h_inner .h_nav:not(.h_side) > li').eq(0).addClass('active');
 	}
-});
+}
 
+$(document).ready(setActiveMenu);
+window.addEventListener('pageshow', setActiveMenu);
 
 
 /* 메인 */
@@ -358,6 +378,7 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 	effect: 'cards',
 	direction: 'vertical',
 	// grabCursor: true,
+	loop:true,
 	cardsEffect: {
 		perSlideRotate: 0, 
 		perSlideOffset: 10,
@@ -374,7 +395,8 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 	navigation: {
 		nextEl: ".sampSwiper .next_btn",
 		prevEl: ".sampSwiper .prev_btn",
-	}, on: {
+	},
+	on: {
 		init: function () {
 			const color = this.slides[this.activeIndex].getAttribute('data-color');
 			this.el.classList.add(color + '_ver');
@@ -384,7 +406,8 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 			const color = this.slides[this.activeIndex].getAttribute('data-color');
 			this.el.classList.add(color + '_ver');
 		}
-	}
+	},
+	
 });
 
 
@@ -417,10 +440,15 @@ const mentorpop_swiper = new Swiper('.mentorpop_swiper', {
 	observeParents: true,
 	speed: 500,
 	spaceBetween: 40,
-	autoHeight: true,
+	autoHeight: false,
 	navigation: {
 		nextEl: ".mentor_modal .next_btn",
 		prevEl: ".mentor_modal .prev_btn",
+	},
+	breakpoints: {
+		1080: {
+		autoHeight: true,
+		},
 	},
 })
 function mentor_modal(i) {
@@ -513,6 +541,22 @@ $(document).on("mouseup", function (e) {
 		$(".page-univ .tit_area.board .search_box").removeClass("on");
 	}
 });
+``
+$('.page-univ .search_inputbox .input').on('input', function () {
+	const btn = $(this).siblings('.del_btn');
+	if ($(this).val().trim() !== '') {
+		btn.addClass('show')
+	} else {
+		btn.removeClass('show');
+	}
+});
+
+$('.page-univ .search_inputbox .del_btn').on('click', function (e) {
+	e.stopPropagation(); 
+	const input = $(this).siblings('.input');
+	input.val('').trigger('input').focus();
+});
+
 
 // 학교정보 메인 리스트
 const univ_swiper = new Swiper('.univ_swiper', {
@@ -552,25 +596,27 @@ $(document).ready(function () {
 			},
 		});
 	});
-	$('.univlist_swiper.grid_ver').each(function () {
-		new Swiper(this, {
-			observer: true,
-			observeParents: true,
-			slidesPerView: '4',
-			slidesPerGroup: 4,
-			speed: 500,
-			spaceBetween: 10,
-			grabCursor: true,
-			grid: {
-				rows: 2,
-				fill: 'column'
-			},
-			navigation: {
-				nextEl: $(this).closest('.univlist_wrap').find('.univlist_controls .next_btn')[0],
-				prevEl: $(this).closest('.univlist_wrap').find('.univlist_controls .prev_btn')[0],
-			},
+	if ($(window).width() > 1080) {
+		$('.univlist_swiper.grid_ver').each(function () {
+			new Swiper(this, {
+				observer: true,
+				observeParents: true,
+				slidesPerView: '4',
+				slidesPerGroup: 4,
+				speed: 500,
+				spaceBetween: 10,
+				grabCursor: true,
+				grid: {
+					rows: 2,
+					fill: 'column'
+				},
+				navigation: {
+					nextEl: $(this).closest('.univlist_wrap').find('.univlist_controls .next_btn')[0],
+					prevEl: $(this).closest('.univlist_wrap').find('.univlist_controls .prev_btn')[0],
+				},
+			});
 		});
-	});
+	}
 });
 
 // 학교정보 상세 모달
@@ -655,6 +701,7 @@ const company_swiper = new Swiper('.company_swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: 12,
 	grabCursor: true,
+	initialSlide: 2,
 	navigation: {
 		nextEl: ".company_swiper .next_btn",
 		prevEl: ".company_swiper .prev_btn",
@@ -685,27 +732,25 @@ $(document).on('click', '.page-map .copy_btn', function (e) {
 
 /* Why 몽선생 */
 $(document).ready(function () {
-	if ($(window).width() > 1080) {
-		$('.why_swiper').each(function () {
-			new Swiper(this, {
-				observer: true,
-				observeParents: true,
-				slidesPerView: 'auto',
-				speed: 500,
-				spaceBetween: 8,
-				grabCursor: true,
-				navigation: {
-					nextEl: $(this).closest('.why_wrap').find('.controlsbox .next_btn')[0],
-					prevEl: $(this).closest('.why_wrap').find('.controlsbox .prev_btn')[0],
+	$('.why_swiper').each(function () {
+		new Swiper(this, {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			speed: 500,
+			spaceBetween: 8,
+			grabCursor: true,
+			navigation: {
+				nextEl: $(this).closest('.why_wrap').find('.controlsbox .next_btn')[0],
+				prevEl: $(this).closest('.why_wrap').find('.controlsbox .prev_btn')[0],
+			},
+			breakpoints: {
+				1080: {
+					spaceBetween: 12,
 				},
-				breakpoints: {
-					1080: {
-						spaceBetween: 12,
-					},
-				},
-			});
+			},
 		});
-	}
+	});
 });
 
 // 카운트업
@@ -739,4 +784,197 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.2 }); // 10% 보이면 실행
 
   countEls.forEach(el => observer.observe(el));
+});
+
+
+/* SPECIAL */
+// 대학교 더보기
+$(document).on('click', '.univ_listwrap .more_univ', function () {
+	const wrap = $(this).closest('.univ_listwrap');
+	const list = wrap.find('.univ_listbox');
+	const btntxt = $(this).find(".change");
+
+	list.toggleClass('hide');
+
+	if (list.hasClass('hide')) {
+		btntxt.text('더보기');
+	} else {
+		btntxt.text('숨기기');
+	}
+});
+
+
+// 싱가포르 사립대 특별혜택 스와이퍼
+const singa_swiper = new Swiper('.singa_swiper', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 'auto',
+	centeredSlides: false,
+	loop:false,
+	speed: 500,
+	spaceBetween: 8,
+	grabCursor: true,
+	initialSlide: 0, 
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	breakpoints: {
+		1080: {
+			spaceBetween: 10,
+			centeredSlides: true,
+			loop:true,
+			initialSlide: 2, 
+		},
+	},
+})
+
+
+
+/* 모바일 */
+
+// 상단배너 닫기
+$(document).ready(function () {
+	if ($(window).width() < 1080) {
+
+		$(document).mouseup(function (e) {
+			if ($('.top_banner .container').has(e.target).length === 0) {
+				$('.top_banner').addClass('hide');
+			}
+		});
+
+		$('.header .h_inner .back_btn').on('click', function() {
+			window.history.back(); 
+		});
+	}
+});
+
+// mobile nav active
+function setActiveNavi() {
+	const search = window.location.search;
+	const path = window.location.pathname;
+
+	$('.navibar .navitem').removeClass('on');
+
+	if (path === '/' || path.includes('index')) {
+		$('.navibar .navitem').eq(0).addClass('on');
+	}
+
+	if (search.includes('bo_table=admission')) {
+		$('.navibar .navitem').eq(3).addClass('on');
+	}
+}
+$(document).ready(setActiveNavi);
+window.addEventListener('pageshow', setActiveNavi);
+
+
+// link swiper
+$(document).ready(function () {
+	$('.link_swiper').each(function () {
+
+		const $this = $(this);
+		const index = parseInt($this.attr('data-index'), 10) || 0;
+		const gapPc = parseInt($this.data('gappc'), 10) || 0;
+		const gapMob = parseInt($this.data('gapmob'), 10) || 0;
+
+		new Swiper(this, {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: gapMob,
+			speed: 500,
+			initialSlide: index,
+			scrollbar: {
+				el: $this.find('.swiper-scrollbar')[0],
+				draggable: true,
+			},
+			breakpoints: {
+				1080: {
+					spaceBetween: gapPc,
+				},
+			},
+		});
+
+	});
+});
+
+
+// 상세 html 요소 위치이동
+$(document).ready(function () {
+	const handleElementMove = () => {
+		const winWidth = $(window).width();
+		const search = window.location.search;
+
+		const isDetail = search.includes('pid=class_detail') || search.includes('pid=counsel_detail') || search.includes('pid=procedure_detail');
+
+		const isClassDetail = search.includes('pid=class_detail');
+		const isProcedureDetail = search.includes('pid=procedure_detail');
+		const isCounselDetail = search.includes('pid=counsel_detail');
+
+		if (winWidth < 1080 && isDetail) {
+			$('.header').addClass('detail');
+			$('.page-detail .frame-15d .button').appendTo('.page-detail').addClass("fixed_btnbox");
+			$('.counsel-btn, .eb-backtotop').addClass('hide');
+			$('.navibar').addClass('hide');
+
+			if (isClassDetail) {
+				$('.page-detail .frame-16 .frame-1d').prependTo('.page-detail .frame-157');
+				$('.page-detail .frame-1c').appendTo('.page-detail .frame-152');
+			}
+
+			if (isProcedureDetail) {
+				$('.page-detail .frame-16').prependTo('.page-detail .frame-14f');
+
+				const navItems = $('.page-detail .floating_cont .frame-152');
+				const contentItems = $('.page-detail .floating_cont .frame-158');
+				navItems.each(function (index) {
+					$(this).prependTo(contentItems.eq(index));
+				});
+				$(document)
+				.off('click', '.tab_cont')
+				.on('click', '.tab_cont', function () {
+					const $this = $(this);
+					if ($this.hasClass('on')) {
+						$this.removeClass('on');
+					} else {
+						$('.tab_cont').removeClass('on');
+						$this.addClass('on');
+					}
+				});
+			}
+
+			if (isCounselDetail) {				
+				$('.page-detail .frame-16').prependTo('.page-detail .frame-14f');
+			}
+		}
+
+
+	};
+	handleElementMove();
+});
+
+
+// 기타페이지 html 요소 위치이동
+$(document).ready(function () {
+	const handleElementMove = () => {
+		const winWidth = $(window).width();
+		const search = window.location.search;
+
+		if (winWidth < 1080) {
+			if (search.includes('pid=counsel') || search.indexOf('bo_table=qa')) {
+
+				$('.page-form .counsel_wrap .counsel_titbox .cs_top').prependTo('.page-form .counsel_wrap');
+				
+			}			
+			if (search.includes('pid=special_singapore')) {		
+
+				  $('.page-singapore .singa_sec2 .contbox').each(function () {
+					const bottom = $(this).find('.msg_box');
+					bottom.appendTo($(this));
+				});
+				
+			}			
+		}
+	};
+	handleElementMove();
 });

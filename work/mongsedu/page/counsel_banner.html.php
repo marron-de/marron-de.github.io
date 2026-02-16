@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
             <div class="mentor_txtbox">
 				<p class="sub_txt1 ver2">
 					<span class="color">상담은 실전처럼</span><br>
-					현지 경험자와의 <br>
+					현지 경험자와의 <br class="pc">
 					1:1 맞춤상담 제공
 				</p>
 				<p class="sub_txt2">
@@ -450,7 +450,10 @@ if (!defined('_EYOOM_')) exit;
 									<p class="desc">Laguna State University </p>
 								</div>
 								<div class="bottom">
-									<p class="tag">국제학교 학생 영어 티칭 전문</p>
+									<p class="tag">
+										국제학교 학생 영어 티칭
+										<span class="pc">전문</span>
+									</p>
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 										class="more">
 								</div>
@@ -582,7 +585,7 @@ if (!defined('_EYOOM_')) exit;
 							이를 통해 자녀가 관심있는 대학에 대해 학습에 관련한 사항과 졸업 후의 로드맵까지 깊이 있는 상담이 가능합니다.
 						</p>
 					</div>
-					<div class="school_wrap">
+					<div class="school_wrap pc">
 						<div class="school_box marquee" data-duration="6">
 							<div class="marquee_group">
 								<div class="school_item">
@@ -799,6 +802,227 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div>
+					<div class="school_wrap tablet">
+						<div class="school_box marquee" data-duration="6">
+							<div class="marquee_group">
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo6.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">오아시스</p>
+										<p class="desc">Oasis International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo8.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">선웨이</p>
+										<p class="desc">Sunway International Schools</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo10.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">엡솜</p>
+										<p class="desc">Epsom College in Malaysia</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo12.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">선웨이 매트릭스</p>
+										<p class="desc">Sunway International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo14.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">헬프</p>
+										<p class="desc">HELP International school</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo16.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">IGB</p>
+										<p class="desc">IGB International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo18.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">UCIS</p>
+										<p class="desc">Unity Concord International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo20.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">텐비</p>
+										<p class="desc">Tenby International School</p>
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="school_box marquee" data-duration="6" data-reverse="reverse">
+							<div class="marquee_group">
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo2.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">ISKL</p>
+										<p class="desc">The International School of Kuala Lumpur</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo9.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">SRI-KDU</p>
+										<p class="desc">Sri KDU Schools, Kota Damansara</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo11.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">넥서스</p>
+										<p class="desc">Nexus International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo13.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">스리베스타리</p>
+										<p class="desc">Sri Bestari International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo15.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">킹헨리</p>
+										<p class="desc">King Henry VIII College</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo17.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">SIS라왕</p>
+										<p class="desc">Straits International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo19.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">세이폴</p>
+										<p class="desc">Sayfol International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo21.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">킹슬리</p>
+										<p class="desc">Maple Leaf Kingsley International School</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="school_box marquee" data-duration="6">
+							<div class="marquee_group">
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo4.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">MKIS</p>
+										<p class="desc">International School In KL</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo1.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">앨리스스미스</p>
+										<p class="desc">Alice Smith International school</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo3.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">BSKL</p>
+										<p class="desc">The British International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo5.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">세인트조셉</p>
+										<p class="desc">Top International in Petaling Jaya</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo7.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">ISP</p>
+										<p class="desc">The International School @ ParkCity</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo23.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">페어뷰</p>
+										<p class="desc">Fairview International School</p>
+									</div>
+								</div>
+								<div class="school_item">
+									<div class="imgbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo22.png" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<p class="tit">페니슐라</p>
+										<p class="desc">Peninsula International School Australia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="item item3" data-aos="fade-up">
 					<div class="item_txtbox">
@@ -827,7 +1051,7 @@ if (!defined('_EYOOM_')) exit;
 					다양한 사례 적용이 가능해요
 				</p>
 			</div>
-            <div class="review_wrap">
+            <div class="sub_review_wrap">
 				<div class="review_box marquee" data-duration="3">
 					<div class="marquee_group">
 						<div class="review_item">
