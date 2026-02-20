@@ -115,8 +115,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											싱가포르에 있는 주요 30여개 중에 로컬국제학교와 글로벌 국제학교의 차이점 및 특징을 비교하고,  비용 예산과 아이 상황에 따라 가장 입학하기 좋은 국제학교를 추천받을 수 있습니다.

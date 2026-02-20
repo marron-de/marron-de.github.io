@@ -57,7 +57,7 @@ if (!defined('_EYOOM_')) exit;
 
 	<div class="msection univ_guide tabs">
 		<div class="container" data-aos="fade-up">
-            <div class="ms title_area between" id="row-3">
+            <div class="ms title_area" id="row-3">
 				<div class="title">
 					<span class="tit">가이드북</span>
 				</div>

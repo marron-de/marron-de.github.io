@@ -29,7 +29,7 @@ if (!defined('_EYOOM_')) exit;
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_link.png" alt="" class="icon">
 					</button>
 				</a>
-				<p class="map_txt">지도  확대 / 축소 가능</p>
+				<p class="map_txt tablet">지도  확대 / 축소 가능</p>
 			</div>
 			<div class="mapinfo">
 				<div class="infobox">
@@ -98,5 +98,6 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 			</div>
         </div>
+		<p class="map_txt pc">지도  확대 / 축소 가능</p>
     </div>
 </div>

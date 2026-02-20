@@ -115,7 +115,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
+								<div class="frame-section ver2">
 									<div class="frame-titbox gap2">
 										<p class="frame-title">상담안내</p>
 										<p class="frame-desc3">아이의 영어실력에 따라 입학테스트를 통과할 수 있을지에 대한 기초적인 상담이 가능하고, 국제학교에서 주로 어떤 유형이 나오는지 시험 유형에 대해서 확인해볼 수 있습니다

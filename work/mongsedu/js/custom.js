@@ -314,6 +314,13 @@ $(document).on('mouseenter', '.h_bottom .h_nav_ul > li > a', function () {
 $(document).on('mouseleave', '.h_bottom .h_nav_ul > li', function () {
     $(this).removeClass('on');
 });
+$(document).on("click", ".header .h_inner .h_nav > li > .link.point", function(e){
+  if (window.innerWidth >= 1080) {
+    e.preventDefault();
+  }
+});
+
+
 
 // header navbox button 
 $(document).ready(function () {
@@ -364,6 +371,10 @@ function setActiveMenu() {
 	if (search.indexOf('pid=counsel_banner') !== -1 || search.indexOf('pid=procedure_banner') !== -1 || search.indexOf('pid=class_banner') !== -1 ||search.indexOf('pid=company') !== -1 ||search.indexOf('pid=map') !== -1) {
 		$('.header .h_inner .h_nav:not(.h_side) > li').eq(0).addClass('active');
 	}
+
+	if (search.indexOf('pid=special_duolingo') !== -1 || search.indexOf('pid=special_sogang') !== -1 || search.indexOf('pid=special_preparatory') !== -1 || search.indexOf('pid=special_malay') !== -1 || search.indexOf('pid=special_singapore') !== -1) {
+		$('.header .h_inner .h_nav:not(.h_side) > li').eq(4).addClass('active');
+	}
 }
 
 $(document).ready(setActiveMenu);
@@ -396,6 +407,10 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 		nextEl: ".sampSwiper .next_btn",
 		prevEl: ".sampSwiper .prev_btn",
 	},
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
 	on: {
 		init: function () {
 			const color = this.slides[this.activeIndex].getAttribute('data-color');
@@ -408,6 +423,15 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 		}
 	},
 	
+});
+const icon_swiper = new Swiper(".icon_swiper", {
+	direction: 'vertical',
+	loop:true,
+	speed: 500,
+	autoplay: {
+		delay: 750,
+		disableOnInteraction: false,
+	},	
 });
 
 
@@ -467,6 +491,46 @@ $(".page-detail .tooltip .close_btn").click(function () {
 	$(".page-detail .tooltip").addClass("hide")
 })
 
+// URL 복사
+$(document).on("click", ".page-detail .share", function () {
+  const currentUrl = window.location.href;
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(currentUrl)
+      .then(function () {
+        alert("링크가 복사되었습니다");
+      })
+      .catch(function () {
+        fallbackCopy(currentUrl);
+      });
+  } else {
+    fallbackCopy(currentUrl);
+  }
+});
+$(document).on("click", ".board-view .share_btn", function () {
+  const currentUrl = window.location.href;
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(currentUrl)
+      .then(function () {
+        alert("링크가 복사되었습니다");
+      })
+      .catch(function () {
+        fallbackCopy(currentUrl);
+      });
+  } else {
+    fallbackCopy(currentUrl);
+  }
+});
+function fallbackCopy(text) {
+  const textarea = $("<textarea>");
+  $("body").append(textarea);
+  textarea.val(text).select();
+  document.execCommand("copy");
+  textarea.remove();
+  alert("링크가 복사되었습니다");
+}
+
 // 탭 버튼 활성화
 $(function () {
 	const tabs = $('.tab.sticky .tab_tit li a');
@@ -498,6 +562,39 @@ $(function () {
 		tabs.filter('[href="' + currentId + '"]').addClass('show');
 	});
 });
+
+
+// 상담학교 리스트 타이틀 너비
+$(window).on("load", function(){
+
+  $(".page-detail .counselingbox").each(function(){
+
+    const box = $(this);
+    const titElements = box.find(".tit");
+    if (!titElements.length) return;
+
+    let maxWidth = 0;
+
+    titElements.each(function(){
+      const width = this.getBoundingClientRect().width;
+      if (width > maxWidth) {
+        maxWidth = width;
+      }
+    });
+
+    const rootSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const maxWidthRem = maxWidth / rootSize;
+
+    box[0].style.setProperty("--title-width", maxWidthRem + "rem");
+
+  });
+
+});
+
+
+
+
+
 
 // 학교 리스트
 $(".school_moreview").click(function () {
@@ -665,7 +762,7 @@ const mentor_swiper2 = new Swiper('.mentor_swiper.ver2', {
 	grabCursor: true,
 	initialSlide: 2, 
 	autoplay: {
-		delay: 5000,
+		delay: 3000,
 		disableOnInteraction: false,
 	},
 })
@@ -708,7 +805,7 @@ const company_swiper = new Swiper('.company_swiper', {
 	},
 	breakpoints: {
 		1080: {
-			spaceBetween: 48,
+			spaceBetween: 24,
 		},
 	},
 })
@@ -816,7 +913,7 @@ const singa_swiper = new Swiper('.singa_swiper', {
 	grabCursor: true,
 	initialSlide: 0, 
 	autoplay: {
-		delay: 5000,
+		delay: 3000,
 		disableOnInteraction: false,
 	},
 	breakpoints: {

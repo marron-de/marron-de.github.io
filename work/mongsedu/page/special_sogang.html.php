@@ -21,15 +21,15 @@ if (!defined('_EYOOM_')) exit;
     </div>
 
     <div class="msection special sogang benefit01 sogang_sec1">
-        <div class="container" data-aos="fade-up">
-			<div class="sub_titbox">
+        <div class="container">
+			<div class="sub_titbox" data-aos="fade-up">
 				<p class="sub_txt1">
 					동문업체! 몽선생의 강력한 
 					<span class="color">입학혜택 3가지</span>
 				</p>
 			</div>
 			<div class="contbox">
-				<div class="item item1">
+				<div class="item item1" data-aos="fade-up">
 					<p class="tit">
 						150만원 상당!  <br class="tablet">
 						<span class="color">원어민 영어+대비수업 제공</span>
@@ -38,7 +38,7 @@ if (!defined('_EYOOM_')) exit;
 						원어민이 직접 가르치는 영어 수업으로 2개월 동안 온라인 실시간 강의로 아카데믹 라이팅·프레젠테이션·전공 과제 대비까지 입학 전에 완성합니다.
 					</p>
 				</div>
-				<div class="item item2">
+				<div class="item item2" data-aos="fade-up">
 					<p class="tit">
 						학습지원을 위한,<br class="tablet">
 						<span class="color"> 아이패드 무상제공!</span>
@@ -47,7 +47,7 @@ if (!defined('_EYOOM_')) exit;
 						몽선생에서 등록하면 누구에게나 아이패드를 무상 제공합니다. 혼자 접수하지 말고, 서강대의 동문업체인 몽선생을 통해 특별 혜택을 꼭 누려보세요 .
 					</p>
 				</div>
-				<div class="item item3">
+				<div class="item item3" data-aos="fade-up">
 					<p class="tit">
 						<span class="color">미국대학 + 싱가포르대학 </span> 
 						<br class="tablet">편입 옵션까지

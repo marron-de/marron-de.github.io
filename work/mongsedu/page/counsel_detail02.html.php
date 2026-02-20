@@ -115,8 +115,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											한국에 있는 인가 국제학교 (송도/제주)의 특징을 비교하고, 비인가 국제학교 약 (서울/경기권) 학교들을 한번에 파악하여 아이의 영어실력과 예산 및 거주지에 따라 추천학교를 선별해 드립니다.

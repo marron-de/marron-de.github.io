@@ -112,6 +112,21 @@
 								<div class="swiper-slide item">
 									<img src="<?php echo $path ?>img/fli_sec_2-5.jpg" alt="" class="img">
 								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-6.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-7.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-8.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-9.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-10.jpg" alt="" class="img">
+								</div>
 							</div>
 							<div class="swiper-button-prev prev_btn white"></div>      
 							<div class="swiper-button-next next_btn white"></div>
@@ -132,6 +147,21 @@
 								</div>
 								<div class="swiper-slide item">
 									<img src="<?php echo $path ?>img/fli_sec_2-5.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-6.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-7.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-8.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-9.jpg" alt="" class="img">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo $path ?>img/fli_sec_2-10.jpg" alt="" class="img">
 								</div>
 							</div>
 						</div>

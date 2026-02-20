@@ -177,7 +177,7 @@ if (!defined('_EYOOM_')) exit;
                                             </div>
                                         </li>
                                     </ul>
-                                    <div class="guide">
+                                    <div class="guide ver">
                                         <span>수업비 관련 주의사항</span>
                                         <ul>
                                             <li>* 수업비 납부 후 환불은 (수업시작 전 100%), 2회차 수업 전까지(50%), 이후 불가 합니다.</li>

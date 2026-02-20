@@ -61,7 +61,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="ms title_area">
             		<p class="title">
 						<span class="tit">
-							<span class="color2">몽선생 추천</span>올해의 학교
+							<span class="color2">몽선생 추천</span> 올해의 학교
 						</span>
 					</p>
                 </div>

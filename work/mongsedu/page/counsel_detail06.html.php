@@ -115,8 +115,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											말레이시아 사립대 교직원으로 5년 이상의 행정경험을 통해, 한국 학생들에세 가장 추천할 수 있는 대학을 알려드립니다. 사립대, 국립대, 직영캠퍼스까지 10여개 대학 정보를 한 번에 확인해보세요

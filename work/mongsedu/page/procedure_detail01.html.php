@@ -77,7 +77,7 @@ if (!defined('_EYOOM_')) exit;
 									<span class="field-trip-service">초기정착 서비스란? 해외에서의 시작하는 유학생활을 보다 편안하고 안전하게 시작할 수 있도록, 현지에 상주하는 전문 직원이 집 계약부터 생활 필수 서비스까지 직접 도와드리는 맞춤형 지원 프로그램입니다.</span >
 								</div>
                                 <div class="line-2a"></div>								
-								<div class="frame-section">
+								<div class="frame-section ver2">
 									<div class="frame-titbox gap2">
 										<p class="frame-title">서비스 포함내용</p>
 										<p class="frame-desc3">

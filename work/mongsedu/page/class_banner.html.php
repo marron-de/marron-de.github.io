@@ -598,8 +598,8 @@ if (!defined('_EYOOM_')) exit;
     </div>
 
     <div class="class_sec3">
-        <div class="container" data-aos="fade-up">
-            <div class="title_area">
+        <div class="container">
+            <div class="title_area" data-aos="fade-up">
                 <p class="sub_txt3">명확한 목표 기반의 맞춤 강의</p>
                 <span class="sub_txt1">
                     <b class="color">국제학교부터 해외대학까지</b><br/>
@@ -607,7 +607,7 @@ if (!defined('_EYOOM_')) exit;
                 </span>
             </div>
 			<ul class="clb_curri">
-				<li>
+				<li data-aos="fade-up">
 					<div class="topbox">
 						<p class="tit">국제학교 입학준비</p>
 						<p class="hash">#입학시험과 인터뷰 준비까지</p>
@@ -628,7 +628,7 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 					</div>
 				</li>
-				<li>
+				<li data-aos="fade-up">
 					<div class="topbox">
 						<p class="tit">영어공인점수 듀오링고</p>
 						<p class="hash">#원어민이 풀어주는 듀오링고 실전반</p>
@@ -643,7 +643,7 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 					</div>
 				</li>
-				<li>
+				<li data-aos="fade-up">
 					<div class="topbox">
 						<p class="tit">영어헤외대학 전공예습반</p>
 						<p class="hash">#해외대학 전공 준비코스</p>

@@ -115,7 +115,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
+								<div class="frame-section ver2">
 									<div class="frame-titbox gap2">
 										<p class="frame-title">상담안내</p>
 										<p class="frame-desc3">

@@ -252,9 +252,9 @@ if (!defined('_EYOOM_')) exit;
 				<p class="sub_txt1"> 수강 샘플 스케줄 목록</p>
 			</div>
 			<div class="tit_btnbox">
-				<button type="button" class="btn">경영학부</button>
+				<button type="button" class="btn on">경영학부</button>
 				<button type="button" class="btn">컴퓨터공학</button>
-				<button type="button" class="btn on">에세이/토론</button>
+				<button type="button" class="btn">에세이/토론</button>
 			</div>
 			<div class="imgbox">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img.png" alt="" class="pc">
@@ -566,7 +566,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="item">
 					<p class="tag">실전 대학 과제 연습하기</p>
 					<p class="desc">
-						학교에서 진행하는 실제 과제유형을 파악하고, <br>핵심적인 지문을 분석하여 미리 과제 연습을 할 수 있습니다.
+						학교에서 진행하는 실제 과제유형을 파악하고, <br class="pc">핵심적인 지문을 분석하여 미리 과제 연습을 할 수 있습니다.
 					</p>
 					<div class="stepbox">
 						<div class="stepitem">
@@ -602,7 +602,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection faq_area prep_sec8">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
                 <span><b>FAQ</b> 자주 묻는 질문</span>
             </div>
             <div class="faq-box">

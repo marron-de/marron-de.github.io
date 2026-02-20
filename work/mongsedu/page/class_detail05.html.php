@@ -145,7 +145,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
-                                                <li class="full">
+                                                <li class="full red">
                                                     <span>
                                                         6.0 목표반<br/>
                                                         <small>(4.0이상 수강 가능)</small>

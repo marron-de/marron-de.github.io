@@ -7,7 +7,7 @@
 		</div>
 		<div class="modal_body photo_wrap">
 			<div class="photo_box">
-				<img src="<?php echo $path ?>img/certificate.jpg" alt="" class="img">
+				<img src="<?php echo $path ?>img/certificate1.jpg" alt="" class="img">
 			</div>
 		</div>
 	</div>

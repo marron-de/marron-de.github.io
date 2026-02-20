@@ -57,7 +57,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection faq_area">
 		<div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
                 <span><b>FAQ</b> 자주 묻는 질문</span>
             </div>
             <div class="faq-box">

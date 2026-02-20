@@ -55,13 +55,13 @@ if (!defined('_EYOOM_')) exit;
         </ul>
     </div>
 
-    <div class="msection univ_info_list ci sec tabs">
+    <div class="msection univ_info_list sec tabs">
 		<div class="container" data-aos="fade-up">
             <div class="ms title_area" id="row-1">
 				<div class="title">
 					<span class="tit">국제학교</span>
 				</div>
-                <div class="tab swiper tab_swiper" data-gappc="16" data-gapmob="12">
+                <div class="tab swiper tab_swiper" data-gappc="12" data-gapmob="12">
                     <ul class="tab_tit swiper-wrapper">
                         <li class="swiper-slide"><a href="#" class="show" id="tab-11">전체보기</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-12">말레이시아</a></li>
@@ -75,470 +75,422 @@ if (!defined('_EYOOM_')) exit;
             <div class="counsel_list tabs_cont">
                 <ul class="panel">
                     <li id="content-11">
-						<div class="univlist_wrap">
-							<div class="univlist_controls">
-								<div class="swiper-button-prev prev_btn"></div>
-								<div class="swiper-button-next next_btn"></div>
+						<div class="univ_list grid_ver">
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
 							</div>
-							<div class="swiper univlist_swiper univ_list grid_ver">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
 									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
 
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain1.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain1.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
 									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
 
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain1.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain1.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
 								</div>
 							</div>
 						</div>
                     </li>
                     <li id="content-12">
-						<div class="univlist_wrap">
-							<div class="univlist_controls">
-								<div class="swiper-button-prev prev_btn"></div>
-								<div class="swiper-button-next next_btn"></div>
-							</div>
-							<div class="swiper univlist_swiper univ_list grid_ver">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+						<div class="univ_list grid_ver">
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
 								</div>
 							</div>
 						</div>
                     </li>
                     <li id="content-13">
-						<div class="univlist_wrap">
-							<div class="univlist_controls">
-								<div class="swiper-button-prev prev_btn"></div>
-								<div class="swiper-button-next next_btn"></div>
-							</div>
-							<div class="swiper univlist_swiper univ_list grid_ver">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+						<div class="univ_list grid_ver">
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain2.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
 									</div>
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+								</div>
+							</div>
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
 								</div>
 							</div>
 						</div>
                     </li>
                     <li id="content-14">
-						<div class="univlist_wrap">
-							<div class="univlist_controls">
-								<div class="swiper-button-prev prev_btn"></div>
-								<div class="swiper-button-next next_btn"></div>
-							</div>
-							<div class="swiper univlist_swiper univ_list grid_ver">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+						<div class="univ_list grid_ver">
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain3.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
 								</div>
 							</div>
 						</div>
                     </li>
                     <li id="content-15">
-						<div class="univlist_wrap">
-							<div class="univlist_controls">
-								<div class="swiper-button-prev prev_btn"></div>
-								<div class="swiper-button-next next_btn"></div>
-							</div>
-							<div class="swiper univlist_swiper univ_list grid_ver">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+						<div class="univ_list grid_ver">
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
 								</div>
 							</div>
 						</div>
                     </li>
                     <li id="content-16">
-						<div class="univlist_wrap">
-							<div class="univlist_controls">
-								<div class="swiper-button-prev prev_btn"></div>
-								<div class="swiper-button-next next_btn"></div>
-							</div>
-							<div class="swiper univlist_swiper univ_list grid_ver">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="univ_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain1.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">#싱가포르</p>
-												<p class="tag">#사립대</p>
-											</div>
-											<p class="title">
-												Kaplan University <br>
-												카플란 사립대학교
-											</p>
-											<div class="bottom">
-												<p class="txt">학교 자세히보기</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
-											</div>
-										</div>
+						<div class="univ_list grid_ver">
+							<div class="item" onclick="univ_modal(1);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain1.jpg" alt="" class="img">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="hashtag">
+										<p class="tag">#싱가포르</p>
+										<p class="tag">#사립대</p>
+									</div>
+									<p class="title">
+										Kaplan University <br>
+										카플란 사립대학교
+									</p>
+									<div class="bottom">
+										<p class="txt">학교 자세히보기</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
 									</div>
 								</div>
 							</div>

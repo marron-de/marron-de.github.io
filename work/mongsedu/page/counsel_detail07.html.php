@@ -115,8 +115,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											싱가포르 사립대 상담은 지난 10년 이상 누적관리 5천명 이상의 관리 경험과 실제 졸업한 경험을 바탕으로 학교 특징비교, 전공추천, 취업로드맵, 유학비용 예산까지 원스톱으로 확인해볼 수 있는 상담입니다

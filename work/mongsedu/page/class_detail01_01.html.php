@@ -163,7 +163,7 @@ if (!defined('_EYOOM_')) exit;
                                             </div>
                                         </li>
                                     </ul>
-                                    <div class="guide">
+                                    <div class="guide ver2">
                                         <span>수업비 관련 주의사항</span>
                                         <ul>
                                             <li>* 몽선생 유학 수속생의 경우에만 분납 결재가 가능합니다. 그 외 수강생은 일시납으로 가능합니다</li>

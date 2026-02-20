@@ -144,7 +144,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
-                                                <li class="full">
+                                                <li class="full red">
                                                     <span>
                                                         밀착관리 케어프로그램
                                                     </span>

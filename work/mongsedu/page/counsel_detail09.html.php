@@ -115,8 +115,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											싱가포르/홍콩 국립대 입학상담은 약 500여명의 합격사례를 통한 입시 데이터 통계를 제공하고, 전공별 경쟁률과 대학별 상세 입학조건에 대해서 자세히 알아볼 수 있는 상담입니다.

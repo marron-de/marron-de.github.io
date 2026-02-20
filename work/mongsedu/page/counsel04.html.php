@@ -69,11 +69,13 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
                     </div>
                 </li>
                 <li>
-                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_kakaotalk.svg" alt="" class="icon">
-                    <div class="text_area">
-                        <span>카톡상담</span>
-                        <p>간단한 응대는 실시간 카톡상담이 더 빨라요.</p>
-                    </div>
+					<a href="https://pf.kakao.com/_fxmxmWV" class="link" target="_blank">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_kakaotalk.svg" alt="" class="icon">
+						<div class="text_area">
+							<span>카톡상담</span>
+							<p>간단한 응대는 실시간 카톡상담이 더 빨라요.</p>
+						</div>
+					</a>
                 </li>
             </ul>
             <div class="cs_bottom">

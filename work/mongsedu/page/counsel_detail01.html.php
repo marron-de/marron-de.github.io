@@ -104,8 +104,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											말레이시아 국제학교 상담은 쿠알라룸프 주요 학교 50여개를 직접적으로 비교할 수 있고, 추천주거지와 <br>

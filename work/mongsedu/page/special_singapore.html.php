@@ -450,7 +450,7 @@ if (!defined('_EYOOM_')) exit;
                 </ul>
             </div>
 			<div class="btnbox">
-				<a href="" class="sub_btn typeA">수속혜택 상담하기</a>
+				<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="sub_btn typeA">수속혜택 상담하기</a>
 			</div>
         </div>
     </section>

@@ -64,12 +64,15 @@
 					<div class="contbox">
 						<div class="item" onclick="certificate_popup()">
 							<div class="imgbox">
-								<img src="<?php echo $path ?>img/certificate.jpg" alt="" class="img">
+								<img src="<?php echo $path ?>img/certificate1.jpg" alt="" class="img">
 								<button type="button" class="more_btn"></button>
 							</div>
 							<div class="txtbox">
 								<p class="date">2026.02.12</p>
-								<p class="tit">초경량비행장치 안전성인증서</p>
+								<p class="tit">
+									항공레저스포츠사업 등록증<br>
+									(제2020-5호, 벌룬투어)
+								</p>
 							</div>
 						</div>
 						<div class="item" onclick="certificate_popup()">

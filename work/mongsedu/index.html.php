@@ -91,7 +91,20 @@ if (!defined('_EYOOM_')) exit;
 				<ul class="swiper-wrapper">
 					<li class="swiper-slide">
 						<a href="">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01.png" alt="상담 가능 분야">
+							<div class="swiper icon_swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide item">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01_1.png" alt="" class="icon">
+									</div>
+									<div class="swiper-slide item">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01_2.png" alt="" class="icon">
+									</div>
+									<div class="swiper-slide item">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01_3.png" alt="" class="icon">
+									</div>
+								</div>
+							</div>
+							<!-- <img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01.png" alt="상담 가능 분야"> -->
 							<span>상담 가능 분야</span>
 						</a>
 					</li>
@@ -143,7 +156,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection presentation_area tabs">
+    <div class="msection presentation_area tabs main_sec1">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area" id="row-1">
 				<div class="title">
@@ -197,8 +210,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
                             <li class="swiper-slide">
@@ -232,8 +245,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
                             <li class="swiper-slide end">
@@ -267,8 +280,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none">신청마감</a>
                                 </div>
                             </li>
                             <li class="swiper-slide end">
@@ -302,8 +315,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none">신청마감</a>
                                 </div>
                             </li>
                         </ul>
@@ -341,8 +354,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
                         </ul>
@@ -380,8 +393,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
                         </ul>                        
@@ -419,8 +432,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none">신청마감</a>
                                 </div>
                             </li>
                         </ul>
@@ -430,7 +443,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection counsel_area tabs hover_effect">
+    <div class="msection counsel_area tabs hover_effect main_sec2">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area" id="row-2">
 				<div class="title">
@@ -753,7 +766,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection review_area">
+    <div class="msection review_area main_sec3">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area green youtube" id="row-2">				
 				<div class="title">
@@ -834,7 +847,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
     
-    <div class="msection counsel_area tabs hover_effect">
+    <div class="msection counsel_area tabs hover_effect main_sec4">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area green" id="row-3">				
 				<div class="title">
@@ -1053,7 +1066,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
     
-    <div class="msection class_area tabs main">
+    <div class="msection class_area tabs main main_sec5">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area red" id="row-4">
 				<div class="title">
@@ -1132,7 +1145,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection board_area">
+    <div class="msection board_area main_sec6">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area">
 				<div class="title">
@@ -1211,14 +1224,14 @@ if (!defined('_EYOOM_')) exit;
                                 </a>
                             </li>
                         </ul>
-                        <div class="bg"></div>
+                        <!-- <div class="bg"></div> -->
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="msection review_area ytb_ver">
+    <div class="msection review_area ytb_ver main_sec7">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area black youtube" id="row-2">				
 				<div class="title">
@@ -1352,7 +1365,7 @@ if (!defined('_EYOOM_')) exit;
 		</div>
     </div>
 
-    <div class="msection award_area">
+    <div class="msection award_area main_sec8">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area green center" id="row-2">
                 <p class="desc">수 많은 합격생과 후기들이</p>

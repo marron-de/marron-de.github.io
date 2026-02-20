@@ -100,7 +100,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection counsel_area tabs hover_effect pro_sec1">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area green between">
+            <div class="ms title_area green">
 				<div class="title">
 					<span class="tit">국제학교 <span class="color1">입학/수속 서비스</span></span>
 				</div>
@@ -236,7 +236,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection counsel_area ci hover_effect pro_sec2">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area green">
+            <div class="ms title_area green notab">
 				<div class="title">
 					<span class="tit">아시아대학 <span class="color1">입학수속/컨설팅</span></span>
 				</div>
@@ -444,7 +444,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection counsel_area sec pro_sec3 hover_effect">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
 				<div class="title">
 					<span class="tit">미국+아시아 <span class="color1">입학수속/컨설팅</span></span>
 				</div>
@@ -591,7 +591,7 @@ if (!defined('_EYOOM_')) exit;
 
 	<div class="msection class_area tabs main pro_sec4">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area red" id="row-4">
+            <div class="ms title_area red notab" id="row-4">
 				<div class="title">
 					<span class="tit">
 						유학준비에 필요한 수업! <br class="tablet">
@@ -673,7 +673,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection faq_area pro_sec5">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
                 <span><b>FAQ</b> 자주 묻는 질문</span>
             </div>
             <div class="faq-box">

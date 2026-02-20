@@ -115,8 +115,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											싱가포르 예술대학의 장단점, 유학비용 및 대표적인 예술대의 차이점을 비교하고 포트폴리오 부터, 에세이, 인터뷰 등 입학 준비에 필요한 모든 입학 요강을 확인해볼 수 있습니다.

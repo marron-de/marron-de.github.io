@@ -743,7 +743,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="form_item">
 								<div class="input_box">
-									<input type="text" name="frm_tel" class="input_text" placeholder="-  없이 입력해주세요." required>							
+									<input type="text" name="frm_tel" class="input_text" placeholder="연락처" required>							
 								</div>
 							</div>
 							<div class="form_item">

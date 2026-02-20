@@ -125,7 +125,7 @@ if (!defined('_EYOOM_')) exit;
                                             </div>
                                         </li>
                                     </ul>
-                                    <div class="guide">
+                                    <div class="guide ver2">
                                         <span>수업비 관련 주의사항</span>
                                         <ul>
                                             <li>* 수강 기간은 학생의 기초 실력에 따라 달라질 수 있으며, 기본 3개월부터 시작됩니다.</li>

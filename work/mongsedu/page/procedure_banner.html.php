@@ -75,15 +75,15 @@ if (!defined('_EYOOM_')) exit;
     </div>
 
     <div class="prd_benefit">
-        <div class="container" data-aos="fade-up">
-            <div class="title_area">
+        <div class="container">
+            <div class="title_area" data-aos="fade-up">
                 <p class="sub_txt1 ver2">
                     <b class="color">이런 점은 확실히 다릅니다!</b><br>
                     몽선생의 3가지 차별화된 수속 서비스!
                 </p>
             </div>
             <div class="prd_bnflist01">
-				<div class="item item1">
+				<div class="item item1" data-aos="fade-up">
 					<div class="txtbox">
 						<p class="tit">서비스 1</p>
 						<p class="sub">
@@ -96,7 +96,7 @@ if (!defined('_EYOOM_')) exit;
                         <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_prdbanner04-1.png" alt="">
 					</div>
 				</div>
-				<div class="item item2">
+				<div class="item item2" data-aos="fade-up">
 					<div class="txtbox">
 						<p class="tit">서비스 2</p>
 						<p class="sub">

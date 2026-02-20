@@ -53,7 +53,7 @@ if (!defined('_EYOOM_')) exit;
                                         2025 최신 기출문제 반영<br/>
                                         (자체 교재)
                                     </span>
-                                    <p>출제 경향 그대로! 최신 문제 유형이 모두 반영되어 있어요.</p>
+                                    <p>출제 경향 그대로! 최신 문제 유형이 <br class="pc">모두 반영되어 있어요.</p>
                                 </div>
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_duosp02.png" alt="">
@@ -275,8 +275,7 @@ if (!defined('_EYOOM_')) exit;
 						몽선생 듀오링고에서 시작하세요.
 					</p>
 					<p class="desc">
-						학생들의 진로와 학업을 우선시 하는 <br>
-						전문적인 몽선생 상담사
+						학생들의 진로와 학업을 우선시 하는 전문적인 몽선생 상담사
 					</p>
 				</div>
 				<div class="cardbox">
@@ -336,7 +335,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection faq_area duo_sec7">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
                 <span><b>FAQ</b> 자주 묻는 질문</span>
             </div>
             <div class="faq-box">

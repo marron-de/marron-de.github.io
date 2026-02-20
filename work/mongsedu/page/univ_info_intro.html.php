@@ -228,7 +228,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="title">
 					<span class="tit">국제학교</span>
 				</div>
-                <div class="tab swiper tab_swiper" data-gappc="16" data-gapmob="12">
+                <div class="tab swiper tab_swiper" data-gappc="12" data-gapmob="12">
                     <ul class="tab_tit swiper-wrapper">
                         <li class="swiper-slide"><a href="#" class="show" id="tab-11">전체보기</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-12">말레이시아</a></li>
@@ -566,7 +566,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="title">
 					<span class="tit">해외대학</span>
 				</div>
-                <div class="tab swiper tab_swiper" data-gappc="16" data-gapmob="12">
+                <div class="tab swiper tab_swiper" data-gappc="12" data-gapmob="12">
                     <ul class="tab_tit swiper-wrapper">
                         <li class="swiper-slide"><a href="#" class="show" id="tab-21">전체보기</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-22">싱가포르</a></li>
@@ -865,7 +865,7 @@ if (!defined('_EYOOM_')) exit;
 
 	<div class="msection univ_guide tabs">
 		<div class="container" data-aos="fade-up">
-            <div class="ms title_area between" id="row-3">
+            <div class="ms title_area" id="row-3">
 				<div class="title">
 					<span class="tit">가이드북</span>
 				</div>

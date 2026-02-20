@@ -87,9 +87,9 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection counsel_area ci hover_effect">
+    <div class="msection counsel_area ci hover_effect counsel_sec1">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
 				<div class="title">
 					<span class="tit">국제학교 <span class="color2">입학상담</span></span>
 				</div>
@@ -201,7 +201,7 @@ if (!defined('_EYOOM_')) exit;
             </div>
         </div>
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
 				<div class="title">
 					<span class="tit"><span class="color2">해외대학</span> 입학상담</span>
 				</div>
@@ -313,41 +313,43 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection counsel_area mentor tabs">
+    <div class="msection counsel_area mentor tabs counsel_sec2">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
 				<div class="title">
 					<span class="tit"><span class="color2">전문적인 상담</span>을 받아보세요!</span>
 				</div>
             </div>
 			<div class="mentor_slidebox onlyPC">
-				<div class="tab_wrap swiper tab_swiper" data-gappc="0" data-gapmob="0">
-					<div class="tab_navbox swiper-wrapper">
-						<div class="tab_nav on swiper-slide">
-							<span class="txt">ALL</span>
-							<span class="arrow"></span>
-						</div>
-						<div class="tab_nav swiper-slide">
-							<span class="txt">국제학교 전문</span>
-							<span class="arrow"></span>
-						</div>
-						<div class="tab_nav swiper-slide">
-							<span class="txt">대학입시 전문</span>
-							<span class="arrow"></span>
-						</div>
-						<div class="tab_nav swiper-slide last">
-							<span class="txt">대학입시 전문</span>
-							<span class="arrow"></span>
-						</div>
-						<div class="btn_box">
-							<a href="#none" class="btn">
-								<p class="txt">대표원장 상담</p>
-								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_blue.png" alt="" class="icon">
-							</a>
-							<a href="https://pf.kakao.com/_fxmxmWV" class="btn" target="_blank">
-								<p class="txt">빠른 상담</p>
-								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_kakao.png" alt="" class="icon">
-							</a>
+				<div class="tab_wrap">
+					<div class="tab_navbox swiper tab_swiper" data-gappc="0" data-gapmob="0">
+						<div class="swiper-wrapper">
+							<div class="tab_nav on swiper-slide">
+								<span class="txt">ALL</span>
+								<span class="arrow"></span>
+							</div>
+							<div class="tab_nav swiper-slide">
+								<span class="txt">국제학교 전문</span>
+								<span class="arrow"></span>
+							</div>
+							<div class="tab_nav swiper-slide">
+								<span class="txt">대학입시 전문</span>
+								<span class="arrow"></span>
+							</div>
+							<div class="tab_nav swiper-slide last">
+								<span class="txt">대학입시 전문</span>
+								<span class="arrow"></span>
+							</div>
+							<div class="btn_box">
+								<a href="#none" class="btn">
+									<p class="txt">대표원장 상담</p>
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_blue.png" alt="" class="icon">
+								</a>
+								<a href="https://pf.kakao.com/_fxmxmWV" class="btn" target="_blank">
+									<p class="txt">빠른 상담</p>
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_kakao.png" alt="" class="icon">
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="tab_contbox">
@@ -1126,7 +1128,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection presentation_area tabs">
+    <div class="msection presentation_area tabs counsel_sec3">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area" id="row-1">
 				<div class="title">
@@ -1413,9 +1415,9 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection faq_area">
+    <div class="msection faq_area counsel_sec4">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area">
+            <div class="ms title_area notab">
                 <span><b>FAQ</b> 자주 묻는 질문</span>
             </div>
             <div class="faq-box">
@@ -1449,7 +1451,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="banner_area full">
+    <div class="banner_area full counsel_sec5">
 		<div class="imgbox">
 			<img class="pc" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_counsel_img.png" alt="">
 			<img class="tablet" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_counsel_intro_m.jpg" alt="">
@@ -1467,7 +1469,7 @@ if (!defined('_EYOOM_')) exit;
     </div>
 </div>
 
-<div class="cm_modal mentor_modal">	
+<div class="cm_modal mentor_modal counsel_sec6">	
 	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
 		<div class="cm_modal_box swiper mentorpop_swiper">

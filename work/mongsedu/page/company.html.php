@@ -54,18 +54,66 @@ if (!defined('_EYOOM_')) exit;
             <div class="imgbox">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_pc.png" alt="" class="monitor">
 				<div class="cardbox" >
-					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card1.png" alt="" class="card" data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">
-					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card2.png" alt="" class="card" data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">
-					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card3.png" alt="" class="card" data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card1.png" alt="" class="card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card2.png" alt="" class="card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card3.png" alt="" class="card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
 				</div>
 			</div>
 			<a href="" class="sub_btn typeA tablet">몽선생 멘토 보러가기</a>
         </div>
     </div>
 
-    <div class="com_sec3" data-aos="fade">
-        <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_banner.jpg" alt="" class="img pc">
-        <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_banner_m.jpg" alt="" class="img tablet">
+    <div class="com_sec3" data-aos="fade">		
+		<div class="com_marquee marquee" data-duration="4">
+			<div class="marquee_group">
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img1.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img2.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img3.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img4.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img5.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img6.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img7.jpg" alt="" class="img">
+				</div>
+			</div>
+		</div>		
+		<div class="com_marquee marquee" data-duration="4" data-reverse="reverse">
+			<div class="marquee_group">
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img8.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img9.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img10.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img11.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img12.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img13.jpg" alt="" class="img">
+				</div>
+				<div class="item">
+        			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec3_img14.jpg" alt="" class="img">
+				</div>
+			</div>
+		</div>
     </div>
 
     <div class="msection history com_sec4">
@@ -234,14 +282,14 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="cardbox">
                 <ul>
-                    <li data-aos="fade-up">
+                    <li>
                         <span>몽선생 대표원장 학력</span>
                         <p>
                             - 서강대 경영전문대학원 MBA 졸업<br/>
                             - 영국 Coventry University 대학 졸업
                         </p>
                     </li>
-                    <li data-aos="fade-up">
+                    <li>
                         <span>몽선생 대표원장 경력</span>
                         <p>
                             - 주식회사 몽선생 대표<br/>
@@ -250,7 +298,7 @@ if (!defined('_EYOOM_')) exit;
                             - 유튜브 “글로벌로드맵” 전문 강의
                         </p>
                     </li>
-                    <li data-aos="fade-up">
+                    <li>
                         <span>대표원장 미디어 활동</span>
                         <p>
                             - 여행가방 싱가포르 전문가로 출현<br/>

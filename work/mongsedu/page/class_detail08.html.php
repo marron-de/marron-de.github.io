@@ -145,7 +145,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
-                                                <li class="full">
+                                                <li class="full red">
                                                     <span>
                                                         원어민 맞춤수업 
                                                     </span>

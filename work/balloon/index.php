@@ -29,17 +29,80 @@
 		<div class="container">
 			
 			<section id="Home" class="main_section ms1">
-				<div class="balloon"><img src="<?php echo $path ?>img/ms1_balloon.png" alt="" class="img"></div>
 				<div class="swiper ms1_swiper">
 					<div class="swiper-wrapper">
+						<div class="swiper-slide item item0">
+							<div class="img"></div>
+							<div class="balloon"><img src="<?php echo $path ?>img/ms1_balloon.png" alt="" class="balloon_img"></div>
+							<div class="inner">
+								<div class="contbox">
+									<div class="txtbox" data-aos="fade-right">
+										<p class="sub">Fly With the Wind</p>
+										<p class="tit">
+											엔진 없이 떠오르는 <br>
+											자연 그대로의 <span class="bold">열기구 비행</span>
+										</p>
+										<p class="desc">
+											벌룬 어드벤처 코리아는 하늘을 안전하고 <br>
+											편안하게 경험할 수 있는 열기구 체험을 제공합니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="swiper-slide item item1">
 							<div class="img"></div>
+							<div class="inner"> 
+								<div class="contbox">
+									<div class="txtbox" data-aos="fade-right">
+										<p class="sub">Fly With the Wind</p>
+										<p class="tit">
+											엔진 없이 떠오르는 <br>
+											자연 그대로의 <span class="bold">열기구 비행</span>
+										</p>
+										<p class="desc">
+											벌룬 어드벤처 코리아는 하늘을 안전하고 <br>
+											편안하게 경험할 수 있는 열기구 체험을 제공합니다.
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="swiper-slide item item2">
 							<div class="img"></div>
+							<div class="inner">
+								<div class="contbox">
+									<div class="txtbox" data-aos="fade-right">
+										<p class="sub">Fly With the Wind</p>
+										<p class="tit">
+											엔진 없이 떠오르는 <br>
+											자연 그대로의 <span class="bold">열기구 비행</span>
+										</p>
+										<p class="desc">
+											벌룬 어드벤처 코리아는 하늘을 안전하고 <br>
+											편안하게 경험할 수 있는 열기구 체험을 제공합니다.
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="swiper-slide item item3">
 							<div class="img"></div>
+							<div class="inner">
+								<div class="contbox">
+									<div class="txtbox" data-aos="fade-right">
+										<p class="sub">Fly With the Wind</p>
+										<p class="tit">
+											엔진 없이 떠오르는 <br>
+											자연 그대로의 <span class="bold">열기구 비행</span>
+										</p>
+										<p class="desc">
+											벌룬 어드벤처 코리아는 하늘을 안전하고 <br>
+											편안하게 경험할 수 있는 열기구 체험을 제공합니다.
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -144,7 +207,10 @@
 						</div>
 					</div>
 					<div class="banner" data-aos="fade-left">
-						<a href="<?php echo $path ?>company/about.php" class="m_more white">
+						<video muted autoplay playsinline loop preload="auto" class="ms2_video">
+							<source src="img/video.mp4" type="video/mp4">
+						</video>
+						<a href="<?php echo $path ?>company/about.php" class="m_more black">
 							<span class="txt">View More</span>
 							<span class="arrow"></span>
 						</a>

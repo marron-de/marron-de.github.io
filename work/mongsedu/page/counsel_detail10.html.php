@@ -116,8 +116,8 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
-								<div class="frame-section ver3">
-									<div class="frame-titbox gap3">
+								<div class="frame-section ver2">
+									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
 											송도, 서강 (아시아글로벌캠퍼스)는 해외로 가지않고 한국에서 미국대학을 입학하거나 편입을 할 수 있는 프로그램으로 많은 장점이 있습니다. 
