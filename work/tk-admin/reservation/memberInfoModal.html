@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 회원정보 모달 -->
+		<div id="memberInfo_modal" class="modal reservation_modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">회원정보</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="modal_top">
+						<div class="leftbox">
+							<div class="reserveinfo">
+								<p class="title">회원 상세정보</p>
+							</div>
+						</div>
+						<div class="rightbox">
+							<button type="button" class="button typeE auto size_md">저장</button>
+						</div>
+					</div>
+					<form name="reservGood_fm" id="reservGood_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tab_wrap">
+							<div class="tab_navbox">
+								<div class="tab_nav on"><span class="link">고객정보</span></div>
+								<div class="tab_nav"><span class="link">문자발송</span></div>
+								<div class="tab_nav"><span class="link">알림톡발송</span></div>
+								<div class="tab_nav"><span class="link">메일발송</span></div>
+								<div class="tab_nav"><span class="link">예약내역</span></div>
+								<div class="tab_nav"><span class="link">적립금내역</span></div>
+							</div>
+							<div class="tab_contbox">
+								<div class="tab_cont tab_customer on" data-th="고객정보">
+									<div class="tbl_wrap">
+										<div class="tbl_cont customer_cont">
+											<div class="contbox">
+												<div class="profile_box">
+													<div class="profile">
+														<input type="file" class="input" id="profileFile" name="profileFile" accept="image/*">
+														<label for="profileFile" class="label">
+															사진 없음<br>(180 x 180 px)
+															<!-- <img src="../img/profile_temp.jpg" alt=""> -->
+														</label>
+													</div>
+													<button type="button" class="button size_sm typeE profile_btn">사진첨부</button>
+												</div>
+												<div class="tbl_box mobtbl">
+													<table class="tbl space_auto memberInfo_tbl1">
+														<colgroup>
+															<col style="width: 150px;">
+															<col style="width: 420px;">
+															<col style="width: 150px;">
+															<col style="width: 420px;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th data-th="고객명">고객명</th>
+																<td data-th="고객명" colspan=>
+																	<div class="input_box input_flex">
+																		<input type="text" class="input_text size_md">
+																		<div class="select_box">
+																			<select class="select size_md">			
+																				<option value="CULV001" selected>일반회원</option>
+																				<option value="CULV002">블랙리스트</option>
+																				<option value="CULV003">단골고객</option>
+																				<option value="CULV004">VVIP</option>
+																		</select>
+																		</div>
+																		<div class="select_box">
+																			<select class="select size_md">			
+																				<option value="M" selected>남자</option>
+																				<option value="F">여자</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+																<th data-th="국적">국적</th>
+																<td data-th="국적">
+																	<div class="input_box input_flex">
+																		<input type="text" class="input_text size_md" value="대한민국">
+																		<div class="input_flex">
+																			<!-- <p class="input_txt bold">언어</p> -->
+																			<div class="tbl_inline">
+																				<div class="radio_box size_md">
+																					<input type="radio" name="lang2" id="lang2_1" class="input_radio">
+																					<label for="lang2_1" class="label_radio">국문</label>
+																				</div>
+																				<div class="radio_box size_md">
+																					<input type="radio" name="lang2" id="lang2_2" class="input_radio">
+																					<label for="lang2_2" class="label_radio">영문</label>
+																				</div>
+																				<div class="radio_box size_md">
+																					<input type="radio" name="lang2" id="lang2_3" class="input_radio">
+																					<label for="lang2_3" class="label_radio">번체</label>
+																				</div>
+																				<div class="radio_box size_md">
+																					<input type="radio" name="lang2" id="lang2_4" class="input_radio">
+																					<label for="lang2_4" class="label_radio">간체</label>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="영문이름">영문이름</th>
+																<td data-th="영문이름">
+																	<div class="tbl_inline gap2">
+																		<div class="input_box input_flex">
+																			<span class="input_txt">성</span>
+																			<input type="text" class="input_text size_md">
+																		</div>
+																		<div class="input_box input_flex">
+																			<span class="input_txt">이름</span>
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</div>
+																</td>
+																<th data-th="아이디">아이디</th>
+																<td data-th="아이디">
+																	<div class="input_box">
+																		<input type="text" class="input_text size_md mx260" value="TKD1771718989F0A8BFF" readonly>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="연락처">연락처</th>
+																<td data-th="연락처">
+																	<div class="input_box input_flex">
+																		<input type="text" class="input_text size_md mx260">
+																		<div class="check_box size_md">
+																			<input type="checkbox" name="SMS_memcheck" id="SMS_memcheck" class="input_check">
+																			<label for="SMS_memcheck" class="label_check">SMS수신</label>
+																		</div>
+																	</div>
+																</td>
+																<th data-th="생년월일">생년월일</th>
+																<td data-th="생년월일">
+																	<div class="input_box">
+																		<input type="text"class="input_text size_md icon_ver icon_date calender_btn mx260" readonly>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="비밀번호">비밀번호</th>
+																<td data-th="비밀번호">
+																	<div class="input_box input_flex">
+																		<input type="text" class="input_text size_md mx260">
+																		<div class="check_box size_md">
+																			<input type="checkbox" name="pwd_memcheck" id="pwd_memcheck" class="input_check">
+																			<label for="pwd_memcheck" class="label_check">비밀번호변경</label>
+																		</div>
+																	</div>
+																</td>
+																<th data-th="여권번호">여권번호</th>
+																<td data-th="여권번호">
+																	<div class="input_box">
+																		<input type="text" class="input_text size_md mx260">
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="주소">주소</th>
+																<td data-th="주소">
+																	<div class="input_box">
+																		<input type="text" class="input_text size_md">
+																	</div>
+																</td>
+																<th data-th="이메일">이메일</th>
+																<td data-th="이메일">
+																	<div class="input_box input_flex">
+																		<input type="text" class="input_text size_md mx260">
+																		<div class="check_box size_md">
+																			<input type="checkbox" name="mail_memcheck" id="mail_memcheck" class="input_check">
+																			<label for="mail_memcheck" class="label_check">메일수신</label>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="유입채널">유입채널</th>
+																<td data-th="유입채널">
+																	<div class="input_box input_flex">
+																		<p class="input_txt">TK</p>
+																		<div class="select_box">
+																			<select class="select size_md">
+																				<option value="">선택</option>
+																				<option value="tktravel">TK</option>
+																				<option value="tourboss">여행대장</option>
+																				<option value="naver">NAVER 스토어</option>
+																				<option value="naver01">NAVER 플레이스</option>
+																				<option value="coupang">쿠팡</option>
+																				<option value="yanolja">야놀자</option>
+																				<option value="creatrip">CREATRIP</option>
+																				<option value="kte">KOREATRAVELEASY</option>
+																				<option value="nolbal">놀이의 발견</option>
+																				<option value="kkday">KKDAY</option>
+																				<option value="klook">KLOOK</option>
+																				<option value="trip.com">TRIP.COM</option>
+																				<option value="ab14926">ALL SEASONS TRAVEL HK CO LIMITED 捷溢旅游有限公</option>
+																				<option value="Asiayo">ASIAYO 亞洲遊</option>
+																				<option value="atlastravel">ATLAS TRAVEL LIMITED 雅時達旅遊</option>
+																				<option value="CanadianSKI">CANADIAN SKI VACATIONS</option>
+																				<option value="chan">CHAN BROTHERS</option>
+																				<option value="Chans World Holiday">CHAN'S WORLD HOLIDAYS</option>
+																				<option value="cola">COLA TOUR 可樂旅遊</option>
+																				<option value="CTC TRAVEL">CTC TRAVEL</option>
+																				<option value="egl">EGL 東瀛遊</option>
+																				<option value="everfunholiday">EVERFUN HOLIDAY 長汎假期</option>
+																				<option value="excanadian">EXTREMELY CANADIAN</option>
+																				<option value="ezfly">EZFLY</option>
+																				<option value="eztravel">EZTRAVEL 易遊網</option>
+																				<option value="falcontravel">FALCON TRAVEL&amp;TOURS SDN. BHD.</option>
+																				<option value="FANTASTTOUR">FANTAST TOUR</option>
+																				<option value="flightcentre">FLIGHT CENTRE(호주)</option>
+																				<option value="freetimegear">FREE TIME GEAR</option>
+																				<option value="gttour">GT투어</option>
+																				<option value="gmarket">G마켓</option>
+																				<option value="holidaystar">HOLIDAYSTAR</option>
+																				<option value="JK Tour">JK TOUR 聚客旅遊</option>
+																				<option value="journeyland">JOURNEYLAND</option>
+																				<option value="joyparadise">JOY PARADISE 홀리데이</option>
+																				<option value="Jun-Air Travel">JUN-AIR TRAVEL</option>
+																				<option value="kkday88">KKDAY(국내)</option>
+																				<option value="L.G.E Travel">L.G.E TRAVEL</option>
+																				<option value="lifetour">LIFE TOUR 五福旅遊</option>
+																				<option value="lion">LION 雄獅</option>
+																				<option value="mediatravel">MEDIA TRAVEL</option>
+																				<option value="Nam Ho Travel">NAM HO TRAVEL</option>
+																				<option value="NEWAMAZINGTRAVEL">NEW AMAZING TRAVEL</option>
+																				<option value="NEW SHAN TRAVEL">NEW SHAN TRAVEL</option>
+																				<option value="NEW STAR TRAVEL">NEW STAR TRAVEL</option>
+																				<option value="NOLUNIVERSE">NOL UNIVERSE</option>
+																				<option value="one2go">ONE2GO </option>
+																				<option value="a982a68">PAK LOK TRAVEL 千里馬旅游</option>
+																				<option value="PEACETOUR">PEACE TOUR</option>
+																				<option value="Pelago">PELAGO</option>
+																				<option value="permairantau">PERMAI RANTAU TRAVEL</option>
+																				<option value="phoenixtours">PHOENIX TOURS 鳳凰旅遊</option>
+																				<option value="PINNACLE Travel">PINNACLE TRAVEL</option>
+																				<option value="sinoway">SINOWAY 金寶國際</option>
+																				<option value="startravel">STAR TRAVEL 燦星旅遊</option>
+																				<option value="sunflower">SUN FLOWER TRAVEL</option>
+																				<option value="syntravel">SYN TRAVEL 始運旅遊</option>
+																				<option value="TAIYUANTRAVEL">TAIYUAN TRAVEL</option>
+																				<option value="a231536">TASTE TRAVEL 味力之旅</option>
+																				<option value="tkplace01">TKPLACE 거래처</option>
+																				<option value="tkplace">TKTRAVEL</option>
+																				<option value="tkonsite">TK비발디_현장구매</option>
+																				<option value="TRAVEL 21">TRAVEL 21</option>
+																				<option value="alliance">TRAVEL ALLIANCE</option>
+																				<option value="expert">TRAVEL EXPERT</option>
+																				<option value="fever">TRAVEL FEVER</option>
+																				<option value="ae9edcc">TRAVEL SIGNATURE 旅游殿堂</option>
+																				<option value="Travel Star">TRAVEL STAR</option>
+																				<option value="TRAVEL WANDER">TRAVEL WANDER</option>
+																				<option value="TravelRich">TRAVELRICH</option>
+																				<option value="Trazy1">TRAZY</option>
+																				<option value="trends">TRENDS HOLIDAY</option>
+																				<option value="tripbaa">TRIPBAA 趣吧</option>
+																				<option value="TTN">TTN</option>
+																				<option value="uplan">UPLAN</option>
+																				<option value="webuy">WEBUY TRAVEL</option>
+																				<option value="WeHolidays">WEHOLIDAYS</option>
+																				<option value="a276648">WTS TRAVEL</option>
+																				<option value="YOTOUR">YO TOUR</option>
+																				<option value="youngsholiday">YOUNG'S HOLIDAYS 悠揚假期</option>
+																				<option value="huamei">北京华美商旅</option>
+																				<option value="chiehli">捷利旅行社有限公司</option>
+																				<option value="to-go">泛遊情報</option>
+																				<option value="sportslife">生活運動行銷股份有限公司</option>
+																				<option value="comebesttour">盈達旅遊</option>
+																				<option value="goldenteamtravel">鶴悠旅行社</option>
+																				<option value="green">그린한국어어학원</option>
+																				<option value="settour">동남 TOUR 東南旅遊</option>
+																				<option value="dongdukuniv">동덕여자대학교 신산업지식재산사업단</option>
+																				<option value="local">라이크어로컬</option>
+																				<option value="vatech">바텍 여행 복지몰</option>
+																				<option value="TK-B2b">발리 여행사</option>
+																				<option value="benepia">베네피아</option>
+																				<option value="UniversityofSeoul">서울시립대학교 차세대통신사업단</option>
+																				<option value="koreatraveltest">소노국내여행사개발테스트</option>
+																				<option value="sigoltour">시골투어(주)수요일</option>
+																				<option value="skytravel">안동 하늘여행사</option>
+																				<option value="stmnet">에스티엠넷</option>
+																				<option value="yeogi">여기어때</option>
+																				<option value="waug">와그</option>
+																				<option value="wizkorea">위즈게스트하우스</option>
+																				<option value="ebada">이바다</option>
+																				<option value="etbs">이제너두</option>
+																				<option value="bizmarket">인터파크투어 비즈마켓</option>
+																				<option value="konest">코네스트</option>
+																				<option value="seoulpass">트래볼루션</option>
+																				<option value="travelnote">트래블노트</option>
+																				<option value="hocheon">호천국제</option>
+																				<option value="Ggogo">ＧGOGO吉帝旅遊</option>
+																		</select>
+																		</div>
+																	</div>
+																</td>
+																<th data-th="가입일자">가입일자</th>
+																<td data-th="가입일자" class="align_left">2026-02-22 09:09:50</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<button class="tbl_button button auto typeE size_md">수정하기</button>
+										</div>
+										<div class="tbl_cont">
+											<div class="tbl_box mobtbl">
+												<table class="tbl space_auto reserveInfo_tbl2">
+													<colgroup>
+														<col style="width: 150px;">
+														<col style="width: 288px;">
+														<col style="width: 150px;">
+														<col style="width: 288px;">
+														<col style="width: 150px;">
+														<col style="width: 288px;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th data-th="상담일시">상담일시</th>
+															<td data-th="상담일시">
+																<div class="input_box">
+																	<input type="text" class="input_text size_md" value="2026-02-22 18:56:04" readonly>
+																</div>
+															</td>
+															<th data-th="상담구분">상담구분</th>
+															<td data-th="상담구분">
+																<div class="select_box">
+																	<select class="select size_md">
+																		<option value="">선택</option>
+																		<option value="TEL" selected>전화문의</option>
+																		<option value="SNS">SNS문의</option>
+																		<option value="EMAIL">이메일문의</option>
+																	</select>
+																</div>
+															</td>
+															<th data-th="상담구분">상담구분</th>
+															<td data-th="상담구분">
+																<div class="select_box">
+																	<select class="select size_md">
+																		<option value="">선택</option>
+																		<option value="tktravel">강일구 대표</option>
+																		<option value="jerry">임병남 부장</option>
+																		<option value="joyceyip915">조이스 매니저</option>
+																		<option value="jamiesy">제이미 파트장</option>
+																		<option value="testdev">bus res dev</option>
+																		<option value="wkddjsgh">장언호 대리</option>
+																		<option value="vipphoebe">진사여 매니저</option>
+																		<option value="mary314">메리 매니저</option>
+																		<option value="kys072702">김용식 주임</option>
+																		<option value="jangsan7">최규만 팀장</option>
+																		<option value="parkmiisun">박미선 매니저</option>
+																		<option value="kws7197" selected>김우성팀장</option>
+																		<option value="emilycly">채락연 매니저</option>
+																		<option value="de166">엄다은 매니저</option>
+																		<option value="angelfok">엔젤 매니저</option>
+																	</select>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th data-th="상담내용">상담내용</th>
+															<td data-th="상담내용" colspan="5">
+																<div class="input_box">
+																	<textarea class="input_text size_md h_auto" rows="5"></textarea>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<button class="tbl_button button auto typeE size_md">상담등록</button>
+										</div>
+										<div class="info_tbl_box">
+											<div class="tbl_top">
+												<div class="leftbox full">
+													<p class="title">상담내역</p>
+												</div>
+												<div class="rightbox full">
+												</div>
+											</div>
+											<div class="tbl_box">
+												<table class="tbl space_auto">
+													<colgroup>
+														<col style="width: 60px;">
+														<col style="width: 160px;">
+														<col style="width: 130px;">
+														<col style="width: 664px;">
+														<col style="width: 160px;">
+														<col style="width: 140px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="No.">No.</th>
+															<th data-th="상담일자">상담일자</th>
+															<th data-th="상품구분">상품구분</th>
+															<th data-th="상담내용">상담내용</th>
+															<th data-th="담당자">담당자</th>
+															<th data-th="-">-</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="No.">1</td>
+															<td data-th="상담일자">2026-02-22</td>
+															<td data-th="상품구분">상품구분</td>
+															<td data-th="상담내용" class="align_left">
+																테스트 상담내용입니다.
+															</td>
+															<td data-th="담당자">박미선 매니저</td>
+															<td data-th="-">-</td>
+														</tr>																
+													</tbody>
+												</table>
+											</div>								
+										</div>	
+									</div>
+								</div>
+								<div class="tab_cont tab_sms" data-th="문자발송">
+									<div class="tbl_wrap">
+										<div class="info_tbl_top">
+											<div class="tbl_cont">
+												<div class="tbl_box mobtbl">
+													<table class="tbl space_auto memberInfo_tbl2">
+														<colgroup>
+															<col style="width: 150px;">
+															<col style="width: 507px;">
+															<col style="width: 150px;">
+															<col style="width: 507px;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th data-th="아이디">아이디</th>
+																<td data-th="아이디" class="align_left">TKD1771718989F0A8BFF</td>
+																<th data-th="영문이름">영문이름</th>
+																<td data-th="영문이름" class="align_left"></td>
+															</tr>
+															<tr>
+																<th data-th="고객명">고객명</th>
+																<td data-th="고객명" class="align_left">- / 일반회원 / 남자</td>
+																</td>
+																<th data-th="연락처">연락처</th>
+																<td data-th="연락처">
+																	<div class="tbl_inline gap3">
+																		<p class="input_tx">01012345678</p>
+																		<div class="check_box size_md">
+																			<input type="checkbox" name="SMS_check" id="SMS_check" class="input_check">
+																			<label for="SMS_check" class="label_check">SMS 수신</label>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="info_tbl_cont">
+											<div class="info_tbl_item send">
+												<p class="form_tit">SMS 발송</p>
+												<form class="form form_box">
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="From">From</th>
+																	<td data-th="From">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" value="07082761919" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="To">To</th>
+																	<td data-th="To">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="10" class="input_text size_md h_auto" ></textarea>
+																			<div class="label_text">
+																				<button class="button auto typeE size_md">문자 발송</button>
+																			</div>
+																			<div class="label_text input_txt size_md">
+																				<span class="bold blue">0</span>
+																					Byte (SMS 발송)
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</form>
+											</div>
+											<div class="info_tbl_item list">
+												<p class="form_tit">SMS 발송내역</p>
+												<div class="form_wrap">
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="발송일자">발송일자</th>
+																	<td data-th="발송일자">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="발송직원">발송직원</th>
+																	<td data-th="발송직원">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="10" class="input_text size_md h_auto" readonly></textarea>
+																			<div class="label_text">
+																				<button class="button auto typeE size_md" disabled>복사하기</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="발송일자">발송일자</th>
+																	<td data-th="발송일자">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="발송직원">발송직원</th>
+																	<td data-th="발송직원">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="10" class="input_text size_md h_auto" readonly></textarea>
+																			<div class="label_text">
+																				<button class="button auto typeE size_md" disabled>복사하기</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="발송일자">발송일자</th>
+																	<td data-th="발송일자">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="발송직원">발송직원</th>
+																	<td data-th="발송직원">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="10" class="input_text size_md h_auto" readonly></textarea>
+																			<div class="label_text">
+																				<button class="button auto typeE size_md" disabled>복사하기</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab_cont tab_kakkao" data-th="알림톡발송">
+									<div class="tbl_wrap">
+										<div class="info_tbl_top">
+											<div class="tbl_cont">
+												<div class="tbl_box mobtbl">
+													<table class="tbl space_auto memberInfo_tbl2">
+														<colgroup>
+															<col style="width: 150px;">
+															<col style="width: 507px;">
+															<col style="width: 150px;">
+															<col style="width: 507px;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th data-th="아이디">아이디</th>
+																<td data-th="아이디" class="align_left">TKD1771718989F0A8BFF</td>
+																<th data-th="영문이름">영문이름</th>
+																<td data-th="영문이름" class="align_left"></td>
+															</tr>
+															<tr>
+																<th data-th="고객명">고객명</th>
+																<td data-th="고객명" class="align_left">- / 일반회원 / 남자</td>
+																</td>
+																<th data-th="연락처">연락처</th>
+																<td data-th="연락처">
+																	<div class="tbl_inline gap3">
+																		<p class="input_tx">01012345678</p>
+																		<div class="check_box size_md">
+																			<input type="checkbox" name="SMS_check2" id="SMS_check2" class="input_check">
+																			<label for="SMS_check2" class="label_check">SMS 수신</label>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="info_tbl_cont">
+											<div class="info_tbl_item list">
+												<p class="form_tit">알림톡 발송 내역</p>
+												<div class="form_wrap">
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="발송일자">발송일자</th>
+																	<td data-th="발송일자">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="발송직원">발송직원</th>
+																	<td data-th="발송직원">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="20" class="input_text size_md h_auto"></textarea>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="발송일자">발송일자</th>
+																	<td data-th="발송일자">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="발송직원">발송직원</th>
+																	<td data-th="발송직원">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="20" class="input_text size_md h_auto"></textarea>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="발송일자">발송일자</th>
+																	<td data-th="발송일자">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="발송직원">발송직원</th>
+																	<td data-th="발송직원">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="20" class="input_text size_md h_auto"></textarea>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:120px">
+																<col style="width:320px">
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="발송일자">발송일자</th>
+																	<td data-th="발송일자">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md" readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="발송직원">발송직원</th>
+																	<td data-th="발송직원">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-th="Content" colspan="2">
+																		<div class="input_box">
+																			<textarea rows="20" class="input_text size_md h_auto"></textarea>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab_cont tab_mail" data-th="메일발송">
+									<div class="tbl_wrap">
+										<div class="info_tbl_top">
+											<div class="tbl_cont">
+												<div class="tbl_box mobtbl">
+													<table class="tbl space_auto memberInfo_tbl2">
+														<colgroup>
+															<col style="width: 150px;">
+															<col style="width: 507px;">
+															<col style="width: 150px;">
+															<col style="width: 507px;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th data-th="고객명">고객명</th>
+																<td data-th="고객명" class="align_left">- / 일반회원 / 남자</td>
+																</td>
+																<th data-th="영문이름">영문이름</th>
+																<td data-th="영문이름" class="align_left"></td>
+															</tr>
+															<tr>
+																<th data-th="연락처">연락처</th>
+																<td data-th="연락처">
+																	<div class="tbl_inline gap3">
+																		<p class="input_tx">01012345678</p>
+																		<div class="check_box size_md">
+																			<input type="checkbox" name="SMS_check3" id="SMS_check3" class="input_check">
+																			<label for="SMS_check3" class="label_check">SMS 수신</label>
+																		</div>
+																	</div>
+																</td>
+																<th data-th="이메일주소">이메일주소</th>
+																<td data-th="이메일주소">
+																	<div class="tbl_inline gap3">
+																		<p class="input_tx">test@test.com</p>
+																		<div class="check_box size_md">
+																			<input type="checkbox" name="mail_check" id="mail_check" class="input_check">
+																			<label for="mail_check" class="label_check">메일수신</label>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="info_tbl_box">
+											<form class="form form_box">
+												<div class="tbl_box mobtbl">
+													<table class="tbl space_auto">
+														<colgroup>
+															<col style="width:150px">
+															<col style="width:507px">
+															<col style="width:150px">
+															<col style="width:507px">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th data-th="TO">TO</th>
+																<td data-th="TO">
+																	<div class="input_box">
+																		<input type="text"class="input_text size_md">
+																	</div>
+																</td>
+																<th data-th="FROM">FROM</th>
+																<td data-th="FROM">
+																	<div class="input_box">
+																		<input type="text"class="input_text size_md">
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="메일제목">메일제목</th>
+																<td data-th="메일제목">
+																	<div class="input_box">
+																		<input type="text" class="input_text size_md">
+																	</div>
+																</td>
+																<th data-th="메일템플릿">메일템플릿</th>
+																<td data-th="메일템플릿">
+																	<div class="select_box">
+																		<select class="select size_md">
+																			<option value="">선택</option>
+																			<option value="5">투어 - 예약접수</option>
+																			<option value="24">투어 - 확정메일</option>
+																			<option value="7">투어 - 계약서</option>
+																			<option value="57">투어 - 수동확정</option>
+																			<option value="22">투어 - 취소메일</option>
+																			<option value="9">호텔 - 예약접수</option>
+																			<option value="10">호텔 - 예약확정</option>
+																			<option value="23">호텔 - 취소메일</option>
+																			<option value="83">기타 - 차량 예약 확정 - 간체</option>
+																			<option value="84">기타 - 차량 예약 확정 - 번체</option>
+																			<option value="85">기타 - 차량 예약 확정 - 영문</option>
+																			<option value="74">기타 - 차량 예약 확정 대기 - 영문</option>
+																			<option value="75">기타 - 차량 예약 확정 대기 - 번체</option>
+																			<option value="76">기타 - 차량 예약 확정 대기 - 간체</option>
+																			<option value="86">기타 - 차량 예약 취소 - 간체</option>
+																			<option value="87">기타 - 차량 예약 취소 - 번체</option>
+																			<option value="88">기타 - 차량 예약 취소 - 영문</option>
+																		</select>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="메일내용">메일내용</th>
+																<td data-th="메일내용" colspan="3">
+																	<div class="input_box">
+																		<textarea class="input_text size_md summernote" rows="5" name="cont"></textarea>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="첨부파일 #1">첨부파일 #1</th>
+																<td data-th="첨부파일 #1" colspan="5">
+																	<div class="tbl_inline column_ver">
+																		<div class="input_box input_file_box">
+																			<div class="input_flex">
+																				<input type="file" class="input_file" id="userFile1" name="userFile1">
+																				<label for="userFile1" class="label_file size_md">선택된 파일 없음</label>
+																				<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="첨부파일 #2">첨부파일 #2</th>
+																<td data-th="첨부파일 #2" colspan="5">
+																	<div class="tbl_inline column_ver">
+																		<div class="input_box input_file_box">
+																			<div class="input_flex">
+																				<input type="file" class="input_file" id="userFile2" name="userFile2">
+																				<label for="userFile2" class="label_file size_md">선택된 파일 없음</label>
+																				<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th data-th="첨부파일 #3">첨부파일 #3</th>
+																<td data-th="첨부파일 #3" colspan="5">
+																	<div class="tbl_inline column_ver">
+																		<div class="input_box input_file_box">
+																			<div class="input_flex">
+																				<input type="file" class="input_file" id="userFile3" name="userFile3">
+																				<label for="userFile3" class="label_file size_md">선택된 파일 없음</label>
+																				<button type="button" class="input_btn size_md fileSelect_btn">파일 선택</button>
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>	
+														</tbody>
+													</table>
+												</div>
+											</form>
+											<button class="modal_btn button auto typeE size_md">메일 발송</button>
+										</div>	
+										<div class="info_tbl_box">
+											<div class="tbl_top">
+												<div class="leftbox full">
+													<p class="title">발송내역</p>
+												</div>
+												<div class="rightbox full">
+												</div>
+											</div>
+											<div class="tbl_box">
+												<table class="tbl space_auto">
+													<colgroup>
+														<col style="width:100px">
+														<col style="width:200px">
+														<col style="width:160px">
+														<col style="width:534px">
+														<col style="width:160px">
+														<col style="width:160px">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="No.">No.</th>
+															<th data-th="발송일자">발송일자</th>
+															<th data-th="수신결과">수신결과</th>
+															<th data-th="메일내용">메일내용</th>
+															<th data-th="담당자">담당자</th>
+															<th data-th="-">-</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="No.">1</td>
+															<td data-th="발송일자">2025-08-05 01:40:40</td>
+															<td data-th="수신결과">수신결과</td>
+															<td data-th="메일내용">
+																<div class="tbl_content">
+																	메일 테스트 내용입니다.<br>
+																	메일 테스트 내용입니다.<br>
+																</div>
+															</td>
+															<td data-th="담당자">홍길동</td>
+															<td data-th="-">-</td>
+														</tr>
+														<tr>
+															<td data-th="No.">2</td>
+															<td data-th="발송일자">2025-08-05 01:40:40</td>
+															<td data-th="수신결과">수신결과</td>
+															<td data-th="메일내용">
+																<div class="tbl_content">
+																	메일 테스트 내용입니다.<br>
+																	메일 테스트 내용입니다.<br>
+																</div>
+															</td>
+															<td data-th="담당자">홍길동</td>
+															<td data-th="-">-</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>								
+										</div>								
+									</div>
+								</div>
+								<div class="tab_cont tab_reserve" data-th="예약내역">
+									<div class="tbl_wrap">
+										<div class="info_tbl_box">
+											<div class="tbl_top">
+												<div class="leftbox full">
+													<p class="total">Total <span class="color">10</span></p>
+												</div>
+												<div class="rightbox full">
+												</div>
+											</div>
+											<div class="tbl_box">
+												<table class="tbl space_auto">
+													<colgroup>
+														<col style="width:50px">
+														<col style="width: 100px;">
+														<col style="width: 130px;">
+														<col style="width: 130px;">
+														<col style="width: 402px;">
+														<col style="width: 130px;">
+														<col style="width: 120px;">
+														<col style="width: 120px;">
+														<col style="width: 130px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="No.">No.</th>
+															<th data-th="고객명">고객명</th>
+															<th data-th="상품구매일">상품구매일</th>
+															<th data-th="상품구분">상품구분</th>
+															<th data-th="상품명 / 행사명">상품명 / 행사명</th>
+															<th data-th="사용일">사용일</th>
+															<th data-th="B2B">B2B</th>
+															<th data-th="B2C">B2C</th>
+															<th data-th="담당자">담당자</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="No.">1</td>
+															<td data-th="고객명">홍길동</td>
+															<td data-th="상품구매일">2026-02-22</td>
+															<td data-th="상품구분">Day Tour</td>
+															<td data-th="상품명 / 행사명" class="align_left">
+																	2025~2026 洪川大明 SONO VIVALDIPARK 現場購票
+															</td>
+															<td data-th="사용일">2026-02-22</td>
+															<td data-th="B2B" class="align_right">0</td>
+															<td data-th="B2C" class="align_right">496,000</td>
+															<td data-th="담당자">박미선 매니저</td>
+														</tr>																
+													</tbody>
+												</table>
+											</div>								
+										</div>			
+									</div>
+								</div>
+								<div class="tab_cont tab_point" data-th="적립금내역">
+									<div class="tbl_wrap">
+										<div class="info_tbl_box">
+											<div class="tbl_top">
+												<div class="leftbox full">
+													<p class="total">Total <span class="color">0</span></p>
+													/
+													<p class="total">잔여적립금 <span class="color">0</span>원</p>
+												</div>
+												<div class="rightbox full">
+													<button type="button" class="button size_sm auto typeE mobSize1" onclick="mileage_modal()">적립금입력</button>
+												</div>
+											</div>
+											<div class="tbl_box">
+												<table class="tbl space_auto">
+													<colgroup>
+														<col style="width:50px">
+														<col style="width:110px;">
+														<col style="width:110px;">
+														<col style="width:120px">
+														<col style="width:352px">
+														<col style="width:180px;">
+														<col style="width:180px;">
+														<col style="width:120px">
+														<col style="width:90px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th data-th="No.">No.</th>
+															<th data-th="포인트(+)">포인트(+)</th>
+															<th data-th="포인트(-)">포인트(-)</th>
+															<th data-th="구분">구분</th>
+															<th data-th="내역">내역</th>
+															<th data-th="예약번호">예약번호</th>
+															<th data-th="처리일시">처리일시</th>
+															<th data-th="담당자">담당자</th>
+															<th data-th="-">-</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-th="No.">1</td>
+															<td data-th="포인트(+)">
+																<span class="blue">500</span>
+															</td>
+															<td data-th="포인트(-)">
+																<span class="red">500</span>
+															</td>
+															<td data-th="구분">
+																테스트 구분
+															</td>
+															<td data-th="내역" class="align_left">
+																테스트 내역입니다.
+															</td>
+															<td data-th="예약번호">
+																D1771718989F0A8BFF
+															</td>
+															<td data-th="처리일시">
+																2025-08-05 01:40:40	
+															</td>
+															<td data-th="담당자">홍길동</td>
+															<td data-th="-"></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>		
+											<div class="pagination mt">
+												<button type="button" class="page page_btn start"></button>
+												<button type="button" class="page page_btn prev"></button>
+												<a href="#none" class="page page_link">1</a>
+												<a href="#none" class="page page_link active">2</a>
+												<a href="#none" class="page page_link">3</a>
+												<a href="#none" class="page page_link">4</a>
+												<button type="button" class="page page_btn next"></button>
+												<button type="button" class="page page_btn end"></button>
+											</div>						
+										</div>			
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
+	<script src="../js/common.js"></script>
+
+	<!-- Summernote Lite CSS/JS (부트스트랩 불필요) -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function(){
+            $('.summernote').summernote({
+                height: 400,
+                toolbar: [
+                    // 1줄: 글꼴, 크기, 스타일
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['height', ['height']],
+                    ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                    // 2줄: 색상, 정렬, 리스트
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    // 3줄: 링크, 이미지, 표, 코드 등
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                fontNames: ['맑은 고딕', '굴림', '돋움', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                lineHeights: ['150%', '180%', '200%', '220%', '250%', '280%', '300%'],
+            });
+        });    
+	</script>
+
+</body>
+
+</html>

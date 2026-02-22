@@ -521,3 +521,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+// 260223 수정작업
+// 회원정보 hover시 팝업 노출
+$(function () {
+	if ($(window).width() > 1080) {
+		$('.tbl_customer_info').on('mouseenter', function(){
+			$(this).find('.member_info_popup').addClass('show');
+		});
+
+		$('.tbl_customer_info').on('mouseleave', function(){
+			$(this).find('.member_info_popup').removeClass('show');
+		});
+	} else {
+		$('.tbl_customer_info').on('click', function (e) {
+			e.stopPropagation();
+			$('.member_info_popup').removeClass('show');
+			$(this).find('.member_info_popup').addClass('show');
+		});
+		
+		$(document).on('click', function () {
+			$('.member_info_popup').removeClass('show');
+		});
+	}
+});
+
+// 프로필 이미지 등록
+$(document).ready(function() {
+    $('#memberInfo_modal .profile_btn').on('click', function() {
+        $('#profileFile').click();
+    });
+
+    $('#memberInfo_modal #profileFile').on('change', function(e) {
+        const file = e.target.files[0];
+        const $label = $(this).siblings('.label');
+
+        if (file) {
+            if (!file.type.match('image.*')) {
+                alert('이미지 파일만 선택 가능합니다.');
+                $(this).val(''); 
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imgTag = `<img src="${event.target.result}" alt="미리보기" style="width:100%; height:100%; object-fit:cover;">`;
+                $label.html(imgTag);
+            };
+            reader.readAsDataURL(file); // 파일을 읽어 Data URL로 변환
+        }
+    });
+});
+
