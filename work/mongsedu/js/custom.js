@@ -593,9 +593,6 @@ $(window).on("load", function(){
 
 
 
-
-
-
 // 학교 리스트
 $(".school_moreview").click(function () {
 	$(this).toggleClass('on');
