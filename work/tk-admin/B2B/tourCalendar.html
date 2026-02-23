@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout b2b_wrap reservation_wrap sideopen" data-title="투어확정달력" data-icon="ph-clipboard-text">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="b2b_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-clipboard-text"></i>
+						투어확정달력
+					</p>
+				</div>
+
+				<div class="mob_filter_wrap">
+					<div class="mob_filter_topbox">
+						<div class="leftbox"></div>
+						<div class="rightbox">
+							<button type="button" class="mob_icon_button mob_search_open">
+								<i class="ph ph-magnifying-glass icon"></i>
+							</button>
+						</div>
+					</div>
+					<div class="content_search content_tbl">
+						<form name="search_fm" id="search_fm" method="get">
+							<div class="tbl_box">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 150px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr class="mob_search_box">
+											<th data-th="검색어">검색어</th>
+											<td data-th="검색어">
+												<div class="tbl_inline">
+													<div class="input_box search_input">
+														<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+													</div>
+													<div class="tbl_btnbox search_btns">
+														<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
+													</div>
+													<button type="button"
+														class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="기간">기간</th>
+											<td data-th="기간">
+												<div class="tbl_inline gap2">
+													<div class="select_box search_select2">
+														<select class="select size_md">
+															<option value="">여행구분</option>
+															<option value="bustour">버스투어</option>
+														</select>
+													</div>
+													<div class="select_box search_select2">
+														<select class="select size_md">
+															<option value="">여행기간</option>
+															<option value="all">전체</option>
+															<option value="day" selected>당일</option>
+															<option value="days">숙박</option>
+														</select>
+													</div>
+													<div class="input_box input_flex w_auto mobSize_full">
+													<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+													<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
+												</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="content_list content_tbl content_mobtbl">
+					<form name="boardList_fm" id="boardList_fm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox full">
+								<p class="total">
+									Total
+									<span class="color">10</span>
+								</p>
+							</div>
+							<div class="rightbox full"></div>
+						</div>
+						<div class="bo_list tbl_box">
+							<table class="tbl reservation_list min_auto">
+								<colgroup>
+									<col style="width: 300px;">
+									<col style="width: 140px;">
+									<col style="width: 140px;">
+									<col style="width: 574px;">
+									<col style="width: 120px;">
+									<col style="width: 120px;">
+									<col style="width: 120px;">
+									<col style="width: 140px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="출발일">출발일</th>
+										<th data-th="여행구분">여행구분</th>
+										<th data-th="여행기간">여행기간</th>
+										<th data-th="상품명">상품명</th>
+										<th data-th="예약인원">예약인원</th>
+										<th data-th="잔여석">잔여석</th>
+										<th data-th="최대출발">최대출발</th>
+										<th data-th="출발상태">출발상태</th>
+									</tr>
+								</thead>
+								<tbody>									
+									<tr>
+										<td data-th="출발일" rowspan="3">2026년 02월 23일 (월1)</td>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="출발일" rowspan="3">2026년 02월 23일 (월1)</td>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="출발일" rowspan="3">2026년 02월 23일 (월1)</td>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="출발일" rowspan="3">2026년 02월 23일 (월1)</td>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="여행구분">버스투어</td>
+										<td data-th="여행기간">당일여행</td>
+										<td data-th="상품명" class="td_title align_left">
+												홍콩섬 한바퀴 오전투어 (피크, 리펄스베이, 스탠리, 코즈웨이 베이)
+										</td>
+										<td data-th="예약인원">0</td>
+										<td data-th="잔여석">
+											<span class="red">0</span>
+										</td>
+										<td data-th="최대출발">0</td>
+										<td data-th="상태">
+											<div class="tbl_btnbox center">
+												<button type="button" class="badge typeA size_bg">예약가능</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/b2b_header.html', '#b2b_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_B2B.html', '#sidenav');	
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav.ver2 .side_cont .menu_list .side_item .acc_cont .side_item ").eq(2).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+
+</body>
+
+</html>

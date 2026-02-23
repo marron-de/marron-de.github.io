@@ -1,0 +1,2352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout b2b_wrap reservation_wrap sideopen" data-title="예약관리&리스트" data-icon="ph-clipboard-text">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="b2b_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-clipboard-text icon"></i>
+						예약관리&리스트
+					</p>
+				</div>
+
+				<div class="mob_filter_wrap">
+					<div class="mob_filter_topbox">
+						<div class="leftbox"></div>
+						<div class="rightbox">
+							<button type="button" class="mob_icon_button mob_search_open">
+								<i class="ph ph-magnifying-glass icon"></i>
+							</button>
+							<button type="button" class="mob_icon_button" onclick="reservationWrite_modal()">
+								<i class="ph ph-pencil-simple icon"></i>
+							</button>
+						</div>
+					</div>
+					<div class="content_search content_tbl">
+						<form name="search_fm" id="search_fm" method="get">
+							<div class="tbl_box">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 150px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr class="mob_search_box">
+											<th data-th="검색어">검색어</th>
+											<td data-th="검색어">
+												<div class="tbl_inline">
+													<div class="select_box search_select">
+														<select name="search_key_s" id="searchKey" class="select size_md">
+															<option value="res_cust_nm">고객이름</option>
+															<option value="res_cust_hp">고객 핸드폰번호</option>
+															<option value="rsv_no">바우처번호</option>
+															<option value="res_cust_email">고객 이메일</option>
+															<option value="mb_id">고객 아이디</option>
+															<option value="res_no">예약번호</option>
+															<option value="g_title">상품명</option>
+															<option value="ev_title">행사명</option>
+															<option value="ev_code">상품코드</option>
+															<option value="g_uid">상품번호</option>
+															<option value="admin_nm">담당자명</option>
+															<option value="g_memo">메모</option>
+															<option value="res_cust_memo">고객요청</option>
+														</select>
+													</div>
+													<div class="input_box search_input">
+														<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+													</div>
+													<div class="tbl_btnbox search_btns">
+														<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
+													</div>
+													<button type="button" class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="기간" rowspan="2">기간</th>
+											<td data-th="기간">
+												<div class="tbl_inline gap2">
+													<div class="radio_wrap">
+														<div class="radio_box size_md">
+															<input type="radio" name="mode_period_s" id="period_s_1" value="ins_dt" class="input_radio" checked="">
+															<label for="period_s_1" title="예약접수일" class="label_radio">예약접수일</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="mode_period_s" id="period_s_2" value="ev_start" class="input_radio">
+															<label for="period_s_2" title="출발일" class="label_radio">사용일</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="mode_period_s" id="period_s_3" value="ev_end" class="input_radio">
+															<label for="period_s_3" title="도착일" class="label_radio">도착일</label>
+														</div>
+													</div>
+													<div class="input_box input_flex w_auto">
+														<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+														<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
+													</div>
+													<div class="tab_wrap">
+														<div class="tab_navbox tabs_ver">
+															<div class="tab_nav"><span class="link">어제</span></div>
+															<div class="tab_nav"><span class="link">오늘</span></div>
+															<div class="tab_nav on"><span class="link">7일</span></div>
+															<div class="tab_nav"><span class="link">15일</span></div>
+															<div class="tab_nav"><span class="link">1개월</span></div>
+															<div class="tab_nav"><span class="link">3개월</span></div>
+															<div class="tab_nav"><span class="link">1년</span></div>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td data-th="기간">
+												<div class="tbl_inline">
+													<div class="select_box">
+														<select name="period_yy_s" id="item_period_yy" class="select size_md">
+															<option value="2026">2026년</option>
+															<option value="2025" selected="">2025년</option>
+															<option value="2024">2024년</option>
+															<option value="2023">2023년</option>
+															<option value="2022">2022년</option>
+															<option value="2021">2021년</option>
+															<option value="2020">2020년</option>
+															<option value="2019">2019년</option>
+														</select>
+													</div>
+													<div class="tab_wrap">
+														<div class="tab_navbox tabs_ver">
+															<div class="tab_nav"><span class="link">1월</span></div>
+															<div class="tab_nav"><span class="link">2월</span></div>
+															<div class="tab_nav"><span class="link">3월</span></div>
+															<div class="tab_nav"><span class="link">4월</span></div>
+															<div class="tab_nav"><span class="link">5월</span></div>
+															<div class="tab_nav"><span class="link">6월</span></div>
+															<div class="tab_nav"><span class="link">7월</span></div>
+															<div class="tab_nav"><span class="link">8월</span></div>
+															<div class="tab_nav"><span class="link">9월</span></div>
+															<div class="tab_nav"><span class="link">10월</span></div>
+															<div class="tab_nav"><span class="link">11월</span></div>
+															<div class="tab_nav"><span class="link">12월</span></div>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="상품">상품</th>
+											<td data-th="상품" class="more_hide">
+												<div class="tbl_inline">
+													<div class="select_box w400">
+														<select class="select size_md">
+															<option value="">상품 선택</option>
+															<option value="2195">釜山出发 私人包车 4人到42人</option>
+															<option value="534">홍콩 싹쓸이 당일투어(전용차량)</option>
+															<option value="1679">[특가]서울출발 11인승밴 렌트카+기사포함</option>
+															<option value="2296">짚라인 문경 8-9번 코스 10명 결제_화은국제 편은주 부장님</option>
+															<option value="2978">주문진레저 제트스키 이용권</option>
+															<option value="1656">홍콩 공항 픽업/샌딩 서비스(전용차량)</option>
+															<option value="1538">首爾 ↔ SONO VIVALDIPARK (原洪川大明索諾渡假村)</option>
+															<option value="2901">[강릉][연곡해변] 솔향기캠핑장 카라반/글램핑 1박2일 숙박권</option>
+															<option value="1652">홍콩 공항 픽업/샌딩(프리미엄밴 7인승 단독차량)</option>
+															<option value="2900">[강릉][오죽헌] 강릉오죽한옥마을 1박2일 숙박권</option>
+															<option value="2440">대한민국 서남권 7박8일 패키지 [10월]</option>
+															<option value="2926">[유심사]대만 eSIM 데이터 무제한</option>
+														</select>
+													</div>
+													<div class="select_box w400">
+														<select class="select size_md">
+															<option value="">전체 선택</option>
+														</select>
+													</div>
+												</div>
+												<button type="button" class="icon_button tbl_morebtn">
+													<i class="ph ph-caret-down"></i>
+												</button>
+											</td>
+										</tr>
+										<tr class="hide_tr">
+											<th data-th="예약상태">예약상태</th>
+											<td data-th="예약상태">
+												<div class="tbl_inline">
+													<div class="radio_wrap">
+														<div class="radio_box size_md">
+															<input type="radio" name="order_state_s" id="order_state_s_1" class="input_radio" checked>
+															<label for="order_state_s_1" class="label_radio">전체</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="order_state_s" id="order_state_s_2" class="input_radio">
+															<label for="order_state_s_2" class="label_radio">입금완료</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="order_state_s" id="order_state_s_3"class="input_radio">
+															<label for="order_state_s_3" class="label_radio">예약확정</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="order_state_s" id="order_state_s_4"class="input_radio">
+															<label for="order_state_s_4"class="label_radio">행사완료</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="order_state_s" id="order_state_s_5"class="input_radio">
+															<label for="order_state_s_5" class="label_radio">취소완료</label>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr class="hide_tr">
+											<th data-th="입금">입금</th>
+											<td data-th="입금">
+												<div class="tbl_inline">
+													<div class="radio_wrap">
+														<div class="radio_box size_md">
+															<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_1" class="input_radio" checked>
+															<label for="srh_pay_stat_s_1" class="label_radio">전체</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_2" class="input_radio">
+															<label for="srh_pay_stat_s_2" class="label_radio">미입금</label>
+														</div>
+														<div class="radio_box size_md">
+															<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_3"class="input_radio">
+															<label for="srh_pay_stat_s_3" class="label_radio">입금완료</label>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr class="hide_tr">
+											<th data-th="카테고리/국가">카테고리/국가</th>
+											<td data-th="카테고리/국가">
+												<div class="tbl_inline">
+													<div class="select_box mobSize_50">
+														<select class="select size_md">
+															<option value="">1차카테고리</option>
+														</select>
+													</div>
+													<div class="select_box mobSize_50">
+														<select class="select size_md">
+															<option value="">2차카테고리</option>
+														</select>
+													</div>
+													<div class="select_box mobSize_50">
+														<select class="select size_md">
+															<option value="">3차카테고리</option>
+														</select>
+													</div>
+													<div class="select_box mobSize_50">
+														<select class="select size_md">
+															<option value="">국가</option>
+														</select>
+													</div>
+													<div class="select_box mobSize_50">
+														<select class="select size_md">
+															<option value="">도시</option>
+														</select>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="content_schresult">
+					<div class="cont_area flex_area">
+						<div class="leftbox">
+							<p class="text">
+								<i class="ph ph-funnel"></i>
+								<span>
+									검색기간(예약접수일) : 
+									<span class="bold">2025-08-05 ~ 2025-08-12</span>
+								</span>
+							</p>
+						</div>
+						<div class="rightbox state_numbbox">
+							<p class="text auto">
+								결과 : <span class="bold">16</span>건
+							</p>
+							<span class="bar">|</span>
+							<p class="text auto">
+								인원   : <span class="bold">16</span>명  
+							</p>
+							<span class="bar">|</span>
+							<p class="text auto">
+								아동  : <span class="bold">3</span>명
+							</p>
+						</div>
+					</div>                
+				</div>
+
+				<div class="content_list content_tbl content_mobtbl">
+					<form name="boardList_fm" id="boardList_fm" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox full"></div>
+							<div class="rightbox full">
+								<button type="button" class="button size_sm auto typeE mobSize1" onclick="reservationWrite_modal()">신규예약 (선택관광)</button>
+								<button type="button" class="button size_sm auto typeF">
+									<img src="../img/ic_excel.png" alt="" class="icon"> 
+									<span class="txt">엑셀저장</span>
+								</button>
+								<div class="select_box">
+									<select name="order_by_s" id="order_by_s" class="select size_md">
+										<option value="ins_dt DESC" selected="">예약접수일 (최근순)</option>
+										<option value="ins_dt ASC">예약접수일 ↑</option>
+										<option value="ev_start DESC">출발일 (최근순)</option>
+										<option value="ev_start ASC">출발일 ↑</option>
+										<option value="ev_end DESC">도착일 (최근순)</option>
+										<option value="ev_end ASC">도착일 ↑</option>
+									</select>
+								</div>
+								<div class="select_box">
+									<select name="list_count_s" id="list_count_s" class="select size_md">
+										<option value="10">10개 보기</option>
+										<option value="20" selected="">20개 보기</option>
+										<option value="30">30개 보기</option>
+										<option value="50">50개 보기</option>
+										<option value="100">100개 보기</option>
+										<option value="200">200개 보기</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="bo_list tbl_box mobtbl4">
+							<table class="tbl reservation_list min_auto">
+								<colgroup>
+									<col style="width:110px">
+									<col style="width:90px">
+									<col style="width:120px">
+									<col style="width:130px">
+									<col style="width:40px">
+									<col style="width:40px">
+									<col style="width:40px">
+									<col style="width:40px">
+									<col style="width:px;">
+									<col style="width:130px">
+									<col style="width:100px;">
+									<col style="width:100px">
+									<col style="width:110px;">
+									<col style="width:180px">
+									<col style="width:90px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="예약접수일">
+											예약접수일
+											<button type="button" class="sort_btn ph asc"></button>
+										</th>
+										<th data-th="예약상태">예약상태</th>
+										<th data-th="바우처번호">바우처번호</th>
+										<th data-th="고객명/연락처">고객명/연락처</th>
+										<th data-th="국적">국적</th>
+										<th data-th="대인">대인</th>
+										<th data-th="소인">소인</th>
+										<th data-th="유아">유아</th>
+										<th data-th="상품명/선택행사명">상품명/선택행사명</th>
+										<th data-th="*출발/사용일" class="point">
+											*출발/사용일
+											<button type="button" class="sort_btn ph asc"></button>
+										</th>
+										<th data-th="장소/시간">장소/시간</th>
+										<th data-th="B2B">B2B</th>
+										<th data-th="CS담당자">CS담당자</th>
+										<th data-th="MEMO">MEMO</th>
+										<th data-th="처리">처리</th>
+									</tr>
+								</thead>
+								<tbody>									
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_received">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">예약접수</span>
+												<span class="badge typeH">고객미납</span>
+											</div>
+										</td>										
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>		
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+												<button type="button" class="badge typeH" onclick="entryStatusDone_modal()">미입장(2)</button>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+												<div class="opt_cont">
+													<p class="tit">
+														<i class="ph-fill ph-plus-circle icon"></i>
+														<span class="txt">옵션내역</span>
+													</p>
+													<div class="descbox">
+														<p class="desc">옵션내용입니다.</p>
+														<p class="desc">옵션내용입니다.</p>
+														<p class="desc">옵션내용입니다.</p>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+												<button type="button" class="badge typeH optcont_btn">옵션내역</button>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">620,000</span>
+											</div>											
+										</td>
+										<td data-th="CS담당자" class="mob_tit_use mob_flex" class="mob_tit_use">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_confirmed">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">예약확정</span>
+												<span class="badge typeH">후불</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+												<button type="button" class="badge typeH" onclick="entryStatus_modal()">미입장(2)</button>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>
+										<td data-th="CS담당자" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_confirmed2">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">수동확정</span>
+												<span class="badge typeH">결제완료</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+												<button type="button" class="badge typeH" onclick="entryStatus_modal()">입장완료(2)</button>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+												<div class="opt_cont">
+													<p class="tit">
+														<i class="ph-fill ph-plus-circle icon"></i>
+														<span class="txt">옵션내역</span>
+													</p>
+													<div class="descbox">
+														<p class="desc">옵션내용입니다.</p>
+														<p class="desc">옵션내용입니다.</p>
+														<p class="desc">옵션내용입니다.</p>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+												<button type="button" class="badge typeH optcont_btn">옵션내역</button>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>						
+										<td data-th="CS담당자" class="mob_tit_use mob_flex" class="mob_tit_use">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="line">
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_cancel">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">취소완료</span>
+												<span class="badge typeH">결제실패</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>							
+										<td data-th="CS담당자" class="mob_tit_use mob_flex" class="mob_tit_use">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_deposited">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">계약금입금</span>
+												<span class="badge typeH">대기중</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+												<button type="button" class="badge typeH" onclick="entryStatus_modal()">입장완료(2)</button>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>	
+										<td data-th="CS담당자" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>							
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_event">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">행사완료</span>
+												<span class="badge typeH">현금영수증</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>
+										<td data-th="CS담당자" class="mob_tit_use mob_flex" class="mob_tit_use">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_received">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">예약접수</span>
+												<span class="badge typeH">고객미납</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+											</div>											
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>
+										<td data-th="CS담당자" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_received">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">예약접수</span>
+												<span class="badge typeH">고객미납</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>
+										<td data-th="CS담당자" class="mob_tit_use mob_flex" class="mob_tit_use">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_received">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">예약접수</span>
+												<span class="badge typeH">고객미납</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>
+										<td data-th="CS담당자" class="mob_tit_use mob_flex" class="mob_tit_use">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="예약접수일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_reserve_date">
+												<span class="date">2025-08-10 18:00:00</span>
+											</div>
+										</td>
+										<td data-th="예약상태" class="mob_tit_use mob_flex td_state state_received">
+											<div class="tbl_inline column_ver tbl_reserve_state">
+												<span class="tit">예약접수</span>
+												<span class="badge typeH">고객미납</span>
+											</div>
+										</td>
+										<td data-th="바우처번호" class="mob_tit_use">TKT22082326A</td>	
+										<td data-th="고객명/연락처" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_customer_info">
+												<span class="name">홍길동</span>
+												<span class="phone">01012345678</span>
+											</div>
+										</td>
+										<td data-th="국적" class="mob_tit_use w_auto mob_bar2">KO</td>
+										<td data-th="대인" class="mob_tit_use w_auto mob_bar2">5</td>
+										<td data-th="소인" class="mob_tit_use w_auto mob_bar2">0</td>
+										<td data-th="유아" class="mob_tit_use w_auto">0</td>
+										<td data-th="상품명/선택행사명" class="td_title">
+											<div class="tbl_inline column_ver tbl_product_info">
+												<div class="tbl_inline tbl_title">
+													<span class="title">
+														보령 동력 패러글라이딩 탑승권 <br>
+														체험비행B코스(주말)
+													</span>
+												</div>
+											</div>
+										</td>
+										<td data-th="*출발/사용일" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_departure_info">
+												<span class="date">2025-09-10(수)</span>
+											</div>
+										</td>
+										<td data-th="장소/시간" class="mob_tit_use mob_flex"></td>
+										<td data-th="B2B" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_b2b_price">
+												<span class="price">0</span>
+											</div>											
+										</td>
+										<td data-th="CS담당자" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_manager">
+												<span class="name">홍길동 매니저</span>
+											</div>
+										</td>
+										<td data-th="MEMO" class="mob_tit_use mob_flex">
+											<div class="tbl_inline column_ver tbl_memo">
+												<div class="input_box">
+													<textarea rows="3" class="input_text h_auto size_md"> 테스트 메모</textarea>
+													<button type="button" class="badge typeG save_btn">저장</button>
+												</div>
+											</div>		
+										</td>
+										<td data-th="처리">
+											<div class="tbl_inline column_ver">
+												<button type="button" class="badge typeG size_bg full" onclick="reservationEdit_modal()">수정</button>
+												<button type="button" class="badge typeH size_bg voucher_btn" onclick="voucher_modal()">VOUCHER</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+		
+		<!-- 입장완료요청 모달 -->
+		<div id="entryStatusDone_modal" class="modal entryStatus_modal mobtbl2">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">여행상품예약 입장완료요청 - P1754981801ED320FA</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="resConsume_fm" id="resConsume_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="info_box">
+							<div class="item">
+								<p class="tit">바우처</p>
+								<p class="desc">TKP25081234A</p>
+							</div>
+							<div class="item">
+								<p class="tit">상품명</p>
+								<p class="desc">洪川大明 SONO VIVALDIPARK 滑雪兩天一夜團</p>
+							</div>
+							<div class="item">
+								<p class="tit">선택행사명</p>
+								<p class="desc">(早鳥) [07:00] SNOWBOARD 單板 乙支路入口站8號出口 首爾樂天酒店</p>
+							</div>
+						</div>
+						<div class="tbl_top">
+							<p class="total">
+								총 예약인원 <span class="color">2 명</span>
+							</p>
+						</div>
+						<div class="tbl_box ">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width:55px">
+									<col style="width:70px">
+									<col style="width:70px">
+									<col style="width:120px">
+									<col style="width:200px">
+									<col style="width:150px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check all_check" checked>
+											</div>
+										</th>
+										<th data-th="구분">구분</th>
+										<th data-th="성별">성별</th>
+										<th data-th="이름">이름</th>
+										<th data-th="연락처">연락처</th>
+										<th data-th="이용일">이용일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check all_check" checked>
+											</div>
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="성별">남</td>
+										<td data-th="이름">홍길동</td>
+										<td data-th="연락처">010-1234-5678</td>
+										<td data-th="이용일">2025-08-12</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check all_check" checked>
+											</div>
+										</td>
+										<td data-th="구분">성인</td>
+										<td data-th="성별">여</td>
+										<td data-th="이름">홍길동</td>
+										<td data-th="연락처">010-1234-5678</td>
+										<td data-th="이용일">2025-08-12</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check all_check" checked>
+											</div>
+										</td>
+										<td data-th="구분">아동</td>
+										<td data-th="성별">남</td>
+										<td data-th="이름">홍길동</td>
+										<td data-th="연락처">010-1234-5678</td>
+										<td data-th="이용일">2025-08-12</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">입장완료처리</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 입장현황 모달 -->
+		<div id="entryStatus_modal" class="modal entryStatus_modal mobtbl2">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">여행상품예약 입장현황 - P1754981801ED320FA</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="form form_box">
+						<div class="info_box">
+							<div class="item">
+								<p class="tit">바우처</p>
+								<p class="desc">TKP25081234A</p>
+							</div>
+							<div class="item">
+								<p class="tit">상품명</p>
+								<p class="desc">洪川大明 SONO VIVALDIPARK 滑雪兩天一夜團</p>
+							</div>
+							<div class="item">
+								<p class="tit">선택행사명</p>
+								<p class="desc">(早鳥) [07:00] SNOWBOARD 單板 乙支路入口站8號出口 首爾樂天酒店</p>
+							</div>
+						</div>
+						<div class="tbl_top">
+							<p class="total">
+								총 사용티켓 <span class="color">2 장</span>
+							</p>
+						</div>
+						<div class="tbl_box ">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 90px;">
+									<col style="width: 70px;">
+									<col style="width: 75px;">
+									<col style="width: 170px;">
+									<col style="width: 160px;">
+									<col style="width: 177px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th data-th="상태">상태</th>
+										<th data-th="구분">구분</th>
+										<th data-th="이름">이름</th>
+										<th data-th="연락처">연락처</th>
+										<th data-th="티켓번호">티켓번호</th>
+										<th data-th="사용일시">사용일시</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="상태">사용완료</td>
+										<td data-th="구분">성인</td>
+										<td data-th="이름">홍길동</td>
+										<td data-th="연락처">010-1234-5678</td>
+										<td data-th="티켓번호">ZIPMG05780</td>
+										<td data-th="사용일시">2022-12-18 11:38:06</td>
+									</tr>
+									<tr>
+										<td data-th="상태">사용완료</td>
+										<td data-th="구분">성인</td>
+										<td data-th="이름">홍길동</td>
+										<td data-th="연락처">010-1234-5678</td>
+										<td data-th="티켓번호">ZIPMG05780</td>
+										<td data-th="사용일시">2022-12-18 11:38:06</td>
+									</tr>
+									<tr>
+										<td data-th="상태">사용완료</td>
+										<td data-th="구분">아동</td>
+										<td data-th="이름">홍길동</td>
+										<td data-th="연락처">010-1234-5678</td>
+										<td data-th="티켓번호">ZIPMG05780</td>
+										<td data-th="사용일시">2022-12-18 11:38:06</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 티켓목록 모달 -->
+		<div id="ticket_modal" class="modal ticket_modal mobtbl2">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">티켓목록 - P1754981801ED320FA</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="tbl_top">
+						<p class="total">
+							Total <span class="color">2</span>
+						</p>
+					</div>
+					<div class="tbl_box">
+						<table class="tbl space_auto">
+							<colgroup>
+								<col style="width: 90px;">
+								<col style="width: 70px;">
+								<col style="width: 130px;">
+								<col style="width: 180px;">
+								<col style="width: 120px;">
+								<col style="width: 120px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th data-th="상태">상태</th>
+									<th data-th="구분">구분</th>
+									<th data-th="티켓번호">티켓번호</th>
+									<th data-th="바코드">바코드</th>
+									<th data-th="발송일">발송일</th>
+									<th data-th="사용완료일">사용완료일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-th="상태" class="point">사용완료</td>
+									<td data-th="구분">성인</td>
+									<td data-th="티켓번호">ZIPMG05780</td>
+									<td data-th="바코드">
+										<div class="tbl_img">
+											<img src="../img/barcode.png" alt="">
+										</div>
+									</td>
+									<td data-th="발송일">2022-12-17</td>
+									<td data-th="사용완료일">2022-12-18</td>
+								</tr>
+								<tr>
+									<td data-th="상태">사용완료</td>
+									<td data-th="구분">성인</td>
+									<td data-th="티켓번호">ZIPMG05780</td>
+									<td data-th="바코드">
+										<div class="tbl_img">
+											<img src="../img/barcode.png" alt="">
+										</div>
+									</td>
+									<td data-th="발송일">2022-12-17</td>
+									<td data-th="사용완료일">2022-12-18</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 바우처 모달 -->
+		<div id="voucher_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">여행상품예약 - P1754981801ED320FA</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="voucher_box">
+						<table id="ticket_voucher" style="margin: 0px auto; max-width: 650px; width: 100%; border-radius: 8px; border: 1px solid rgb(110, 10, 8); padding: 16px; border-collapse: unset;">
+						<tbody>
+							<tr>
+								<td colspan="2"><a href="https://www.tktravelkorea.com?CURR=HKD" style="text-decoration: none;"><img src="https://www.tktravelkorea.com/FileData/logo/TK_LOGO.png" style="width:150px;"></a></td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:10px;font-weight:bold;font-family: Noto Sans TC, sans-serif;width:50%;">E: cs@tktravelkorea.com</td>
+								<td rowspan="3" style="text-align:right;color:#6e0a08;font-size:32px;font-weight:bold;font-family: Noto Sans TC, sans-serif;">VOUCHER</td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:10px;font-weight:bold;font-family: Noto Sans TC, sans-serif;width:50%;">T: +82-10-8249-1901 (Whatsapp)</td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:10px;font-weight:bold;font-family: Noto Sans TC, sans-serif;width:50%;">LINE / WECHAT: tktravelcs</td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:10px;font-weight:bold;font-family: Noto Sans TC, sans-serif;width:50%;">5F, Myungkyung B/D, 39, Sinimun-ro,</td>
+								<td style="text-align:right;color:#6e0a08;font-size:10px;font-weight:bold;font-family: Noto Sans TC, sans-serif;">ISSUED DATE. 2025-08-12</td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:10px;font-weight:bold;font-family: Noto Sans TC, sans-serif;width:50%;">Dongdaemun-gu, Seoul</td>
+								<td style="text-align:right;color:#6e0a08;font-size:10px;font-weight:bold;font-family: Noto Sans TC, sans-serif;"><span style="border-bottom:1px solid #6e0a08;">Voucher NO : TKP25081234A</span></td>
+							</tr>
+							<tr>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#ffffff;font-size:15px;background:#6e0a08;height:40px;font-weight:800;font-family: Noto Sans TC, sans-serif;">預訂內容</td>
+							</tr>
+							<tr>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 姓名 : HSIN SHAO-MING | • 國籍 : TW</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 聯繫電話 : +886-970875792 | • SNS ID : +886-970875792</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 預約商品 : 洪川大明 SONO VIVALDIPARK 滑雪兩天一夜團</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 集合資訊 : (早鳥) [07:00] SNOWBOARD 單板 乙支路入口站8號出口 首爾樂天酒店</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 活動日期 : 일일투어</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 預約人數 : 2 | 成人 : 2 | 兒童 : 0 | 嬰兒 : 0</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 追加項目 : <ul><li style="color:#6e0a08;font-weight:bold;">SNOWYLAND Day2 | HKD  0 | 2</li></ul></td>
+							</tr>
+							<tr>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#ffffff;font-size:15px;background:#6e0a08;height:40px;font-weight:800;font-family: Noto Sans TC, sans-serif;">付款資訊</td>
+							</tr>
+							<tr>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 付款方式 : DEPOSIT</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 總金額 (KRW) :  0</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-left:15px;color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">• 總金額 (USD) : USD 0</td>
+							</tr>
+							<tr>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:15px;border-bottom:2px solid #6e0a08;height:40px;font-weight:800;font-family: Noto Sans TC, sans-serif;">Note&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="color:#6e0a08;font-size:13px;font-weight:600;font-family: Noto Sans TC, sans-serif;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td rowspan="2" style="text-align:right;color:#6e0a08;font-size:16px;font-weight:800;font-family: Noto Sans TC, sans-serif;"><img src="https://www.tktravelkorea.com/FileData/logo/tk_travel_stamp.png" style="width:60px;vertical-align:middle;padding-right:30px;"></td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:13px;font-weight:800;font-family: Noto Sans TC, sans-serif;">Thank you for your</td>
+							</tr>
+							<tr>
+								<td style="color:#6e0a08;font-size:13px;font-weight:800;font-family: Noto Sans TC, sans-serif;">patronage with<br>
+								TK Travel.</td>
+								<td style="text-align:right;color:#6e0a08;font-size:13px;font-weight:800;font-family: Noto Sans TC, sans-serif;">TK TRAVEL CO LTD</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 신규예약 등록 모달 -->
+		<div id="reservationWrite_modal" class="modal B2Breservation_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">신규예약 등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form class="form form_box">
+						<div class="tbl_warp">
+							<div class="tbl_box">
+								<table class="tbl space_auto">
+									<colgroup>
+										<col style="width:150px" />
+										<col style="width:300px" />
+										<col style="width:150px" />
+										<col style="width:300px" />
+									</colgroup>
+									<tbody>
+										<!-- <tr>
+											<th data-th="바우처 번호">바우처 번호</th>
+											<td data-th="바우처 번호">
+												<div class="input_box">
+													<input type="text" class="input_text size_md" value="TKT24041213B" readonly>
+												</div>
+											</td>
+										</tr> -->
+										<tr>
+											<th data-th="여행지역">여행지역</th>
+											<td data-th="여행지역" colspan="3">
+												<div class="input_box input_flex">
+													<div class="badge size_bg size_md typeH">한국</div>
+													<div class="badge size_bg size_md typeH">서울</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="투어명">투어명</th>
+											<td data-th="투어명" class="align_left" colspan="3">
+												TBBRDV001 대천해수욕장 동력패러글라이딩 탑승권(다빈치동력패러)
+											</td>
+										</tr>
+										<tr>
+											<th data-th="행사명">행사명<span class="required"></span></th>
+											<td data-th="행사명" colspan="3">
+												<div class="input_box">
+													<input type="text" class="input_text size_md" value="체험비행B코스(주말)" readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="출발일">출발일<span class="required"></span></th>
+											<td data-th="출발일">
+												<div class="input_box">
+													<input type="text" name="mb_birth" class="input_text icon_ver icon_date size_md birth_cal calender_btn" readonly>
+												</div>
+											</td>
+											<th data-th="탑승 장소 및 시간">탑승 장소 및 시간<span class="required"></span></th>
+											<td data-th="탑승 장소 및 시간">
+												<div class="select_box">
+													<select class="select size_md">
+														<option value="">탑승 장소 및 시간을 선택해 주세요.</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="예약가능 인원">예약가능 인원</th>
+											<td data-th="예약가능 인원" colspan="3">
+												<div class="tbl_inline gap3">
+													<div class="input_box input_flex flex_auto">
+														<input type="text" value="0" class="input_text size_md align_right">
+														<p class="inpu_txt">명</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="인원수(성인)">인원수(성인 KRW)</th>
+											<td data-th="인원수(성인)" colspan="3">
+												<div class="tbl_inline gap3">
+													<div class="input_box input_flex">
+														<input type="text" value="0" class="input_text size_md align_right">
+														<p class="inpu_txt">명</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">수수료</p>
+														<input type="text" value="0" size="3" class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">소계</p>
+														<input type="text" value="0" size="3" class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="인원수(소인)">인원수(소인 KRW)</th>
+											<td data-th="인원수(소인)" colspan="3">
+												<div class="tbl_inline gap3">
+													<div class="input_box input_flex">
+														<input type="text" value="0" class="input_text size_md align_right">
+														<p class="inpu_txt">명</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">수수료</p>
+														<input type="text" value="0" size="3" class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">소계</p>
+														<input type="text" value="0" size="3" class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="인원수(아동)">인원수(아동 KRW)</th>
+											<td data-th="인원수(아동)" colspan="3">
+												<div class="tbl_inline gap3">
+													<div class="input_box input_flex">
+														<input type="text" value="0" class="input_text size_md align_right">
+														<p class="inpu_txt">명</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">수수료</p>
+														<input type="text" value="0" size="3" class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">소계</p>
+														<input type="text" value="0" size="3" class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="옵션 선택">옵션 선택</th>
+											<td data-th="옵션 선택" colspan="3">
+												<div class="select_box">
+													<select class="select size_md">
+														<option value="">옵션 선택</option>
+														<option value="">옵션 선택1</option>
+														<option value="">옵션 선택2</option>
+														<option value="">옵션 선택3</option>
+														<option value="">옵션 선택4</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl_cont">
+								<div class="tbl_top">
+									<div class="leftbox">
+										<p class="title">투어 및 상품 선택 내용</p>
+									</div>
+									<div class="righbox">
+									</div>
+								</div>
+								<div class="tbl_box">
+									<table class="tbl space_auto">
+										<colgroup>
+											<col style="width:150px" />
+											<col style="width:300px" />
+											<col style="width:150px" />
+											<col style="width:300px" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th data-th="판매 합계">판매 합계 (KRW)</th>
+												<td data-th="판매 합계">
+													<div class="tbl_inline gap3">
+														<div class="input_box input_flex">
+															<input type="text" value="0" class="input_text size_md align_right">
+															<p class="inpu_txt">원</p>
+														</div>
+													</div>
+												</td>
+												<th data-th="수수료">수수료 (KRW)</th>
+												<td data-th="수수료">
+													<div class="tbl_inline gap3">
+														<div class="input_box input_flex">
+															<input type="text" value="0" class="input_text size_md align_right">
+															<p class="inpu_txt">원</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="지불방법">지불방법</th>
+												<td data-th="지불방법">
+													<div class="select_box">
+														<select class="select size_md">
+															<option value="1">무통장입금</option>
+															<option value="2">신용카드</option>
+														</select>
+													</div>
+												</td>
+												<th data-th="입금금액">입금금액 (KRW)</th>
+												<td data-th="입금금액">
+													<div class="tbl_inline gap3">
+														<div class="input_box input_flex">
+															<input type="text" value="0" class="input_text size_md align_right">
+															<p class="inpu_txt">원</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 대표 이름">고객 대표 이름<span class="required"></span></th>
+												<td data-th="고객 대표 이름">
+													<div class="input_box">
+														<input type="text" name="mb_nm" value="" class="input_text size_md">
+													</div>
+												</td>
+												<th data-th="고객 대표 연락처">고객 대표 연락처<span class="required"></span></th>
+												<td data-th="고객 대표 연락처">
+													<div class="input_box">
+														<input type="text" name="mb_nm" value="" class="input_text size_md">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 대표 이메일">고객 대표 이메일<span class="required"></span></th>
+												<td data-th="고객 대표 이메일" colspan="3">
+													<div class="input_box">
+														<input type="text" class="input_text size_md">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 요청사항">고객 요청사항</th>
+												<td data-th="고객 요청사항" colspan="3">
+													<div class="input_box">
+														<textarea class="input_text size_md h_auto" rows="5"></textarea>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="거래처 바우처 No">거래처 바우처 No<span class="required"></span></th>
+												<td data-th="거래처 바우처 No">
+													<div class="input_box">
+														<input type="text" class="input_text size_md">
+													</div>
+												</td>
+												<th data-th="예약 담당자">예약 담당자<span class="required"></span></th>
+												<td data-th="예약 담당자">
+													<div class="input_box">
+														<input type="text" class="input_text size_md">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 정보">고객 정보</th>
+												<td data-th="고객 정보" colspan="3">
+													<div class="tbl_inline column_ver align_right gap2">
+														<div class="check_box size_md">
+															<input type="checkbox" name="exponent" id="exponent" class="input_check">
+															<label for="exponent" class="label_check">대표자</label>
+														</div>
+														<div class="tbl_box">
+															<table class="tbl space_auto">
+																<colgroup>
+																	<col style="width:150px" />
+																	<col style="width:300px" />
+																	<col style="width:150px" />
+																	<col style="width:300px" />
+																</colgroup>
+																<tbody>	
+																	<tr>
+																		<th data-th="이름">이름</th>
+																		<td data-th="이름">
+																			<div class="input_box">
+																				<input type="text" class="input_text size_md">
+																			</div>
+																		</td>
+																		<th data-th="영문이름">영문이름</th>
+																		<td data-th="영문이름">
+																			<div class="tbl_inline">
+																				<div class="input_box input_flex">
+																					<span class="input_txt">성</span>
+																					<input type="text" class="input_text size_md">
+																				</div>
+																				<div class="input_box input_flex">
+																					<span class="input_txt">이름</span>
+																					<input type="text" class="input_text size_md">
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th data-th="여권번호">여권번호</th>
+																		<td data-th="여권번호">
+																			<div class="input_box">
+																				<input type="text" class="input_text size_md">
+																			</div>
+																		</td>
+																		<th data-th="휴대폰">휴대폰</th>
+																		<td data-th="휴대폰">
+																			<div class="input_box">
+																				<input type="text" class="input_text size_md">
+																			</div>
+																		</td>
+																	</tr>													
+																	<tr>
+																		<th data-th="성별">성별</th>
+																		<td data-th="성별">
+																			<div class="select_box">
+																				<select class="select size_md">			
+																					<option value="M" selected>남자</option>
+																					<option value="F">여자</option>
+																				</select>
+																			</div>
+																		</td>
+																		<th data-th="생년월일">생년월일</th>
+																		<td data-th="생년월일">
+																			<div class="input_box">
+																				<input type="text"class="input_text size_md icon_ver icon_date calender_btn mx260" readonly>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th data-th="SNS ID">SNS ID</th>
+																		<td data-th="SNS ID" colspan="3">
+																			<div class="input_box input_flex">
+																				<div class="select_box">
+																					<select class="select size_md">	
+																						<option value="Whatsapp">Whatsapp</option>											
+																						<option value="Line">Line</option>											
+																						<option value="Wechat">Wechat</option>											
+																						<option value="Kakaotalk">Kakaotalk</option>		
+																					</select>
+																				</div>
+																				<input type="text" class="input_text size_md">
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th data-th="국적">국적</th>
+																		<td data-th="국적" colspan="3">
+																			<div class="input_box">
+																				<input type="text" class="input_text size_md">
+																			</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="메시지 / 메모">메시지 / 메모</th>
+												<td data-th="메시지 / 메모" colspan="3">
+													<div class="input_box">
+														<textarea class="input_text size_md h_auto" rows="5" placeholder="(동행하는 일행 예약번호 기입)"></textarea>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 예약정보 편집 모달 -->
+		<div id="reservationEdit_modal" class="modal B2Breservation_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">예약정보 편집</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form class="form form_box">
+						<div class="tbl_warp">
+							<div class="tbl_box">
+								<table class="tbl space_auto">
+									<colgroup>
+										<col style="width:150px" />
+										<col style="width:300px" />
+										<col style="width:150px" />
+										<col style="width:300px" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th data-th="바우처 번호">바우처 번호</th>
+											<td data-th="바우처 번호">
+												<div class="input_box">
+													<input type="text" class="input_text size_md" value="TKT24041213B"
+														readonly>
+												</div>
+											</td>
+											<th data-th="여행지역">여행지역</th>
+											<td data-th="여행지역">
+												<div class="input_box input_flex">
+													<div class="badge size_bg size_md typeH">한국</div>
+													<div class="badge size_bg size_md typeH">서울</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="투어명">투어명</th>
+											<td data-th="투어명" class="align_left" colspan="3">
+												TBBRDV001 대천해수욕장 동력패러글라이딩 탑승권(다빈치동력패러)
+											</td>
+										</tr>
+										<tr>
+											<th data-th="행사명">행사명<span class="required"></span></th>
+											<td data-th="행사명" colspan="3">
+												<div class="input_box">
+													<input type="text" class="input_text size_md" value="체험비행B코스(주말)"
+														readonly>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="출발일">출발일<span class="required"></span></th>
+											<td data-th="출발일">
+												<div class="input_box">
+													<input type="text" name="mb_birth"
+														class="input_text icon_ver icon_date size_md birth_cal calender_btn"
+														readonly>
+												</div>
+											</td>
+											<th data-th="탑승 장소 및 시간">탑승 장소 및 시간<span class="required"></span></th>
+											<td data-th="탑승 장소 및 시간">
+												<div class="select_box">
+													<select class="select size_md">
+														<option value="">탑승 장소 및 시간을 선택해 주세요.</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="인원수(성인)">인원수(성인 KRW)</th>
+											<td data-th="인원수(성인)" colspan="3">
+												<div class="tbl_inline gap3">
+													<div class="input_box input_flex">
+														<input type="text" value="2" class="input_text size_md align_right">
+														<p class="inpu_txt">명</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">수수료</p>
+														<input type="text" value="0" size="3"
+															class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+													<div class="input_box input_flex">
+														<p class="inpu_txt">소계</p>
+														<input type="text" value="0" size="3"
+															class="input_text size_md align_right">
+														<p class="inpu_txt">원</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th data-th="옵션 선택">옵션 선택</th>
+											<td data-th="옵션 선택" colspan="3">
+												<div class="select_box">
+													<select class="select size_md">
+														<option value="">옵션 선택</option>
+														<option value="">옵션 선택1</option>
+														<option value="">옵션 선택2</option>
+														<option value="">옵션 선택3</option>
+														<option value="">옵션 선택4</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl_cont">
+								<div class="tbl_top">
+									<div class="leftbox">
+										<p class="title">투어 및 상품 선택 내용</p>
+									</div>
+									<div class="righbox">
+									</div>
+								</div>
+								<div class="tbl_box">
+									<table class="tbl space_auto">
+										<colgroup>
+											<col style="width:150px" />
+											<col style="width:300px" />
+											<col style="width:150px" />
+											<col style="width:300px" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th data-th="판매 합계">판매 합계 (KRW)</th>
+												<td data-th="판매 합계">
+													<div class="tbl_inline gap3">
+														<div class="input_box input_flex">
+															<input type="text" value="0"
+																class="input_text size_md align_right">
+															<p class="inpu_txt">원</p>
+														</div>
+													</div>
+												</td>
+												<th data-th="수수료">수수료 (KRW)</th>
+												<td data-th="수수료">
+													<div class="tbl_inline gap3">
+														<div class="input_box input_flex">
+															<input type="text" value="0"
+																class="input_text size_md align_right">
+															<p class="inpu_txt">원</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="지불방법">지불방법</th>
+												<td data-th="지불방법">
+													<div class="select_box">
+														<select class="select size_md">
+															<option value="1">무통장입금</option>
+															<option value="2">신용카드</option>
+														</select>
+													</div>
+												</td>
+												<th data-th="입금금액">입금금액 (KRW)</th>
+												<td data-th="입금금액">
+													<div class="tbl_inline gap3">
+														<div class="input_box input_flex">
+															<input type="text" value="0"
+																class="input_text size_md align_right">
+															<p class="inpu_txt">원</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 대표 이름">고객 대표 이름<span class="required"></span></th>
+												<td data-th="고객 대표 이름">
+													<div class="input_box">
+														<input type="text" name="mb_nm" value="홍길동"
+															class="input_text size_md">
+													</div>
+												</td>
+												<th data-th="고객 대표 연락처">고객 대표 연락처<span class="required"></span></th>
+												<td data-th="고객 대표 연락처">
+													<div class="input_box">
+														<input type="text" name="mb_nm" value="010-1234-5678"
+															class="input_text size_md">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 대표 이메일">고객 대표 이메일<span class="required"></span></th>
+												<td data-th="고객 대표 이메일" colspan="3">
+													<div class="input_box">
+														<input type="text" class="input_text size_md">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 요청사항">고객 요청사항</th>
+												<td data-th="고객 요청사항" colspan="3">
+													<div class="input_box">
+														<textarea class="input_text size_md h_auto" rows="5"></textarea>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="거래처 바우처 No">거래처 바우처 No<span class="required"></span></th>
+												<td data-th="거래처 바우처 No">
+													<div class="input_box">
+														<input type="text" class="input_text size_md"
+															value="Y24041289H8P_6110">
+													</div>
+												</td>
+												<th data-th="예약 담당자">예약 담당자<span class="required"></span></th>
+												<td data-th="예약 담당자">
+													<div class="input_box">
+														<input type="text" class="input_text size_md" value="정재복">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="예약 상태">예약 상태</th>
+												<td data-th="예약 상태" class="align_left" colspan="3">
+													<span class="badge size_bg typeH">행사완료</span>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="고객 정보">고객 정보</th>
+												<td data-th="고객 정보" colspan="3">
+													<div class="tbl_box">
+														<table class="tbl space_auto">
+															<colgroup>
+																<col style="width:150px" />
+																<col style="width:300px" />
+																<col style="width:150px" />
+																<col style="width:300px" />
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th data-th="이름">이름</th>
+																	<td data-th="이름">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																	<th data-th="영문이름">영문이름</th>
+																	<td data-th="영문이름">
+																		<div class="tbl_inline">
+																			<div class="input_box input_flex">
+																				<span class="input_txt">성</span>
+																				<input type="text" class="input_text size_md">
+																			</div>
+																			<div class="input_box input_flex">
+																				<span class="input_txt">이름</span>
+																				<input type="text" class="input_text size_md">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="여권번호">여권번호</th>
+																	<td data-th="여권번호">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																	<th data-th="휴대폰">휴대폰</th>
+																	<td data-th="휴대폰">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="성별">성별</th>
+																	<td data-th="성별">
+																		<div class="select_box">
+																			<select class="select size_md">
+																				<option value="M" selected>남자</option>
+																				<option value="F">여자</option>
+																			</select>
+																		</div>
+																	</td>
+																	<th data-th="생년월일">생년월일</th>
+																	<td data-th="생년월일">
+																		<div class="input_box">
+																			<input type="text"
+																				class="input_text size_md icon_ver icon_date calender_btn mx260"
+																				readonly>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="SNS ID">SNS ID</th>
+																	<td data-th="SNS ID" colspan="3">
+																		<div class="input_box input_flex">
+																			<div class="select_box">
+																				<select class="select size_md">
+																					<option value="Whatsapp">Whatsapp</option>
+																					<option value="Line">Line</option>
+																					<option value="Wechat">Wechat</option>
+																					<option value="Kakaotalk">Kakaotalk
+																					</option>
+																				</select>
+																			</div>
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<th data-th="국적">국적</th>
+																	<td data-th="국적" colspan="3">
+																		<div class="input_box">
+																			<input type="text" class="input_text size_md">
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+								</div>
+								</td>
+								</tr>
+								<tr>
+									<th data-th="취소 및 환불 이유">취소 및 환불 이유</th>
+									<td data-th="취소 및 환불 이유" colspan="3">
+										<div class="input_box">
+											<textarea class="input_text size_md h_auto" rows="5"></textarea>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-th="메시지 / 메모">메시지 / 메모</th>
+									<td data-th="메시지 / 메모" colspan="3">
+										<div class="input_box">
+											<textarea class="input_text size_md h_auto" rows="5"
+												value="체험비행B코스(주말)고객이 환불요청 처리함 야놀자에서(4/13)_변유선 주임"
+												placeholder="(동행하는 일행 예약번호 기입)"></textarea>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</form>
+				</div>
+				</form>
+				<div class="modal_btnbox">
+					<button class="modal_btn button auto typeE">수정</button>
+					<button class="modal_btn button auto typeE" onclick="voucher_modal()">미리보기</button>
+					<button class="modal_btn button auto typeE" onclick="reservationSend_modal()">보내기 확인</button>
+					<button class="modal_btn button auto typeF modal_close">닫기</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 메일보내기 확인 모달 -->
+		<div id="reservationSend_modal" class="modal only">
+			<div class="modal_box">
+				<div class="modal_img">
+					<i class="ph-fill ph-paper-plane-tilt"></i>
+				</div>
+				<p class="modal_tit">메일을 전송하시겠습니까?</p>
+				<div class="modal_btnbox">
+					<button class="modal_btn button auto typeE">확인</button>
+					<button class="modal_btn button auto typeF modal_close">취소</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/b2b_header.html', '#b2b_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_B2B.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');		
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav.ver2 .side_cont .menu_list .side_item .acc_cont .side_item ").eq(0).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- 옵션내역 버튼 -->
+	<script>
+		$(document).on('click', '.tbl.reservation_list .optcont_btn', function () {
+			let optCont = $(this).closest('tr').find('.opt_cont');
+
+			if (optCont.is(':visible')) {
+				optCont.slideUp();
+			} else {
+				optCont
+					.css('display', 'flex')
+					.hide()
+					.slideDown();
+			}
+		});
+	</script>
+
+	<!-- 숨김 테이블 노출 버튼 -->
+	<script>
+		$(document).on("click", ".tbl .tbl_morebtn", function () {
+			const table = $(this).closest("table"); 
+			const rows = table.find("tr.hide_tr"); 
+
+			if (rows.is(":visible")) {
+				rows.removeClass("show");
+				$(this).removeClass("on")
+			} else {
+				rows.addClass("show");
+				$(this).addClass("on");
+			}
+		});
+	</script>
+	
+	<!-- Summernote Lite CSS/JS (부트스트랩 불필요) -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function(){
+            $('.summernote').summernote({
+                height: 400,
+                toolbar: [
+                    // 1줄: 글꼴, 크기, 스타일
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['height', ['height']],
+                    ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                    // 2줄: 색상, 정렬, 리스트
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    // 3줄: 링크, 이미지, 표, 코드 등
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                fontNames: ['맑은 고딕', '굴림', '돋움', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                lineHeights: ['150%', '180%', '200%', '220%', '250%', '280%', '300%'],
+            });
+        });    
+	</script>
+
+
+	<!-- modal button -->
+	<script>
+		// entryStatus modal
+		function entryStatus_modal() {
+			$(".modal").removeClass("show");
+			$("#entryStatus_modal").addClass("show");
+		}
+
+		// entryStatusDone modal
+		function entryStatusDone_modal() {
+			$(".modal").removeClass("show");
+			$("#entryStatusDone_modal").addClass("show");
+		}
+
+		// ticket modal
+		$(document).on('click', '.tbl.reservation_list .tbl_title', function() {
+			$(".modal").removeClass("show");
+			$("#ticket_modal").addClass("show");
+		});
+
+		// voucher modal
+		function voucher_modal() {
+			$(".modal").removeClass("show");
+			$("#voucher_modal").addClass("show");
+		}
+
+		// reservationWrite modal
+		function reservationWrite_modal() {
+			$(".modal").removeClass("show");
+			$("#reservationWrite_modal").addClass("show");
+		}
+
+		// reservationEdit modal
+		function reservationEdit_modal() {
+			$(".modal").removeClass("show");
+			$("#reservationEdit_modal").addClass("show");
+		}
+
+		// reservationSend modal
+		function reservationSend_modal() {
+			$("#reservationSend_modal").addClass("show");
+		}
+	</script>
+
+
+
+
+</body>
+
+</html>

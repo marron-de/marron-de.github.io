@@ -568,8 +568,50 @@ $(document).ready(function() {
                 const imgTag = `<img src="${event.target.result}" alt="미리보기" style="width:100%; height:100%; object-fit:cover;">`;
                 $label.html(imgTag);
             };
-            reader.readAsDataURL(file); // 파일을 읽어 Data URL로 변환
+            reader.readAsDataURL(file); 
         }
     });
 });
 
+// 260223 B2B 페이지
+// sidenav accordion
+(function ($) {
+	const lnbUI = {
+		click: function (target, speed) {
+			let _self = this;
+			_self.speed = speed || 400;
+
+			$(target).each(function () {
+				if (!$(this).find('> ul').length) {
+					$(this).addClass('noDepth');
+				}
+			});
+
+			$(document).on('click', target + ' .acc_tit', function (e) {
+				e.stopPropagation();
+				let $this = $(this),
+					$depthTarget = $this.next();
+
+				$this.parent('li').find('ul li').removeClass('show');
+
+				if ($depthTarget.is(':hidden')) {
+					_self.activeOn($this);
+					$depthTarget.slideDown(_self.speed);
+				} else {
+					$depthTarget.slideUp(_self.speed);
+					_self.activeOff($this);
+				}
+			});
+		},
+		activeOff: function ($target) {
+			$target.parent().removeClass('show');
+		},
+		activeOn: function ($target) {
+			$target.parent().addClass('show');
+		},
+	};
+
+	$(function () {
+		lnbUI.click('.sidenav .menu_list_acco li', 400);
+	});
+}(jQuery));
