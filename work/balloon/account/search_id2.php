@@ -47,25 +47,23 @@
 							</div>
 							<div class="form_box">
 								<div class="form_item full input_box">
-									<input type="text" class="input_text mx408" placeholder="이름을 입력해 주세요">
+									<input type="text" class="input_text mx408" placeholder="이름을 입력해 주세요" value="홍길동">
 								</div>
-								<!-- <div class="form_item full input_box">
-									<input type="text" class="input_text" placeholder="이메일을 입력해 주세요">
-								</div> -->
 								<div class="form_item full input_box">
 									<div class="input_flex">
-										<input type="text" class="input_text mx408" placeholder="휴대폰번호를 입력해 주세요">
-										<button type="button" class="input_btn">인증번호 발송</button>
+										<input type="text" class="input_text mx408" placeholder="휴대폰번호를 입력해 주세요" value="01012345678">
+										<button type="button" class="input_btn send">인증번호 재전송</button>
 									</div>
+									<p class="input_status point">입력하신 번호로 인증번호가 발송되었습니다.</p>
 								</div>
-								<!-- <div class="form_item sch_box">
-									<p class="txt">비밀번호를 모르시나요?</p>
-									<a href="<?php echo $path ?>account/search_pwd.php" class="link">비밀번호찾기</a>
-								</div> -->
+								<div class="form_item full input_box add_input_box">
+									<div class="input_flex">
+										<input type="text" class="input_text mx408" placeholder="인증번호 입력">
+										<button type="button" class="input_btn">확인</button>
+									</div>
+									<p class="input_status">인증번호가 오지 않는다면, 입력하신 이름과 번호가 일치하는지 확인해 주세요</p>
+								</div>
 							</div>
-							<!-- <div class="button_box">
-								<button type="button" class="button typeA">확인</button>
-							</div>	 -->
 						</div>
 					</div>
 

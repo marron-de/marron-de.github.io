@@ -37,35 +37,27 @@
 						<div class="ac_box">
 							<div class="sub_titbox">
 								<p class="s_tit flexible">
-									<span class="txt">아이디 찾기</span>
-									<img src="<?php echo $path ?>img/join_search.png" alt="" class="icon">
+									<span class="txt">비밀번호 재설정</span>
+									<img src="<?php echo $path ?>img/ic_complete.png" alt="" class="icon">
 								</p>
 								<p class="s_desc">
-									아이디를 잊으셨나요? <br>
-									등록하신 정보로 바로 찾을 수 있습니다.
+									새 비밀번호를 입력해 주세요.
 								</p>
 							</div>
 							<div class="form_box">
 								<div class="form_item full input_box">
-									<input type="text" class="input_text mx408" placeholder="이름을 입력해 주세요">
+									<input type="text" class="input_text" placeholder="새 비밀번호를 입력해 주세요.">
 								</div>
-								<!-- <div class="form_item full input_box">
-									<input type="text" class="input_text" placeholder="이메일을 입력해 주세요">
-								</div> -->
 								<div class="form_item full input_box">
-									<div class="input_flex">
-										<input type="text" class="input_text mx408" placeholder="휴대폰번호를 입력해 주세요">
-										<button type="button" class="input_btn">인증번호 발송</button>
-									</div>
+									<input type="text" class="input_text" placeholder="새 비밀번호를 재입력해 주세요.">
 								</div>
-								<!-- <div class="form_item sch_box">
-									<p class="txt">비밀번호를 모르시나요?</p>
-									<a href="<?php echo $path ?>account/search_pwd.php" class="link">비밀번호찾기</a>
-								</div> -->
+								<div class="form_item full input_box">
+									<input type="text" class="input_text" placeholder="본인 생년월일을 입력해 주세요. ex)19950131">
+								</div>
 							</div>
-							<!-- <div class="button_box">
+							<div class="button_box">
 								<button type="button" class="button typeA">확인</button>
-							</div>	 -->
+							</div>	
 						</div>
 					</div>
 
