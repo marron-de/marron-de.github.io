@@ -40,68 +40,55 @@
 
     <div id="wrap"> 
 		
-		<!-- 티켓목록 모달 -->
-		<div id="ticket_modal" class="modal ticket_modal mobtbl2 show">
+		<!-- 호텔예약 수정 > SMS 발송 모달 -->
+		<div id="smsSend_modal" class="modal only mobtbl show">
 			<div class="modal_box ver2">
 				<div class="modal_head">
-					<p class="tit">티켓목록 - P1754981801ED320FA</p>
+					<p class="tit">SMS 발송</p>
 					<button class="modal_close"></button>
 				</div>
 				<div class="modal_body">
-					<div class="tbl_top">
-						<p class="total">
-							Total <span class="color">2</span>
-						</p>
-					</div>
-					<div class="tbl_box">
-						<table class="tbl space_auto">
-							<colgroup>
-								<col style="width: 90px;">
-								<col style="width: 70px;">
-								<col style="width: 130px;">
-								<col style="width: 180px;">
-								<col style="width: 120px;">
-								<col style="width: 120px;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th data-th="상태">상태</th>
-									<th data-th="구분">구분</th>
-									<th data-th="티켓번호">티켓번호</th>
-									<th data-th="바코드">바코드</th>
-									<th data-th="발송일">발송일</th>
-									<th data-th="사용완료일">사용완료일</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td data-th="상태">사용완료</td>
-									<td data-th="구분">성인</td>
-									<td data-th="티켓번호">ZIPMG05780</td>
-									<td data-th="바코드">
-										<div class="tbl_img">
-											<img src="../img/barcode.png" alt="">
-										</div>
-									</td>
-									<td data-th="발송일">2022-12-17</td>
-									<td data-th="사용완료일">2022-12-18</td>
-								</tr>
-								<tr>
-									<td data-th="상태">사용완료</td>
-									<td data-th="구분">성인</td>
-									<td data-th="티켓번호">ZIPMG05780</td>
-									<td data-th="바코드">
-										<div class="tbl_img">
-											<img src="../img/barcode.png" alt="">
-										</div>
-									</td>
-									<td data-th="발송일">2022-12-17</td>
-									<td data-th="사용완료일">2022-12-18</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					<form name="sendsms_fm" id="sendsms_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width:120px">
+									<col style="width:320px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="From">From</th>
+										<td data-th="From">
+											<div class="input_box">
+												<input type="text" name="from_tel" id="from_tel" size="30" class="input_text size_md" value="01012345678" readonly="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="To">To</th>
+										<td data-th="To">
+											<div class="input_box">
+												<input type="text" name="to_tel" id="to_tel" size="30" class="input_text size_md" value="+886 926969409">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="Content" colspan="2">
+											<div class="input_box">
+												<textarea name="msg" id="msg" rows="10" class="input_text size_md h_auto" ></textarea>
+												<div class="label_text input_txt size_md">
+													<span class="bold blue">0</span>
+													 Byte (SMS 발송)
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
 					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE modal_close">문자 발송</button>
 						<button class="modal_btn button auto typeF modal_close">닫기</button>
 					</div>
 				</div>
@@ -109,9 +96,11 @@
 		</div>
 		
     </div>
-	
-	
+
+
+    <!-- JS -->
     <script src="../js/common.js"></script>
+
 
 </body>
 

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 호텔예약 수정 > 메일 발송 모달 -->
+		<div id="mailSend_modal" class="modal only mobtbl show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">메일 발송</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="sendmail_fm" id="sendmail_fm" autocomplete="off" method="post" enctype="multipart/form-data" class="form form_box">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width:140px">
+									<col style="width:330px">
+									<col style="width:140px">
+									<col style="width:330px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="보내는 사람">보내는 사람</th>
+										<td data-th="보내는 사람">
+											<div class="input_box">
+												<input type="text" name="from_nm" id="from_nm" size="30" class="input_text size_md" value="TK TRAVEL" hname="보내는사람" required="">
+											</div>
+										</td>
+										<th data-th="보내는 이메일">보내는 이메일</th>
+										<td data-th="보내는 이메일">
+											<div class="input_box">
+												<input type="text" name="from_email" id="from_email" size="30" class="input_text size_md" value="cs@tktravelkorea.com" hname="보내는 이메일" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="받는사람(고객)">받는사람(고객)</th>
+										<td data-th="받는사람(고객)">
+											<div class="input_box">
+												<input type="text" name="cust_nm" id="cust_nm" size="30" class="input_text size_md" value="홍길동">
+											</div>
+										</td>
+										<th data-th="받는이메일(고객)">받는이메일(고객)</th>
+										<td data-th="받는이메일(고객)">
+											<div class="input_box">
+												<input type="text" name="cust_email" id="cust_email" size="30" class="input_text size_md" value="test1234@gmail.com">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="메일제목">메일제목</th>
+										<td data-th="메일제목" colspan="3">
+											<div class="input_box">
+												<input type="text" name="title" id="title" size="60" class="input_text size_md" value="" hname="메일제목" required="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="메일내용">메일내용</th>
+										<td data-th="메일내용" colspan="3">
+											<div class="input_box">
+												<textarea class="input_text size_md summernote" rows="5" name="cont"></textarea>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">메일 발송</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+
+	<!-- Summernote Lite CSS/JS (부트스트랩 불필요) -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function(){
+            $('.summernote').summernote({
+                height: 400,
+                toolbar: [
+                    // 1줄: 글꼴, 크기, 스타일
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['height', ['height']],
+                    ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                    // 2줄: 색상, 정렬, 리스트
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    // 3줄: 링크, 이미지, 표, 코드 등
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                fontNames: ['맑은 고딕', '굴림', '돋움', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                lineHeights: ['150%', '180%', '200%', '220%', '250%', '280%', '300%'],
+            });
+        });    
+	</script>
+
+
+</body>
+
+</html>

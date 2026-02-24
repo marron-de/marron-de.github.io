@@ -35,7 +35,7 @@
 <body data-theme="light">
 
 
-	<div id="wrap" class="layout b2b_wrap reservation_wrap sideopen" data-title="투어확정달력" data-icon="ph-clipboard-text">
+	<div id="wrap" class="layout biz_wrap b2b_wrap reservation_wrap sideopen" data-title="투어확정달력" data-icon="ph-calendar-dots">
 
 		<!-- sidenav -->
 		<div id="sidenav"></div>
@@ -50,74 +50,62 @@
 			<div id="contents" class="contents">
 				<div class="content_title">
 					<p class="page_title">
-						<i class="ph-fill ph-clipboard-text"></i>
+						<i class="ph-fill ph-calendar-dots"></i>
 						투어확정달력
 					</p>
 				</div>
 
-				<div class="mob_filter_wrap">
-					<div class="mob_filter_topbox">
-						<div class="leftbox"></div>
-						<div class="rightbox">
-							<button type="button" class="mob_icon_button mob_search_open">
-								<i class="ph ph-magnifying-glass icon"></i>
-							</button>
+				<div class="content_search content_tbl">
+					<form name="search_fm" id="search_fm" method="get">
+						<div class="tbl_box">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 150px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr class="mob_search_box">
+										<th data-th="상품명">상품명</th>
+										<td data-th="상품명">
+											<div class="tbl_inline">
+												<div class="input_box search_input">
+													<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="상품명을 입력해주세요">
+												</div>
+												<div class="tbl_btnbox search_btns">
+													<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="기간">기간</th>
+										<td data-th="기간">
+											<div class="tbl_inline gap2">
+												<div class="select_box search_select2">
+													<select class="select size_md">
+														<option value="">여행구분</option>
+														<option value="bustour">버스투어</option>
+													</select>
+												</div>
+												<div class="select_box search_select2">
+													<select class="select size_md">
+														<option value="">여행기간</option>
+														<option value="all">전체</option>
+														<option value="day" selected>당일</option>
+														<option value="days">숙박</option>
+													</select>
+												</div>
+												<div class="input_box input_flex w_auto mobSize_full">
+												<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+												<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
+											</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</div>
-					<div class="content_search content_tbl">
-						<form name="search_fm" id="search_fm" method="get">
-							<div class="tbl_box">
-								<table class="tbl">
-									<colgroup>
-										<col style="width: 150px">
-										<col>
-									</colgroup>
-									<tbody>
-										<tr class="mob_search_box">
-											<th data-th="검색어">검색어</th>
-											<td data-th="검색어">
-												<div class="tbl_inline">
-													<div class="input_box search_input">
-														<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
-													</div>
-													<div class="tbl_btnbox search_btns">
-														<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
-													</div>
-													<button type="button"
-														class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="기간">기간</th>
-											<td data-th="기간">
-												<div class="tbl_inline gap2">
-													<div class="select_box search_select2">
-														<select class="select size_md">
-															<option value="">여행구분</option>
-															<option value="bustour">버스투어</option>
-														</select>
-													</div>
-													<div class="select_box search_select2">
-														<select class="select size_md">
-															<option value="">여행기간</option>
-															<option value="all">전체</option>
-															<option value="day" selected>당일</option>
-															<option value="days">숙박</option>
-														</select>
-													</div>
-													<div class="input_box input_flex w_auto mobSize_full">
-													<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
-													<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
-												</div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</form>
-					</div>
+					</form>
 				</div>
 
 				<div class="content_list content_tbl content_mobtbl">
@@ -132,12 +120,12 @@
 							<div class="rightbox full"></div>
 						</div>
 						<div class="bo_list tbl_box">
-							<table class="tbl reservation_list min_auto">
+							<table class="tbl biz_tbl reservation_list min_auto">
 								<colgroup>
-									<col style="width: 300px;">
+									<col style="width: 240px;">
 									<col style="width: 140px;">
 									<col style="width: 140px;">
-									<col style="width: 574px;">
+									<col style="width: 634px;">
 									<col style="width: 120px;">
 									<col style="width: 120px;">
 									<col style="width: 120px;">
@@ -187,7 +175,7 @@
 										<td data-th="최대출발">0</td>
 										<td data-th="상태">
 											<div class="tbl_btnbox center">
-												<button type="button" class="badge typeA size_bg">예약가능</button>
+												<button type="button" class="badge typeC size_bg">예약불가능</button>
 											</div>
 										</td>
 									</tr>
@@ -222,7 +210,7 @@
 										<td data-th="최대출발">0</td>
 										<td data-th="상태">
 											<div class="tbl_btnbox center">
-												<button type="button" class="badge typeA size_bg">예약가능</button>
+												<button type="button" class="badge typeC size_bg">예약불가능</button>
 											</div>
 										</td>
 									</tr>
@@ -256,7 +244,7 @@
 										<td data-th="최대출발">0</td>
 										<td data-th="상태">
 											<div class="tbl_btnbox center">
-												<button type="button" class="badge typeA size_bg">예약가능</button>
+												<button type="button" class="badge typeC size_bg">예약불가능</button>
 											</div>
 										</td>
 									</tr>
@@ -415,7 +403,9 @@
 
 		$(window).on("load", function () {
 			setTimeout(() => {
-				$(".sidenav.ver2 .side_cont .menu_list .side_item .acc_cont .side_item ").eq(2).addClass("active");
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).addClass("show");
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont").show();
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont .side_item").eq(2).addClass("active");
 			}, 100);
 		});
 	</script>

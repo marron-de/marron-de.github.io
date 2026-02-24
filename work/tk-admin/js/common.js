@@ -127,7 +127,6 @@ $(document).mouseup(function (e) {
             $("body").removeClass("hidden");
         }
     }
-
     const targetModal = $(e.target).closest('.modal:not(.only)');
     if ($('.modal:not(.only) .modal_box').has(e.target).length === 0 && targetModal.length) {
         $("body").removeClass("hidden");
@@ -573,7 +572,10 @@ $(document).ready(function() {
     });
 });
 
-// 260223 B2B 페이지
+
+
+// 260224 작업
+
 // sidenav accordion
 (function ($) {
 	const lnbUI = {
@@ -615,3 +617,25 @@ $(document).ready(function() {
 		lnbUI.click('.sidenav .menu_list_acco li', 400);
 	});
 }(jQuery));
+
+
+// company infobox max-height
+$(document).ready(function() {
+	function updateComInfoHeight() {
+		const searchHeight = $(".content_searchwrap .content_search").outerHeight();
+		$(".content_searchwrap .content_cominfo").css("max-height", searchHeight + "px");
+	}
+	updateComInfoHeight();
+
+	$(window).on("load", function() {
+		updateComInfoHeight();
+	});
+
+	$(window).on("resize", function() {
+		updateComInfoHeight();
+	});
+	
+	$(document).on("click", ".tbl .tbl_morebtn", function () {
+		setTimeout(updateComInfoHeight, 0); 
+	});
+});

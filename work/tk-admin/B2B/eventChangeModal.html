@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 호텔예약 수정 > 행사변경 모달 -->
+		<div id="eventChange_modal" class="modal only mobtbl2 show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">행사변경</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="tbl_top">
+						<div class="leftbox">
+							<p class="title">행사목록</p>
+						</div>
+						<div class="rightbox">
+							<div class="controls">
+								<button type="button" class="paging_btn prev_btn">
+									<i class="ph ph-caret-left"></i>
+								</button>
+								<div class="select_box">
+									<select name="date_year_s" id="date_year_s" class="select size_md">
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
+										<option value="2025" selected="">2025</option>
+										<option value="2026">2026</option>
+										<option value="2027">2027</option>
+										<option value="2028">2028</option>
+									</select>
+								</div>
+								<div class="select_box">
+									<select name="date_month_s" id="date_month_s" class="select size_md">
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+										<option value="06">06</option>
+										<option value="07">07</option>
+										<option value="08">08</option>
+										<option value="09">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12" selected="">12</option>
+									</select>
+								</div>
+								<button type="button" class="paging_btn next_btn">
+									<i class="ph ph-caret-right"></i>
+								</button>
+							</div>
+							<div class="select_box">
+								<select name="dtid_s" id="dtid_s" class="select size_md">
+									<option value="7605" selected="">(早鳥) [06:30] SKI 雙板 弘益大學站8號出口</option>
+									<option value="7606">(早鳥) [07:00] SKI 雙板 乙支路入口站8號出口 首爾樂天酒店</option>
+									<option value="7607">(早鳥) [06:30] SNOWBOARD 單板 弘益大學站8號出口</option>
+									<option value="7608">(早鳥) [07:00] SNOWBOARD 單板 乙支路入口站8號出口 首爾樂天酒店</option>
+									<option value="8989">★ 一張訂單默認為同一房間, 如需分房請分開預訂 ★</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="tbl_box">
+						<table class="tbl space_auto">
+							<colgroup>
+								<col style="width: 60px;">
+								<col style="width: 430px;">
+								<col style="width: 120px;">
+								<col style="width: 150px;">
+								<col style="width: 80px;">
+								<col style="width: 100px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th data-th="No.">No.</th>
+									<th data-th="행사명">행사명</th>
+									<th data-th="출발일">출발일</th>
+									<th data-th="성인요금">성인요금</th>
+									<th data-th="정원">정원</th>
+									<th data-th="예약">예약</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-th="No.">10</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">9</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">8</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">7</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">6</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">5</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">4</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">3</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">2</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td data-th="No.">1</td>
+									<td data-th="행사명" class="align_left">
+										(早鳥) [06:30] SKI 雙板 弘益大學站8號出口
+									</td>
+									<td data-th="출발일">
+										<span class="blue">2025.12.08</span>
+									</td>
+									<td data-th="성인요금" class="align_right">280,000</td>
+									<td data-th="정원">
+										<span class="point">2</span>/42
+									</td>
+									<td data-th="예약">
+										<div class="tbl_btnbox">	
+											<button type="button" class="button typeF auto size_sm">확인</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+
+</body>
+
+</html>

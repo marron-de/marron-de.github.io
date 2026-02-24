@@ -35,7 +35,7 @@
 <body data-theme="light">
 
 
-	<div id="wrap" class="layout b2b_wrap reservation_wrap sideopen" data-title="예약관리&리스트" data-icon="ph-clipboard-text">
+	<div id="wrap" class="layout biz_wrap b2b_wrap reservation_wrap sideopen" data-title="예약관리&리스트" data-icon="ph-calendar-dots">
 
 		<!-- sidenav -->
 		<div id="sidenav"></div>
@@ -50,7 +50,7 @@
 			<div id="contents" class="contents">
 				<div class="content_title">
 					<p class="page_title">
-						<i class="ph-fill ph-clipboard-text icon"></i>
+						<i class="ph-fill icon ph-calendar-dots"></i>
 						예약관리&리스트
 					</p>
 				</div>
@@ -62,239 +62,258 @@
 							<button type="button" class="mob_icon_button mob_search_open">
 								<i class="ph ph-magnifying-glass icon"></i>
 							</button>
-							<button type="button" class="mob_icon_button" onclick="reservationWrite_modal()">
+							<a href="../B2B/tourist.html" class="mob_icon_button">
 								<i class="ph ph-pencil-simple icon"></i>
-							</button>
+							</a>
 						</div>
 					</div>
-					<div class="content_search content_tbl">
-						<form name="search_fm" id="search_fm" method="get">
-							<div class="tbl_box">
-								<table class="tbl">
-									<colgroup>
-										<col style="width: 150px">
-										<col>
-									</colgroup>
-									<tbody>
-										<tr class="mob_search_box">
-											<th data-th="검색어">검색어</th>
-											<td data-th="검색어">
-												<div class="tbl_inline">
-													<div class="select_box search_select">
-														<select name="search_key_s" id="searchKey" class="select size_md">
-															<option value="res_cust_nm">고객이름</option>
-															<option value="res_cust_hp">고객 핸드폰번호</option>
-															<option value="rsv_no">바우처번호</option>
-															<option value="res_cust_email">고객 이메일</option>
-															<option value="mb_id">고객 아이디</option>
-															<option value="res_no">예약번호</option>
-															<option value="g_title">상품명</option>
-															<option value="ev_title">행사명</option>
-															<option value="ev_code">상품코드</option>
-															<option value="g_uid">상품번호</option>
-															<option value="admin_nm">담당자명</option>
-															<option value="g_memo">메모</option>
-															<option value="res_cust_memo">고객요청</option>
-														</select>
-													</div>
-													<div class="input_box search_input">
-														<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
-													</div>
-													<div class="tbl_btnbox search_btns">
-														<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
-													</div>
-													<button type="button" class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="기간" rowspan="2">기간</th>
-											<td data-th="기간">
-												<div class="tbl_inline gap2">
-													<div class="radio_wrap">
-														<div class="radio_box size_md">
-															<input type="radio" name="mode_period_s" id="period_s_1" value="ins_dt" class="input_radio" checked="">
-															<label for="period_s_1" title="예약접수일" class="label_radio">예약접수일</label>
+					<div class="content_searchwrap">
+						<div class="content_search content_tbl com_ver">
+							<form name="search_fm" id="search_fm" method="get">
+								<div class="tbl_box">
+									<table class="tbl">
+										<colgroup>
+											<col style="width: 150px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr class="mob_search_box">
+												<th data-th="검색어">검색어</th>
+												<td data-th="검색어">
+													<div class="tbl_inline">
+														<div class="select_box search_select">
+															<select name="search_key_s" id="searchKey" class="select size_md">
+																<option value="res_cust_nm">고객이름</option>
+																<option value="res_cust_hp">고객 핸드폰번호</option>
+																<option value="rsv_no">바우처번호</option>
+																<option value="res_cust_email">고객 이메일</option>
+																<option value="mb_id">고객 아이디</option>
+																<option value="res_no">예약번호</option>
+																<option value="g_title">상품명</option>
+																<option value="ev_title">행사명</option>
+																<option value="ev_code">상품코드</option>
+																<option value="g_uid">상품번호</option>
+																<option value="admin_nm">담당자명</option>
+																<option value="g_memo">메모</option>
+																<option value="res_cust_memo">고객요청</option>
+															</select>
 														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="mode_period_s" id="period_s_2" value="ev_start" class="input_radio">
-															<label for="period_s_2" title="출발일" class="label_radio">사용일</label>
+														<div class="input_box search_input">
+															<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
 														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="mode_period_s" id="period_s_3" value="ev_end" class="input_radio">
-															<label for="period_s_3" title="도착일" class="label_radio">도착일</label>
+														<div class="tbl_btnbox search_btns">
+															<button type="button" class="button size_sm typeE auto sch_btn">검색</button>
 														</div>
+														<button type="button" class="button size_sm typeF auto schclose_btn mob_search_close">닫기</button>
 													</div>
-													<div class="input_box input_flex w_auto">
-														<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
-														<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
-													</div>
-													<div class="tab_wrap">
-														<div class="tab_navbox tabs_ver">
-															<div class="tab_nav"><span class="link">어제</span></div>
-															<div class="tab_nav"><span class="link">오늘</span></div>
-															<div class="tab_nav on"><span class="link">7일</span></div>
-															<div class="tab_nav"><span class="link">15일</span></div>
-															<div class="tab_nav"><span class="link">1개월</span></div>
-															<div class="tab_nav"><span class="link">3개월</span></div>
-															<div class="tab_nav"><span class="link">1년</span></div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="기간" rowspan="2">기간</th>
+												<td data-th="기간">
+													<div class="tbl_inline gap2">
+														<div class="radio_wrap">
+															<div class="radio_box size_md">
+																<input type="radio" name="mode_period_s" id="period_s_1" value="ins_dt" class="input_radio" checked="">
+																<label for="period_s_1" title="예약접수일" class="label_radio">예약접수일</label>
+															</div>
+															<div class="radio_box size_md">
+																<input type="radio" name="mode_period_s" id="period_s_2" value="ev_start" class="input_radio">
+																<label for="period_s_2" title="출발일" class="label_radio">사용일</label>
+															</div>
+														</div>
+														<div class="input_box input_flex w_auto">
+															<input type="text" name="date_s1" id="date_s1" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-05" readonly="readonly">
+															<input type="text" name="date_s2" id="date_s2" class="input_text icon_ver icon_date calender_btn size_md" value="2025-08-12" readonly="readonly">
+														</div>
+														<div class="tab_wrap">
+															<div class="tab_navbox tabs_ver">
+																<div class="tab_nav"><span class="link">어제</span></div>
+																<div class="tab_nav"><span class="link">오늘</span></div>
+																<div class="tab_nav on"><span class="link">7일</span></div>
+																<div class="tab_nav"><span class="link">15일</span></div>
+																<div class="tab_nav"><span class="link">1개월</span></div>
+																<div class="tab_nav"><span class="link">3개월</span></div>
+																<div class="tab_nav"><span class="link">1년</span></div>
+															</div>
 														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td data-th="기간">
-												<div class="tbl_inline">
-													<div class="select_box">
-														<select name="period_yy_s" id="item_period_yy" class="select size_md">
-															<option value="2026">2026년</option>
-															<option value="2025" selected="">2025년</option>
-															<option value="2024">2024년</option>
-															<option value="2023">2023년</option>
-															<option value="2022">2022년</option>
-															<option value="2021">2021년</option>
-															<option value="2020">2020년</option>
-															<option value="2019">2019년</option>
-														</select>
-													</div>
-													<div class="tab_wrap">
-														<div class="tab_navbox tabs_ver">
-															<div class="tab_nav"><span class="link">1월</span></div>
-															<div class="tab_nav"><span class="link">2월</span></div>
-															<div class="tab_nav"><span class="link">3월</span></div>
-															<div class="tab_nav"><span class="link">4월</span></div>
-															<div class="tab_nav"><span class="link">5월</span></div>
-															<div class="tab_nav"><span class="link">6월</span></div>
-															<div class="tab_nav"><span class="link">7월</span></div>
-															<div class="tab_nav"><span class="link">8월</span></div>
-															<div class="tab_nav"><span class="link">9월</span></div>
-															<div class="tab_nav"><span class="link">10월</span></div>
-															<div class="tab_nav"><span class="link">11월</span></div>
-															<div class="tab_nav"><span class="link">12월</span></div>
+												</td>
+											</tr>
+											<tr>
+												<td data-th="기간">
+													<div class="tbl_inline">
+														<div class="select_box">
+															<select name="period_yy_s" id="item_period_yy" class="select size_md">
+																<option value="2026">2026년</option>
+																<option value="2025" selected="">2025년</option>
+																<option value="2024">2024년</option>
+																<option value="2023">2023년</option>
+																<option value="2022">2022년</option>
+																<option value="2021">2021년</option>
+																<option value="2020">2020년</option>
+																<option value="2019">2019년</option>
+															</select>
+														</div>
+														<div class="tab_wrap">
+															<div class="tab_navbox tabs_ver">
+																<div class="tab_nav"><span class="link">1월</span></div>
+																<div class="tab_nav"><span class="link">2월</span></div>
+																<div class="tab_nav"><span class="link">3월</span></div>
+																<div class="tab_nav"><span class="link">4월</span></div>
+																<div class="tab_nav"><span class="link">5월</span></div>
+																<div class="tab_nav"><span class="link">6월</span></div>
+																<div class="tab_nav"><span class="link">7월</span></div>
+																<div class="tab_nav"><span class="link">8월</span></div>
+																<div class="tab_nav"><span class="link">9월</span></div>
+																<div class="tab_nav"><span class="link">10월</span></div>
+																<div class="tab_nav"><span class="link">11월</span></div>
+																<div class="tab_nav"><span class="link">12월</span></div>
+															</div>
 														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="상품">상품</th>
-											<td data-th="상품" class="more_hide">
-												<div class="tbl_inline">
-													<div class="select_box w400">
-														<select class="select size_md">
-															<option value="">상품 선택</option>
-															<option value="2195">釜山出发 私人包车 4人到42人</option>
-															<option value="534">홍콩 싹쓸이 당일투어(전용차량)</option>
-															<option value="1679">[특가]서울출발 11인승밴 렌트카+기사포함</option>
-															<option value="2296">짚라인 문경 8-9번 코스 10명 결제_화은국제 편은주 부장님</option>
-															<option value="2978">주문진레저 제트스키 이용권</option>
-															<option value="1656">홍콩 공항 픽업/샌딩 서비스(전용차량)</option>
-															<option value="1538">首爾 ↔ SONO VIVALDIPARK (原洪川大明索諾渡假村)</option>
-															<option value="2901">[강릉][연곡해변] 솔향기캠핑장 카라반/글램핑 1박2일 숙박권</option>
-															<option value="1652">홍콩 공항 픽업/샌딩(프리미엄밴 7인승 단독차량)</option>
-															<option value="2900">[강릉][오죽헌] 강릉오죽한옥마을 1박2일 숙박권</option>
-															<option value="2440">대한민국 서남권 7박8일 패키지 [10월]</option>
-															<option value="2926">[유심사]대만 eSIM 데이터 무제한</option>
-														</select>
-													</div>
-													<div class="select_box w400">
-														<select class="select size_md">
-															<option value="">전체 선택</option>
-														</select>
-													</div>
-												</div>
-												<button type="button" class="icon_button tbl_morebtn">
-													<i class="ph ph-caret-down"></i>
-												</button>
-											</td>
-										</tr>
-										<tr class="hide_tr">
-											<th data-th="예약상태">예약상태</th>
-											<td data-th="예약상태">
-												<div class="tbl_inline">
-													<div class="radio_wrap">
-														<div class="radio_box size_md">
-															<input type="radio" name="order_state_s" id="order_state_s_1" class="input_radio" checked>
-															<label for="order_state_s_1" class="label_radio">전체</label>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="상품">상품</th>
+												<td data-th="상품" class="more_hide">
+													<div class="tbl_inline">
+														<div class="select_box w400">
+															<select class="select size_md">
+																<option value="">상품 선택</option>
+																<option value="2195">釜山出发 私人包车 4人到42人</option>
+																<option value="534">홍콩 싹쓸이 당일투어(전용차량)</option>
+																<option value="1679">[특가]서울출발 11인승밴 렌트카+기사포함</option>
+																<option value="2296">짚라인 문경 8-9번 코스 10명 결제_화은국제 편은주 부장님</option>
+																<option value="2978">주문진레저 제트스키 이용권</option>
+																<option value="1656">홍콩 공항 픽업/샌딩 서비스(전용차량)</option>
+																<option value="1538">首爾 ↔ SONO VIVALDIPARK (原洪川大明索諾渡假村)</option>
+																<option value="2901">[강릉][연곡해변] 솔향기캠핑장 카라반/글램핑 1박2일 숙박권</option>
+																<option value="1652">홍콩 공항 픽업/샌딩(프리미엄밴 7인승 단독차량)</option>
+																<option value="2900">[강릉][오죽헌] 강릉오죽한옥마을 1박2일 숙박권</option>
+																<option value="2440">대한민국 서남권 7박8일 패키지 [10월]</option>
+																<option value="2926">[유심사]대만 eSIM 데이터 무제한</option>
+															</select>
 														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="order_state_s" id="order_state_s_2" class="input_radio">
-															<label for="order_state_s_2" class="label_radio">입금완료</label>
-														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="order_state_s" id="order_state_s_3"class="input_radio">
-															<label for="order_state_s_3" class="label_radio">예약확정</label>
-														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="order_state_s" id="order_state_s_4"class="input_radio">
-															<label for="order_state_s_4"class="label_radio">행사완료</label>
-														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="order_state_s" id="order_state_s_5"class="input_radio">
-															<label for="order_state_s_5" class="label_radio">취소완료</label>
+														<div class="select_box w400">
+															<select class="select size_md">
+																<option value="">전체 선택</option>
+															</select>
 														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr class="hide_tr">
-											<th data-th="입금">입금</th>
-											<td data-th="입금">
-												<div class="tbl_inline">
-													<div class="radio_wrap">
-														<div class="radio_box size_md">
-															<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_1" class="input_radio" checked>
-															<label for="srh_pay_stat_s_1" class="label_radio">전체</label>
+													<button type="button" class="icon_button tbl_morebtn">
+														<i class="ph ph-caret-down"></i>
+													</button>
+												</td>
+											</tr>
+											<tr class="hide_tr">
+												<th data-th="예약상태">예약상태</th>
+												<td data-th="예약상태">
+													<div class="tbl_inline">
+														<div class="radio_wrap">
+															<div class="radio_box size_md">
+																<input type="radio" name="order_state_s" id="order_state_s_1" class="input_radio" checked>
+																<label for="order_state_s_1" class="label_radio">전체</label>
+															</div>
+															<div class="radio_box size_md">
+																<input type="radio" name="order_state_s" id="order_state_s_2" class="input_radio">
+																<label for="order_state_s_2" class="label_radio">입금완료</label>
+															</div>
+															<div class="radio_box size_md">
+																<input type="radio" name="order_state_s" id="order_state_s_3"class="input_radio">
+																<label for="order_state_s_3" class="label_radio">예약확정</label>
+															</div>
+															<div class="radio_box size_md">
+																<input type="radio" name="order_state_s" id="order_state_s_4"class="input_radio">
+																<label for="order_state_s_4"class="label_radio">행사완료</label>
+															</div>
+															<div class="radio_box size_md">
+																<input type="radio" name="order_state_s" id="order_state_s_5"class="input_radio">
+																<label for="order_state_s_5" class="label_radio">취소완료</label>
+															</div>
 														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_2" class="input_radio">
-															<label for="srh_pay_stat_s_2" class="label_radio">미입금</label>
+													</div>
+												</td>
+											</tr>
+											<tr class="hide_tr">
+												<th data-th="입금">입금</th>
+												<td data-th="입금">
+													<div class="tbl_inline">
+														<div class="radio_wrap">
+															<div class="radio_box size_md">
+																<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_1" class="input_radio" checked>
+																<label for="srh_pay_stat_s_1" class="label_radio">전체</label>
+															</div>
+															<div class="radio_box size_md">
+																<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_2" class="input_radio">
+																<label for="srh_pay_stat_s_2" class="label_radio">미입금</label>
+															</div>
+															<div class="radio_box size_md">
+																<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_3"class="input_radio">
+																<label for="srh_pay_stat_s_3" class="label_radio">입금완료</label>
+															</div>
 														</div>
-														<div class="radio_box size_md">
-															<input type="radio" name="srh_pay_stat_s" id="srh_pay_stat_s_3"class="input_radio">
-															<label for="srh_pay_stat_s_3" class="label_radio">입금완료</label>
+													</div>
+												</td>
+											</tr>
+											<tr class="hide_tr">
+												<th data-th="카테고리/국가">카테고리/국가</th>
+												<td data-th="카테고리/국가">
+													<div class="tbl_inline">
+														<div class="select_box mobSize_50">
+															<select class="select size_md">
+																<option value="">1차카테고리</option>
+															</select>
+														</div>
+														<div class="select_box mobSize_50">
+															<select class="select size_md">
+																<option value="">2차카테고리</option>
+															</select>
+														</div>
+														<div class="select_box mobSize_50">
+															<select class="select size_md">
+																<option value="">3차카테고리</option>
+															</select>
+														</div>
+														<div class="select_box mobSize_50">
+															<select class="select size_md">
+																<option value="">국가</option>
+															</select>
+														</div>
+														<div class="select_box mobSize_50">
+															<select class="select size_md">
+																<option value="">도시</option>
+															</select>
 														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr class="hide_tr">
-											<th data-th="카테고리/국가">카테고리/국가</th>
-											<td data-th="카테고리/국가">
-												<div class="tbl_inline">
-													<div class="select_box mobSize_50">
-														<select class="select size_md">
-															<option value="">1차카테고리</option>
-														</select>
-													</div>
-													<div class="select_box mobSize_50">
-														<select class="select size_md">
-															<option value="">2차카테고리</option>
-														</select>
-													</div>
-													<div class="select_box mobSize_50">
-														<select class="select size_md">
-															<option value="">3차카테고리</option>
-														</select>
-													</div>
-													<div class="select_box mobSize_50">
-														<select class="select size_md">
-															<option value="">국가</option>
-														</select>
-													</div>
-													<div class="select_box mobSize_50">
-														<select class="select size_md">
-															<option value="">도시</option>
-														</select>
-													</div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="content_cominfo">
+							<div class="com_infobox">
+								<div class="imgbox">
+									<img src="https://tkplace.co.kr/FileData/logo/yanolja.jpg" alt="" class="img">
+								</div>
+								<div class="txtbox">
+									테스트 텍스트입니다. <br>
+									테스트 텍스트입니다. 
+									<br><br>
+									테스트 : 테스트 텍스트입니다. <br>
+									테스트 : 테스트 텍스트입니다.
+									<br><br>
+									테스트 : 테스트 텍스트입니다. <br>
+									테스트 : 테스트 텍스트입니다.
+									<br><br>
+									테스트 : 테스트 텍스트입니다. <br>
+									테스트 : 테스트 텍스트입니다. <br>
+									테스트 : 테스트 텍스트입니다.
+								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 
@@ -330,7 +349,7 @@
 						<div class="tbl_top">
 							<div class="leftbox full"></div>
 							<div class="rightbox full">
-								<button type="button" class="button size_sm auto typeE mobSize1" onclick="reservationWrite_modal()">신규예약 (선택관광)</button>
+								<a href="../B2B/tourist.html" class="button size_sm auto typeE mobSize1">신규예약 (선택관광)</a>
 								<button type="button" class="button size_sm auto typeF">
 									<img src="../img/ic_excel.png" alt="" class="icon"> 
 									<span class="txt">엑셀저장</span>
@@ -1313,7 +1332,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td data-th="상태" class="point">사용완료</td>
+									<td data-th="상태">사용완료</td>
 									<td data-th="구분">성인</td>
 									<td data-th="티켓번호">ZIPMG05780</td>
 									<td data-th="바코드">
@@ -1350,7 +1369,7 @@
 		<div id="voucher_modal" class="modal">
 			<div class="modal_box ver2">
 				<div class="modal_head">
-					<p class="tit">여행상품예약 - P1754981801ED320FA</p>
+					<p class="tit">바우처 미리 보기</p>
 					<button class="modal_close"></button>
 				</div>
 				<div class="modal_body">
@@ -1457,390 +1476,11 @@
 			</div>
 		</div>
 		
-		<!-- 신규예약 등록 모달 -->
-		<div id="reservationWrite_modal" class="modal B2Breservation_modal mobtbl">
+		<!-- 예약수정 모달 -->
+		<div id="reservationEdit_modal" class="modal BizReservation_modal mobtbl">
 			<div class="modal_box ver2">
 				<div class="modal_head">
-					<p class="tit">신규예약 등록</p>
-					<button class="modal_close"></button>
-				</div>
-				<div class="modal_body">
-					<form class="form form_box">
-						<div class="tbl_warp">
-							<div class="tbl_box">
-								<table class="tbl space_auto">
-									<colgroup>
-										<col style="width:150px" />
-										<col style="width:300px" />
-										<col style="width:150px" />
-										<col style="width:300px" />
-									</colgroup>
-									<tbody>
-										<!-- <tr>
-											<th data-th="바우처 번호">바우처 번호</th>
-											<td data-th="바우처 번호">
-												<div class="input_box">
-													<input type="text" class="input_text size_md" value="TKT24041213B" readonly>
-												</div>
-											</td>
-										</tr> -->
-										<tr>
-											<th data-th="여행지역">여행지역</th>
-											<td data-th="여행지역" colspan="3">
-												<div class="input_box input_flex">
-													<div class="badge size_bg size_md typeH">한국</div>
-													<div class="badge size_bg size_md typeH">서울</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="투어명">투어명</th>
-											<td data-th="투어명" class="align_left" colspan="3">
-												TBBRDV001 대천해수욕장 동력패러글라이딩 탑승권(다빈치동력패러)
-											</td>
-										</tr>
-										<tr>
-											<th data-th="행사명">행사명<span class="required"></span></th>
-											<td data-th="행사명" colspan="3">
-												<div class="input_box">
-													<input type="text" class="input_text size_md" value="체험비행B코스(주말)" readonly>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="출발일">출발일<span class="required"></span></th>
-											<td data-th="출발일">
-												<div class="input_box">
-													<input type="text" name="mb_birth" class="input_text icon_ver icon_date size_md birth_cal calender_btn" readonly>
-												</div>
-											</td>
-											<th data-th="탑승 장소 및 시간">탑승 장소 및 시간<span class="required"></span></th>
-											<td data-th="탑승 장소 및 시간">
-												<div class="select_box">
-													<select class="select size_md">
-														<option value="">탑승 장소 및 시간을 선택해 주세요.</option>
-													</select>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="예약가능 인원">예약가능 인원</th>
-											<td data-th="예약가능 인원" colspan="3">
-												<div class="tbl_inline gap3">
-													<div class="input_box input_flex flex_auto">
-														<input type="text" value="0" class="input_text size_md align_right">
-														<p class="inpu_txt">명</p>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="인원수(성인)">인원수(성인 KRW)</th>
-											<td data-th="인원수(성인)" colspan="3">
-												<div class="tbl_inline gap3">
-													<div class="input_box input_flex">
-														<input type="text" value="0" class="input_text size_md align_right">
-														<p class="inpu_txt">명</p>
-													</div>
-													<div class="input_box input_flex">
-														<p class="inpu_txt">수수료</p>
-														<input type="text" value="0" size="3" class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
-													</div>
-													<div class="input_box input_flex">
-														<p class="inpu_txt">소계</p>
-														<input type="text" value="0" size="3" class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="인원수(소인)">인원수(소인 KRW)</th>
-											<td data-th="인원수(소인)" colspan="3">
-												<div class="tbl_inline gap3">
-													<div class="input_box input_flex">
-														<input type="text" value="0" class="input_text size_md align_right">
-														<p class="inpu_txt">명</p>
-													</div>
-													<div class="input_box input_flex">
-														<p class="inpu_txt">수수료</p>
-														<input type="text" value="0" size="3" class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
-													</div>
-													<div class="input_box input_flex">
-														<p class="inpu_txt">소계</p>
-														<input type="text" value="0" size="3" class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="인원수(아동)">인원수(아동 KRW)</th>
-											<td data-th="인원수(아동)" colspan="3">
-												<div class="tbl_inline gap3">
-													<div class="input_box input_flex">
-														<input type="text" value="0" class="input_text size_md align_right">
-														<p class="inpu_txt">명</p>
-													</div>
-													<div class="input_box input_flex">
-														<p class="inpu_txt">수수료</p>
-														<input type="text" value="0" size="3" class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
-													</div>
-													<div class="input_box input_flex">
-														<p class="inpu_txt">소계</p>
-														<input type="text" value="0" size="3" class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th data-th="옵션 선택">옵션 선택</th>
-											<td data-th="옵션 선택" colspan="3">
-												<div class="select_box">
-													<select class="select size_md">
-														<option value="">옵션 선택</option>
-														<option value="">옵션 선택1</option>
-														<option value="">옵션 선택2</option>
-														<option value="">옵션 선택3</option>
-														<option value="">옵션 선택4</option>
-													</select>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="tbl_cont">
-								<div class="tbl_top">
-									<div class="leftbox">
-										<p class="title">투어 및 상품 선택 내용</p>
-									</div>
-									<div class="righbox">
-									</div>
-								</div>
-								<div class="tbl_box">
-									<table class="tbl space_auto">
-										<colgroup>
-											<col style="width:150px" />
-											<col style="width:300px" />
-											<col style="width:150px" />
-											<col style="width:300px" />
-										</colgroup>
-										<tbody>
-											<tr>
-												<th data-th="판매 합계">판매 합계 (KRW)</th>
-												<td data-th="판매 합계">
-													<div class="tbl_inline gap3">
-														<div class="input_box input_flex">
-															<input type="text" value="0" class="input_text size_md align_right">
-															<p class="inpu_txt">원</p>
-														</div>
-													</div>
-												</td>
-												<th data-th="수수료">수수료 (KRW)</th>
-												<td data-th="수수료">
-													<div class="tbl_inline gap3">
-														<div class="input_box input_flex">
-															<input type="text" value="0" class="input_text size_md align_right">
-															<p class="inpu_txt">원</p>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th data-th="지불방법">지불방법</th>
-												<td data-th="지불방법">
-													<div class="select_box">
-														<select class="select size_md">
-															<option value="1">무통장입금</option>
-															<option value="2">신용카드</option>
-														</select>
-													</div>
-												</td>
-												<th data-th="입금금액">입금금액 (KRW)</th>
-												<td data-th="입금금액">
-													<div class="tbl_inline gap3">
-														<div class="input_box input_flex">
-															<input type="text" value="0" class="input_text size_md align_right">
-															<p class="inpu_txt">원</p>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th data-th="고객 대표 이름">고객 대표 이름<span class="required"></span></th>
-												<td data-th="고객 대표 이름">
-													<div class="input_box">
-														<input type="text" name="mb_nm" value="" class="input_text size_md">
-													</div>
-												</td>
-												<th data-th="고객 대표 연락처">고객 대표 연락처<span class="required"></span></th>
-												<td data-th="고객 대표 연락처">
-													<div class="input_box">
-														<input type="text" name="mb_nm" value="" class="input_text size_md">
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th data-th="고객 대표 이메일">고객 대표 이메일<span class="required"></span></th>
-												<td data-th="고객 대표 이메일" colspan="3">
-													<div class="input_box">
-														<input type="text" class="input_text size_md">
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th data-th="고객 요청사항">고객 요청사항</th>
-												<td data-th="고객 요청사항" colspan="3">
-													<div class="input_box">
-														<textarea class="input_text size_md h_auto" rows="5"></textarea>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th data-th="거래처 바우처 No">거래처 바우처 No<span class="required"></span></th>
-												<td data-th="거래처 바우처 No">
-													<div class="input_box">
-														<input type="text" class="input_text size_md">
-													</div>
-												</td>
-												<th data-th="예약 담당자">예약 담당자<span class="required"></span></th>
-												<td data-th="예약 담당자">
-													<div class="input_box">
-														<input type="text" class="input_text size_md">
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th data-th="고객 정보">고객 정보</th>
-												<td data-th="고객 정보" colspan="3">
-													<div class="tbl_inline column_ver align_right gap2">
-														<div class="check_box size_md">
-															<input type="checkbox" name="exponent" id="exponent" class="input_check">
-															<label for="exponent" class="label_check">대표자</label>
-														</div>
-														<div class="tbl_box">
-															<table class="tbl space_auto">
-																<colgroup>
-																	<col style="width:150px" />
-																	<col style="width:300px" />
-																	<col style="width:150px" />
-																	<col style="width:300px" />
-																</colgroup>
-																<tbody>	
-																	<tr>
-																		<th data-th="이름">이름</th>
-																		<td data-th="이름">
-																			<div class="input_box">
-																				<input type="text" class="input_text size_md">
-																			</div>
-																		</td>
-																		<th data-th="영문이름">영문이름</th>
-																		<td data-th="영문이름">
-																			<div class="tbl_inline">
-																				<div class="input_box input_flex">
-																					<span class="input_txt">성</span>
-																					<input type="text" class="input_text size_md">
-																				</div>
-																				<div class="input_box input_flex">
-																					<span class="input_txt">이름</span>
-																					<input type="text" class="input_text size_md">
-																				</div>
-																			</div>
-																		</td>
-																	</tr>
-																	<tr>
-																		<th data-th="여권번호">여권번호</th>
-																		<td data-th="여권번호">
-																			<div class="input_box">
-																				<input type="text" class="input_text size_md">
-																			</div>
-																		</td>
-																		<th data-th="휴대폰">휴대폰</th>
-																		<td data-th="휴대폰">
-																			<div class="input_box">
-																				<input type="text" class="input_text size_md">
-																			</div>
-																		</td>
-																	</tr>													
-																	<tr>
-																		<th data-th="성별">성별</th>
-																		<td data-th="성별">
-																			<div class="select_box">
-																				<select class="select size_md">			
-																					<option value="M" selected>남자</option>
-																					<option value="F">여자</option>
-																				</select>
-																			</div>
-																		</td>
-																		<th data-th="생년월일">생년월일</th>
-																		<td data-th="생년월일">
-																			<div class="input_box">
-																				<input type="text"class="input_text size_md icon_ver icon_date calender_btn mx260" readonly>
-																			</div>
-																		</td>
-																	</tr>
-																	<tr>
-																		<th data-th="SNS ID">SNS ID</th>
-																		<td data-th="SNS ID" colspan="3">
-																			<div class="input_box input_flex">
-																				<div class="select_box">
-																					<select class="select size_md">	
-																						<option value="Whatsapp">Whatsapp</option>											
-																						<option value="Line">Line</option>											
-																						<option value="Wechat">Wechat</option>											
-																						<option value="Kakaotalk">Kakaotalk</option>		
-																					</select>
-																				</div>
-																				<input type="text" class="input_text size_md">
-																			</div>
-																		</td>
-																	</tr>
-																	<tr>
-																		<th data-th="국적">국적</th>
-																		<td data-th="국적" colspan="3">
-																			<div class="input_box">
-																				<input type="text" class="input_text size_md">
-																			</div>
-																		</td>
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th data-th="메시지 / 메모">메시지 / 메모</th>
-												<td data-th="메시지 / 메모" colspan="3">
-													<div class="input_box">
-														<textarea class="input_text size_md h_auto" rows="5" placeholder="(동행하는 일행 예약번호 기입)"></textarea>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</form>
-					<div class="modal_btnbox">
-						<button class="modal_btn button auto typeE">등록</button>
-						<button class="modal_btn button auto typeF modal_close">닫기</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- 예약정보 편집 모달 -->
-		<div id="reservationEdit_modal" class="modal B2Breservation_modal mobtbl">
-			<div class="modal_box ver2">
-				<div class="modal_head">
-					<p class="tit">예약정보 편집</p>
+					<p class="tit">예약수정</p>
 					<button class="modal_close"></button>
 				</div>
 				<div class="modal_body">
@@ -1890,13 +1530,13 @@
 											<th data-th="출발일">출발일<span class="required"></span></th>
 											<td data-th="출발일">
 												<div class="input_box">
-													<input type="text" name="mb_birth"
-														class="input_text icon_ver icon_date size_md birth_cal calender_btn"
-														readonly>
+													<input type="text"
+														class="input_text size_md icon_ver icon_date calender_btn"
+														value="2026-02-24" readonly="readonly">
 												</div>
 											</td>
-											<th data-th="탑승 장소 및 시간">탑승 장소 및 시간<span class="required"></span></th>
-											<td data-th="탑승 장소 및 시간">
+											<th data-th="탑승장소 및 시간">탑승장소  및 시간<span class="required"></span></th>
+											<td data-th="탑승장소 및 시간">
 												<div class="select_box">
 													<select class="select size_md">
 														<option value="">탑승 장소 및 시간을 선택해 주세요.</option>
@@ -1905,24 +1545,25 @@
 											</td>
 										</tr>
 										<tr>
-											<th data-th="인원수(성인)">인원수(성인 KRW)</th>
-											<td data-th="인원수(성인)" colspan="3">
+											<th data-th="인원수 (성인)">인원수 (성인 KRW)</th>
+											<td data-th="인원수 (성인)" colspan="3">
 												<div class="tbl_inline gap3">
 													<div class="input_box input_flex">
-														<input type="text" value="2" class="input_text size_md align_right">
-														<p class="inpu_txt">명</p>
+														<input type="text" value="2"
+															class="input_text size_md align_right">
+														<p class="input_txt">명</p>
 													</div>
 													<div class="input_box input_flex">
-														<p class="inpu_txt">수수료</p>
+														<p class="input_txt">수수료</p>
 														<input type="text" value="0" size="3"
 															class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
+														<p class="input_txt">원</p>
 													</div>
 													<div class="input_box input_flex">
-														<p class="inpu_txt">소계</p>
+														<p class="input_txt">소계</p>
 														<input type="text" value="0" size="3"
 															class="input_text size_md align_right">
-														<p class="inpu_txt">원</p>
+														<p class="input_txt">원</p>
 													</div>
 												</div>
 											</td>
@@ -1968,7 +1609,7 @@
 														<div class="input_box input_flex">
 															<input type="text" value="0"
 																class="input_text size_md align_right">
-															<p class="inpu_txt">원</p>
+															<p class="input_txt">원</p>
 														</div>
 													</div>
 												</td>
@@ -1978,7 +1619,7 @@
 														<div class="input_box input_flex">
 															<input type="text" value="0"
 																class="input_text size_md align_right">
-															<p class="inpu_txt">원</p>
+															<p class="input_txt">원</p>
 														</div>
 													</div>
 												</td>
@@ -1999,7 +1640,7 @@
 														<div class="input_box input_flex">
 															<input type="text" value="0"
 																class="input_text size_md align_right">
-															<p class="inpu_txt">원</p>
+															<p class="input_txt">원</p>
 														</div>
 													</div>
 												</td>
@@ -2012,6 +1653,8 @@
 															class="input_text size_md">
 													</div>
 												</td>
+											</tr>
+											<tr>
 												<th data-th="고객 대표 연락처">고객 대표 연락처<span class="required"></span></th>
 												<td data-th="고객 대표 연락처">
 													<div class="input_box">
@@ -2019,10 +1662,8 @@
 															class="input_text size_md">
 													</div>
 												</td>
-											</tr>
-											<tr>
 												<th data-th="고객 대표 이메일">고객 대표 이메일<span class="required"></span></th>
-												<td data-th="고객 대표 이메일" colspan="3">
+												<td data-th="고객 대표 이메일">
 													<div class="input_box">
 														<input type="text" class="input_text size_md">
 													</div>
@@ -2063,17 +1704,18 @@
 													<div class="tbl_box">
 														<table class="tbl space_auto">
 															<colgroup>
-																<col style="width:150px" />
-																<col style="width:300px" />
-																<col style="width:150px" />
-																<col style="width:300px" />
+																<col style="width:120px" />
+																<col style="width:330px" />
+																<col style="width:120px" />
+																<col style="width:330px" />
 															</colgroup>
 															<tbody>
 																<tr>
 																	<th data-th="이름">이름</th>
 																	<td data-th="이름">
 																		<div class="input_box">
-																			<input type="text" class="input_text size_md">
+																			<input type="text"
+																				class="input_text size_md">
 																		</div>
 																	</td>
 																	<th data-th="영문이름">영문이름</th>
@@ -2081,11 +1723,13 @@
 																		<div class="tbl_inline">
 																			<div class="input_box input_flex">
 																				<span class="input_txt">성</span>
-																				<input type="text" class="input_text size_md">
+																				<input type="text"
+																					class="input_text size_md">
 																			</div>
 																			<div class="input_box input_flex">
 																				<span class="input_txt">이름</span>
-																				<input type="text" class="input_text size_md">
+																				<input type="text"
+																					class="input_text size_md">
 																			</div>
 																		</div>
 																	</td>
@@ -2094,13 +1738,15 @@
 																	<th data-th="여권번호">여권번호</th>
 																	<td data-th="여권번호">
 																		<div class="input_box">
-																			<input type="text" class="input_text size_md">
+																			<input type="text"
+																				class="input_text size_md">
 																		</div>
 																	</td>
 																	<th data-th="휴대폰">휴대폰</th>
 																	<td data-th="휴대폰">
 																		<div class="input_box">
-																			<input type="text" class="input_text size_md">
+																			<input type="text"
+																				class="input_text size_md">
 																		</div>
 																	</td>
 																</tr>
@@ -2129,14 +1775,17 @@
 																		<div class="input_box input_flex">
 																			<div class="select_box">
 																				<select class="select size_md">
-																					<option value="Whatsapp">Whatsapp</option>
+																					<option value="Whatsapp">Whatsapp
+																					</option>
 																					<option value="Line">Line</option>
-																					<option value="Wechat">Wechat</option>
+																					<option value="Wechat">Wechat
+																					</option>
 																					<option value="Kakaotalk">Kakaotalk
 																					</option>
 																				</select>
 																			</div>
-																			<input type="text" class="input_text size_md">
+																			<input type="text"
+																				class="input_text size_md">
 																		</div>
 																	</td>
 																</tr>
@@ -2144,46 +1793,46 @@
 																	<th data-th="국적">국적</th>
 																	<td data-th="국적" colspan="3">
 																		<div class="input_box">
-																			<input type="text" class="input_text size_md">
+																			<input type="text"
+																				class="input_text size_md">
 																		</div>
 																	</td>
 																</tr>
 															</tbody>
 														</table>
 													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="취소 및 환불 이유">취소 및 환불 이유</th>
+												<td data-th="취소 및 환불 이유" colspan="3">
+													<div class="input_box">
+														<textarea class="input_text size_md h_auto" rows="5"></textarea>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-th="메시지 / 메모">메시지 / 메모</th>
+												<td data-th="메시지 / 메모" colspan="3">
+													<div class="input_box">
+														<textarea class="input_text size_md h_auto" rows="5"
+															value="체험비행B코스(주말)고객이 환불요청 처리함 야놀자에서(4/13)_변유선 주임"
+															placeholder="(동행하는 일행 예약번호 기입)"></textarea>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-								</td>
-								</tr>
-								<tr>
-									<th data-th="취소 및 환불 이유">취소 및 환불 이유</th>
-									<td data-th="취소 및 환불 이유" colspan="3">
-										<div class="input_box">
-											<textarea class="input_text size_md h_auto" rows="5"></textarea>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th data-th="메시지 / 메모">메시지 / 메모</th>
-									<td data-th="메시지 / 메모" colspan="3">
-										<div class="input_box">
-											<textarea class="input_text size_md h_auto" rows="5"
-												value="체험비행B코스(주말)고객이 환불요청 처리함 야놀자에서(4/13)_변유선 주임"
-												placeholder="(동행하는 일행 예약번호 기입)"></textarea>
-										</div>
-									</td>
-								</tr>
-								</tbody>
-								</table>
 							</div>
 						</div>
 					</form>
-				</div>
-				</form>
-				<div class="modal_btnbox">
-					<button class="modal_btn button auto typeE">수정</button>
-					<button class="modal_btn button auto typeE" onclick="voucher_modal()">미리보기</button>
-					<button class="modal_btn button auto typeE" onclick="reservationSend_modal()">보내기 확인</button>
-					<button class="modal_btn button auto typeF modal_close">닫기</button>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">수정</button>
+						<button class="modal_btn button auto typeF" onclick="voucher_modal()">미리보기</button>
+						<button class="modal_btn button auto typeF" onclick="reservationSend_modal()">메일전송</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -2230,16 +1879,17 @@
 		replaceModule('../common/b2b_header.html', '#b2b_header');
 		replaceModule('../common/footer.html', '#footer');
 		replaceModule('../common/sidenav_B2B.html', '#sidenav');
-		replaceModule('../common/calender_popup.html', '#calender_popup');		
+		replaceModule('../common/calender_popup.html', '#calender_popup');	
 
 		$(window).on("load", function () {
 			setTimeout(() => {
-				$(".sidenav.ver2 .side_cont .menu_list .side_item .acc_cont .side_item ").eq(0).addClass("active");
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).addClass("show");
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont").show();
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont .side_item").eq(0).addClass("active");
 			}, 100);
 		});
 	</script>
 	<script src="../js/common.js"></script>
-
 
 	<!-- 옵션내역 버튼 -->
 	<script>
@@ -2260,15 +1910,19 @@
 	<!-- 숨김 테이블 노출 버튼 -->
 	<script>
 		$(document).on("click", ".tbl .tbl_morebtn", function () {
-			const table = $(this).closest("table"); 
+			const btn = $(this);
+			const table = btn.closest("table"); 
 			const rows = table.find("tr.hide_tr"); 
+			const searchWrap = btn.closest(".content_searchwrap"); 
 
 			if (rows.is(":visible")) {
 				rows.removeClass("show");
-				$(this).removeClass("on")
+				btn.removeClass("on");
+				searchWrap.removeClass("on");
 			} else {
 				rows.addClass("show");
-				$(this).addClass("on");
+				btn.addClass("on");
+				searchWrap.addClass("on"); 
 			}
 		});
 	</script>
@@ -2324,12 +1978,6 @@
 		function voucher_modal() {
 			$(".modal").removeClass("show");
 			$("#voucher_modal").addClass("show");
-		}
-
-		// reservationWrite modal
-		function reservationWrite_modal() {
-			$(".modal").removeClass("show");
-			$("#reservationWrite_modal").addClass("show");
 		}
 
 		// reservationEdit modal
