@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+	<div id="wrap" class="layout biz_wrap pms_wrap intra_wrap sideopen" data-title="예약관리 달력" data-icon="ph-calendar-dots">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="pms_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill ph-calendar-dots icon"></i>
+			 			예약관리 달력
+					</p>
+				</div>
+				<div class="calender_wrap">
+					<div class="calender size_big mob_wide ver2">
+						<div class="cal_head">
+							<div class="leftbox ver2">
+								<p class="title">이달의 예약합계 : 22 명</p>
+							</div>
+							<div class="centerbox">
+								<button type="button" class="paging_btn prev_btn">
+									<i class="ph ph-caret-left"></i>
+								</button>
+								<p class="cal_date">
+									<span class="cal_year">2025년</span>
+									<span class="cal_month">8월</span>
+								</p>
+								<button type="button" class="paging_btn next_btn">
+									<i class="ph ph-caret-right"></i>
+								</button>
+							</div>
+							<div class="rightbox">
+								<div class="select_box">
+									<select name="mb_id" id="mb_id" class="select size_md">
+										<option value="">상품 선택</option>
+										<option value="2798">Lotte World Seokchon Lake Moon boat | UFO boat Ticket (Admission requires a Lotte World ticket)</option>
+										<option value="2772">롯데월드 문보트 이용권</option>
+										<option value="2797">Lotte World石村湖 月亮船/UFO船使用券 (需持有樂天門票)</option>
+										<option value="2967">Lotte World石村湖 月亮船/UFO船使用券 (需持有乐天门票）</option>
+									</select>
+								</div>
+								<div class="select_box">
+									<select name="mb_id" id="mb_id" class="select size_md">
+										<option value="">전체 선택</option>
+									</select>
+								</div>
+								<button type="button" class="button typeE auto size_md">검색</button>
+							</div>
+						</div>
+						<div class="cal_body">
+							<div class="week_day">
+								<div class="day red">일</div>
+								<div class="day">월</div>
+								<div class="day">화</div>
+								<div class="day">수</div>
+								<div class="day">목</div>
+								<div class="day">금</div>
+								<div class="day blue">토</div>
+							</div>
+							<div class="week_date">
+								<div class="date red disabled">
+									<div class="top">
+										<span class="num">27</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">28</span>
+										<span class="count"></span>
+									</div>			
+									<div class="events"></div>						
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">29</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">30</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">31</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">1</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">2</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">3</span>
+										<span class="count"></span>
+									</div>									
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">4</span>
+										<span class="count"></span>
+									</div>
+									<a href="../PMS/reservationList.html" class="events">			
+										<div class="working event done">
+											<i class="ph ph-check-circle icon"></i>
+											<span class="tit">
+												예약완료 <span class="bold">1</span>명
+											</span>
+										</div>
+										<div class="working event cancel">
+											<i class="ph ph-x-circle icon"></i>
+											<span class="tit">
+												예약취소 <span class="bold">1</span>명
+											</span>
+										</div>
+										<div class="working event noshow">
+											<i class="ph ph-warning icon"></i>
+											<span class="tit">
+												예약노쇼 <span class="bold">0</span>명
+											</span>
+										</div>
+									</a>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">5</span>
+										<span class="count"></span>
+									</div>
+									<a href="../PMS/reservationList.html" class="events">			
+										<div class="working event done">
+											<i class="ph ph-check-circle icon"></i>
+											<span class="tit">
+												예약완료 <span class="bold">1</span>명
+											</span>
+										</div>
+										<div class="working event cancel">
+											<i class="ph ph-x-circle icon"></i>
+											<span class="tit">
+												예약취소 <span class="bold">1</span>명
+											</span>
+										</div>
+										<div class="working event noshow">
+											<i class="ph ph-warning icon"></i>
+											<span class="tit">
+												예약노쇼 <span class="bold">0</span>명
+											</span>
+										</div>
+									</a>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">6</span>
+										<span class="count"></span>
+									</div>
+									<a href="../PMS/reservationList.html" class="events">				
+										<div class="working event done">
+											<i class="ph ph-check-circle icon"></i>
+											<span class="tit">
+												예약완료 <span class="bold">1</span>명
+											</span>
+										</div>
+										<div class="working event cancel">
+											<i class="ph ph-x-circle icon"></i>
+											<span class="tit">
+												예약취소 <span class="bold">1</span>명
+											</span>
+										</div>
+										<div class="working event noshow">
+											<i class="ph ph-warning icon"></i>
+											<span class="tit">
+												예약노쇼 <span class="bold">0</span>명
+											</span>
+										</div>
+									</a>
+								</div>
+								<div class="date today">
+									<div class="top">
+										<span class="num">7</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">8</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">9</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">10</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">11</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">12</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">13</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date selected">
+									<div class="top">
+										<span class="num">14</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">15</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">16</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">17</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">18</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">19</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">20</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">21</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">22</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">23</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">24</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">25</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">26</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">27</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">28</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date">
+									<div class="top">
+										<span class="num">29</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue">
+									<div class="top">
+										<span class="num">30</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+							<div class="week_date">
+								<div class="date red">
+									<div class="top">
+										<span class="num">31</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">1</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">2</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">3</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">4</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date disabled">
+									<div class="top">
+										<span class="num">5</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+								<div class="date blue disabled">
+									<div class="top">
+										<span class="num">6</span>
+										<span class="count"></span>
+									</div>
+									<div class="events"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/pms_header.html', '#pms_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_PMS.html', '#sidenav');
+		replaceModule('../common/calender_popup.html', '#calender_popup');	
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).addClass("show");
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont").show();
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont .side_item").eq(2).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>

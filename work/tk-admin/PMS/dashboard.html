@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout biz_wrap pms_wrap dashboard_wrap sideopen" data-title="대시보드" data-icon="ph-calendar-dots">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="pms_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="ds_sec ds_sec1 gap0">
+					<div class="card wid25">
+						<a href="../PMS/reservationList.html" class="card_link">
+							<div class="card_head">
+								<p class="tit">Reservations search</p>
+							</div>
+							<div class="card_body">
+								<div class="cont">
+									<p class="result type_bl">고객 예약 리스트</p>
+								</div>
+								<div class="graphic">
+									<div class="ph ph-magnifying-glass-plus icon"></div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card wid25">
+						<a href="../PMS/tourCalendar.html" class="card_link">
+							<div class="card_head">
+								<p class="tit">Reservations calendar</p>
+							</div>
+							<div class="card_body">
+								<div class="cont">
+									<p class="result type_bl">달력으로 예약 관리</p>
+								</div>
+								<div class="graphic">
+									<div class="ph ph-calendar-check icon"></div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card wid25">
+						<a href="../PMS/settlementList.html" class="card_link">
+							<div class="card_head">
+								<p class="tit">Calculate the charges</p>
+							</div>
+							<div class="card_body">
+								<div class="cont">
+									<p class="result type_bl">정산 관리 게시판</p>
+								</div>
+								<div class="graphic">
+									<div class="ph ph-money-wavy icon"></div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card wid25">
+						<a href="../PMS/reserveAlarm.html" class="card_link">
+							<div class="card_head">
+								<p class="tit">Kakao Talk</p>
+							</div>
+							<div class="card_body">
+								<div class="cont">
+									<p class="result type_bl">카톡 알림 등록</p>
+								</div>
+								<div class="graphic">
+									<div class="ph ph-chats-circle icon"></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="ds_sec ds_sec2">
+					<div class="card wid25">
+						<a href="../PMS/reservationList.html" class="card_link chart_ver2">
+							<div class="card_head">
+								<p class="tit">This Month Sales</p>
+							</div>
+							<div class="card_body">
+								<div class="cont">
+									<p class="result type_bl">₩80,069</p>
+									<p class="desc">
+										<span class="badge type_bl">
+											<i class="ph-fill ph-caret-up"></i>
+											3.5%
+										</span>
+									</p>
+								</div>
+								<div class="graphic chart_graphic">
+									<div class="echart_custom echart_typeB"></div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card wid25">
+						<a href="../PMS/reservationList.html" class="card_link chart_ver2">
+							<div class="card_head">
+								<p class="tit">Total Sales</p>
+							</div>
+							<div class="card_body">
+								<div class="cont">
+									<p class="result type_bl">₩6,242,000</p>
+									<p class="desc">
+										<span class="badge type_re">
+											<i class="ph-fill ph-caret-down"></i>
+											3.5%
+										</span>
+									</p>
+								</div>
+								<div class="graphic chart_graphic">
+									<div class="echart_custom echart_typeB"></div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card wid50 no_graphic">
+						<a href="../PMS/reservationList.html" class="card_link">
+							<div class="card_head">
+								<p class="tit">Booking Status</p>
+							</div>
+							<div class="card_body">
+								<div class="cont full">
+									<ul class="result desc_ver">
+										<li class="typeA">
+											<span class="txt">오늘 예약인원</span>
+											<span class="desc">4명</span>
+										</li>
+										<li class="typeB">
+											<span class="txt">내일 예약인원</span>
+											<span class="desc">1명</span>
+										</li>
+										<li class="typeC">
+											<span class="txt">이달의 예약인원</span>
+											<span class="desc">22명</span>
+										</li>
+										<li class="typeD">
+											<span class="txt">총 예약인원</span>
+											<span class="desc">287명</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="ds_sec ds_sec3">
+					<div class="card">
+						<div class="card_link chart_ver">
+							<div class="card_head">
+								<p class="tit">월별 예약 현황</p>
+							</div>
+							<div class="card_body chartbox">
+								<div class="echart_custom echart_typeC">
+									<div class="chart echart-traffic-channels h-100" data-echart-responsive="true">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+		
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/pms_header.html', '#pms_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_PMS.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).addClass("show");
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont").show();
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(0).find(".acc_cont .side_item").eq(0).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+	<!-- echarts -->
+	<script src="https://cdn.jsdelivr.net/npm/echarts@6.0.0/dist/echarts.min.js"></script>
+	<script>
+		const echartsInstances = [];
+		const chartElements = document.querySelectorAll('.echart_custom');
+
+		chartElements.forEach((el) => {
+			const myChart = echarts.init(el, null, {
+				renderer: 'canvas',
+				useDirtyRect: false
+			});
+
+			let option = {};
+			if (el.classList.contains('echart_typeA')) {
+				// typeA
+				option = {
+					xAxis: {
+						type: 'category',
+						data: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+						boundaryGap: false,
+						axisLine: {
+							show: false
+						},
+						axisLabel: {
+							show: false
+						},
+						axisTick: {
+							show: false
+						},
+						axisPointer: {
+							type: 'none'
+						}
+					},
+					yAxis: {
+						type: 'value',
+						splitLine: {
+							show: false
+						},
+						axisLine: {
+							show: false
+						},
+						axisLabel: {
+							show: false
+						},
+						axisTick: {
+							show: false
+						},
+						axisPointer: {
+							type: 'none'
+						}
+					},
+					series: [{
+						type: 'bar',
+						showBackground: true,
+						barWidth: '32%',
+						itemStyle: {
+							barBorderRadius: 10,
+							color: '#086BF1'
+						},
+						data: [120, 200, 150, 80, 70, 110, 120],
+						z: 10,
+						emphasis: {
+							itemStyle: {
+								color: '#086BF1'
+							}
+						}
+					}],
+					grid: {
+						right: '5%',
+						left: '5%',
+						top: 0,
+						bottom: 0
+					}
+				};
+			} else if (el.classList.contains('echart_typeB')) {
+				// typeB
+				option = {
+					tooltip: {
+						trigger: 'axis',
+						formatter: '{b0} : {c0}'
+					},
+					xAxis: {
+						type: 'category',
+						data: ['Week 4', 'Week 5', 'Week 6', 'Week 7'],
+						show: false,
+						boundaryGap: false
+					},
+					yAxis: {
+						show: false,
+						type: 'value',
+						boundaryGap: false
+					},
+					series: [{
+						type: 'line',
+						data: [20, 40, 100, 120],
+						symbol: 'none',
+						smooth: true,
+						lineStyle: {
+							width: 3,
+							color: '#086BF1'
+						},
+						areaStyle: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+									offset: 0,
+									color: 'rgba(44, 123, 229, 0.25)'
+								},
+								{
+									offset: 1,
+									color: 'rgba(44, 123, 229, 0)'
+								}
+							])
+						}
+					}],
+					grid: {
+						right: '0',
+						left: '0',
+						bottom: '0',
+						top: '0'
+					}
+				};
+			} else if (el.classList.contains('echart_typeC')) {
+				// typeC
+				const getLast12Months = () => {
+					const months = [];
+					const now = new Date();
+					for (let i = 12; i >= 0; i--) {
+						const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+						const yy = String(d.getFullYear()).slice(2);
+						const mm = String(d.getMonth() + 1).padStart(2, '0');
+						months.push(`${yy}.${mm}`);
+					}
+					return months;
+				};
+
+				let tooltipFormatter = function tooltipFormatter(params) {
+					let tooltipItem = '';
+					params.forEach(function (el) {
+						tooltipItem += `
+							<div class="descbox">
+								<p class="desc">
+									<span class="ph-fill ph-circle" style="color:${el.borderColor ? el.borderColor : el.color}"></span>
+									<span class="txt">
+									${el.seriesName} : ${typeof el.value === 'object' ? el.value[1].toLocaleString() : el.value.toLocaleString()}
+									</span>
+								</p>
+							</div>
+						`;
+					});
+					return `
+						<div class="chart_tooltip">
+							<p class='title'>
+								${params[0].axisValue}
+							</p>
+							${tooltipItem}
+						</div>
+					`;
+				};
+
+				const isMobile = window.innerWidth <= 1080;
+
+				option = {
+					legend: {
+						data: ['월별 예약 현황(명)'],
+						top: 0,
+						left: 0,
+						itemWidth: isMobile ? 10 : 12,
+						itemHeight: isMobile ? 10 : 12,
+						icon: 'circle',
+						textStyle: {
+							color: '#434343',
+							fontSize: isMobile ? 10 : 14
+						},
+						itemGap: isMobile ? 14 : 20,
+					},
+					xAxis: {
+						type: 'category',
+						data: getLast12Months(),
+						axisLine: {
+							show: false
+						},
+						axisTick: {
+							show: false
+						},
+						axisLabel: {
+							fontSize: isMobile ? 10 : 13,
+							color: '#6C757D'
+						}
+					},
+					yAxis: {
+						type: 'value',
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						axisTick: {
+							show: false
+						},
+						splitLine: {
+							lineStyle: {
+								color: 'rgba(0,0,0,0.08)'
+							}
+						},
+						axisLabel: {
+							fontSize: isMobile ? 10 : 13,
+							color: '#6C757D',
+							// formatter: '{value} 명'
+							formatter: '{value} '
+						}
+					},
+					tooltip: {
+						trigger: 'axis',
+						padding: [10, 10],
+						backgroundColor: '#ffffff',
+						borderColor: '#DEE2E6',
+						borderWidth: 1,
+						formatter: tooltipFormatter
+					},
+					series: [{
+							name: '직월별 예약 현황(명)약',
+							type: 'bar',
+							stack: 'total',
+							barWidth: isMobile ? '70%' : '40%',
+							itemStyle: {
+								borderRadius: isMobile ? [4, 4, 0, 0] : [10, 10, 0, 0],
+								color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+									{ offset: 0, color: '#82b1ff' },
+									{ offset: 0.5, color: '#2c7be5' },
+									{ offset: 1, color: '#155bb5' }
+								])
+							},
+							data: [5, 17, 13, 8, 8, 22, 9, 3, 14, 12, 2, 22, 10]
+						},
+					],
+					grid: {
+						right: '0%',
+						left: '0%',
+						bottom: '5%',
+						top: '10%',
+						containLabel: true
+					}
+				};
+
+			}
+
+			myChart.setOption(option);
+
+			echartsInstances.push(myChart);
+
+			const parent = el.parentElement;
+			if (parent) {
+				const ro = new ResizeObserver(() => {
+					myChart.resize();
+				});
+				ro.observe(parent);
+			}
+
+			window.addEventListener('resize', () => {
+				myChart.resize();
+			});
+		});
+	</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout biz_wrap pms_wrap manual_wrap sideopen" data-title="입장처리 방법" data-icon="ph-devices">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="pms_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">
+				<div class="content_title">
+					<p class="page_title">
+						<i class="ph-fill pph-devices icon"></i>
+			 			입장처리 방법
+					</p>
+				</div>
+				<div class="tab_wrap manual">
+					<div class="tab_navbox round_ver swiper tab_swiper">
+						<div class="swiper-wrapper">
+							<div class="tab_nav on swiper-slide">
+								<span class="link">1. APP 바코드 스캔</span>
+							</div>
+							<div class="tab_nav swiper-slide">
+								<span class="link">2. 입장처리 버튼</span>
+							</div>
+							<div class="tab_nav swiper-slide">
+								<span class="link">3. 고객정보 확인</span>
+							</div>
+						</div>
+					</div>
+					<div class="tab_contbox manual_conts">
+						<div class="tab_cont on">
+							<div class="titbox">
+								<span class="num">1</span>
+								<span class="tit">APP 바코드 스캔</span>
+							</div>
+							<div class="contbox">
+								<img src="../img/entrance_01.png" alt="" class="img">
+							</div>
+						</div>
+						<div class="tab_cont">
+							<div class="titbox">
+								<span class="num">2</span>
+								<span class="tit">입장처리 버튼</span>
+							</div>
+							<div class="contbox">
+								<img src="../img/entrance_02.png" alt="" class="img">
+							</div>
+						</div>
+						<div class="tab_cont">
+							<div class="titbox">
+								<span class="num">3</span>
+								<span class="tit">고객정보 확인</span>
+							</div>
+							<div class="contbox">
+								<img src="../img/entrance_03.png" alt="" class="img">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+		
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/pms_header.html', '#pms_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_PMS.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(3).addClass("show");
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(3).find(".acc_cont").show();
+				$(".sidenav .side_cont .menu_list_acco > .side_item").eq(3).find(".acc_cont .side_item").eq(0).addClass("active");
+			}, 100);
+		});
+	</script>
+	<script src="../js/common.js"></script>
+
+
+
+</body>
+
+</html>
