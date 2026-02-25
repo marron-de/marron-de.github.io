@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="biz_wrap pms_wrap login_wrap">
+
+		<div class="login_section">
+			<div class="login_box">
+				<div class="leftbox">
+					<div class="titbox">
+						<p class="tit">Login</p>
+						<p class="desc">Welcome back! <br class="tablet">Please enter your details.</p>
+					</div>
+					<form name="login_fm" id="login_fm" autocomplete="off" method="post" class="form">
+						<div class="input_wrap">
+							<div class="input_box">
+								<label class="label_text" for="user_id">ID</label>
+								<input class="input_text" id="user_id" name="user_id" type="text" placeholder="Enter your ID"  required="required" />
+							</div>
+							<div class="input_box">
+								<label class="label_text" for="user_pw">Password</label>
+								<input class="input_text" id="user_pw" name="user_pw" type="password" placeholder="••••••••" required="required" />
+							</div>
+						</div>
+						<div class="check_box">
+							<input class="input_check" type="checkbox" id="save_id" name="save_id" value="Y" />
+							<label class="label_check" for="save_id">Save ID</label>
+						</div>
+						<div class="button_box">
+							<button type="button" id="btn_login" class="button typeC full"
+								onclick="handleLogin()">Login</button>
+						</div>
+					</form>
+					<div class="descbox">
+						<p class="desc">
+							<i class="ph-bold ph-check icon"></i>
+							<span class="txt">
+								ID / PW 분실시 새로 변경 저장을 하셔야 합니다.
+							</span>
+						</p>
+						<p class="desc">
+							<i class="ph-bold ph-check icon"></i>
+							<span class="txt">
+								사용이 끝난 후 반드시 보안상 로그아웃을 눌러주세요.
+							</span>							
+						</p>
+						<p class="desc">
+							<i class="ph-bold ph-check icon"></i>
+							<span class="txt">
+								전화 연결이 어려울 경우 메일로 문의 부탁드립니다.
+								<br>
+								 (평일기준 9시~18시 / 점심시간 12시~13시)
+							</span>							
+						</p>
+					</div>
+					<div class="contact">
+						<div class="item">
+							<i class="ph-bold ph-phone-call icon"></i>
+							<p class="txt">
+								070-8276-1919 	
+							</p>
+						</div>
+						<div class="item">
+							<i class="ph-bold ph-envelope-simple icon"></i>
+							<p class="txt">tk@tktravelkoea.com</p>
+						</div>
+					</div>
+				</div>
+				<div class="rightbox">
+					<div class="topbox">
+						<div class="badge">공급처용</div>
+						<div class="logobox">
+							<img src="../img/tk_logo.png" />
+						</div>
+					</div>
+					<div class="txtbox">
+						<img src="../img/login_img.png" alt="" class="img">
+						<p class="tit">
+							PMS Center
+						</p>
+						<div class="descwrap">
+							<div class="descbox">
+								<p class="desc">
+									귀사의 무궁한 번영과 성공을 기원합니다.
+								</p>
+								<p class="desc">
+									해당 PMS 서비스는 공급사와 채널 예약을 연결해주는 허브 역활 기능을 합니다.
+								</p>
+								<p class="desc">
+									저희 TK트래블을 믿고 협력하여 주셔서 대단히 감사합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 아이디 모달 -->
+		<div id="idError_modal" class="modal">
+			<div class="modal_box">
+				<div class="modal_img">
+					<img src="../img//alert_login.png" alt="" class="img">
+				</div>
+				<p class="modal_tit">아이디를 입력해주세요</p>
+				<div class="modal_btnbox">
+					<button class="modal_btn button auto typeE modal_close">확인</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 비밀번호 모달 -->
+		<div id="pwdError_modal" class="modal">
+			<div class="modal_box">
+				<div class="modal_img">
+					<img src="../img//alert_login.png" alt="" class="img">
+				</div>
+				<p class="modal_tit">비밀번호를 입력해주세요.</p>
+				<div class="modal_btnbox">
+					<button class="modal_btn button auto typeE modal_close">확인</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 인증 모달 -->
+		<div id="certification_modal" class="modal">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">로그인 인증</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="login_fm" id="login_fm" autocomplete="off" method="post" class="form form_box">
+						<div class="input_box">
+							<label class="label_text">이름</label>
+							<input class="input_text" id="user_name" name="user_name" type="text" placeholder="이름을 입력해주세요." required/>
+						</div>
+						<div class="input_box">
+							<label class="label_text">직책</label>
+							<input class="input_text" id="user_position" name="user_position" type="text" placeholder="직책을 입력해주세요." required/>
+						</div>
+						<div class="input_box">
+							<label class="label_text">이메일 인증</label>
+							<div class="input_flex">
+								<input class="input_text w160" id="user_email1" name="user_phone" type="text" placeholder="email" required/>
+								<span class="input_txt label_text">@</span>
+								<input class="input_text" id="user_email2" name="user_phone" type="text" placeholder="example.com" required/>
+							</div>
+							<div class="input_flex">
+								<input class="input_text" id="user_emailPw" name="user_emailPw" type="text" placeholder="인증번호 4자리를 입력해주세요" required/>
+								<button type="button" class="input_btn emailPw_btn">인증하기</button>
+							</div>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">인증완료</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<script src="../js/common.js"></script>
+
+	<!-- 로그인 버튼 -->
+	<script>
+		function handleLogin() {
+			const userId = $("#user_id").val().trim();
+			const userPw = $("#user_pw").val().trim();
+			const userEmailPw = $("#user_emailPw").val().trim();
+
+			if (userId === "") {
+				$("#idError_modal").addClass("show");
+				$("#user_id").focus();
+				return;
+			}
+			if (userPw === "") {
+				$("#pwdError_modal").addClass("show");
+				$("#user_pw").focus();
+				return;
+			}
+
+			// 로그인 성공 시 이동
+			window.location.href = "../B2B/reservationList.html";
+		}
+
+		$("#certification_modal .emailPw_btn").click(function () {
+			$("#user_emailPw").addClass("show")
+		})
+
+	</script>
+
+</body>
+
+</html>
