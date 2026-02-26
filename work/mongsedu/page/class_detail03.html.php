@@ -62,8 +62,8 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                 </div>
                 <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03" class="show">수업소개</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01">수업비용</a></li>
@@ -94,9 +94,8 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="class_benefit">
                                             <div class="img_area">
                                                 <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit12.png" alt="">
-                                                <span>국내 유일한</span>
+                                                <span>국내 유일한 라셀 <br class="pc">한국 대표 사무소!</span>
                                                 <p>
-                                                    라셀 한국대표사무소!<br/>
                                                     공식 인증된 몽선생에서<br/>
                                                     직접 지도/관리 합니다
                                                 </p>

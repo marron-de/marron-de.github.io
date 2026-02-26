@@ -62,8 +62,8 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                 </div>
                 <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08" class="show">수업소개</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08_01">수업비용</a></li>
@@ -98,10 +98,10 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="class_benefit">
                                             <div class="img_area">
                                                 <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit17.png" alt="">
-                                                <span>오직 몽선생에서 제공하는</span>
+                                                <span>원어민 강사와 맞춤 수업</span>
                                                 <p>
-                                                    원어민 강사와 맞춤 수업<br/>
-                                                    빠른 속성 수업으로 영어 회화 실력 향상
+                                                    빠른 속성 수업으로<br>
+													영어 회화 실력 향상
                                                 </p>
                                             </div>
                                             <ul class="bnf_list">

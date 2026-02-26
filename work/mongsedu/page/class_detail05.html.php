@@ -62,8 +62,8 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                 </div>
                 <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail05" class="show">수업소개</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail05_01">수업비용</a></li>
@@ -97,9 +97,8 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="class_benefit">
                                             <div class="img_area">
                                                 <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit22.png" alt="">
-                                                <span>&nbsp;</span>
+                                                <span>꼼꼼한 학습관리!</span>
                                                 <p>
-                                                    꼼꼼한 학습관리!<br/>
                                                     검증된 몽선생이 제작한<br/>
                                                     아이엘츠 6.0 목표, 과외반
                                                 </p>

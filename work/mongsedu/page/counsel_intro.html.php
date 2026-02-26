@@ -34,49 +34,64 @@ if (!defined('_EYOOM_')) exit;
     <div class="link_area">
         <div class="container swiper link_swiper" data-gappc="10" data-gapmob="16" data-aos="fade-up">
 			<div class="swiper-wrapper counsel_link">
-				<a href="" class="link swiper-slide">
+				<a href="" class="link swiper-slide"><!--신규페이지작업-->
 					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon1.png" alt="" class="icon">
+						<div class="swiper icon_swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide item">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01_1.png" alt="" class="icon">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01_2.png" alt="" class="icon">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink01_3.png" alt="" class="icon">
+								</div>
+							</div>
+						</div>
 					</div>
+					<!-- <div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon1.png" alt="" class="icon">
+					</div> -->
 					<p class="tit">상담 가능 분야</p>
 				</a>
-				<a href="" class="link swiper-slide">
+				<a href="https://pf.kakao.com/_fxmxmWV" class="link swiper-slide" target="_blank">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon2.png" alt="" class="icon">
 					</div>
 					<p class="tit">카톡 빠른상담</p>
 				</a>
-				<a href="" class="link swiper-slide">
+				<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon3.png" alt="" class="icon">
 					</div>
 					<p class="tit">방문상담</p>
 				</a>
-				<a href="" class="link swiper-slide">
+				<a href="" class="link swiper-slide"><!--신규페이지작업-->
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon4.png" alt="" class="icon">
 					</div>
 					<p class="tit">상담사 소개</p>
 				</a>
-				<a href="" class="link swiper-slide">
+				<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon5.png" alt="" class="icon">
 					</div>
 					<p class="tit">최신 설명회</p>
 				</a>
-				<a href="" class="link swiper-slide">
+				<a href="http://www.smfair.kr/" target="_blank" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon6.png" alt="" class="icon">
 					</div>
 					<p class="tit">유학박람회</p>
 				</a>
-				<a href="" class="link swiper-slide">
+				<a href="https://www.youtube.com/@%EB%AA%BD%EC%84%A0%EC%83%9D" target="_blank" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon7.png" alt="" class="icon">
 					</div>
 					<p class="tit">몽선생특강</p>
 				</a>
-				<a href="" class="link swiper-slide">
+				<a href="<?php echo G5_URL ?>/page/?pid=map" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_tab_icon8.png" alt="" class="icon">
 					</div>
@@ -232,8 +247,8 @@ if (!defined('_EYOOM_')) exit;
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail08'">
                                 <div class="img_area">
                                     <p class="nation">싱가포르</p>
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel03.jpg" alt="홍콩 대학 상담">
-									<div class="shape color3"></div>
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel07.jpg" alt="홍콩 대학 상담">
+									<div class="shape color7"></div>
 									<div class="img_bottom">
 										<div class="flagbox">
 											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
@@ -1149,9 +1164,9 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="presentation_list tabs_cont">
                 <ul class="panel">
-                    <li id="content-1">
-                        <ul>
-                            <li>
+                    <li id="content-1" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -1182,11 +1197,11 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
 									<p class="title">
@@ -1217,11 +1232,11 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
-                            <li class="end">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -1252,11 +1267,11 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none">신청마감</a>
                                 </div>
                             </li>
-                            <li class="end">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -1287,15 +1302,15 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none">신청마감</a>
                                 </div>
                             </li>
                         </ul>
                     </li>					
-                    <li id="content-2">
-                         <ul>
-                            <li>
+                    <li id="content-2" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -1327,14 +1342,14 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="btn_area">
                                     <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
                         </ul>
                     </li>
-                    <li id="content-3">
-                         <ul>
-                            <li>
+                    <li id="content-3" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
 									<p class="title">
@@ -1365,15 +1380,15 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
                                 </div>
                             </li>
                         </ul>                        
                     </li>
-                    <li id="content-4">
-                         <ul>
-                            <li class="end">
+                    <li id="content-4" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -1404,8 +1419,8 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none">신청마감</a>
                                 </div>
                             </li>
                         </ul>
@@ -1452,24 +1467,26 @@ if (!defined('_EYOOM_')) exit;
     </div>
 
     <div class="banner_area full counsel_sec5">
-		<div class="imgbox">
-			<img class="pc" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_counsel_img.png" alt="">
-			<img class="tablet" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_counsel_intro_m.jpg" alt="">
-		</div>
-        <div class="container" data-aos="fade-up">
-			<div class="txtbox">
-				<div class="deco" data-aos="fade"></div>
-				<p class="sub">50여개 학교 참석!</p>
-				<p class="tit">
-					몽선생이 주관하는 <br class="tablet">
-					<span class="color">유학 박람회</span> 보기
-				</p>
+		<a href="http://www.smfair.kr/" target="_blank" class="link">
+			<div class="imgbox">
+				<img class="pc" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_counsel_img.png" alt="">
+				<img class="tablet" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_counsel_intro_m.jpg" alt="">
 			</div>
-		</div>
+			<div class="container" data-aos="fade-up">
+				<div class="txtbox">
+					<div class="deco" data-aos="fade"></div>
+					<p class="sub">50여개 학교 참석!</p>
+					<p class="tit">
+						몽선생이 주관하는 <br class="tablet">
+						<span class="color">유학 박람회</span> 보기
+					</p>
+				</div>
+			</div>
+		</a>
     </div>
 </div>
 
-<div class="cm_modal mentor_modal counsel_sec6">	
+<div class="cm_modal mentor_modal">	
 	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
 		<div class="cm_modal_box swiper mentorpop_swiper">
@@ -1482,11 +1499,11 @@ if (!defined('_EYOOM_')) exit;
 						<div class="txtbox">
 							<div class="tagbox">
 								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">싱가포르</span>
 							</div>
 							<p class="title">
 								<span class="name">대표원장 몽선생</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">아시아 교육 전문가</span>
 							</p>
 						</div>
 					</div>
@@ -1501,16 +1518,19 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									현) 주식회사 몽선생대표
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									현) SM글로벌 에듀케이션 원장
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
+									전) 사립대학 REG 그룹, 한국사무소 소장
 								</p>
 								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									전) 싱가포르 교육부 Edutrust 감사 업무 팀장
+								</p>
+								<p class="desc">
+									 전) 싱가포르 사립대학 총괄매니저 10년 경력
 								</p>
 							</div>
 						</div>
@@ -1518,7 +1538,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								실제 경험 노하우를 바탕으로 모든 학생들이 성공유학이라는 목표를 이루도록 끈임없이 지도하는 것이 저희 유학원의 목표 입니다. 단 한명의 낙오자가 없도록 아낌없이 지원하겠습니다.
 							</p>
 						</div>
 					</div>
@@ -1531,12 +1551,11 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">한국</span>
 							</div>
 							<p class="title">
 								<span class="name">이지형 부원장</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">칭화대 국제관계학 석사</span>
 							</p>
 						</div>
 					</div>
@@ -1551,16 +1570,19 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									이화여대 정치외교 학사
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									칭화대 국제관계 석사
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
+									RISE Education 본사팀장
 								</p>
 								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									강남캠퍼스 원장역임
+								</p>
+								<p class="desc">
+									영유아 주니어 교육 및 입시교육상담 경력 10년 이상
 								</p>
 							</div>
 						</div>
@@ -1568,11 +1590,8 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
-								<br><br>
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
-								<br><br>
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								강남 유명 영유아 교육기관에서 10년간 부모님 상담을 해왔습니다. 따라서 국제학교 로드맵에 대해서 가장 확실하고 현실성있는 상담을 제공하고 아이 상황에 따라 적합한 학교를 선정해드릴 수 있습니다!
+							</p>
 						</div>
 					</div>
 				</div>
@@ -1583,12 +1602,11 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">싱가포르</span>
 							</div>
 							<p class="title">
 								<span class="name">유성준 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">NUS 국립대 출신</span>
 							</p>
 						</div>
 					</div>
@@ -1603,16 +1621,16 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									National University of Singapore, 경영학과 학사
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									University College London, 교육학 석사
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
+									(전) British Education Korea, 에이레벨 경제/경영학 강사
 								</p>
 								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									(전) Dulwich College Seoul, 대학 진학 카운슬링 재직
 								</p>
 							</div>
 						</div>
@@ -1620,7 +1638,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								싱가포르 국립대의 초기 세대 유학생으로서 변화하는 입시 과정의 핵심을 누구보다 잘 이해하고 있습니다. 학생 중심의, 효율적인, 그리고 성공적인 입시를 책임져 드립니다. 현지 대학 출신자가 무엇이 다른지 직접 경험해보세요.
 							</p>
 						</div>
 					</div>
@@ -1634,11 +1652,11 @@ if (!defined('_EYOOM_')) exit;
 						<div class="txtbox">
 							<div class="tagbox">
 								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">홍콩</span>
 							</div>
 							<p class="title">
 								<span class="name">이진영 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">홍콩대 의대생 출신</span>
 							</p>
 						</div>
 					</div>
@@ -1653,16 +1671,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									Hong Kong University, 의과대학 학사
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									아시아 대학 의치약대 입시 전문
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									SAT/AP/IB 다년간 지도
 								</p>
 							</div>
 						</div>
@@ -1670,7 +1685,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								다년간 학생들을 가르치면서 홍콩의 대학에서 원하는 인재상을 파악했습니다. 또한 외국인에게 더욱 까다로운 의치약대 입시 과정을 경험했기 때문에 해당 분야 학생들을 전문적으로 지도할 수 있습니다. 현직 홍콩대학교 학생으로서 생생하고 정확한 맞춤 입시 가이드를 해드릴 것을 약속 드립니다.
 							</p>
 						</div>
 					</div>
@@ -1684,11 +1699,11 @@ if (!defined('_EYOOM_')) exit;
 						<div class="txtbox">
 							<div class="tagbox">
 								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">싱가포르</span>
 							</div>
 							<p class="title">
 								<span class="name">Tei 실장</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">싱가포르 사립대 출신</span>
 							</p>
 						</div>
 					</div>
@@ -1703,16 +1718,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									싱가포르 사립대졸업
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									누적 학생관리 2천명 이상
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									 싱가포르 체류경력5년+
 								</p>
 							</div>
 						</div>
@@ -1720,7 +1732,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								미국과 싱가포르 유학경험을 통해 학생들이 현지에서 무엇이 필요한지 정확히 알고 있습니다. 싱가포르 사립대 졸업을 통해 학생들이 졸업 후 현지에서 취업까지 할 수 있도록 적극적으로 지원하도록 하겠습니다
 							</p>
 						</div>
 					</div>
@@ -1733,12 +1745,12 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">싱가포르</span>
+								<span class="tag">홍콩</span>
 							</div>
 							<p class="title">
 								<span class="name">김형수 팀장</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">서강대 shape mba 재학중</span>
 							</p>
 						</div>
 					</div>
@@ -1753,16 +1765,16 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									서강대 SHAPE MBA 수료(University of Derby)
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									해외 대학 입학 행정 6년 경력
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
+									비즈니스 (상경계열) 수업 전담 5년 경력
 								</p>
 								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									아시아 TOP 명문대 진학 상담
 								</p>
 							</div>
 						</div>
@@ -1770,7 +1782,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								국내에서 유일하게 아시아 명문대 카운셀러 역할을 7년동안 경험하며, 다양한 학력자의 입학 사례와 합격케이스를 직접 관리했습니다! 축적된 데이터와 상담경험으로 확실한 입학 안내를 약속합니다!
 							</p>
 						</div>
 					</div>
@@ -1788,7 +1800,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<p class="title">
 								<span class="name">이수연 실장</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">말레이시아 사립대 교직원 출신</span>
 							</p>
 						</div>
 					</div>
@@ -1803,16 +1815,16 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									말레이시아 사립대 한국사무소 교직원 경력 10년
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									학생 상담, 유학수속 전문 코디네이터
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
+									국-말레이시아 대학 연수/교류 프로그램 기획, 운영
 								</p>
 								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									해외인턴십 기획/코디/운영
 								</p>
 							</div>
 						</div>
@@ -1820,7 +1832,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								10년이 넘는 시간동안 여러 학생들이 각자의 꿈을 찾아 말레이시아를 발판 삼아 나아가는 모습을 지켜봐 왔습니다. 여러분들의 꿈과 방향을 찾는데 등대 역할을 할 수 있도록 확실한 대학 추천을 약속합니다!
 							</p>
 						</div>
 					</div>
@@ -1833,12 +1845,11 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">한국</span>
 							</div>
 							<p class="title">
 								<span class="name">김소연 실장</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">칭화대 국제관계 석사</span>
 							</p>
 						</div>
 					</div>
@@ -1853,16 +1864,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									Kaplan 재단 교직원 경력 5년
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									미국 대학 행정/수속 전문
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									영국 에식스대학교 졸업
 								</p>
 							</div>
 						</div>
@@ -1870,7 +1878,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								아시아에서 해외대학 캠퍼스를 졸업하고, KAPLAN 교육재단에서 5년 동안 교직원으로 활동하며 실제로 같은 상황의 경험을 해왔습니다. 학생들의 진로가 정말 현실적으로 나아질 수 있도록 책임감 있는 상담을 약속합니다.
 							</p>
 						</div>
 					</div>
@@ -1883,12 +1891,12 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
 								<span class="tag">말레이시아</span>
+								<span class="tag">싱가포르</span>
 							</div>
 							<p class="title">
 								<span class="name">홍수진 실장</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">교육업 경력 10년</span>
 							</p>
 						</div>
 					</div>
@@ -1903,16 +1911,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									한국외대 TESOL이수
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									서강대학교 학사졸업
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									외국계교육기업/학원 경력 다수
 								</p>
 							</div>
 						</div>
@@ -1920,7 +1925,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								10년 이상 영어유치원 및 외국계 교육 기업과 학원에서 아이들의 학교 입학에 관련한 경험을 하였고 각 상황에 따라 국제학교 입학할 수 있는 방법에 대해서 고민해왔습니다. 어려운 시험 제가 도와드리겠습니다.
 							</p>
 						</div>
 					</div>
@@ -1985,11 +1990,10 @@ if (!defined('_EYOOM_')) exit;
 						<div class="txtbox">
 							<div class="tagbox">
 								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
 							</div>
 							<p class="title">
 								<span class="name">Dennis 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">연세대학교 컴퓨터과학</span>
 							</p>
 						</div>
 					</div>
@@ -2004,16 +2008,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									연세대학교 컴퓨터과학 졸업
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									국내 대기업 AI개발자
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									과외/학생수업 지도 10년경력
 								</p>
 							</div>
 						</div>
@@ -2021,13 +2022,13 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								막막한 대학 전공 수업을 보다 쉽게 접하도록 컴퓨터 전공에 대한 이해를 돕고, IT 전공자들의 다양한 현업 사례들을 통해 진로 멘토가 되어드리겠습니다. 실제 면접관으로 참여하면서 얻은 경험으로 취업에 필요한 노하우를 전달 드리겠습니다.
 							</p>
 						</div>
 					</div>
 
 				</div>
-				<div class="swiper-slide item">
+				<div class="swiper-slide item"> <!-- 수정 예정 -->
 					<div class="infobox">
 						<div class="thumbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit12.png" alt="" class="img">
@@ -2039,7 +2040,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<p class="title">
 								<span class="name">조수호 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">라셀 예술대 그래픽</span>
 							</p>
 						</div>
 					</div>
@@ -2085,11 +2086,11 @@ if (!defined('_EYOOM_')) exit;
 						<div class="txtbox">
 							<div class="tagbox">
 								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">미국</span>
 							</div>
 							<p class="title">
 								<span class="name">이희재 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">미국 UC 버클리대학 출신</span>
 							</p>
 						</div>
 					</div>
@@ -2104,16 +2105,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									미국대학 자소서/인터뷰 코칭전문
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									CC 편입 전담관리
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									학생 영어과외 경력 다수
 								</p>
 							</div>
 						</div>
@@ -2121,7 +2119,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								청소년기 시절부터 미국에서 생활하며 최근까지 편입이라는 입시를 치렀기 때문에 누구보다 입시 트렌드에 잘 따라갈 자신이 있습니다. 또한, 이루어 내기 힘들다는 UC 내의 편입을 UC Berkeley 입학으로 성공적인 결과를 거두었기 때문에 제 성공 경험을 바탕으로 학생들에게 큰 힘이 되어줄 자신이 있습니다.
 							</p>
 						</div>
 					</div>
@@ -2134,12 +2132,11 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">미국</span>
 							</div>
 							<p class="title">
 								<span class="name">태정인 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">UCLA 정치학과 졸업</span>
 							</p>
 						</div>
 					</div>
@@ -2154,16 +2151,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									미국 대학원 GRE Analytical Writing 티칭 및 대학입시 코칭
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									UC계열 편입전담관리
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									학부때 여러단체 및 다양한 활동에서 임원직책수행
 								</p>
 							</div>
 						</div>
@@ -2171,7 +2165,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								미국유학의 실질경험에 기반하여 UC계열 편입 및 신입학 학생을 위한 지원전략, 원서지원시스템 과정 및 전공관련 상담 등을 확실하게 가이드 할 수 있습니다. 합격 후 학교 선택 및 지원과정에 필요한 서류준비와 입학준비 및 학교생활 전반에 관해 자세하고 친절한 코칭과 확실한 도움을 드리겠습니다.
 							</p>
 						</div>
 					</div>
@@ -2185,11 +2179,11 @@ if (!defined('_EYOOM_')) exit;
 						<div class="txtbox">
 							<div class="tagbox">
 								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">미국</span>
 							</div>
 							<p class="title">
 								<span class="name">임지영 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">미국 조지타운대학 출신</span>
 							</p>
 						</div>
 					</div>
@@ -2204,16 +2198,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									다수 장학금 성공사례
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
+									미국대학 자소서/인터뷰 코칭전문
 								</p>
 								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									CC 편입 전담관리
 								</p>
 							</div>
 						</div>
@@ -2221,7 +2212,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								미국 주요 주립대에서 4년 장학금과 연구 자금을 받고 2년 다닌 후 동부의 사립대학 Georgetown으로 편입하였습니다. 그 외에도 신입/편입 UC Berkeley, NYU를 포함한 Top 30 대학들에도 합격했었기에 학생들의 미국대학의 신입학과 명문대로의 편입학 과정에 대한 실경험과 노하우를 전달하면서 확실하게 코칭해 드릴 수 있습니다.
 							</p>
 						</div>
 					</div>
@@ -2235,11 +2226,11 @@ if (!defined('_EYOOM_')) exit;
 						<div class="txtbox">
 							<div class="tagbox">
 								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">영국</span>
 							</div>
 							<p class="title">
 								<span class="name">조서연 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">LSE 런던정경대 출신</span>
 							</p>
 						</div>
 					</div>
@@ -2254,16 +2245,7 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
-								</p>
-								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
-								</p>
-								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									국내 외국계 로펌 Paralegal 경력 다수
 								</p>
 							</div>
 						</div>
@@ -2271,25 +2253,24 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								영국 대학 입시를 스스로 준비한 경험을 바탕으로 ‘합격하는’ 자소서 준비를 도와드립니다. 특히 법학과 지원자들에게는 실제 직무 경험을 바탕으로 얻은 인사이트를 통해 차별화된 자소서 작성 노하우를 전달 드리겠습니다.
 							</p>
 						</div>
 					</div>
 
 				</div>
-				<div class="swiper-slide item">
+				<div class="swiper-slide item"> <!-- 수정 예정 -->
 					<div class="infobox">
 						<div class="thumbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit17.png" alt="" class="img">
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">캐나다</span>
 							</div>
 							<p class="title">
 								<span class="name">이은빈 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">듀오링고 만점에 가까운 실력자</span>
 							</p>
 						</div>
 					</div>
@@ -2327,19 +2308,18 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 
 				</div>
-				<div class="swiper-slide item">
+				<div class="swiper-slide item"> <!-- 수정 예정 -->
 					<div class="infobox">
 						<div class="thumbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit18.png" alt="" class="img">
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">영국</span>
 							</div>
 							<p class="title">
 								<span class="name">Amy 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">Middlesex University London</span>
 							</p>
 						</div>
 					</div>
@@ -2377,19 +2357,18 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 
 				</div>
-				<div class="swiper-slide item">
+				<div class="swiper-slide item"> <!-- 수정 예정 -->
 					<div class="infobox">
 						<div class="thumbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit19.png" alt="" class="img">
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">프랑스</span>
 							</div>
 							<p class="title">
 								<span class="name">Jenna 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">인사이드 MBA 졸업</span>
 							</p>
 						</div>
 					</div>
@@ -2426,7 +2405,7 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 					</div>
 				</div>
-				<div class="swiper-slide item">
+				<div class="swiper-slide item"> <!-- 수정 예정 -->
 					<div class="infobox">
 						<div class="thumbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit20.png" alt="" class="img">
@@ -2438,7 +2417,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<p class="title">
 								<span class="name">lya 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">Laguna State University</span>
 							</p>
 						</div>
 					</div>
@@ -2477,15 +2456,15 @@ if (!defined('_EYOOM_')) exit;
 
 				</div>
 
-				<div class="swiper-slide item">
+				<div class="swiper-slide item"> <!-- 수정 예정 -->
 					<div class="infobox">
 						<div class="thumbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit21.png" alt="" class="img">
 						</div>
 						<div class="txtbox">
 							<div class="tagbox">
-								<span class="tag">HOT 인기멘토</span>
-								<span class="tag">말레이시아</span>
+								<span class="tag">베트남</span>
+								<span class="tag">태국</span>
 							</div>
 							<p class="title">
 								<span class="name">김연수 실장</span>
@@ -2504,16 +2483,10 @@ if (!defined('_EYOOM_')) exit;
 							<p class="career_tit">주요이력</p>
 							<div class="career_descbox">
 								<p class="desc">
-									말레이시아 헬프 대학교 졸업 (University of Derby)
+									유학 행정 경력 8년 이상
 								</p>
 								<p class="desc">
-									세기 대학원 졸업 (University of Sunderland)
-								</p>
-								<p class="desc">
-									10년간 말레이시아 국제학교 입학생 교육컨설팅 (초/중/고)
-								</p>
-								<p class="desc">
-									한국 유학생들을 관리하는 현지 코디네이터로 활동
+									대학 원서접수, 비자 신청 및 유학 행정 경력 다수
 								</p>
 							</div>
 						</div>
@@ -2521,13 +2494,13 @@ if (!defined('_EYOOM_')) exit;
 						<div class="cmtbox">
 							<p class="cmt_tit">멘토 코멘트</p>
 							<p class="cmt_desc">
-								말레이시아 예비대학부터 대학원까지 말레이시아 고등교육기관의 교육을 모두 경험하였고 10년간 국제학교 학생들을 대상으로 교육 컨설팅을 하면서 누구보다 진심으로 교육업에 진심으로 임하였습니다. 말레이시아에서 10년 넘는 현지 경험을 바탕으로 조기 유학의 성공적인 첫 발걸음을 내딛을 수 있도록 노력하겠습니다.
+								대학 입학 행정을 담당하여 학생 유형별 다양한 지원 경험을 두루 갖추고 있습니다. 어떠한 경우라도 틀림없이 지원 가능하도록 철저한 입학 수속과 빈틈없는 수속 지원을 약속 드립니다.
 							</p>
 						</div>
 					</div>
 
 				</div>
-				<div class="swiper-slide item">
+				<div class="swiper-slide item"> <!-- 수정 예정 -->
 					<div class="infobox">
 						<div class="thumbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit22.png" alt="" class="img">
@@ -2539,7 +2512,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<p class="title">
 								<span class="name">Raphael 멘토</span>
-								<span class="desc">서강대 경영대학원 출신</span>
+								<span class="desc">국제학교 출신 교포 강사</span>
 							</p>
 						</div>
 					</div>

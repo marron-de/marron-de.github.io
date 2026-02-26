@@ -129,7 +129,10 @@ if (!defined('_EYOOM_')) exit;
                                     <div class="frame-titbox between">
                                         <span class="frame-title">말레이시아 무료수속 가능학교 리스트</span >
 										<button type="button" class="school_moreview">
-											<span class="txt">30개 전체보기</span>
+											<span class="txt">
+												<span class="pc">30개</span>
+												 전체보기
+											</span>
 											<span class="arrow"></span>
 										</button>
                                     </div>
@@ -347,7 +350,10 @@ if (!defined('_EYOOM_')) exit;
                                     <div class="frame-titbox between">
                                         <span class="frame-title">싱가포르 무료수속 가능학교 리스트</span >
 										<button type="button" class="school_moreview">
-											<span class="txt">10개 전체보기</span>
+											<span class="txt">
+												<span class="pc">10개</span>
+												 전체보기
+											</span>
 											<span class="arrow"></span>
 										</button>
                                     </div>

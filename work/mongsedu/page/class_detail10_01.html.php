@@ -62,8 +62,8 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                 </div>
                 <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail10">수업소개</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail10_01" class="show">수업비용</a></li>

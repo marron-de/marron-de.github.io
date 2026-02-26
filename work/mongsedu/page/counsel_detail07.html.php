@@ -122,7 +122,7 @@ if (!defined('_EYOOM_')) exit;
 											싱가포르 사립대 상담은 지난 10년 이상 누적관리 5천명 이상의 관리 경험과 실제 졸업한 경험을 바탕으로 학교 특징비교, 전공추천, 취업로드맵, 유학비용 예산까지 원스톱으로 확인해볼 수 있는 상담입니다
 										</p>
 									</div>
-									<div class="counselingbox">
+									<div class="counselingbox ver2">
 										<div class="box_tit">상담 가능학교</div>
 										<div class="box_list">
 											<div class="item">

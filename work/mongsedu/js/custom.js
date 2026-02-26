@@ -297,15 +297,19 @@ $(".top_banner .close_btn").click(function () {
 
 // header nav
 $(document).on('mouseenter', '.h_bottom .h_nav > li', function () {
-    const li = $(this);
-	li.addClass('on');
-    if (li.children('.h_nav_ul').length) {
-        $('.h_bottom').addClass('hover');
+	if (window.innerWidth > 1080) {
+        const li = $(this);
+        li.addClass('on');
+        if (li.children('.h_nav_ul').length) {
+            $('.h_bottom').addClass('hover');
+        }
     }
 });
 $(document).on('mouseleave', '.h_bottom .h_nav > li', function () {
-    $(this).removeClass('on');
-    $('.h_bottom').removeClass('hover');
+   if (window.innerWidth > 1080) {
+        $(this).removeClass('on');
+        $('.h_bottom').removeClass('hover');
+    }
 });
 $(document).on('mouseenter', '.h_bottom .h_nav_ul > li > a', function () {
     const li = $(this).parent('li');
@@ -386,19 +390,21 @@ function main_sch_popup() {
 	$(".main-contents .mv_wrap .text_area .sch_popup").addClass("show");
 }
 const sampSwiper = new Swiper(".main-contents .sampSwiper", {
-	effect: 'cards',
-	direction: 'vertical',
+	effect: window.innerWidth <= 1080 ? 'slide' : 'cards',
+	direction: 'horizontal',
 	// grabCursor: true,
 	loop:true,
+	speed:500,
 	cardsEffect: {
 		perSlideRotate: 0, 
 		perSlideOffset: 10,
 		rotate: false,
 	},
+	spaceBetween: 20,
 	pagination: {
-	el: '.sampSwiper .pagination',
-	type: 'custom',
-	clickable: true,
+		el: '.sampSwiper .pagination',
+		type: 'custom',
+		clickable: true,
 		renderCustom: function (swiper, current, total) {
 			return '<span class="swiper-pagination-current">' + current + '</span>' + '<span class="swiper-pagination-bar"></span>' + '<span class="swiper-pagination-total">' + total + '</span>';
 		}
@@ -422,7 +428,13 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 			this.el.classList.add(color + '_ver');
 		}
 	},
-	
+	breakpoints: {
+		1080: {
+			direction: 'vertical',
+            effect: 'cards',
+			spaceBetween: 0,
+		},
+	},	
 });
 const icon_swiper = new Swiper(".icon_swiper", {
 	direction: 'vertical',
@@ -765,25 +777,53 @@ const mentor_swiper2 = new Swiper('.mentor_swiper.ver2', {
 })
 
 // 상담안내
-const prdservice_swiper = new Swiper('.prdservice_swiper', {
-	observer: true,
-	observeParents: true,
-	centeredSlides: true,
-	loop:true,
-	speed: 500,
-	slidesPerView: 'auto',
-	spaceBetween: 16,
-	grabCursor: true,
-	navigation: {
-		nextEl: ".prdservice_swiper .next_btn",
-		prevEl: ".prdservice_swiper .prev_btn",
-	},
-	breakpoints: {
-		1080: {
-			spaceBetween: 24,
-		},
-	},
-})
+$('.prdservice_swiper').each(function () {
+  const $swiper = $(this);
+  const isVisible = $swiper.closest('.tab_cont').hasClass('on');
+
+  new Swiper(this, {
+    observer: true,
+    observeParents: true,
+    centeredSlides: true,
+    loop: isVisible, // 처음에 보이는 것만 loop
+    speed: 500,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    grabCursor: true,
+    navigation: {
+      nextEl: $swiper.find('.next_btn')[0],
+      prevEl: $swiper.find('.prev_btn')[0],
+    },
+    breakpoints: {
+      1080: {
+        spaceBetween: 24,
+      },
+    }
+  });
+
+});
+$('.page-procedureban .prd_service .btn_area .btn').on('click', function () {
+  const index = $(this).parent().index();
+  const $wrap = $(this).closest('.tab_wrap');
+  const $contents = $wrap.find('.tab_cont');
+  const $activeCont = $contents.eq(index);
+
+  setTimeout(function () {
+    $activeCont.find('.prdservice_swiper').each(function () {
+
+      const swiper = this.swiper;
+      if (!swiper) return;
+      if (!swiper.params.loop) {
+        swiper.params.loop = true;
+        swiper.loopCreate();
+      }
+      swiper.update();
+      swiper.slideToLoop(0, 0); 
+    });
+  }, 50);
+});
+
+
 
 // 몽쌤소개
 const company_swiper = new Swiper('.company_swiper', {
@@ -927,6 +967,24 @@ const singa_swiper = new Swiper('.singa_swiper', {
 
 /* 모바일 */
 
+// header nav
+$(document).on('click', '.h_bottom .h_nav > li > a.link', function (e) {
+    if (window.innerWidth <= 1080) {
+        const li = $(this).parent('li');
+        
+        if (li.children('.h_nav_ul').length > 0) {
+            e.preventDefault();
+
+            if (li.hasClass('on')) {
+                li.removeClass('on');
+            } else {
+                $('.h_bottom .h_nav > li').removeClass('on');
+                li.addClass('on');
+            }
+        }
+    }
+});
+
 // 상단배너 닫기
 $(document).ready(function () {
 	if ($(window).width() < 1080) {
@@ -936,12 +994,36 @@ $(document).ready(function () {
 				$('.top_banner').addClass('hide');
 			}
 		});
-
-		$('.header .h_inner .back_btn').on('click', function() {
-			window.history.back(); 
-		});
 	}
 });
+
+// 상단배너 오늘더이상보지않기
+(() => {
+    const cookieName = 'top_banner_hide';
+    const cookieValue = document.cookie.match('(^|;) ?' + cookieName + '=([^;]*)(;|$)');
+    const isHide = cookieValue ? cookieValue[2] : null;
+
+    if (isHide === 'Y') {
+        const target = document.querySelector('.top_banner');
+        if (target) target.style.display = 'none';
+    }
+})();
+$(document).ready(function () {
+    const banner = $('.top_banner');
+    const cookieName = 'top_banner_hide';
+
+    $('.today_btn').on('click', function () {
+        setCookie(cookieName, 'Y', 1);
+        banner.addClass('hide');
+    });
+
+    function setCookie(name, value, exp) {
+        const date = new Date();
+        date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+        document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+    }
+});
+
 
 // mobile nav active
 function setActiveNavi() {
@@ -1011,12 +1093,18 @@ $(document).ready(function () {
 			$('.counsel-btn, .eb-backtotop').addClass('hide');
 			$('.navibar').addClass('hide');
 
-			if (isClassDetail) {
+			if (isClassDetail) { //수업듣기
 				$('.page-detail .frame-16 .frame-1d').prependTo('.page-detail .frame-157');
 				$('.page-detail .frame-1c').appendTo('.page-detail .frame-152');
+
+				$('.header .h_inner .back_btn').on('click', function() {
+					const pidValue = "class_intro"; 
+					const targetUrl = `${window.location.origin}/page/?pid=${pidValue}`;
+					window.location.href = targetUrl;
+				});
 			}
 
-			if (isProcedureDetail) {
+			if (isProcedureDetail) { //수속하기
 				$('.page-detail .frame-16').prependTo('.page-detail .frame-14f');
 
 				const navItems = $('.page-detail .floating_cont .frame-152');
@@ -1035,13 +1123,24 @@ $(document).ready(function () {
 						$this.addClass('on');
 					}
 				});
+
+				$('.header .h_inner .back_btn').on('click', function() {
+					const pidValue = "procedure_intro"; 
+					const targetUrl = `${window.location.origin}/page/?pid=${pidValue}`;
+					window.location.href = targetUrl;
+				});
 			}
 
-			if (isCounselDetail) {				
+			if (isCounselDetail) { //상담받기				
 				$('.page-detail .frame-16').prependTo('.page-detail .frame-14f');
+
+				$('.header .h_inner .back_btn').on('click', function() {
+					const pidValue = "counsel_intro"; 
+					const targetUrl = `${window.location.origin}/page/?pid=${pidValue}`;
+					window.location.href = targetUrl;
+				});
 			}
 		}
-
 
 	};
 	handleElementMove();
@@ -1072,3 +1171,5 @@ $(document).ready(function () {
 	};
 	handleElementMove();
 });
+
+

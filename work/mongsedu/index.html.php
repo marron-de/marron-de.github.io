@@ -33,49 +33,49 @@ if (!defined('_EYOOM_')) exit;
 								<span class="arrow"></span>
 							</button>
 							<ul class="linkbox">
-								<li><a href="" class="link">말레이시아 국제학교</a></li>
-								<li><a href="" class="link">싱가포르 사립대</a></li>
-								<li><a href="" class="link">싱가포르/홍콩 국립대</a></li>
-								<li><a href="" class="link">싱가포르 예술대</a></li>
-								<li><a href="" class="link">말레이시아 대학</a></li>
-								<li><a href="" class="link">송도/서강 글로벌캠퍼스</a></li>
-								<li><a href="" class="link">한국/아시아 국제학교</a></li>
-								<li><a href="" class="link">미국 대학 TOP100</a></li>
+								<li><a href="<?php echo G5_URL ?>/page/?pid=counsel_detail01" class="link">말레이시아 국제학교</a></li>
+								<li><a href="<?php echo G5_URL ?>/page/?pid=counsel_detail07" class="link">싱가포르 사립대</a></li>
+								<li><a href="<?php echo G5_URL ?>/page/?pid=counsel_detail09" class="link">싱가포르/홍콩 국립대</a></li>
+								<li><a href="<?php echo G5_URL ?>/page/?pid=counsel_detail08" class="link">싱가포르 예술대</a></li>
+								<li><a href="<?php echo G5_URL ?>/page/?pid=counsel_detail06" class="link">말레이시아 대학</a></li>
+								<li><a href="<?php echo G5_URL ?>/page/?pid=counsel_detail10" class="link">송도/서강 글로벌캠퍼스</a></li>
+								<li><a href="<?php echo G5_URL ?>/page/?pid=counsel_detail05" class="link">국제학교 영어진단 테스트</a></li>
+								<li><a href="" class="link">아시아+미국 대학</a></li><!--신규페이지작업-->
 							</ul>
 						</div>
 					</div>
                     <div class="tag_area swiper tab_swiper" data-gappc="6" data-gapmob="6">
 						<div class="swiper-wrapper">
-							<a href="" class="swiper-slide">말레이시아 국제학교</a>
-							<a href="" class="swiper-slide">싱가폴사립대</a>
-							<a href="" class="swiper-slide">싱가폴예술대</a>
-							<a href="" class="swiper-slide">말레이시아대학</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=counsel_detail01" class="swiper-slide">말레이시아 국제학교</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=counsel_detail07" class="swiper-slide">싱가폴사립대</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=counsel_detail08" class="swiper-slide">싱가폴예술대</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=counsel_detail06" class="swiper-slide">말레이시아대학</a>
 						</div>
                     </div>
                 </div>
                 <div class="swiper sampSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-color="white">
+                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv01.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv01_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="black">
+                        <div class="swiper-slide" data-color="black" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv02.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv02_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="black">
+                        <div class="swiper-slide" data-color="black" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv03.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv03_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="white">
+                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv04.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv04_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="white">
+                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv05.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv05_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="white">
+                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv06.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv06_mob.png" class="tablet">
 						</div>
@@ -87,10 +87,10 @@ if (!defined('_EYOOM_')) exit;
 					</div>
                 </div>
             </div>
-			<div class="main_link swiper link_swiper" data-index="2" data-gappc="48" data-gapmob="16">
+			<div class="main_link swiper link_swiper" data-gappc="48" data-gapmob="16">
 				<ul class="swiper-wrapper">
 					<li class="swiper-slide">
-						<a href="">
+						<a href=""><!--신규페이지작업-->
 							<div class="swiper icon_swiper">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide item">
@@ -109,43 +109,43 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href="">
+						<a href=""><!--신규페이지작업-->
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink02.png" alt="상담사 소개">
 							<span>상담사 소개</span>
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href="">
+						<a href="<?php echo G5_URL ?>/page/?pid=map">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink03.png" alt="상담장소">
 							<span>상담장소</span>
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href="">
+						<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink04.png" alt="최신 설명회">
 							<span>최신 설명회</span>
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href="">
+						<a href="http://www.smfair.kr/" target="_blank">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink05.png" alt="유학박람회">
 							<span>유학박람회</span>
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href="">
+						<a href="https://www.youtube.com/@%EB%AA%BD%EC%84%A0%EC%83%9D" target="_blank">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink06.png" alt="몽선생특강">
 							<span>몽선생특강</span>
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href="">
+						<a href="https://youtu.be/eGZ-7EH42Zs" target="_blank">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink07.png" alt="TV 출연">
 							<span>TV 출연</span>
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href="">
+						<a href="<?php echo G5_URL ?>/page/?pid=why">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink08.png" alt="몽선생 장점">
 							<span>몽선생 장점</span>
 						</a>
@@ -865,27 +865,68 @@ if (!defined('_EYOOM_')) exit;
                 <ul class="panel">
                     <li id="content-31" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln03.jpg" alt="NUS 출신 관리! 입학 컨설팅">
+                            <li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail03'">
+                                <div class="img_area">
+                                    <p class="nation">수수료 0원</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure01.jpg" alt="ZERO 무료 수속">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color1">유학원 수수료 ZERO</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">국제학교 무료수속</p>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>말레이시아 국제학교</p>
+                                        <span class="title">비용 0원! ZERO 무료 수속</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail21'">
+                                 <div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln01.jpg" alt="무료 수속서비스">
 									<div class="img_txtbox">
-										<p class="sub">NUS 출신 관리!</p>
+										<p class="sub">교직원 출신 관리</p>
 										<p class="tit">
-											<span class="color color3">싱가포르 국립대</span><br>
+											<span class="color color1">싱가포르 사립대</span><br>
+											무료 입학수속
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>싱가포르 사립대</p>
+                                        <span class="title">무료 수속서비스</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail22'">
+                                <div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln02.jpg" alt="수속서비스 안내">
+									<div class="img_txtbox">
+										<p class="sub">국내 유일! 대표사무소</p>
+										<p class="tit">
+											<span class="color color2">싱가포르 예술대</span><br>
 											입학 컨설팅
 										</p>
 									</div>
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
-                                </a>
+                                </div>
                                 <div class="text_area">
-                                    <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23">
-                                        <p>싱가포르 국립대</p>
-                                        <span class="title">NUS 출신 관리! 입학 컨설팅</span>
+                                    <a href="#none">
+                                        <p>싱가포르 예술대</p>
+                                        <span class="title">무료수속&입학컨설팅</span>
                                     </a>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25" class="img_area">
+                            <li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail25'">
+                                <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln05.jpg" alt="무료 입학 수속 서비스">
 									<div class="img_txtbox">
 										<p class="sub">교직원 출신 관리</p>
@@ -895,16 +936,205 @@ if (!defined('_EYOOM_')) exit;
 										</p>
 									</div>
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
-                                </a>
+                                </div>
                                 <div class="text_area">
-                                    <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25">
+                                    <a href="#none">
                                         <p>말레이시아 사립대</p>
-                                        <span class="title">무료 입학 수속 서비스</span>
+                                        <span class="title">무료 수속서비스</span>
                                     </a>
                                 </div>
                             </li>
-                            <li class="swiper-slide"i>
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26" class="img_area">
+                            <li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail05'">
+								<div class="img_area">
+                                    <p class="nation">현지 서비스</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure02.jpg" alt="현지 학교/거주지 답사">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color2">현지 지사장 동행</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">답사 프로그램</p>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>말레이시아 국제학교</p>
+                                        <span class="title">현지 학교/거주지 답사</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="content-32" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
+                        <ul class="swiper-wrapper">
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail03'">
+								<div class="img_area">
+                                    <p class="nation">수수료 0원</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure01.jpg" alt="ZERO 무료 수속">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color1">유학원 수수료 ZERO</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">국제학교 무료수속</p>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>말레이시아 국제학교</p>
+                                        <span class="title">비용 0원! ZERO 무료 수속</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail02'">
+								<div class="img_area">
+                                    <p class="nation">수속 서비스</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure03.jpg" alt="입학 수속 서비스">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color3">입학수속 서비스</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">명문국제학교</p>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>1티어 명문 국제학교</p>
+                                        <span class="title">입학 수속 서비스</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail05'">
+								<div class="img_area">
+                                    <p class="nation">현지 서비스</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure02.jpg" alt="현지 학교/거주지 답사">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color2">현지 지사장 동행</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">답사 프로그램</p>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>말레이시아 국제학교</p>
+                                        <span class="title">현지 학교/거주지 답사</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail01'">
+								<div class="img_area">
+                                    <p class="nation">현지 서비스</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure04.jpg" alt="초기정착 서비스">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color2">1달 관리</span>
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<p class="title">초기정착 서비스</p>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>말레이시아 국제학교</p>
+                                        <span class="title">초기정착 서비스</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail04'">
+								<div class="img_area">
+                                    <p class="nation">입학시험 대비</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure05.jpg" alt="국제학교 입학시험 대비반">
+									<div class="img_bottom2">
+										<div class="top">
+											<span class="tag color4">국제학교</span>
+										</div>
+										<p class="title">입학시험 대비반</p>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>입학시험 커리큘럼</p>
+                                        <span class="title">국제학교 입학시험 대비반</span>
+                                    </a>
+                                </div>
+							</li>
+						</ul>
+                    </li>
+                    <li id="content-33" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
+                        <ul class="swiper-wrapper">
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail21'">
+								<div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln01.jpg" alt="무료 수속서비스">
+									<div class="img_txtbox">
+										<p class="sub">교직원 출신 관리</p>
+										<p class="tit">
+											<span class="color color1">싱가포르 사립대</span><br>
+											무료 입학수속
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>싱가포르 사립대</p>
+                                        <span class="title">무료 수속서비스</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail22'">
+								 <div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln02.jpg" alt="수속서비스 안내">
+									<div class="img_txtbox">
+										<p class="sub">국내 유일! 대표사무소</p>
+										<p class="tit">
+											<span class="color color2">싱가포르 예술대</span><br>
+											입학 컨설팅
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>싱가포르 예술대</p>
+                                        <span class="title">무료수속&입학컨설팅</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail23'">
+								<div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln03.jpg" alt="NUS 출신 관리! 입학 컨설팅">
+									<div class="img_txtbox">
+										<p class="sub">NUS 출신 관리!</p>
+										<p class="tit">
+											<span class="color color3">싱가포르 국립대</span><br>
+											입학 컨설팅
+										</p>
+									</div>
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>싱가포르 국립대</p>
+                                        <span class="title">입학 컨설팅</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail26'">
+								<div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln06.jpg" alt="무료 입학 수속 서비스">
 									<div class="img_txtbox">
 										<p class="sub">말레이시아의 서울대</p>
@@ -914,16 +1144,16 @@ if (!defined('_EYOOM_')) exit;
 										</p>
 									</div>
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
-                                </a>
+                                </div>
                                 <div class="text_area">
-                                    <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26">
-                                        <p>말레이시아의 서울대</p>
-                                        <span class="title">무료 입학 수속 서비스</span>
+                                    <a href="#none">
+                                        <p>말레이시아 국립대</p>
+                                        <span class="title">입학 컨설팅</span>
                                     </a>
                                 </div>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail27" class="img_area">
+							</li>
+							<li class="swiper-slide" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail27'">
+								<div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln07.jpg" alt="모나쉬대학 입학 수속 서비스">
 									<div class="img_txtbox">
 										<p class="tit">
@@ -932,132 +1162,13 @@ if (!defined('_EYOOM_')) exit;
 										</p>
 									</div>
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
-                                </a>
+                                </div>
                                 <div class="text_area">
-                                    <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail27">
-                                        <p>전세계 TOP 50위권!</p>
-                                        <span class="title">모나쉬대학 입학 수속 서비스</span>
+                                    <a href="#none">
+                                        <p>호주 모나쉬대학</p>
+                                        <span class="title">무료수속&비자수속</span>
                                     </a>
                                 </div>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail28" class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln08.jpg" alt="한국 글로벌 캠퍼스 입학 컨설팅">
-									<div class="img_txtbox">
-										<p class="tit">
-											<span class="color color8">송도<br>글로벌 캠퍼스</span><br>
-											입학 컨설팅
-										</p>
-									</div>
-                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
-                                </a>
-                                <div class="text_area">
-                                    <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail28">
-                                        <p>송도/서강!</p>
-                                        <span class="title">한국 글로벌 캠퍼스 입학 컨설팅</span>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li id="content-32" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
-                        <ul class="swiper-wrapper">
-							<li class="swiper-slide">
-								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="img_area">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln03.jpg" alt="NUS 출신 관리! 입학 컨설팅">
-									<div class="img_txtbox">
-										<p class="sub">NUS 출신 관리!</p>
-										<p class="tit">
-											<span class="color color3">싱가포르 국립대</span><br>
-											입학 컨설팅
-										</p>
-									</div>
-									<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
-								</a>
-								<div class="text_area">
-									<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23">
-										<p>싱가포르 국립대</p>
-										<span class="title">NUS 출신 관리! 입학 컨설팅</span>
-									</a>
-								</div>
-							</li>
-							<li class="swiper-slide">
-								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25" class="img_area">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln05.jpg" alt="무료 입학 수속 서비스">
-									<div class="img_txtbox">
-										<p class="sub">교직원 출신 관리</p>
-										<p class="tit">
-											<span class="color color5">말레이시아 사립대</span><br>
-											무료 입학수속
-										</p>
-									</div>
-									<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
-								</a>
-								<div class="text_area">
-									<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25">
-										<p>말레이시아 사립대</p>
-										<span class="title">무료 입학 수속 서비스</span>
-									</a>
-								</div>
-							</li>
-						</ul>
-                    </li>
-                    <li id="content-33" class="swiper tab_swiper" data-gappc="12" data-gapmob="10">
-                        <ul class="swiper-wrapper">
-							<li class="swiper-slide">
-								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26" class="img_area">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln06.jpg" alt="무료 입학 수속 서비스">
-									<div class="img_txtbox">
-										<p class="sub">말레이시아의 서울대</p>
-										<p class="tit">
-											<span class="color color6">말레이시아 국립대</span><br>
-											입학 컨설팅
-										</p>
-									</div>
-									<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
-								</a>
-								<div class="text_area">
-									<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26">
-										<p>말레이시아의 서울대</p>
-										<span class="title">무료 입학 수속 서비스</span>
-									</a>
-								</div>
-							</li>
-							<li class="swiper-slide">
-								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail27" class="img_area">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln07.jpg" alt="모나쉬대학 입학 수속 서비스">
-									<div class="img_txtbox">
-										<p class="tit">
-											<span class="color color7">호주 모나쉬<br>말레이시아 캠퍼스</span><br>
-											입학수속
-										</p>
-									</div>
-									<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
-								</a>
-								<div class="text_area">
-									<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail27">
-										<p>전세계 TOP 50위권!</p>
-										<span class="title">모나쉬대학 입학 수속 서비스</span>
-									</a>
-								</div>
-							</li>
-							<li class="swiper-slide">
-								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail28" class="img_area">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln08.jpg" alt="한국 글로벌 캠퍼스 입학 컨설팅">
-									<div class="img_txtbox">
-										<p class="tit">
-											<span class="color color8">송도<br>글로벌 캠퍼스</span><br>
-											입학 컨설팅
-										</p>
-									</div>
-									<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
-								</a>
-								<div class="text_area">
-									<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail28">
-										<p>송도/서강!</p>
-										<span class="title">한국 글로벌 캠퍼스 입학 컨설팅</span>
-									</a>
-								</div>
 							</li>
 						</ul>
                     </li>
@@ -1105,8 +1216,8 @@ if (!defined('_EYOOM_')) exit;
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
-								원어민 1:1과외<br/>
-								영어 기초문법완성
+								원어민 1:1과외 <br>
+								실전 스피킹+기초문법
 							</span>
 						</div>
 						<div class="img_area">
@@ -1127,12 +1238,12 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class04_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'"class="swiper-slide">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail03'"class="swiper-slide">
 						<div class="text_area">
 							<p class="class"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수업듣기"> 유학CLASS</p>
 							<span class="title">
-								IELTS 과외<br/>
-								6.0 목표 달성반
+								합격률 95%! <br>
+								예술대 포트폴리오반
 							</span>
 						</div>
 						<div class="img_area">
@@ -1157,10 +1268,12 @@ if (!defined('_EYOOM_')) exit;
                 <ul>
                     <li class="half">
                         <a class="item">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_award.jpg" alt="합격자 명단">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_award.jpg" alt="합격자 명단" class="pc">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_award_mob.jpg" alt="합격자 명단" class="tablet">
                         </a>
                         <a href="<?php echo G5_URL ?>/page/?pid=why" class="item">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_why.jpg" alt="Why 몽선생">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_why.jpg" alt="Why 몽선생" class="pc">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_why_mob.jpg" alt="Why 몽선생" class="tablet">
                         </a>
                     </li>
                     <li class="notice">

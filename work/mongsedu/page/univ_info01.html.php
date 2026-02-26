@@ -55,7 +55,7 @@ if (!defined('_EYOOM_')) exit;
         </ul>
     </div>
 
-    <div class="msection univ_info_list sec tabs">
+    <div class="msection univ_info_list sec tabs ver2">
 		<div class="container" data-aos="fade-up">
             <div class="ms title_area" id="row-1">
 				<div class="title">

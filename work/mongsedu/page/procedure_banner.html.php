@@ -130,213 +130,428 @@ if (!defined('_EYOOM_')) exit;
                     <b class="color">1:1 맞춤 서비스를 제공합니다</b>
                 </p>
             </div>
-			<div class="btn_area">
-				<a href="" class="btn typeA">대학</a>
-				<a href="" class="btn typeB">국제학교</a>
+			<div class="tab_wrap">
+				<div class="tab_navbox btn_area">
+					<div class="tab_nav">
+						<span class="link btn typeA">대학</span>
+					</div>
+					<div class="tab_nav on">
+						<span class="link btn typeB">국제학교</span>
+					</div>
+				</div>
+				<div class="tab_contbox">
+					<div class="tab_cont">
+						<div class="swiper prdservice_swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">미국</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">패스웨이 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">KAPLAN 재단, Shorelight 재단, 나비타스, 스터디그룹 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">500,000원 (학교에 따라 상이)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소상담, 정착가이드</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">신입학/편입학 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">UC계열 주립대, 사립 명문대, 200위권 대학</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">최소 400,000원 / 최대 900,000원 (학교별 상이)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">싱가포르</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">사립대/예술대 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">SIM, PSB, KAPLAN, JCU, MDIS </p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">0원 (무료수속)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소예약, 현지관리</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">국립대 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">NUS, NTU, SMU, SUTD</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">480,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">말레이시아</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">사립대 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">헬프, 인티, 테일러스, 세기, UCSI 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">0원 (무료수속)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소예약, 현지관리</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">국립대 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">말라야국립대 (UM), UKM, USM 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">600,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">홍콩</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">국립대 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">홍콩대, 과기대, 중문대, 성시대 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">480,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 스케줄관리, 서류정리 등 </p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">영국</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_uk.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">파운테이션 전형 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">영국 TOP 100위권 전체 대학</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">500,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소상담, 정착가이드</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">신입학/편입학 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">러셀그룹 대학 명문대 (상위 20위권)</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">최소 400,000원 / 최대 900,000원 (학교별 상이)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내, 비자수속 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-next next_btn"></div>
+							<div class="swiper-button-prev prev_btn"></div>
+						</div>
+					</div>
+					<div class="tab_cont on">
+						<div class="swiper prdservice_swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">미국</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">패스웨이 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">KAPLAN 재단, Shorelight 재단, 나비타스, 스터디그룹 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">500,000원 (학교에 따라 상이)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소상담, 정착가이드</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">신입학/편입학 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">UC계열 주립대, 사립 명문대, 200위권 대학</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">최소 400,000원 / 최대 900,000원 (학교별 상이)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">싱가포르</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">사립대/예술대 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">SIM, PSB, KAPLAN, JCU, MDIS </p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">0원 (무료수속)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소예약, 현지관리</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">국립대 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">NUS, NTU, SMU, SUTD</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">480,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">말레이시아</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">사립대 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">헬프, 인티, 테일러스, 세기, UCSI 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">0원 (무료수속)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소예약, 현지관리</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">국립대 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">말라야국립대 (UM), UKM, USM 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">600,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">홍콩</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">국립대 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">홍콩대, 과기대, 중문대, 성시대 등</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">480,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 스케줄관리, 서류정리 등 </p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="tag">
+										<span class="txt">영국</span>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_uk.svg" alt="" class="icon">
+									</div>
+									<div class="infobox">
+										<div class="infoitem">
+											<p class="title">파운테이션 전형 원서접수 (3개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">영국 TOP 100위권 전체 대학</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">500,000원</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 비자수속, 숙소상담, 정착가이드</p>
+												</li>
+											</ul>
+										</div>
+										<div class="infoline"></div>
+										<div class="infoitem">
+											<p class="title">신입학/편입학 원서접수 (1개교 기준)</p>
+											<ul class="descbox">
+												<li>
+													<p class="tit">대상학교</p>
+													<p class="desc">러셀그룹 대학 명문대 (상위 20위권)</p>
+												</li>
+												<li>
+													<p class="tit">수속비용</p>
+													<p class="desc">최소 400,000원 / 최대 900,000원 (학교별 상이)</p>
+												</li>
+												<li>
+													<p class="tit">서비스</p>
+													<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내, 비자수속 등</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-next next_btn"></div>
+							<div class="swiper-button-prev prev_btn"></div>
+						</div>
+					</div>
+				</div>
 			</div>
-            <div class="swiper prdservice_swiper">
-                <div class="swiper-wrapper">
-					<div class="swiper-slide item">
-						<div class="tag">
-							<span class="txt">미국</span>
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="icon">
-						</div>
-						<div class="infobox">
-							<div class="infoitem">
-								<p class="title">패스웨이 원서접수 (3개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">KAPLAN 재단, Shorelight 재단, 나비타스, 스터디그룹 등</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">500,000원 (학교에 따라 상이)</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 비자수속, 숙소상담, 정착가이드</p>
-									</li>
-								</ul>
-							</div>
-							<div class="infoline"></div>
-							<div class="infoitem">
-								<p class="title">신입학/편입학 원서접수 (1개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">UC계열 주립대, 사립 명문대, 200위권 대학</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">최소 400,000원 / 최대 900,000원 (학교별 상이)</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide item">
-						<div class="tag">
-							<span class="txt">싱가포르</span>
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="icon">
-						</div>
-						<div class="infobox">
-							<div class="infoitem">
-								<p class="title">사립대/예술대 원서접수 (3개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">SIM, PSB, KAPLAN, JCU, MDIS </p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">0원 (무료수속)</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 비자수속, 숙소예약, 현지관리</p>
-									</li>
-								</ul>
-							</div>
-							<div class="infoline"></div>
-							<div class="infoitem">
-								<p class="title">국립대 원서접수 (1개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">NUS, NTU, SMU, SUTD</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">480,000원</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide item">
-						<div class="tag">
-							<span class="txt">말레이시아</span>
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="icon">
-						</div>
-						<div class="infobox">
-							<div class="infoitem">
-								<p class="title">사립대 원서접수 (3개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">헬프, 인티, 테일러스, 세기, UCSI 등</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">0원 (무료수속)</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 비자수속, 숙소예약, 현지관리</p>
-									</li>
-								</ul>
-							</div>
-							<div class="infoline"></div>
-							<div class="infoitem">
-								<p class="title">국립대 원서접수 (1개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">말라야국립대 (UM), UKM, USM 등</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">600,000원</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내 등</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide item">
-						<div class="tag">
-							<span class="txt">홍콩</span>
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="icon">
-						</div>
-						<div class="infobox">
-							<div class="infoitem">
-								<p class="title">국립대 원서접수 (1개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">홍콩대, 과기대, 중문대, 성시대 등</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">480,000원</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 스케줄관리, 서류정리 등 </p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide item">
-						<div class="tag">
-							<span class="txt">영국</span>
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_uk.svg" alt="" class="icon">
-						</div>
-						<div class="infobox">
-							<div class="infoitem">
-								<p class="title">파운테이션 전형 원서접수 (3개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">영국 TOP 100위권 전체 대학</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">500,000원</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 비자수속, 숙소상담, 정착가이드</p>
-									</li>
-								</ul>
-							</div>
-							<div class="infoline"></div>
-							<div class="infoitem">
-								<p class="title">신입학/편입학 원서접수 (1개교 기준)</p>
-								<ul class="descbox">
-									<li>
-										<p class="tit">대상학교</p>
-										<p class="desc">러셀그룹 대학 명문대 (상위 20위권)</p>
-									</li>
-									<li>
-										<p class="tit">수속비용</p>
-										<p class="desc">최소 400,000원 / 최대 900,000원 (학교별 상이)</p>
-									</li>
-									<li>
-										<p class="tit">서비스</p>
-										<p class="desc">원서접수, 자소서/인터뷰 가이드, 서류안내, 비자수속 등</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-                </div>
-				<div class="swiper-button-next next_btn"></div>
-				<div class="swiper-button-prev prev_btn"></div>
-            </div>
         </div>
     </div>
 

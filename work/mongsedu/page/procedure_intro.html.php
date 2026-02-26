@@ -631,8 +631,8 @@ if (!defined('_EYOOM_')) exit;
 						<div class="text_area">
 							<p class="proc"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수속하기"> 유학CLASS</p>
 							<span class="title">
-								원어민 1:1과외<br/>
-								영어 기초문법완성
+								원어민 1:1과외 <br>
+								실전 스피킹+기초문법
 							</span>
 						</div>
 						<div class="img_area">
@@ -653,12 +653,12 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_class04_mob.jpg" alt="UC버클리 출신 관리하는 입학컨설팅" class="img tablet">
 						</div>
 					</li>
-					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'" class="swiper-slide">
+					<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail03'" class="swiper-slide">
 						<div class="text_area">
 							<p class="class"><img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_class.svg" alt="수업듣기"> 유학CLASS</p>
 							<span class="title">
-								IELTS 과외<br/>
-								6.0 목표 달성반
+								합격률 95%! <br>
+								예술대 포트폴리오반
 							</span>
 						</div>
 						<div class="img_area">

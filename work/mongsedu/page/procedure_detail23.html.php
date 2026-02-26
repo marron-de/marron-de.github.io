@@ -244,102 +244,132 @@ if (!defined('_EYOOM_')) exit;
 										</a>
 									</div>
 									<div class="question_wrapper">
-										<div class="marquee question_box" data-duration="4">
+										<div class="marquee question_box" data-duration="6">
 											<div class="marquee_group">
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
 												</div>
 
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">사전 입학 심사 가능한가요?</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 												
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">사전 입학 심사 가능한가요?</p>
+												</div>
+												<div class="question">
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 											</div>
 										</div>
-										<div class="marquee question_box pc_hide" data-duration="4" data-reverse="reverse">
+										<div class="marquee question_box pc_hide" data-duration="6" data-reverse="reverse">
 											<div class="marquee_group">
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
 												</div>
 
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">사전 입학 심사 가능한가요?</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 												
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">사전 입학 심사 가능한가요?</p>
+												</div>
+												<div class="question">
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 											</div>
 										</div>
-										<div class="marquee question_box pc_hide" data-duration="4">
+										<div class="marquee question_box pc_hide" data-duration="6">
 											<div class="marquee_group">
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
 												</div>
 
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">사전 입학 심사 가능한가요?</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
-												
+
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
-												</div>
-												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">사전 입학 심사 가능한가요?</p>
+												</div>
+												<div class="question">
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 											</div>
 										</div>
@@ -389,11 +419,11 @@ if (!defined('_EYOOM_')) exit;
                         <div class="mal-lei-si-a-dae-hag prcd03"></div>
                     </div>
                     <div class="frame-14f">
-                        <div class="frame-150">
-                            <div class="tab_navbox notab frame-151">
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="tab_nav on frame-152">입학컨설팅</a>
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_nav frame-152">단일컨설팅</a>
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_2" class="tab_nav frame-152">자소서첨삭</a>
+                        <div class="tab_wrap frame-150">
+                            <div class="tab_navbox frame-151">
+                                <div class="tab_nav on frame-152">입학컨설팅</div>
+                                <div class="tab_nav frame-152">단일컨설팅</div>
+                                <div class="tab_nav frame-152">자소서첨삭</div>
                             </div>
                             <div class="tab_contbox frame-157">
 								<div class="tab_cont on">
@@ -421,7 +451,7 @@ if (!defined('_EYOOM_')) exit;
 										</div>
 									</div>
 								</div>
-                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_cont">
+                                <div class="tab_cont">
 									<div class="frame-158">
 										<div class="frame-159">
 											<span class="span-text-15a">1,900,000원</span>
@@ -445,8 +475,8 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-                                </a>
-								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_2" class="tab_cont">
+                                </div>
+								<div class="tab_cont">
 									<div class="frame-158">
 										<div class="frame-159">
 											<span class="span-text-15a">900,000원</span>
@@ -470,7 +500,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
                             </div>
                         </div>
                     </div>

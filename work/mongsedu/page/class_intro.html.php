@@ -261,7 +261,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -288,7 +288,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -315,7 +315,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -342,7 +342,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -369,7 +369,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -396,7 +396,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -423,7 +423,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -450,7 +450,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -477,7 +477,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>
@@ -504,7 +504,7 @@ if (!defined('_EYOOM_')) exit;
                                             </p>
                                         </div>
                                         <div class="btn_area sb np">
-                                            <p>커리큘럼 자세히보기</p>
+                                            <p><span class="pc">커리큘럼</span> 자세히보기</p>
                                             <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_go_red.svg" alt="">
                                         </div>
                                     </a>

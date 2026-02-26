@@ -118,7 +118,10 @@ if (!defined('_EYOOM_')) exit;
                                     <div class="frame-titbox between">
                                         <span class="frame-title">답사 가능 학교 리스트</span >
 										<button type="button" class="school_moreview">
-											<span class="txt">30개 전체보기</span>
+											<span class="txt">
+												<span class="pc">30개</span>
+												 전체보기
+											</span>
 											<span class="arrow"></span>
 										</button>
                                     </div>
@@ -435,6 +438,7 @@ if (!defined('_EYOOM_')) exit;
 										<div class="note_txt">* 2주전 예약이 반드시 필요합니다.</div>
 									</div>
                                 </div>
+                                <div class="line-2a"></div>
                                 <div class="frame-section ver2">
                                     <div class="frame-titbox">
                                         <span class="frame-title">답사 스케줄 예시</span >

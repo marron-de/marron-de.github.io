@@ -5,330 +5,6 @@
 if (!defined('_EYOOM_')) exit;
 ?>
 
-<style>
-    .frame-1 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 8px;
-        position: relative;
-        width: 256px;
-        padding: 44px 0 0;
-    }
-    .free-registration {
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        height: 19px;
-        color: #8095aa;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19px;
-        text-align: left;
-        white-space: nowrap;
-        letter-spacing: -0.64px;
-        z-index: 1;
-    }
-    .slogan-related-to-catalog {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-shrink: 0;
-        position: relative;
-        width: 256px;
-        height: 96px;
-        color: #212121;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 48px;
-        text-align: left;
-        text-overflow: initial;
-        letter-spacing: -0.96px;
-        z-index: 2;
-        overflow: hidden;
-    }
-    .frame-2 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-wrap: nowrap;
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 0;
-        gap: 20px;
-        position: relative;
-        min-width: 0;
-        z-index: 3;
-    }
-    .personal-info {
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        height: 24px;
-        color: #454545;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        text-align: left;
-        white-space: nowrap;
-        letter-spacing: -0.6px;
-        z-index: 4;
-    }
-    .frame-3 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        align-self: stretch;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 16px;
-        position: relative;
-        z-index: 5;
-    }
-    .frame-4 {
-        display: flex;
-        align-items: flex-start;
-        align-self: stretch;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 10px;
-        position: relative;
-        padding: 16px 20px;
-        background: #ffffff;
-        z-index: 6;
-        border-radius: 8px;
-    }
-    .hong-gil-dong {
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        height: 19px;
-        color: #454545;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19px;
-        text-align: left;
-        white-space: nowrap;
-        letter-spacing: -0.48px;
-        z-index: 7;
-    }
-    .frame-5 {
-        display: flex;
-        align-items: flex-start;
-        align-self: stretch;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 10px;
-        position: relative;
-        padding: 16px 20px;
-        background: #ffffff;
-        z-index: 8;
-        border-radius: 8px;
-    }
-    .no-input {
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        height: 19px;
-        color: #c2c2c2;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19px;
-        text-align: left;
-        white-space: nowrap;
-        letter-spacing: -0.48px;
-        z-index: 9;
-    }
-    .frame-6 {
-        display: flex;
-        align-items: flex-start;
-        align-self: stretch;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 10px;
-        position: relative;
-        padding: 16px 20px;
-        background: #ffffff;
-        z-index: 10;
-        border-radius: 8px;
-    }
-    .email-disabled {
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        height: 19px;
-        color: #c2c2c2;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19px;
-        text-align: left;
-        white-space: nowrap;
-        letter-spacing: -0.48px;
-        z-index: 11;
-    }
-    .frame-7 {
-        display: flex;
-        align-items: flex-start;
-        align-self: stretch;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 10px;
-        position: relative;
-        height: 150px;
-        padding: 16px 20px;
-        background: #ffffff;
-        z-index: 12;
-        border-radius: 8px;
-    }
-    .inquiry-disabled {
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        height: 19px;
-        color: #c2c2c2;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19px;
-        text-align: left;
-        white-space: nowrap;
-        letter-spacing: -0.48px;
-        z-index: 13;
-    }
-    .frame-8 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        align-self: stretch;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        position: relative;
-        z-index: 14;
-    }
-    .frame-9 {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 16px;
-        position: relative;
-        width: 316px;
-        z-index: 15;
-    }
-    .frame-a {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        gap: 10px;
-        position: relative;
-        width: 242px;
-        z-index: 16;
-    }
-    .rectangle {
-        flex-shrink: 0;
-        position: relative;
-        width: 20px;
-        height: 20px;
-        background: #ffffff;
-        border: 1px solid #d9d9d9;
-        z-index: 17;
-        border-radius: 4px;
-    }
-    .personal-info-agreement {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        width: 212px;
-        height: 22px;
-        color: #454545;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 21.604px;
-        text-align: center;
-        white-space: nowrap;
-        letter-spacing: -0.54px;
-        z-index: 18;
-    }
-    .content-view {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        width: 58px;
-        height: 19px;
-        color: #c2c2c2;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 19px;
-        text-align: center;
-        text-decoration: underline;
-        white-space: nowrap;
-        letter-spacing: -0.48px;
-        z-index: 19;
-    }
-    .btn {
-        flex-shrink: 0;
-        position: relative;
-        width: 345px;
-        height: 56px;
-        z-index: 20;
-        border-radius: 10px;
-    }
-    .frame-b {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
-        gap: 10px;
-        position: absolute;
-        width: 345px;
-        height: 56px;
-        top: 0;
-        left: 0;
-        padding: 16px 120px;
-        background: #398a8f;
-        z-index: 21;
-        border-radius: 10px;
-    }
-    .catalog-request {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-shrink: 0;
-        flex-basis: auto;
-        position: relative;
-        width: 105px;
-        height: 24px;
-        color: #ffffff;
-        font-family: Pretendard, var(--default-font-family);
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        text-align: center;
-        white-space: nowrap;
-        letter-spacing: -0.6px;
-        z-index: 22;
-    }
-
-</style>
-
 <div class="sub-page page-class page-ebook">
 	<div class="banner_area ver2 ebook">
         <div class="container" data-aos="fade-up">
@@ -516,56 +192,56 @@ if (!defined('_EYOOM_')) exit;
                 <ul>
                     <li onclick="ebook_modal(1)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook07.jpg" alt="싱가포르 대학 상담">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook07.jpg" alt="유학서비스 책자">
                         </div>
                         <div class="text_area">
-							<span class="title">싱가포르 대학 상담</span>
-							<p>국립대, 사립대, 예술대 통합상담</p>
+							<span class="title">유학서비스 책자</span>
+							<p>수속, CLASS 등 비용 안내</p>
                         </div>
                     </li>
                     <li onclick="ebook_modal(1)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook08.jpg" alt="서울 대학 상담">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook08.jpg" alt="말레이시아 국제학교 책자">
                         </div>
                         <div class="text_area">
-							<span class="title">서울 대학 상담</span>
-							<p>국립대, 사립대, 전공별 상담</p>
+							<span class="title">말레이시아 국제학교 책자</span>
+							<p>40여개 학교정보, MAP</p>
                         </div>
                     </li>
                     <li onclick="ebook_modal(1)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook09.jpg" alt="도쿄 대학 상담">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook09.jpg" alt="싱가포르 대학 책자">
                         </div>
                         <div class="text_area">
-							<span class="title">도쿄 대학 상담</span>
-							<p>국립대, 사립대, 국제학생 상담</p>
+							<span class="title">싱가포르 대학 책자</span>
+							<p>국립대, 사립대, 예술대 통합본</p>
                         </div>
                     </li>
                     <li onclick="ebook_modal(1)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook10.jpg" alt="런던 대학 상담">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook10.jpg" alt="말레이시아 대학 책자">
                         </div>
                         <div class="text_area">
-							<span class="title">런던 대학 상담</span>
-							<p>국립대, 사립대, 국제학생 상담</p>
+							<span class="title">말레이시아 대학 책자</span>
+							<p>사립대, 국립대 통합본</p>
                         </div>
                     </li>
                     <li onclick="ebook_modal(1)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook11.jpg" alt="뉴욕 대학 상담">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook11.jpg" alt="미국 대학 책자">
                         </div>
                         <div class="text_area">
-							<span class="title">뉴욕 대학 상담</span>
-							<p>국립대, 사립대, 대인관계 상담</p>
+							<span class="title">미국 대학 책자</span>
+							<p>주요 TOP100대학 </p>
 						</div>
                     </li>
                     <li onclick="ebook_modal(1)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook12.jpg" alt="시드니 대학 상담">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook12.jpg" alt="영국 대학 책자">
                         </div>
                         <div class="text_area">
-							<span class="title">시드니 대학 상담</span>
-							<p>국립대, 사립대, 심리 상담</p>
+							<span class="title">영국 대학 책자</span>
+							<p>주요 TOP50대학 </p>
                         </div>
                     </li>
                 </ul>

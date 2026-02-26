@@ -131,9 +131,9 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
                                 <div class="line-2a"></div>
-								<div class="frame-section">
+								<div class="frame-section mob_ver1">
 									<div class="frame-titbox">
-										<p class="frame-title">몽선생 듀오링고의 특별한 4가지 이유</p>
+										<p class="frame-title">몽선생 국제학교 입학시험 대비반이 특별한 4가지 이유</p>
 									</div>
 									<div class="class_benefit">
 										<div class="img_area">

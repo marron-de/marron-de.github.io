@@ -69,8 +69,8 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                 </div>
                 <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04" class="show">수업소개</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_01">수업비용</a></li>
@@ -106,10 +106,9 @@ if (!defined('_EYOOM_')) exit;
                                                 <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit20.png" alt="">
                                                 <span>완벽한 시험 대비가능!</span>
                                                 <p>
-                                                    해외학교 교직원 출신!<br/>
-                                                    공식 인증된 몽선생에서<br/>
-                                                    검증된 몽선생이 제작한<br/>
-                                                    실전 모의테스트 학습 제공
+                                                    해외학교 교직원 출신<br/>
+                                                    몽선생에서 제작한 검증된<br/>
+                                                    실전 모의 테스트 학습 제공
                                                 </p>
                                             </div>
                                             <ul class="bnf_list">

@@ -73,6 +73,10 @@
 				</p>
 			</a>
 			<a href="" class="btn tablet">클래스 바로가기</a>
+			<button href="" class="today_btn tablet">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/today_btn_x.png" alt="" class="icon">	
+				<span class="txt">오늘 하루 동안 이 창을 열지 않음</span>
+			</button>
 			<button type="button" class="close_btn"></button>
 		</div>
 	</div>
@@ -106,7 +110,10 @@
 							<a href="<?php echo G5_URL ?>/page/?pid=class_banner" class="link">100% 맞춤 학습</a>
 						</li>
 						<li>
-							<a href="<?php echo G5_URL ?>/page/?pid=company" class="link">몽쌤소개</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=company" class="link">유학원소개</a>
+						</li>
+						<li>
+							<a href="<?php echo G5_URL ?>/page/?pid=why" class="link">WHY 몽선생</a>
 						</li>
 						<li>
 							<a href="<?php echo G5_URL ?>/page/?pid=map" class="link">찾아오는 길</a>
@@ -144,10 +151,10 @@
 							<a href="<?php echo G5_URL ?>/page/?pid=special_preparatory" class="link">해외대학 대비반</a>
 						</li>
 						<li>
-							<a href="<?php echo G5_URL ?>/page/?pid=special_malay" class="link">말레이시아 국제학교</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=special_malay" class="link">ZERO 말레이시아 국제학교</a>
 						</li>
 						<li>
-							<a href="<?php echo G5_URL ?>/page/?pid=special_singapore" class="link">싱가포르 사립대 특별혜택</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=special_singapore" class="link">싱가포르 사립대 성공PACK</a>
 						</li>
 					</ul>
 				</li>
@@ -250,7 +257,10 @@
 						<a href="<?php echo G5_URL ?>/page/?pid=class_banner" class="link">100% 맞춤 학습</a>
 					</li>
 					<li>
-						<a href="<?php echo G5_URL ?>/page/?pid=company" class="link">몽쌤소개</a>
+						<a href="<?php echo G5_URL ?>/page/?pid=company" class="link">유학원소개</a>
+					</li>
+					<li>
+						<a href="<?php echo G5_URL ?>/page/?pid=why" class="link">WHY 몽선생</a>
 					</li>
 					<li>
 						<a href="<?php echo G5_URL ?>/page/?pid=map" class="link">찾아오는 길</a>
@@ -288,10 +298,10 @@
 						<a href="<?php echo G5_URL ?>/page/?pid=special_preparatory" class="link">해외대학 대비반</a>
 					</li>
 					<li>
-						<a href="<?php echo G5_URL ?>/page/?pid=special_malay" class="link">말레이시아 국제학교</a>
+						<a href="<?php echo G5_URL ?>/page/?pid=special_malay" class="link">ZERO 말레이시아 국제학교</a>
 					</li>
 					<li>
-						<a href="<?php echo G5_URL ?>/page/?pid=special_singapore" class="link">싱가포르 사립대 특별혜택</a>
+						<a href="<?php echo G5_URL ?>/page/?pid=special_singapore" class="link">싱가포르 사립대 성공PACK</a>
 					</li>
 				</ul>
 			</li>

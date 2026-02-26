@@ -624,7 +624,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 						<div class="btnbox">
-							<a href="" class="btn">수업 더 알아보기</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=class_detail04" class="btn">수업 더 알아보기</a>
 						</div>
 					</div>
 				</li>
@@ -639,13 +639,13 @@ if (!defined('_EYOOM_')) exit;
 							<p class="desc">원어민이 직접 가르치는 실전반</p>
 						</div>
 						<div class="btnbox">
-							<a href="" class="btn">수업 더 알아보기</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=class_detail01" class="btn">수업 더 알아보기</a>
 						</div>
 					</div>
 				</li>
 				<li data-aos="fade-up">
 					<div class="topbox">
-						<p class="tit">영어헤외대학 전공예습반</p>
+						<p class="tit">영어해외대학 전공예습반</p>
 						<p class="hash">#해외대학 전공 준비코스</p>
 					</div>
 					<div class="bottombox">
@@ -655,7 +655,7 @@ if (!defined('_EYOOM_')) exit;
 							<p class="desc">배운 내용을 정리하는 Review 수업까지</p>
 						</div>
 						<div class="btnbox">
-							<a href="" class="btn">해외대학 전공 준비 코스 보기</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=class_detail02" class="btn">해외대학 전공 준비 코스 보기</a>
 						</div>
 					</div>
 				</li>

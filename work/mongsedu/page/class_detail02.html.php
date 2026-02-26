@@ -62,8 +62,8 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                 </div>
                 <div class="section-c tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
+                    <div class="ms title_area class stickybox" id="row-1">
+                        <div class="tab sticky">
                             <ul class="tab_tit">
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02" class="show">수업소개</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02_01">수업비용</a></li>
@@ -375,7 +375,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-157">
                                 <div class="frame-158">
-                                    <div class="frame-159">
+                                    <div class="frame-159 ver2">
                                         <span class="span-text-15a">해외대학 대비반 패키지 700,000원</span>
                                         <span class="span-text-15a">전공이론 수업(단독 수강시) - 500,000원</span>
                                         <span class="span-text-15a">에세이토론 수업(단독 수강시) - 400,000원</span>

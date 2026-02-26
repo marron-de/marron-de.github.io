@@ -122,7 +122,7 @@ if (!defined('_EYOOM_')) exit;
 											말레이시아 사립대 교직원으로 5년 이상의 행정경험을 통해, 한국 학생들에세 가장 추천할 수 있는 대학을 알려드립니다. 사립대, 국립대, 직영캠퍼스까지 10여개 대학 정보를 한 번에 확인해보세요
 										</p>
 									</div>
-									<div class="counselingbox">
+									<div class="counselingbox ver2">
 										<div class="box_tit">상담 가능학교</div>
 										<div class="box_list">
 											<div class="item">

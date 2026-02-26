@@ -20,6 +20,15 @@ if (!defined('_EYOOM_')) exit;
 if ($config['cf_add_meta']) echo $config['cf_add_meta'];
 ?>
 
+<!-- favicon -->
+<link rel="icon" type="image/png" href="<?php echo EYOOM_THEME_URL ?>/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="<?php echo EYOOM_THEME_URL ?>/favicon/favicon.svg" />
+<link rel="shortcut icon" href="<?php echo EYOOM_THEME_URL ?>/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo EYOOM_THEME_URL ?>/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="몽선생" />
+<link rel="manifest" href="<?php echo EYOOM_THEME_URL ?>/favicon/site.webmanifest" />
+
+
 <title><?php echo $g5_head_title; ?></title>
 <link rel="stylesheet" href="<?php echo $css_href; ?>">
 <?php

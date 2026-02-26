@@ -260,102 +260,132 @@ if (!defined('_EYOOM_')) exit;
 										</a>
 									</div>
 									<div class="question_wrapper">
-										<div class="marquee question_box" data-duration="4">
+										<div class="marquee question_box" data-duration="6">
 											<div class="marquee_group">
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
 												</div>
 
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">사전 입학 심사 가능한가요?</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 												
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">사전 입학 심사 가능한가요?</p>
+												</div>
+												<div class="question">
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 											</div>
 										</div>
-										<div class="marquee question_box pc_hide" data-duration="4" data-reverse="reverse">
+										<div class="marquee question_box pc_hide" data-duration="6" data-reverse="reverse">
 											<div class="marquee_group">
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
 												</div>
 
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">사전 입학 심사 가능한가요?</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 												
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">사전 입학 심사 가능한가요?</p>
+												</div>
+												<div class="question">
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 											</div>
 										</div>
-										<div class="marquee question_box pc_hide" data-duration="4">
+										<div class="marquee question_box pc_hide" data-duration="6">
 											<div class="marquee_group">
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
 												</div>
 
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">사전 입학 심사 가능한가요?</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
-												
+
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
-												</div>
-												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다질문 내용이 들어갑니다.</p>
+													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
 												</div>
 												<div class="question">
-													<p class="txt">질문 내용이 들어갑니다.</p>
+													<p class="txt">비자 신청에 필요한 서류가 궁금해요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">수속 실장님과 연결하고 싶어요.</p>
+												</div>
+
+												<div class="question">
+													<p class="txt">사전 입학 심사 가능한가요?</p>
+												</div>
+												<div class="question">
+													<p class="txt">국제학교 입학 티오가 있을까요.</p>
+												</div>
+												<div class="question">
+													<p class="txt">숙소 예약도 도움주시나요?</p>
 												</div>
 											</div>
 										</div>
