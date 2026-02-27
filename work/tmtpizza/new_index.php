@@ -149,7 +149,7 @@ include_once(G5_THEME_PATH.'/head.php');
 					<li class="itr_menu_list">
 						<a href="/menu.php">
 							<div class="menu_img">
-								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_01_tmt.png" alt="티엠티피자">
+								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_01_tmt.jpg" alt="티엠티피자">
 								<ul class="menu_price">
 									<li>
 										<span class="col_s size_cip">S</span>
@@ -199,7 +199,7 @@ include_once(G5_THEME_PATH.'/head.php');
 					<li class="itr_menu_list">
 						<a href="/menu.php">
 							<div class="menu_img">
-								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_00_truffle.png" alt="트러플머쉬룸피자">
+								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_00_truffle.jpg" alt="트러플머쉬룸피자">
 								<ul class="menu_price">
 									<li>
 										<span class="col_s size_cip">S</span>
@@ -249,7 +249,7 @@ include_once(G5_THEME_PATH.'/head.php');
 					<li class="itr_menu_list">
 						<a href="/menu.php">
 							<div class="menu_img">
-								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_02_egg.png" alt="에그마요피자">
+								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_02_egg.jpg" alt="에그마요피자">
 								<ul class="menu_price">
 									<li>
 										<span class="col_s size_cip">S</span>
@@ -293,7 +293,7 @@ include_once(G5_THEME_PATH.'/head.php');
 					<li class="itr_menu_list">
 						<a href="/menu.php">
 							<div class="menu_img">
-								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_03_nacho.png" alt="나쵸피자">
+								<img src="<?php echo G5_THEME_URL ?>/img/sub_02/menu_03_nacho.jpg" alt="나쵸피자">
 								<ul class="menu_price">
 									<li>
 										<span class="col_s size_cip">S</span>
@@ -377,7 +377,7 @@ include_once(G5_THEME_PATH.'/head.php');
 						<li class="event_list">
 							<a href="#none">
 								<div class="photo_box">
-									<img src="<?php echo G5_THEME_URL ?>/img/main/event_4.jpeg" alt="신메뉴 트러플머쉬룸 피자 출시!">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/event_4.jpg" alt="신메뉴 트러플머쉬룸 피자 출시!">
 								</div> 
 								<div class="text_box">
 									<p class="event_tit"><strong>[신메뉴]</strong></p>
@@ -388,7 +388,7 @@ include_once(G5_THEME_PATH.'/head.php');
 						<li class="event_list">
 							<a href="#none">
 								<div class="photo_box">
-									<img src="<?php echo G5_THEME_URL ?>/img/main/event_5.png" alt="2025 우수가맹점 울산 신천점">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/event_5.jpg" alt="2025 우수가맹점 울산 신천점">
 								</div>
 								<div class="text_box">
 									<p class="event_tit"><strong>[2025 우수가맹점]</strong></p>
@@ -399,7 +399,7 @@ include_once(G5_THEME_PATH.'/head.php');
 						<li class="event_list">
 							<a href="#none">
 								<div class="photo_box">
-									<img src="<?php echo G5_THEME_URL ?>/img/main/event_6.png" alt="미미네 유기견 보호소 봉사활동">
+									<img src="<?php echo G5_THEME_URL ?>/img/main/event_6.jpg" alt="미미네 유기견 보호소 봉사활동">
 								</div>
 								<div class="text_box">
 									<p class="event_tit"><strong>[봉사]</strong></p>

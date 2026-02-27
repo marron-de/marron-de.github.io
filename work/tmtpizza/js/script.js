@@ -304,3 +304,7 @@ $(document).mouseup(function (e) {
 		$(".menu_cont .tmt_menu_box .tmt_list_box .menu-item .menu_info").removeClass("show")
 	}
 });
+
+
+
+/* 260221 추가작업 */
