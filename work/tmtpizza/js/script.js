@@ -267,7 +267,7 @@ $(document).ready(function () {
 // layout
 $(window).on('resize', function() {
     const windowWidth = $(window).width();
-    const maxWidth = 1280;
+    const maxWidth = 1600;
     const widthPercentage = 0.9;
 
     let calculatedWidth = windowWidth * widthPercentage;
@@ -308,3 +308,184 @@ $(document).mouseup(function (e) {
 
 
 /* 260221 추가작업 */
+
+// AOS
+AOS.init({
+	duration: 800,
+	// disable: 'tablet',
+})
+window.addEventListener('load', function () {
+	AOS.refresh();
+});
+
+// scroll header
+$(function () {
+	let didScroll;
+	let lastScrollTop = 0;
+	let delta = 5; 
+	let navbarHeight = $("#header").outerHeight();
+
+	$(window).scroll(function (event) {
+		didScroll = true;
+	});
+
+	hasScrolled();
+
+	setInterval(function () {
+		if (didScroll) {
+			hasScrolled();
+			didScroll = false;
+		}
+	}, 250); 
+
+	function hasScrolled() {
+		let st = $(this).scrollTop();
+		
+		if (Math.abs(lastScrollTop - st) <= delta)
+			return;
+
+		if (st > 0) {$("body").addClass("down")} 
+		else {$("body").removeClass("down")}
+
+		if (st > navbarHeight) {$("#header").addClass("down")}
+
+		if (st < navbarHeight) {$("#header").removeClass("down")}
+
+		lastScrollTop = st; 
+	}
+})
+
+// quick_menu sticky
+function updateQuickMenu() {
+    const footer = $('footer');
+    const fixedInqBox = $('.fixed_inqbox');
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    const documentHeight = $(document).height();
+    const footerHeight = footer.outerHeight() || 0;
+    const winWidth = window.innerWidth;
+    const rootFontSize = parseFloat($('html').css('font-size'));
+    const scrollBottom = documentHeight - (scrollTop + windowHeight);
+
+    let baseBottomRem = (winWidth <= 1081) ? 2 : 2.5;
+    const baseBottomPx = baseBottomRem * rootFontSize;
+
+    const $menu1 = $('.quick_menu').not('.new_franchise_wrap .quick_menu');
+    if ($menu1.length) {
+        if (scrollBottom < footerHeight) {
+            $menu1.css('bottom', (footerHeight - scrollBottom + baseBottomPx) + 'px');
+        } else {
+            $menu1.css('bottom', baseBottomRem + 'rem');
+        }
+    }
+
+    const $menu2 = $('.new_franchise_wrap .quick_menu');
+    if ($menu2.length) {
+        const inqBoxHeight = fixedInqBox.outerHeight() || 0;
+        const totalOffsetPx = inqBoxHeight + baseBottomPx;
+
+        if (scrollBottom < footerHeight) {
+            $menu2.css('bottom', (footerHeight - scrollBottom + totalOffsetPx) + 'px');
+        } else {
+            $menu2.css('bottom', `calc(${inqBoxHeight}px + ${baseBottomRem}rem)`);
+        }
+    }
+}
+$(window).on('scroll load', function() {
+    updateQuickMenu();
+});
+
+// marquee
+const marquees = Array.from(document.querySelectorAll(".marquee"));
+class Marquee {
+  constructor({ el }) {
+    this.el = el;
+    this.isColumn = this.el.dataset.mode === "column";
+    
+    const axis = this.isColumn ? "Y" : "X";
+    
+    this.marqueeAnimation = [
+      { transform: `translate${axis}(0)` },
+      { transform: `translate${axis}(calc(-100% - var(--gap, 0px)))` }
+    ];
+
+    this.marqueeTiming = {
+      duration: (this.el.dataset.duration || 1) * 10000,
+      direction: this.el.dataset.reverse ? "reverse" : "normal",
+      iterations: Infinity
+    };
+
+    this.animations = [];
+    this.SLOWDOWN_RATE = 0.2;
+    this.cloneMarqueeGroup();
+    this.init();
+  }
+
+  init() {
+    for (const m of this.marquee_groups) {
+      let q = m.animate(this.marqueeAnimation, this.marqueeTiming);
+      this.animations.push(q);
+    }
+    this.initEvents();
+  }
+
+  slowDownAnimations() {
+    for (const a of this.animations) {
+      a.playbackRate = this.SLOWDOWN_RATE;
+    }
+  }
+
+  resumeAnimationSpeed() {
+    for (const a of this.animations) {
+      a.playbackRate = 1;
+    }
+  }
+
+  initEvents() {
+    this.el.addEventListener("mouseenter", () => this.slowDownAnimations());
+    this.el.addEventListener("mouseleave", () => this.resumeAnimationSpeed());
+  }
+
+  cloneMarqueeGroup() {
+    let clone = this.el.querySelector(".marquee_group").cloneNode(true);
+    clone.classList.add("clone");
+    this.el.appendChild(clone);
+    this.marquee_groups = Array.from(
+      this.el.querySelectorAll(".marquee_group")
+    );
+  }
+}
+for (const m of marquees) new Marquee({ el: m });
+
+// fix inquiry form
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.fix_inquiry_form');
+
+    if (form) { // 요소가 존재할 때만 실행
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                alert('상담 신청이 정상적으로 접수되었습니다.');
+                form.reset();
+            } else {
+                alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
+            }
+        });
+    }
+});
+
+// select
+$('.inquiry_form select').on('change load', function() {
+    if ($(this).val() !== "") {
+        $(this).addClass('selected');
+    } else {
+        $(this).removeClass('selected');
+    }
+});

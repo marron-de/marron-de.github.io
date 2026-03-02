@@ -1,4 +1,4 @@
-<header class="header">
+<header id="header" class="header">
 	<div class="inner h_inner">
 		<div class="h_logo">
 			<a href="/index.php">
@@ -13,6 +13,9 @@
 			<li><a href="/news" class="link">커뮤니티</a></li>
 		</ul>
 		<div class="h_side">
+			<a href="tel:1833-9455" class="inq_badge pc">
+				<span class="txt">가맹문의 1833-9455</span>
+			</a>
 			<button type="button" class="menu_open"></button>
 		</div>
 	</div>

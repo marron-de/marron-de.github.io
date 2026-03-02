@@ -18,7 +18,10 @@
 						<span class="f_line mob_line_hide">대표:최연호</span>
 					</p>
 					<p class="mob_w100">
-						<span>사업자등록번호 : 766-88-03240</span>
+						<span class="f_line mob_line_hide">사업자등록번호 : 766-88-03240</span>
+					</p>
+					<p class="mob_w100">
+						<span>이메일 : toomuchtopping@gmail.com</span>
 					</p>
 				</li>
 				<li>
@@ -27,7 +30,7 @@
 					</p>
 					<p class="mob_w100">
 						<span>가맹전화 : 1833-9455</span>
-						</p>
+					</p>
 				</li>
 				<li>
 					<p class="copy">
@@ -41,7 +44,8 @@
 		<div class="f_sns">
 			<ul>
 				<li class="f_insta">
-					<a href="https://www.instagram.com/tmtpizza_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+					<a href="https://www.instagram.com/tmtpizza_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+						target="_blank">
 						<img src="<?php echo G5_THEME_URL ?>/img/main/f_ins_btn.png" alt="인스타그램 바로가기 버튼">
 					</a>
 				</li>
@@ -55,7 +59,7 @@
 	</div>
 </footer>
 
-        
+
 <!-- quick menu -->
 <ul class="quick_menu">
 	<li>
