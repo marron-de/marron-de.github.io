@@ -123,10 +123,14 @@ if(!defined('G5_IS_ADMIN'))
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- gsap -->
 <script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/gsap.min.js"></script>
 <script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollTrigger.min.js"></script>
 <script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollSmoother.min.js"></script>
 <script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollToPlugin.min.js"></script>
+
+<!-- lenis -->
+<script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
 
 <!-- countUp -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js"></script>

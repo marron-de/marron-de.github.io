@@ -310,13 +310,22 @@ $(document).mouseup(function (e) {
 /* 260221 추가작업 */
 
 // AOS
-AOS.init({
-	duration: 800,
-	// disable: 'tablet',
-})
-window.addEventListener('load', function () {
-	AOS.refresh();
+$(document).ready(function() {
+	const isMobile = $(window).width() <= 1080;
+    if (isMobile) {
+        $('[data-aos]').each(function() {
+            $(this).attr('data-aos-anchor-placement', 'top-bottom');
+        });
+    }
+
+    AOS.init({
+        duration: isMobile ? 800 : 800,
+    });
 });
+window.addEventListener('load', function () {
+    AOS.refresh();
+});
+
 
 // scroll header
 $(function () {
@@ -488,4 +497,12 @@ $('.inquiry_form select').on('change load', function() {
     } else {
         $(this).removeClass('selected');
     }
+});
+
+// fixed inqbox mobile toggle
+$(document).ready(function() {
+    $('.fixed_inqbox .inq_btn').on('click', function() {
+        $('.fixed_inqbox').toggleClass('show');
+        $('.mob_contbox').stop().slideToggle(400);
+    });
 });

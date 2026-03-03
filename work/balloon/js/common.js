@@ -1125,7 +1125,7 @@ function certificate_popup() {
 
 
 
-// 메인 모바일 비주얼ㄴ
+// 메인 모바일 비주얼
 const ms1_swiper = new Swiper('.ms1_swiper', {
 	observer: true,
 	observeParents: true,

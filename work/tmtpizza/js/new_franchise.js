@@ -4,23 +4,45 @@ if (history.scrollRestoration) {
 }
 
 // lenis scroll smooth
-const lenis = new Lenis({
-    duration: 2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-});
-lenis.on('scroll', ScrollTrigger.update);
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+let lenis;
+function initLenis() {
+    const isPC = window.innerWidth > 1080;
+
+    if (isPC && !lenis) {
+        lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+        lenis.on('scroll', updateQuickMenu);
+
+        function raf(time) {
+            if (lenis) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+        }
+        requestAnimationFrame(raf);
+
+    } else if (!isPC && lenis) {
+        lenis.destroy();
+        lenis = null;
+    }
 }
-requestAnimationFrame(raf);
+$(document).ready(function() {
+    initLenis();
+    $(window).on('resize', initLenis);
+});
 
 // gsap
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 const mm = gsap.matchMedia();
 const initializePageState = () => {
     window.scrollTo(0, 0);
-	lenis.scrollTo(0, { immediate: true });
+	if (typeof lenis !== 'undefined' && lenis) {
+        lenis.scrollTo(0, { immediate: true });
+    }
 	ScrollTrigger.refresh();
 };
 const initGSAP = () => {
@@ -87,9 +109,9 @@ mm.add({
         const fs2MTl = gsap.timeline({
             scrollTrigger: {
                 trigger: fs2,
-                start: "top top",
+                start: "top bottom",
                 end: () => `+=${contents.length * 100}%`,
-                pin: true,
+                // pin: true,
                 scrub: true
             }
         });
@@ -161,25 +183,53 @@ mm.add({
     }
 
     if (isMobile) {
-        const fs3 = document.querySelector('.fs3');
-        const contents = fs3.querySelectorAll('.cont');
+		const fs3 = document.querySelector('.fs3');
+		const contents = fs3.querySelectorAll('.cont');
 
-        const fs3MTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: fs3,
-                start: "top top",
-                end: () => `+=${contents.length * 100}%`,
-                pin: true,
-                scrub: true
-            }
-        });
+		gsap.set('.fs3 .tit', {
+			opacity: 0.4,
+			scale: 1,
+		});
 
-        contents.forEach((cont) => {
-            const copies = cont.querySelectorAll('.tit .copy');
-            copies.forEach((copy) => {
-                fs3MTl.to(copy, { opacity: "1", duration: 1 });
-            });
-        });
+		const fs3MTl = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".fs3",
+				start: "top top",
+				end: () => `+=${contents.length * 200}%`,
+				pin: true,
+				scrub: 1.5,
+				invalidateOnRefresh: true
+			}
+		});
+
+		contents.forEach((cont, index) => {
+			const texts = cont.querySelectorAll('.tit');
+
+			if (index > 0) {
+				fs3MTl.to(contents[index - 1], { autoAlpha: 0, duration: 0.5 });
+				fs3MTl.to(cont, { autoAlpha: 1, duration: 0.5 }, "<");
+			}
+
+			texts.forEach((txt, i) => {
+				fs3MTl.to(txt, {
+					opacity: 1,
+					scale: 1.12,
+					duration: 0.8,
+					ease: "power2.inOut"
+				}, i > 0 ? "<" : ">");
+
+				if (i < texts.length - 1) {
+					fs3MTl.to(txt, {
+						opacity: 0.4,
+						scale: 1,
+						duration: 0.8,
+						ease: "power2.inOut"
+					});
+				}
+			});
+
+			fs3MTl.to({}, { duration: 0.5 });
+		});
     }
 });
 
@@ -189,6 +239,13 @@ mm.add({
     isMobile: "(max-width: 1080px)"
 }, (context) => {
     let { isDesktop, isMobile } = context.conditions;
+
+	$('.fs5 .contbox .leftbox .txtbox .tit .color .word .dot').each(function(i) {
+		gsap.fromTo(this, 
+			{ opacity: 0, y: 80 }, 
+			{ opacity: 1, y: 0, ease: 'back.out', repeat: -1, repeatDelay: 1.5, delay: 0.2 * i }
+		);
+	});
     
     if (isDesktop) {
         const fs5Tl = gsap.timeline({
@@ -228,18 +285,31 @@ mm.add({
                 onReverseComplete: () => $('.rightcont3 .highlight').removeClass('active')
             }, 'fs5Label3+=0.2')
             .to({}, { duration: 1 });
-
-        $('.fs5 .contbox .leftbox .txtbox .tit .color .word .dot').each(function(i) {
-            gsap.fromTo(this, 
-                { opacity: 0, y: 80 }, 
-                { opacity: 1, y: 0, ease: 'back.out', repeat: -1, repeatDelay: 1.5, delay: 0.2 * i }
-            );
-        });
     }
     
     if (isMobile) {
-
-	}
+        const fs5_mob_swiper = new Swiper('.fs5_mob_swiper', {
+            observer: true,
+            observeParents: true,
+            speed: 500,
+            loop: true,
+            pagination: {
+                el: '.fs5_mob_swiper .pagination',
+                clickable: true,
+            },
+            on: {
+                init: function () {
+                    $('.fs5_mob_swiper .swiper-slide-active .highlight').addClass('active');
+                },
+                slideChangeTransitionStart: function () {
+                    $('.fs5_mob_swiper .highlight').removeClass('active');
+                },
+                slideChangeTransitionEnd: function () {
+                    $('.fs5_mob_swiper .swiper-slide-active .highlight').addClass('active');
+                }
+            }
+        });
+    }
 });
 
 // franchise section 7
@@ -292,7 +362,16 @@ mm.add({
 	}
     
     if (isMobile) {
-
+        $('.fs7_mob_swiper').each(function (index, element) {
+			const fs7_mob_swiper = new Swiper(element, {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 'auto',
+				spaceBetween: 20,
+				centeredSlides: true,
+				speed: 500,
+			});
+		});
 	}
 });
 
@@ -342,6 +421,8 @@ mm.add({
     }
     
     if (isMobile) {
+
+		
 
 	}
 });
@@ -396,9 +477,9 @@ mm.add({
         const fs10MTl = gsap.timeline({
             scrollTrigger: {
                 trigger: fs10,
-                start: "top top",
+                start: "top bottom",
                 end: () => `+=${contents.length * 100}%`,
-                pin: true,
+                // pin: true,
                 scrub: true
             }
         });
@@ -747,9 +828,11 @@ const fs18_swiper = new Swiper('.fs18_swiper', {
     spaceBetween: 20,
 	speed: 500,
 	allowTouchMove: true,
+	centeredSlides: true,
     breakpoints: {
       1080: {
 		allowTouchMove: false,
+		centeredSlides: false,
         spaceBetween: 0
       },
     }

@@ -4,23 +4,45 @@ if (history.scrollRestoration) {
 }
 
 // lenis scroll smooth
-const lenis = new Lenis({
-    duration: 2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-});
-lenis.on('scroll', ScrollTrigger.update);
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+let lenis;
+function initLenis() {
+    const isPC = window.innerWidth > 1080;
+
+    if (isPC && !lenis) {
+        lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+        lenis.on('scroll', updateQuickMenu);
+
+        function raf(time) {
+            if (lenis) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+        }
+        requestAnimationFrame(raf);
+
+    } else if (!isPC && lenis) {
+        lenis.destroy();
+        lenis = null;
+    }
 }
-requestAnimationFrame(raf);
+$(document).ready(function() {
+    initLenis();
+    $(window).on('resize', initLenis);
+});
 
 // gsap
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 const mm = gsap.matchMedia();
 const initializePageState = () => {
     window.scrollTo(0, 0);
-	lenis.scrollTo(0, { immediate: true });
+	if (typeof lenis !== 'undefined' && lenis) {
+        lenis.scrollTo(0, { immediate: true });
+    }
 	ScrollTrigger.refresh();
 };
 const initGSAP = () => {
@@ -145,9 +167,9 @@ mm.add({
         const bs3MTl = gsap.timeline({
             scrollTrigger: {
                 trigger: bs3,
-                start: "top top",
+                start: "top bottom",
                 end: () => `+=${contents.length * 100}%`,
-                pin: true,
+                // pin: true,
                 scrub: true
             }
         });
@@ -255,9 +277,9 @@ mm.add({
         const bs5MTl = gsap.timeline({
             scrollTrigger: {
                 trigger: bs5,
-                start: "top top",
+                start: "top bottom",
                 end: () => `+=${contents.length * 100}%`,
-                pin: true,
+                // pin: true,
                 scrub: true
             }
         });
