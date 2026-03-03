@@ -493,7 +493,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -540,7 +540,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -584,7 +584,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -630,7 +630,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -671,7 +671,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -719,7 +719,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
