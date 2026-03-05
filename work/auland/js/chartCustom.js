@@ -59,6 +59,7 @@ radarChart.forEach((chartCanvas) => {
 
 const lineChart1 = document.querySelectorAll('.line_chart1 .graph');
 lineChart1.forEach((chartCanvas) => {
+    const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
 	const scores = JSON.parse(chartCanvas.dataset.scores || '[]');
 	const lineCtx = chartCanvas.getContext('2d');
 
@@ -66,10 +67,10 @@ lineChart1.forEach((chartCanvas) => {
 		type: 'line',
 		plugins: [ChartDataLabels],
 		data: {
-			labels: ['성실성', '자신감', '안내,지속성', '책임감', '추진,적극성', '사교성', '이타심', '타인신뢰', '호기심', '도전정신', '도덕성'],
+			labels: labels,
 			datasets: [
 				{
-					label: '상대점수',
+					label: '데이터',
 					data: scores,
 					borderColor: '#bf1b21',
 					borderWidth: 2.8,
@@ -155,6 +156,7 @@ lineChart1.forEach((chartCanvas) => {
 
 const lineChart2 = document.querySelectorAll('.line_chart2 .graph');
 lineChart2.forEach((chartCanvas) => {
+    const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
 	const scores = JSON.parse(chartCanvas.dataset.scores || '[]');
 	const lineCtx = chartCanvas.getContext('2d');
 
@@ -162,18 +164,18 @@ lineChart2.forEach((chartCanvas) => {
 		type: 'line',
 		plugins: [ChartDataLabels],
 		data: {
-			labels: ['계획/조직화', '자기개발/학습', '창의성/혁신성', '성취의욕/업무열정', '리더십', '설득력/영향력 발휘', '타인배려 협조', '융통성/적응력', '스트레스관리/자기통제'],
+			labels: labels,
 			datasets: [
 				{
-					label: '상대점수',
+					label: '데이터',
 					data: scores,
-					borderColor: '#bf1b21',
+					borderColor: '#32baff',
 					borderWidth: 2.8,
 					pointBackgroundColor: '#fff',
 					pointRadius: 6,
 					pointBorderWidth: 2.8,
 					pointHoverBackgroundColor: '#fff',
-					pointHoverBorderColor: '#bf1b21',
+					pointHoverBorderColor: '#32baff',
 					pointHoverRadius: 8,
 					pointHoverBorderWidth: 2.8,
 					clip: false,
@@ -185,7 +187,7 @@ lineChart2.forEach((chartCanvas) => {
 				legend: { display: false,},
 				tooltip: {enabled: true,},
 				datalabels: {
-					color: '#bf1b21',
+					color: '#32baff',
 					font: {
 						family: 'Pretendard',
 						weight: '700',
@@ -776,7 +778,7 @@ barChart5.forEach((chartCanvas) => {
                 }
             },
             layout: {
-                padding: { top: 35, left: 0, right: 0, bottom: 0 }
+                padding: { top: 0, left: -10, right: 0, bottom: -8 }
             },
             scales: {
                 x: {
@@ -1093,6 +1095,93 @@ doughnutChart.forEach((chartCanvas) => {
             datasets: [{
                 data: scores,
                 backgroundColor: ['#32baff', '#e61f19', '#bf1b21', '#75171b','#430c0f'],
+                borderWidth: 0,
+            }]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            cutout: '35%',
+            plugins: {
+                legend: { display: false },
+                datalabels: { display: false }
+            },
+            layout: {
+                padding: { top: 40, bottom: 30, left: 160, right: 160 }
+            }
+        },
+        plugins: [{
+            afterDraw: (chart) => {
+                const { ctx } = chart;
+                chart.data.datasets.forEach((dataset, i) => {
+                    chart.getDatasetMeta(i).data.forEach((datapoint, index) => {
+                        if (!scores[index] || scores[index] === 0) return;
+
+                        const isPoint = (pointIdx !== null && index === (labels.length - 1 - pointIdx));
+
+                        const view = datapoint;
+                        const midpoint_angle = view.startAngle + (view.endAngle - view.startAngle) / 2;
+                        const cos = Math.cos(midpoint_angle);
+                        const sin = Math.sin(midpoint_angle);
+                        const d = view.outerRadius;
+
+                        const startX = view.x + cos * d;
+                        const startY = view.y + sin * d;
+                        
+                        const lineLength = 60; 
+                        const endX = cos >= 0 ? startX + lineLength : startX - lineLength;
+                        const endY = startY; 
+
+                        ctx.beginPath();
+                        ctx.moveTo(startX, startY);
+                        ctx.lineTo(endX, endY);
+                        ctx.strokeStyle = '#231916';
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+
+                        const isRight = endX >= view.x;
+                        ctx.textBaseline = 'middle';
+                        
+                        const scoreText = `${scores[index]}%`;
+                        const labelText = ` (${labels[index]})`;
+
+                        ctx.font = '800 16px Pretendard';
+                        const scoreWidth = ctx.measureText(scoreText).width;
+                        ctx.font = '400 14px Pretendard';
+                        const labelWidth = ctx.measureText(labelText).width;
+                        
+                        let startTextX = isRight ? endX + 8 : endX - 8 - (scoreWidth + labelWidth);
+                        ctx.textAlign = 'left'; 
+                        
+                        ctx.fillStyle = isPoint ? '#e61f19' : '#4a4a4a';
+                        ctx.font = '800 16px Pretendard';
+                        ctx.fillText(scoreText, startTextX, endY);
+                        
+                        ctx.fillStyle = (isVer2 && isPoint) ? '#e61f19' : '#4a4a4a';
+                        ctx.font = (isVer2 && isPoint) ? '700 14px Pretendard' : '400 14px Pretendard';
+                        ctx.fillText(labelText, startTextX + scoreWidth, endY);
+                    });
+                });
+            }
+        }]
+    });
+});
+
+const doughnutChart2 = document.querySelectorAll('.doughnut_chart2 .graph');
+doughnutChart2.forEach((chartCanvas) => {
+    const labels = JSON.parse(chartCanvas.dataset.labels || '[]').reverse();
+    const scores = JSON.parse(chartCanvas.dataset.scores || '[]').reverse();
+   	const pointIdx = chartCanvas.dataset.point !== undefined ? parseInt(chartCanvas.dataset.point) : null;
+    const isVer2 = chartCanvas.classList.contains('ver2'); 
+    const ctx = chartCanvas.getContext('2d');
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: scores,
+                backgroundColor: ['#430c0f', '#32baff', '#e61f19', '#bf1b21', '#75171b',],
                 borderWidth: 0,
             }]
         },
