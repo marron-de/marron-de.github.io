@@ -1,4 +1,5 @@
 
+// 방사형 차트
 const radarChart = document.querySelectorAll('.radar_chart .graph');
 radarChart.forEach((chartCanvas) => {
 	const avgData = JSON.parse(chartCanvas.dataset.avg || '[]');
@@ -57,6 +58,7 @@ radarChart.forEach((chartCanvas) => {
 	});
 });
 
+// 선형 차트 (색상만 다름)
 const lineChart1 = document.querySelectorAll('.line_chart1 .graph');
 lineChart1.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
@@ -154,6 +156,7 @@ lineChart1.forEach((chartCanvas) => {
 	});
 });
 
+// 선형 차트 (색상만 다름)
 const lineChart2 = document.querySelectorAll('.line_chart2 .graph');
 lineChart2.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
@@ -251,6 +254,7 @@ lineChart2.forEach((chartCanvas) => {
 	});
 });
 
+// 가로 막대형 차트 
 const barChart = document.querySelectorAll('.bar_chart .graph');
 barChart.forEach((chartCanvas) => {
 	const rawLabels = JSON.parse(chartCanvas.dataset.labels || '[]');
@@ -368,6 +372,7 @@ barChart.forEach((chartCanvas) => {
 	});
 });
 
+// 가로 막대형 누적 차트 
 const barChart2 = document.querySelectorAll('.bar_chart2 .graph');
 barChart2.forEach((chartCanvas) => {
 	const rawLabels = JSON.parse(chartCanvas.dataset.labels || '[]');
@@ -516,6 +521,7 @@ barChart2.forEach((chartCanvas) => {
 	});
 });
 
+// 세로 막대형 누적 차트 
 const barChart3 = document.querySelectorAll('.bar_chart3 .graph');
 barChart3.forEach((chartCanvas) => {
     const rawLabels = JSON.parse(chartCanvas.dataset.labels || '[]');
@@ -636,6 +642,7 @@ barChart3.forEach((chartCanvas) => {
     });
 });
 
+// 세로 막대형 차트 
 const barChart4 = document.querySelectorAll('.bar_chart4 .graph');
 barChart4.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
@@ -725,6 +732,8 @@ barChart4.forEach((chartCanvas) => {
     });
 });
 
+// 세로 막대형 차트 
+// data-point="인덱스번호" 값에 해당하는 막대를 빨간색으로 표시
 const barChart5 = document.querySelectorAll('.bar_chart5 .graph');
 barChart5.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
@@ -810,6 +819,8 @@ barChart5.forEach((chartCanvas) => {
     });
 });
 
+// 가로 막대형 누적 차트 (백분율)
+// data-point="내 위치 값" 값을 기준으로 x축 위치에 깃발 표시
 const barChart6 = document.querySelectorAll('.bar_chart6 .graph');
 barChart6.forEach((chartCanvas) => {
     const scores = JSON.parse(chartCanvas.dataset.scores || '[]');
@@ -925,6 +936,7 @@ barChart6.forEach((chartCanvas) => {
     });
 });
 
+// 버블 차트
 const bubbleChart = document.querySelectorAll('.bubble_Chart .graph');
 bubbleChart.forEach((chartCanvas) => {
 	const bubbleCtx = chartCanvas.getContext('2d');
@@ -1080,6 +1092,7 @@ bubbleChart.forEach((chartCanvas) => {
     });
 });
 
+// 도넛 차트 (색상 순서만 다름)
 const doughnutChart = document.querySelectorAll('.doughnut_chart .graph');
 doughnutChart.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]').reverse();
@@ -1167,6 +1180,7 @@ doughnutChart.forEach((chartCanvas) => {
     });
 });
 
+// 도넛 차트 (색상 순서만 다름)
 const doughnutChart2 = document.querySelectorAll('.doughnut_chart2 .graph');
 doughnutChart2.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]').reverse();
