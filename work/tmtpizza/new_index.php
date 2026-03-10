@@ -73,6 +73,12 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div class="wrap new_main_wrap">
 
+	<!-- loader -->
+	<div id="page_loader">
+		<div class="loader"></div>
+		<img src="<?php echo G5_THEME_URL ?>/img/main/logo.png" alt="T.M.T PIZZA logo" class="logo">
+	</div>
+
 	<!-- common header -->
 	<?php include_once(G5_THEME_PATH.'/common_header.php'); ?>
 
@@ -83,7 +89,7 @@ include_once(G5_THEME_PATH.'/head.php');
 			<div class="swiper ms1_swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide item item1">
-						<div class="txtbox">
+						<div class="txtbox inner2">
 							<h2 class="tit" data-swiper-parallax="-300">빵 끝까지 맛있다</h2>
 							<p class="desc" data-swiper-parallax="-400">
 								최적의 숙성 발효과정을 거친 <br class="tablet">
@@ -94,14 +100,14 @@ include_once(G5_THEME_PATH.'/head.php');
 						</div>
 					</div>
 					<div class="swiper-slide item item2">
-						<div class="txtbox">
+						<div class="txtbox inner2">
+							<p class="tit" data-swiper-parallax="-400">
+								우리는 <br class="tablet">티엠티 피자입니다
+							</p>
 							<h3 class="desc" data-swiper-parallax="-300">
 								한 번 먹고 끝나는 피자가 아닌, <br class="tablet">
-								계속 찾게되는 피자를 만드는
+								계속 찾게 되는 피자를 만듭니다
 							</h3>
-							<p class="tit" data-swiper-parallax="-400">
-								우리는 <br class="tablet">티엠티피자 입니다
-							</p>
 						</div>
 					</div>
 				</div>
@@ -410,11 +416,21 @@ include_once(G5_THEME_PATH.'/head.php');
 
 	<!-- common footer -->
 	<?php include_once(G5_THEME_PATH.'/common_footer.php'); ?>
+		
+	<!-- main popup -->
+	<div class="main_popup">
+		<div class="pop_box">
+			<div class="pop_body">
+				<img src="<?php echo G5_THEME_URL ?>/img/new/main_popup_sample.jpg" alt="" class="pop_img">
+			</div>
+			<div class="pop_btnbox">
+				<button type="button" class="pop_btn today_close">오늘 하루 그만보기</button>
+				<button type="button" class="pop_btn pop_close">닫기</button>
+			</div>
+		</div>
+	</div>
 
 </div>
-
-
-<script src="<?php echo G5_THEME_URL ?>/js/new_main.js"></script>
 
 
 <?php

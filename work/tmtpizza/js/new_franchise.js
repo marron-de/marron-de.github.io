@@ -1,3 +1,10 @@
+// 스크롤 잠금
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+document.documentElement.style.overflow = 'hidden';
+
+
 // lenis scroll smooth
 let lenis;
 function debounce(fn, delay) {
@@ -46,9 +53,21 @@ const initializePageState = () => {
     }
 };
 $(window).on('load', function () {
+    const loaderEl = document.getElementById('page_loader');
+
     initLenis();
     initializePageState();
-    setTimeout(() => ScrollTrigger.refresh(), 300);
+
+    gsap.to(loaderEl, {
+        autoAlpha: 0,
+        duration: 0.5,
+        delay: 0.2,
+        onComplete: () => {
+            loaderEl.classList.add('hide');
+            document.documentElement.style.overflow = '';
+            setTimeout(() => ScrollTrigger.refresh(), 300);
+        }
+    });
 });
 
 
@@ -276,6 +295,7 @@ mm.add({
         const fs5_mob_swiper = new Swiper('.fs5_mob_swiper', {
             observer: true,
             observeParents: true,
+			effect : 'fade',
             speed: 500,
             loop: true,
             pagination: {

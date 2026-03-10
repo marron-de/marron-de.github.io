@@ -1,5 +1,11 @@
 <div class="wrap new_franchise_wrap">
 
+	<!-- loader -->
+	<div id="page_loader">
+		<div class="loader"></div>
+		<img src="<?php echo G5_THEME_URL ?>/img/main/logo.png" alt="T.M.T PIZZA logo" class="logo">
+	</div>
+
 	<!-- common header -->
 	<?php include_once(G5_THEME_PATH.'/common_header.php'); ?>
 
@@ -76,7 +82,7 @@
 						</p>
 						<p class="tit tit04">
 							<span class="txt">
-								“ 고객들이 말하는 <span class="red">&nbsp;가성비</span> ”
+								“고객들이 말하는 <span class="red">&nbsp;가성비</span>”
 							</span>
 						</p>
 						<p class="tit tit05">
@@ -124,22 +130,28 @@
 						<p class="tit">
 							<span class="color">
 								<span class="word">
-									<span class="dot"></span>
-									함
+									<span class="dot"></span>도
 								</span>
 								<span class="word">
-									<span class="dot"></span>
-									량
+									<span class="dot"></span>우
 								</span>
 								<span class="word">
-									<span class="dot"></span>
-									으
+									<span class="dot"></span>가
+								</span>
+								&nbsp;
+								<span class="word">
+									<span class="dot"></span>맛
 								</span>
 								<span class="word">
-									<span class="dot"></span>
-									로
+									<span class="dot"></span>있
 								</span>
-							</span> <br>말하지 않습니다
+								<span class="word">
+									<span class="dot"></span>어
+								</span>
+								<span class="word">
+									<span class="dot"></span>야
+								</span>
+							</span> <br>피자도 맛있습니다
 						</p>
 					</div>
 				</div>
@@ -165,6 +177,11 @@
 							</div>
 						</div>
 						<div class="swiper-slide rightcont rightcont2">
+							<div class="bgbox">
+								<video muted autoplay playsinline loop preload="auto" class="video">
+									<source src="<?php echo G5_THEME_URL ?>/video/franchise_video4_2.mp4" type="video/mp4">
+								</video>
+							</div>
 							<div class="top_txtbox">
 								<p class="sub">티엠티가 개발한</p>
 								<p class="tit">
@@ -208,113 +225,141 @@
 			</div>
 		</section>
 
-		<section class="sub_section fs6 mh100vh">
+		<section class="sub_section fs6">
 			<div class="inner2">
 				<div class="titbox">
-					<h1 class="tit fs_txt1" data-aos="fade-up" data-aos-anchor-placement="top-center">
+					<h1 class="tit fs_txt1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
 						매장 수 보다 <br>
 						<span class="color">“점주님 수익”</span>을 <br>
 						최우선으로
 					</h1>
 				</div>
-				<div class="contbox">
-					<div class="labelbox" data-aos="fade-up" data-aos-anchor-placement="top-center">
-						<p class="tit">
-							“ 매장 수 늘리기 보다,<br>
-							<span class="color">사장님 지키기</span>가 먼저 "
-						</p>
+				<div class="labelbox">
+					<div class="div" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
+						<div class="label active">
+							<p class="txt">
+								“ 매장 수 늘리기 보다,<br>
+								<span class="color">사장님 지키기</span>가 먼저 "
+							</p>
+						</div>
 					</div>
-					<div class="labelbox2" data-aos="fade-up" data-aos-anchor-placement="top-center">
-						<p class="txt"># 매장 수 욕심에 사장님 영업권 타협 없음</p>
+					<div class="div" data-aos="fade-up" data-aos-delay="500"  data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
+						<div class="label">
+							<p class="txt"># 매장 수 욕심에 사장님 영업권 타협 없음</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="sub_section fs7 mh100vh">
-			<div class="inner2 contbox">
-				<div class="leftbox">
-					<div class="titbox"><p class="tit">타사</p></div>
-					<div class="swiper fs7_mob_swiper cardbox leftcard">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide card card1">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepA_map.png" alt="" class="img">
-							</div>
-							<div class="swiper-slide card card2">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepB_map.png" alt="" class="img">
-							</div>
-							<div class="swiper-slide card card3">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepC_map.png" alt="" class="img">
-							</div>
-							<div class="swiper-slide card card4">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepD_map.png" alt="" class="img">
-							</div>
-						</div>
-					</div>
+			<div class="inner2">
+				<div class="titbox">
+					<p class="fs_txt2">
+						<span class="color">티엠티 피자</span> 상권 비교
+					</p>
 				</div>
-				<div class="rightbox">
-					<div class="titbox"><p class="tit bg">티엠티 피자</p></div>
-					<div class="swiper fs7_mob_swiper cardbox rightcard">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide card card1">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_seoul_map.png" alt="" class="img">
+				<div class="swiper fs7_swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<div class="top">
+								<div class="card card1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_seoul_map.png" alt="" class="img">
+								</div>
 							</div>
-							<div class="swiper-slide card card3">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_daegu_map.png" alt="" class="img">
-							</div>	
+							<div class="bottom">
+								<div class="card card2" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepA_map.png" alt="" class="img">
+								</div>
+								<div class="card card3" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepB_map.png" alt="" class="img">
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide item">
+							<div class="top">
+								<div class="card card1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_daegu_map.png" alt="" class="img">
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="card card2" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepC_map.png" alt="" class="img">
+								</div>
+								<div class="card card3" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepD_map.png" alt="" class="img">
+								</div>
+							</div>
 						</div>
 					</div>
+					<div class="swiper-button-prev prev_btn"></div>
+					<div class="swiper-button-next next_btn"></div>
 				</div>
 			</div>
 		</section>
-
+		
 		<section class="sub_section fs8 mh100vh">
+			<div class="bgbox">
+				<video muted autoplay playsinline loop preload="auto" class="video">
+					<source src="<?php echo G5_THEME_URL ?>/video/franchise_video5.mp4" type="video/mp4">
+				</video>
+			</div>
 			<div class="inner2 contbox">
 				<div class="titbox">
-					<h1 class="tit fs_txt2">
+					<h1 class="tit fs_txt2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-anchor=".fs8">
 						점주님만 드리는 특혜! <br>
 						<span class="color">티엠티 출점 원칙</span>
 					</h1>
 				</div>
 				<div class="labelbox">
-					<div class="label active" data-aos="fade-up">
-						<p class="txt">
-							# 팀킬 없는 <span class="color">철저한 상권 분석</span>
-						</p>
+					<div class="div" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos-anchor=".fs8">
+						<div class="label active">
+							<p class="txt">
+								# 팀킬 없는 <span class="color">철저한 상권 분석</span>
+							</p>
+						</div>
 					</div>
-					<div class="label" data-aos="fade-up">
-						<p class="txt">
-							# <span class="color">3km</span> 수준의 광역 상권 지향
-						</p>
+					<div class="div" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="top-center" data-aos-anchor=".fs8">
+						<div class="label">
+							<p class="txt">
+								# <span class="color">3km</span> 수준의 광역 상권 지향
+							</p>
+						</div>
 					</div>
-					<div class="label" data-aos="fade-up">
-						<p class="txt">
-							# 합리적인 <span class="color">최대 범위</span> 영업지역 보장
-						</p>
+					<div class="div" data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="top-center" data-aos-anchor=".fs8">
+						<div class="label">
+							<p class="txt">
+								# 합리적인 <span class="color">최대 범위</span> 영업지역 보장
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="sub_section fs9 mh100vh">
+			<div class="bgbox">
+				<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_line.png" alt="" class="bg_line" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="400" data-aos-anchor-placement="top-center">
+			</div>
 			<div class="inner2">
-				<div class="titbox">
+				<div class="titbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
 					<h1 class="tit fs_txt1">
 						AI를 활용한 <br>
 						빅데이터 기반의 상권분석
 					</h1>
 				</div>
 				<div class="imgbox">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.png" alt="" class="img">
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_text.png" alt="" class="bg_text" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="800" data-aos-anchor-placement="top-center">
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.png" alt="" class="img"  data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
 				</div>
-				<div class="contbox">
+				<div class="contbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
 					<p class="tit">
 						유동인구 숫자가 답은 아닙니다 <br>
 						피자를 시켜먹는 사람은 따로 있습니다
 					</p>
 					<div class="labelbox">
-						<div class="label typeA" data-aos="fade-up" data-aos-anchor=".fs9 .labelbox" data-aos-duration="500" data-aos-delay="200" data-aos-anchor-placement="top-center">ai 분석으로 배후 수요 1차 검증</div>
-						<div class="label typeB" data-aos="fade-up" data-aos-anchor=".fs9 .labelbox" data-aos-duration="500" data-aos-delay="400" data-aos-anchor-placement="top-center">티엠티 운영 데이터로 실제 주문 동선 2차 확인</div>
+						<div class="label typeA" data-aos="fade-up" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="200" data-aos-anchor-placement="top-center">ai 분석으로 배후 수요 1차 검증</div>
+						<div class="label typeB" data-aos="fade-up" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="400" data-aos-anchor-placement="top-center">티엠티 운영 데이터로 실제 주문 동선 2차 확인</div>
 					</div>
 				</div>
 			</div>				
@@ -384,31 +429,31 @@
 							<div class="item">T.M.T LIMITED EVENT T.M.T LIMITED EVENT</div>
 						</div>
 					</div>
-					<div class="gift_img">
+					<div class="gift_img" data-aos="fade-up" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-anchor-placement="top-center">
 						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_gift.png" alt="" class="img">
 					</div>					
 				</div>
-				<div class="card_tit fs_txt1">
+				<div class="card_tit fs_txt1" data-aos="fade-up" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="300" data-aos-anchor-placement="top-center">
 					<span class="color">혜택</span>에도 
 					<span class="color">유통기한</span>이 있습니다
 				</div>
 				<div class="cardbox">
-					<div class="circle_text1">
+					<div class="circle_text1" data-aos="fade" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="600" data-aos-anchor-placement="top-center">
 						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_circle1.png" alt="" class="img">
 					</div>
-					<div class="circle_text2">
+					<div class="circle_text2" data-aos="fade" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="1500" data-aos-anchor-placement="top-center">
 						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_circle2.png" alt="" class="img">
 					</div>
-					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .cardbox" data-aos-duration="00" data-aos-anchor-placement="top-center">
+					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="600" data-aos-anchor-placement="top-center">
 						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card1.jpg" alt="" class="img">
 					</div>
-					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .cardbox" data-aos-duration="600" data-aos-delay="300" data-aos-anchor-placement="top-center">
+					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="900" data-aos-anchor-placement="top-center">
 						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card2.jpg" alt="" class="img">
 					</div>
-					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .cardbox" data-aos-duration="600" data-aos-delay="600" data-aos-anchor-placement="top-center">
+					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="1200" data-aos-anchor-placement="top-center">
 						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card3.jpg" alt="" class="img">
 					</div>
-					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .cardbox" data-aos-duration="506000" data-aos-delay="900" data-aos-anchor-placement="top-center">
+					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="1500" data-aos-anchor-placement="top-center">
 						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card4.jpg" alt="" class="img">
 					</div>
 				</div>
@@ -493,7 +538,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="/menu.php" class="more">+ MORE</a>
+								<a href="#none" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -540,7 +585,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="/menu.php" class="more">+ MORE</a>
+								<a href="#none" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -579,12 +624,12 @@
 										빈틈 없이 꽉꽉 담은  <br>
 										푸짐한 페퍼로니 꽃이 피었습니다
 									</p>
-									<p class="desc2">충성도 높은 기본 메뉴로도 매니아층 확보</p>
+									<p class="desc2">충성도 높은 기본 메뉴로도 <br class="tablet"> 매니아층 확보</p>
 								</div>
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="/menu.php" class="more">+ MORE</a>
+								<a href="#none" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -625,12 +670,12 @@
 									<p class="desc1">
 										혼자서도 부담 없이 즐기자!
 									</p>
-									<p class="desc2">1인 가구 100만 시대, 전략적 엔트리모델</p>
+									<p class="desc2">1인 가구 100만 시대, <br class="tablet">전략적 엔트리모델</p>
 								</div>
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="/menu.php" class="more">+ MORE</a>
+								<a href="#none" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -666,12 +711,12 @@
 									<span class="label">접근성</span>
 									<p class="tit">세트 메뉴</p>
 									<p class="desc1">고민은 배달 시간만 늦출 뿐!</p>
-									<p class="desc2">불필요한 동선 최소화로 주문접근성 최적화</p>
+									<p class="desc2">불필요한 동선 최소화로 <br class="tablet"> 주문접근성 최적화</p>
 								</div>
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="/menu.php" class="more">+ MORE</a>
+								<a href="#none" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -690,7 +735,7 @@
 									<span class="color">
 										<span class="word"><span class="dot"></span>사</span>
 										<span class="word"><span class="dot"></span>이</span>
-										<span class="word"><span class="dot"></span>드함</span>
+										<span class="word"><span class="dot"></span>드</span>
 									</span>는 객단가를  <br class="tablet"> 
 									바꾸는 가장 쉬운 레버
 								</p>
@@ -719,7 +764,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="/menu.php" class="more">+ MORE</a>
+								<a href="#none" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -956,7 +1001,7 @@
 			</div>
 		</section>
 
-		<section class="sub_section fs15 mh100vh">								
+		<section class="sub_section fs15">								
 			<div class="fs15_marquee marquee left" data-duration="4" data-mode="column">
 				<div class="marquee_group">
 					<div class="item">TOO MUCH TOPPING STORY</div>
@@ -1049,183 +1094,239 @@
 			</div>
 		</section>
 
-		<section class="sub_section fs16 fs16_1 mh100vh">
-			<div class="inner2">
-				<div class="titbox">
-					<h1 class="tit fs_txt2">오래가는 수익 구조</h1>
+		<div class="fs16_wrap">
+			<div class="fs16_secbox">
+				<section class="sub_section fs16 fs16_1 mh100vh">
+					<div class="inner">
+						<div class="titbox">
+							<h1 class="tit fs_txt1">오래가는 수익 구조</h1>
+							<p class="desc">
+								안정적인 수익률로 점주님과 <br class="tablet">
+								오래가는 티엠티피자입니다
+							</p>
+							<div class="region">울산 본점(13평)</div>
+						</div>
+						<div class="contbox">
+							<div class="cont cont01">
+								<div class="graphbox">
+									<div class="graph">
+										<div class="graph_img">
+											<div class="img"></div>
+										</div>
+										<div class="graph_center">
+											<p class="tit">순수익률</p>
+											<p class="percent" data-count="16.06">0%</p>
+											<p class="desc">2025년 12월 기준</p>
+										</div>
+										<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
+									</div>
+								</div>
+								<div class="tbl_box">
+									<div class="tbl_item first">
+										<p class="txt1">총매출</p>
+										<p class="txt2">180,011,052</p>
+										<p class="txt3">100%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">원재료</p>
+										<p class="txt2">61,757,639</p>
+										<p class="txt3">34.31%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">주류/음료</p>
+										<p class="txt2">2,369,300</p>
+										<p class="txt3">1.32%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">인건비</p>
+										<p class="txt2">20,255,990</p>
+										<p class="txt3">11.25%</p>
+										<div class="tooltip">
+											<span class="txt">풀 오토 매장 (직원 20명)</span>
+										</div>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">임대료</p>
+										<p class="txt2">836,000</p>
+										<p class="txt3">0.46%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">공과금</p>
+										<p class="txt2">1,125,806</p>
+										<p class="txt3">0.63%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">배달대행</p>
+										<p class="txt2">10,154,210</p>
+										<p class="txt3">5.64%</p>
+										<div class="tooltip">
+											<span class="txt">직접 배달시 절감 가능</span>
+										</div>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">플랫폼</p>
+										<p class="txt2">35,104,832</p>
+										<p class="txt3">19.50%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">기타</p>
+										<p class="txt2">19,501,105</p>
+										<p class="txt3">10.83%</p>
+										<div class="tooltip">
+											<span class="txt">매장 부대비용 + 예비비</span>
+										</div>
+									</div>
+									<div class="tbl_item last">
+										<p class="txt1">영업이익</p>
+										<p class="txt2">28,906,170</p>
+										<p class="txt3">16.06%</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="sub_section fs16 fs16_2 mh100vh">
+					<div class="inner">
+						<div class="titbox">
+							<h1 class="tit fs_txt1">오래가는 수익 구조</h1>
+							<p class="desc">
+								안정적인 수익률로 점주님과 <br class="tablet">
+								오래가는 티엠티피자입니다
+							</p>
+							<div class="region">울산 동구점(22평)</div>
+						</div>
+						<div class="contbox">
+							<div class="cont cont02">
+								<div class="graphbox">
+									<div class="graph">
+										<div class="graph_img">
+											<div class="img"></div>
+										</div>
+										<div class="graph_center">
+											<p class="tit">순수익률</p>
+											<p class="percent" data-count="19.20">0%</p>
+											<p class="desc">2025년 12월 기준</p>
+										</div>
+										<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
+									</div>
+								</div>
+								<div class="tbl_box">
+									<div class="tbl_item first">
+										<p class="txt1">총매출</p>
+										<p class="txt2">156,382,940</p>
+										<p class="txt3">100%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">원재료</p>
+										<p class="txt2">55,616,887</p>
+										<p class="txt3">35.56%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">주류/음료</p>
+										<p class="txt2">2,504,000</p>
+										<p class="txt3">1.60%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">인건비</p>
+										<p class="txt2">19,100,000</p>
+										<p class="txt3">12.21%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">임대료</p>
+										<p class="txt2">840,000</p>
+										<p class="txt3">0.54%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">공과금</p>
+										<p class="txt2">1,378,000</p>
+										<p class="txt3">0.88%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">배달대행</p>
+										<p class="txt2">7,500,000</p>
+										<p class="txt3">4.80%</p>
+										<div class="tooltip">
+											<span class="txt">직접 배달시 절감 가능</span>
+										</div>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">플랫폼</p>
+										<p class="txt2">18,531,853</p>
+										<p class="txt3">11.85%</p>
+									</div>
+									<div class="tbl_item">
+										<p class="txt1">기타</p>
+										<p class="txt2">20,888,294</p>
+										<p class="txt3">13.36%</p>
+										<div class="tooltip">
+											<span class="txt">매장 부대비용 + 예비비</span>
+										</div>
+									</div>
+									<div class="tbl_item last">
+										<p class="txt1">영업이익</p>
+										<p class="txt2">30,023,906</p>
+										<p class="txt3">19.20%</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<section class="sub_section mob_fs16 mh100vh">
+			<div class="inner">
+				<div class="titbox" data-aos="fade-up">
+					<h1 class="tit fs_txt1">오래가는 수익 구조</h1>
 					<p class="desc">
 						안정적인 수익률로 점주님과 <br class="tablet">
 						오래가는 티엠티피자입니다
 					</p>
 				</div>
-				<div class="contbox">
-					<div class="cont cont01" data-aos="fade-up" data-aos-anchor-placement="top-center">
-						<div class="graphbox">
-							<div class="region">울산 본점(13평)</div>
-							<div class="graph">
-								<div class="graph_img">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_graph1.png" alt="" class="img">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_graph1_txt.png" alt="" class="txt">
-								</div>
-								<div class="graph_center">
-									<p class="tit">순수익률</p>
-									<p class="percent" data-count="16.06">0%</p>
-									<p class="desc">2025년 12월 기준</p>
-								</div>
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
-							</div>
-						</div>
-						<div class="tbl_box">
-							<div class="tbl_item first">
-								<p class="txt1">총매출</p>
-								<p class="txt2">180,011,052</p>
-								<p class="txt3">100%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">원재료</p>
-								<p class="txt2">61,757,639</p>
-								<p class="txt3">34.31%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">주류/음료</p>
-								<p class="txt2">2,369,300</p>
-								<p class="txt3">1.32%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">인건비</p>
-								<p class="txt2">20,255,990</p>
-								<p class="txt3">11.25%</p>
-								<div class="tooltip">
-									<span class="txt">풀 오토 매장 (직원 20명)</span>
-								</div>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">임대료</p>
-								<p class="txt2">836,000</p>
-								<p class="txt3">0.46%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">공과금</p>
-								<p class="txt2">1,125,806</p>
-								<p class="txt3">0.63%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">배달대행</p>
-								<p class="txt2">10,154,210</p>
-								<p class="txt3">5.64%</p>
-								<div class="tooltip">
-									<span class="txt">직접 배달시 절감 가능</span>
-								</div>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">플랫폼</p>
-								<p class="txt2">35,104,832</p>
-								<p class="txt3">19.50%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">기타</p>
-								<p class="txt2">19,501,105</p>
-								<p class="txt3">10.83%</p>
-								<div class="tooltip">
-									<span class="txt">매장 부대비용 + 예비비</span>
-								</div>
-							</div>
-							<div class="tbl_item last">
-								<p class="txt1">영업이익</p>
-								<p class="txt2">28,906,170</p>
-								<p class="txt3">16.06%</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="sub_section fs16 fs16_2 mh100vh">
-			<div class="inner2">
-				<div class="titbox">
-					<h1 class="tit fs_txt2">오래가는 수익 구조</h1>
-					<p class="desc">
-						안정적인 수익률로 점주님과 <br class="tablet">
-							오래가는 티엠티피자입니다
-					</p>
-				</div>
-				<div class="contbox">
-					<div class="cont cont02" data-aos="fade-up" data-aos-anchor-placement="top-center">
-						<div class="graphbox">
+				<div class="swiper fs16_swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item item1">
 							<div class="region">울산 동구점(22평)</div>
-							<div class="graph">
-								<div class="graph_img">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_graph2.png" alt="" class="img">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_graph2_txt.png" alt="" class="txt">
+							<div class="graphbox">
+								<div class="graph">
+									<div class="graph_img"></div>
+									<div class="graph_center">
+										<p class="tit">순수익률</p>
+										<p class="percent" data-count="16.06">0%</p>
+										<p class="desc">2025년 12월 기준</p>
+									</div>
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
 								</div>
-								<div class="graph_center">
-									<p class="tit">순수익률</p>
-									<p class="percent" data-count="19.20">0%</p>
-									<p class="desc">2025년 12월 기준</p>
-								</div>
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
+							</div>
+							<div class="tblbox">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_mob_tbl1.png" alt="" class="img">
 							</div>
 						</div>
-						<div class="tbl_box">
-							<div class="tbl_item first">
-								<p class="txt1">총매출</p>
-								<p class="txt2">156,382,940</p>
-								<p class="txt3">100%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">원재료</p>
-								<p class="txt2">55,616,887</p>
-								<p class="txt3">35.56%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">주류/음료</p>
-								<p class="txt2">2,504,000</p>
-								<p class="txt3">1.60%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">인건비</p>
-								<p class="txt2">19,100,000</p>
-								<p class="txt3">12.21%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">임대료</p>
-								<p class="txt2">840,000</p>
-								<p class="txt3">0.54%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">공과금</p>
-								<p class="txt2">1,378,000</p>
-								<p class="txt3">0.88%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">배달대행</p>
-								<p class="txt2">7,500,000</p>
-								<p class="txt3">4.80%</p>
-								<div class="tooltip">
-									<span class="txt">직접 배달시 절감 가능</span>
+						<div class="swiper-slide item item2">
+							<div class="region">울산 동구점(22평)</div>
+							<div class="graphbox">
+								<div class="graph">
+									<div class="graph_img">
+										<div class="img"></div>
+									</div>
+									<div class="graph_center">
+										<p class="tit">순수익률</p>
+										<p class="percent" data-count="19.20">0%</p>
+										<p class="desc">2025년 12월 기준</p>
+									</div>
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
 								</div>
 							</div>
-							<div class="tbl_item">
-								<p class="txt1">플랫폼</p>
-								<p class="txt2">18,531,853</p>
-								<p class="txt3">11.85%</p>
-							</div>
-							<div class="tbl_item">
-								<p class="txt1">기타</p>
-								<p class="txt2">20,888,294</p>
-								<p class="txt3">13.36%</p>
-								<div class="tooltip">
-									<span class="txt">매장 부대비용 + 예비비</span>
-								</div>
-							</div>
-							<div class="tbl_item last">
-								<p class="txt1">영업이익</p>
-								<p class="txt2">30,023,906</p>
-								<p class="txt3">19.20%</p>
+							<div class="tblbox">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_mob_tbl2.png" alt="" class="img">
 							</div>
 						</div>
 					</div>
+					<div class="swiper-button-prev prev_btn"></div>
+					<div class="swiper-button-next next_btn"></div>
 				</div>
 			</div>
 		</section>
@@ -1264,100 +1365,98 @@
 				<div class="titbox">
 					<h1 class="tit fs_txt2">창업 절차</h1>
 				</div>
-				<div class="swiper fs18_swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide item" data-aos="fade-up" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center">
-							<div class="iconbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon1.png" alt="" class="icon">
-							</div>
-							<div class="txtbox">
-								<p class="tit">창업 상담 문의</p>
-								<p class="desc">
-									홈페이지 또는 유선 문의 <br>
-									(1833-9455)
-								</p>
-							</div>
+				<div class="fs18_cont">
+					<div class="item" data-aos="fade-up" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
+						<div class="iconbox">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon1.png" alt="" class="icon">
 						</div>
-						<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center"></div>
-						<div class="swiper-slide item" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center">
-							<div class="iconbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon2.png" alt="" class="icon">
-							</div>
-							<div class="txtbox">
-								<p class="tit">상권분석 / 점포 선정</p>
-								<p class="desc">
-									AI데이터 기반을 통해 <br>
-									희망 상권 분석 후 점포 선정
-								</p>
-							</div>
-						</div>
-						<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center"></div>
-						<div class="swiper-slide item" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center">
-							<div class="iconbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon3.png" alt="" class="icon">
-							</div>
-							<div class="txtbox">
-								<p class="tit">계약 체결</p>
-								<p class="desc">
-									가맹점 계약 승인 및 가맹계약서, <br>
-									정보공개서 제공, 오픈 준비 설명
-								</p>
-							</div>
-						</div>
-						<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="500" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center"></div>
-						<div class="swiper-slide item" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center">
-							<div class="iconbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon4.png" alt="" class="icon">
-							</div>
-							<div class="txtbox">
-								<p class="tit">매장 실측 / 인테리어 공사</p>
-								<p class="desc">
-									최적의 동선을 위한 실측 및 <br>
-									시공 진행, 공사 감리
-								</p>
-							</div>
-						</div>
-						<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="700" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center"></div>
-						<div class="swiper-slide item" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center">
-							<div class="iconbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon5.png" alt="" class="icon">
-							</div>
-							<div class="txtbox">
-								<p class="tit">교육</p>
-								<p class="desc">
-									가맹 오픈을 위한 <br>
-									이론, 현장 교육, 노하우 전수
-								</p>
-							</div>
-						</div>
-						<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="900" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center"></div>
-						<div class="swiper-slide item" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center">
-							<div class="iconbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon6.png" alt="" class="icon">
-							</div>
-							<div class="txtbox">
-								<p class="tit">가맹 오픈</p>
-								<p class="desc">
-									오픈 시 원활한 운영을 위해 <br>
-									베테랑 전문가 현장 지원
-								</p>
-							</div>
-						</div>
-						<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="1100" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center"></div>
-						<div class="swiper-slide item" data-aos="fade-up" data-aos-delay="1200" data-aos-anchor=".fs18_swiper" data-aos-anchor-placement="top-center">
-							<div class="iconbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon7.png" alt="" class="icon">
-							</div>
-							<div class="txtbox">
-								<p class="tit">지속적 관리</p>
-								<p class="desc">
-									본사의 정기적 방문 및 <br>
-									손익분석 지원
-								</p>
-							</div>
+						<div class="txtbox">
+							<p class="tit">창업 상담 문의</p>
+							<p class="desc">
+								홈페이지 또는
+								유선 문의 <br>
+								(1833-9455)
+							</p>
 						</div>
 					</div>
-					
+					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
+					<div class="item" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
+						<div class="iconbox">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon2.png" alt="" class="icon">
+						</div>
+						<div class="txtbox">
+							<p class="tit">상권분석 / 점포 선정</p>
+							<p class="desc">
+								AI데이터 기반을 통해 <br>
+								희망 상권 분석 후 점포 선정
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
+					<div class="item" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
+						<div class="iconbox">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon3.png" alt="" class="icon">
+						</div>
+						<div class="txtbox">
+							<p class="tit">계약 체결</p>
+							<p class="desc">
+								가맹점 계약 승인 및 가맹계약서, <br class="pc">
+								정보공개서 제공, 오픈 준비 설명
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="500" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
+					<div class="item" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
+						<div class="iconbox">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon4.png" alt="" class="icon">
+						</div>
+						<div class="txtbox">
+							<p class="tit">매장 실측 / <br class="tablet">인테리어 공사</p>
+							<p class="desc">
+								최적의 동선을 위한 실측 및 <br>
+								시공 진행, 공사 감리
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="700" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
+					<div class="item" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
+						<div class="iconbox">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon5.png" alt="" class="icon">
+						</div>
+						<div class="txtbox">
+							<p class="tit">교육</p>
+							<p class="desc">
+								가맹 오픈을 위한 <br>
+								이론, 현장 교육, 노하우 전수
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="900" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
+					<div class="item" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
+						<div class="iconbox">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon6.png" alt="" class="icon">
+						</div>
+						<div class="txtbox">
+							<p class="tit">가맹 오픈</p>
+							<p class="desc">
+								오픈 시 원활한 운영을 위해 <br>
+								베테랑 전문가 현장 지원
+							</p>
+						</div>
+					</div>
+					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="1100" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
+					<div class="item" data-aos="fade-up" data-aos-delay="1200" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
+						<div class="iconbox">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon7.png" alt="" class="icon">
+						</div>
+						<div class="txtbox">
+							<p class="tit">지속적 관리</p>
+							<p class="desc">
+								본사의 정기적 방문 및 <br>
+								손익분석 지원
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>				
 		</section>
@@ -1374,7 +1473,7 @@
 						<span class="color">눈여겨 본 상권 선점의 마지막 기회!</span>
 					</p>
 					<p class="desc">
-						지금 바로 희망 지역의 <br class="tablet">
+						지금 바로 희망 지역의
 						입점 가능 여부를 확인해 보세요. <br>
 						최대한 신속하게 안내드리도록 하겠습니다.
 					</p>
@@ -1512,7 +1611,7 @@
 			<div class="topbox">
 				<p class="tit">
 					맛있는 피자는 손님을 부르고, <br>
-					정확한 계산은 가계를 지킵니다
+					정확한 계산은 매장을 지킵니다
 				</p>
 				<p class="desc">
 					원가율부터 손익분기점까지 <br class="tablet">
@@ -1659,6 +1758,3 @@
 
 	</ul>
 </div>
-
-
-<script src="<?php echo G5_THEME_URL ?>/js/new_franchise.js"></script>

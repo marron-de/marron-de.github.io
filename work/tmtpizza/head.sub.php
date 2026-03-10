@@ -117,36 +117,23 @@ if(!defined('G5_IS_ADMIN'))
 
 
 
-<!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<!-- Swiper -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- gsap -->
-<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/gsap.min.js"></script>
-<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollTrigger.min.js"></script>
-<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollSmoother.min.js"></script>
-<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollToPlugin.min.js"></script>
-
-<!-- lenis -->
-<script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
-
-<!-- countUp -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js"></script>
-
-<!-- Phosphor Icons -->
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
-
 <!-- google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Paytone+One&display=swap" rel="stylesheet">
 
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Phosphor Icons -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
 <!-- CSS -->
 <link rel="stylesheet" href="<?php echo G5_THEME_URL ?>/css/style.css">
+
 
 
 <?php

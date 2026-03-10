@@ -1,3 +1,11 @@
+/* loader */
+#page_loader { position: fixed;  width: 100%;  height: 100%;  background: rgba(0, 0, 0, 0.8);  z-index: 9999;  display: flex;  align-items: center;  justify-content: center;   transition: var(--transition);}
+#page_loader.hide {opacity: 0; pointer-events: none;}
+#page_loader .loader { width: 16rem;  aspect-ratio: 1;  border-radius: 50%;  background: radial-gradient(farthest-side, var(--sub-green) 94%, #0000) top / 1.25rem 1.25rem no-repeat, conic-gradient(#0000 30%, var(--sub-green)); -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 1.25rem), #000 0);  animation: loader 1.2s infinite linear;}
+#page_loader .logo { position: absolute; width: 10rem; filter: brightness(10) grayscale(10);}
+@keyframes loader { 100% { transform: rotate(1turn) }}
+
+
 /* main popup */
 .main_popup { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; background: rgba(0, 0, 0, 0.5); transition: var(--transition); pointer-events: none; opacity: 0;}
 .main_popup.show {pointer-events: auto; opacity: 1;}
@@ -9,7 +17,6 @@
 .main_popup .pop_box .pop_btnbox .pop_btn { font-weight: 500;font-size: 0.875rem; line-height:1; font-weight: 400%; letter-spacing: -0.03em; color: #000; transition: var(--transition); }
 .main_popup .pop_box .pop_btnbox .pop_btn.today_close {color: #c4c4c4;}
 .main_popup .pop_box .pop_btnbox .pop_btn.today_close:hover {color: #000;}
-
 
 
 /* new main */
@@ -277,9 +284,8 @@
 .new_franchise_wrap .fs5 .contbox .rightbox .rightcont1 {background-image: url(../img/new/fs5_bg1.jpg); }
 .new_franchise_wrap .fs5 .contbox .rightbox .rightcont2 {background-image: url(../img/new/fs5_bg2.jpg); top: 100%;}
 .new_franchise_wrap .fs5 .contbox .rightbox .rightcont3 {background-image: url(../img/new/fs5_bg3.jpg); top: 100%;}
-.new_franchise_wrap .fs5 .contbox .rightbox .rightcont .bgbox {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden;}
-.new_franchise_wrap .fs5 .contbox .rightbox .rightcont .bgbox::after { content: "";  position: absolute;  left: 0;  top: 0;  width: 100%; height: 100%;  background: #000;  opacity: 0.3;}
-.new_franchise_wrap .fs5 .contbox .rightbox .rightcont .bgbox .video {width: 100%; height: 100%; object-fit: cover;}
+.new_franchise_wrap .fs5 .contbox .rightbox .rightcont .bgbox {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; background: #000;}
+.new_franchise_wrap .fs5 .contbox .rightbox .rightcont .bgbox .video {width: 100%; height: 100%; object-fit: cover; opacity: 0.7;}
 
 .new_franchise_wrap .fs5 .contbox .rightbox .rightcont .top_txtbox { position: relative; display: flex;  flex-direction: column;  gap: 1.438rem;}
 .new_franchise_wrap .fs5 .contbox .rightbox .rightcont .top_txtbox .sub {  font-family: var(--font4); font-weight: 400; font-size: 2.75rem;  color: #fff;}
@@ -544,7 +550,7 @@
 .new_franchise_wrap .mob_fs16 {display: none;}
 
 .new_franchise_wrap #fs16_popup {display: flex; opacity: 0; max-width: 100%; max-height: 100%;}
-.new_franchise_wrap #fs16_popup .modal_box { position: relative;  padding: 4rem 5rem 3rem; border-radius: 0;  max-width: 1080px;  display: flex;  flex-direction: column; gap: 1.125rem; overflow: unset; background: url(../img/new/fs16_popup_bg.jpg) no-repeat center / cover;}
+.new_franchise_wrap #fs16_popup .modal_box { position: relative;  padding: 4rem 3.5rem 3rem; border-radius: 0;  max-width: 1080px;  display: flex;  flex-direction: column; gap: 1.125rem; overflow: unset; background: url(../img/new/fs16_popup_bg.jpg) no-repeat center / cover;}
 .new_franchise_wrap #fs16_popup .tape { position: absolute; width: 13%;  max-width: 16.438rem; display: flex; align-items: center; justify-content: center;}
 .new_franchise_wrap #fs16_popup .tape1 { left: -3.5rem; top: -2rem;}
 .new_franchise_wrap #fs16_popup .tape2 { right: -3.5rem;  bottom: -2rem;}
@@ -552,7 +558,7 @@
 .new_franchise_wrap #fs16_popup .topbox .tit { font-family: var(--font4);  font-weight: 400; font-size: 3.2rem; line-height: 131%;  letter-spacing: -0.03em;  text-align: center; color: #222;}
 .new_franchise_wrap #fs16_popup .topbox .desc { font-weight: 500; font-size: 2.125rem;   line-height: 148%; letter-spacing: -0.03em; text-align: center; color: #222;}
 .new_franchise_wrap #fs16_popup .topbox .desc .color { font-weight: 900;  color: #f90217;}
-.new_franchise_wrap #fs16_popup .infobox { background: rgba(255, 234, 0, 0.2);   padding: 1.75rem 2.25rem 2.25rem; display: flex;  flex-direction: column;  gap: 1.5rem;}
+.new_franchise_wrap #fs16_popup .infobox { background: rgba(255, 234, 0, 0.2);   padding: 1.75rem 2rem 2.25rem; display: flex;  flex-direction: column;  gap: 1.5rem;}
 .new_franchise_wrap #fs16_popup .infobox .tit { font-weight: 900;  font-size: 1.625rem; line-height: 130%; letter-spacing: -0.03em; text-align: center; color: #222;}
 .new_franchise_wrap #fs16_popup .infobox .desc { font-weight: 500; font-size: 1.375rem;  letter-spacing: -0.03em;  color: #222;}
 .new_franchise_wrap #fs16_popup .infobox .desc .bold {font-weight: 700;}

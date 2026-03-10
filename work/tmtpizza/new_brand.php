@@ -1,5 +1,11 @@
 <div class="wrap new_brand_wrap">
 
+	<!-- loader -->
+	<div id="page_loader">
+		<div class="loader"></div>
+		<img src="<?php echo G5_THEME_URL ?>/img/main/logo.png" alt="T.M.T PIZZA logo" class="logo">
+	</div>
+
 	<!-- common header -->
 	<?php include_once(G5_THEME_PATH.'/common_header.php'); ?>
 
@@ -273,6 +279,3 @@
 	<?php include_once(G5_THEME_PATH.'/common_footer.php'); ?>
 	
 </div>
-
-
-<script src="<?php echo G5_THEME_URL ?>/js/new_brand.js"></script>

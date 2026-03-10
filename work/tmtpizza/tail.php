@@ -103,8 +103,28 @@ $(function() {
 
 
 
-<!-- JS -->
+<!-- Jquery -->
 <script src="<?php echo G5_THEME_URL ?>/js/jquery-3.7.1.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- gsap -->
+<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/gsap.min.js"></script>
+<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollTrigger.min.js"></script>
+<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollSmoother.min.js"></script>
+<script src="<?php echo G5_THEME_URL ?>/plugin/gsap3.12.2/ScrollToPlugin.min.js"></script>
+
+<!-- lenis -->
+<script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+
+<!-- countUp -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js"></script>
+
+<!-- JS -->
 <script src="<?php echo G5_THEME_URL ?>/js/script.js"></script>
 
 <?php
