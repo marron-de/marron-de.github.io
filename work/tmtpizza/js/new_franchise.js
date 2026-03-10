@@ -71,7 +71,6 @@ $(window).on('load', function () {
 });
 
 
-
 mm.add({
     isDesktop: "(min-width: 1081px)",
     isMobile: "(max-width: 1080px)"
