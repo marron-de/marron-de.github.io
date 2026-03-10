@@ -184,10 +184,10 @@ $(document).ready(function () {
 	});
 });
 $(document).mouseup(function (e) {
-	if ($(".navbox").has(e.target).length === 0) {
+	if ($(".nav_box").has(e.target).length === 0) {
 		$("body").removeClass("hidden");
 		$(".header").removeClass("open");
-		$(".navbox").removeClass("open");
+		$(".nav_box").removeClass("open");
 	}
 });
 
@@ -240,8 +240,7 @@ $(document).mouseup(function (e) {
 		},
 
 	};
-
-	// navbox
+	
 	$(function () {
 		lnbUI.click('.accordion li', 400)
 	});
@@ -267,7 +266,8 @@ $(document).ready(function () {
 // layout
 $(window).on('resize', function() {
     const windowWidth = $(window).width();
-    const maxWidth = 1600;
+    const isWide = windowWidth >= 2000;
+    const maxWidth = isWide ? 1800 : 1600;
     const widthPercentage = 0.9;
 
     let calculatedWidth = windowWidth * widthPercentage;
@@ -284,9 +284,7 @@ $(document).ready(function() {
     $(window).trigger('resize');
 });
 
-
 // mobile menu
-// tab function
 $(document).ready(function () {
 	$(".menu_cont .tmt_menu_box .tmt_list_box .menu-item").click(function () {
 		let item = $(this);
@@ -319,13 +317,12 @@ $(document).ready(function() {
     }
 
     AOS.init({
-        duration: isMobile ? 800 : 800,
+        duration: isMobile ? 600 : 800,
     });
 });
 window.addEventListener('load', function () {
     AOS.refresh();
 });
-
 
 // scroll header
 $(function () {
@@ -368,6 +365,8 @@ $(function () {
 function updateQuickMenu() {
     const footer = $('footer');
     const fixedInqBox = $('.fixed_inqbox');
+    const menu1 = $('.quick_menu').not('.new_franchise_wrap .quick_menu');
+    const menu2 = $('.new_franchise_wrap .quick_menu');
     const scrollTop = $(window).scrollTop();
     const windowHeight = $(window).height();
     const documentHeight = $(document).height();
@@ -376,33 +375,29 @@ function updateQuickMenu() {
     const rootFontSize = parseFloat($('html').css('font-size'));
     const scrollBottom = documentHeight - (scrollTop + windowHeight);
 
-    let baseBottomRem = (winWidth <= 1081) ? 2 : 2.5;
+    const baseBottomRem = winWidth <= 1081 ? 2 : 2.5;
     const baseBottomPx = baseBottomRem * rootFontSize;
 
-    const $menu1 = $('.quick_menu').not('.new_franchise_wrap .quick_menu');
-    if ($menu1.length) {
+    if (menu1.length) {
         if (scrollBottom < footerHeight) {
-            $menu1.css('bottom', (footerHeight - scrollBottom + baseBottomPx) + 'px');
+            menu1.css('bottom', (footerHeight - scrollBottom + baseBottomPx) + 'px');
         } else {
-            $menu1.css('bottom', baseBottomRem + 'rem');
+            menu1.css('bottom', baseBottomRem + 'rem');
         }
     }
 
-    const $menu2 = $('.new_franchise_wrap .quick_menu');
-    if ($menu2.length) {
+    if (menu2.length) {
         const inqBoxHeight = fixedInqBox.outerHeight() || 0;
         const totalOffsetPx = inqBoxHeight + baseBottomPx;
 
         if (scrollBottom < footerHeight) {
-            $menu2.css('bottom', (footerHeight - scrollBottom + totalOffsetPx) + 'px');
+            menu2.css('bottom', (footerHeight - scrollBottom + totalOffsetPx) + 'px');
         } else {
-            $menu2.css('bottom', `calc(${inqBoxHeight}px + ${baseBottomRem}rem)`);
+            menu2.css('bottom', `calc(${inqBoxHeight}px + ${baseBottomRem}rem)`);
         }
     }
 }
-$(window).on('scroll load', function() {
-    updateQuickMenu();
-});
+$(window).on('scroll load', updateQuickMenu);
 
 // marquee
 const marquees = Array.from(document.querySelectorAll(".marquee"));
@@ -506,3 +501,38 @@ $(document).ready(function() {
         $('.mob_contbox').stop().slideToggle(400);
     });
 });
+
+// main popup
+$(document).ready(function () {	
+    if (!getCookie('mainPopupClosed')) {
+        $(".main_popup").addClass("show");
+    }
+	
+    $(".main_popup .pop_close").click(function () {
+        $(".main_popup").removeClass("show");
+    });
+	
+    $(document).mouseup(function (e) {
+        if ($(".main_popup .pop_box").has(e.target).length === 0) {
+            $(".main_popup").removeClass("show");
+        }
+    });
+
+	    $(".main_popup .today_close").click(function () {
+        setCookie('mainPopupClosed', 'true', 1); // 1일 유지
+        $(".main_popup").removeClass("show");
+    });
+});
+
+// cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+}
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+}

@@ -36,6 +36,8 @@ header("Pragma: no-cache"); // HTTP/1.0
 <head>
 <meta charset="utf-8">
 <meta name="google-site-verification" content="eKWC4ZcHw0RRfPLO-Eri8byiuWr6AV21BZ-zR9qOjYQ" />
+<meta name="theme-color" content="#ffffff">
+
 <!-- 기본검색 시작 -->
 <link rel="shortcut icon" href="<?php echo G5_THEME_URL ?>/favicon/favicon.ico">
 <meta name="title" content="티엠티피자">

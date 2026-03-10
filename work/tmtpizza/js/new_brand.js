@@ -1,67 +1,66 @@
-// 스크롤 복원 수동 설정
-if (history.scrollRestoration) {
-    history.scrollRestoration = 'manual';
-}
-
 // lenis scroll smooth
 let lenis;
+function debounce(fn, delay) {
+    let timer;
+    return function () {
+        clearTimeout(timer);
+        timer = setTimeout(fn, delay);
+    };
+}
 function initLenis() {
     const isPC = window.innerWidth > 1080;
+    const isWide = window.innerWidth >= 2000;
 
     if (isPC && !lenis) {
         lenis = new Lenis({
-            duration: 1.5,
+            duration: isWide ? 1.0 : 1.5,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         });
 
         lenis.on('scroll', ScrollTrigger.update);
         lenis.on('scroll', updateQuickMenu);
+		
+        lenis._tickerFn = (time) => lenis.raf(time * 1000);
+        gsap.ticker.add(lenis._tickerFn);
+        gsap.ticker.lagSmoothing(0);
 
-        function raf(time) {
-            if (lenis) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-        }
-        requestAnimationFrame(raf);
-
-    } else if (!isPC && lenis) {
+    } else if (!isPC && lenis) {		
+        gsap.ticker.remove(lenis._tickerFn);
         lenis.destroy();
         lenis = null;
     }
 }
-$(document).ready(function() {
-    initLenis();
-    $(window).on('resize', initLenis);
+$(document).ready(function () {
+    $(window).on('resize', debounce(initLenis, 200));
 });
+
 
 // gsap
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 const mm = gsap.matchMedia();
 const initializePageState = () => {
+    if (window.scrollY > 0) return;
     window.scrollTo(0, 0);
-	if (typeof lenis !== 'undefined' && lenis) {
+    if (lenis) {
         lenis.scrollTo(0, { immediate: true });
     }
-	ScrollTrigger.refresh();
 };
-const initGSAP = () => {
-    gsap.registerPlugin(ScrollTrigger);
-};
-$(window).on('load', function(){
+$(window).on('load', function () {
+    initLenis();
     initializePageState();
-    initGSAP();
-})
+    setTimeout(() => ScrollTrigger.refresh(), 300);
+});
 
 
-// brand section 1
+
 mm.add({
     isDesktop: "(min-width: 1081px)",
     isMobile: "(max-width: 1080px)"
 }, (context) => {
-
     let { isDesktop, isMobile } = context.conditions;
 
+
+	// brand section 1
     const title = $('.scroll_title');
     const wrap = $('.scroll_title_wrap');
 
@@ -108,17 +107,10 @@ mm.add({
         });
         bs2Tl2.to(title, { y: '-10vw' });
     }
-
     if (isMobile) {}
-});
+	
 
-// brand section 3
-mm.add({
-    isDesktop: "(min-width: 1081px)",
-    isMobile: "(max-width: 1080px)"
-}, (context) => {
-    let { isDesktop, isMobile } = context.conditions;
-
+	// brand section 3
     if (isDesktop) {
         ScrollTrigger.create({
             trigger: '.bs2',
@@ -137,7 +129,6 @@ mm.add({
 				trigger: ".bs3",
                 start: "top top",
                 end: () => `+=${contents.length * 150}%`,	
-                // pin: true,
                 scrub: 1,
                 invalidateOnRefresh: true
 			}
@@ -150,26 +141,22 @@ mm.add({
 				bs3Tl.to(cont, { opacity: 1, autoAlpha: 1, duration: 0.5 });
 			}
 			text.forEach((copy) => {
-				bs3Tl.to(copy, {
-                    width: "100%", 
-                    duration: 1,
-                    ease: "none" 
-				});
+				bs3Tl.to(copy, { width: "100%", duration: 1, ease: "none" });
 			});
 			bs3Tl.to({}, { duration: 0.5 });
 		});
     }
 
-    if (isMobile) {
+    if (isMobile) {				
         const bs3 = document.querySelector('.bs3');
         const contents = bs3.querySelectorAll('.cont');
 
         const bs3MTl = gsap.timeline({
             scrollTrigger: {
                 trigger: bs3,
-                start: "top bottom",
+                start: "top top",
                 end: () => `+=${contents.length * 100}%`,
-                // pin: true,
+                pin: true,
                 scrub: true
             }
         });
@@ -177,19 +164,13 @@ mm.add({
         contents.forEach((cont) => {
             const copies = cont.querySelectorAll('.tit .copy');
             copies.forEach((copy) => {
-                bs3MTl.to(copy, { width: "100%", duration: 1 });
+                bs3MTl.to(copy, { width: "100%", duration: 1, ease: "none" });
             });
         });
     }
-});
 
-// brand section 4
-mm.add({
-    isDesktop: "(min-width: 1081px)",
-    isMobile: "(max-width: 1080px)"
-}, (context) => {
-    let { isDesktop, isMobile } = context.conditions;
 
+	// brand section 4
     if (isDesktop) {
     	ScrollTrigger.create({
     		trigger: ".bs3",
@@ -197,7 +178,6 @@ mm.add({
 			end: "+=300%",
     		pin: true,
     		pinSpacing: false,
-    		anticipatePin: 1,
     	});
 
     	const bs4Tl = gsap.timeline({
@@ -205,9 +185,8 @@ mm.add({
     			trigger: ".bs4",
     			start: "top top",
     			end: "+=500%",
-    			scrub: 5,
+    			scrub: 2,
     			pin: true,
-    			anticipatePin: 1,
     			pinSpacing: true,
     			markers: false
     		},
@@ -227,16 +206,10 @@ mm.add({
 
 		.to({}, { duration: 5 });
     }
-
     if (isMobile) {}
-});
 
-// brand section 5
-mm.add({
-    isDesktop: "(min-width: 1081px)",
-    isMobile: "(max-width: 1080px)"
-}, (context) => {
-    let { isDesktop, isMobile } = context.conditions;
+
+    // brand section 5
 
     if (isDesktop) {
         const bs5 = document.querySelector('.bs5');
@@ -277,9 +250,9 @@ mm.add({
         const bs5MTl = gsap.timeline({
             scrollTrigger: {
                 trigger: bs5,
-                start: "top bottom",
+                start: "top top",
                 end: () => `+=${contents.length * 100}%`,
-                // pin: true,
+                pin: true,
                 scrub: true
             }
         });
@@ -291,15 +264,9 @@ mm.add({
             });
         });
     }
-});
 
-// brand section 6
-mm.add({
-    isDesktop: "(min-width: 1081px)",
-    isMobile: "(max-width: 1080px)"
-}, (context) => {
-    let { isDesktop, isMobile } = context.conditions;
 
+    // brand section 6
     if (isDesktop) {
     	ScrollTrigger.create({
     		trigger: ".bs5",
@@ -307,7 +274,6 @@ mm.add({
 			end: "+=300%",
     		pin: true,
     		pinSpacing: false,
-    		anticipatePin: 1,
     	});
 
     	const bs6Tl = gsap.timeline({
@@ -315,9 +281,8 @@ mm.add({
     			trigger: ".bs6",
     			start: "top top",
     			end: "+=500%",
-    			scrub: 5,
+    			scrub: 2,
     			pin: true,
-    			anticipatePin: 1,
     			pinSpacing: true,
     			markers: false
     		},
@@ -339,4 +304,5 @@ mm.add({
     }
 
     if (isMobile) {}
+
 });
