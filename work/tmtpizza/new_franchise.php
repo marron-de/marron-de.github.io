@@ -15,7 +15,7 @@
 		<section class="sub_section fs1 mh100vh">
 			<div class="contbox">
 				<div class="video_box">
-					<video muted autoplay playsinline loop preload="auto" class="video">
+					<video muted autoplay playsinline loop preload="auto" class="video" preload="none">
 						<source src="<?php echo G5_THEME_URL ?>/video/franchise_video1.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -59,7 +59,7 @@
 
 		<section class="sub_section fs3 mh100vh">
 			<div class="video_box">
-				<video muted autoplay playsinline loop preload="auto" class="video">
+				<video muted autoplay playsinline loop preload="auto" class="video" preload="none">
 					<source src="<?php echo G5_THEME_URL ?>/video/franchise_video2.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -98,7 +98,7 @@
 
 		<section class="sub_section fs4 mh100vh">
 			<div class="video_box">
-				<video muted autoplay playsinline loop preload="auto" class="video">
+				<video muted autoplay playsinline loop preload="auto" class="video" preload="none">
 					<source src="<?php echo G5_THEME_URL ?>/video/franchise_video3.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -122,7 +122,7 @@
 			<div class="contbox">
 				<div class="leftbox">					
 					<div class="video_box">
-						<video muted autoplay playsinline loop preload="auto" class="video">
+						<video muted autoplay playsinline loop preload="auto" class="video" preload="none">
 							<source src="<?php echo G5_THEME_URL ?>/video/franchise_video4.mp4" type="video/mp4">
 						</video>
 					</div>
@@ -178,7 +178,7 @@
 						</div>
 						<div class="swiper-slide rightcont rightcont2">
 							<div class="bgbox">
-								<video muted autoplay playsinline loop preload="auto" class="video">
+								<video muted autoplay playsinline loop preload="auto" class="video" preload="none">
 									<source src="<?php echo G5_THEME_URL ?>/video/franchise_video4_2.mp4" type="video/mp4">
 								</video>
 							</div>
@@ -264,30 +264,30 @@
 						<div class="swiper-slide item">
 							<div class="top">
 								<div class="card card1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_seoul_map.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_seoul_map.png" alt="" class="img" >
 								</div>
 							</div>
 							<div class="bottom">
 								<div class="card card2" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepA_map.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepA_map.png" alt="" class="img" >
 								</div>
 								<div class="card card3" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepB_map.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepB_map.png" alt="" class="img" >
 								</div>
 							</div>
 						</div>
 						<div class="swiper-slide item">
 							<div class="top">
 								<div class="card card1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_daegu_map.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_daegu_map.png" alt="" class="img" >
 								</div>
 							</div>
 							<div class="bottom">
 								<div class="card card2" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepC_map.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepC_map.png" alt="" class="img" >
 								</div>
 								<div class="card card3" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="top-center" data-aos-anchor=".fs7">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepD_map.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs7_tyepD_map.png" alt="" class="img" >
 								</div>
 							</div>
 						</div>
@@ -297,10 +297,10 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<section class="sub_section fs8 mh100vh">
 			<div class="bgbox">
-				<video muted autoplay playsinline loop preload="auto" class="video">
+				<video muted autoplay playsinline loop preload="auto" class="video" preload="none">
 					<source src="<?php echo G5_THEME_URL ?>/video/franchise_video5.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -339,7 +339,7 @@
 
 		<section class="sub_section fs9 mh100vh">
 			<div class="bgbox">
-				<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_line.png" alt="" class="bg_line" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="400" data-aos-anchor-placement="top-center">
+				<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_line.webp" alt="" class="bg_line" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="400" data-aos-anchor-placement="top-center" >
 			</div>
 			<div class="inner2">
 				<div class="titbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
@@ -349,8 +349,8 @@
 					</h1>
 				</div>
 				<div class="imgbox">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_text.png" alt="" class="bg_text" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="800" data-aos-anchor-placement="top-center">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.png" alt="" class="img"  data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_text.png" alt="" class="bg_text" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="800" data-aos-anchor-placement="top-center" >
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.webp" alt="" class="img"  data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center" >
 				</div>
 				<div class="contbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
 					<p class="tit">
@@ -367,7 +367,7 @@
 
 		<section class="sub_section fs10 mh100vh">
 			<div class="bgbox">
-				<img src="<?php echo G5_THEME_URL ?>/img/new/fs10_img.png" alt="" class="img">
+				<img src="<?php echo G5_THEME_URL ?>/img/new/fs10_img.png" alt="" class="img" >
 			</div>
 			<div class="cont cont01">
 				<div class="inner2 cont_box">
@@ -412,7 +412,7 @@
 		<section class="sub_section fs11 mh100vh">
 			<div class="inner2">
 				<div class="titbox">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_title.png" alt="" class="tit_img">
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_title.png" alt="" class="tit_img" >
 				</div>
 				<div class="badgebox">
 					<div class="badge">가맹비</div>
@@ -430,7 +430,7 @@
 						</div>
 					</div>
 					<div class="gift_img" data-aos="fade-up" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-anchor-placement="top-center">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_gift.png" alt="" class="img">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_gift.png" alt="" class="img" >
 					</div>					
 				</div>
 				<div class="card_tit fs_txt1" data-aos="fade-up" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="300" data-aos-anchor-placement="top-center">
@@ -439,31 +439,31 @@
 				</div>
 				<div class="cardbox">
 					<div class="circle_text1" data-aos="fade" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="600" data-aos-anchor-placement="top-center">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_circle1.png" alt="" class="img">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_circle1.png" alt="" class="img" >
 					</div>
 					<div class="circle_text2" data-aos="fade" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="1500" data-aos-anchor-placement="top-center">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_circle2.png" alt="" class="img">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_circle2.png" alt="" class="img" >
 					</div>
 					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="600" data-aos-anchor-placement="top-center">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card1.jpg" alt="" class="img">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card1.jpg" alt="" class="img" >
 					</div>
 					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="900" data-aos-anchor-placement="top-center">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card2.jpg" alt="" class="img">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card2.jpg" alt="" class="img" >
 					</div>
 					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="1200" data-aos-anchor-placement="top-center">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card3.jpg" alt="" class="img">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card3.jpg" alt="" class="img" >
 					</div>
 					<div class="card" data-aos="flip-left" data-aos-anchor=".fs11 .giftbox" data-aos-duration="600" data-aos-delay="1500" data-aos-anchor-placement="top-center">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card4.jpg" alt="" class="img">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_card4.jpg" alt="" class="img" >
 					</div>
 				</div>
 				<div class="contbox" data-aos="fade" data-aos-anchor-placement="top-center">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_plus.png" alt="" class="plus">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_title2.png" alt="" class="title">
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_plus.png" alt="" class="plus" >
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_title2.png" alt="" class="title" >
 					<div class="txtbox">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_text1.png" alt="" class="txt1">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_text2.png" alt="" class="txt2">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_text3.png" alt="" class="txt3">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_text1.png" alt="" class="txt1" >
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_text2.png" alt="" class="txt2" >
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs11_text3.png" alt="" class="txt3" >
 					</div>
 					<div class="pricebox">
 						<div class="item">
@@ -516,7 +516,7 @@
 								<span class="txt">시그니처 유무</span>
 							</div>
 							<div class="imgbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide1.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide1.png" alt="" class="img" >
 							</div>	
 						</div>
 						<div class="bottom_area">
@@ -524,7 +524,7 @@
 							<div class="line line2"></div>
 							<div class="inner2 cardbox">
 								<div class="cardimg">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img1.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img1.png" alt="" class="img" >
 								</div>
 								<div class="cardtxt">
 									<span class="label">시그니처 유무</span>
@@ -560,7 +560,7 @@
 								<span class="txt">신메뉴</span>
 							</div>
 							<div class="imgbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide2.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide2.png" alt="" class="img" >
 							</div>	
 						</div>
 						<div class="bottom_area">
@@ -568,7 +568,7 @@
 							<div class="line line2"></div>
 							<div class="inner2 cardbox">
 								<div class="cardimg">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img2.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img2.png" alt="" class="img" >
 								</div>
 								<div class="cardtxt">
 									<span class="label">신메뉴</span>
@@ -607,7 +607,7 @@
 								<span class="txt">클래식 메뉴</span>
 							</div>
 							<div class="imgbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide3.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide3.png" alt="" class="img" >
 							</div>	
 						</div>
 						<div class="bottom_area">
@@ -615,7 +615,7 @@
 							<div class="line line2"></div>
 							<div class="inner2 cardbox">
 								<div class="cardimg">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img3.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img3.png" alt="" class="img" >
 								</div>
 								<div class="cardtxt">
 									<span class="label">클래식 메뉴</span>
@@ -654,7 +654,7 @@
 								<span class="txt">타겟층</span>
 							</div>
 							<div class="imgbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide4.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide4.png" alt="" class="img" >
 							</div>	
 						</div>
 						<div class="bottom_area">
@@ -662,7 +662,7 @@
 							<div class="line line2"></div>
 							<div class="inner2 cardbox">
 								<div class="cardimg">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img4.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img4.png" alt="" class="img" >
 								</div>
 								<div class="cardtxt">
 									<span class="label">타겟층</span>
@@ -697,7 +697,7 @@
 								<span class="txt">접근성</span>
 							</div>
 							<div class="imgbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide5.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide5.png" alt="" class="img" >
 							</div>	
 						</div>
 						<div class="bottom_area">
@@ -705,7 +705,7 @@
 							<div class="line line2"></div>
 							<div class="inner2 cardbox">
 								<div class="cardimg">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img5.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img5.png" alt="" class="img" >
 								</div>
 								<div class="cardtxt">
 									<span class="label">접근성</span>
@@ -745,7 +745,7 @@
 								<span class="txt">객단가</span>
 							</div>
 							<div class="imgbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide6.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_slide6.png" alt="" class="img" >
 							</div>	
 						</div>
 						<div class="bottom_area">
@@ -753,7 +753,7 @@
 							<div class="line line2"></div>
 							<div class="inner2 cardbox">
 								<div class="cardimg">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img6.png" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs12_card_img6.png" alt="" class="img" >
 								</div>
 								<div class="cardtxt">
 									<span class="label">객단가</span>
@@ -906,7 +906,7 @@
 								<span class="countup" data-count="62.46">0</span>%
 							</p>
 						</div>
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_stamp.png" alt="" class="stamp">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_stamp.png" alt="" class="stamp" >
 					</div>
 				</div>
 				<p class="last_txt">매일 먹고 싶게 만드는 맛!</p>
@@ -915,41 +915,41 @@
 				<div class="slidebox">
 					<div class="titbadge">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_baemin.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_baemin.png" alt="" class="icon" >
 						</div>
 						<p class="tit">배달의 민족 기준</p>
 					</div>
 					<div class="fs14_marquee fs14_marquee1 marquee" data-duration="4">
 						<div class="marquee_group">
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-1.png" alt="울산 동구" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-1.png" alt="울산 동구" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-2.png" alt="경산 옥산" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-2.png" alt="경산 옥산" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-3.png" alt="울산 중구" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-3.png" alt="울산 중구" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-4.png" alt="대구 경북대" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-4.png" alt="대구 경북대" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-5.png" alt="울산 달동" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-5.png" alt="울산 달동" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-6.png" alt="포항 흥해" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-6.png" alt="포항 흥해" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-7.png" alt="부산 안락" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-7.png" alt="부산 안락" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-8.png" alt="울산 무거" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-8.png" alt="울산 무거" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-9.png" alt="양산 웅상" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-9.png" alt="양산 웅상" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-10.png" alt="대전 괴정" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide1-10.png" alt="대전 괴정" class="img" >
 							</div>
 						</div>
 					</div>
@@ -957,43 +957,43 @@
 				<div class="slidebox">
 					<div class="titbadge">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_baemin.png" alt="" class="icon">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_coupang.png" alt="" class="icon">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_yogiyo.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_baemin.png" alt="" class="icon" >
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_coupang.png" alt="" class="icon" >
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_yogiyo.png" alt="" class="icon" >
 						</div>
 						<p class="tit">고객 리뷰</p>
 					</div>
 					<div class="fs14_marquee fs14_marquee2 marquee" data-duration="4" data-reverse="reverse">
 						<div class="marquee_group">
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-1.png" alt="쿠팡이츠 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-1.png" alt="쿠팡이츠 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-2.png" alt="배달의민족 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-2.png" alt="배달의민족 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-3.png" alt="요기요 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-3.png" alt="요기요 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-4.png" alt="쿠팡이츠 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-4.png" alt="쿠팡이츠 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-5.png" alt="배달의민족 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-5.png" alt="배달의민족 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-6.png" alt="요기요 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-6.png" alt="요기요 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-7.png" alt="쿠팡이츠 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-7.png" alt="쿠팡이츠 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-8.png" alt="배달의민족 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-8.png" alt="배달의민족 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-9.png" alt="요기요 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-9.png" alt="요기요 리뷰" class="img" >
 							</div>
 							<div class="item">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-10.png" alt="배달의민족 리뷰" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs14_slide2-10.png" alt="배달의민족 리뷰" class="img" >
 							</div>
 						</div>
 					</div>
@@ -1025,7 +1025,7 @@
 						<div class="swiper-slide item">
 							<div class="imgbox">
 								<a href="" class="link" target="_blank">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img1.jpg" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img1.jpg" alt="" class="img" >
 								</a>
 							</div>
 							<div class="txtbox">
@@ -1048,7 +1048,7 @@
 						<div class="swiper-slide item">
 							<div class="imgbox">
 								<a href="" class="link" target="_blank">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img2.jpg" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img2.jpg" alt="" class="img" >
 								</a>
 							</div>
 							<div class="txtbox">
@@ -1068,7 +1068,7 @@
 						<div class="swiper-slide item">
 							<div class="imgbox">
 								<a href="" class="link" target="_blank">
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img3.jpg" alt="" class="img">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img3.jpg" alt="" class="img" >
 								</a>
 							</div>
 							<div class="txtbox">
@@ -1118,7 +1118,7 @@
 											<p class="percent" data-count="16.06">0%</p>
 											<p class="desc">2025년 12월 기준</p>
 										</div>
-										<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
+										<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp" >
 									</div>
 								</div>
 								<div class="tbl_box">
@@ -1209,7 +1209,7 @@
 											<p class="percent" data-count="19.20">0%</p>
 											<p class="desc">2025년 12월 기준</p>
 										</div>
-										<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
+										<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp" >
 									</div>
 								</div>
 								<div class="tbl_box">
@@ -1298,11 +1298,11 @@
 										<p class="percent" data-count="16.06">0%</p>
 										<p class="desc">2025년 12월 기준</p>
 									</div>
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp" >
 								</div>
 							</div>
 							<div class="tblbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_mob_tbl1.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_mob_tbl1.png" alt="" class="img" >
 							</div>
 						</div>
 						<div class="swiper-slide item item2">
@@ -1317,11 +1317,11 @@
 										<p class="percent" data-count="19.20">0%</p>
 										<p class="desc">2025년 12월 기준</p>
 									</div>
-									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp">
+									<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_stamp.png" alt="" class="graph_stamp" >
 								</div>
 							</div>
 							<div class="tblbox">
-								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_mob_tbl2.png" alt="" class="img">
+								<img src="<?php echo G5_THEME_URL ?>/img/new/fs16_mob_tbl2.png" alt="" class="img" >
 							</div>
 						</div>
 					</div>
@@ -1338,7 +1338,7 @@
 				</div>
 				<div class="contbox">
 					<div class="imgbox">
-						<img src="<?php echo G5_THEME_URL ?>/img/new/fs17_table.png" alt="" class="table">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs17_table.png" alt="" class="table" >
 						<div class="tag">
 							7 <span class="small">無</span>면제
 						</div>
@@ -1368,7 +1368,7 @@
 				<div class="fs18_cont">
 					<div class="item" data-aos="fade-up" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon1.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon1.png" alt="" class="icon" >
 						</div>
 						<div class="txtbox">
 							<p class="tit">창업 상담 문의</p>
@@ -1382,7 +1382,7 @@
 					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
 					<div class="item" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon2.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon2.png" alt="" class="icon" >
 						</div>
 						<div class="txtbox">
 							<p class="tit">상권분석 / 점포 선정</p>
@@ -1395,7 +1395,7 @@
 					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
 					<div class="item" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon3.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon3.png" alt="" class="icon" >
 						</div>
 						<div class="txtbox">
 							<p class="tit">계약 체결</p>
@@ -1408,7 +1408,7 @@
 					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="500" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
 					<div class="item" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon4.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon4.png" alt="" class="icon" >
 						</div>
 						<div class="txtbox">
 							<p class="tit">매장 실측 / <br class="tablet">인테리어 공사</p>
@@ -1421,7 +1421,7 @@
 					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="700" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
 					<div class="item" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon5.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon5.png" alt="" class="icon" >
 						</div>
 						<div class="txtbox">
 							<p class="tit">교육</p>
@@ -1434,7 +1434,7 @@
 					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="900" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
 					<div class="item" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon6.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon6.png" alt="" class="icon" >
 						</div>
 						<div class="txtbox">
 							<p class="tit">가맹 오픈</p>
@@ -1447,7 +1447,7 @@
 					<div class="swiper-slide arrow" data-aos="fade-up" data-aos-delay="1100" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center"></div>
 					<div class="item" data-aos="fade-up" data-aos-delay="1200" data-aos-anchor=".fs18_cont" data-aos-anchor-placement="top-center">
 						<div class="iconbox">
-							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon7.png" alt="" class="icon">
+							<img src="<?php echo G5_THEME_URL ?>/img/new/fs18_icon7.png" alt="" class="icon" >
 						</div>
 						<div class="txtbox">
 							<p class="tit">지속적 관리</p>
@@ -1463,8 +1463,8 @@
 
 		<section id="inquiry" class="sub_section fs19">	
 			<div class="bgbox">
-				<img src="<?php echo G5_THEME_URL ?>/img/new/fs19_pizza2.png" alt="" class="pizza2">
-				<img src="<?php echo G5_THEME_URL ?>/img/new/fs19_pizza1.png" alt="" class="pizza1">
+				<img src="<?php echo G5_THEME_URL ?>/img/new/fs19_pizza2.png" alt="" class="pizza2" >
+				<img src="<?php echo G5_THEME_URL ?>/img/new/fs19_pizza1.png" alt="" class="pizza1" >
 			</div>
 			<div class="inner2 contbox">
 				<div class="txtbox">

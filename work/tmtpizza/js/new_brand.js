@@ -63,9 +63,12 @@ $(window).on('load', function () {
         duration: 0.5,
         delay: 0.2,
         onComplete: () => {
-            loaderEl.classList.add('hide');
+            loaderEl.classList.add('hide');            
             document.documentElement.style.overflow = '';
-            setTimeout(() => ScrollTrigger.refresh(), 300);
+            setTimeout(() => {
+                ScrollTrigger.refresh();
+                document.body.classList.add('loaded');
+            }, 300);
         }
     });
 });
