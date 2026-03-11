@@ -232,7 +232,7 @@ if (!defined('_EYOOM_')) exit;
 										</a>
 									</div>
 									<div class="question_wrapper">
-										<div class="marquee question_box" data-duration="6">
+										<div class="marquee question_box" data-duration="7">
 											<div class="marquee_group">
 												<div class="question">
 													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
@@ -275,7 +275,7 @@ if (!defined('_EYOOM_')) exit;
 												</div>
 											</div>
 										</div>
-										<div class="marquee question_box pc_hide" data-duration="6" data-reverse="reverse">
+										<div class="marquee question_box pc_hide" data-duration="7" data-reverse="reverse">
 											<div class="marquee_group">
 												<div class="question">
 													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>
@@ -318,7 +318,7 @@ if (!defined('_EYOOM_')) exit;
 												</div>
 											</div>
 										</div>
-										<div class="marquee question_box pc_hide" data-duration="6">
+										<div class="marquee question_box pc_hide" data-duration="7">
 											<div class="marquee_group">
 												<div class="question">
 													<p class="txt">무료 수속 서비스내용이 궁금해요.</p>

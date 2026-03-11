@@ -18,7 +18,7 @@ if (!defined('_EYOOM_')) exit;
 					<div class="txtbox">
 						<p class="sub">교직원들이 만든 <br class="tablet">전문적인 교육업체</p>
 						<p class="tit">
-							몽선생의 컨설팅은  <br class="tablet">
+							몽선생의 유학수속/컨설팅  <br class="tablet">
 							<span class="color">이런점이 달라요!</span>
 						</p>
 					</div>
@@ -36,42 +36,54 @@ if (!defined('_EYOOM_')) exit;
             <div class="swiper-wrapper procedure_link">
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon1.png" alt="" class="icon">
-						<span class="count">1</span>
+						<div class="swiper icon_swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide item">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon01.png" alt="" class="icon">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon02.png" alt="" class="icon">
+								</div>
+								<div class="swiper-slide item">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon03.png" alt="" class="icon">
+								</div>
+							</div>
+						</div>
 					</div>
 					<p class="tit">말레이시아 국제학교</p>
 				</a>
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon2.png" alt="" class="icon">
-						<span class="count">2</span>
+						<span class="count">추천</span>
 					</div>
-					<p class="tit">싱가포르 국제학교</p>
+					<p class="tit">싱가폴 사립대</p>
 				</a>
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon3.png" alt="" class="icon">
-						<span class="count">3</span>
+						<span class="count">추천</span>
 					</div>
-					<p class="tit">싱가포르 국립대</p>
+					<p class="tit">싱가폴 예술대</p>
 				</a>
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon4.png" alt="" class="icon">
 						<span class="count">4</span>
 					</div>
-					<p class="tit">싱가포르 사립대</p>
+					<p class="tit">싱가폴 국립대</p>
 				</a>
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon5.png" alt="" class="icon">
 						<span class="count">5</span>
 					</div>
-					<p class="tit">싱가포르 예술대</p>
+					<p class="tit">말레이시아 국립대</p>
 				</a>
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon6.png" alt="" class="icon">
+						<span class="count">추천</span>
 					</div>
 					<p class="tit">말레이시아 사립대</p>
 				</a>
@@ -79,13 +91,13 @@ if (!defined('_EYOOM_')) exit;
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
 					</div>
-					<p class="tit">말라야 국립대</p>
+					<p class="tit">홍콩 대학</p>
 				</a>
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon8.png" alt="" class="icon">
 					</div>
-					<p class="tit">홍콩 대학</p>
+					<p class="tit">싱가폴 국제학교</p>
 				</a>
 				<a href="" class="link swiper-slide">
 					<div class="imgbox">

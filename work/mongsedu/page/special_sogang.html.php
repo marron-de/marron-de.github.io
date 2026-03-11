@@ -5,7 +5,6 @@
 if (!defined('_EYOOM_')) exit;
 ?>
 
-
 <div class="sub-page page-special page-sogang sogang">
 	<div class="banner_area sogang_top">
         <div class="container" data-aos="fade-up">
@@ -170,12 +169,209 @@ if (!defined('_EYOOM_')) exit;
 				</p>
 			</div>
 			<div class="univ_listbox">
-				<?php for ($i = 1; $i <= 29; $i++) { ?>
-					<div class="item">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img<?php echo $i; ?>.jpg" alt="" class="img pc">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img<?php echo $i; ?>_m.png" alt="" class="img tablet">
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img1.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img1_m.png" alt="" class="img tablet">
 					</div>
-				<?php } ?>
+					<p class="title">안젤로 스테이트</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img2.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img2_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">아델파이</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img3.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img3_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">오번</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img4.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img4_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">클리블랜드 주립대</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img5.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img5_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">곤자가</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img6.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img6_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">루이지애나 주립대</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img7.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img7_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">데이턴</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img8.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img8_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">일리노이</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img9.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img9_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">매사추세츠 보스턴</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img10.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img10_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">샌프란시스코</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img11.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img11_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">사우스캐롤라이나</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img12.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img12_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">유타</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img13.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img13_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">와이오밍</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img14.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img14_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">풀 세일</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img15.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img15_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">세인트 루이스</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img16.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img16_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">스토니브룩</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img17.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img17_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">러트거스</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img18.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img18_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">오리건 주립대</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img19.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img19_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">서리</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img20.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img20_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">카디프</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img21.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img21_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">서식스</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img22.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img22_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">RHUL</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img23.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img23_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">리즈</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img24.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img24_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">킹스턴</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img25.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img25_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">조지메이슨</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img26.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img26_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">네바다 주립대</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img27.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img27_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">SUNY 버팔로</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img28.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img28_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">셰필트</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img29.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_img29_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">LJMU</p>
+				</div>
 			</div>
 			<div class="uni_titbox">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_plus.png" alt="" class="icon">
@@ -184,12 +380,76 @@ if (!defined('_EYOOM_')) exit;
 				</p>
 			</div>
 			<div class="univ_listbox2">
-				<?php for ($i = 1; $i <= 10; $i++) { ?>
-					<div class="item">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img<?php echo $i; ?>.png" alt="" class="img pc">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img<?php echo $i; ?>_m.png" alt="" class="img tablet">
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img1.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img1_m.png" alt="" class="img tablet">
 					</div>
-				<?php } ?>
+					<p class="title">SIM 사립대</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img2.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img2_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">카플란</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img3.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img3_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">PSB 아카데미</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img4.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img4_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">제임스 쿡</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img5.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img5_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">레플스 디자인</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img6.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img6_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">MDIS 사립대</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img7.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img7_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">TMC</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img8.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img8_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">디멘셔스</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img9.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img9_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">커틴</p>
+				</div>
+				<div class="item">
+					<div class="imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img10.png" alt="" class="img pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sing_univ_img10_m.png" alt="" class="img tablet">
+					</div>
+					<p class="title">아미티</p>
+				</div>
 			</div>
         </div>
     </div>
