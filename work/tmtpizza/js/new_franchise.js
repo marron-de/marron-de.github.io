@@ -207,9 +207,9 @@ mm.add({
 			scrollTrigger: {
 				trigger: ".fs3",
 				start: "top top",
-				end: () => `+=${contents.length * 200}%`,
+				end: () => `+=${contents.length * 150}%`,
 				pin: true,
-				scrub: 1.5,
+				scrub: 1,
 				invalidateOnRefresh: true
 			}
 		});
@@ -298,7 +298,8 @@ mm.add({
             observer: true,
             observeParents: true,
 			effect : 'fade',
-            speed: 500,
+			 fadeEffect: {  crossFade: true },
+            speed: 400,
             loop: true,
             pagination: {
                 el: '.fs5_mob_swiper .pagination',
@@ -317,6 +318,47 @@ mm.add({
             }
         });
     }
+	
+	// franchise section 6   
+    if (isDesktop) {
+
+		const labels = gsap.utils.toArray(".fs6 .label");
+
+        const fs8Tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".fs6",
+                start: "top top",
+                end: () => `+=${labels.length * 70}%`,
+                pin: true,
+                scrub: 1.5,
+                invalidateOnRefresh: true
+            }
+        });
+
+		fs8Tl.to({}, { duration: 0.8 });
+
+        labels.forEach((label, i) => {
+            if (i === 0) return;
+
+            fs8Tl.to(label, {
+                onStart: () => {
+                    labels.forEach(l => l.classList.remove("active"));
+                    label.classList.add("active");
+                },
+                onReverseComplete: () => {
+                    label.classList.remove("active");
+                    labels[i - 1].classList.add("active");
+                },
+                duration: 1.5
+            });     			       
+           
+            fs8Tl.to({}, { duration: 0.8 });
+        });
+
+		fs8Tl.to({}, { duration: 0.8 });
+    }
+    
+    if (isMobile) {}
 
 	
 	// franchise section 8    
@@ -499,74 +541,83 @@ mm.add({
 	
 	// franchise section 14
     const initGaugeAnimation = () => {
-        const section = document.querySelector('.fs14');
-        if (!section) return;
+		const section = document.querySelector('.fs14');
+		if (!section) return;
 
-        const gaugePaths = section.querySelectorAll('.gauge_path');
-        const countElements = section.querySelectorAll('.countup');
-        const stamp = section.querySelector('.stamp');
-        const targets = [37.54, 62.46];
+		const gaugePaths = section.querySelectorAll('.gauge_path');
+		const countElements = section.querySelectorAll('.countup');
+		const stamp = section.querySelector('.stamp');
+		const targets = [37.54, 62.46];
+		
+		let rafIds = []; // ← RAF ID 추적 배열 추가
+		let timeoutId = null; // ← timeout ID 추적 추가
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        gaugePaths.forEach((path, index) => {
-                            const radius = path.r.baseVal.value;
-                            const circumference = 2 * Math.PI * radius;
-                            const targetVal = targets[index];
-                            const offset = circumference - (targetVal / 100) * circumference;
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					timeoutId = setTimeout(() => {
+						gaugePaths.forEach((path, index) => {
+							const radius = path.r.baseVal.value;
+							const circumference = 2 * Math.PI * radius;
+							const targetVal = targets[index];
+							const offset = circumference - (targetVal / 100) * circumference;
 
-                            path.style.transition = "none";
-                            path.style.strokeDasharray = circumference;
-                            path.style.strokeDashoffset = circumference;
+							path.style.transition = "none";
+							path.style.strokeDasharray = circumference;
+							path.style.strokeDashoffset = circumference;
 
-                            requestAnimationFrame(() => {
-                                path.style.transition = "stroke-dashoffset 1.5s ease-out";
-                                path.style.strokeDashoffset = offset;
-                            });
+							requestAnimationFrame(() => {
+								path.style.transition = "stroke-dashoffset 1.5s ease-out";
+								path.style.strokeDashoffset = offset;
+							});
 
-                            let startTimestamp = null;
-                            const duration = 1500;
-                            const step = (timestamp) => {
-                                if (!startTimestamp) startTimestamp = timestamp;
-                                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                                const currentVal = (progress * targetVal).toFixed(2);
-                                if (countElements[index]) {
-                                    countElements[index].innerText = currentVal;
-                                }
-                                if (progress < 1) {
-                                    window.requestAnimationFrame(step);
-                                }
-                            };
-                            window.requestAnimationFrame(step);
-                        });
+							let startTimestamp = null;
+							const duration = 1500;
+							const step = (timestamp) => {
+								if (!startTimestamp) startTimestamp = timestamp;
+								const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+								const currentVal = (progress * targetVal).toFixed(2);
+								if (countElements[index]) {
+									countElements[index].innerText = currentVal;
+								}
+								if (progress < 1) {
+									rafIds[index] = window.requestAnimationFrame(step); // ← ID 저장
+								}
+							};
+							rafIds[index] = window.requestAnimationFrame(step); // ← ID 저장
+						});
 
-                        if (stamp) {
-                            gsap.fromTo(stamp, 
-                                { scale: 4, opacity: 0, rotation: 15 }, 
-                                { scale: 1, opacity: 1, rotation: 0, duration: 0.5, delay: 1.2, ease: "back.out(1.7)",
+						if (stamp) {
+							gsap.fromTo(stamp,
+								{ scale: 4, opacity: 0, rotation: 15 },
+								{ scale: 1, opacity: 1, rotation: 0, duration: 0.5, delay: 1.2, ease: "back.out(1.7)",
 								onComplete: () => { section.classList.add('on'); }
-								 }
-                            );
-                        }
-                    }, 500);
-                } else {
-					section.classList.remove('on');
-                    gaugePaths.forEach((path) => {
-                        path.style.transition = "none";
-                        path.style.strokeDashoffset = path.style.strokeDasharray;
-                    });
-                    countElements.forEach(el => el.innerText = "0");
-                    if (stamp) {
-                        gsap.set(stamp, { opacity: 0 });
-                    }
-                }
-            });
-        }, { threshold: 0.2 });
+								}
+							);
+						}
+					}, 500);
 
-        observer.observe(section);
-    };
+				} else {
+					// ← 기존 RAF/timeout 취소 추가
+					if (timeoutId) clearTimeout(timeoutId);
+					rafIds.forEach(id => cancelAnimationFrame(id));
+					rafIds = [];
+					
+					section.classList.remove('on');
+					gaugePaths.forEach((path) => {
+						path.style.transition = "none";
+						path.style.strokeDashoffset = path.style.strokeDasharray;
+					});
+					countElements.forEach(el => el.innerText = "0");
+					if (stamp) {
+						gsap.set(stamp, { opacity: 0 });
+					}
+				}
+			});
+		}, { threshold: 0.2 });
+
+		observer.observe(section);
+	};
     initGaugeAnimation();
 
 
@@ -698,13 +749,7 @@ mm.add({
 
 		const mob_fs16 = document.querySelector('.mob_fs16');
 
-		ScrollTrigger.create({
-			trigger: '.mob_fs16',
-			start: 'top 70%',
-			onEnter: () => animateFirstSlide(),
-			onEnterBack: () => animateFirstSlide(),
-		});
-
+		// ← 함수 먼저 선언
 		const animateFirstSlide = () => {
 			const firstSlide = $('.fs16_swiper .swiper-slide').first();
 			const region = firstSlide.find('.region');
@@ -713,7 +758,7 @@ mm.add({
 			const stamp = firstSlide.find('.graph_stamp');
 			const percentEl = firstSlide.find('.percent').get(0);
 			const countTo = parseFloat(percentEl.getAttribute('data-count'));
-			
+
 			gsap.set(region, { opacity: 0, y: 30 });
 			gsap.set(graphbox, { opacity: 0 });
 			gsap.set(tblbox, { opacity: 0 });
@@ -726,28 +771,42 @@ mm.add({
 				.to(stamp, { opacity: 1, scale: 1, rotate: 0, duration: 0.35, ease: "back.out(1.7)" }, 1)
 				.call(() => runCount(percentEl, countTo), null, 1.3);
 		};
-	
-		const mainPin = ScrollTrigger.create({
-			trigger: mob_fs16,
-			start: "bottom bottom",
-			pin: true,
-			pinSpacing: true,
-			end: "+=1000",
-			invalidateOnRefresh: true,
+
+		ScrollTrigger.create({
+			trigger: '.mob_fs16',
+			start: 'top 70%',
+			onEnter: () => animateFirstSlide(),
+			onEnterBack: () => animateFirstSlide(),
 		});
 
 		ScrollTrigger.create({
 			trigger: mob_fs16,
 			start: "bottom bottom",
-			end: () => mainPin.end - (mob_fs16.offsetHeight * 0.1),
+			pin: true,
+			pinSpacing: true,
+			end: "+=1500",
+			invalidateOnRefresh: true,
 			fastScrollEnd: true,
-			onEnter: () => gsap.to("#fs16_popup", { autoAlpha: 1, y: 0, duration: 0.6, delay: 0.5, ease: "power2.out", overwrite: true }),
-			onLeave: () => gsap.to("#fs16_popup", { autoAlpha: 0, y: 50, duration: 0.4, overwrite: true }),
-			onEnterBack: () => gsap.to("#fs16_popup", { autoAlpha: 1, y: 0, duration: 0.6, ease: "power2.out", overwrite: true }),
-			onLeaveBack: () => gsap.to("#fs16_popup", { autoAlpha: 0, y: 50, duration: 0.5, overwrite: true }),
-			onToggle: self => {
-				if (!self.isActive) gsap.to("#fs16_popup", { autoAlpha: 0, y: 50, duration: 0.3, overwrite: true });
-			}
+			onUpdate: self => {
+				const p = self.progress;
+				if (p >= 0.6 && p < 0.98) {
+					gsap.to("#fs16_popup", { 
+						autoAlpha: 1, y: 0, 
+						duration: 0.6, ease: "power2.out", overwrite: true 
+					});
+				} else {
+					gsap.to("#fs16_popup", { 
+						autoAlpha: 0, y: 50, 
+						duration: 0.3, overwrite: true 
+					});
+				}
+			},
+			onLeave: () => gsap.to("#fs16_popup", { 
+				autoAlpha: 0, y: 50, duration: 0.4, overwrite: true 
+			}),
+			onLeaveBack: () => gsap.to("#fs16_popup", { 
+				autoAlpha: 0, y: 50, duration: 0.5, overwrite: true 
+			}),
 		});
 	}
 	
@@ -807,6 +866,21 @@ const fs12_swiper = new Swiper('.fs12_swiper', {
 
 
 // franchise section 15
+const playFs15Anim = (swiper) => {
+    const activeSlide = $(swiper.slides[swiper.activeIndex]);
+    const imgBox    = activeSlide.find('.imgbox').get(0);
+    const txtBox    = activeSlide.find('.txtbox').get(0);
+    const highlight = activeSlide.find('.txtbox .tit .highlight').get(0);
+    const badge     = activeSlide.find('.desc .badge').get(0);
+
+    gsap.killTweensOf([imgBox, txtBox, highlight, badge]);
+
+    gsap.timeline()
+        .fromTo(imgBox,    { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.1)
+        .fromTo(txtBox,    { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.2)
+        .fromTo(highlight, { backgroundSize: "0% 100%" }, { backgroundSize: "100% 100%", duration: 0.5, ease: "power2.inOut" }, 0.5)
+        .fromTo(badge,     { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.4 }, 0.7);
+};
 const fs15_swiper = new Swiper('.fs15_swiper', {
 	observer: true,
 	observeParents: true,
@@ -826,21 +900,8 @@ const fs15_swiper = new Swiper('.fs15_swiper', {
 		disableOnInteraction: false,
 	},
 	on: {
-        slideChangeTransitionStart: function () {
-            const activeSlide = $(this.slides[this.activeIndex]);
-            const imgBox = activeSlide.find('.imgbox');
-            const txtBox = activeSlide.find('.txtbox');
-            const highlight = activeSlide.find('.txtbox .tit .highlight');
-            const badge = activeSlide.find('.desc .badge');
-
-            gsap.killTweensOf([imgBox, txtBox, badge]);
-
-            const tl = gsap.timeline();
-            tl.fromTo(imgBox, { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.1)
-              .fromTo(txtBox, { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.2)
-              .fromTo(highlight, { backgroundSize: "0% 100%" }, { backgroundSize: "100% 100%", duration: 0.5, ease: "power2.inOut" }, 0.5)
-              .fromTo(badge, { opacity: 0, x: 200 }, { opacity: 1, x: 0 }, 0.7);
-        },
+        init: function () { playFs15Anim(this); },
+        slideChangeTransitionStart: function () { playFs15Anim(this); },
     }
 });
 

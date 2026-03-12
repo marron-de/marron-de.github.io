@@ -16,7 +16,7 @@
 			<div class="contbox">
 				<div class="video_box">
 					<video muted autoplay playsinline loop preload="auto" class="video" preload="none">
-						<source src="<?php echo G5_THEME_URL ?>/video/franchise_video1.mp4" type="video/mp4">
+						<source src="<?php echo G5_THEME_URL ?>/video/franchise_video1_2.mp4" type="video/mp4">
 					</video>
 				</div>
 				<div class="inner2 txtbox">
@@ -225,7 +225,7 @@
 			</div>
 		</section>
 
-		<section class="sub_section fs6">
+		<section class="sub_section fs6 mh100vh">
 			<div class="inner2">
 				<div class="titbox">
 					<h1 class="tit fs_txt1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
@@ -235,7 +235,7 @@
 					</h1>
 				</div>
 				<div class="labelbox">
-					<div class="div" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
+					<div class="div" data-aos="fade-up" data-aos-delay="23000" data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
 						<div class="label active">
 							<p class="txt">
 								“ 매장 수 늘리기 보다,<br>
@@ -243,7 +243,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="div" data-aos="fade-up" data-aos-delay="500"  data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
+					<div class="div" data-aos="fade-up" data-aos-delay="600"  data-aos-anchor-placement="top-center" data-aos-anchor=".fs6">
 						<div class="label">
 							<p class="txt"># 매장 수 욕심에 사장님 영업권 타협 없음</p>
 						</div>
@@ -339,27 +339,27 @@
 
 		<section class="sub_section fs9 mh100vh">
 			<div class="bgbox">
-				<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_line.webp" alt="" class="bg_line" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="400" data-aos-anchor-placement="top-center" >
+				<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_line.webp" alt="" class="bg_line" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="400" data-aos-anchor-placement="top-center" >
 			</div>
 			<div class="inner2">
-				<div class="titbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
+				<div class="titbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="1000" data-aos-anchor-placement="top-center">
 					<h1 class="tit fs_txt1">
 						AI를 활용한 <br>
 						빅데이터 기반의 상권분석
 					</h1>
 				</div>
 				<div class="imgbox">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_text.png" alt="" class="bg_text" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="800" data-aos-anchor-placement="top-center" >
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.webp" alt="" class="img"  data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center" >
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_text.png" alt="" class="bg_text" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="600" data-aos-anchor-placement="top-center" >
+					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.webp" alt="" class="img"  data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="800" data-aos-anchor-placement="top-center" >
 				</div>
-				<div class="contbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-delay="1200" data-aos-anchor-placement="top-center">
-					<p class="tit">
+				<div class="contbox">
+					<p class="tit" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="1000" data-aos-anchor-placement="top-center">
 						유동인구 숫자가 답은 아닙니다 <br>
 						피자를 시켜먹는 사람은 따로 있습니다
 					</p>
 					<div class="labelbox">
-						<div class="label typeA" data-aos="fade-up" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="200" data-aos-anchor-placement="top-center">ai 분석으로 배후 수요 1차 검증</div>
-						<div class="label typeB" data-aos="fade-up" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="400" data-aos-anchor-placement="top-center">티엠티 운영 데이터로 실제 주문 동선 2차 확인</div>
+						<div class="label typeA" data-aos="fade-up" data-aos-anchor=".fs9 .labelbox" data-aos-duration="500" data-aos-delay="200" data-aos-anchor-placement="top-center">ai 분석으로 배후 수요 1차 검증</div>
+						<div class="label typeB" data-aos="fade-up" data-aos-anchor=".fs9 .labelbox" data-aos-duration="500" data-aos-delay="400" data-aos-anchor-placement="top-center">티엠티 운영 데이터로 실제 주문 동선 2차 확인</div>
 					</div>
 				</div>
 			</div>				
@@ -538,7 +538,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -585,7 +585,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -629,7 +629,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -675,7 +675,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -716,7 +716,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -764,7 +764,7 @@
 							</div>
 							<div class="line line3"></div>
 							<div class="more_box">
-								<a href="#none" class="more">+ MORE</a>
+								<a href="/menu.php" class="more">+ MORE</a>
 							</div>
 						</div>
 					</div>	
@@ -1289,7 +1289,7 @@
 				<div class="swiper fs16_swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide item item1">
-							<div class="region">울산 동구점(22평)</div>
+							<div class="region">울산 본점(13평)</div>
 							<div class="graphbox">
 								<div class="graph">
 									<div class="graph_img"></div>
@@ -1537,7 +1537,7 @@
 							<p class="label_text">
 								<span class="txt">상담가능 시간대</span>
 							</p>
-							<input type="text" id="available_time" name="available_time" placeholder="예&#41; 수요일 / 17시 이후" class="input_text">
+							<input type="text" id="available_time" name="available_time" placeholder="예&#41; 수요일 / 17시 이후 등 정확한 시간 기재부탁드립니다" class="input_text">
 						</div>
 						<div class="form_item">
 							<p class="label_text">

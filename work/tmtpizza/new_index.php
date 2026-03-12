@@ -368,7 +368,7 @@ include_once(G5_THEME_PATH.'/head.php');
 					<div class="swiper ms5_swiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide item">
-								<a href="#none" class="link">	
+								<a href="/news/9" class="link">	
 									<div class="imgbox">
 										<img src="<?php echo G5_THEME_URL ?>/img/main/event_4.jpg" alt="신메뉴 트러플머쉬룸 피자 출시!"  class="img">
 									</div>
@@ -379,7 +379,7 @@ include_once(G5_THEME_PATH.'/head.php');
 								</a>
 							</div>
 							<div class="swiper-slide item">
-								<a href="#none" class="link">	
+								<a href="/news/8" class="link">	
 									<div class="imgbox">
 										<img src="<?php echo G5_THEME_URL ?>/img/main/event_5.jpg" alt="2025 우수가맹점 울산 신천점"  class="img">
 									</div>
@@ -390,7 +390,7 @@ include_once(G5_THEME_PATH.'/head.php');
 								</a>
 							</div>
 							<div class="swiper-slide item">
-								<a href="#none" class="link">	
+								<a href="/news/7" class="link">	
 									<div class="imgbox">
 										<img src="<?php echo G5_THEME_URL ?>/img/main/event_6.jpg" alt="미미네 유기견 보호소 봉사활동"  class="img">
 									</div>
