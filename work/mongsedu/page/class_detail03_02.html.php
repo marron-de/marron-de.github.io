@@ -65,8 +65,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_02" class="show">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_03">자주 묻는 질문</a></li>
                             </ul>
@@ -90,6 +90,36 @@ if (!defined('_EYOOM_')) exit;
                                                 <p class="name">조수호 <small>멘토</small></p>
                                                 <p class="desc">라셀 예술대 그래픽 전공</p> 
                                                 <p class="tag">포트폴리오 전문</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img_area">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t23.png" alt="">        
+                                            </div>
+                                            <div class="text_area">
+                                                <p class="name">이찬빈 <small>멘토</small></p>
+                                                <p class="desc">라셀 예술대 디자인 전공</p> 
+                                                <p class="tag">워크북, 작품구성 상담</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img_area">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t24.png" alt="">        
+                                            </div>
+                                            <div class="text_area">
+                                                <p class="name">이승연 <small>멘토</small></p>
+                                                <p class="desc">라셀 예술대 순수미술 전공</p> 
+                                                <p class="tag">그림, 드로잉 학습 지원</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img_area">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t25.png" alt="">        
+                                            </div>
+                                            <div class="text_area">
+                                                <p class="name">박주인 <small>멘토</small></p>
+                                                <p class="desc">라셀 예술대 그래픽 전공</p> 
+                                                <p class="tag">3D, 렌더링, 프로그램 전문</p>
                                             </div>
                                         </li>
                                     </ul>
@@ -123,7 +153,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">850,000원</span>
+                                        <span class="span-text-15a">850,000원 (월)</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

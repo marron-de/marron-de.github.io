@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">싱가포르/홍콩 국립대 자소서첨삭</span>
+                    <span class="dapsa">싱가포르 국립대 컨설팅</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르/홍콩 국립대 자소서첨삭</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 국립대 컨설팅</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -71,9 +71,9 @@ if (!defined('_EYOOM_')) exit;
                             <li id="content-1">
 								<div class="frame-section ver2 mb" id="sec01">
 									<div class="frame-27">
-										<span class="field-trip-intro">서비스안내</span>
+										<span class="field-trip-intro">컨설팅 안내</span>
 									</div>
-									<span class="field-trip-service">자소서 첨삭 서비스는 1주일 안에 빠르고 효과적으로 학생이 희망하는 전공과 분야에 따라 NUS 및 해당 대학 출신자들이 합격사례를 바탕으로 첨삭을 지도하는 서비스 입니다.</span >
+									<span class="field-trip-service">자소서 첨삭 서비스는 1주일 안에 빠르고 효과적으로 학생이 희망하는 전공과 분야에 따라 NUS 및 해당 대학 출신자들이 합격사례를 바탕으로 첨삭을 지도하는 서비스 입니다</span >
 								</div>
 								<div class="frame-section ver2 mb">
 									<div class="frame-titbox">
@@ -125,11 +125,11 @@ if (!defined('_EYOOM_')) exit;
 								<div class="frame-section ver3">
 									<div class="frame-titbox">
 										<p class="frame-title">
-											<span class="color">국내 1호, 사립대 교직원 출신의</span><br class="tablet"> 경험을 통한 수속관리
+											컨설팅 <span class="color">Point!</span>
 										</p>
 									</div>
 									<div class="pointbox">
-										<p class="txt">국내 최다 합격사례 데이터 보유! 국내 유일, NUS출신 관리</p>
+										<p class="txt">1주일안에 완성! 단 2회 미팅으로 끝나는 특별한 에세이 지도</p>
 									</div>
 								</div>
                                 <div class="line-2a"></div>	

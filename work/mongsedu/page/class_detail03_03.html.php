@@ -65,8 +65,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_03" class="show">자주 묻는 질문</a></li>
                             </ul>
@@ -83,7 +83,7 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="faq-box">
                                             <ul class="faq_list">
                                                 <li>
-                                                    <div class="question">온라인으로 포트폴리오 수업이 가능한가요?</div>
+                                                    <div class="question">온라인으로 포트폴리오 CLASS가 가능한가요?</div>
                                                     <div class="answer">네 물론입니다. 선생님이 온라인을 통해 직접 그림 및 전공 작품을 터치업 해주는 방식으로 진행되어 오히려 시간 낭비 없이 빠르고 효과적으로 완성할 수 있습니다.</div>
                                                 </li>
                                                 <li>
@@ -91,8 +91,8 @@ if (!defined('_EYOOM_')) exit;
                                                     <div class="answer">매년 50명의 합격생 중에 약 50% 이상이 온라인 클래스를 듣고 합격한 학생들입니다. 이미 검증된 클래스라 믿고 맡기셔도 됩니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">수업시간은 자유롭게 짤 수 있나요?</div>
-                                                    <div class="answer">1:1 수업 원칙이기 때문에, 선생님과 자유롭게 일정 계획을 잡고 스케줄을 맞출 수 있습니다.</div>
+                                                    <div class="question">CLASS시간은 자유롭게 짤 수 있나요?</div>
+                                                    <div class="answer">1:1 CLASS 원칙이기 때문에, 선생님과 자유롭게 일정 계획을 잡고 스케줄을 맞출 수 있습니다.</div>
                                                 </li>
                                                 <li>
                                                     <div class="question">포트폴리오 작업까지 얼마나 기간이 걸리나요?</div>
@@ -100,15 +100,15 @@ if (!defined('_EYOOM_')) exit;
                                                 </li>
                                                 <li>
                                                     <div class="question">그림 실력이 전혀 없는 경우에도 가능할까요?</div>
-                                                    <div class="answer">그림을 처음 해보는 경우, 집근처 그림학원에서 기초를 병행하면서 온라인 수업을 듣게 되면 보다 효과적으로 진행할 수 있습니다.</div>
+                                                    <div class="answer">그림을 처음 해보는 경우, 집근처 그림학원에서 기초를 병행하면서 온라인 CLASS를 듣게 되면 보다 효과적으로 진행할 수 있습니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">수업 시간 외에 선생님과 소통이 가능한가요?</div>
+                                                    <div class="question">CLASS 시간 외에 선생님과 소통이 가능한가요?</div>
                                                     <div class="answer">선생님과의 시간 약속을 통해서 카톡을 이용하여, 그림이나 작품 피드백을 받을 수 있습니다.</div>
                                                 </li>
                                                 <li>
                                                     <div class="question">환불 규정이 어떻게 되나요?</div>
-                                                    <div class="answer">수업 시작 전 (100% 환불 가능), 수업이 시작 된 후에는 환불이 불가합니다.</div>
+                                                    <div class="answer">CLASS 시작 전 (100% 환불 가능), CLASS가 시작 된 후에는 환불이 불가합니다.</div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -138,7 +138,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">850,000원</span>
+                                        <span class="span-text-15a">850,000원 (월)</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

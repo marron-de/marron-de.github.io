@@ -30,10 +30,10 @@ if (!defined('_EYOOM_')) exit;
 						준비 가능해요
 					</span>
 				</P>
-				<p class="sub_txt4">
+				<!-- <p class="sub_txt4">
 					한국 본사와 현지 지사장의 2개국 동시 관리! <br class="tablet">
 					꼼꼼하게 입학수속 진행합니다.
-				</p>
+				</p> -->
 			</div>
 			<div class="univ_listwrap">
 				<div class="univ_listbox">
@@ -49,7 +49,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/singa_univ_img2.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/singa_univ_img2_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">카플란</p>
+						<p class="title">KAPLAN</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
@@ -63,7 +63,7 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/singa_univ_img4.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/singa_univ_img4_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">PSB 아카데미</p>
+						<p class="title">PSB</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">

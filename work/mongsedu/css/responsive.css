@@ -60,7 +60,7 @@
 	.header .h_inner .h_nav > li.menu_li > .link::after { width: 0.4rem; left: unset;}
 	.header .h_inner .h_nav > li > .link .arrow {display: none;}
 	.header .h_inner .h_nav > li > .link .icon1 { display: none;}
-	.header .h_inner .h_nav .h_nav_ul {  left: 0; top: calc(100% + 1px); width: 100vw;  height: unset;overflow: auto; border-bottom: 1px solid #e9e9e9; padding: 1.6rem 1.6rem 2rem;  background: #fff; gap: 1.8rem; }
+	.header .h_inner .h_nav .h_nav_ul {  left: 0; top: calc(100% + 1px); width: 100vw;  height: unset;overflow: auto; border-bottom: 1px solid #e9e9e9; padding: 1.6rem 1.6rem 2rem;  background: #fff; gap: 1.8rem 2rem; flex-wrap: wrap;}
 	.header .h_inner .h_nav .h_nav_ul::-webkit-scrollbar {display: none;}
 	.header .h_inner .h_nav .h_nav_ul > li > .link { font-size: 1.4rem; font-weight: 600; white-space: nowrap;}
 
@@ -120,7 +120,8 @@
 
 	.cm_modal .cm_modal_inner { width: 100%; max-width: calc(100% - 3.2rem * 2);}
 	.cm_modal .cm_modal_close { width: 3.2rem; margin-bottom: 1.2rem;}
-	.cm_modal .cm_modal_box {  border-radius: 1.6rem; padding: 2.4rem 1.6rem 1.6rem; box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.16)}
+	.cm_modal .cm_modal_box {  border-radius: 1.6rem; padding: 2.4rem 1.6rem; box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.16)}
+	.cm_modal .cm_modal_box.btn_ver {padding-bottom:  1.6rem;}
 	.cm_modal .cm_modal_box .modal_icon { width: 4rem;  margin: 0 auto 2rem;}
 	.cm_modal .cm_modal_box .modal_txtbox {  gap: 1.2rem;}
 	.cm_modal .cm_modal_box .modal_tit { font-size: 1.8rem;}
@@ -156,6 +157,13 @@
 
 
 
+	/* 토스트팝업 */
+	.toast_popup { max-width: 100%;  padding: 1.6rem 2rem; border-radius: 0.6rem;}
+	.toast_popup .txtbox { font-size: 1.4rem;  gap: 0.8rem;}
+	.toast_popup .txtbox .emoji {width: 1.6rem;}
+
+
+
 	/* 메인 */
 	.msection { margin: 0 0 4.8rem;}
 	.ms.title_area { flex-direction: column; align-items: unset; gap: 2rem;   margin-bottom: 1.6rem;}
@@ -166,7 +174,7 @@
 	.ms.title_area .title .tit { font-size: 2.2rem; line-height: 100%;}
 	.ms.title_area .desc { font-size: 1.5rem;}
 
-	.ms.title_area.flex_ver { margin-bottom: 3rem; flex-direction: column-reverse;   align-items: unset;  gap: 3.2rem;}
+	.ms.title_area.flex_ver { margin-bottom: 3rem; flex-direction: column-reverse;   align-items: unset;  gap: 2rem;}
 	.ms.title_area.flex_ver .kakao_btn { font-size: 1.4rem; border-radius: 0.8rem;  padding: 1.1rem 1.6rem; gap: 1rem;}
 	.ms.title_area.flex_ver .kakao_btn .icon {  width: 2.4rem;}
 	.ms.title_area.flex_ver .kakao_btn .txt { flex: 1;}
@@ -174,11 +182,11 @@
 	
 	.ms.title_area .tab_tit.ver2 {position: relative; width: calc(100% + 1.6rem * 2);  margin: 0 -1.6rem;}
 	.ms.title_area .tab_tit.ver2::before {content: "";position: absolute;	left: 0;	bottom: 0;	width: 100%;height: 1px;background: var(--basic-border);}
-	.ms.title_area .tab_tit.ver2 > li { flex: 1;}
-	.ms.title_area .tab_tit.ver2 a { position: relative; font-size: 1.7rem; padding: 0 2rem; height: 4.2rem;}
+	/* .ms.title_area .tab_tit.ver2 > li { flex: 1;} */
+	.ms.title_area .tab_tit.ver2 a { position: relative; font-size: 1.6rem; padding: 0 1.2rem; height: 4.2rem; }
 	
 	
-	.main_banner { position: relative; z-index: 10;}
+	.main_banner { position: relative; z-index: 10;overflow: hidden;}
 	.main-contents .mv_wrap {  padding: 1.6rem 0 3.2rem;}
 	.main-contents .mv_wrap .sampSwiper { aspect-ratio: 343 / 180;  padding-top: 0;   border-radius: 1.4rem;  width: 100%;}
 	.main-contents .mv_wrap .sampSwiper .sampSwiper_controls .prev_btn, 
@@ -202,7 +210,7 @@
 	.main-contents .mv_wrap .text_area .tag_area::-webkit-scrollbar {display: none;}	
 	.main-contents .mv_wrap .text_area .tag_area a { font-size: 1.2rem;  padding: 0.9rem 1rem;}
 
-	.main_link { overflow: hidden; width: calc(100% + 1.6rem * 2); margin: 0 -1.6rem;   padding: 0 1.6rem;}
+	.main_link {  width: calc(100% + 1.6rem * 2); margin: 0 -1.6rem;   padding: 0 1.6rem;}
 	.main_link ul {  min-width: unset; justify-content: unset; align-items: unset; flex-wrap: unset; }
 	.main_link ul li a { gap: 0.8rem;}
 	.main_link ul li a img { width: 6.4rem;}
@@ -212,6 +220,8 @@
 	.msection.presentation_area { margin-top: 4rem;}
 	.msection.presentation_area .ms.title_area { gap: 1.6rem; margin-bottom: 2rem;}
 	.presentation_list .panel > li > ul.swiper-wrapper > li {width: 20.4rem;  border-radius: 1rem;}
+	.presentation_list .panel ul li .text_area .badgebox .nation, 
+	.presentation_list .panel ul li .text_area .badgebox .place  {height: 2.4rem;}
 	.presentation_list .panel ul.swiper-wrapper li .img_area {height: 12.4rem;}
 	.presentation_list .panel ul li .img_area img:not(.flag) { height: 100%;   object-fit: cover;}
 	.presentation_list .panel ul.swiper-wrapper li .img_area .flag { top: 1.2rem;  left: 1.2rem;  width: 3rem;}
@@ -221,7 +231,7 @@
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox { gap: 0.4rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox .nation, 
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox .place {  border-radius: 0.3rem;  padding: 0.3rem 0.6rem;  font-size: 1.1rem;}
-	.presentation_list .panel ul.swiper-wrapper li .text_area .title { font-size: 1.6rem;}
+	.presentation_list .panel ul.swiper-wrapper li .text_area .title { font-size: 1.6rem; letter-spacing: -0.02em;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area ul {  gap: 0.6rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area ul li { gap: 0.8rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area ul p {  font-size: 1.2rem;  color: var(--typeB-sub2);}
@@ -296,7 +306,7 @@
 	.msection.board_area .board_cont > ul > li.notice .b_title span { font-size: 2rem;}
 	.msection.board_area .board_cont > ul > li.notice .b_title .more {  width: 2rem;}
 	.msection.board_area .board_cont > ul > li.notice ul li a { position: relative;   padding-left: 2rem;  flex-direction: column;  align-items: unset; gap: 1rem;}
-	.msection.board_area .board_cont > ul > li.notice .brd_list { gap: 2rem;  max-height: 26rem; width: calc(100% + 1.25rem * 2);  margin: 0 -1.2rem;  padding: 2.4rem 1.2rem}
+	.msection.board_area .board_cont > ul > li.notice .brd_list { gap: 1.8rem;  max-height: 26rem; width: calc(100% + 1.25rem * 2);  margin: 0 -1.2rem;  padding: 2.4rem 1.2rem}
 	.msection.board_area .board_cont > ul > li.notice ul li a:hover { opacity: 1;}
 	.msection.board_area .board_cont > ul > li.notice ul li a .tit {  font-size: 1.6rem;  white-space: nowrap;}
 	.msection.board_area .board_cont > ul > li.notice ul li a .date { font-size: 1.3rem;  margin: 0;}
@@ -394,7 +404,7 @@
 	.class_mid_banner .container .img_area { width: 100%;  max-width: 100%; margin: 0;}
 	.class_mid_banner .container .img_area img { margin: 0; transform: none; }
     .class_mid_banner .container .img_area .mob_txtbox { display: flex; flex-direction: column; align-items: center; gap: 1.2rem;  padding: 0 2rem; margin-bottom: 2rem;  }
-	.class_mid_banner .container .img_area .mob_txtbox .tit {display: flex; flex-direction: column;  align-items: flex-start; gap: 2rem;  font-weight: 800; font-size: 2.6rem;  line-height: 140%; letter-spacing: -0.02em; text-align: center; color: #130f51;}
+	.class_mid_banner .container .img_area .mob_txtbox .tit {display: flex; flex-direction: column;  align-items: flex-start; gap: 2rem;  font-weight: 800; font-size: 2.4rem;  line-height: 140%; letter-spacing: -0.02em; text-align: center; color: #130f51;}
 	.class_mid_banner .container .img_area .mob_txtbox .tit .icon {    width: 4.8rem;    margin: 0;  transform: none;  display: none;}
 	.class_mid_banner .container .img_area .mob_txtbox .desc { font-weight: 500;  font-size: 1.6rem; line-height: 150%; letter-spacing: -0.02em; text-align: center; color: #130f51; }
 	.class_mid_banner .container .img_area .phonebox { max-width: 26.7rem;  margin: 0 auto;}
@@ -437,10 +447,14 @@
 	.page-detail .frame-1d .tag, .page-detail .frame-1f, 
 	.page-detail .keulraeseu { font-weight: 700;  font-size: 1.1rem;  border-radius: 0.3rem;  padding: 0.3rem 0.6rem;}
 	.page-detail .frame-158 { width: 100%;}
+	.page-detail .tab_contbox .tab_cont .frame-158 {margin-bottom: 0;}
+	.page-detail .tab_contbox .tab_cont.on .frame-158 { margin-bottom: 1rem;}
 	.page-detail .frame-159 { width: 100%;  gap: 1rem;  border-radius: 0.8rem;padding:1.6rem  1.4rem;background: var(--basic-pale);}
 	.page-detail .frame-159.ver2 { padding: 2rem 1.4rem; gap: 1.4rem;}
 	.page-detail .span-text-15a { font-size: 1.6rem;}
 	.page-detail .span-text-15a small { font-size: 1.4rem; font-weight: 600;}
+	.page-detail .frame-15b {display: none;}
+	.page-detail .tab_contbox .tab_cont.on .frame-15b{display: block;}
 	.page-detail .frame-15d { gap: 2rem;  border-top: 0;  padding-top: 2.4rem;}
 	.page-detail .interview { font-size: 1.5rem;}
 	
@@ -461,12 +475,12 @@
 
 	.page-detail .frame { padding: 6.4rem 0 6.2rem;}
 	.page-detail .frame-f { gap: 2.2rem;}
-	.page-detail .frame-f .main-menu-icon {  width: 3.2rem;  border-radius: 0.4rem;   padding: 0.6rem;}
-	.page-detail .frame-10 { gap: 0.8rem;}
-	.page-detail .frame-f .title { gap:0.2rem;}
+	.page-detail .frame-f .main-menu-icon {  width: 3.6rem;  border-radius: 0.8rem;   padding: 0.6rem;}
+	.page-detail .frame-10 { gap: 1.6rem;}
+	.page-detail .frame-f .title { gap:1.2rem;}
 	.page-detail .frame-f .title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu { font-size: 1.4rem;}
 	.page-detail .frame-f .title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11 { font-size: 2rem; line-height: 100%;}
-	.page-detail .frame-f .im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida { font-size: 1.4rem; line-height: 160%; font-weight: 400;}
+	.page-detail .frame-f .im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida { font-size: 1.4rem; line-height: 150%; font-weight: 400;}
 
 	.page-detail .fixed_btnbox { position: fixed;  left: 0;  bottom: 0;  width: 100%;  border-top: 1px solid var(--basic-border);  padding: 1.2rem 1.6rem 3.2rem;   background: #fff;}
 	.page-detail .fixed_btnbox .button-160 {  border-radius: 1rem; padding: 1.7rem 0;}
@@ -516,6 +530,7 @@
 	.page-detail .t_txt p b {font-weight: inherit;}
 	.page-detail .class_curri + .class_curri {padding-top: 0.8rem;}
 	.page-detail .class_curri .tit_area span { font-size: 1.8rem;}
+	.page-detail .class_curri .tit_area span small {font-size: 1.2rem; margin-left: 0.6rem;}
 	.page-detail .class_curri .msection.faq_area { margin-bottom: 4rem;}
 	.page-detail .class_curri .faq_area .faq-box { margin-top: 1.6rem;}
 	.page-detail .class_curri .faq_area .faq-box .faq_list li { padding: 0 1.6rem;   border-radius: 0.8rem;}
@@ -546,6 +561,14 @@
 	.page-detail .cost_list > li .tit .costbox { display: flex;  align-items: center;   gap: 1rem;  font-weight: 700;  font-size: 2.2rem;  line-height: 100%;   letter-spacing: -0.04em;  color: var(--basic-black);}
 	.page-detail .cost_list > li .tit .costbox .tablet { font: inherit; color: inherit;  letter-spacing: inherit;}
 	.page-detail .cost_list > li .tit span.cost {  font-size: 1.2rem;  padding: 0.3rem 0.6rem; border-radius: 0.3rem;}
+	.page-detail .cost_list > li .tit .mob_price {  width: 100%; display: flex; align-items: flex-end;  justify-content: space-between; }
+	.page-detail .cost_list > li .tit .mob_price .sale_price {  display: flex;  align-items: flex-end; gap: 0.4rem; }
+	.page-detail .cost_list > li .tit .mob_price .sale_price .price { font-weight: 700; font-size: 2.2rem; line-height: 120%;  letter-spacing: -0.04em;  color: #212121; }
+	.page-detail .cost_list > li .tit .mob_price .sale_price .sale { display: flex; align-items: center; gap: 0.2rem; font-weight: 700;  font-size: 1.4rem; letter-spacing: -0.04em; color: #f85f58; }
+	.page-detail .cost_list > li .tit .mob_price .sale_price .sale .icon{width: 1.6rem;}
+	.page-detail .cost_list > li .tit .mob_price .sale_price .sale .percent { color: inherit; font: inherit;  letter-spacing: inherit; }
+	.page-detail .cost_list > li .tit .mob_price .ori_price { flex: 1; display: flex; align-items: flex-end; justify-content: flex-end; gap: 0.4rem; font-weight: 500; font-size: 1.4rem; line-height: 129%; letter-spacing: -0.04em; text-align: right;color: #c1c1c1; }
+	.page-detail .cost_list > li .tit .mob_price .ori_price .price {font-weight: 700;}
 	.page-detail .cost_list > li .detail { margin-top: 2rem;}
 	.page-detail .cost_list > li .detail > span { font-size: 1.4rem; margin-bottom: 0.8rem;}
 	.page-detail .cost_list > li .detail > .de_box { flex-direction: column;  gap: 2rem;}
@@ -566,7 +589,7 @@
 	.page-detail .mentor_list { margin-top: 2.4rem;  gap: 1.2rem; flex-direction: column;}
 	.page-detail .mentor_list li { width: 100%;  flex-direction: row;  border-radius: 1.4rem;}
 	.page-detail .mentor_list li .img_area {  width: 50%;  aspect-ratio: 167 / 124;}
-	.page-detail .mentor_list li .text_area { padding: 2rem 2rem 1.6rem;}
+	.page-detail .mentor_list li .text_area { padding: 2rem 0.9rem 1.6rem 2rem;}
 	.page-detail .mentor_list li .text_area .name {  font-size: 1.7rem;  gap: 0.6rem 0.4rem;   margin-bottom: 0.8rem; flex-wrap: wrap;}
 	.page-detail .mentor_list li .text_area .name small { font-size: 1.2rem;}
 	.page-detail .mentor_list li .text_area .desc { font-size: 1.4rem;  margin-bottom: 1.5rem;}
@@ -721,15 +744,17 @@
 
 
 	/* 수속하기 */
+
 	.banner_area.procedure.ver2 { padding-bottom: 3.2rem;}
 	.banner_area.procedure .banner .imgbox { width: 60%;  max-width: 22.1rem;}
 
-	.page-procedure .link_area { border-bottom: 1px solid var(--basic-border);  margin-bottom: 4.8rem; overflow: hidden;}
+	.page-procedure .top_section { overflow: hidden;}
+	.page-procedure .link_area { border-bottom: 1px solid var(--basic-border);  margin-bottom: 4.8rem;}
 	.procedure_link { justify-content: unset;  padding-bottom: 0;  border-bottom: 0;   margin-bottom: 0;}
 	.procedure_link > .link { width: 6.8rem; gap: 0.8rem;}
 	.procedure_link > .link .imgbox { max-width: 6.8rem; padding: 0 1.2rem;}
 	.procedure_link > .link .imgbox .icon_swiper .icon { max-width: unset;}
-	.procedure_link > .link .imgbox .count { right: 0;  width: 1.6rem;  font-size: 1.1rem;  font-weight: 700;  line-height: 1;}
+	.procedure_link > .link .imgbox .count { height: 2rem; font-size: 1.1rem;  line-height: 1; padding: 0 0.8rem;  white-space: nowrap; }
 	.procedure_link > .link .tit { font-size: 1.3rem; line-height: 140%;}
 
 	.page-procedure .link_swiper .scrollbar { display: block; margin: 4rem auto 3.2rem;}
@@ -806,6 +831,7 @@
 	.page-procedure #sec04 { gap: 4.8rem;}
 	.page-procedure .frame-section {gap: 2.4rem;}
 	.page-procedure .frame-section.ver2 { gap: 1.6rem;}
+	.page-procedure .frame-section.ver2#sec01 {gap: 1.2rem;}
 	.page-procedure .frame-section.mob_ver1 { gap: 2rem;}
 	.page-procedure .frame-section.mb { margin-bottom: 4rem;}
 
@@ -916,9 +942,10 @@
 	.page-counsel .banner_area.full .txtbox .tit { font-size: 2.8rem; line-height: 140%;}
 
 
-	.mentor_modal .cm_modal_inner { height: 100%; }
-	.mentor_modal .mentorpop_swiper { max-width: 100%; padding: 0; overflow: hidden;}
-	.mentor_modal .mentorpop_swiper .item { padding: 3.2rem 1.6rem;  border-radius: 1.6rem; overflow: auto;}
+	.mentor_modal .cm_modal_box {border-radius: 1.6rem; padding: 0;}
+	.mentor_modal .cm_modal_box::-webkit-scrollbar {display: none;}
+	.mentor_modal .mentorpop_swiper { max-width: 100%;}
+	.mentor_modal .mentorpop_swiper .item { padding: 3.2rem 1.6rem 2rem;  border-radius: 1.6rem; overflow: hidden;}
 	.mentor_modal .mentorpop_swiper .item::-webkit-scrollbar {display: none;}
 	.mentor_modal .mentorpop_swiper .item .infobox { gap: 2.4rem; padding: 0;  margin-bottom: 2rem;}
 	.mentor_modal .mentorpop_swiper .item .infobox .thumbox { width: 8.8rem;}
@@ -937,7 +964,8 @@
 	.mentor_modal .mentorpop_swiper .item .contbox .careerbox .career_descbox {  gap: 1rem;}
 	.mentor_modal .mentorpop_swiper .item .contbox .careerbox .career_descbox .desc {  font-size: 1.5rem;}
 	.mentor_modal .mentorpop_swiper .item .contbox .cmtbox { gap: 1.2rem;}
-	.mentor_modal .mentorpop_swiper .item .contbox .cmtbox .cmt_tit { font-size: 1.5rem;}
+	.mentor_modal .mentorpop_swiper .item .contbox .cmtbox .cmt_tit { font-size: 1.5rem; gap: 0.4rem;}
+	.mentor_modal .mentorpop_swiper .item .contbox .cmtbox .cmt_tit .icon {width: 1.6rem;}
 	.mentor_modal .mentorpop_swiper .item .contbox .cmtbox .cmt_desc { font-size: 1.5rem;}
 	.mentor_modal .mentorpop_swiper .prev_btn, .mentor_modal .mentorpop_swiper .next_btn {display: none;} 
 
@@ -1053,6 +1081,7 @@
 	.page-univ .tit_area.board .univsch_popup .linkbox > li .link.tit {  font-size: 1.5rem;}
 	.page-univ .univ_info.tabs {  margin-top: 2.4rem; margin-bottom: 4rem;  overflow: hidden;}
 	.page-univ .univ_info.tabs ul { width: 100%; padding: 0; min-width: unset; justify-content: unset; margin: 0; }
+	.page-univ .univ_info.tabs ul li {border-bottom-width: 2px;}
 	.page-univ .univ_info.tabs ul li a { font-size: 1.5rem; letter-spacing: -0.03em;  height: unset;  padding: 1.2rem 1.6rem;  min-width: 6rem;}
 
 	.page-univ .univ_main { margin-bottom: 4rem;}
@@ -1326,6 +1355,20 @@
 	.ebook_modal .cm_modal_box .note_box {margin: 0;}
 	.ebook_modal .cm_modal_box .btnbox .btn.typeA { width: 8rem;  flex: unset;}
 
+	.ebook_modal.ver2 .cm_modal_box .titbox { margin-bottom: 1.6rem;}
+	.ebook_modal.ver2 .cm_modal_box .tblbox {  font-size: 1.5rem;  border-radius: 0.8rem;flex-wrap: wrap;}
+	.ebook_modal.ver2 .cm_modal_box .tblbox .item { width: 50%;}
+	.ebook_modal.ver2 .cm_modal_box .tblbox .item:nth-child(even) { border-right: 0;}
+	.ebook_modal.ver2 .cm_modal_box .tblbox .item .top { height: 4rem;}
+	.ebook_modal.ver2 .cm_modal_box .tblbox .item .bottom {  line-height: 140%; padding: 1rem 0;  min-height: 6rem; flex-direction: column; gap: 0;}
+	.ebook_modal.ver2 .cm_modal_box .tblbox .item .bottom .small { font-size: 1.3rem;  line-height: 140%;}
+	.ebook_modal.ver2 .cm_modal_box .classbox { gap: 1.2rem; margin-bottom: 2.4rem;}
+	.ebook_modal.ver2 .cm_modal_box .classbox .title { font-size: 1.7rem;}
+	.ebook_modal.ver2 .cm_modal_box .classbox .descbox {gap: 0.8rem;}
+	.ebook_modal.ver2 .cm_modal_box .classbox .descbox .desc { gap: 1rem;  font-size: 1.5rem;  line-height: 150%;  letter-spacing: -0.02em;}
+	.ebook_modal.ver2 .cm_modal_box .classbox .descbox .desc .icon { width: 1.8rem;}
+	.ebook_modal.ver2 .cm_modal_box .note_box {margin-bottom: 2.4rem;}
+
 
 	/* 유학원소개 */
 	.sub_titbox {margin-bottom: 2.4rem;}
@@ -1454,7 +1497,7 @@
 	.page-procedureban .prd_service .prdservice_swiper .item .infoitem .title {font-size: 1.8rem;}
 	.page-procedureban .prd_service .prdservice_swiper .item .infoitem .descbox { width: 100%; margin-right: 0; gap: 1rem;}
 	.page-procedureban .prd_service .prdservice_swiper .item .infoitem .descbox > li {  gap: 1.6rem;  font-size: 1.4rem; line-height: 150%;}
-	.page-procedureban .prd_service .prdservice_swiper .item .infoitem .descbox > li .tit { width: 5.6rem;}
+	.page-procedureban .prd_service .prdservice_swiper .item .infoitem .descbox > li .tit { width: var(--title-width);}
 	.page-procedureban .prd_service .prdservice_swiper .item .infoitem .descbox > li .desc { letter-spacing: -0.01em;}
 	.page-procedureban .prd_service .prdservice_swiper .prev_btn, 
 	.page-procedureban .prd_service .prdservice_swiper .next_btn {display: none;}
@@ -1660,7 +1703,7 @@
 	.page-why > .sec { padding-top: 6.4rem;  margin-top: -6.4rem;}
 
 	.page-why #sec01 { margin-bottom: 5.6rem;}
-	.page-why #sec01 .container { gap: 2.4rem;}
+	.page-why #sec01 .container { gap: 1.6rem;}
 	.page-why #sec01 .container .text_area { width: 100%; gap: 1.2rem;}
 	.page-why #sec01 .container .text_area .sub_txt1 { font-size: 2.2rem; line-height: 150%;}
 	.page-why #sec01 .container .text_area .sub_txt3 { font-size: 1.5rem;}
@@ -1679,7 +1722,7 @@
 	.page-why #sec03 .sub_titbox { margin-bottom: 2rem;}
 	.page-why #sec03 .sub_titbox .controlsbox {  display: none;}
 	.page-why #sec03 .sub_titbox .sub_txt4 { font-size: 1.4rem; letter-spacing: -0.04em;}
-	.page-why #sec03 .sub_titbox .sub_txt1 { margin: 1rem 0 1.4rem; line-height: 100%; font-size: 2.2rem;}
+	.page-why #sec03 .sub_titbox .sub_txt1 { margin: 1.4rem 0; line-height: 100%; font-size: 2.2rem;}
 	.page-why #sec03 .sub_titbox .sub_txt3 { font-size: 1.5rem;line-height: 150%;   letter-spacing: -0.03em;}
 
 	.page-why #sec03 .counsel_list .panel > li { justify-content: unset;  width: calc(100% + 1.6rem * 2); margin: 0 -1.6rem; padding: 0 2rem;}
@@ -1766,7 +1809,7 @@
 	.page-duolingo .duo_sec2 .contbox .item .right .tagbox .tag { font-size: 1.4rem;  padding: 1.2rem 1.4rem;}
 
 	.page-duolingo .duo_sec3 { padding: 5.6rem 0;}
-	.page-duolingo .duo_sec3 .sub_titbox { margin-bottom: 2rem;}
+	.page-duolingo .duo_sec3 .sub_titbox { margin-bottom: 1.8rem; gap: 1.2rem;}
 	.page-duolingo .duo_sec3 .contbox .toptxt { font-size: 1.2rem;}
 	.page-duolingo .duo_sec3 .contbox .itembox { gap: 0.8rem;}
 	.page-duolingo .duo_sec3 .contbox .item { width: calc((100% - 0.8rem) / 2);  border-radius: 0.8rem;  padding: 2.4rem 1.6rem; gap: 1rem;}
@@ -1775,16 +1818,17 @@
 	.page-duolingo .duo_sec3 .contbox .item .desc { font-size: 1.3rem;  line-height: 100%;}
 
 	.page-duolingo .duo_sec4 { padding: 0 0 6.4rem;}
+	.page-duolingo .duo_sec4 .sub_titbox { margin-bottom: 2rem; gap: 1.2rem;}
 	.page-duolingo .duo_sec4 .sub_titbox .sub_txt1 { line-height: 100%; font-size: 2.2rem;}
 
 	.page-duolingo .duo_sec5 { padding: 6.4rem 0;  background-image: url(../img/sub/bg_duobnf_m.png);}
-	.page-duolingo .duo_sec5 .sub_titbox { margin-bottom: 2rem; gap: 1.6rem;}
+	.page-duolingo .duo_sec5 .sub_titbox { margin-bottom: 2.4rem; gap: 1.6rem;}
 	.page-duolingo .duo_sec5 .sub_titbox .sub_txt1 { font-size: 2.4rem;}
 	.page-duolingo .duo_sec5 .counsel_list .panel ul { gap: 1.2rem;  flex-direction: column;}
 	.page-duolingo .duo_sec5 .counsel_list .panel ul > li { width: 100%;}
 	.page-duolingo .duo_sec5 .counsel_list .panel > li > ul > li .img_area {  border-radius: 1.4rem;}
 
-	.page-duolingo .duo_sec6 { margin-bottom: 6.4rem; padding: 5.6rem 0;}
+	.page-duolingo .duo_sec6 { margin-bottom: 5.6rem; padding: 5.6rem 0;}
 	.page-duolingo .duo_sec6 .contbox { gap: 3rem; flex-direction: column;   align-items: unset;}
 	.page-duolingo .duo_sec6 .contbox > .txtbox .tag {  font-size: 1.2rem;   line-height: 100%;  padding: 0.8rem 1rem;  border-radius: 0.5rem;   margin-bottom: 2rem;}
 	.page-duolingo .duo_sec6 .contbox > .txtbox .tit { font-size: 2.2rem; line-height: 150%;  margin-bottom: 1.2rem;}
@@ -1882,6 +1926,7 @@
 
 	.page-prep .prep_sec2 {margin-bottom: 5.6rem;}
 	.page-prep .prep_sec2 .sub_titbox { margin-bottom: 1.6rem; }
+	.page-prep .prep_sec2 .sub_titbox .sub_txt1 {font-size: 2.2rem;}
 	.page-prep .prep_sec2 .contbox { gap: 1.6rem;  margin-bottom: 0;}
 	.page-prep .prep_sec2 .contbox .item { border-radius: 1.4rem; padding: 4rem 2rem;}
 	.page-prep .prep_sec2 .contbox .item1 { background-image: url(../img/sub/prep_sec2_bg1_m.jpg);}
@@ -1914,14 +1959,14 @@
 	.page-prep .prep_sec3 .contbox {gap: 2rem;}
 	.page-prep .prep_sec3 .contbox > .plus { width: 4rem;}
 
-	.page-prep .prep_sec4 { padding: 5.6rem 0 6.4rem; gap: 5.6rem; margin-bottom: 6.4rem;}
+	.page-prep .prep_sec4 { padding: 5.6rem 0 6.4rem; gap: 5.6rem; margin-bottom: 5.6rem;}
 	.page-prep .prep_sec4 .sub_titbox { gap: 1.4rem;  margin-bottom: 1.6rem;}
 	.page-prep .prep_sec4 .sub_titbox .sub_txt1 {font-size: 2.4rem;}
 	.page-prep .prep_sec4 .sub_titbox .step {  gap: 1rem 0.4rem;   flex-wrap: wrap;  justify-content: center;  font-size: 1.2rem;}
 	.page-prep .prep_sec4 .sub_titbox .step .txt:nth-child(1) { width: 100%;}
 	.page-prep .prep_sec4 .sub_titbox .step .icon { width: 0.9rem;}
 	.page-prep .prep_sec4 .container:nth-child(2) .sub_titbox {margin-bottom: 2rem;}
-	.page-prep .prep_sec4 .tit_btnbox { gap: 0.6rem;  margin: 2.4rem 0 2rem;}
+	.page-prep .prep_sec4 .tit_btnbox { gap: 0.6rem;  margin: 2rem 0 2.8rem;}
 	.page-prep .prep_sec4 .tit_btnbox .btn { font-size: 1.5rem;  padding: 1.4rem 1rem;  border-radius: 0.8rem; flex: 1;}
 
 	.page-prep .prep_sec5 { margin: 6.4rem 0 5.6rem;}
@@ -1943,7 +1988,7 @@
 	.page-prep .prep_sec6.msection.review_area .review_list ul li {  width: 19.1rem;  border-radius: 0.8rem;}
 	.page-prep .prep_sec6.msection.review_area .review_list ul li .img_area img.play { width: 2.4rem; }
 
-	.page-prep .prep_sec7 { padding: 6.4rem 0; margin-bottom: 6.4rem;  background-image: url(../img/sub/bg_prepbot_m.jpg);}
+	.page-prep .prep_sec7 { padding: 6.4rem 0; margin-bottom: 5.6rem;  background-image: url(../img/sub/bg_prepbot_m.jpg);}
 	.page-prep .prep_sec7 .sub_titbox {margin-bottom: 3.2rem; gap: 1.6rem;}
 	.page-prep .prep_sec7 .sub_titbox .sub_txt2 {font-size: 1.4rem;}
 	.page-prep .prep_sec7 .sub_titbox .sub_txt1 { font-size: 2.4rem; }
@@ -2063,6 +2108,31 @@
 	
 	.page-terms {padding: 4rem 0 6.4rem; font-size: 1.4rem;}
 	.page-terms .terms_title { font-size: 2.2rem; margin-bottom: 2.4rem;}
+
+
+	/* 상담사소개 */	
+	.page-mentor .banner_area.counsel.ver2 {padding-bottom: 4rem;}
+	.page-mentor .men_sec {padding-bottom: 5.4rem;}
+	.page-mentor .men_sec .ms.title_area { gap: 1.6rem;}
+	.page-mentor .men_sec .tab_swiper { width: calc(100% + 1.6rem * 2); margin: 0 -1.6rem; padding: 0 1.6rem;}
+	.page-mentor .men_sec .tab_swiper .swiper-slide { padding-right: 1.2rem;}
+	.page-mentor .men_sec .tab_swiper .swiper-slide::after { content: "";  position: absolute; right: 0;  top: 50%;  transform: translateY(-50%);  width: 1px;   height: 1.2rem;  background: var(--basic-border);}
+	.page-mentor .men_sec .tab_swiper .swiper-slide:last-child { padding: 0;}
+	.page-mentor .men_sec .tab_swiper .swiper-slide:last-child::after { display: none;}
+	.page-mentor .men_sec .tab_swiper .swiper-slide a {line-height: 120%;}
+	.page-mentor .men_sec .mentor_list > ul > li > ul {gap: 2.4rem 0.8rem;}
+	.page-mentor .men_sec .mentor_list .item { width: calc((100% - 0.8rem * 1) / 2);  border-radius: 1rem;}
+	.page-mentor .men_sec .mentor_list .item .imgbox { aspect-ratio: 1 / 0.7573; }
+	.page-mentor .men_sec .mentor_list .item .imgbox .flagbox { left: 1.2rem; top: 1.1rem;  gap: 0.4rem;}
+	.page-mentor .men_sec .mentor_list .item .imgbox .flagbox .flag { width: 3rem;  border-radius: 0.2rem;}
+	.page-mentor .men_sec .mentor_list .item .txtbox { padding: 1.2rem 1.1rem; gap: 1rem;}
+	.page-mentor .men_sec .mentor_list .item .txtbox .top { gap: 0.6rem; order: 1; flex-direction: column; align-items: unset; white-space: unset; }
+	.page-mentor .men_sec .mentor_list .item .txtbox .top .name { font-size: 1.6rem;}
+	.page-mentor .men_sec .mentor_list .item .txtbox .top .desc { font-size: 1.2rem;}
+	.page-mentor .men_sec .mentor_list .item .txtbox .bottom { gap: 0.2rem; justify-content: space-between; order: 2;}
+	.page-mentor .men_sec .mentor_list .item .txtbox .bottom .tag { font-weight: 600;  font-size: 1.1rem; padding: 0.3rem 0.6rem;  border-radius: 0.3rem;}
+	.page-mentor .men_sec .mentor_list .item .txtbox .bottom .more { width: 1.8rem;  display: block;}
+	.page-mentor .men_sec .mentor_list .item .txtbox .btn {display: none;}
 
 
 }

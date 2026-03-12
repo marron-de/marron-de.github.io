@@ -63,8 +63,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_01" class="show">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_01" class="show">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_03">자주 묻는 질문</a></li>
                             </ul>
@@ -80,8 +80,8 @@ if (!defined('_EYOOM_')) exit;
                                             <div class="tit">
                                                 <span>듀오링고 DET 실전반 수강료 <small>2개월</small></span>
 												<div class="costbox">
-													<span class="tablet">490,000원</span>
-                                                	<span class="cost">회당 30,625원</span>
+													<span class="tablet">980,000원</span>
+                                                	<span class="cost">회당 40,833원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -110,10 +110,10 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 													</ul>
 													<div class="side">
-														<p class="price">490,000원</p>
+														<p class="price">980,000원</p>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>30,625원</span>
+															<small>1/월</small>
+															<span>490,000원</span>
 														</div>
 													</div>
 												</div>
@@ -123,8 +123,8 @@ if (!defined('_EYOOM_')) exit;
                                             <div class="tit">
                                                 <span>듀오링고 DET 입문반 수강료 <small>2개월</small></span>
 												<div class="costbox">
-													<span class="tablet">600,000원</span>
-                                                	<span class="cost">회당 25,000원</span>
+													<span class="tablet">980,000원</span>
+                                                	<span class="cost">회당 40,833원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -153,10 +153,10 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 													</ul>
 													<div class="side">
-														<p class="price">600,000원</p>
+														<p class="price">980,000원</p>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>25,000원</span>
+															<small>1/월</small>
+															<span>490,000원</span>
 														</div>
 													</div>
 												</div>
@@ -164,11 +164,11 @@ if (!defined('_EYOOM_')) exit;
                                         </li>
                                     </ul>
                                     <div class="guide ver2">
-                                        <span>수업비 관련 주의사항</span>
+                                        <span>CLASS 비용 관련 안내사항</span>
                                         <ul>
-                                            <li>* 몽선생 유학 수속생의 경우에만 분납 결재가 가능합니다. 그 외 수강생은 일시납으로 가능합니다</li>
-                                            <li>* 수강료에는 교재가 포함되어 있지 않습니다. 몽선생 자체 제작 교재 구매가 별도로 필요합니다</li>
-                                            <li>* 수업비 납부 후 환불은 (수업시작 전 100%), 첫 수업일 기준 4주이내 (50%), 이후 불가 입니다.</li>
+                                            <li>* 몽선생 유학수속을 이용한 고객은 분납 결재가 가능합니다.</li>
+                                            <li>* 클래스 비용에는 교재가 포함되어 있지 않으며 별도 납부해 주셔야 합니다.</li>
+                                            <li>* 클래스 환불 조건은 (하루 전 100%), 클래스 시작 후  4주 이내 (50%), 그 이 후 불가 입니다.</li>
                                         </ul>
                                     </div>
 
@@ -198,8 +198,8 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">실전반 490,000원</span>
-                                        <span class="span-text-15a">입문반 600,000원</span>
+                                        <span class="span-text-15a">실전반 980,000원</span>
+                                        <span class="span-text-15a">입문반 980,000원</span>
                                         <!-- <span class="span-text-15a">듀오링고 DET 실전반 수강료 <small>(2개월)</small> - 490,000 원</span>
                                         <span class="span-text-15a" style="margin-top:.25em;">듀오링고 DET 입문반 수강료 <small>(2개월)</small> - 600,000 원</span> -->
                                     </div>
@@ -207,7 +207,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">몽선생 듀오링고 수업은 DET 전문 원어민 선생님이 문제를 함께 풀이하며 2개월안에 빠르게 목표 점수를 도달할 수 있도록 구성되어 있습니다. 목표 점수에 빠르게 도달할 수 있도록 기출문제 교재를 통해 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
+                                        <span class="interview">몽선생 듀오링고 CLASS는 DET 전문 원어민 선생님이 문제를 함께 풀이하며 2개월안에 빠르게 목표 점수를 도달할 수 있도록 구성되어 있습니다. <br>목표 점수에 빠르게 도달할 수 있도록 기출문제 교재를 통해 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
                                     </div>
                                     <div class="button">
                                         <div class="button-160">

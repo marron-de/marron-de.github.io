@@ -44,7 +44,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </div>
                         <span
-                            class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong">사립대 졸업자 및 교직원 출신의 전문적인 상담</span >
+                            class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong">사립대 졸업자 출신의 전문적인 상담</span >
                     </div>
                     <!-- <div class="frame-1d">
                         <div class="tags-1e">
@@ -84,7 +84,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">상담방식</p>
 												<p class="desc">
 													<span class="txt">
-														서울강남 (방문) 혹은 비대면 온라인
+														서울강남, 홍대입구(방문) 혹은 비대면 온라인
 													</span>
 												</p>
 											</div>
@@ -127,7 +127,7 @@ if (!defined('_EYOOM_')) exit;
 										<div class="box_list">
 											<div class="item">
 												<p class="desc">
-													<span class="txt">SIM, PSB, Kaplan, JCU, Raffles, MDIS 등</span>
+													<span class="txt">SIM, PSB, KAPLAN, JCU, Raffles, MDIS 등</span>
 												</p>
 											</div>
 										</div>
@@ -276,7 +276,7 @@ if (!defined('_EYOOM_')) exit;
                                             </li>
                                             <li>
                                                 <span>주요 상담분야</span>
-                                                <p>SIM, JCU, PSB, Kaplan 등 주요 사립대 입학상담</p>
+                                                <p>SIM, JCU, PSB, KAPLAN 등 주요 사립대 입학상담</p>
                                             </li>
                                         </ul>
                                     </div>

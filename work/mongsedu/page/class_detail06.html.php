@@ -65,8 +65,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06" class="show">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06" class="show">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06_03">자주 묻는 질문</a></li>
                             </ul>
@@ -92,16 +92,16 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-25  class_sec2">
                                     <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="frame-title">몽선생 1:1 영어회화(유학영어) 수업이 특별한 4가지</span>
+                                            <span class="frame-title">1:1 영어 기초반 CLASS 가 특별한 4가지 이유</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
                                                 <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit17.png" alt="">
                                                 <span>효과적인 영어학습</span>
                                                 <p>
-                                                    검증된 원어민 강사와<br class="pc">
-                                                    1:1 맞춤 수업으로<br class="pc">
-                                                    1개월에 완성하는 영어기초!
+                                                    검증된 원어민 강사와<br>
+                                                   	1개월(주 3회)에 <br>
+                                                    완성하는 영어 기초반
                                                 </p>
                                             </div>
                                             <ul class="bnf_list">

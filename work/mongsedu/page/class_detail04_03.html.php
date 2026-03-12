@@ -71,8 +71,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_03" class="show">자주 묻는 질문</a></li>
                             </ul>
@@ -89,15 +89,15 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="faq-box">
                                             <ul class="faq_list">
                                                 <li>
-                                                    <div class="question">수업은 개인 수업인가요?</div>
-                                                    <div class="answer">1:1 개별 맞춤 수업으로 진행되며, 온라인으로 진행됩니다.</div>
+                                                    <div class="question">CLASS는 개별 1:1로 진행되나요?</div>
+                                                    <div class="answer">1:1 개별 맞춤 CLASS로 진행되며, 온라인으로 진행됩니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">수업 스케줄은 자유롭게 선택할 수 있나요?</div>
-                                                    <div class="answer">맞춤형 수업으로 학생 시간에 맞추어 자유롭게 구성이 가능합니다.</div>
+                                                    <div class="question">CLASS 스케줄은 자유롭게 선택할 수 있나요?</div>
+                                                    <div class="answer">맞춤형 CLASS로 학생 시간에 맞추어 자유롭게 구성이 가능합니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">다른 수업과 어떤 차이점이 있나요?</div>
+                                                    <div class="question">다른 CLASS와 어떤 차이점이 있나요?</div>
                                                     <div class="answer">지원하는 국제학교의 입학 테스트 문제 유형에 따라 테스트를 미리 해보고, 대비할 수 있습니다.</div>
                                                 </li>
                                                 <li>
@@ -105,12 +105,12 @@ if (!defined('_EYOOM_')) exit;
                                                     <div class="answer">지원하는 국제학교의 입학 테스트 문제 유형과 학생의 실력과 보강한 부분을 고려하여 맞춤형으로 구성이 됩니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">수업 연기는 가능한가요?</div>
+                                                    <div class="question">CLASS 연기는 가능한가요?</div>
                                                     <div class="answer">1강으로 제공되는 입학 테스트는 연기가 불가하며. 6강 제공되는 대비반의 경우 3시간 전까지 공지시 1회 연기가 가능합니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">추가 수업도 가능한가요?</div>
-                                                    <div class="answer">네. 추가 수업이 가능하며, 입학 테스트의 다른 문제를 제공하여 진행됩니다.</div>
+                                                    <div class="question">추가 CLASS도 가능한가요?</div>
+                                                    <div class="answer">네. 추가 CLASS가 가능하며, 입학 테스트의 다른 문제를 제공하여 진행됩니다.</div>
                                                 </li>
                                                 <li>
                                                     <div class="question">환불 규정이 어떻게 되나요?</div>
@@ -150,7 +150,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">국제학교 입학 시 보게 되는 CAT4, MAP테스트 그리고 인터뷰 준비까지 실제 시험 유형에 맞춘 모의 테스트를 통해 국제학교 입학 준비를 완벽하게 할 수 있습니다. 초/중/고 학년별 그리고 희망하는 학교에 맞추어 1:1로 지도하여 성공적인 입학을 도와드립니다.</span >
+                                        <span class="interview">국제학교 입학 시 보게 되는 CAT4, MAP테스트 그리고 인터뷰 준비까지 실제 시험 유형에 맞춘 모의 테스트를 통해 국제학교 입학 준비를 완벽하게 할 수 있습니다. <br> 초/중/고 학년별 그리고 희망하는 학교에 맞추어 1:1로 지도하여 성공적인 입학을 도와드립니다.</span >
                                     </div>
                                     <div class="button">
                                         <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">

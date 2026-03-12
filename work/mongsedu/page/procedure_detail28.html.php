@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">송도,서강 글로벌캠퍼스 수속 서비스 안내</span>
+                    <span class="dapsa">송도 글로벌캠퍼스 수속 서비스</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">송도,서강 글로벌캠퍼스 수속 서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">송도 글로벌캠퍼스 수속 서비스</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -47,13 +47,14 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-1d">
                         <!-- <div class="tags-1e">
                             <span class="best">BEST</span>
-                        </div> -->
+                        </div>
                         <div class="keulraeseu">
                             <span class="yeong-eo">영어공인점수</span>
                         </div>
                         <div class="keulraeseu">
                             <span class="yeong-eo">입학대행</span>
                         </div>
+						 -->
                     </div>
                 </div>
                 <div class="section-c">
@@ -73,7 +74,9 @@ if (!defined('_EYOOM_')) exit;
 									<div class="frame-27">
 										<span class="field-trip-intro">서비스안내</span>
 									</div>
-									<span class="field-trip-service">인천 송도 글로벌캠퍼스에 설립된 해외대학교 입학과정을 수월하고 확실하게 준비할 수 있는 수속 서비스로 영어 공인점수 준비부터 입학원서 작성, 전공 에세이 및 자기소개서까지 1:1로 지도하여 합격 가능성을 높이는 실질적인 입학 서비스를 제공합니다.</span >
+									<span class="field-trip-service">
+										한국의 글로벌 캠퍼스 수속 서비스는 송도, 서강에 있는 미국 대학 및 편입학 과정을 수월하고 확실하게 준비할 수 있는 과정으로 서영어공인점수, 입학원서 및 에세이 작성까지 맡길 수 있습니다
+									</span >
 								</div>
 								<div class="frame-section ver2">
 									<div class="frame-titbox">
@@ -95,7 +98,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														온라인 ZOOM 실시간 소통 / 1:1 맞춤관리 원칙
+														온라인 ZOOM 실시간 소통 
 													</span>
 												</p>
 											</div>
@@ -423,7 +426,7 @@ if (!defined('_EYOOM_')) exit;
                                     <div class="frame-159">
                                         <span class="span-text-15a">700,000원</span>
                                         <div class="frame-15b">
-                                            <span class="time-15c">(추가비용 없음)</span>
+                                            <span class="time-15c">* 추가비용 없음</span>
                                         </div>
                                     </div>
 									<p class="desc">

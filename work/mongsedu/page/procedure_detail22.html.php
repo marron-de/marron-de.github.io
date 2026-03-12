@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">싱가포르 예술대 수속서비스 안내</span>
+                    <span class="dapsa">싱가포르 예술대 수속/컨설팅</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 예술대 수속서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 예술대 수속/컨설팅</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -73,7 +73,9 @@ if (!defined('_EYOOM_')) exit;
 									<div class="frame-27">
 										<span class="field-trip-intro">서비스안내</span>
 									</div>
-									<span class="field-trip-service">예술대 무료수속 서비스는 어떠한 비용을 지불하지 않고, 보다 쉽고 편리하게 입학준비가 가능합니다. 담당 실장님이 배정되어 1:1관리되고, 서류준비/원서접수 그 외 학교 행정을 상세히 관리받을 수 있습니다.</span >
+									<span class="field-trip-service">
+										예술대 컨설팅은 포트폴리오 작품 구성부터, 에세이, 인터뷰, 영어공인점수 등 합격에 필요한 모든 관리를 맡기고 원서접수와 학교 행정까지 원스탑으로 관리되는 서비스 입니다.
+									</span >
 								</div>
 								<div class="frame-section ver2 mb">
 									<div class="frame-titbox">
@@ -95,7 +97,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														수수료 0원! 추가 비용없이 수속접수 대행
+														포트폴리오, 에세이, 인터뷰 통합관리
 													</span>
 												</p>
 											</div>
@@ -105,7 +107,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														원서접수, 서류관리 및 학교 행정 일괄
+														합격샘플 공개 및 1:1 면담 제공
 													</span>
 												</p>
 											</div>
@@ -115,7 +117,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														포트폴리오 및 자소서 기본 가이드
+														원서접수, 비자처리, 숙소안내 등 행정지원
 													</span>
 												</p>
 											</div>
@@ -125,12 +127,13 @@ if (!defined('_EYOOM_')) exit;
 								<div class="frame-section ver3">
 									<div class="frame-titbox">
 										<p class="frame-title">
-											<span class="color">국내 1호, 사립대 교직원 출신의</span> <br class="tablet">
-											경험을 통한 수속관리
+											몽선생은 <span class="color">한국 유일한 공식 사무소</span> 입니다.
 										</p>
 									</div>
 									<div class="pointbox">
-										<p class="txt">공식 인증된 라셀 종합예술대학의 한국 공식 사무소 관리!</p>
+										<p class="txt">
+											국내에서 유일하게 Lasalle 종합예술대의 공식 한국사무소로 지정되어 있으며, 한국사무소를 통한 학생들은 “서울 인터뷰“및 각종 입학혜택을 적용 받을 수 있습니다.
+										</p>
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
@@ -144,7 +147,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_Lasalle.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">라살르 예술대</p>
+												<p class="tit">라셀 예술대</p>
 												<p class="desc">Lasalle College of the Arts</p>
 											</div>
 										</div>
@@ -153,11 +156,11 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_NAFA.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">NAFA</p>
+												<p class="tit">나파 예술대</p>
 												<p class="desc">Nanyang Academy of Fine Arts</p>
 											</div>
 										</div>
-										<div class="item">
+										<!-- <div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_LaSalle2.png" alt="" class="img">
 											</div>
@@ -165,13 +168,13 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">라셀 컬리지</p>
 												<p class="desc">LaSalle College</p>
 											</div>
-										</div>
+										</div> -->
 										<div class="item">
 											<div class="imgbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_UAS.png" alt="" class="img">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_UAS2.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">UAS</p>
+												<p class="tit">싱가포르 종합예술대</p>
 												<p class="desc">UAS University of Arts Singapore</p>
 											</div>
 										</div>
@@ -408,9 +411,9 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                     <div class="frame-14f">
                         <div class="tab_wrap frame-150">
-                            <div class="tab_navbox frame-151">
-                                <div class="tab_nav on frame-152">입학컨설팅</div>
-                                <div class="tab_nav frame-152">무료수속</div>
+                            <div class="tab_navbox notab frame-151">
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22" class="tab_nav on frame-152">입학컨설팅</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22_1" class="tab_nav frame-152">무료수속</a>
                             </div>
                             <div class="tab_contbox frame-157">
 								<div class="tab_cont on">
@@ -438,7 +441,7 @@ if (!defined('_EYOOM_')) exit;
 										</div>
 									</div>
 								</div>
-								<div class="tab_cont">
+								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22_1"  class="tab_cont">
 									<div class="frame-158">
 										<div class="frame-159">
 											<span class="span-text-15a">0원</span>
@@ -462,7 +465,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
                             </div>
                         </div>
                     </div>

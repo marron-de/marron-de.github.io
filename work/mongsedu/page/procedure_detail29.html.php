@@ -47,13 +47,14 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-1d">
                         <!-- <div class="tags-1e">
                             <span class="best">BEST</span>
-                        </div> -->
+                        </div>
                         <div class="keulraeseu">
                             <span class="yeong-eo">무료수속</span>
                         </div>
                         <div class="keulraeseu">
                             <span class="yeong-eo">편입</span>
                         </div>
+						 -->
                     </div>
                 </div>
                 <div class="section-c">

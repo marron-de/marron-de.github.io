@@ -43,7 +43,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 예술대 통합상담</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(2)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook02.jpg" alt="서울 대학 상담">
                         </div>
@@ -52,7 +52,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 전공별 상담</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(3)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook03.jpg" alt="도쿄 대학 상담">
                         </div>
@@ -61,7 +61,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 국제학생 상담</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(4)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook04.jpg" alt="런던 대학 상담">
                         </div>
@@ -70,7 +70,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 직업 상담</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(5)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook05.jpg" alt="뉴욕 대학 상담">
                         </div>
@@ -79,7 +79,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 대인관계 상담</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="noebook_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook06.jpg" alt="시드니 대학 상담">
                         </div>
@@ -190,7 +190,7 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="ebook_list">
                 <ul>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook07.jpg" alt="유학서비스 책자">
                         </div>
@@ -199,7 +199,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>수속, CLASS 등 비용 안내</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook08.jpg" alt="말레이시아 국제학교 책자">
                         </div>
@@ -208,7 +208,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>40여개 학교정보, MAP</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook09.jpg" alt="싱가포르 대학 책자">
                         </div>
@@ -217,7 +217,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 예술대 통합본</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook10.jpg" alt="말레이시아 대학 책자">
                         </div>
@@ -226,7 +226,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>사립대, 국립대 통합본</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook11.jpg" alt="미국 대학 책자">
                         </div>
@@ -235,7 +235,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>주요 TOP100대학 </p>
 						</div>
                     </li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook12.jpg" alt="영국 대학 책자">
                         </div>
@@ -258,7 +258,7 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="ebook_list2">
 				 <ul>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd01.jpg" alt="싱가포르 사립대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -281,7 +281,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd02.jpg" alt="싱가포르 국립대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -304,7 +304,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd03.jpg" alt="싱가포르 예술대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -327,7 +327,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd04.jpg" alt="말레이시아 대학 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -350,7 +350,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd05.jpg" alt="말레이시아 국제학교 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -373,7 +373,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(1)">
+                    <li onclick="ebook_modal(0)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd06.jpg" alt="미국대학 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -452,7 +452,396 @@ if (!defined('_EYOOM_')) exit;
 </div>
 
 
-<div id="ebook_modal1" class="cm_modal detail_modal ebook_modal">	
+<div id="ebook_modal1" class="cm_modal detail_modal ebook_modal ver2">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="titbox">
+				<p class="title">
+					<span class="tit">듀오링고 DET 실전반!</span>
+					<span class="small">원어민 소규모 수업구성</span>
+				</p>
+			</div>
+			<div class="tblbox">
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업방식</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">ZOOM <br class="tablet">온라인 수업</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">커리큘럼 과정</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">2개월</p>
+						<p class="small">(16강)</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">총 강습시간</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">16시간</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업 정원</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">소규모 그룹</p>
+						<p class="small">(최대 6명)</p>
+					</div>
+				</div>
+			</div>
+			<div class="classbox">
+				<p class="title">수업 목표</p>
+				<div class="descbox">
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							원어민 수업 소규모 수업을 통해 집중력 높은 수업 제공
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							최신 기출 문제 풀이 중심 수업으로 시험에 대한 이해력 향상
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							기초부터 고급까지 학생 레벨에 맞춘 1:1 수업 추가 학습 가능
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="note_box">
+				<p class="note_txt">*원어민 선생님과 듀오링고 기출 문제를 집중적으로 풀고 단기간에 효과를 볼 수 있어요.</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ebook_modal2" class="cm_modal detail_modal ebook_modal ver2">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="titbox">
+				<p class="title">
+					<span class="tit">해외대학 수업 대비반</span>
+					<span class="small">2개월 완성! 미리 학점대비</span>
+				</p>
+			</div>
+			<div class="tblbox">
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업방식</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">ZOOM <br class="tablet">온라인 수업</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">커리큘럼 과정</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">2개월</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">총 강습횟수</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">24강</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업 정원</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">소규모 그룹</p>
+						<p class="small">(최대 6명)</p>
+					</div>
+				</div>
+			</div>
+			<div class="classbox">
+				<p class="title">수업 목표</p>
+				<div class="descbox">
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							해외대학 1학년 5과목 미리 수강 (예습)
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							영어 토론, 에세이, 발표 능력을 체계적으로 훈련
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							상황별 영어 및 롤플레이를 통해 실제 대학 생활 적응과 커뮤니케이션 역량 강화
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="note_box">
+				<p class="note_txt">*영어가 완성되지 않은 예비 유학생을 위한, 실전 대학 수업 대비반 수업 입니다.</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ebook_modal3" class="cm_modal detail_modal ebook_modal ver2">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="titbox">
+				<p class="title">
+					<span class="tit">예술대 포틀폴리오 합격반!</span>
+					<span class="small">95% 이상의 합격률 달성</span>
+				</p>
+			</div>
+			<div class="tblbox">
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업방식</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">ZOOM <br class="tablet">온라인 수업</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">커리큘럼 과정</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">월 8회</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">강습시간</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">60분</p>
+						<p class="small">(1회당)</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업 정원</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">1:1 수업</p>
+					</div>
+				</div>
+			</div>
+			<div class="classbox">
+				<p class="title">수업 목표</p>
+				<div class="descbox">
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							합격률 95% 이상의 완벽한 포트폴리오 학습 제공
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							현지 졸업생 선생님들의 완벽한 노하우와 실습 능력 제공
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							최신 입학 조건 반영하여 전공별 핵심적인 작품 구성 
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="note_box">
+				<p class="note_txt">*그림과 전공 작품 모든 것을 빠르고 효과적으로 준비할 수 있는 프로그램 입니다.</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ebook_modal4" class="cm_modal detail_modal ebook_modal ver2">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="titbox">
+				<p class="title">
+					<span class="tit">영어 기초반 (1:1과외)</span>					<span class="small">기초부터 차근차근</span>
+				</p>
+			</div>
+			<div class="tblbox">
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업방식</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">ZOOM <br class="tablet">온라인 수업</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">커리큘럼 과정</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">1개월</p>
+						<p class="small">(12강)</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">총 강습시간</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">12시간</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업 정원</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">1:1 맞춤 수업</p>
+					</div>
+				</div>
+			</div>
+			<div class="classbox">
+				<p class="title">수업 목표</p>
+				<div class="descbox">
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							원어민 강사와의 1:1 수업을 통해 공인인증 시험과 유사한 환경을 경험하며, 자연스럽게 실전 감각과 문제 해결 능력 UP
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							시험에 자주 등장하는 문법 포인트를 중심으로 핵심 개념을 짚고, 실제 시험에 대비한 문장 구성 및 오류 수정 훈련을 반복훈련 
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="note_box">
+				<p class="note_txt">*레벨테스트를 통해, 영어 레벨을 확인하고 수강 기간을 맞춤으로 설정할 수 있어요.</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ebook_modal5" class="cm_modal detail_modal ebook_modal ver2">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="titbox">
+				<p class="title">
+					<span class="tit">국제학교 입학시험 대비반</span>
+					<span class="small">체험반과 정규반 등록 가능</span>
+				</p>
+			</div>
+			<div class="tblbox">
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업방식</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">ZOOM <br class="tablet">온라인 수업</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">커리큘럼 과정</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">1개월</p>
+						<p class="small">(12강)</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">총 강습시간</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">12시간</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="top">
+						<p class="txt">수업 정원</p>
+					</div>
+					<div class="bottom">
+						<p class="txt">1:1 맞춤 수업</p>
+					</div>
+				</div>
+			</div>
+			<div class="classbox">
+				<p class="title">수업 목표</p>
+				<div class="descbox">
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							원어민 강사와의 1:1 수업을 통해 공인인증 시험과 유사한 환경을 경험하며, 자연스럽게 실전 감각과 문제 해결 능력 UP
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							시험에 자주 등장하는 문법 포인트를 중심으로 핵심 개념을 짚고, 실제 시험에 대비한 문장 구성 및 오류 수정 훈련을 반복훈련
+						</span>
+					</p>
+					<p class="desc">
+						<span class="icon"></span>
+						<span class="txt">
+							개인 스케줄과 시간관리가 될 수 있는 학습관리자 배정
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="note_box">
+				<p class="note_txt">*체험 클래스 1회를 통해 수업을 미리 확인하고 등록할 수 있어요.</p>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ebook_modal0" class="cm_modal detail_modal ebook_modal">	
 	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
 		<div class="cm_modal_box">
@@ -489,6 +878,22 @@ if (!defined('_EYOOM_')) exit;
 				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div id="noebook_modal" class="cm_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/modal_check2.svg" alt="" class="modal_icon">
+			<div class="modal_txtbox">
+				<p class="modal_tit">콘텐츠 업데이트 예정입니다</p>
+				<p class="modal_desc">
+					더 나은 서비스를 위해 <br>
+					콘텐츠를 준비하고 있습니다. <br>
+                </p>
+			</div>	
+		</div>	
 	</div>
 </div>
 

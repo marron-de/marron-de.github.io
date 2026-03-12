@@ -109,7 +109,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</li>
 					<li class="swiper-slide">
-						<a href=""><!--신규페이지작업-->
+						<a href="<?php echo G5_URL ?>/page/?pid=mentor">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/mlink02.png" alt="상담사 소개">
 							<span>상담사 소개</span>
 						</a>
@@ -476,7 +476,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="tit">싱가폴 사립대 상담</span>
-                                        <p>SIM, PSB, KAPAN, JCU 등</p>
+                                        <p>SIM, PSB, KAPLAN, JCU 등</p>
                                     </a>
                                 </div>
                             </li>
@@ -678,7 +678,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="tit">싱가폴 사립대 상담</span>
-                                        <p>SIM, PSB, KAPAN, JCU 등</p>
+                                        <p>SIM, PSB, KAPLAN, JCU 등</p>
                                     </a>
                                 </div>
                             </li>
@@ -1482,7 +1482,9 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="ms title_area green center" id="row-2">
                 <p class="desc">수 많은 합격생과 후기들이</p>
-                <p class="tit"><span class="color1">몽선생</span>을 증명합니다</p>
+				<div class="title">
+                	<p class="tit"><span class="color1">몽선생</span>을 증명합니다</p>
+				</div>
             </div>		
           	<div class="award_wrap marquee" data-duration="3">
 				<div class="award_group marquee_group">

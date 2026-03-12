@@ -25,58 +25,58 @@ window.addEventListener('resize', updateLayoutMargin);
 document.addEventListener('DOMContentLoaded', updateLayoutMargin);
 
 
-// accordion function
+// accordion
 (function ($) {
-	const lnbUI = {
-		click: function (target, speed) {
-			let _self = this,
-				$target = $(target);
-			_self.speed = speed || 400;
+    const lnbUI = {
+        click: function (target, speed) {
+            let _self = this,
+                $target = $(target);
+            _self.speed = speed || 400;
 
-			$target.each(function () {
-				if (findChildren($(this))) {
-					return;
-				}
-				$(this).addClass('noDepth');
-			});
+            $target.each(function () {
+                if (findChildren($(this))) {
+                    return;
+                }
+                $(this).addClass('noDepth');
+            });
 
-			function findChildren(obj) {
-				return obj.find('> ul').length > 0;
-			}
+            function findChildren(obj) {
+                return obj.find('> ul').length > 0;
+            }
 
-			$target.on('click', '.acc_tit', function (e) {
-				e.stopPropagation();
-				let $this = $(this),
-					$depthTarget = $this.next(),
-					$siblings = $this.parent().siblings();
+            $target.on('click', '.acc_tit', function (e) {
+                e.stopPropagation();
+                const $this = $(this);
 
-				$this.parent('li').find('ul li').removeClass('show');
-				// $siblings.removeClass('show');
-				// $siblings.find('ul').slideUp(400);
+                if ($this.closest('.arrow_ver').length) {
+                    if (!$(e.target).closest('.arrow').length) return;
+                }
 
-				if ($depthTarget.css('display') == 'none') {
-					_self.activeOn($this);
-					$depthTarget.slideDown(_self.speed);
-				} else {
-					$depthTarget.slideUp(_self.speed);
-					_self.activeOff($this);
-				}
+                let $depthTarget = $this.next(),
+                    $siblings = $this.parent().siblings();
 
-			})
+                $this.parent('li').find('ul li').removeClass('show');
 
-		},
-		activeOff: function ($target) {
-			$target.parent().removeClass('show');
-		},
-		activeOn: function ($target) {
-			$target.parent().addClass('show');
-		},
+                if ($depthTarget.css('display') == 'none') {
+                    _self.activeOn($this);
+                    $depthTarget.slideDown(_self.speed);
+                } else {
+                    $depthTarget.slideUp(_self.speed);
+                    _self.activeOff($this);
+                }
+            });
+        },
+        activeOff: function ($target) {
+            $target.parent().removeClass('show');
+        },
+        activeOn: function ($target) {
+            $target.parent().addClass('show');
+        },
+    };
 
-	};
-	// navbox
-	$(function () {
-		lnbUI.click('.accordion li', 400)
-	});
+    $(function () {
+        lnbUI.click('.accordion li', 400);
+    });
 }(jQuery));
 
 
@@ -324,8 +324,6 @@ $(document).on("click", ".header .h_inner .h_nav > li > .link.point", function(e
   }
 });
 
-
-
 // header navbox button 
 $(document).ready(function () {
 	$(".header .menu_open").on("click", function () {
@@ -380,9 +378,31 @@ function setActiveMenu() {
 		$('.header .h_inner .h_nav:not(.h_side) > li').eq(4).addClass('active');
 	}
 }
-
 $(document).ready(setActiveMenu);
 window.addEventListener('pageshow', setActiveMenu);
+
+
+// header link active
+$(document).ready(function () {
+    const currentPid = new URLSearchParams(window.location.search).get('pid');
+    const currentPath = window.location.pathname;
+
+    $('.h_nav .link, .h_nav .h_nav_ul .link').each(function () {
+        const href = $(this).attr('href');
+        if (!href) return;
+
+        const url = new URL(href, window.location.origin);
+        const linkPid = url.searchParams.get('pid');
+        const linkPath = url.pathname;
+
+        if (linkPid && currentPid && linkPid === currentPid) {
+            $(this).addClass('on');
+            $(this).closest('.menu_li').children('.link').addClass('on');
+        } else if (!linkPid && !currentPid && linkPath === currentPath) {
+            $(this).addClass('on');
+        }
+    });
+});
 
 
 /* 메인 */
@@ -399,6 +419,7 @@ const sampSwiper = new Swiper(".main-contents .sampSwiper", {
 		perSlideRotate: 0, 
 		perSlideOffset: 10,
 		rotate: false,
+        slideShadows: false,
 	},
 	spaceBetween: 20,
 	pagination: {
@@ -472,25 +493,32 @@ $(document).ready(function () {
 
 // 선생님 상세 팝업
 const mentorpop_swiper = new Swiper('.mentorpop_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	spaceBetween: 40,
-	autoHeight: false,
-	navigation: {
-		nextEl: ".mentor_modal .next_btn",
-		prevEl: ".mentor_modal .prev_btn",
-	},
-	breakpoints: {
-		1080: {
-		autoHeight: true,
-		},
-	},
-})
+    observer: true,
+    observeParents: true,
+    speed: 500,
+    spaceBetween: 40,
+    autoHeight: true,
+    navigation: {
+        nextEl: ".mentor_modal .next_btn",
+        prevEl: ".mentor_modal .prev_btn",
+    },
+    on: {
+        slideChangeTransitionEnd: function () {
+            this.updateAutoHeight();
+        },
+    },
+});
 function mentor_modal(i) {
-	$("body").addClass('hidden');
-	$(".mentor_modal").addClass('show');
-	mentorpop_swiper.slideTo(i-1, 0);
+    $("body").addClass('hidden');
+    $(".mentor_modal").addClass('show');
+	
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            mentorpop_swiper.slideTo(i - 1, 0);
+            mentorpop_swiper.update();
+            mentorpop_swiper.updateAutoHeight(0);
+        });
+    });
 }
 $('.mentor_modal .next_btn, .mentor_modal .prev_btn').on('mouseup', function(e){
 	e.stopPropagation();
@@ -732,12 +760,16 @@ function univ_modal(i) {
 }
 
 
-
 /* 전자북/책자 */
 // 전자북/책자 상세 모달
 function ebook_modal(i) {
 	$("body").addClass('hidden');
 	$("#ebook_modal"+i).addClass('show');
+}
+
+function noebook_modal() {
+	$("body").addClass('hidden');
+	$("#noebook_modal").addClass('show');
 }
 
 // 전자북 스와이퍼
@@ -777,53 +809,118 @@ const mentor_swiper2 = new Swiper('.mentor_swiper.ver2', {
 })
 
 // 상담안내
-$('.prdservice_swiper').each(function () {
-  const $swiper = $(this);
-  const isVisible = $swiper.closest('.tab_cont').hasClass('on');
+function cloneSlides(selector, multiply = 3) {
+    const containers = document.querySelectorAll(selector);
+    if (!containers.length) return;
 
-  new Swiper(this, {
-    observer: true,
-    observeParents: true,
-    centeredSlides: true,
-    loop: isVisible, // 처음에 보이는 것만 loop
-    speed: 500,
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    grabCursor: true,
-    navigation: {
-      nextEl: $swiper.find('.next_btn')[0],
-      prevEl: $swiper.find('.prev_btn')[0],
-    },
-    breakpoints: {
-      1080: {
-        spaceBetween: 24,
-      },
-    }
-  });
+    containers.forEach(container => {
+        const wrapper = container.querySelector('.swiper-wrapper');
+        const slides = Array.from(wrapper.children)
+            .filter(slide => !slide.hasAttribute('data-clone'));
 
-});
-$('.page-procedureban .prd_service .btn_area .btn').on('click', function () {
-  const index = $(this).parent().index();
-  const $wrap = $(this).closest('.tab_wrap');
-  const $contents = $wrap.find('.tab_cont');
-  const $activeCont = $contents.eq(index);
+        const originalCount = slides.length;
+        const cloneCount = originalCount * (multiply - 1);
 
-  setTimeout(function () {
-    $activeCont.find('.prdservice_swiper').each(function () {
-
-      const swiper = this.swiper;
-      if (!swiper) return;
-      if (!swiper.params.loop) {
-        swiper.params.loop = true;
-        swiper.loopCreate();
-      }
-      swiper.update();
-      swiper.slideToLoop(0, 0); 
+        for (let i = 0; i < cloneCount; i++) {
+            const clone = slides[i % originalCount].cloneNode(true);
+            clone.setAttribute('data-clone', 'true');
+            wrapper.appendChild(clone);
+        }
     });
-  }, 50);
+}
+cloneSlides('.prdservice_swiper', 3);
+
+$('.prdservice_swiper').each(function () {
+    const swiper = $(this);
+    const isVisible = swiper.closest('.tab_cont').hasClass('on');
+
+    new Swiper(this, {
+        observer: true,
+        observeParents: true,
+        centeredSlides: true,
+        loop: isVisible,
+        speed: 500,
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        grabCursor: true,
+        navigation: {
+            nextEl: swiper.find('.next_btn')[0],
+            prevEl: swiper.find('.prev_btn')[0],
+        },
+        breakpoints: {
+            1080: {
+                spaceBetween: 24,
+            },
+        }
+    });
 });
 
+function setTitleWidth(scope) {
+    const target = scope
+        ? $(scope).find(".prdservice_swiper .item .infoitem .descbox")
+        : $(".prdservice_swiper .item .infoitem .descbox");
 
+    target.each(function () {
+        const box = $(this);
+        const titElements = box.find(".tit");
+        if (!titElements.length) return;
+
+        // 숨겨진 부모 임시 노출
+        const hiddenParent = box.closest('.tab_cont:not(.on)');
+        if (hiddenParent.length) {
+            hiddenParent.css({ display: 'block', visibility: 'hidden' });
+        }
+
+        let maxWidth = 0;
+        titElements.each(function () {
+            const width = this.getBoundingClientRect().width;
+            if (width > maxWidth) maxWidth = width;
+        });
+
+        // 원상복구
+        if (hiddenParent.length) {
+            hiddenParent.css({ display: '', visibility: '' });
+        }
+
+        const rootSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        box[0].style.setProperty("--title-width", maxWidth / rootSize + "rem");
+    });
+}
+
+$(window).on("load", function () {
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            setTitleWidth();
+        });
+    });
+});
+
+$('.page-procedureban .prd_service .btn_area .btn').on('click', function () {
+    const index = $(this).parent().index();
+    const wrap = $(this).closest('.tab_wrap');
+    const contents = wrap.find('.tab_cont');
+    const activeCont = contents.eq(index);
+
+    setTimeout(function () {
+        activeCont.find('.prdservice_swiper').each(function () {
+            const swiper = this.swiper;
+            if (!swiper) return;
+            if (!swiper.params.loop) {
+                swiper.params.loop = true;
+                swiper.loopCreate();
+            }
+            swiper.update();
+            swiper.slideToLoop(0, 0);
+        });
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                setTitleWidth(activeCont[0]);
+            });
+        });
+
+    }, 20);
+});
 
 // 몽쌤소개
 const company_swiper = new Swiper('.company_swiper', {
@@ -937,7 +1034,6 @@ $(document).on('click', '.univ_listwrap .more_univ', function () {
 	}
 });
 
-
 // 싱가포르 사립대 특별혜택 스와이퍼
 const singa_swiper = new Swiper('.singa_swiper', {
 	observer: true,
@@ -950,7 +1046,7 @@ const singa_swiper = new Swiper('.singa_swiper', {
 	grabCursor: true,
 	initialSlide: 0, 
 	autoplay: {
-		delay: 3000,
+		delay: 2000,
 		disableOnInteraction: false,
 	},
 	breakpoints: {
@@ -1116,6 +1212,7 @@ $(document).ready(function () {
 				.off('click', '.tab_cont')
 				.on('click', '.tab_cont', function () {
 					const $this = $(this);
+					if ($this.is('a')) return;
 					if ($this.hasClass('on')) {
 						$this.removeClass('on');
 					} else {
@@ -1173,3 +1270,11 @@ $(document).ready(function () {
 });
 
 
+// 토스트 팝업
+function showToast() {
+    const toast = $('.toast_popup');
+    toast.addClass('show');
+    setTimeout(() => {
+        toast.removeClass('show');
+    }, 2500);
+}

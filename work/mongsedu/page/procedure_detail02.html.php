@@ -24,7 +24,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">명문국제학교 서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">명문국제학교 서비스</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -67,7 +67,7 @@ if (!defined('_EYOOM_')) exit;
                                 <li><a href="#sec01" class="show">서비스 소개</a></li>
                                 <li><a href="#sec02">학교 리스트</a></li>
                                 <li><a href="#sec03">비용 안내</a></li>
-                                <li><a href="#sec04">동행 선생님</a></li>
+                                <li><a href="#sec04">담당자 안내</a></li>
                             </ul>
                         </div>
                     </div>
@@ -425,35 +425,57 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="frame-title">서비스 비용안내</span>
                                     </div>
 									<ul class="cost_list">
-                                        <li>
+                                         <li>
                                             <div class="tit">
                                                 <span>
 													초기정착 패키지
 													<small>1개월</small>
 												</span>
-                                                <span class="cost">한달패키지</span>
+												<div class="mob_price">
+													<div class="sale_price">
+														<div class="price">500,000원</div>
+														<p class="sale">
+															<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+															<span class="percent">37.5%</span>
+														</p>
+													</div>
+													<div class="ori_price">
+														<p class="txt">정상가</p>
+														<p class="price">800,000원</p>
+													</div>
+												</div>
                                             </div>
                                             <div class="detail">
                                                 <span class="tit">서비스 포함 내용</span>
-												<div class="de_box ver2">
+												<div class="de_box">
 													<ul>
 														<li>
-															<p>‧ 주거지 계약</p>
-															<p><span class="check"></span></p>
+															<p>‧ 현지 생활정착 패키지 (1달)</p>
+														</li>
+														<li>
+															<p>‧ 주거지 계약 동행 2~3회</p>
+														</li>
+														<li>
+															<p>‧ 차량, 보험 및 생활문제 지원</p>
 														</li>
 														<li>
 															<p>‧ 비자 수속 관리</p>
-															<p><span class="check"></span></p>
 														</li>
 														<li>
-															<p>‧ 무상 교육특강 제공 </p>
-															<p>12강</p>
+															<p>‧ 각종 정착 관련 상담</p>
 														</li>
 													</ul>
-													<div class="side">
-														<p class="desc">정상가 800,000원</p>
+													<div class="side pc">
+														<div class="price ver3">
+															<span class="ori">정상가</span>
+															<span class="num">800,000원</span>
+														</div>
 														<div class="price ver2">
-															<span>500,000원</span>
+															<span class="sale">
+																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+																<span class="percent">37.5%</span>
+															</span>
+															<span class="num">500,000원</span>
 														</div>
 													</div>
 												</div>
@@ -465,7 +487,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-section" id="sec04">
                                     <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
-                                            <span class="frame-title">답사 동행 팀장님 소개</span>
+                                            <span class="frame-title">입학 수속 담당자 소개</span>
                                             <div class="frame-tag">
                                                 <span>HOT 인기멘토</span>
                                             </div>
@@ -484,7 +506,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
 										<div class="frame-titbox mob_show">
 											<div class="frame-titbox flex">
-												<span class="frame-title">답사 동행 팀장님 소개</span>
+												<span class="frame-title">입학 수속 담당자 소개</span>
 												<div class="frame-tag">
 													<span>HOT 인기멘토</span>
 												</div>
@@ -531,7 +553,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-14f">
                         <div class="frame-150">
                             <div class="tab_navbox notab frame-151">
-                                <div class="tab_nav on2 frame-152">초기정착 패키지</div>
+                                <div class="tab_nav on2 frame-152">유료 수속 패키지</div>
                             </div>
                             <div class="frame-157">
 								<div class="frame-158">

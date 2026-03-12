@@ -493,11 +493,11 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="txtbox">
 								<div class="top">
-									<p class="name">lya 멘토</p>
+									<p class="name">Lya 멘토</p>
 									<p class="desc">Laguna State University </p>
 								</div>
 								<div class="bottom">
-									<p class="tag">국제학교 학생 영어 티칭 전문</p>
+									<p class="tag">국제학교 학생 영어 <span class="pc">티칭</span> 전문</p>
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 										class="more">
 								</div>
@@ -508,17 +508,16 @@ if (!defined('_EYOOM_')) exit;
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t21.jpg" alt=""
 									class="img">
 								<div class="flagbox">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_biet.svg" alt="" class="flag">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
 								</div>
 							</div>
 							<div class="txtbox">
 								<div class="top">
 									<p class="name">김연수 실장</p>
-									<p class="desc">-</p>
+									<p class="desc">영유아 교육 행정경력 8년</p>
 								</div>
 								<div class="bottom">
-									<p class="tag">-</p>
+									<p class="tag">국제학교 전문 코디네이터</p>
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 										class="more">
 								</div>

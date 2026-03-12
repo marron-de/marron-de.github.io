@@ -84,7 +84,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">상담방식</p>
 												<p class="desc">
 													<span class="txt">
-														서울강남 (방문) 혹은 비대면 온라인
+														서울강남, 홍대입구(방문) 혹은 비대면 온라인
 													</span>
 												</p>
 											</div>

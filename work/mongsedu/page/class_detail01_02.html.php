@@ -63,8 +63,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_02" class="show">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_03">자주 묻는 질문</a></li>
                             </ul>
@@ -123,7 +123,7 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">듀오링고 수업 소개</span>
+                                    <span class="day-paid">듀오링고 CLASS 소개</span>
                                     <span class="day-paid-153">2개월</span>
                                 </div>
                                 <div class="group-154">
@@ -134,8 +134,8 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">실전반 490,000원</span>
-                                        <span class="span-text-15a">입문반 600,000원</span>
+                                        <span class="span-text-15a">실전반 980,000원</span>
+                                        <span class="span-text-15a">입문반 980,000원</span>
                                         <!-- <span class="span-text-15a">듀오링고 DET 실전반 수강료 <small>(2개월)</small> - 490,000 원</span>
                                         <span class="span-text-15a" style="margin-top:.25em;">듀오링고 DET 입문반 수강료 <small>(2개월)</small> - 600,000 원</span> -->
                                     </div>
@@ -143,7 +143,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">몽선생 듀오링고 수업은 DET 전문 원어민 선생님이 문제를 함께 풀이하며 2개월안에 빠르게 목표 점수를 도달할 수 있도록 구성되어 있습니다. 목표 점수에 빠르게 도달할 수 있도록 기출문제 교재를 통해 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
+                                        <span class="interview">몽선생 듀오링고 CLASS는 DET 전문 원어민 선생님이 문제를 함께 풀이하며 2개월안에 빠르게 목표 점수를 도달할 수 있도록 구성되어 있습니다. <br>목표 점수에 빠르게 도달할 수 있도록 기출문제 교재를 통해 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
                                     </div>
                                     <div class="button">
                                         <div class="button-160">

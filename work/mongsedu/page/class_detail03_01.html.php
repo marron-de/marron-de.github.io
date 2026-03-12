@@ -65,8 +65,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01" class="show">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01" class="show">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_03">자주 묻는 질문</a></li>
                             </ul>
@@ -86,7 +86,7 @@ if (!defined('_EYOOM_')) exit;
 												</span>
 												<div class="costbox">
 													<span class="tablet">850,000원</span>
-                                                	<span class="cost">회당 106,250원</span>
+                                                	<span class="cost">회당 70,833원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -117,8 +117,8 @@ if (!defined('_EYOOM_')) exit;
 													<div class="side">
 														<p class="price">850,000원</p>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>106,250원</span>
+															<small>1/월</small>
+															<span>850,000원</span>
 														</div>
 													</div>
 												</div>
@@ -126,7 +126,7 @@ if (!defined('_EYOOM_')) exit;
                                         </li>
                                     </ul>
                                     <div class="guide ver2">
-                                        <span>수업비 관련 주의사항</span>
+                                        <span>CLASS 비용 관련 안내사항</span>
                                         <ul>
                                             <li>* 수강 기간은 학생의 기초 실력에 따라 달라질 수 있으며, 기본 3개월부터 시작됩니다.</li>
                                             <li>* 수업비 납부 후 환불은 (수업시작 전 100%), 첫 수업일 기준 4주이내 (50%), 이후 불가 입니다.</li>
@@ -158,7 +158,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">850,000원</span>
+                                        <span class="span-text-15a">850,000원 (월)</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

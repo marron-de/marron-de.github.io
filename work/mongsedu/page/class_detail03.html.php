@@ -65,8 +65,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03" class="show">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03" class="show">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail03_03">자주 묻는 질문</a></li>
                             </ul>
@@ -78,7 +78,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-25 class_sec1">
                                     <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="frame-title">예술대 포트폴리오 수업소개</span>
+                                            <span class="frame-title">예술대 포트폴리오 CLASS 소개</span>
                                         </div>
                                         <span class="field-trip-service">
                                             실제 예술대 졸업한 선생님과 함께 각 전공에서 요구하는 스타일과 평가 기준에 맞춰 아이디어 기획, 작업 과정, 최종 작품 완성까지 전 과정을 단계별로 함께 진행하며, 꾸준한 피드백과 보완을 통해 합격 기준에 맞는 포트폴리오를 완성하도록 돕습니다.
@@ -97,14 +97,14 @@ if (!defined('_EYOOM_')) exit;
                                                 <span>국내 유일한 라셀 <br class="pc">한국 대표 사무소!</span>
                                                 <p>
                                                     공식 인증된 몽선생에서<br/>
-                                                    직접 지도/관리 합니다
+                                                    직접 매칭/관리 합니다
                                                 </p>
                                             </div>
                                             <ul class="bnf_list">
                                                 <li>
                                                     <span>01</span>
                                                     <p>
-                                                        <b>졸업생이 직접 가르쳐요</b><br/>
+                                                        <b>졸업생이 함께해요</b><br/>
                                                         예술대 출신 강사들이 전공 흐름에 맞게 지도합니다.
                                                     </p>
                                                 </li>
@@ -137,7 +137,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-25 class_sec3">
                                     <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="frame-title">예술대 수업 커리큘럼</span>
+                                            <span class="frame-title">포트폴리오 CLASS 커리큘럼</span>
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
@@ -184,7 +184,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="line-2a"></div>
                                 <div class="class_curri">
                                     <div class="tit_area">
-                                        <span>예술대 수업 강의주제 <small>(실전반 예시)</small></span>
+                                        <span>포트폴리오 CLASS <small>(회차별 강의주제)</small></span>
                                     </div>
                                     <div class="msection faq_area">
                                         <div class="container">
@@ -297,7 +297,7 @@ if (!defined('_EYOOM_')) exit;
                                     </div> -->
                                     <div class="text_area">
 										<div class="title">
-											<span class="color">[예술대 수업 TIP] </span>
+											<span class="color">[예술대 CLASS TIP] </span>
 											이런점이 정말 좋아요
 										</div>
                                         <div class="descbox">
@@ -331,7 +331,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">850,000원</span>
+                                        <span class="span-text-15a">850,000원 (월)</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

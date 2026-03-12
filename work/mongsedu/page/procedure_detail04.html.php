@@ -20,7 +20,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
         <div class="container target-section main">
             <div class="holding_cont">
-                <div class="frame-16">
+                <div class="frame-16 ver2">
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
@@ -42,8 +42,6 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                             </div>
                         </div>
-                        <span
-                            class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong">국제학교 입학시험 대비반</span >
                     </div>
                     <div class="frame-1d">
                         <div class="tags-1e">
@@ -65,6 +63,7 @@ if (!defined('_EYOOM_')) exit;
                         <div class="tab sticky">
                             <ul class="tab_tit">
                                 <li><a href="#sec01" class="show">서비스 소개</a></li>
+                                <li><a href="#sec02">커리큘럼</a></li>
                                 <li><a href="#sec03">비용 안내</a></li>
                                 <li><a href="#sec04">담당자 안내</a></li>
                             </ul>
@@ -76,16 +75,13 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-section ver2" id="sec01">
 									<div class="frame-27">
 										<span class="field-trip-intro">국제학교 입학시험 대비반</span>
-										<div class="tags-28">
-											<span class="best-29">교재제공</span>
-										</div>
 									</div>
 									<span class="field-trip-service">입학시험 대비반은 말레이시아와 싱가포르 국제학교 입학을 목표로 하는 학생들을 위해 각 학교에서 실제로 출제되는 유형과 예상문제를 미리 연습해 볼 수 있는 과정입니다. 자체 제작한 교재를 제공하고, 체험수업을 통해 단시간 훈련이 가능합니다.</span >
 								</div>
                                 <div class="line-2a"></div>
 								<div class="frame-section ver3">
 									<div class="frame-titbox">
-										<p class="frame-title">체험수업 서비스 안내</p>
+										<p class="frame-title">서비스 안내</p>
 									</div>
 									<div class="experbox">
 										<div class="item">
@@ -93,7 +89,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														NUS 국립대 출신 관리
+														입학시험 실전 문제 체험 연습가능
 													</span>
 												</p>
 											</div>
@@ -103,17 +99,17 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														온라인 ZOOM 실시간 소통
+														온라인 ZOOM 1회 수업 제공 (60분)
 													</span>
 												</p>
 											</div>
 										</div>
 										<div class="item">
-											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon3.png" alt="" class="icon">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_icon10.png" alt="" class="icon">
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														면담 보장 10~13회
+														CAT4, MAP, 인터뷰 예시 등 실전교재 제공
 													</span>
 												</p>
 											</div>
@@ -123,7 +119,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														전공매칭, 원서접수, 자소서/에세이 통합
+														학년별 기출 문제 예시 가이드
 													</span>
 												</p>
 											</div>
@@ -140,49 +136,47 @@ if (!defined('_EYOOM_')) exit;
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit01.png" alt="">
 											<span>실전 문제연습</span>
 											<p>
-												해외대학 교직원 출신 <br class="pc">
-												공식 인증된 몽선생 <br class="pc">
-												실전 모의테스트 학습
+												단 1회수업으로 <br class="pc">
+												예상문제와 방식을 <br class="pc">
+												효율적으로 파악
 											</p>
 										</div>
 										<ul class="bnf_list">
 											<li>
 												<span>01</span>
 												<p>
-													<b>어디에도 없어요!</b><br/>
-													최신 기출 문제집 반영
+													<b>모든 기출문제를 모았어요</b><br/>
+													CAT4, MAP테스트 문제 반영
 												</p>
 											</li>
 											<li>
 												<span>02</span>
 												<p>
-													<b>짧고 효과적인 학습 프로그램!</b><br/>
-													맞춤 6강 수업으로 테스트를
-													<br class="pc"> 함께 준비해요
+													<b>체험형 수업으로 저렴해요!</b><br/>
+													1회만 해봐도 효과는 만점이에요
 												</p>
 											</li>
 											<li>
 												<span>03</span>
 												<p>
-													<b>검증된 선생님의 1:1 맞춤수업!</b><br/>
-													실전형 모의 입학 테스트 및
-													<br class="pc"> 상세 피드백 제공
+													<b>자체제작 교재를 제공해요.</b><br/>
+													학년별, 학교별 예상문제집을 배포해요
 												</p>
 											</li>
 											<li>
 												<span>04</span>
 												<p>
-													<b>체험반부터 정규반까지!</b><br/>
-													다양한 수업 방식을 제공합니다
+													<b>검증된 선생님이 수업해요.</b><br/>
+													몽선생이 직접 선별한 선생님 매칭!
 												</p>
 											</li>
 										</ul>
 									</div>
 								</div>
                                 <div class="line-2a"></div>
-								<div class="frame-section ver2">
+								<div class="frame-section ver2" id="sec02">
 									<div class="frame-titbox">
-										<p class="frame-title">국제학교 입학 테스트 대비반 수업 커리큘럼</p>
+										<p class="frame-title">CLASS 커리큘럼 안내</p>
 									</div>
 									<div class="class_curri">
 										<ul class="curri_list">
@@ -193,7 +187,7 @@ if (!defined('_EYOOM_')) exit;
 												</span>
 												<div class="text_area">
 													<span class="t_top">
-														1회 체험반
+														1회 체험
 														<small>60분 수업</small>
 													</span>
 													<div class="t_txt">
@@ -246,37 +240,45 @@ if (!defined('_EYOOM_')) exit;
 													<small>1회</small>
 												</span>
                                                 <span class="cost">회당 80,000원</span>
+												<div class="mob_price">
+													<div class="sale_price">
+														<div class="price">80,000원</div>
+														<p class="sale">
+															<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+															<span class="percent">20%</span>
+														</p>
+													</div>
+													<div class="ori_price">
+														<p class="txt">정상가</p>
+														<p class="price">100,000원</p>
+													</div>
+												</div>
                                             </div>
                                             <div class="detail">
-                                                <span class="tit">수업비용 포함 내용</span>
+                                                <span class="tit">문제유형 집중안내</span>
 												<div class="de_box">
 													<ul>
 														<li>
-															<p>‧ 수업기간</p>
-															<p>1회</p>
+															<p>‧ 자체 제작 기출문제 제공 (50문제)</p>
 														</li>
 														<li>
-															<p>‧ 강의시간</p>
-															<p>회차당 50분</p>
+															<p>‧ 학년별 문제 유형 설명</p>
 														</li>
 														<li>
-															<p>‧ 선생님</p>
-															<p>2명</p>
-														</li>
-														<li>
-															<p>‧ 수업정원</p>
-															<p>1:1관리</p>
-														</li>
-														<li>
-															<p>‧ 교재비</p>
-															<p>없음</p>
+															<p>‧ 인터뷰 예시질문 및 답변 방법</p>
 														</li>
 													</ul>
-													<div class="side">
-														<p class="price">80,000원</p>
+													<div class="side pc">
+														<div class="price ver3">
+															<span class="ori">정상가</span>
+															<span class="num">100,000원</span>
+														</div>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>80,000원</span>
+															<span class="sale">
+																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+																<span class="percent">20%</span>
+															</span>
+															<span class="num">80,000원</span>
 														</div>
 													</div>
 												</div>
@@ -285,41 +287,52 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>
-													입학시험 정규반 수강료
-													<small>1회</small>
+													정규 수업
+													<small>5회권 (5시간 수업)</small>
 												</span>
-                                                <span class="cost">회당 50,000원</span>
+                                                <span class="cost">회당 60,000원</span>
+												<div class="mob_price">
+													<div class="sale_price">
+														<div class="price">300,000원</div>
+														<p class="sale">
+															<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+															<span class="percent">25%</span>
+														</p>
+													</div>
+													<div class="ori_price">
+														<p class="txt">정상가</p>
+														<p class="price">400,000원</p>
+													</div>
+												</div>
                                             </div>
                                             <div class="detail">
-                                                <span class="tit">수업비용 포함 내용</span>
+                                                <span class="tit">문제유형 및 실전연습</span>
 												<div class="de_box">
 													<ul>
 														<li>
-															<p>‧ 수업기간</p>
-															<p>1개월(6회 수업)</p>
+															<p>‧ 자체 제작 기출문제 제공 (50문제)</p>
 														</li>
 														<li>
-															<p>‧ 강의시간</p>
-															<p>회차당 50분</p>
+															<p>‧ 실전 문제 연습 및 지도</p>
 														</li>
 														<li>
-															<p>‧ 선생님</p>
-															<p>2명</p>
+															<p>‧ 인터뷰 연습 및 피드백</p>
 														</li>
 														<li>
-															<p>‧ 수업정원</p>
-															<p>1:1관리</p>
-														</li>
-														<li>
-															<p>‧ 교재비</p>
-															<p>없음</p>
+															<p>‧ 실전 모의테스트 진행</p>
 														</li>
 													</ul>
-													<div class="side">
-														<p class="price">300,000원</p>
+													<div class="side pc">
+														<div class="price ver3">
+															<span class="ori">정상가</span>
+															<span class="num">400,000원</span>
+														</div>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>50,000원</span>
+															<span class="sale">
+																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+																<span class="percent">25%</span>
+															</span>
+															<span class="num">300,000원</span>
 														</div>
 													</div>
 												</div>
@@ -331,7 +344,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-section" id="sec04">
                                     <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
-                                            <span class="frame-title">답사 동행 팀장님 소개</span>
+                                            <span class="frame-title">담당 선생님 소개</span>
                                             <div class="frame-tag">
                                                 <span>HOT 인기멘토</span>
                                             </div>
@@ -350,7 +363,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>								
 										<div class="frame-titbox mob_show">
 											<div class="frame-titbox flex">
-												<span class="frame-title">답사 동행 선생님 소개</span>
+												<span class="frame-title">담당 선생님 소개</span>
 												<div class="frame-tag">
 													<span>HOT 인기멘토</span>
 												</div>
@@ -395,7 +408,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>						
 										<div class="frame-titbox mob_show">
 											<div class="frame-titbox flex">
-												<span class="frame-title">담당 원장님 소개</span>
+												<span class="frame-title">담당 선생님 소개</span>
 												<div class="frame-tag">
 													<span>HOT 인기멘토</span>
 												</div>
@@ -445,62 +458,60 @@ if (!defined('_EYOOM_')) exit;
                     <div class="sseom-neol">
                         <div class="mal-lei-si-a-dae-hag prcd05"></div>
                     </div>
-                    <div class="frame-14f">
-                        <div class="frame-150">
-                            <div class="tab_navbox notab frame-151">
-                                <div class="tab_nav on2 frame-152">무료수속 서비스</div>
+					<div class="frame-14f">
+                        <div class="tab_wrap frame-150">
+                            <div class="tab_navbox frame-151">
+                                <div class="tab_nav on frame-152">1회 체험 수업</div>
+                                <div class="tab_nav frame-152">정규 수업</div>
                             </div>
-                            <div class="frame-157">
-								<div class="frame-158">
-									<div class="frame-159">
-										<span class="span-text-15a">0원</span>
-										<div class="frame-15b">
-											<span class="time-15c">정상가 500,000원</span>
+                            <div class="tab_contbox frame-157">
+								<div class="tab_cont on">
+									<div class="frame-158">
+										<div class="frame-159">
+											<span class="span-text-15a">80,000원</span>
+											<div class="frame-15b">
+												<span class="time-15c">정상가 100,000원</span>
+											</div>
+										</div>
+									</div>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<div class="line-15f"></div>
+											<span class="interview">
+												국제학교 입학시험 체험수업 1회! <br>
+												50가지 예상문제와 실전 연습을 통한 준비방법
+											</span >
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="frame-15d">
-									<ul class="service_box">
-										<li class="service_item">
-											<p class="tit">
-												1. 국제학교 입학 상담
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												2. 학교 소통 (입학가능 사전확인)
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												3.  입학서류안내/ 번역대행
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												4.  학교 원서접수 (최대 3개교 가능)
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												5.  현지 정착 가이드 (OT 제공)
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												6.  비자, 보험 및 행정처리
-											</p>
-											<div class="icon"></div>
-										</li>
-									</ul>
-									<div class="button">
-										<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
-											<span class="service-request">서비스 요청하기</span>
+								<div class="tab_cont">
+									<div class="frame-158">
+										<div class="frame-159">
+											<span class="span-text-15a">80,000원</span>
+											<div class="frame-15b">
+												<span class="time-15c">정상가 100,000원</span>
+											</div>
+										</div>
+									</div>
+									<div class="frame-15d">
+										<div class="frame-15e">
+											<div class="line-15f"></div>
+											<span class="interview">
+												국제학교 입학시험 수업 5회 <br>
+												50가지 테스트 질문 제공 <br>
+												입학시험 문제 유형과 인터뷰 질문 파악 <br>
+												말레이시아, 싱가포르 국제학교 통합
+											</span>
+										</div>
+										<div class="button">
+											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+												<span class="service-request">서비스 요청하기</span>
+											</div>
 										</div>
 									</div>
 								</div>

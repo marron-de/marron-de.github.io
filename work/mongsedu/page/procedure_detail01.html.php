@@ -24,7 +24,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">초기정착 서비스</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">말레이시아 초기정착 서비스</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -43,7 +43,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </div>
                         <span
-                            class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong">현지 지사장 동행</span >
+                            class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong">현지 지사장 관리 (1개월)</span >
                     </div>
                     <div class="frame-1d">
                         <div class="tags-1e">
@@ -69,12 +69,9 @@ if (!defined('_EYOOM_')) exit;
                             <li id="content-1">
 								<div class="frame-section ver2" id="sec01">
 									<div class="frame-27">
-										<span class="field-trip-intro">초기정착 서비스 소개</span>
-										<div class="tags-28">
-											<span class="best-29">1달 관리</span>
-										</div>
+										<span class="field-trip-intro">초기정착 서비스란?</span>
 									</div>
-									<span class="field-trip-service">초기정착 서비스란? 해외에서의 시작하는 유학생활을 보다 편안하고 안전하게 시작할 수 있도록, 현지에 상주하는 전문 직원이 집 계약부터 생활 필수 서비스까지 직접 도와드리는 맞춤형 지원 프로그램입니다.</span >
+									<span class="field-trip-service">해외에서의 시작하는 유학생활을 보다 편안하고 안전하게 시작할 수 있도록, 현지에 상주하는 전문 직원이 집 계약부터 생활 필수 서비스까지 직접 도와드리는 맞춤형 지원 프로그램입니다.</span >
 								</div>
                                 <div class="line-2a"></div>								
 								<div class="frame-section ver2">
@@ -166,38 +163,51 @@ if (!defined('_EYOOM_')) exit;
 													초기정착 패키지
 													<small>1개월</small>
 												</span>
-                                                <span class="cost">회당 80,000원</span>
+												<div class="mob_price">
+													<div class="sale_price">
+														<div class="price">1,500,000원</div>
+														<p class="sale">
+															<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+															<span class="percent">17%</span>
+														</p>
+													</div>
+													<div class="ori_price">
+														<p class="txt">정상가</p>
+														<p class="price">1,800,000원</p>
+													</div>
+												</div>
                                             </div>
                                             <div class="detail">
-                                                <span class="tit">수업비용 포함 내용</span>
+                                                <span class="tit">서비스 포함 내용</span>
 												<div class="de_box">
 													<ul>
 														<li>
-															<p>‧ 수업기간</p>
-															<p>1회</p>
+															<p>‧ 현지 생활정착 패키지 (1달)</p>
 														</li>
 														<li>
-															<p>‧ 강의시간</p>
-															<p>회차당 50분</p>
+															<p>‧ 주거지 계약 동행 2~3회</p>
 														</li>
 														<li>
-															<p>‧ 선생님</p>
-															<p>1명</p>
+															<p>‧ 차량, 보험 및 생활문제 지원</p>
 														</li>
 														<li>
-															<p>‧ 수업정원</p>
-															<p>1:1관리</p>
+															<p>‧ 비자 수속 관리</p>
 														</li>
 														<li>
-															<p>‧ 교재비</p>
-															<p>없음</p>
+															<p>‧ 각종 정착 관련 상담</p>
 														</li>
 													</ul>
-													<div class="side">
-														<p class="price">80,000원</p>
+													<div class="side pc">
+														<div class="price ver3">
+															<span class="ori">정상가</span>
+															<span class="num">1,800,000원</span>
+														</div>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>80,000원</span>
+															<span class="sale">
+																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+																<span class="percent">17%</span>
+															</span>
+															<span class="num">1,500,000원</span>
 														</div>
 													</div>
 												</div>
@@ -209,7 +219,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-section" id="sec04">
                                     <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
-                                            <span class="frame-title">답사 동행 팀장님 소개</span>
+                                            <span class="frame-title">현지 정착 담당자 소개</span>
                                             <div class="frame-tag">
                                                 <span>HOT 인기멘토</span>
                                             </div>
@@ -228,7 +238,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
 										<div class="frame-titbox mob_show">
 											<div class="frame-titbox flex">
-												<span class="frame-title">답사 동행 팀장님 소개</span>
+												<span class="frame-title">현지 정착 담당자 소개</span>
 												<div class="frame-tag">
 													<span>HOT 인기멘토</span>
 												</div>
@@ -286,47 +296,41 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
 								<div class="frame-158">
 									<div class="frame-159">
-										<span class="span-text-15a">500,000원</span>
+										<span class="span-text-15a">1,500,000원</span>
 										<div class="frame-15b">
-											<span class="time-15c">정상가 800,000원</span>
+											<span class="time-15c">정상가 1,800,000원</span>
 										</div>
 									</div>
 								</div>
 								<div class="frame-15d">
-									<ul class="service_box">
+									<ul class="service_box ver2">
 										<li class="service_item">
 											<p class="tit">
-												1. 국제학교 입학 상담
+												1.  현지 생활정착 패키지 (1달)
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2. 학교 소통 (입학가능 사전확인)
+												2. 주거지 계약 동행 2~3회
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3.  입학서류안내/ 번역대행
+												3.  차량, 보험 및 생활문제 지원
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												4.  학교 원서접수 (최대 3개교 가능)
+												4.  비자 수속 관리
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												5.  현지 정착 가이드 (OT 제공)
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												6.  비자, 보험 및 행정처리
+												5.  각종 정착 관련 상담
 											</p>
 											<div class="icon"></div>
 										</li>

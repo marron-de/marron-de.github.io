@@ -564,7 +564,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-section" id="sec04">
                                     <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
-                                            <span class="frame-title">답사 동행 팀장님 소개</span>
+                                            <span class="frame-title">답사 동행 선생님 소개</span>
                                             <div class="frame-tag">
                                                 <span>HOT 인기멘토</span>
                                             </div>
@@ -583,7 +583,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
 										<div class="frame-titbox mob_show">
 											<div class="frame-titbox flex">
-												<span class="frame-title">답사 동행 팀장님 소개</span>
+												<span class="frame-title">답사 동행 선생님 소개</span>
 												<div class="frame-tag">
 													<span>HOT 인기멘토</span>
 												</div>

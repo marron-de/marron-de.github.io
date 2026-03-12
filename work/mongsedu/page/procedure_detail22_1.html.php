@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">싱가포르 예술대 무료수속 서비스 안내</span>
+                    <span class="dapsa">싱가포르 예술대 수속/컨설팅</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 예술대 무료수속 서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 예술대 수속/컨설팅</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -125,11 +125,13 @@ if (!defined('_EYOOM_')) exit;
 								<div class="frame-section ver3">
 									<div class="frame-titbox">
 										<p class="frame-title">
-											컨설팅 <span class="color">Point</span>
+											몽선생은 <span class="color">한국 유일한 공식 사무소</span> 입니다.
 										</p>
 									</div>
 									<div class="pointbox">
-										<p class="txt">라셀 종합예술대학의 Official 공식 사무소! (일반 유학원과 미술학원에서 진행할 수 없는 특별한 어드미션 혜택 이용이 가능합니다)</p>
+										<p class="txt">
+											국내에서 유일하게 Lasalle 종합예술대의 공식 한국사무소로 지정되어 있으며, 한국사무소를 통한 학생들은 “서울 인터뷰“및 각종 입학혜택을 적용 받을 수 있습니다.
+										</p>
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
@@ -143,11 +145,20 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_Lasalle.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">라살르 예술대</p>
+												<p class="tit">라셀 예술대</p>
 												<p class="desc">Lasalle College of the Arts</p>
 											</div>
 										</div>
 										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_NAFA.png" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">나파 예술대</p>
+												<p class="desc">Nanyang Academy of Fine Arts</p>
+											</div>
+										</div>
+										<!-- <div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_LaSalle2.png" alt="" class="img">
 											</div>
@@ -155,13 +166,13 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">라셀 컬리지</p>
 												<p class="desc">LaSalle College</p>
 											</div>
-										</div>
+										</div> -->
 										<div class="item">
 											<div class="imgbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_UAS.png" alt="" class="img">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_UAS2.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">UAS</p>
+												<p class="tit">싱가포르 종합예술대</p>
 												<p class="desc">UAS University of Arts Singapore</p>
 											</div>
 										</div>
@@ -173,31 +184,19 @@ if (!defined('_EYOOM_')) exit;
 									<ul class="service_box">
 										<li class="service_item">
 											<p class="tit">
-												1. 입학 서류 안내 및 검토
+												1. 원서접수 및 학교 행정처리 일괄
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2. 포트폴리오 기본 양식 가이드 - 최초 1회
+												2. 자소서 샘플 제공
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3. 에세이 기본 양식 가이드 - 최초 1회
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												4. 원서접수, 학사일정 관리 일괄
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												5. 학교 소통 및 입학 궁금즘 관리
+												3. 학교 스케줄 관리
 											</p>
 											<div class="icon"></div>
 										</li>
@@ -393,11 +392,11 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-14f">
                         <div class="tab_wrap frame-150">
                             <div class="tab_navbox notab frame-151">
-                                <div class="tab_nav frame-152">입학컨설팅</div>
-                                <div class="tab_nav on frame-152">무료수속</div>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22" class="tab_nav frame-152">입학컨설팅</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22_1" class="tab_nav on frame-152">무료수속</a>
                             </div>
                             <div class="tab_contbox frame-157">
-								<div class="tab_cont">
+								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22"  class="tab_cont">
 									<div class="frame-158">
 										<div class="frame-159">
 											<span class="span-text-15a">1,600,000원</span>
@@ -421,7 +420,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
 								<div class="tab_cont on">
 									<div class="frame-158">
 										<div class="frame-159">

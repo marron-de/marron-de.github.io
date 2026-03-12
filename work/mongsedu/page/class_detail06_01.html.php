@@ -65,7 +65,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06">수업소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06">CLASS소개</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06_01" class="show">수업비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail06_03">자주 묻는 질문</a></li>
@@ -126,11 +126,11 @@ if (!defined('_EYOOM_')) exit;
                                         </li>
                                     </ul>
                                     <div class="guide ver2">
-                                        <span>수업비 관련 주의사항</span>
+                                        <span>CLASS 비용 관련 안내사항</span>
                                         <ul>
-                                            <li>* 몽선생 유학 수속생의 경우에만 분납 결재가 가능합니다. 그 외 수강생은 일시납으로 가능합니다.</li>
-                                            <li>* 수강비에는 교재가 포함되어 있지 않습니다. 몽선생 자체 제작 교재 구매가 별도로 필요합니다.</li>
-                                            <li>* 수업비 납부 후 환불은 (수업시작 전 100%), 첫 수업일 기준 4주이내 (50%), 이후 불가 입니다.</li>
+                                            <li>* 몽선생 유학수속을 이용한 고객은 분납 결재가 가능합니다.</li>
+                                            <li>* 클래스 비용에는 교재가 포함되어 있지 않으며 별도 납부해 주셔야 합니다.</li>
+                                            <li>* 클래스 환불 조건은 (하루 전 100%), 클래스 시작 후  4주 이내 (50%), 그 이 후 불가 입니다.</li>
                                         </ul>
                                     </div>
 

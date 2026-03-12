@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 사립대 무료 수속서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 사립대 무료 수속서비스</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -75,9 +75,9 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<span class="field-trip-service">사립대 무료수속 서비스는 어떠한 비용을 지불하지 않고, 보다 쉽고 편리하게 입학준비가 가능합니다. 담당 실장님이 배정되어 1:1관리되고, 서류준비/원서접수 그 외 학교 행정을 관리받을 수 있습니다.</span >
 								</div>
-								<div class="frame-section ver2">
+								<div class="frame-section ver2 mb">
 									<div class="frame-titbox">
-										<p class="frame-title">한눈에 보는 컨설팅 기본 정보</p>
+										<p class="frame-title">한눈에 보는 무료수속 정보</p>
 									</div>
 									<div class="experbox">
 										<div class="item">
@@ -115,17 +115,30 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														국내 1호, 사립대 교직원 출신이 경험을 통한 수속관리
+														사립대 출신의 경험을 통한 수속 관리
 													</span>
 												</p>
 											</div>
 										</div>
 									</div>
 								</div>
+								<div class="frame-section ver3">
+									<div class="frame-titbox">
+										<p class="frame-title">
+											서비스 <span class="color">Point!</span>
+										</p>
+									</div>
+									<div class="pointbox">
+										<p class="txt">
+											싱가포르대학 교직원 출신의 5천여명 누적 관리경험! <br>
+											현지에서 확실하게 성공할 수 있는 방법과 노하우를 전수 합니다.
+										</p>
+									</div>
+								</div>
                                 <div class="line-2a"></div>	
                                 <div class="frame-section" id="sec02">
                                     <div class="frame-titbox between">
-                                        <span class="frame-title">일반 사립대 컨설팅 가능 대학교</span >
+                                        <span class="frame-title">무료수속 대학 LIST</span >
                                     </div>
 									<div class="school_listbox on">
 										<div class="item">
@@ -134,7 +147,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 											<div class="txtbox">
 												<p class="tit">SIM</p>
-												<p class="desc">SIM University</p>
+												<p class="desc">Singgapore Institute Management</p>
 											</div>
 										</div>
 										<div class="item">
@@ -151,8 +164,8 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_KAPLAN.png" alt="" class="img">
 											</div>
 											<div class="txtbox">
-												<p class="tit">카플란</p>
-												<p class="desc">Kaplan University</p>
+												<p class="tit">KAPLAN</p>
+												<p class="desc">Kaplan Higher Education</p>
 											</div>
 										</div>
 										<div class="item">
@@ -173,13 +186,6 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">Raffles College of Higher Education</p>
 											</div>
 										</div>
-									</div>
-                                </div>
-                                <div class="frame-section">
-                                    <div class="frame-titbox between">
-                                        <span class="frame-title">직영 캠퍼스 컨설팅 가능 대학교</span >
-                                    </div>
-									<div class="school_listbox on">
 										<div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_JCU.png" alt="" class="img">
@@ -189,7 +195,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">James Cook University</p>
 											</div>
 										</div>
-										<div class="item">
+										<!-- <div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo_Curtin.png" alt="" class="img">
 											</div>
@@ -225,6 +231,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">Raffles College of Higher Education</p>
 											</div>
 										</div>
+										 -->
 									</div>
                                 </div>
                                 <div class="line-2a"></div>
@@ -245,9 +252,9 @@ if (!defined('_EYOOM_')) exit;
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3.  원서접수, 학사일정 관리 일괄 (3개교 선택)
+												3.  원서접수, 학사일정 관리 일괄
 											</p>
-											<div class="icon"></div>
+											<div class="desc">3개교 선택</div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
@@ -261,12 +268,12 @@ if (!defined('_EYOOM_')) exit;
 											</p>
 											<div class="icon"></div>
 										</li>
-										<li class="service_item">
+										<!-- <li class="service_item">
 											<p class="tit">
 												6.  비자, 보험 및 행정처리
 											</p>
 											<div class="icon"></div>
-										</li>
+										</li> -->
 									</ul>
 									<div class="note_txtbox">
 										<p class="note_txt">* 1:1 관리를 원칙으로 하며, 학생 개인 면담 후 추가 되는 수업이 있을 수 있습니다.</p>

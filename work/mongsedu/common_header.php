@@ -122,7 +122,7 @@
 				</li>
 				<li>
 					<a href="<?php echo G5_URL ?>/page/?pid=counsel_intro" class="link">
-						<span class="txt">상담받기</span>
+						<span class="txt">상담하기</span>
 					</a>
 				</li>
 				<li>
@@ -132,7 +132,7 @@
 				</li>
 				<li>
 					<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="link">
-						<span class="txt">수업듣기</span>
+						<span class="txt">CLASS</span>
 					</a>
 				</li>
 				<li>
@@ -269,7 +269,7 @@
 			</li>
 			<li>
 				<a href="<?php echo G5_URL ?>/page/?pid=counsel_intro" class="title">
-					<span class="txt">상담받기</span>
+					<span class="txt">상담하기</span>
 				</a>
 			</li>
 			<li>
@@ -279,7 +279,7 @@
 			</li>
 			<li>
 				<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="title">
-					<span class="txt">수업듣기</span>
+					<span class="txt">CLASS</span>
 				</a>
 			</li>
 			<li class="special">
@@ -306,13 +306,13 @@
 				</ul>
 			</li>
 		</ul>
-		<ul class="menubox side_ver accordion">	
+		<ul class="menubox side_ver accordion arrow_ver">	
 			<li>
 				<span class="acc_tit">
 					<div class="iconbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/menu_icon1_off.svg" alt="" class="icon2 before">
 					</div>
-					<span class="txt">학교정보</span>
+					<a a href="<?php echo G5_URL ?>/page/?pid=univ_info_intro"class="txt">학교정보</a>
 					<span class="arrow"></span>
 				</span>
 				<ul class="acc_cont">
@@ -338,7 +338,7 @@
 					<div class="iconbox">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/menu_icon2_off.svg" alt="" class="icon2 before">
 					</div>
-					<span class="txt">커뮤니티</span>
+					<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice" class="txt">커뮤니티</a>
 					<span class="arrow"></span>
 				</span>
 				<ul class="acc_cont">

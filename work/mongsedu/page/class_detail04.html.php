@@ -72,8 +72,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04" class="show">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04" class="show">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail04_03">자주 묻는 질문</a></li>
                             </ul>
@@ -99,7 +99,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-25 class_sec2">
                                     <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="frame-title">몽선생 국제학교 입학 테스트 수업이 특별한 4가지</span>
+                                            <span class="frame-title">몽선생 국제학교 입학 테스트 수업이 특별한 4가지 이유</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
@@ -325,7 +325,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">국제학교 입학 시 보게 되는 CAT4, MAP테스트 그리고 인터뷰 준비까지 실제 시험 유형에 맞춘 모의 테스트를 통해 국제학교 입학 준비를 완벽하게 할 수 있습니다. 초/중/고 학년별 그리고 희망하는 학교에 맞추어 1:1로 지도하여 성공적인 입학을 도와드립니다.</span >
+                                        <span class="interview">국제학교 입학 시 보게 되는 CAT4, MAP테스트 그리고 인터뷰 준비까지 실제 시험 유형에 맞춘 모의 테스트를 통해 국제학교 입학 준비를 완벽하게 할 수 있습니다. <br> 초/중/고 학년별 그리고 희망하는 학교에 맞추어 1:1로 지도하여 성공적인 입학을 도와드립니다.</span >
                                     </div>
                                     <div class="button">
                                         <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">

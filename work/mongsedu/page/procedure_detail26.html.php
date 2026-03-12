@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">말레이시아 국립대 접수대행 서비스 안내</span>
+                    <span class="dapsa">말레이시아 국립대 접수대행 서비스</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">말레이시아 국립대 접수대행 서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">말레이시아 국립대 접수대행 서비스</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -167,9 +167,9 @@ if (!defined('_EYOOM_')) exit;
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3. 원서접수, 학사일정 관리 일괄 (1개교 선택)
+												3. 원서접수, 학사일정 관리 일괄
 											</p>
-											<div class="icon"></div>
+											<p class="desc">1개교 선택</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">

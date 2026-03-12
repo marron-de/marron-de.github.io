@@ -63,8 +63,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_02">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail01_03" class="show">자주 묻는 질문</a></li>
                             </ul>
@@ -81,32 +81,32 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="faq-box">
                                             <ul class="faq_list">
                                                 <li>
-                                                    <div class="question">수업 최대 정원은 어떻게 되나요?</div>
-                                                    <div class="answer">최대 6명 그룹 수업이며, 소규모로 몰입감 있게 진행됩니다. 대학 수업 방식처럼 선생님과 학생간의 많은 소통이 이루어지는 방식입니다. </div>
+                                                    <div class="question">CLASS 최대 정원은 어떻게 되나요?</div>
+                                                    <div class="answer">최대 6명 그룹 CLASS이며, 소규모로 몰입감 있게 진행됩니다. 대학 CLASS 방식처럼 선생님과 학생간의 많은 소통이 이루어지는 방식입니다. </div>
                                                 </li>
                                                 <li>
                                                     <div class="question">실전반과 입문반의 차이는 무엇인가요?</div>
                                                     <div class="answer">듀오링고 DET 점수에 따라 반 배정이 달라집니다. 실전반은 80졈 이상, 입문반은 80점 이하부터 수강이 가능합니다. 점수가 없을 경우, 레벨테스트는 무료로 진행됩니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">수업 시간을 옮기거나 바꿀 수 있나요?</div>
-                                                    <div class="answer">수업은 고정된 시간대로 수강해야 합니다.</div>
+                                                    <div class="question">CLASS 시간을 옮기거나 바꿀 수 있나요?</div>
+                                                    <div class="answer">CLASS는 고정된 시간대로 수강해야 합니다.</div>
                                                 </li>
                                                 <li>
                                                     <div class="question">누구나 다 수강할 수 있나요?</div>
                                                     <div class="answer">듀오링고 DET 시험을 앞두고 있다면 누구나 수강이 가능하나, 레벨에 따라 반 배정이 달라집니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">수업은 한국어로 진행되나요?</div>
-                                                    <div class="answer">원어민 수업이라 100% 영어로 진행됩니다.</div>
+                                                    <div class="question">CLASS는 한국어로 진행되나요?</div>
+                                                    <div class="answer">원어민 CLASS라 100% 영어로 진행됩니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">수업 비용은 1개월 단위로 결제가 될까요?</div>
-                                                    <div class="answer">DET 수업은 2개월 단위이나, 몽선생 유학 수속 학생은 1개월 단위로 결제가 가능합니다. 그 외 수강생은 2개월 단위로 결제가 필요합니다.</div>
+                                                    <div class="question">CLASS 비용은 1개월 단위로 결제가 될까요?</div>
+                                                    <div class="answer">DET CLASS는 2개월 단위이나, 몽선생 유학 수속 학생은 1개월 단위로 결제가 가능합니다. 그 외 수강생은 2개월 단위로 결제가 필요합니다.</div>
                                                 </li>
                                                 <li>
                                                     <div class="question">환불 규정이 어떻게 되나요?</div>
-                                                    <div class="answer">수업 시작 전 (100% 환불 가능), 첫 수업일 기준 4주 이내 (50% 환불), 첫 수업 기준 4주 이후에는 수강료가 환불이 되지 않습니다.</div>
+                                                    <div class="answer">CLASS 시작 전 (100% 환불 가능), 첫 CLASS일 기준 4주 이내 (50% 환불), 첫 수업 기준 4주 이후에는 수강료가 환불이 되지 않습니다.</div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -126,7 +126,7 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">듀오링고 수업 소개</span>
+                                    <span class="day-paid">듀오링고 CLASS 소개</span>
                                     <span class="day-paid-153">2개월</span>
                                 </div>
                                 <div class="group-154">
@@ -137,8 +137,8 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">실전반 490,000원</span>
-                                        <span class="span-text-15a">입문반 600,000원</span>
+                                        <span class="span-text-15a">실전반 980,000원</span>
+                                        <span class="span-text-15a">입문반 980,000원</span>
                                         <!-- <span class="span-text-15a">듀오링고 DET 실전반 수강료 <small>(2개월)</small> - 490,000 원</span>
                                         <span class="span-text-15a" style="margin-top:.25em;">듀오링고 DET 입문반 수강료 <small>(2개월)</small> - 600,000 원</span> -->
                                     </div>
@@ -146,7 +146,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">몽선생 듀오링고 수업은 DET 전문 원어민 선생님이 문제를 함께 풀이하며 2개월안에 빠르게 목표 점수를 도달할 수 있도록 구성되어 있습니다. 목표 점수에 빠르게 도달할 수 있도록 기출문제 교재를 통해 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
+                                        <span class="interview">몽선생 듀오링고 CLASS는 DET 전문 원어민 선생님이 문제를 함께 풀이하며 2개월안에 빠르게 목표 점수를 도달할 수 있도록 구성되어 있습니다. <br>목표 점수에 빠르게 도달할 수 있도록 기출문제 교재를 통해 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
                                     </div>
                                     <div class="button">
                                         <div class="button-160">

@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">홍콩대학 입학컨설팅 서비스 안내</span>
+                    <span class="dapsa">홍콩대학 입학컨설팅 서비스</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">홍콩대학 입학컨설팅 서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">홍콩대학 입학컨설팅 서비스</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -390,7 +390,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-14f">
                         <div class="frame-150">
                             <div class="tab_navbox notab frame-151">
-                                <div class="tab_nav on frame-152">입학컨설팅</span></div>
+                                <div class="tab_nav on frame-152">입학 컨설팅 서비스</span></div>
                             </div>
                             <div class="frame-157 default_ver">
                                 <div class="frame-158">

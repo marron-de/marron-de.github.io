@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">싱가포르 국립대 입학컨설팅 안내</span>
+                    <span class="dapsa">싱가포르 국립대 컨설팅</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 국립대 입학컨설팅 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 국립대 컨설팅</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -71,11 +71,11 @@ if (!defined('_EYOOM_')) exit;
                             <li id="content-1">
 								<div class="frame-section ver2 mb" id="sec01">
 									<div class="frame-27">
-										<span class="field-trip-intro">서비스안내</span>
+										<span class="field-trip-intro">컨설팅 안내</span>
 									</div>
 									<span class="field-trip-service">입학컨설팅은 싱가포르 국립대와 홍콩대학의 합격을 위하여 검증된 멘토와 전문 카운셀러를 통해 개인 맞춤별 합격전략을 구성하여 효율적으로 입학 준비를 하는 컨설팅 서비스 입니다.</span >
 								</div>
-								<div class="frame-section ver2 mb">
+								<div class="frame-section ver2">
 									<div class="frame-titbox">
 										<p class="frame-title">한눈에 보는 컨설팅 기본 정보</p>
 									</div>
@@ -120,16 +120,16 @@ if (!defined('_EYOOM_')) exit;
 												</p>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="frame-section ver3">
-									<div class="frame-titbox">
-										<p class="frame-title">
-											<span class="color">국내 1호, 사립대 교직원 출신의</span><br class="tablet"> 경험을 통한 수속관리
-										</p>
-									</div>
-									<div class="pointbox">
-										<p class="txt">국내 최다 합격사례 데이터 보유! 국내 유일, NUS출신 관리</p>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_nus.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt color">
+														국내 최다 합격사례 데이터 보유! 국내 유일, NUS출신 관리
+													</span>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
@@ -213,26 +213,38 @@ if (!defined('_EYOOM_')) exit;
 									<ul class="service_box">
 										<li class="service_item">
 											<p class="tit">
-												1.   학생 개인정보 파악 및 서류검토
+												1. 개인 포트폴리오 구성 (학생 입학전형 및 조건 상세분석)
 											</p>
 											<p class="desc">1회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2.  자소서 샘플 제공 및 가이드
+												2. 전공 매칭 및 입학 전략 설정 (상향/적정/안정)
 											</p>
-											<p class="desc">1회</p>
+											<p class="desc">2회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3.  자소서 최종 첨삭 지도
+												3. 자소서 샘플제공 / 첨삭 관리
 											</p>
-											<p class="desc">1~2회</p>
+											<p class="desc">3회</p>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												4. 인터뷰 예시질문 제공 / 피드백관리
+											</p>
+											<p class="desc">2회</p>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												5. 원서접수 및 학교 행정처리 일괄
+											</p>
+											<p class="desc">2회</p>
 										</li>
 									</ul>
 									<div class="note_txtbox">
-										<p class="note_txt">* 자소서 첨삭은 1개교 기준이며, 최대 2~3회 면담이 주어집니다.</p>
-										<div class="note_txt">* 최대한 빠르고 효과적인 서비스 제공을 위해, 학생의 학력 및 성적 파악부터 시작됩니다.</div>
+										<p class="note_txt">* 1:1 관리를 원칙으로 하며, 학생 개인 면담 후 추가 되는 수업이 있을 수 있습니다</p>
+										<div class="note_txt">* 면담 횟수는 최소 10회가 주어지며 학생이 원하는 방향으로 개인 맞춤 설정됩니다</div>
 									</div>
                                 </div>
                                 <div class="frame-section ver2 mt">
@@ -420,10 +432,10 @@ if (!defined('_EYOOM_')) exit;
                     </div>
                     <div class="frame-14f">
                         <div class="tab_wrap frame-150">
-                            <div class="tab_navbox frame-151">
-                                <div class="tab_nav on frame-152">입학컨설팅</div>
-                                <div class="tab_nav frame-152">단일컨설팅</div>
-                                <div class="tab_nav frame-152">자소서첨삭</div>
+                            <div class="tab_navbox notab frame-151">
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="tab_nav on frame-152">입학컨설팅</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_nav frame-152">단일컨설팅</a>
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_2" class="tab_nav frame-152">자소서첨삭</a>
                             </div>
                             <div class="tab_contbox frame-157">
 								<div class="tab_cont on">
@@ -451,7 +463,7 @@ if (!defined('_EYOOM_')) exit;
 										</div>
 									</div>
 								</div>
-                                <div class="tab_cont">
+                                <a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_1" class="tab_cont">
 									<div class="frame-158">
 										<div class="frame-159">
 											<span class="span-text-15a">1,900,000원</span>
@@ -475,8 +487,8 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-                                </div>
-								<div class="tab_cont">
+                                </a>
+								<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23_2" class="tab_cont">
 									<div class="frame-158">
 										<div class="frame-159">
 											<span class="span-text-15a">900,000원</span>
@@ -500,7 +512,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
                             </div>
                         </div>
                     </div>

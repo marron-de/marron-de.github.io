@@ -8,7 +8,6 @@ if (!defined('_EYOOM_')) exit;
 
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
 
-
 <div class="sub-page page-procedure detail">
     <div class="main-container">
         <div class="frame-c">
@@ -30,6 +29,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
+									<button type="button" class="close_btn"></button>
                                     <div class="content">
                                         <span class="supporting-text">마음에 드는 서비스를 공유해보세요</span >
                                     </div>
@@ -78,7 +78,7 @@ if (!defined('_EYOOM_')) exit;
                                             <li class="frame-2e1">
                                                 <div class="frame-cd2"></div>
                                                 <span>상담방식</span>
-                                                <p>서울강남 (방문) 혹은 비대면 온라인</p>
+                                                <p>서울강남, 홍대입구(방문) 혹은 비대면 온라인</p>
                                             </li>
                                             <li class="frame-2e1">
                                                 <div class="frame-cd3"></div>

@@ -84,7 +84,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">상담방식</p>
 												<p class="desc">
 													<span class="txt">
-														서울강남 (방문) 혹은 비대면 온라인
+														서울강남, 홍대입구(방문) 혹은 비대면 온라인
 													</span>
 												</p>
 											</div>
@@ -119,7 +119,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="frame-titbox gap2">
 										<p class="frame-title">상담학교 리스트</p>
 										<p class="frame-desc3">
-											말레이시아 사립대 교직원으로 5년 이상의 행정경험을 통해, 한국 학생들에세 가장 추천할 수 있는 대학을 알려드립니다. 사립대, 국립대, 직영캠퍼스까지 10여개 대학 정보를 한 번에 확인해보세요
+											말레이시아 사립대 교직원으로 10년 이상의 행정경험을 통해, 한국 학생들에세 가장 추천할 수 있는 대학을 알려드립니다. 사립대, 국립대, 직영캠퍼스까지 10여개 대학 정보를 한 번에 확인해보세요
 										</p>
 									</div>
 									<div class="counselingbox ver2">

@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">싱가포르/홍콩 국립대 단일컨설팅</span>
+                    <span class="dapsa">싱가포르 국립대 컨설팅</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르/홍콩 국립대 단일컨설팅</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">싱가포르 국립대 컨설팅</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -71,11 +71,11 @@ if (!defined('_EYOOM_')) exit;
                             <li id="content-1">
 								<div class="frame-section ver2 mb" id="sec01">
 									<div class="frame-27">
-										<span class="field-trip-intro">서비스안내</span>
+										<span class="field-trip-intro">컨설팅 안내</span>
 									</div>
 									<span class="field-trip-service">단일컨설팅은 싱가포르 국립대와 홍콩대 중에서 1개교 입학을 위해 집중하고 싶은 학생들을 위해, 학교 1개만 선택하여 컨설팅을 맡길 수 있는 서비스 입니다.</span >
 								</div>
-								<div class="frame-section ver2 mb">
+								<div class="frame-section ver2">
 									<div class="frame-titbox">
 										<p class="frame-title">한눈에 보는 컨설팅 기본 정보</p>
 									</div>
@@ -120,16 +120,16 @@ if (!defined('_EYOOM_')) exit;
 												</p>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="frame-section ver3">
-									<div class="frame-titbox">
-										<p class="frame-title">
-											<span class="color">국내 1호, 사립대 교직원 출신의</span><br class="tablet"> 경험을 통한 수속관리
-										</p>
-									</div>
-									<div class="pointbox">
-										<p class="txt">국내 최다 합격사례 데이터 보유! 국내 유일, NUS출신 관리</p>
+										<div class="item">
+											<img  src="<?php echo EYOOM_THEME_URL; ?>/img/sub/exper_nus.png" alt="" class="icon">
+											<div class="txtbox">
+												<p class="desc">
+													<span class="txt color">
+														국내 최다 합격사례 데이터 보유! 국내 유일, NUS출신 관리
+													</span>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
                                 <div class="line-2a"></div>	

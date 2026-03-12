@@ -65,8 +65,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02_02" class="show">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail02_03">자주 묻는 질문</a></li>
                             </ul>
@@ -133,8 +133,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">해외대학 대비반 수업</span >
-									<div class="day-paid-153">(2개월)</div>
+                                    <span class="day-paid">미리 예습하는 대비반 CLASS</span >
+									<div class="day-paid-153">(12주)</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -143,10 +143,10 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-157">
                                 <div class="frame-158">
-                                    <div class="frame-159">
-                                        <span class="span-text-15a">해외대학 대비반 패키지 700,000원</span>
-                                        <span class="span-text-15a">전공이론 수업(단독 수강시) - 500,000원</span>
-                                        <span class="span-text-15a">에세이토론 수업(단독 수강시) - 400,000원</span>
+                                    <div class="frame-159 ver2">
+                                        <span class="span-text-15a">해외대비반 풀패키지 : 1,400,000원</span>
+                                        <span class="span-text-15a">전공 이론 (단독) : 1,000,000원</span>
+                                        <span class="span-text-15a">에세이 토론 (단독) : 600,000원</span>
 
                                         <!-- <span class="span-text-15a">해외대학 대비반 패키지 수강료 <small>(2개월)</small> - 700,000 원 <small>(월)</small></span>
                                         <span class="span-text-15a" style="margin-top:.25em;">전공이론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 500,000 원 <small>(월)</small></span>
@@ -156,7 +156,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">해외 대학에 입학하는 학생들이 전공 관련 기본 이론을 미리 학습하고, 에세이 작성 및 토론 능력을 강화하여 실제 대학 입학 후 수업 환경에 빠르게 적응할 수 있도록 돕는 것을 목표로 합니다. 이를 통해 학생들은 유학을 미리 준비하고 전공 수업에서 자신 있게 참여할 수 있는 기반을 마련할 수 있습니다.</span >
+                                        <span class="interview">유학을 준비하는 학생들이 전공 관련 기본 이론을 미리 학습하고, 에세이 작성 및 토론 능력을 강화하여 실제 대학 입학 후 수업 환경에 빠르게 적응할 수 있도록 돕는 것을 목표로 합니다. </span >
                                     </div>
                                     <div class="button">
                                         <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">

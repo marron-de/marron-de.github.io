@@ -109,60 +109,6 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'">
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl04_1.jpg" alt="대학 수업 미리 준비, 에세이 & 토론 집중반">
-                                </div>
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <div class="badge">
-                                            <!-- <p class="best">BEST</p> -->
-                                            <p class="type">
-												<span class="pc">영어공인점수</span>
-												<span class="tablet">영어공인</span>
-											</p>
-                                            <p class="type">소규모</p>
-                                        </div>
-                                        <p class="red">고득점 강사 밀착관리</p>
-                                        <span class="title">IELTS 6.0 목표! 단기 속성 목표반</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'">
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl05_1.jpg" alt="졸업생과 함께 예술대 포트폴리오">
-                                </div>
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <div class="badge">
-                                            <p class="best">BEST</p>
-                                            <p class="type">
-												<span class="pc">1:1수업</span>
-												<span class="tablet">1:1</span>
-											</p>
-                                            <p class="type">1달완성</p>
-                                        </div>
-                                        <p class="red">주3회로 유학생활 준비</p>
-                                        <span class="title">해외생활 실전 스피킹 연습</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'">
-                                <div class="img_area">
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl06_1.jpg" alt="IB 고득점자의 1:1 맞춤 과외">
-                                </div>
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <div class="badge">
-                                            <!-- <p class="best">BEST</p> -->
-                                            <p class="type">발표수업</p>
-                                            <p class="type">소규모</p>
-                                        </div>
-                                        <p class="red">실전 과제/시험 준비</p>
-                                        <span class="title">미리 준비하는 대학 토론/에세이</span>
-                                    </a>
-                                </div>
-                            </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail02'">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl07_1.jpg" alt="하루 30분의 기적, 원어민 화상영어">
@@ -201,6 +147,60 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
                                         <p class="red">졸업생 직접 강의</p>
                                         <span class="title">완벽하게 준비하는 포트폴리오 (작품/실기)</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail07'">
+                                <div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl06_1.jpg" alt="IB 고득점자의 1:1 맞춤 과외">
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <div class="badge">
+                                            <!-- <p class="best">BEST</p> -->
+                                            <p class="type">발표수업</p>
+                                            <p class="type">소규모</p>
+                                        </div>
+                                        <p class="red">실전 과제/시험 준비</p>
+                                        <span class="title">미리 준비하는 대학 토론/에세이</span>
+                                    </a>
+                                </div>
+                            </li>
+							<li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail08'">
+                                <div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl05_1.jpg" alt="졸업생과 함께 예술대 포트폴리오">
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <div class="badge">
+                                            <p class="best">BEST</p>
+                                            <p class="type">
+												<span class="pc">1:1수업</span>
+												<span class="tablet">1:1</span>
+											</p>
+                                            <p class="type">1달완성</p>
+                                        </div>
+                                        <p class="red">주3회로 유학생활 준비</p>
+                                        <span class="title">해외생활 실전 스피킹 연습</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail05'">
+                                <div class="img_area">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl04_1.jpg" alt="대학 수업 미리 준비, 에세이 & 토론 집중반">
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <div class="badge">
+                                            <!-- <p class="best">BEST</p> -->
+                                            <p class="type">
+												<span class="pc">영어공인점수</span>
+												<span class="tablet">영어공인</span>
+											</p>
+                                            <p class="type">소규모</p>
+                                        </div>
+                                        <p class="red">고득점 강사 밀착관리</p>
+                                        <span class="title">IELTS 6.0 목표! 단기 속성 목표반</span>
                                     </a>
                                 </div>
                             </li>
@@ -1062,7 +1062,7 @@ if (!defined('_EYOOM_')) exit;
             <div class="text_area">
 				<div class="titbox">
 					<p class="tit">
-						<span class="txt">몽선생 클래스 수업의 장점 4가지!</span>
+						<span class="txt">몽선생 클래스 매칭의 장점 4가지!</span>
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_matching.png" alt="" class="icon">
 					</p>
 					<p class="desc">
@@ -1133,12 +1133,12 @@ if (!defined('_EYOOM_')) exit;
             <div class="faq-box">
                 <ul class="faq_list">
                     <li>
-                        <div class="question">수업은 어떻게 진행되나요?</div>
-                        <div class="answer">대부분 온라인 실시간으로 진행되고, 일부 수업의 경우 온/오프 병행하기도 합니다.</div>
+                        <div class="question">CLASS는 어떻게 진행되나요?</div>
+                        <div class="answer">모든 클래스는 온라인 수업 ZOOM을 통해 실시간으로 진행됩니다.</div>
                     </li>
                     <li>
                         <div class="question">선생님들은 몽선생에서 직접 매칭하나요?</div>
-                        <div class="answer">네 맞습니다. 오래된 경력이 있고 검증된 선생님을 직접 매칭합니다.</div>
+                        <div class="answer">네 맞습니다! 오래된 경력과 해외 경력이 있는 외국인 선생님을 직접 매칭합니다.</div>
                     </li>
                     <li>
                         <div class="question">1:1 수업의 경우 스케줄 조정이 가능한가요?</div>

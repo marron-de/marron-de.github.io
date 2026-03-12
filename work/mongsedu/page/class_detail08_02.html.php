@@ -65,8 +65,8 @@ if (!defined('_EYOOM_')) exit;
                     <div class="ms title_area class stickybox" id="row-1">
                         <div class="tab sticky">
                             <ul class="tab_tit">
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08">수업소개</a></li>
-                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08_01">수업비용</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08">CLASS소개</a></li>
+                                <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08_01">비용</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08_02" class="show">선생님</a></li>
                                 <li><a href="<?php echo G5_URL ?>/page/?pid=class_detail08_03">자주 묻는 질문</a></li>
                             </ul>

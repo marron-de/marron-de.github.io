@@ -13,7 +13,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">수속하기 >
                     </span >
-                    <span class="dapsa">전세계 36위! 호주 모나쉬대학 말레이시아 캠퍼스 수속서비스 안내</span>
+                    <span class="dapsa">전세계 36위! 호주 모나쉬대학 말레이시아 캠퍼스 수속서비스</span>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">전세계 36위! 호주 모나쉬대학 <br/>말레이시아 캠퍼스 수속서비스 안내</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">전세계 36위! 호주 모나쉬대학 <br/>말레이시아 캠퍼스 수속서비스</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -173,9 +173,9 @@ if (!defined('_EYOOM_')) exit;
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3. 원서접수, 학사일정 관리 일괄 (1개교 선택)
+												3. 원서접수, 학사일정 관리 일괄 
 											</p>
-											<div class="icon"></div>
+											<p class="desc">1개교 선택</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
@@ -187,6 +187,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="note_txtbox">
 										<p class="note_txt">* 1:1 관리를 원칙으로 하며, 학생 개인 면담 후 추가 되는 수업이 있을 수 있습니다.</p>
 										<div class="note_txt">* 자세한 서비스 내용은 상담 시 서비스내역을 통해 상세 확인할 수 있습니다.</div>
+										<div class="note_txt">* 비자대행비 별도</div>
 									</div>
                                 </div>
                                 <div class="frame-section ver2 mt">
@@ -382,7 +383,7 @@ if (!defined('_EYOOM_')) exit;
                                     <div class="frame-159">
                                         <span class="span-text-15a">0원</span>
                                         <div class="frame-15b">
-                                            <span class="time-15c">비자 수속 시 추가비용 납부필요</span>
+                                            <span class="time-15c">* 비자 수속 시 추가비용 납부필요</span>
                                         </div>
                                     </div>
 									<p class="desc">
@@ -392,7 +393,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <span class="interview">
-                                            무료수속 서비스는 어떠한 비용을 지불하지 않고, 보다 쉽고 편리하게 입학준비가 가능합니다. 담당 실장님이 배정되어 1:1관리되고, 서류준비/원서접수 그 외 학교 행정을 상세히 관리받을 수 있습니다. 
+                                           무료수속 서비스는 어떠한 비용을 지불하지 않고, 보다 쉽고 편리하게 입학준비가 가능합니다. 담당 실장님이 배정되어 1:1관리되고, 서류준비/원서접수 그 외 학교 행정을 상세히 관리받을 수 있습니다. 
                                         </span >
                                     </div>
                                     <div class="button">

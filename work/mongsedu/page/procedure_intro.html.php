@@ -7,108 +7,108 @@ if (!defined('_EYOOM_')) exit;
 
 
 <div class="sub-page page-procedure">
-	<div class="banner_area ver2 procedure long">
-        <div class="container" data-aos="fade-up">
-			<div class="banner">
-				<a href="<?php echo G5_URL ?>/page/?pid=procedure_banner" class="link">
-					<div class="bgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_bg.jpg" alt="" class="pc img">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_bg_mob.jpg" alt="" class="tablet img">
-					</div>
-					<div class="txtbox">
-						<p class="sub">교직원들이 만든 <br class="tablet">전문적인 교육업체</p>
-						<p class="tit">
-							몽선생의 유학수속/컨설팅  <br class="tablet">
-							<span class="color">이런점이 달라요!</span>
-						</p>
-					</div>
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_img.png" alt="" class="pc img">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_img_mob.png" alt="" class="tablet img">
-					</div>
-				</a>
+	<div class="top_section">
+		<div class="banner_area ver2 procedure long">
+			<div class="container" data-aos="fade-up">
+				<div class="banner">
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_banner" class="link">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_bg.jpg" alt="" class="pc img">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_bg_mob.jpg" alt="" class="tablet img">
+						</div>
+						<div class="txtbox">
+							<p class="sub">교직원들이 만든 <br class="tablet">전문적인 교육업체</p>
+							<p class="tit">
+								몽선생의 유학수속/컨설팅  <br class="tablet">
+								<span class="color">이런점이 달라요!</span>
+							</p>
+						</div>
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_img.png" alt="" class="pc img">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_ban_img_mob.png" alt="" class="tablet img">
+						</div>
+					</a>
+				</div>
 			</div>
-        </div>
-    </div>
+		</div>
 
-    <div class="link_area">
-        <div class="container swiper link_swiper" data-gappc="10" data-gapmob="16" data-aos="fade-up">
-            <div class="swiper-wrapper procedure_link">
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<div class="swiper icon_swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide item">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon01.png" alt="" class="icon">
-								</div>
-								<div class="swiper-slide item">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon02.png" alt="" class="icon">
-								</div>
-								<div class="swiper-slide item">
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon03.png" alt="" class="icon">
+		<div class="link_area">
+			<div class="container swiper link_swiper" data-gappc="10" data-gapmob="16" data-aos="fade-up">
+				<div class="swiper-wrapper procedure_link">
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail03" class="link swiper-slide">
+						<div class="imgbox">
+							<div class="swiper icon_swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide item big">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon01.png" alt="" class="icon">
+									</div>
+									<div class="swiper-slide item">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon02.png" alt="" class="icon">
+									</div>
+									<div class="swiper-slide item">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_tab_icon03.png" alt="" class="icon">
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<p class="tit">말레이시아 국제학교</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon2.png" alt="" class="icon">
-						<span class="count">추천</span>
-					</div>
-					<p class="tit">싱가폴 사립대</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon3.png" alt="" class="icon">
-						<span class="count">추천</span>
-					</div>
-					<p class="tit">싱가폴 예술대</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon4.png" alt="" class="icon">
-						<span class="count">4</span>
-					</div>
-					<p class="tit">싱가폴 국립대</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon5.png" alt="" class="icon">
-						<span class="count">5</span>
-					</div>
-					<p class="tit">말레이시아 국립대</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon6.png" alt="" class="icon">
-						<span class="count">추천</span>
-					</div>
-					<p class="tit">말레이시아 사립대</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
-					</div>
-					<p class="tit">홍콩 대학</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon8.png" alt="" class="icon">
-					</div>
-					<p class="tit">싱가폴 국제학교</p>
-				</a>
-				<a href="" class="link swiper-slide">
-					<div class="imgbox">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
-					</div>
-					<p class="tit">UC 계열 주립대</p>
-				</a>
-            </div>
-			<div class="swiper-scrollbar scrollbar"></div>
-        </div>
-    </div>
+						<p class="tit">말레이시아 국제학교</p>
+					</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail21" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon2.png" alt="" class="icon">
+							<span class="count">추천</span>
+						</div>
+						<p class="tit">싱가폴 사립대</p>
+					</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon3.png" alt="" class="icon">
+							<span class="count">추천</span>
+						</div>
+						<p class="tit">싱가폴 예술대</p>
+					</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon4.png" alt="" class="icon">
+						</div>
+						<p class="tit">싱가폴 국립대</p>
+					</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon5.png" alt="" class="icon">
+						</div>
+						<p class="tit">말레이시아 국립대</p>
+					</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon6.png" alt="" class="icon">
+							<span class="count">추천</span>
+						</div>
+						<p class="tit">말레이시아 사립대</p>
+					</a>
+					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail24" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon8.png" alt="" class="icon">
+						</div>
+						<p class="tit">홍콩 대학</p>
+					</a>
+					<a href="" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
+						</div>
+						<p class="tit">싱가폴 국제학교</p>
+					</a>
+					<a href="" class="link swiper-slide">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
+						</div>
+						<p class="tit">UC 계열 주립대</p>
+					</a>
+				</div>
+				<div class="swiper-scrollbar scrollbar"></div>
+			</div>
+		</div>
+	</div>
 
     <div class="msection counsel_area tabs hover_effect pro_sec1">
         <div class="container" data-aos="fade-up">
@@ -428,7 +428,8 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail30'">
+                            <!-- <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail30'"> -->
+                            <li onclick="showToast()">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln10.jpg" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
 									<div class="img_txtbox">
@@ -722,4 +723,11 @@ if (!defined('_EYOOM_')) exit;
             </div>
         </div>
     </div>
+</div>
+
+<div class="toast_popup">
+	<div class="txtbox">
+		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/toast_emoji1.png" alt=" " class="emoji">
+		<p class="txt">컨설팅 준비중 입니다.</p>
+	</div>
 </div>
