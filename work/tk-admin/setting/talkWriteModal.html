@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+	
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+    <div id="wrap"> 
+		
+		<!-- 알림톡 등록 모달 -->
+		<div id="talkWrite_modal" class="modal talk_modal mobtbl show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">알림톡 등록</p>
+					<button type="button" class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="rule_frm" id="rule_frm" method="POST" class="form">
+						<div class="tbl_box mobtbl">
+							<table class="tbl board_list min_auto">
+								<colgroup>
+									<col style="width: 140px;">
+									<col style="width: 500px;">
+									<col style="width: 300px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>강조유형</th>
+										<td colspan="2">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateEmphasizeTypeNone1" type="radio" name="templateEmphasizeType" value="NONE" checked onclick="onClickEmphasizeType(&quot;NONE&quot;);">
+													<label class="label_radio" for="templateEmphasizeTypeNone1">기본형</label>
+												</div>
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateEmphasizeTypeText1" type="radio" name="templateEmphasizeType" value="TEXT" onclick="onClickEmphasizeType(&quot;TEXT&quot;);">
+													<label class="label_radio" for="templateEmphasizeTypeText1">강조표기형</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>템플릿명</th>
+										<td colspan="2">
+											<div class="input_box">
+												<input class="input_text size_md" id="templateName" name="templateName' type=" text"="" value="" placeholder="템플릿 관리 시 사용할 이름 입력 (예)회원가입, 주문접수">
+											</div>
+										</td>
+									</tr>
+									<tr class="reverse">
+										<th>본문</th>
+										<td>
+											<div class="input_box h100">
+												<textarea id="templateContent" class="input_text size_md h_auto" rows="15" placeholder="본문을 입력해 주세요. ※카카오에서 제공하는 이모티콘이 아닐 경우 물음표(?)로 표기될 수 있습니다."></textarea>
+											</div>
+										</td>
+										<td rowspan="5" class="preview_td">
+											<div class="kakaotalk_preview">
+												<div class="frame">
+													<div class="talk">
+														<div class="user_cont">
+															<div class="msg">
+																<div class="msg_head">알림톡 도착</div>
+																<div class="msg_cont">
+																	<div class="msg_title" style="display: none;">
+																		<p class="tit">타이틀</p>
+																		<p class="desc">서브타이틀</p>
+																	</div>
+																	<div class="msg_contents">
+																		본문 내용입니다.
+																	</div>
+																	<div class="msg_description">
+																		부가정보 내용입니다.
+																	</div>
+																	<div class="msg_btnbox">
+																		<div class="btn">버튼</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="uibar"></div>
+													<div class="sidebtn"></div>
+												</div>
+												<p class="preview_wordnum">
+													<span class="num">0</span>/1,000자
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="trTemplateSubtitle" style="display:none;">
+										<th>서브타이틀</th>
+										<td>
+											<div class="input_box">
+												<input id="templateSubtitle" class="input_text size_md" type="text" value="" placeholder="타이틀에 해당하는 부연 설명을 입력해 주세요. (변수불가)">
+											</div>
+										</td>
+									</tr>
+									<tr class="trTemplateTitle" style="display:none;">
+										<th>타이틀</th>
+										<td>
+											<div class="input_box">
+												<textarea id="templateTitle" class="input_text size_md h_auto" rows="3" placeholder="본문에서 강조하여 표현할 내용을 입력해 주세요."></textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>부가정보</th>
+										<td>
+											<div class="align_right column_ver tbl_inline gap2">
+												<div class="input_box">
+													<textarea id="templateExtra" class="input_text size_md h_auto" rows="4" placeholder="이용안내 등 보조적인 정보메시지를 입력해 주세요.(변수불가)"></textarea>
+												</div>
+												<p class="txt">
+													<span id="extra_total_cnt">0</span>/500자
+												</p>	
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>버튼</th>
+										<td id="td_buttons">
+											<div class="input_box input_flex">
+												<div class="select_box full">
+													<select id="buttonType" name="buttonType" class="select size_md">
+														<option value="">버튼타입선택</option>
+														<option value="WL">웹링크</option>
+														<option value="AL">앱링크</option>
+													</select>
+												</div>
+												<div class="select_box">
+													<button type="button" class="button size_sm auto typeF" onclick="onClickAddButton();">+</button>
+												</div>
+											</div>
+										</td>
+									</tr>						
+								</tbody>
+							</table>
+						</div>
+						<div class="modal_btnbox">
+							<button class="modal_btn button auto typeE" onclick="onClickSave();">등록</button>
+							<button class="modal_btn button auto typeF modal_close" onclick="onClickReset();">다시작성</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+
+    <!-- JS -->
+    <script src="../js/common.js"></script>
+
+
+	<!-- 실서버 스크립트 코드  -->
+	<script>
+		//  260313 추가작업
+		function onClickEmphasizeType(val) {
+			if(val == 'NONE') {
+				$('.talk_modal .trTemplateSubtitle').hide();
+				$('.talk_modal .trTemplateTitle').hide();
+				$('.talk_modal .kakaotalk_preview .msg_title').hide();
+			} else if(val == 'TEXT') {
+				$('.talk_modal .trTemplateSubtitle').show();
+				$('.talk_modal .trTemplateTitle').hide();
+				$('.talk_modal .kakaotalk_preview .msg_title').show();
+			}
+		}
+	</script>
+
+</body>
+
+</html>
