@@ -35,11 +35,13 @@
 						<div class="re_sec re_sec_detail">
 							<div class="re_box">
 								<div class="re_contbox">
-									<p class="prd_tit">롯데월드 샤론캣 드레스 체험권</p>
+									<!-- 260313 수정작업 -->
+									<p class="prd_tit">인천 글로스터 호텔</p>
 									<div class="prd_info">
 										<div class="titbox">
+										<!-- 260313 수정작업 -->
 											<p class="date">
-												2025.12.08 19:00~03:00 / 1일투어
+												11.01 (토) - 11.03(월), 1박
 											</p>
 											<button type="button" class="more_btn">
 												<span class="txt">서비스 포함/불포함 확인</span>
@@ -67,7 +69,8 @@
 									</div>
 									<div class="prd_opt">
 										<div class="titbox">
-											<p class="tit">[샤론캣 플레이] 드레스 대여 A타입(30분)</p>
+										<!-- 260313 수정작업 -->
+											<p class="tit">[인천 글로스터 호텔] 디럭스 더블 룸 - 싱글</p>
 											<p class="price">상품 금액  :  56,500원</p>
 										</div>
 										<div class="contbox">
@@ -95,7 +98,8 @@
 											</div>
 											<div class="contitem">
 												<div class="top">
-													<p class="txt">추가옵션</p>
+													<!-- 260313 수정작업 -->
+													<p class="txt">객실수</p>
 													<p class="count">0개</p>
 												</div>
 												<div class="bottom">
@@ -103,6 +107,14 @@
 														<span class="num">0</span>원
 													</p>
 												</div>
+											</div>
+										</div>
+										<div class="optbox">
+											<p class="opt_tit">추가옵션</p>
+											<div class="opt_list">
+												<p class="dot_txt">조식포함 : + 30,000원</p>
+												<p class="dot_txt">추가옵션1 : + 30,000원</p>
+												<p class="dot_txt">추가옵션2 : + 30,000원</p>
 											</div>
 										</div>
 									</div>
