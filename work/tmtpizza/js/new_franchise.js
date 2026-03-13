@@ -624,7 +624,8 @@ mm.add({
 	// franchise section 16
 	if (isDesktop) {
 		const fs16Sec = document.querySelector('.fs16_secbox');
-		const totalScroll = fs16Sec.scrollWidth - window.innerWidth;
+		
+		const getTotalScroll = () => fs16Sec.scrollWidth - window.innerWidth;
 
 		const percentEl1 = document.querySelector('.fs16_1 .percent');
 		const percentEl2 = document.querySelector('.fs16_2 .percent');
@@ -700,7 +701,7 @@ mm.add({
 			scrollTrigger: {
 				trigger: '.fs16_secbox',
 				start: "top top",
-				end: () => `+=${totalScroll * 2.5}`,
+				end: () => `+=${getTotalScroll() * 2.5}`,
 				pin: true,
 				scrub: 1.5,
 				invalidateOnRefresh: true,
@@ -738,7 +739,7 @@ mm.add({
 
 		masterTl
 			.to({}, { duration: 1 })
-			.to(fs16Sec, { x: -totalScroll, ease: "none", duration: 2 })
+			.to(fs16Sec, { x: () => -getTotalScroll(), ease: "none", duration: 2 })  // ← 함수로
 			.to({}, { duration: 2 });
 	}
 
