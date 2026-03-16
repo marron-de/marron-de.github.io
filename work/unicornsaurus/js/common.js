@@ -137,3 +137,44 @@ $("#term_modal .modal_close_btn").click(function () {
 })
 
 
+// swiper
+function cloneSlides(selector, multiply = 3) {
+	const container = document.querySelector(selector);
+	if (!container) return;
+
+	const wrapper = container.querySelector('.swiper-wrapper');
+	const slides = Array.from(wrapper.children)
+		.filter(slide => !slide.hasAttribute('data-clone'));
+
+	const originalCount = slides.length;
+	const cloneCount = originalCount * (multiply - 1);
+
+	for (let i = 0; i < cloneCount; i++) {
+		const clone = slides[i % originalCount].cloneNode(true);
+		clone.setAttribute('data-clone', 'true');
+		wrapper.appendChild(clone);
+	}
+
+	return originalCount; // 원본 개수 반환
+}
+const originalMS3 = cloneSlides('.ms3_swiper', 3);
+const ms3_swiper = new Swiper(".ms3_swiper", {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1.3,
+    spaceBetween: 20,
+	centeredSlides: true,
+    grabCursor: true,
+	speed: 500,
+	loop: true,
+    navigation: {
+      nextEl: ".ms4_controls .next_btn",
+      prevEl: ".ms4_controls .prev_btn",
+    },	
+    breakpoints: {
+      1080: {
+        spaceBetween: 0,
+		slidesPerView: 'auto',
+      },
+    }
+});
