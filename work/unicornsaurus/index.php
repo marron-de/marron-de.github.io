@@ -131,20 +131,6 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide item">
 								<div class="txtbox">
-									<p class="tit">프리랜서</p>
-									<p class="desc">
-										답답한 소통, <br>
-										연락두절,
-										<br><br>
-										책임감 없는 일처리
-									</p>
-								</div>
-								<div class="imgbox">
-									<img src="img/ms3_icon1.png" alt="" class="img">
-								</div>
-							</div>
-							<div class="swiper-slide item">
-								<div class="txtbox">
 									<p class="tit">유니콘사우르스</p>
 									<p class="desc">
 										필요한 만큼만 개발, <br>
@@ -169,6 +155,20 @@
 								</div>
 								<div class="imgbox">
 									<img src="img/ms3_icon3.png" alt="" class="img">
+								</div>
+							</div>
+							<div class="swiper-slide item">
+								<div class="txtbox">
+									<p class="tit">프리랜서</p>
+									<p class="desc">
+										답답한 소통, <br>
+										연락두절,
+										<br><br>
+										책임감 없는 일처리
+									</p>
+								</div>
+								<div class="imgbox">
+									<img src="img/ms3_icon1.png" alt="" class="img">
 								</div>
 							</div>
 						</div>
@@ -529,16 +529,16 @@
 					</p>
 				</div>	
 				<div class="inner contbox">
-					<div class="item" data-aos="fade-up">
+					<div class="item" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".ms10 .contbox">
 						<p class="txt">개발자 채용이 부담스러운 분</p>
 					</div>
-					<div class="item" data-aos="fade-up">
+					<div class="item" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".ms10 .contbox">
 						<p class="txt">장기 파트너를 찾는 대표님</p>
 					</div>
-					<div class="item" data-aos="fade-up">
+					<div class="item" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".ms10 .contbox">
 						<p class="txt">외주 실패 경험이 있는 분</p>
 					</div>
-					<div class="item" data-aos="fade-up">
+					<div class="item" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".ms10 .contbox">
 						<p class="txt">지속적으로 기증개선이 필요한 분</p>
 					</div>
 				</div>	

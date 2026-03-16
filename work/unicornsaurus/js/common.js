@@ -171,6 +171,10 @@ const ms3_swiper = new Swiper(".ms3_swiper", {
       nextEl: ".ms4_controls .next_btn",
       prevEl: ".ms4_controls .prev_btn",
     },	
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
     breakpoints: {
       1080: {
         spaceBetween: 0,

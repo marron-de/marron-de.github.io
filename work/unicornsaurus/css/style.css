@@ -37,12 +37,19 @@
 .ms3 .m_titbox { gap: 0.875rem; margin-bottom: 6.25rem;}
 .ms3 .ms3_swiper { width: 100%; max-width: 1080px; display: flex; align-items: center; justify-content: center; min-height: 38.75rem;}
 .ms3 .ms3_swiper .swiper-wrapper {align-items: center;}
-.ms3 .ms3_swiper .item {width: 33%; position: relative; display: flex; flex-direction: column;  align-items: center;  gap: 4rem;  text-align: center;  background: rgba(26, 26, 26, 0.8);  padding: 4rem 0; border-radius: 1.5rem; border: 1px solid transparent;  cursor: pointer; transition: var(--transition);}
+.ms3 .ms3_swiper .item {width: 33%; position: relative; display: flex; flex-direction: column;  align-items: center;  gap: 4rem;  text-align: center;  background: rgba(26, 26, 26, 0.8);  padding: 4rem 0; border-radius: 1.5rem; border: 1px solid transparent;  cursor: pointer; transition: var(--transition); overflow: hidden;}
+.ms3 .ms3_swiper .item::before {content: ''; position: absolute;top: 0; left: -100%; width: 55%; height: 100%; background: linear-gradient( 108deg,  transparent 25%, rgba(255, 255, 255, 0.04) 40%,  rgba(255, 255, 255, 0.16) 50%, rgba(255, 255, 255, 0.04) 60%,transparent 75% ); pointer-events: none;}
+@keyframes shimmer {
+  0%   { left: -100%;}
+  55%  { left: 140%; }
+  100% { left: 140%; }
+}
 .ms3 .ms3_swiper .item .txtbox { position: relative; display: flex; flex-direction: column;  align-items: center; gap: 2.25rem; z-index: 5;}
 .ms3 .ms3_swiper .item .txtbox .tit {font-size: 1.875rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.04em; color: #fff; transition: var(--transition);}
 .ms3 .ms3_swiper .item .txtbox .desc {font-size: 1.25rem; font-weight: 300; line-height: 1.2; letter-spacing: -0.04em; color: #b2b2b2;}
 .ms3 .ms3_swiper .item .imgbox {position: relative;  width: 100%; max-width: 5.5rem;  display: flex; align-items: center;  justify-content: center;z-index: 5; transition: var(--transition);}
 .ms3 .ms3_swiper .item.swiper-slide-active { transform: scale(1.1); padding: 4.5rem 0;  z-index: 5; border-color: #01fd05; background: rgba(26, 26, 26, 1);}
+.ms3 .ms3_swiper .item.swiper-slide-active::before {animation: shimmer 2.6s ease-in-out infinite;}
 .ms3 .ms3_swiper .item.swiper-slide-active .txtbox .tit { color: #01fd05;}
 .ms3 .ms3_swiper .item.swiper-slide-active .imgbox { max-width: 8.5rem;}
 .ms3 .ms3_swiper .item:hover {background: rgba(26, 26, 26, 1);}
@@ -252,7 +259,7 @@
 	/* footer */
 	.footer { padding: 10rem 0;}
 	.footer .f_inner { gap: 2.4rem; align-items: center; text-align: center;}
-	.footer .f_inner .f_copy { font-size: 1.6rem; line-height: 1.4;}
+	.footer .f_inner .f_copy { font-size: 1.4rem; line-height: 1.6;}
 	.footer .f_inner .f_logo { width: 8.4rem;}
 
 
@@ -387,11 +394,11 @@
 	.ms7 .contbox .item .circle .txt { font-size: 2rem;}
 	.ms7 .contbox .item .circle .txt br {display: none;}
 	.ms7 .contbox .item .txt1 { padding: 0 2rem; }
-	.ms7 .contbox .item .txt1 .txt {font-size: 1.5rem; text-align: center;}
+	.ms7 .contbox .item .txt1 .txt {display: block; font-size: 1.5rem; text-align: center;}
 	.ms7 .contbox .item .txt1 .txt .row { letter-spacing: -0.04em !important;}
 	.ms7 .contbox .item .txt2 {width: 100%; max-width: 100%; border-radius: 4rem; padding: 3.2rem 2rem; text-align: center;}
 	.ms7 .contbox .item .txt2::before { left: 50%; top: -0.8rem; width: 1.6rem; transform: translateX(-50%);}
-	.ms7 .contbox .item .txt2 .txt { font-size: 1.5rem;}
+	.ms7 .contbox .item .txt2 .txt { display: block; font-size: 1.5rem;}
 	.ms7 .contbox .item .txt2 .txt .row { letter-spacing: -0.04em !important;}
 
 	.ms8 { margin-bottom: 2.4rem; padding-bottom: 12rem;}
