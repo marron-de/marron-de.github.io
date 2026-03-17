@@ -181,6 +181,12 @@ body.hidden::before { opacity: 1;  pointer-events: auto;} */
 .mob_inner { max-width: 780px;}
 
 
+.NotoKR {font-family: var(--font-poppins), var(--font-kr) !important}
+.NotoSC {font-family: var(--font-poppins), var(--font-sc) !important}
+.NotoTC {font-family: var(--font-poppins), var(--font-tc) !important}
+.NotoHK {font-family: var(--font-poppins), var(--font-hk) !important}
+
+
 .Pretendard {font-family: var(--font-family) !important}
 .Paperlogy {font-family: var(--second-family) !important}
 .Poppins {font-family: var(--third-family) !important}
@@ -858,6 +864,8 @@ border-radius: 6.25rem;}
 /* dot text */
 .dot_txt {position: relative; font: var(--14_label_normal_r); letter-spacing: 0.01em; color: var(--basic-darkgray); padding-left: 0.875rem;}
 .dot_txt::before {content: ""; position: absolute; left: 0; top: 0.563em; width: 0.188rem; aspect-ratio: 1/1; border-radius: 50%; background: var(--basic-darkgray);}
+.dot_no_txt { position: relative; font: var(--14_label_normal_r); line-height: 2;  letter-spacing: 0.01em; color: var(--basic-darkgray); word-break: keep-all;}
+.dot_no_txt * { font-family: inherit !important; font-size: inherit !important;   line-height: inherit !important;}
 
 
 
@@ -906,22 +914,27 @@ color: var(--basic-darkgray);}
 
 /* 폰트적용 */
 :root {
-	--EN-font: "Poppins", sans-serif; /*영문*/
-	--SC-font: "Noto Sans SC", sans-serif; /*중국어간체*/
-	--TC-font: "Noto Sans TC", sans-serif; /*중국어번체*/
+    --KR-font: "Noto Sans KR", sans-serif;
+	--EN-font: "Poppins", sans-serif;
+    --SC-font: "Noto Sans SC", sans-serif;
+    --TC-font: "Noto Sans TC", sans-serif;
+    --HK-font: "Noto Sans HK", sans-serif;
 }
 
 /*
 <html lang="en">      <!-- 영어 -->
 <html lang="zh-CN">   <!-- 중국어 간체 -->
 <html lang="zh-TW">   <!-- 중국어 번체 -->
+<html lang="zh-HK">   <!-- 홍콩어 -->
 */
 
-/* 영어 */
-:lang(en) {font-family: var(--EN-font) !important;}
+/* 국가별 언어 */
+:lang(ko) { font-family: var(--KR-font) !important; } 
+:lang(en) { font-family: var(--EN-font) !important; }
+:lang(zh-CN) { font-family: var(--SC-font) !important; }
+:lang(zh-TW) { font-family: var(--TC-font) !important; }
+:lang(zh-HK) { font-family: var(--HK-font) !important; }
 
-/* 중국어 간체 */
-:lang(zh-CN) {font-family: var(--SC-font) !important;}
 
-/* 중국어 번체 */
-:lang(zh-TW) {font-family: var(--TC-font) !important;}
+/* 전역 폰트 적용 및 예외 처리 */
+*:not(.note-editable):not(.note-editable *):not([class^="ph-"]):not([class*=" ph-"]):not(.ph) { font-family: "Poppins", "Noto Sans KR", "Noto Sans HK", "Noto Sans TC", "Noto Sans SC", sans-serif !important;}
