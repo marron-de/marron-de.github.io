@@ -5,6 +5,32 @@ if ('scrollRestoration' in history) {
 document.documentElement.style.overflow = 'hidden';
 
 
+// 100vh 계산
+$(document).ready(function () {
+    const setVh = () => {
+        const tempDiv = document.createElement('div');
+        tempDiv.style.height = '100vh';
+        document.body.appendChild(tempDiv);
+		
+        const fullHeight = tempDiv.offsetHeight;
+        document.body.removeChild(tempDiv);
+		
+        let vh = fullHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+	
+    setVh();
+	
+    let lastWidth = window.innerWidth;
+    $(window).on('resize', function () {
+        if (window.innerWidth !== lastWidth) {
+            setVh();
+            lastWidth = window.innerWidth;
+        }
+    });
+});
+
+
 // lenis scroll smooth
 let lenis;
 function debounce(fn, delay) {
@@ -44,6 +70,7 @@ $(document).ready(function () {
 
 // gsap
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+ScrollTrigger.config({ ignoreMobileResize: true });
 const mm = gsap.matchMedia();
 const initializePageState = () => {
     if (window.scrollY > 0) return;
@@ -167,7 +194,6 @@ mm.add({
 			bs3Tl.to({}, { duration: 0.5 });
 		});
     }
-
     if (isMobile) {				
         const bs3 = document.querySelector('.bs3');
         const contents = bs3.querySelectorAll('.cont');
@@ -178,7 +204,9 @@ mm.add({
                 start: "top top",
                 end: () => `+=${contents.length * 100}%`,
                 pin: true,
-                scrub: true
+                scrub: true,
+				anticipatePin: 1,
+				invalidateOnRefresh: true
             }
         });
 
@@ -231,7 +259,6 @@ mm.add({
 
 
     // brand section 5
-
     if (isDesktop) {
         const bs5 = document.querySelector('.bs5');
         const contents = bs5.querySelectorAll('.cont');
@@ -263,7 +290,6 @@ mm.add({
 			bs5Timeline.to({}, { duration: 0.5 });
 		});
     }
-
     if (isMobile) {
         const bs5 = document.querySelector('.bs5');
         const contents = bs5.querySelectorAll('.cont');
@@ -274,7 +300,9 @@ mm.add({
                 start: "top top",
                 end: () => `+=${contents.length * 100}%`,
                 pin: true,
-                scrub: true
+                scrub: true,
+				anticipatePin: 1,
+				invalidateOnRefresh: true
             }
         });
 
@@ -323,7 +351,6 @@ mm.add({
 
 		.to({}, { duration: 5 });
     }
-
     if (isMobile) {}
 
 });

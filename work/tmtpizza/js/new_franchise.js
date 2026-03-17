@@ -5,6 +5,32 @@ if ('scrollRestoration' in history) {
 document.documentElement.style.overflow = 'hidden';
 
 
+// 100vh 계산
+$(document).ready(function () {
+    const setVh = () => {
+        const tempDiv = document.createElement('div');
+        tempDiv.style.height = '100vh';
+        document.body.appendChild(tempDiv);
+		
+        const fullHeight = tempDiv.offsetHeight;
+        document.body.removeChild(tempDiv);
+		
+        let vh = fullHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+	
+    setVh();
+	
+    let lastWidth = window.innerWidth;
+    $(window).on('resize', function () {
+        if (window.innerWidth !== lastWidth) {
+            setVh();
+            lastWidth = window.innerWidth;
+        }
+    });
+});
+
+
 // lenis scroll smooth
 let lenis;
 function debounce(fn, delay) {
@@ -44,6 +70,7 @@ $(document).ready(function () {
 
 // gsap
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+ScrollTrigger.config({ ignoreMobileResize: true });
 const mm = gsap.matchMedia();
 const initializePageState = () => {
     if (window.scrollY > 0) return;
@@ -119,7 +146,6 @@ mm.add({
 			fs2Tl.to({}, { duration: 0.5 });
 		});
     }
-
     if (isMobile) {
         const fs2 = document.querySelector('.fs2');
         const contents = fs2.querySelectorAll('.cont');
@@ -130,7 +156,9 @@ mm.add({
                 start: "top top",
                 end: () => `+=${contents.length * 100}%`,
                 pin: true,
-                scrub: true
+                scrub: true,
+				anticipatePin: 1, 
+				invalidateOnRefresh: true 
             }
         });
 
@@ -193,7 +221,6 @@ mm.add({
 			fs3Tl.to({}, { duration: 0.8 });
 		});
     }
-
     if (isMobile) {
 		const fs3 = document.querySelector('.fs3');
 		const contents = fs3.querySelectorAll('.cont');
@@ -210,7 +237,8 @@ mm.add({
 				end: () => `+=${contents.length * 150}%`,
 				pin: true,
 				scrub: 1,
-				invalidateOnRefresh: true
+				anticipatePin: 1, 
+				invalidateOnRefresh: true 
 			}
 		});
 
@@ -251,8 +279,7 @@ mm.add({
 			{ opacity: 0, y: 80 }, 
 			{ opacity: 1, y: 0, ease: 'back.out', repeat: -1, repeatDelay: 1.5, delay: 0.2 * i }
 		);
-	});
-    
+	});    
     if (isDesktop) {
         const fs5Tl = gsap.timeline({
             scrollTrigger: {
@@ -291,8 +318,7 @@ mm.add({
                 onReverseComplete: () => $('.rightcont3 .highlight').removeClass('active')
             }, 'fs5Label3+=0.2')
             .to({}, { duration: 1 });
-    }
-    
+    }    
     if (isMobile) {
         const fs5_mob_swiper = new Swiper('.fs5_mob_swiper', {
             observer: true,
@@ -356,8 +382,7 @@ mm.add({
         });
 
 		fs8Tl.to({}, { duration: 0.8 });
-    }
-    
+    }    
     if (isMobile) {}
 
 	
@@ -398,8 +423,7 @@ mm.add({
         });
 
 		fs8Tl.to({}, { duration: 0.8 });
-    }
-    
+    }    
     if (isMobile) {}
 
 	
@@ -439,7 +463,6 @@ mm.add({
             fs10Tl.to({}, { duration: 0.5 }); 
         });
     }
-
     if (isMobile) {
         const fs10 = document.querySelector('.fs10');
         const contents = fs10.querySelectorAll('.cont');
@@ -450,7 +473,9 @@ mm.add({
                 start: "top top",
                 end: () => `+=${contents.length * 100}%`,
                 pin: true,
-                scrub: true
+                scrub: true,
+				anticipatePin: 1, 
+				invalidateOnRefresh: true 
             }
         });
 
@@ -477,8 +502,7 @@ mm.add({
                 stagger: 0.1,
             }
         );
-	}
-    
+	}    
     if (isMobile) {}
 
 	
@@ -515,7 +539,6 @@ mm.add({
 			fs13Tl.to({}, { duration: 0.5 });
 		});
     }
-
     if (isMobile) {
         const fs13 = document.querySelector('.fs13');
         const contents = fs13.querySelectorAll('.cont');
@@ -526,7 +549,9 @@ mm.add({
                 start: "top top",
                 end: () => `+=${contents.length * 100}%`,
                 pin: true,
-                scrub: true
+                scrub: true,
+				anticipatePin: 1, 
+				invalidateOnRefresh: true 
             }
         });
 
@@ -742,7 +767,6 @@ mm.add({
 			.to(fs16Sec, { x: () => -getTotalScroll(), ease: "none", duration: 2 })  // ← 함수로
 			.to({}, { duration: 2 });
 	}
-
 	if (isMobile) {
 		gsap.set("#fs16_popup", { y: 50, autoAlpha: 0 });
 		gsap.set('.fs16_swiper .graphbox, .fs16_swiper .tblbox', { opacity: 0 });
@@ -786,6 +810,7 @@ mm.add({
 			pin: true,
 			pinSpacing: true,
 			end: "+=1500",
+			anticipatePin: 1,   
 			invalidateOnRefresh: true,
 			fastScrollEnd: true,
 			onUpdate: self => {
@@ -869,18 +894,26 @@ const fs12_swiper = new Swiper('.fs12_swiper', {
 // franchise section 15
 const playFs15Anim = (swiper) => {
     const activeSlide = $(swiper.slides[swiper.activeIndex]);
-    const imgBox    = activeSlide.find('.imgbox').get(0);
-    const txtBox    = activeSlide.find('.txtbox').get(0);
-    const highlight = activeSlide.find('.txtbox .tit .highlight').get(0);
-    const badge     = activeSlide.find('.desc .badge').get(0);
+    const imgBox     = activeSlide.find('.imgbox').get(0);
+    const txtBox     = activeSlide.find('.txtbox').get(0);
+    const highlights = activeSlide.find('.txtbox .tit .highlight').toArray();
+    const badge      = activeSlide.find('.desc .badge').get(0);
 
-    gsap.killTweensOf([imgBox, txtBox, highlight, badge]);
+    gsap.killTweensOf([imgBox, txtBox, ...highlights, badge]);
 
-    gsap.timeline()
-        .fromTo(imgBox,    { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.1)
-        .fromTo(txtBox,    { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.2)
-        .fromTo(highlight, { backgroundSize: "0% 100%" }, { backgroundSize: "100% 100%", duration: 0.5, ease: "power2.inOut" }, 0.5)
-        .fromTo(badge,     { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.4 }, 0.7);
+    const tl = gsap.timeline();
+    tl.fromTo(imgBox, { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.1)
+      .fromTo(txtBox, { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.7 }, 0.2);
+
+    highlights.forEach((el, i) => {
+        tl.fromTo(el,
+            { backgroundSize: "0% 100%" },
+            { backgroundSize: "100% 100%", duration: 0.5, ease: "power2.inOut" },
+            0.5 + i * 0.15
+        );
+    });
+
+    tl.fromTo(badge, { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.4 }, 0.7);
 };
 const fs15_swiper = new Swiper('.fs15_swiper', {
 	observer: true,
