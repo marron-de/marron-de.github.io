@@ -767,11 +767,6 @@ function ebook_modal(i) {
 	$("#ebook_modal"+i).addClass('show');
 }
 
-function noebook_modal() {
-	$("body").addClass('hidden');
-	$("#noebook_modal").addClass('show');
-}
-
 // 전자북 스와이퍼
 const ebook_swiper = new Swiper('.ebook_swiper', {
 	observer: true,
@@ -803,7 +798,7 @@ const mentor_swiper2 = new Swiper('.mentor_swiper.ver2', {
 	grabCursor: true,
 	initialSlide: 2, 
 	autoplay: {
-		delay: 3000,
+		delay: 1500,
 		disableOnInteraction: false,
 	},
 })
@@ -932,7 +927,6 @@ const company_swiper = new Swiper('.company_swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: 12,
 	grabCursor: true,
-	initialSlide: 2,
 	navigation: {
 		nextEl: ".company_swiper .next_btn",
 		prevEl: ".company_swiper .prev_btn",
@@ -1271,10 +1265,29 @@ $(document).ready(function () {
 
 
 // 토스트 팝업
-function showToast() {
-    const toast = $('.toast_popup');
-    toast.addClass('show');
-    setTimeout(() => {
-        toast.removeClass('show');
-    }, 2500);
+const showToast = (function() {
+    let timer;
+
+    return function(txt) {
+        const toast = $('.toast_popup');
+		
+        if (toast.hasClass('show')) {
+            return;
+        }
+		
+        if (txt) toast.find('.txt').text(txt);
+		
+        toast.addClass('show');
+		
+        timer = setTimeout(() => {
+            toast.removeClass('show');
+        }, 2500);
+    };
+})();
+
+
+// 컨텐츠 준비중
+function nocontent_modal() {
+	$("body").addClass('hidden');
+	$("#nocontent_modal").addClass('show');
 }

@@ -8,8 +8,8 @@ if (!defined('_EYOOM_')) exit;
 
 <link rel="stylesheet" href="../theme/eb4_basic/page/detail_css.css">
 
-<div class="sub-page page-procedure detail">
-    <div class="main-container">
+<div class="sub-page page-counsel detail page-detail">
+    <div class="main-container" data-aos="fade">
         <div class="frame-c">
             <div class="container">
                 <div class="frame-d">
@@ -58,11 +58,7 @@ if (!defined('_EYOOM_')) exit;
                         </div>
                     </div> -->
                 </div>
-                <div class="section-c cd tabs">
-                    <div class="ms title_area class" id="row-1">
-                        <div class="tab">
-                        </div>
-                    </div>
+                <div class="section-c">
                     <div class="classDetail_list">
                         <ul class="panel">
                             <li id="content-1">
@@ -78,7 +74,7 @@ if (!defined('_EYOOM_')) exit;
                                             <li class="frame-2e1">
                                                 <div class="frame-cd2"></div>
                                                 <span>상담방식</span>
-                                                <p>서울강남, 홍대입구(방문) 혹은 비대면 온라인</p>
+                                                <p>서울강남 (방문) 혹은 비대면 온라인</p>
                                             </li>
                                             <li class="frame-2e1">
                                                 <div class="frame-cd3"></div>
@@ -282,13 +278,15 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 상담은 
                         </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="ireonjeom-i-dalla-yo">이렇게 다릅니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					직접 경험하고 확인한 학교만 상담하며 <br>
+					학생의 성향과 진로를 가장 먼저 고려합니다.
+				</span>
             </div>
         </div>
     </div>

@@ -74,7 +74,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="frame-27">
 										<span class="field-trip-intro">서비스안내</span>
 									</div>
-									<span class="field-trip-service">서강 글로벌패스웨이는 한국에서 패스웨이 과정을 거쳐 미국 대학으로 편입하는 공식 프로그램입니다. 몽선생은 공식 동문업체로 지정되어 유학원 수수료 없이, 입학 서류 준비부터 수속까지 간편하고 빠르게 지원해드립니다.</span >
+									<span class="field-trip-service">한국의 글로벌 캠퍼스 수속 서비스는 송도, 서강에 있는 미국 대학 및 편입학 과정을 수월하고 확실하게 준비할 수 있는 과정으로 서영어공인점수, 입학원서 및 에세이 작성까지 맡길 수 있습니다</span >
 								</div>
 								<div class="frame-section ver2">
 									<div class="frame-titbox">
@@ -86,7 +86,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														서강대 동문, 교직원 출신 관리
+														미국 글로벌 교육재단, 교직원 출신 관리
 													</span>
 												</p>
 											</div>
@@ -96,7 +96,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														온라인 ZOOM 실시간 소통 / 1:1 맞춤관리 원칙
+														온라인 ZOOM 실시간 소통 
 													</span>
 												</p>
 											</div>
@@ -106,7 +106,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														면담 횟수 3회
+														면담 횟수 5회 (회당 1시간)
 													</span>
 												</p>
 											</div>
@@ -116,7 +116,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="txtbox">
 												<p class="desc">
 													<span class="txt">
-														원서 접수, 에세이 첨삭 및 입학 준비 안내
+														원서접수, 에세이첨삭 및 입학 준비안내
 													</span>
 												</p>
 											</div>
@@ -126,10 +126,11 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="line-2a"></div>	
                                 <div class="frame-section" id="sec02">
                                     <div class="frame-titbox between">
-                                        <span class="frame-title flex">
+                                        <!-- <span class="frame-title flex">
 											편입 가능 대학교
 											<small>서강 글로벌 패스웨이 (1학년)</small>
-										</span >
+										</span > -->										
+                                        <span class="frame-title flex">컨설팅 가능 대학교</span >
                                     </div>
 									<div class="school_listbox on">
 										<div class="item">
@@ -194,43 +195,37 @@ if (!defined('_EYOOM_')) exit;
 									<ul class="service_box">
 										<li class="service_item">
 											<p class="tit">
-												1.   학교 선정 및 전공 상담 
+												‧ 학교 선정 및 전공 상담 
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2.  입학 서류 안내 및 검토
+												‧ 입학 서류 안내 및 검토
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3.  원서접수, 학사일정 관리 일괄
+												‧ 원서접수, 학사일정 관리 일괄
 											</p>
 											<p class="desc">1개교 선택</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												4.  자소서 샘플제공 / 첨삭 관리
+												‧ 자소서 샘플제공 / 첨삭 관리
 											</p>
 											<p class="desc">2회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												5.  인터뷰 예시질문 제공 / 피드백관리
+												‧ 인터뷰 예시질문 제공 / 피드백관리
 											</p>
 											<p class="desc">1회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												6.  영어공인점수 준비
-											</p>
-											<div class="icon"></div>
-										</li>
-										<li class="service_item">
-											<p class="tit">
-												7.  미국 및 해외대학 편입 과정
+												‧ 영어공인점수 준비
 											</p>
 											<div class="icon"></div>
 										</li>
@@ -426,14 +421,14 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-14f">
                         <div class="frame-150">
                             <div class="tab_navbox notab frame-151">
-                                <div class="tab_nav on frame-152">무료수속 서비스</div>
+                                <div class="tab_nav on frame-152">접수대행 서비스</div>
                             </div>
                             <div class="frame-157 default_ver">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">0원</span>
+                                        <span class="span-text-15a">700,000원</span>
                                         <div class="frame-15b">
-                                            <span class="time-15c">(추가비용 없음)</span>
+                                            <span class="time-15c">* 추가비용 없음</span>
                                         </div>
                                     </div>
 									<p class="desc">
@@ -474,13 +469,14 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
-                        </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의</span> 
+                        <span class="ireonjeom-i-dalla-yo">수속/컨설팅</span><span class="mong-seonsaeng-ui-keon-sel-ting-eun">을 추천합니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					검증된 학교 중심으로 수속을 진행하고 <br>
+					학생 맞춤형 유학 로드맵을 설계합니다.
+				</span>
             </div>
         </div>
     </div>

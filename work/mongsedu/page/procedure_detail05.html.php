@@ -68,9 +68,9 @@ if (!defined('_EYOOM_')) exit;
 								<div class="frame-section ver2" id="sec01">
 									<div class="frame-27">
 										<span class="field-trip-intro">답사서비스 소개</span>
-										<div class="tags-28">
+										<!-- <div class="tags-28">
 											<span class="best-29">BEST</span>
-										</div>
+										</div> -->
 									</div>
 									<span class="field-trip-service">
 										답사 서비스는 입학 전 학교·주거 환경을 직접 확인하고 결정할 수 있도록 현지
@@ -341,7 +341,7 @@ if (!defined('_EYOOM_')) exit;
                                         <div class="frame-9d">
                                             <div class="frame-9e">
                                                 <div class="fi-rs-marker"></div>
-                                                <span class="marker_txt">코타 다만사라, 수방, 몽키아라, 데사파크, 샤알람, 세렘반, 푸트라자여, 사이버자여, 체라스 등</span >
+                                                <span class="marker_txt">코타 다만사라, 수방, 몽키아라, 데사파크, 샤알람, 세렘반, 푸트라자야, 사이버자야, 체라스 등</span >
                                             </div>
                                         </div>
                                     </div>
@@ -360,11 +360,11 @@ if (!defined('_EYOOM_')) exit;
 												<div class="list">
 													<div class="list_item">
 														<p class="list_txt">‧ 국제학교</p>
-														<p class="list_desc">2곳</p>
+														<p class="list_desc">2~3곳</p>
 													</div>
 													<div class="list_item">
 														<p class="list_txt">‧ 숙소 및 거주지</p>
-														<p class="list_desc">2곳</p>
+														<p class="list_desc">2~3곳</p>
 													</div>
 													<div class="list_item">
 														<p class="list_txt">‧ 통역/상담지원</p>
@@ -391,11 +391,11 @@ if (!defined('_EYOOM_')) exit;
 												<div class="list">
 													<div class="list_item">
 														<p class="list_txt">‧ 국제학교</p>
-														<p class="list_desc">4곳</p>
+														<p class="list_desc">3~4곳</p>
 													</div>
 													<div class="list_item">
 														<p class="list_txt">‧ 숙소 및 거주지</p>
-														<p class="list_desc">4곳</p>
+														<p class="list_desc">3~4곳</p>
 													</div>
 													<div class="list_item">
 														<p class="list_txt">‧ 통역/상담지원</p>
@@ -546,7 +546,7 @@ if (!defined('_EYOOM_')) exit;
 														<p class="timetxt">4시</p>
 														<div class="dot"></div>
 														<div class="balloon on">
-															입학시험<br>모의테스트
+															현지 팀장 상담
 														</div>
 													</div>
 													<div class="listitem">
@@ -638,16 +638,19 @@ if (!defined('_EYOOM_')) exit;
 								<div class="tab_cont on">
 									<div class="frame-158">
 										<div class="frame-159">
-											<span class="span-text-15a">150,000원</span>
+											<span class="span-text-15a">250,000원</span>
 											<div class="frame-15b">
-												<span class="time-15c">오전 10시~오후 5시</span>
+												<span class="time-15c">최대 3곳</span>
 											</div>
 										</div>
 									</div>
 									<div class="frame-15d">
 										<div class="frame-15e">
 											<div class="line-15f"></div>
-											<span class="interview">인터뷰 예시질문 제공 / 피드백관리<br/>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보존하세</span >
+											<span class="interview">
+												지역 거리에 따라 2-3개 학교 답사<br>
+												(차량, 통역, 상담, 거주지 주변 지역 답사)
+											</span >
 										</div>
 										<div class="button">
 											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
@@ -661,14 +664,17 @@ if (!defined('_EYOOM_')) exit;
 										<div class="frame-159">
 											<span class="span-text-15a">480,000원</span>
 											<div class="frame-15b">
-												<span class="time-15c">오전 10시~오후 5시</span>
+												<span class="time-15c">최대 4곳</span>
 											</div>
 										</div>
 									</div>
 									<div class="frame-15d">
 										<div class="frame-15e">
 											<div class="line-15f"></div>
-											<span class="interview">인터뷰 예시질문 제공 / 피드백관리<br/>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보존하세</span >
+											<span class="interview">
+												지역 거리에 따라 3-4개 학교 답사 <br>
+												(차량, 통역, 상담, 거주지 주변 지역 답사)
+											</span >
 										</div>
 										<div class="button">
 											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
@@ -681,15 +687,14 @@ if (!defined('_EYOOM_')) exit;
 									<div class="frame-158">
 										<div class="frame-159">
 											<span class="span-text-15a">0원</span>
-											<div class="frame-15b">
-												<span class="time-15c">최대 5곳</span>
-											</div>
 										</div>
 									</div>
 									<div class="frame-15d">
 										<div class="frame-15e">
 											<div class="line-15f"></div>
-											<span class="interview">인터뷰 예시질문 제공 / 피드백관리<br/>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보존하세</span >
+											<span class="interview">
+												셀프 답사는 현지에서 영어소통이 가능한 학부모님께 권장합니다.
+											</span >
 										</div>
 										<div class="button">
 											<div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
@@ -720,13 +725,14 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
-                        </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의</span> 
+                        <span class="ireonjeom-i-dalla-yo">수속/컨설팅</span><span class="mong-seonsaeng-ui-keon-sel-ting-eun">을 추천합니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					검증된 학교 중심으로 수속을 진행하고 <br>
+					학생 맞춤형 유학 로드맵을 설계합니다.
+				</span>
             </div>
         </div>
     </div>

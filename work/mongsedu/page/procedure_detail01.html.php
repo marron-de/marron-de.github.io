@@ -78,7 +78,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="frame-titbox gap2">
 										<p class="frame-title">서비스 포함내용</p>
 										<p class="frame-desc3">
-											1달 동안 현지 직원이 최대 5회 동행하여 낯선 환경에서 처음부터 안정적으로 정착할 수 있도록, 부모님과 아이 모두가 안심할 수 있는 체계적인 서비스를 제공합니다.
+											현지 팀장이 직접 동행하여 주거지 탐색 및 계약 동행, 생활 인프라 안내, 각종 행정 및 비자 관련 지원 등을 통해 초기 한 달 동안 안정적인 현지 정착 서비스를 제공합니다.
 										</p>
 									</div>
 									<div class="class_curri">
@@ -89,59 +89,59 @@ if (!defined('_EYOOM_')) exit;
 												</span>
 												<div class="text_area2">
 													<div class="item">
-														<p class="tit">주거지 방문 동행(최대 5곳)</p>
+														<p class="tit">주거지 방문 동행 (최대 5곳) </p>
 														<div class="tag on">동행</div>
 													</div>
 													<div class="item">
-														<p class="tit">주거지 방문 동행(최대 5곳)</p>
-														<div class="tag">안내</div>
-													</div>
-													<div class="item">
-														<p class="tit">문화 행사 참여(최대 3회)</p>
-														<div class="tag">안내</div>
-													</div>
-													<div class="item">
-														<p class="tit">상담 및 조언 제공(최대 2회)</p>
+														<p class="tit">부동산 에이전트 섭외 및 소통</p>
 														<div class="tag on">동행</div>
 													</div>
 													<div class="item">
-														<p class="tit">전문가 연결 서비스(최대 4회)</p>
+														<p class="tit">거주지 주변 생활 편의시설 안내</p>
 														<div class="tag on">동행</div>
 													</div>
 													<div class="item">
-														<p class="tit">취미 활동 지원(최대 5회)</p>
+														<p class="tit">주거지 계약 동행</p>
+														<div class="tag on">동행</div>
+													</div>
+													<div class="item">
+														<p class="tit">입주 후 문제 해결</p>
+														<div class="tag">지원</div>
+													</div>
+													<div class="item">
+														<p class="tit">월세 및 공과금 납부 방법 안내</p>
 														<div class="tag">안내</div>
 													</div>
 												</div>
 											</li>
 											<li>
 												<span>
-													1달 생활 정착 🗓️
+													생활 정착 & 비자 지원 🗓️
 												</span>
 												<div class="text_area2">
 													<div class="item">
-														<p class="tit">주거지 방문 동행(최대 5곳)</p>
+														<p class="tit">입주 쇼핑 동행</p>
 														<div class="tag on">동행</div>
 													</div>
 													<div class="item">
-														<p class="tit">주거지 방문 동행(최대 5곳)</p>
-														<div class="tag">안내</div>
-													</div>
-													<div class="item">
-														<p class="tit">문화 행사 참여(최대 3회)</p>
-														<div class="tag">안내</div>
-													</div>
-													<div class="item">
-														<p class="tit">상담 및 조언 제공(최대 2회)</p>
+														<p class="tit">유심 구매 동행</p>
 														<div class="tag on">동행</div>
 													</div>
 													<div class="item">
-														<p class="tit">전문가 연결 서비스(최대 4회)</p>
+														<p class="tit">차량 구입 동행 및 렌터카 렌탈</p>
 														<div class="tag on">동행</div>
 													</div>
 													<div class="item">
-														<p class="tit">취미 활동 지원(최대 5회)</p>
+														<p class="tit">인터넷 / 정수기 / TV 신청</p>
 														<div class="tag">안내</div>
+													</div>
+													<div class="item">
+														<p class="tit">비자 서류 안내 및 제출</p>
+														<div class="tag on">동행</div>
+													</div>
+													<div class="item">
+														<p class="tit">비자 서류 공증 작성</p>
+														<div class="tag  on">대행</div>
 													</div>
 												</div>
 											</li>
@@ -182,19 +182,22 @@ if (!defined('_EYOOM_')) exit;
 												<div class="de_box">
 													<ul>
 														<li>
-															<p>‧ 현지 생활정착 패키지 (1달)</p>
+															<p>‧ 국제학교 입학 상담</p>
 														</li>
 														<li>
-															<p>‧ 주거지 계약 동행 2~3회</p>
+															<p>‧ 입학 지원서 작성 및 서류 제출 안내</p>
 														</li>
 														<li>
-															<p>‧ 차량, 보험 및 생활문제 지원</p>
+															<p>‧ 입학 시험 안내 및 일정 조율</p>
 														</li>
 														<li>
-															<p>‧ 비자 수속 관리</p>
+															<p>‧ 주거지 탐방 및 계약 안내</p>
 														</li>
 														<li>
-															<p>‧ 각종 정착 관련 상담</p>
+															<p>‧ 생활 정착 (유심, 차량, 인터넷 등) 안내</p>
+														</li>
+														<li>
+															<p>‧ 비자 서류 안내 및 제출</p>
 														</li>
 													</ul>
 													<div class="side pc">
@@ -205,9 +208,9 @@ if (!defined('_EYOOM_')) exit;
 														<div class="price ver2">
 															<span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">17%</span>
+																<span class="percent">11%</span>
 															</span>
-															<span class="num">1,500,000원</span>
+															<span class="num">1,600,000원</span>
 														</div>
 													</div>
 												</div>
@@ -219,10 +222,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-section" id="sec04">
                                     <div class="frame-titbox pc_hide">
                                         <div class="frame-titbox flex">
-                                            <span class="frame-title">현지 정착 담당자 소개</span>
-                                            <div class="frame-tag">
-                                                <span>HOT 인기멘토</span>
-                                            </div>
+                                            <span class="frame-title">정착서비스 동행 팀장님 소개</span>
                                         </div>
                                         <span class="frame-desc">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span >
                                     </div>
@@ -238,10 +238,7 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
 										<div class="frame-titbox mob_show">
 											<div class="frame-titbox flex">
-												<span class="frame-title">현지 정착 담당자 소개</span>
-												<div class="frame-tag">
-													<span>HOT 인기멘토</span>
-												</div>
+												<span class="frame-title">정착서비스 동행 팀장님 소개</span>
 											</div>
 											<span class="frame-desc">15년 이상 말레이시아에서 체류하고 학생들의 교육을 현장에서 지도하고 있는 강종민 팀장이 직접 답사서비스 동행을 함께 합니다.</span >
 										</div>
@@ -296,7 +293,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
 								<div class="frame-158">
 									<div class="frame-159">
-										<span class="span-text-15a">1,500,000원</span>
+										<span class="span-text-15a">1,600,000원</span>
 										<div class="frame-15b">
 											<span class="time-15c">정상가 1,800,000원</span>
 										</div>
@@ -306,31 +303,37 @@ if (!defined('_EYOOM_')) exit;
 									<ul class="service_box ver2">
 										<li class="service_item">
 											<p class="tit">
-												1.  현지 생활정착 패키지 (1달)
+												‧ 국제학교 입학 상담
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2. 주거지 계약 동행 2~3회
+												‧ 입학 지원서 작성 및 서류 제출 안내
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3.  차량, 보험 및 생활문제 지원
+												‧ 입학 시험 안내 및 일정 조율
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												4.  비자 수속 관리
+												‧ 주거지 탐방 및 계약 안내
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												5.  각종 정착 관련 상담
+												‧ 생활 정착 (유심, 차량, 인터넷 등) 안내
+											</p>
+											<div class="icon"></div>
+										</li>
+										<li class="service_item">
+											<p class="tit">
+												‧ 비자 서류 안내 및 제출
 											</p>
 											<div class="icon"></div>
 										</li>
@@ -363,13 +366,14 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
-                        </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의</span> 
+                        <span class="ireonjeom-i-dalla-yo">수속/컨설팅</span><span class="mong-seonsaeng-ui-keon-sel-ting-eun">을 추천합니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					검증된 학교 중심으로 수속을 진행하고 <br>
+					학생 맞춤형 유학 로드맵을 설계합니다.
+				</span>
             </div>
         </div>
     </div>

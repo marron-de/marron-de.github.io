@@ -155,25 +155,25 @@ if (!defined('_EYOOM_')) exit;
 									<ul class="service_box">
 										<li class="service_item">
 											<p class="tit">
-											1. 학교 선정 및 전공 상담
+												‧ 학교 선정 및 전공 상담
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2. 입학 서류 안내 및 검토
+												‧ 입학 서류 안내 및 검토
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3. 원서접수, 학사일정 관리 일괄
+												‧ 원서접수, 학사일정 관리 일괄
 											</p>
 											<p class="desc">1개교 선택</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												4. 숙소 안내, 정착 OT 및 현지 생활 가이드
+												‧ 숙소 안내, 정착 OT 및 현지 생활 가이드
 											</p>
 											<div class="icon"></div>
 										</li>
@@ -417,13 +417,14 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
-                        </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의</span> 
+                        <span class="ireonjeom-i-dalla-yo">수속/컨설팅</span><span class="mong-seonsaeng-ui-keon-sel-ting-eun">을 추천합니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					검증된 학교 중심으로 수속을 진행하고 <br>
+					학생 맞춤형 유학 로드맵을 설계합니다.
+				</span>
             </div>
         </div>
     </div>

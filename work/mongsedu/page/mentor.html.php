@@ -37,7 +37,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="title">
 					<span class="tit">국가별 멘토</span>
 				</div>
-                <div class="tab swiper tab_swiper" data-gappc="16" data-gapmob="12">
+                <div class="tab swiper tab_swiper" data-gappc="12" data-gapmob="12">
                     <ul class="tab_tit swiper-wrapper">
                         <li class="swiper-slide"><a href="#" class="show" id="tab-1">전체보기</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-2">대표원장</a></li>

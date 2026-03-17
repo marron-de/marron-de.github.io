@@ -49,7 +49,7 @@ if (!defined('_EYOOM_')) exit;
 					현지 학교 출신자들이 <br class="tablet">직접 경험한 <br class="pc">
 					노하우를 공유합니다.
 				</p>
-				<a href="" class="sub_btn typeA pc">몽선생 멘토 보러가기</a>
+				<a href="<?php echo G5_URL ?>/page/?pid=mentor" class="sub_btn typeA pc">몽선생 멘토 보러가기</a>
 			</div>
             <div class="imgbox">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_pc.png" alt="" class="monitor">

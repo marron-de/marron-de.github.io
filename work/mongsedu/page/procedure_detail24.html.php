@@ -170,31 +170,31 @@ if (!defined('_EYOOM_')) exit;
 									<ul class="service_box">
 										<li class="service_item">
 											<p class="tit">
-												1. 개인 포트폴리오 구성 (학생 입학전형 및 조건 상세분석)
+												‧ 개인 포트폴리오 구성 (학생 입학전형 및 조건 상세분석)
 											</p>
 											<p class="desc">1회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2. 전공 매칭 및 입학 전략 설정 (상향/적정/안정)
+												‧ 전공 매칭 및 입학 전략 설정 (상향/적정/안정)
 											</p>
 											<p class="desc">1회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3. 자소서 샘플제공 / 첨삭 관리
+												‧ 자소서 샘플제공 / 첨삭 관리
 											</p>
 											<p class="desc">2회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												4. 인터뷰 예시질문 제공 / 피드백관리 
+												‧ 인터뷰 예시질문 제공 / 피드백관리 
 											</p>
 											<p class="desc">2회</p>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												5. 원서접수 및 학교 행정처리 일괄
+												‧ 원서접수 및 학교 행정처리 일괄
 											</p>
 											<p class="desc">1회</p>
 										</li>
@@ -438,13 +438,14 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
-                        </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의</span> 
+                        <span class="ireonjeom-i-dalla-yo">수속/컨설팅</span><span class="mong-seonsaeng-ui-keon-sel-ting-eun">을 추천합니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					검증된 학교 중심으로 수속을 진행하고 <br>
+					학생 맞춤형 유학 로드맵을 설계합니다.
+				</span>
             </div>
         </div>
     </div>

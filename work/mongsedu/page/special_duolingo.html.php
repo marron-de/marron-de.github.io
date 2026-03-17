@@ -116,7 +116,7 @@ if (!defined('_EYOOM_')) exit;
 							<p class="desc">‧ 2개월 총 24강! 타이트하고 밀도 높은 수업을 해요.</p>
 							<p class="desc">‧ 단기간 확실한 목표달성이 가능해요.</p>
 						</div>
-						<a href="" class="more">
+						<a href="<?php echo G5_URL ?>/page/?pid=class_detail01" class="more">
 							<span class="txt">프로그램 자세히 보기</span>
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_blue.png" alt="" class="icon">
 						</a>
@@ -150,7 +150,7 @@ if (!defined('_EYOOM_')) exit;
 							<p class="desc">‧ 2개월 총 24강! 타이트하고 밀도 높은 수업을 해요.</p>
 							<p class="desc">‧ 단기간 확실한 목표달성이 가능해요.</p>
 						</div>
-						<a href="" class="more">
+						<a href="<?php echo G5_URL ?>/page/?pid=class_detail01" class="more">
 							<span class="txt">프로그램 자세히 보기</span>
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_green.png" alt="" class="icon">
 						</a>

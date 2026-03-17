@@ -34,7 +34,7 @@ if (!defined('_EYOOM_')) exit;
     <div class="link_area">
         <div class="container swiper link_swiper" data-gappc="10" data-gapmob="16" data-aos="fade-up">
 			<div class="swiper-wrapper counsel_link">
-				<a href="" class="link swiper-slide"><!--신규페이지작업-->
+				<a class="link swiper-slide" onclick="nocontent_modal()"><!--신규페이지작업-->
 					<div class="imgbox">
 						<div class="swiper icon_swiper">
 							<div class="swiper-wrapper">

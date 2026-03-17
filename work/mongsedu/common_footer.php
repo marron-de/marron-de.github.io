@@ -89,6 +89,7 @@
 </footer>
 
 
+<!-- mobile navigation -->
 <div class="navibar">
 	<div class="navitem">
 		<a href="<?php echo G5_URL; ?>" class="link">
@@ -134,5 +135,32 @@
 			</div>
 			<p class="tit">유튜브</p>
 		</a>
+	</div>
+</div>
+
+
+<!-- toast popup -->
+<div class="toast_popup">
+	<div class="txtbox">
+		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/toast_emoji1.png" alt=" " class="emoji">
+		<p class="txt">컨설팅 준비중 입니다.</p>
+	</div>
+</div>
+
+
+<!-- no content -->
+<div id="nocontent_modal" class="cm_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/modal_check2.svg" alt="" class="modal_icon">
+			<div class="modal_txtbox">
+				<p class="modal_tit">컨텐츠 업데이트 예정입니다</p>
+				<p class="modal_desc">
+					더 나은 서비스를 위해 <br>
+					컨텐츠를 준비하고 있습니다. <br>
+                </p>
+			</div>	
+		</div>	
 	</div>
 </div>

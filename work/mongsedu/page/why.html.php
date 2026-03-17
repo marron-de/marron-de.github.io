@@ -81,7 +81,7 @@ if (!defined('_EYOOM_')) exit;
 			<div class="slidebox">
 				<div class="swiper mentor_swiper why_swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t1.jpg" alt=""
 									class="img">
@@ -102,7 +102,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t2.jpg" alt=""
 									class="img">
@@ -123,7 +123,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t3.jpg" alt=""
 									class="img">
@@ -144,7 +144,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t4.jpg" alt=""
 									class="img">
@@ -165,7 +165,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t5.jpg" alt=""
 									class="img">
@@ -186,7 +186,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t6.jpg" alt=""
 									class="img">
@@ -207,7 +207,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t7.jpg" alt=""
 									class="img">
@@ -228,7 +228,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t8.jpg" alt=""
 									class="img">
@@ -249,7 +249,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t9.jpg" alt=""
 									class="img">
@@ -272,7 +272,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t10.jpg" alt=""
 									class="img">
@@ -293,7 +293,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t11.jpg" alt=""
 									class="img">
@@ -314,7 +314,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t12.jpg" alt=""
 									class="img">
@@ -335,7 +335,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t13.jpg" alt=""
 									class="img">
@@ -356,7 +356,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t14.jpg" alt=""
 									class="img">
@@ -377,7 +377,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t15.jpg" alt=""
 									class="img">
@@ -398,7 +398,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t16.jpg" alt=""
 									class="img">
@@ -419,7 +419,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t17.jpg" alt=""
 									class="img">
@@ -440,7 +440,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t18.jpg" alt=""
 									class="img">
@@ -461,7 +461,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t19.jpg" alt=""
 									class="img">
@@ -482,7 +482,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t20.jpg" alt=""
 									class="img">
@@ -503,7 +503,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t21.jpg" alt=""
 									class="img">
@@ -523,7 +523,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item">
+						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t22.jpg" alt=""
 									class="img">

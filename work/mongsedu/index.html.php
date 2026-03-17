@@ -90,7 +90,7 @@ if (!defined('_EYOOM_')) exit;
 			<div class="main_link swiper link_swiper" data-gappc="48" data-gapmob="16">
 				<ul class="swiper-wrapper">
 					<li class="swiper-slide">
-						<a href=""><!--신규페이지작업-->
+						<a onclick="nocontent_modal()"><!--신규페이지작업-->
 							<div class="swiper icon_swiper">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide item">
@@ -773,7 +773,8 @@ if (!defined('_EYOOM_')) exit;
 					<span class="tit">몽선생 <span class="color1">수속후기</span></span>
 				</div>
                 <p class="desc">
-                    나도 할 수 있을까 고민이 된다면 </br>
+                    <span class="pc">나도 할 수 있을까 고민이 된다면</span> 
+					<br class="pc">
                     <span class="bold">수강생들의 성공 경험</span>을 들어보세요!
                 </p>
             </div>

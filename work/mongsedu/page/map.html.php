@@ -76,7 +76,7 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<p class="sub">업무 시간</p>
-							<p class="tit">평일 09:30 ~ 20:00 / 토요일 11:00~15:00​</p>
+							<p class="tit">평일 10:00 ~ 17:00​</p>
 						</div>
 					</div>
 				</div>

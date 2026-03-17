@@ -85,7 +85,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">상담방식</p>
 												<p class="desc">
 													<span class="txt">
-														서울강남, 홍대입구(방문) 혹은 비대면 온라인
+														서울강남 (방문) 혹은 비대면 온라인
 													</span>
 												</p>
 											</div>
@@ -317,13 +317,15 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 상담은 
                         </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="ireonjeom-i-dalla-yo">이렇게 다릅니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					직접 경험하고 확인한 학교만 상담하며 <br>
+					학생의 성향과 진로를 가장 먼저 고려합니다.
+				</span>
             </div>
         </div>
     </div>

@@ -51,58 +51,58 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<p class="tit">말레이시아 국제학교</p>
+						<p class="tit">말레이시아 <br class="tablet">국제학교</p>
 					</a>
 					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail21" class="link swiper-slide">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon2.png" alt="" class="icon">
 							<span class="count">추천</span>
 						</div>
-						<p class="tit">싱가폴 사립대</p>
+						<p class="tit">싱가폴 <br class="tablet">사립대</p>
 					</a>
 					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail22" class="link swiper-slide">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon3.png" alt="" class="icon">
 							<span class="count">추천</span>
 						</div>
-						<p class="tit">싱가폴 예술대</p>
+						<p class="tit">싱가폴 <br class="tablet">예술대</p>
 					</a>
 					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail23" class="link swiper-slide">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon4.png" alt="" class="icon">
 						</div>
-						<p class="tit">싱가폴 국립대</p>
+						<p class="tit">싱가폴 <br class="tablet">국립대</p>
 					</a>
 					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail26" class="link swiper-slide">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon5.png" alt="" class="icon">
 						</div>
-						<p class="tit">말레이시아 국립대</p>
+						<p class="tit">말레이시아 <br class="tablet">국립대</p>
 					</a>
 					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail25" class="link swiper-slide">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon6.png" alt="" class="icon">
 							<span class="count">추천</span>
 						</div>
-						<p class="tit">말레이시아 사립대</p>
+						<p class="tit">말레이시아 <br class="tablet">사립대</p>
 					</a>
 					<a href="<?php echo G5_URL ?>/page/?pid=procedure_detail24" class="link swiper-slide">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon8.png" alt="" class="icon">
 						</div>
-						<p class="tit">홍콩 대학</p>
+						<p class="tit">홍콩 <br class="tablet">대학</p>
 					</a>
-					<a href="" class="link swiper-slide">
+					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.')">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
 						</div>
-						<p class="tit">싱가폴 국제학교</p>
+						<p class="tit">싱가폴 <br class="tablet">국제학교</p>
 					</a>
-					<a href="" class="link swiper-slide">
+					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.')">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
 						</div>
-						<p class="tit">UC 계열 주립대</p>
+						<p class="tit">UC 계열 <br class="tablet">주립대</p>
 					</a>
 				</div>
 				<div class="swiper-scrollbar scrollbar"></div>
@@ -466,7 +466,7 @@ if (!defined('_EYOOM_')) exit;
                 <ul class="panel">
                     <li>
                         <ul class="mentor_list">
-                            <li>
+                            <li onclick="showToast()">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure01.jpg" alt="한국에서 미국대학 편입준비">
 									<div class="img_txtbox">
@@ -491,7 +491,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li onclick="showToast()">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure02.jpg" alt="UC버클리 출신 관리하는 입학컨설팅">
 									<div class="img_txtbox">
@@ -518,7 +518,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li onclick="showToast()">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure03.jpg" alt="패스웨이 과정으로 미국대학 쉽게가기">
 									<div class="img_txtbox">
@@ -543,7 +543,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li onclick="showToast()">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04.jpg" alt="국내 내신으로 미국 TOP100대학 입학" class="pc">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04_m.jpg" alt="국내 내신으로 미국 TOP100대학 입학" class="tablet">
@@ -569,7 +569,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li>
+                            <li onclick="showToast()">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure05.jpg" alt="미국+싱가포르 2개국 입학 컨설팅">
 									<div class="img_txtbox ver3">
@@ -723,11 +723,4 @@ if (!defined('_EYOOM_')) exit;
             </div>
         </div>
     </div>
-</div>
-
-<div class="toast_popup">
-	<div class="txtbox">
-		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/toast_emoji1.png" alt=" " class="emoji">
-		<p class="txt">컨설팅 준비중 입니다.</p>
-	</div>
 </div>

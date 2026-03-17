@@ -79,7 +79,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 대인관계 상담</p>
                         </div>
                     </li>
-                    <li onclick="noebook_modal()">
+                    <li onclick="nocontent_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook06.jpg" alt="시드니 대학 상담">
                         </div>
@@ -190,7 +190,7 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="ebook_list">
                 <ul>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook07.jpg" alt="유학서비스 책자">
                         </div>
@@ -199,7 +199,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>수속, CLASS 등 비용 안내</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook08.jpg" alt="말레이시아 국제학교 책자">
                         </div>
@@ -208,7 +208,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>40여개 학교정보, MAP</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook09.jpg" alt="싱가포르 대학 책자">
                         </div>
@@ -217,7 +217,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>국립대, 사립대, 예술대 통합본</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook10.jpg" alt="말레이시아 대학 책자">
                         </div>
@@ -226,7 +226,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>사립대, 국립대 통합본</p>
                         </div>
                     </li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook11.jpg" alt="미국 대학 책자">
                         </div>
@@ -235,7 +235,7 @@ if (!defined('_EYOOM_')) exit;
 							<p>주요 TOP100대학 </p>
 						</div>
                     </li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
                         <div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook12.jpg" alt="영국 대학 책자">
                         </div>
@@ -258,7 +258,7 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="ebook_list2">
 				 <ul>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd01.jpg" alt="싱가포르 사립대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -281,7 +281,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd02.jpg" alt="싱가포르 국립대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -304,7 +304,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd03.jpg" alt="싱가포르 예술대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -327,7 +327,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd04.jpg" alt="말레이시아 대학 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -350,7 +350,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd05.jpg" alt="말레이시아 국제학교 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -373,7 +373,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</li>
-                    <li onclick="ebook_modal(0)">
+                    <li onclick="nocontent_modal()">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd06.jpg" alt="미국대학 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -880,23 +880,6 @@ if (!defined('_EYOOM_')) exit;
 		</div>
 	</div>
 </div>
-
-<div id="noebook_modal" class="cm_modal">	
-	<div class="cm_modal_inner">
-		<button type="button" class="cm_modal_close"></button>
-		<div class="cm_modal_box">
-			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/modal_check2.svg" alt="" class="modal_icon">
-			<div class="modal_txtbox">
-				<p class="modal_tit">콘텐츠 업데이트 예정입니다</p>
-				<p class="modal_desc">
-					더 나은 서비스를 위해 <br>
-					콘텐츠를 준비하고 있습니다. <br>
-                </p>
-			</div>	
-		</div>	
-	</div>
-</div>
-
 
 <div class="cm_modal privacy_modal">	
 	<div class="cm_modal_inner">

@@ -98,7 +98,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
                     <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_phone.svg" alt="" class="icon">
                     <div class="text_area">
                         <span>전화상담</span>
-                        <p>010 8114 9003</p>
+                        <p>02)6052-9003</p>
                     </div>
                 </li>
                 <li>

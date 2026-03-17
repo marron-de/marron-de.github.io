@@ -127,7 +127,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="frame-section ver3">
 									<div class="frame-titbox">
 										<p class="frame-title">
-											몽선생은 <span class="color">한국 유일한 공식 사무소</span> 입니다.
+											몽선생은 <span><span class="color">한국 유일한 공식 사무소</span>입니다.</span>
 										</p>
 									</div>
 									<div class="pointbox">
@@ -186,37 +186,37 @@ if (!defined('_EYOOM_')) exit;
 									<ul class="service_box">
 										<li class="service_item">
 											<p class="tit">
-												1. 포트폴리오 작품 구성 (전공별 합격샘플제공)
+												‧ 포트폴리오 작품 구성 (전공별 합격샘플제공)
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												2. 1:1 온라인 면담 및 작품 피드백 (최소5회+)
+												‧ 1:1 온라인 면담 및 작품 피드백 (최소5회+)
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												3. 자소서 샘플제공 / 첨삭 관리
+												‧ 자소서 샘플제공 / 첨삭 관리
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												4. 인터뷰 예시질문 제공 / 피드백관리
+												‧ 인터뷰 예시질문 제공 / 피드백관리
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-												5. 원서접수 및 학교 행정처리 일괄
+												‧ 원서접수 및 학교 행정처리 일괄
 											</p>
 											<div class="icon"></div>
 										</li>
 										<li class="service_item">
 											<p class="tit">
-											6. 비자신청, 숙소 안내 및 정착가이드
+												‧ 비자신청, 숙소 안내 및 정착가이드
 											</p>
 											<div class="icon"></div>
 										</li>
@@ -488,13 +488,14 @@ if (!defined('_EYOOM_')) exit;
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu">교직원들이 만든 유학원</span >
                     <div
                         class="title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11">
-                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의 컨설팅은
-                        </span >
-                        <span class="ireonjeom-i-dalla-yo">이런점이 달라요!</span>
+                        <span class="mong-seonsaeng-ui-keon-sel-ting-eun">몽선생의</span> 
+                        <span class="ireonjeom-i-dalla-yo">수속/컨설팅</span><span class="mong-seonsaeng-ui-keon-sel-ting-eun">을 추천합니다!</span>
                     </div>
                 </div>
-                <span
-                    class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">임시 데이터입니다. 추후 수정 예정입니다.<br/>일상의 소소한 순간들을 함께 나누는 공간입니다.</span >
+                <span class="im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida">
+					검증된 학교 중심으로 수속을 진행하고 <br>
+					학생 맞춤형 유학 로드맵을 설계합니다.
+				</span>
             </div>
         </div>
     </div>

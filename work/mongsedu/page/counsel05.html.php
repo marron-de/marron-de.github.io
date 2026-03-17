@@ -65,7 +65,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
                     <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_phone.svg" alt="" class="icon">
                     <div class="text_area">
                         <span>전화상담</span>
-                        <p>010 8114 9003</p>
+                        <p>02)6052-9003</p>
                     </div>
                 </li>
                 <li>
@@ -163,7 +163,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">문의사항/희망일자</p>
+						<p class="form_label">문의사항/희망일자 (방문상담 평일 오전10시~오후5시)</p>
 						<div class="input_box">
 							<textarea name="cs_content" class="input_text" placeholder="상담 원하는 날짜와, 문의사항을 남겨주세요." required></textarea>
 							<!-- <?php echo $editor_html; ?> -->
