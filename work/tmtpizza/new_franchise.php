@@ -339,21 +339,24 @@
 
 		<section class="sub_section fs9 mh100vh">
 			<div class="bgbox">
-				<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_line.webp" alt="" class="bg_line" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="400" data-aos-anchor-placement="top-center" >
+				<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_line.webp" alt="" class="bg_line" data-aos="fade"  data-aos-anchor=".fs9" data-aos-delay="200" data-aos-anchor-placement="top-center"> 
 			</div>
 			<div class="inner2">
-				<div class="titbox" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="1000" data-aos-anchor-placement="top-center">
+				<div class="titbox sticky_tit" data-aos="fade-up" data-aos-anchor=".fs9" data-aos-delay="0" data-aos-anchor-placement="top-center">
 					<h1 class="tit fs_txt1">
-						AI를 활용한 <br>
-						빅데이터 기반의 상권분석
+						AI를 활용한 <br> 빅데이터 기반의 상권분석
 					</h1>
 				</div>
 				<div class="imgbox">
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_text.png" alt="" class="bg_text" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="600" data-aos-anchor-placement="top-center" >
-					<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.webp" alt="" class="img"  data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="800" data-aos-anchor-placement="top-center" >
+					<div class="bg_text">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_bg_text.png" alt="" class="text_img" data-aos="fade-up"  data-aos-anchor=".fs9" data-aos-delay="400" data-aos-anchor-placement="top-center">
+					</div>
+					<div class="ai_box" data-aos="fade-up" data-aos-anchor=".fs9" data-aos-delay="600" data-aos-anchor-placement="top-center">
+						<img src="<?php echo G5_THEME_URL ?>/img/new/fs9_AI.webp" alt="" class="img">
+					</div>
 				</div>
 				<div class="contbox">
-					<p class="tit" data-aos="fade" data-aos-anchor=".fs9" data-aos-duration="500" data-aos-delay="1000" data-aos-anchor-placement="top-center">
+					<p class="tit" data-aos="fade-up" data-aos-anchor=".fs9" data-aos-delay="800" data-aos-anchor-placement="top-center">
 						유동인구 숫자가 답은 아닙니다 <br>
 						피자를 시켜먹는 사람은 따로 있습니다
 					</p>
@@ -362,7 +365,7 @@
 						<div class="label typeB" data-aos="fade-up" data-aos-anchor=".fs9 .labelbox" data-aos-duration="500" data-aos-delay="400" data-aos-anchor-placement="top-center">티엠티 운영 데이터로 실제 주문 동선 2차 확인</div>
 					</div>
 				</div>
-			</div>				
+			</div>              
 		</section>
 
 		<section class="sub_section fs10 mh100vh">
@@ -1024,7 +1027,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide item">
 							<div class="imgbox">
-								<a href="" class="link" target="_blank">
+								<a href="https://www.youtube.com/watch?v=bkNrHx_uJOg" class="link" target="_blank">
 									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img1.jpg" alt="" class="img" >
 								</a>
 							</div>
@@ -1047,7 +1050,7 @@
 						</div>
 						<div class="swiper-slide item">
 							<div class="imgbox">
-								<a href="" class="link" target="_blank">
+								<a href="https://www.youtube.com/watch?v=6HlnLFZTLm8&t" class="link" target="_blank">
 									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img2.jpg" alt="" class="img" >
 								</a>
 							</div>
@@ -1067,7 +1070,7 @@
 						</div>
 						<div class="swiper-slide item">
 							<div class="imgbox">
-								<a href="" class="link" target="_blank">
+								<a href="https://www.youtube.com/watch?v=Ft0zC1VG7yk&t" class="link" target="_blank">
 									<img src="<?php echo G5_THEME_URL ?>/img/new/fs15_img3.jpg" alt="" class="img" >
 								</a>
 							</div>
