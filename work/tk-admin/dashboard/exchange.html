@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout exchange_wrap sideopen" data-title="환율설정" data-icon="ph-money-wavy">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="sub_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">				
+				<div class="content_title flexible between">
+					<p class="page_title">
+						<i class="ph-fill ph-money-wavy icon"></i>
+						환율설정
+					</p>
+				</div>
+
+				<div class="content_list content_tbl">
+					<form name="frm_list" id="frm_list" method="POST">
+						<div class="tbl_top">
+							<div class="leftbox">
+								<p class="total">Total <span class="color">10</span></p>
+							</div>
+							<div class="rightbox full">
+								<button type="button" class="button size_sm auto typeE" onclick="addExchange_modal()">등록</button>
+							</div>
+						</div>
+						<div class="tbl_area gap">
+							<div class="bo_list tbl_box exchange_tbl_box1">
+								<table class="tbl min_auto" id="exchange_list_tbl">
+									<colgroup>
+										<col style="width: 80px;">
+										<col style="width: 80px;">
+										<col style="width: 80px;">
+										<col style="width: 130px;">
+										<col style="width: 130px;">
+										<col style="width: 100px;">
+										<col style="width: 164px;">
+										<col style="width: 140px;">	
+										<col style="width: 160px;">
+										<col style="width: 160px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="사용">사용</th>
+											<th data-th="순서">순서</th>
+											<th data-th="No">No</th>
+											<th data-th="국가명">국가명</th>
+											<th data-th="화폐단위(영문)">화폐단위(영문)</th>
+											<th data-th="화폐기호">화폐기호</th>
+											<th data-th="교환가격(KRW)">교환가격(KRW)</th>
+											<th data-th="절삭단위">절삭단위</th>
+											<th data-th="올림/반올림/버림">올림/반올림/버림</th>
+											<th data-th="수정">수정</th>
+										</tr>
+									</thead>
+									<tbody>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="1" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">1</td>
+											<td data-th="국가명">미국</td>
+											<td data-th="화폐단위(영문)">USD</td>
+											<td data-th="화폐기호">$</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												1,480원	
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="2" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">2</td>
+											<td data-th="국가명">홍콩</td>
+											<td data-th="화폐단위(영문)">HKD</td>
+											<td data-th="화폐기호">＄</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												189원	
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="3" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">3</td>
+											<td data-th="국가명">대만</td>
+											<td data-th="화폐단위(영문)">TWD</td>
+											<td data-th="화폐기호">＄</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												45원	
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="4" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">4</td>
+											<td data-th="국가명">중국</td>
+											<td data-th="화폐단위(영문)">CNY</td>
+											<td data-th="화폐기호">￥</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												210원	
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="5" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">5</td>
+											<td data-th="국가명">싱가포르</td>
+											<td data-th="화폐단위(영문)">SGD</td>
+											<td data-th="화폐기호">＄</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												1,150원
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="6" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">6</td>
+											<td data-th="국가명">말레이시아</td>
+											<td data-th="화폐단위(영문)">MYR</td>
+											<td data-th="화폐기호">＄</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												370원	
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="7" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">7</td>
+											<td data-th="국가명">태국</td>
+											<td data-th="화폐단위(영문)">THB</td>
+											<td data-th="화폐기호">$</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												44원	
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="8" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">8</td>
+											<td data-th="국가명">필리핀</td>
+											<td data-th="화폐단위(영문)">PHP</td>
+											<td data-th="화폐기호">$</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												22원
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="사용">
+												<span class="iconbadge success size_md"></span>
+											</td>
+											<td data-th="순서">
+												<div class="input_box">
+													<input type="text" value="9" class="input_text size_md align_center" maxlength="3"autocomplete="off">
+												</div>
+											</td>
+											<td data-th="No">9</td>
+											<td data-th="국가명">일본</td>
+											<td data-th="화폐단위(영문)">JPY</td>
+											<td data-th="화폐기호">¥</td>
+											<td data-th="교환가격(KRW)" class="align_right">
+												935원
+											</td>
+											<td data-th="절삭단위">100원</td>
+											<td data-th="올림/반올림/버림">반올림</td>
+											<td data-th="수정">
+												<div class="tbl_btnbox center">
+													<button type="button" class="button typeE auto size_sm" onclick="editExchange_modal()">수정</button>
+													<button type="button" class="button typeF auto size_sm">삭제</button>
+												</div>
+											</td>
+										</tr>		
+									</tbody>
+								</table>
+							</div>
+							<div class="bo_list tbl_box exchange_tbl_box2">
+								<table class="tbl min_auto" id="exchange_list_tbl2">
+									<colgroup>
+										<col style="width: 130px;">
+										<col style="width: 130px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th data-th="실시간 환율" colspan="2">
+												실시간 환율 : 2026-03-18
+											</th>
+										</tr>
+									</thead>
+									<tbody>		
+										<tr>
+											<td data-th="화폐단위(영문)">HKD</td>
+											<td data-th="환율">
+												1,487.80원
+											</td>
+										</tr>											
+										<tr>
+											<td data-th="화폐단위(영문)">USD</td>
+											<td data-th="환율">
+												189.85원
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="화폐단위(영문)">TWD</td>
+											<td data-th="환율">
+												46.64원
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="화폐단위(영문)">CNY</td>
+											<td data-th="환율">
+												216.13원
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="화폐단위(영문)">SGD</td>
+											<td data-th="환율">
+												1,165.76원
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="화폐단위(영문)">MYR</td>
+											<td data-th="환율">
+												379.11원
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="화폐단위(영문)">THB</td>
+											<td data-th="환율">
+												45.99원
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="화폐단위(영문)">PHP</td>
+											<td data-th="환율">
+												24.95원
+											</td>
+										</tr>		
+										<tr>
+											<td data-th="화폐단위(영문)">JPY</td>
+											<td data-th="환율">
+												936.40원
+											</td>
+										</tr>		
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="tbl_bottom">
+							<p class="desc">※ 환율은 매일 09:00에 자동 업데이트되어 시스템 가격에 반영됩니다.</p>
+						</div>
+					</form>
+					<div class="pagination mt">
+						<button type="button" class="page page_btn start"></button>
+						<button type="button" class="page page_btn prev"></button>
+						<a href="#none" class="page page_link">1</a>
+						<a href="#none" class="page page_link active">2</a>
+						<a href="#none" class="page page_link">3</a>
+						<a href="#none" class="page page_link">4</a>
+						<button type="button" class="page page_btn next"></button>
+						<button type="button" class="page page_btn end"></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- 환율등록 모달 -->
+		<div id="addExchange_modal" class="modal exchange_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">환율등록</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_write" id="frm_write" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 160px;">
+									<col style="width: 378px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="화폐단위(한글)">화폐단위(한글)</th>
+										<td data-th="화폐단위(한글)">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" placeholder="예) 원, 달러">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="화폐단위(영문)">화폐단위(영문)</th>
+										<td data-th="화폐단위(영문)">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" placeholder="예) KRW, USD">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="화폐기호">화폐기호</th>
+										<td data-th="화폐기호">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" placeholder="예) ￦,＄">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="교환가격(KRW)">교환가격(KRW)</th>
+										<td data-th="교환가격(KRW)">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text size_md">
+												<span class="label_text input_txt size_md">원(KRW)</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="절삭단위">절삭단위</th>
+										<td data-th="절삭단위">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_unit" id="ext_unit_2" class="input_radio" checked>
+													<label for="ext_unit_2" class="label_radio">100원단위</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_unit" id="ext_unit_1" class="input_radio">
+													<label for="ext_unit_1" class="label_radio">1,000원단위</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="올림/반올림/버림">올림/반올림/버림</th>
+										<td data-th="올림/반올림/버림">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_round" id="ext_round_1" class="input_radio">
+													<label for="ext_round_1" class="label_radio">올림</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_round" id="ext_round_2" class="input_radio" checked>
+													<label for="ext_round_2" class="label_radio">반올림</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_round" id="ext_round_3" class="input_radio">
+													<label for="ext_round_3" class="label_radio">버림</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 환율수정 모달 -->
+		<div id="editExchange_modal" class="modal exchange_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">환율수정</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="frm_write" id="frm_write" method="post" enctype="multipart/form-data" autocomplete="off" class="form">
+						<div class="tbl_box">
+							<table class="tbl space_auto">
+								<colgroup>
+									<col style="width: 160px;">
+									<col style="width: 378px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th data-th="화폐단위(한글)">화폐단위(한글)</th>
+										<td data-th="화폐단위(한글)">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="미국" placeholder="예) 원, 달러">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="화폐단위(영문)">화폐단위(영문)</th>
+										<td data-th="화폐단위(영문)">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="USD" placeholder="예) KRW, USD">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="화폐기호">화폐기호</th>
+										<td data-th="화폐기호">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="$" placeholder="예) ￦,＄">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="교환가격(KRW)">교환가격(KRW)</th>
+										<td data-th="교환가격(KRW)">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text size_md" value="1480">
+												<span class="label_text input_txt size_md">원(KRW)</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="절삭단위">절삭단위</th>
+										<td data-th="절삭단위">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_unit" id="ext_unit_2" class="input_radio" checked>
+													<label for="ext_unit_2" class="label_radio">100원단위</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_unit" id="ext_unit_1" class="input_radio">
+													<label for="ext_unit_1" class="label_radio">1,000원단위</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th data-th="올림/반올림/버림">올림/반올림/버림</th>
+										<td data-th="올림/반올림/버림">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_round" id="ext_round_1" class="input_radio">
+													<label for="ext_round_1" class="label_radio">올림</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_round" id="ext_round_2" class="input_radio" checked>
+													<label for="ext_round_2" class="label_radio">반올림</label>
+												</div>
+												<div class="radio_box size_md">
+													<input type="radio" name="ext_round" id="ext_round_3" class="input_radio">
+													<label for="ext_round_3" class="label_radio">버림</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">등록</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/sub_header.html', '#sub_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav.html', '#sidenav');
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// addExchange modal
+		function addExchange_modal() {
+			$(".modal").removeClass("show");
+			$("#addExchange_modal").addClass("show");
+		}
+
+		// editExchange modal
+		function editExchange_modal() {
+			$(".modal").removeClass("show");
+			$("#editExchange_modal").addClass("show");
+		}
+	</script>
+
+
+
+</body>
+
+</html>
