@@ -42,158 +42,242 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img1.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img1_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">엘리스 스미스</p>
+						<p class="title">넥서스</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img2.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img2_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">제다 영국</p>
+						<p class="title">엡솜</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img3.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img3_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">TLS</p>
+						<p class="title">IGB</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img4.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img4_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">ISP</p>
+						<p class="title">헬프</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img5.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img5_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">KDU</p>
+						<p class="title">텐비</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img6.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img6_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">넥서스</p>
+						<p class="title">ISP</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img7.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img7_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">스리 베스타리</p>
+						<p class="title">Sri KDU </p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img8.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img8_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">래플스</p>
+						<p class="title">스리베스타리</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img9.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img9_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">스트레이츠</p>
+						<p class="title">스트레이츠라왕</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img10.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img10_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">세이풀</p>
+						<p class="title">선웨이</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img11.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img11_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">킹슬리</p>
+						<p class="title">페닌슐라</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img12.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img12_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">페어뷰</p>
+						<p class="title">오아시스</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img13.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img13_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">ISKL</p>
+						<p class="title">페어뷰</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img14.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img14_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">MKIS</p>
+						<p class="title">세이폴</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img15.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img15_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">오아시스</p>
+						<p class="title">킹슬리</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img16.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img16_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">선웨이</p>
+						<p class="title">래플스</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img17.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img17_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">엡솜</p>
+						<p class="title">세인트조셉</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img18.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img18_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">헬프</p>
+						<p class="title">킹헨리</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img19.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img19_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">IGB</p>
+						<p class="title">이튼</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img20.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img20_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">UCIS</p>
+						<p class="title">UCSI</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img21.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img21_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">텐비</p>
+						<p class="title">테일러스</p>
 					</div>
 					<div class="item">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img22.png" alt="" class="img pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img22_m.png" alt="" class="img tablet">
 						</div>
-						<p class="title">페니슐라</p>
+						<p class="title">AISM</p>
+					</div>
+					<div class="item">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img23.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img23_m.png" alt="" class="img tablet">
+						</div>
+						<p class="title">APIS</p>
+					</div>
+					<div class="item">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img24.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img24_m.png" alt="" class="img tablet">
+						</div>
+						<p class="title">매트릭스</p>
+					</div>
+					<div class="item">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img25.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img25_m.png" alt="" class="img tablet">
+						</div>
+						<p class="title">드위에마스</p>
+					</div>
+					<div class="item">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img26.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img26_m.png" alt="" class="img tablet">
+						</div>
+						<p class="title">락클린</p>
+					</div>
+					<div class="item">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img27.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img27_m.png" alt="" class="img tablet">
+						</div>
+						<p class="title">콩코드</p>
+					</div>
+					<div class="item">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img28.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img28_m.png" alt="" class="img tablet">
+						</div>
+						<p class="title">차터하우스</p>
+					</div>
+					<div class="item">
+						<div class="imgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img29.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univ_img29_m.png" alt="" class="img tablet">
+						</div>
+						<p class="title">BSKL</p>
+					</div>
+				</div>
+				<div class="univ_optwrap">
+					<p class="title">
+						<span class="color">+ 유료수속</span> 국제학교 옵션
+					</p>
+					<div class="univ_listbox univ_opt_listbox">
+						<div class="item">
+							<div class="imgbox">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img1.png" alt="" class="img pc">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img1_m.png" alt="" class="img tablet">
+							</div>
+							<p class="title">엘리스 스미스</p>
+						</div>
+						<div class="item">
+							<div class="imgbox">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img2.png" alt="" class="img pc">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img2_m.png" alt="" class="img tablet">
+							</div>
+							<p class="title">ISKL</p>
+						</div>
+						<div class="item">
+							<div class="imgbox">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img3.png" alt="" class="img pc">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img3_m.png" alt="" class="img tablet">
+							</div>
+							<p class="title">MKIS</p>
+						</div>
+						<div class="item">
+							<div class="imgbox">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img4.png" alt="" class="img pc">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/malay_univopt_img4_m.png" alt="" class="img tablet">
+							</div>
+							<p class="title">가든</p>
+						</div>
 					</div>
 				</div>
 				<div class="btnbox">
-					<button type="button" class="sub_btn typeA more_univ">
+					<button type="button" class="sub_btn typeA more_univ ver2">
 						국제학교 옵션 <span class="change"> 더보기 </span>
 					</button>
 				</div>

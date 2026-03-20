@@ -116,12 +116,9 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="line-2a"></div>
                                 <div class="frame-section" id="sec02">
                                     <div class="frame-titbox between">
-                                        <span class="frame-title">답사 가능 학교 리스트</span >
+                                        <span class="frame-title">답사프로그램</span >
 										<button type="button" class="school_moreview">
-											<span class="txt">
-												<span class="pc">30개</span>
-												 전체보기
-											</span>
+											<span class="txt">전체보기</span>
 											<span class="arrow"></span>
 										</button>
                                     </div>
@@ -354,7 +351,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="top">1DAY 패키지</div>
 											<div class="cont">
 												<p class="tit">
-													<span class="txt">150,000원</span>
+													<span class="txt">250,000원</span>
 													<small>오전 10시~오후 5시</small>
 												</p>
 												<div class="list">

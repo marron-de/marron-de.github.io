@@ -281,7 +281,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="btn_area">
                                     <a class="btn normal" href="#none">자세히 보기</a>
-                                    <a class="btn confirm" href="#none">신청마감</a>
+                                    <a class="btn confirm" href="#none" onclick="showToast('신청 마감된 설명회입니다')">신청마감</a>
                                 </div>
                             </li>
                             <li class="swiper-slide end">
@@ -316,7 +316,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="btn_area">
                                     <a class="btn normal" href="#none">자세히 보기</a>
-                                    <a class="btn confirm" href="#none">신청마감</a>
+                                    <a class="btn confirm" href="#none" onclick="showToast('신청 마감된 설명회입니다')">신청마감</a>
                                 </div>
                             </li>
                         </ul>
@@ -433,7 +433,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="btn_area">
                                     <a class="btn normal" href="#none">자세히 보기</a>
-                                    <a class="btn confirm" href="#none">신청마감</a>
+                                    <a class="btn confirm" href="#none" onclick="showToast('신청 마감된 설명회입니다')">신청마감</a>
                                 </div>
                             </li>
                         </ul>
@@ -774,7 +774,6 @@ if (!defined('_EYOOM_')) exit;
 				</div>
                 <p class="desc">
                     <span class="pc">나도 할 수 있을까 고민이 된다면</span> 
-					<br class="pc">
                     <span class="bold">수강생들의 성공 경험</span>을 들어보세요!
                 </p>
             </div>
