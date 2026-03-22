@@ -92,7 +92,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-25  class_sec2">
                                     <div class="frame-section">
                                         <div class="frame-27">
-                                            <span class="frame-title">1:1 영어 기초반 CLASS 가 특별한 4가지 이유</span>
+                                            <span class="frame-title">영어 기초반 1:1 CLASS가 특별한 4가지 이유</span>
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
@@ -308,7 +308,7 @@ if (!defined('_EYOOM_')) exit;
                                     </div> -->
                                     <div class="text_area">
 										<p class="title">
-											<span class="color">1:1 영어회화 (유학영어)</span> 학습 목표
+											<span class="color">영어 기초반 1:1 </span> 학습 목표
 										</p>
 										<div class="descbox">
 											<p>1. 유학 생활 및 학업 환경에서 필요한 실용 영어 회화 능력 향상</p>

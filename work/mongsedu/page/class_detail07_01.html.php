@@ -52,14 +52,14 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-1d">
                         <div class="tags-1e">
                             <span class="best">BEST</span>
-                        </div>						
-                        <div class="tag">
-                            <span>체험반</span>
+                        </div>                      
+                       <!--  <div class="tag">
+                            <span>발표수업</span>
                         </div>
                         <div class="tag">
-                            <span>정규반</span>
+                            <span>소규모</span>
                         </div>
-                        <!-- <div class="keulraeseu">
+                        <div class="keulraeseu">
                             <span class="yeong-eo">1:1 클래스</span>
                         </div>
                         <div class="frame-1f">
@@ -87,12 +87,12 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>
-													입학시험 정규반 수강료
-													<small>1회</small>
+													토론/에세이 수강료
+													<small>12회</small>
 												</span>
 												<div class="costbox">
-													<span class="tablet">80,000원</span>
-                                                	<span class="cost">회당 80,000원</span>
+													<span class="tablet">600,000원</span>
+                                                	<span class="cost">회당 50,000원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -101,11 +101,11 @@ if (!defined('_EYOOM_')) exit;
 													<ul>
 														<li>
 															<p>‧ 수업기간</p>
-															<p>1회</p>
+															<p>2개월 (총 12회)</p>
 														</li>
 														<li>
 															<p>‧ 강의시간</p>
-															<p>회차당 50분</p>
+															<p>회차당 60분</p>
 														</li>
 														<li>
 															<p>‧ 선생님</p>
@@ -113,61 +113,15 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 														<li>
 															<p>‧ 수업정원</p>
-															<p>1:1관리</p>
+															<p>최대 6인</p>
 														</li>
 														<li>
 															<p>‧ 교재비</p>
-															<p>없음</p>
+															<p>25,000원 (수강료 불포함)</p>
 														</li>
 													</ul>
 													<div class="side">
-														<p class="price">80,000원</p>
-														<div class="price ver2">
-															<small>1/회</small>
-															<span>80,000원</span>
-														</div>
-													</div>
-												</div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tit">
-                                                <span>
-													입학시험 정규반 수강료
-													<small>1개월</small>
-												</span>
-												<div class="costbox">
-													<span class="tablet">300,000원</span>
-													<span class="cost">회당 50,000원</span>
-												</div>
-                                            </div>
-                                            <div class="detail">
-                                                <span class="tit">수업비용 포함 내용</span>
-												<div class="de_box">
-													<ul>
-														<li>
-															<p>‧ 수업기간</p>
-															<p>1개월 (총 6회)</p>
-														</li>
-														<li>
-															<p>‧ 강의시간</p>
-															<p>회차당 50분</p>
-														</li>
-														<li>
-															<p>‧ 선생님</p>
-															<p>1명</p>
-														</li>
-														<li>
-															<p>‧ 수업정원</p>
-															<p>1:1관리</p>
-														</li>
-														<li>
-															<p>‧ 교재비</p>
-															<p>없음</p>
-														</li>
-													</ul>
-													<div class="side">
-														<p class="price">300,000원</p>
+														<p class="price">600,000원</p>
 														<div class="price ver2">
 															<small>1/회</small>
 															<span>50,000원</span>
@@ -210,13 +164,13 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">-</span>
+                                        <span class="span-text-15a">600,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">-</span>
+                                        <span class="interview">유학 필수 에세이·리서치·토론을 12강으로 집중 훈련해 자료조사·리포트·프레젠테이션까지 실전 아카데믹 라이팅과 영어 기본기를 강화합니다.</span>
                                     </div>
                                     <div class="button">
                                         <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">

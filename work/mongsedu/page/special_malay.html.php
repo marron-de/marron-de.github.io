@@ -278,7 +278,7 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="btnbox">
 					<button type="button" class="sub_btn typeA more_univ ver2">
-						국제학교 옵션 <span class="change"> 더보기 </span>
+						국제학교 옵션 <span class="change">더보기</span>
 					</button>
 				</div>
 			</div>

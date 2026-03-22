@@ -72,7 +72,7 @@
 					을 준비하고 싶다면?
 				</p>
 			</a>
-			<a href="" class="btn tablet">클래스 바로가기</a>
+			<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="btn tablet">클래스 바로가기</a>
 			<button href="" class="today_btn tablet">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/today_btn_x.png" alt="" class="icon">	
 				<span class="txt">오늘 하루 동안 이 창을 열지 않음</span>
@@ -111,6 +111,9 @@
 						</li>
 						<li>
 							<a href="<?php echo G5_URL ?>/page/?pid=company" class="link">유학원소개</a>
+						</li>
+						<li>
+							<a href="<?php echo G5_URL ?>/page/?pid=mentor" class="link">상담사 소개</a>
 						</li>
 						<li>
 							<a href="<?php echo G5_URL ?>/page/?pid=why" class="link">WHY 몽선생</a>

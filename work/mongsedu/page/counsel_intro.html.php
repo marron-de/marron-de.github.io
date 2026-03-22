@@ -401,7 +401,7 @@ if (!defined('_EYOOM_')) exit;
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t2.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt=""
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt=""
 													class="flag">
 											</div>
 										</div>
@@ -534,7 +534,7 @@ if (!defined('_EYOOM_')) exit;
 										<div class="txtbox">
 											<div class="top">
 												<p class="name">김소연 실장</p>
-												<p class="desc">칭화대 국제관계 석사</p>
+												<p class="desc">kaplan 재단 교직원 출신</p>
 											</div>
 											<div class="bottom">
 												<p class="tag">미국/아시아 전문</p>
@@ -560,7 +560,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">교육업 경력 10년</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">수업/CLASS 전문</p>
+												<p class="tag">CLASS 통합관리</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -602,7 +602,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">연세대학교 컴퓨터과학</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">컴퓨터공학 대비반 전담</p>
+												<p class="tag">해외대학 대비반</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -623,7 +623,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">라셀 예술대 그래픽</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">포트폴리오 전문</p>
+												<p class="tag">예술대 수업 (통합)</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -671,7 +671,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(15);">
+									<!-- <div class="swiper-slide item" onclick="mentor_modal(15);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t15.jpg" alt=""
 												class="img">
@@ -691,7 +691,7 @@ if (!defined('_EYOOM_')) exit;
 													class="more">
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="swiper-slide item" onclick="mentor_modal(16);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t16.jpg" alt=""
@@ -739,7 +739,7 @@ if (!defined('_EYOOM_')) exit;
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t18.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_uk.svg" alt=""
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt=""
 													class="flag">
 											</div>
 										</div>
@@ -749,7 +749,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">Middlesex University London</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">미국 유학 전문</p>
+												<p class="tag">듀오링고 수업</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -770,7 +770,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">인사이드 MBA 졸업</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">외국계 기업 임원 출신</p>
+												<p class="tag">듀오링고 수업</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -791,8 +791,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">Laguna State University</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">국제학교 학생 영어 티칭
-												<span class="pc">전문</span></p>
+												<p class="tag">국제학교 대비반 수업</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -833,7 +832,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">국제학교 출신 교포 강사</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">국제학교 출신 교포 강사</p>
+												<p class="tag">아이엘츠 수업 </p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -1074,7 +1073,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">교육업 경력 10년</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">수업/CLASS 전문</p>
+												<p class="tag">CLASS 통합관리</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -1113,7 +1112,7 @@ if (!defined('_EYOOM_')) exit;
 										<div class="txtbox">
 											<div class="top">
 												<p class="name">김소연 실장</p>
-												<p class="desc">칭화대 국제관계 석사</p>
+												<p class="desc">kaplan 재단 교직원 출신</p>
 											</div>
 											<div class="bottom">
 												<p class="tag">미국/아시아 전문</p>

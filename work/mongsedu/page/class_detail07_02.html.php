@@ -52,14 +52,14 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-1d">
                         <div class="tags-1e">
                             <span class="best">BEST</span>
-                        </div>						
-                        <div class="tag">
-                            <span>체험반</span>
+                        </div>                      
+                       <!--  <div class="tag">
+                            <span>발표수업</span>
                         </div>
                         <div class="tag">
-                            <span>정규반</span>
+                            <span>소규모</span>
                         </div>
-                        <!-- <div class="keulraeseu">
+                        <div class="keulraeseu">
                             <span class="yeong-eo">1:1 클래스</span>
                         </div>
                         <div class="frame-1f">
@@ -90,22 +90,12 @@ if (!defined('_EYOOM_')) exit;
                                     <ul class="mentor_list">
                                         <li>
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t20.png" alt="">        
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t17.png" alt="">        
                                             </div>
                                             <div class="text_area">
-                                                <p class="name">Iya <small>원어민 선생님</small></p>
-                                                <p class="desc">Laguna State University</p> 
-                                                <p class="tag">국제학교 학생 영어 티칭 전문</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t19.png" alt="">        
-                                            </div>
-                                            <div class="text_area">
-                                                <p class="name">Jenna <small>원어민 선생님</small></p>
-                                                <p class="desc">인사이드 MBA 졸업</p> 
-                                                <p class="tag">외국계 기업 임원 출신</p>
+                                                <p class="name">Rua <small>원어민 선생님</small></p>
+                                                <p class="desc">캐나다 교포, 거주 15년</p> 
+                                                <p class="tag">라이팅과 스피킹 집중 수업</p>
                                             </div>
                                         </li>
                                     </ul>
@@ -139,13 +129,13 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">-</span>
+                                        <span class="span-text-15a">600,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">-</span>
+                                        <span class="interview">유학 필수 에세이·리서치·토론을 12강으로 집중 훈련해 자료조사·리포트·프레젠테이션까지 실전 아카데믹 라이팅과 영어 기본기를 강화합니다.</span>
                                     </div>
                                     <div class="button">
                                         <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">

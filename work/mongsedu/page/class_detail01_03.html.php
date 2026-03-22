@@ -137,8 +137,8 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">실전반 980,000원</span>
-                                        <span class="span-text-15a">입문반 980,000원</span>
+                                        <span class="span-text-15a">실전반 - 980,000원</span>
+                                        <span class="span-text-15a">입문반 - 980,000원</span>
                                         <!-- <span class="span-text-15a">듀오링고 DET 실전반 수강료 <small>(2개월)</small> - 490,000 원</span>
                                         <span class="span-text-15a" style="margin-top:.25em;">듀오링고 DET 입문반 수강료 <small>(2개월)</small> - 600,000 원</span> -->
                                     </div>

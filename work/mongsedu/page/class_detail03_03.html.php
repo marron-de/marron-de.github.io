@@ -138,7 +138,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">850,000원 (월)</span>
+                                        <span class="span-text-15a">월 850,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

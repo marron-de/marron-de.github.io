@@ -4,7 +4,7 @@
 		<div class="cm_modal_box">
 			<div class="swiper mentorpop_swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="1">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit01.png" alt="" class="img">
@@ -51,14 +51,14 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="2">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit02.png" alt="" class="img">
 							</div>
 							<div class="txtbox">
 								<div class="tagbox">
-									<span class="tag">미국</span>
+									<span class="tag">말레이시아</span>
 								</div>
 								<p class="title">
 									<span class="name">이지형 부원장</span>
@@ -104,7 +104,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="3">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit03.png" alt="" class="img">
@@ -153,7 +153,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="4">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit04.png" alt="" class="img">
@@ -200,7 +200,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="5">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit05.png" alt="" class="img">
@@ -247,7 +247,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="6">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit06.png" alt="" class="img">
@@ -296,7 +296,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="7">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit07.png" alt="" class="img">
@@ -346,7 +346,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="8">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit08.png" alt="" class="img">
@@ -391,7 +391,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="9">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit09.png" alt="" class="img">
@@ -437,7 +437,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="10">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit10.png" alt="" class="img">
@@ -487,7 +487,7 @@
 						</div>
 
 					</div>				
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="11">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit11.png" alt="" class="img">
@@ -533,7 +533,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="12">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit12.png" alt="" class="img">
@@ -580,7 +580,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="13">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit13.png" alt="" class="img">
@@ -627,7 +627,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="14">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit14.png" alt="" class="img">
@@ -673,7 +673,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<!-- <div class="swiper-slide item" data-num="15">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit15.png" alt="" class="img">
@@ -719,8 +719,8 @@
 							</div>
 						</div>
 
-					</div>
-					<div class="swiper-slide item">
+					</div> -->
+					<div class="swiper-slide item" data-num="16">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit16.png" alt="" class="img">
@@ -761,7 +761,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item">
+					<div class="swiper-slide item" data-num="17">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit17.png" alt="" class="img">
@@ -807,14 +807,14 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="18">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit18.png" alt="" class="img">
 							</div>
 							<div class="txtbox">
 								<div class="tagbox">
-									<span class="tag">영국</span>
+									<span class="tag">미국</span>
 								</div>
 								<p class="title">
 									<span class="name">Amy 멘토</span>
@@ -833,7 +833,13 @@
 								<p class="career_tit">주요이력</p>
 								<div class="career_descbox">
 									<p class="desc">
-										업데이트 예정입니다.
+										Douglas County High School (US)
+									</p>
+									<p class="desc">
+										Middlesex University London (UK)
+									</p>
+									<p class="desc">
+										전 글로벌교육기업 아카데믹 디렉터
 									</p>
 								</div>
 							</div>
@@ -841,12 +847,12 @@
 							<div class="cmtbox">
 								<p class="cmt_tit"><span class="icon"></span><span class="txt">멘토 코멘트</span></p>
 								<p class="cmt_desc">
-									업데이트 예정입니다.
+									I help Korean students preparing to study abroad build essential English skills, including standardized test preparation.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="19">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit19.png" alt="" class="img">
@@ -872,7 +878,10 @@
 								<p class="career_tit">주요이력</p>
 								<div class="career_descbox">
 									<p class="desc">
-										업데이트 예정입니다.
+										인시아드 MBA졸업 
+									</p>
+									<p class="desc">
+										외국계 기업 임원 출신 
 									</p>
 								</div>
 							</div>
@@ -880,12 +889,12 @@
 							<div class="cmtbox">
 								<p class="cmt_tit"><span class="icon"></span><span class="txt">멘토 코멘트</span></p>
 								<p class="cmt_desc">
-									업데이트 예정입니다.
+									해외 유학 및 해외 기업 취업을 준비하는 한국 학생들에게 글로벌 인사이트와 실질적인 방향성을 제공합니다.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="20">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit20.png" alt="" class="img">
@@ -912,7 +921,10 @@
 								<p class="career_tit">주요이력</p>
 								<div class="career_descbox">
 									<p class="desc">
-										업데이트 예정입니다.
+										Laguna State University
+									</p>
+									<p class="desc">
+										국제학교 입학시험 전문 
 									</p>
 								</div>
 							</div>
@@ -920,12 +932,12 @@
 							<div class="cmtbox">
 								<p class="cmt_tit"><span class="icon"></span><span class="txt">멘토 코멘트</span></p>
 								<p class="cmt_desc">
-									업데이트 예정입니다.
+									I provide thorough preparation for international school entrance exams, helping students not only succeed in the admissions test but also improve their overall English proficiency.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item"> 
+					<div class="swiper-slide item" data-num="21"> 
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit21.png" alt="" class="img">
@@ -971,7 +983,7 @@
 						</div>
 
 					</div>
-					<div class="swiper-slide item"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="22">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit22.png" alt="" class="img">
@@ -998,7 +1010,10 @@
 								<p class="career_tit">주요이력</p>
 								<div class="career_descbox">
 									<p class="desc">
-										업데이트 예정입니다.
+										국제학교 출신 
+									</p>
+									<p class="desc">
+										IELTS 고득점 강사 
 									</p>
 								</div>
 							</div>
@@ -1006,13 +1021,13 @@
 							<div class="cmtbox">
 								<p class="cmt_tit"><span class="icon"></span><span class="txt">멘토 코멘트</span></p>
 								<p class="cmt_desc">
-									업데이트 예정입니다.
+									As an international school graduate and a high-scoring IELTS instructor, I help students build the skills and confidence they need to succeed in global education.
 								</p>
 							</div>
 						</div>
 
 					</div>				
-					<div class="swiper-slide item"> <!-- 김소연(한국) -->
+					<div class="swiper-slide item" data-num="23"> <!-- 김소연(한국) -->
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit08.png" alt="" class="img">
@@ -1057,7 +1072,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="24"> <!-- 수정 예정 -->
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit23.png" alt="" class="img">
@@ -1102,7 +1117,7 @@
 							</div>
 						</div>
 					</div>	
-					<div class="swiper-slide item"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="25"> <!-- 수정 예정 -->
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit24.png" alt="" class="img">
@@ -1142,7 +1157,7 @@
 						</div>
 
 					</div>	
-					<div class="swiper-slide item"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="26"> <!-- 수정 예정 -->
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit25.png" alt="" class="img">

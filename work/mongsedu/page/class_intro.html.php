@@ -178,7 +178,7 @@ if (!defined('_EYOOM_')) exit;
 												<span class="pc">1:1수업</span>
 												<span class="tablet">1:1</span>
 											</p>
-                                            <p class="type">1달완성</p>
+                                            <p class="type">2달완성</p>
                                         </div>
                                         <p class="red">주3회로 유학생활 준비</p>
                                         <span class="title">해외생활 실전 스피킹 연습</span>

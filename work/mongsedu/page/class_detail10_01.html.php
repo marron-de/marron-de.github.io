@@ -81,12 +81,12 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>
-													해외대학 학과목 밀착과외 수강비
+													해외대학 학과목 밀착과외 수강료
 													<small>2개월</small>
 												</span>
 												<div class="costbox">
 													<span class="tablet">1,500,000원</span>
-                                                	<span class="cost">회당 1,500,0000원</span>
+                                                	<span class="cost">회당 93,750원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -95,7 +95,7 @@ if (!defined('_EYOOM_')) exit;
 													<ul>
 														<li>
 															<p>‧ 수업기간</p>
-															<p>2개월 (오프라인+온라인 병행)</p>
+															<p>2개월 (오프라인+온라인 병행) 16강</p>
 														</li>
 														<li>
 															<p>‧ 강의시간</p>
@@ -117,8 +117,8 @@ if (!defined('_EYOOM_')) exit;
 													<div class="side">
 														<p class="price">1,500,000원</p>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>1,500,0000원</span>
+															<small>1/월</small>
+															<span>750,000원 </span>
 														</div>
 													</div>
 												</div>

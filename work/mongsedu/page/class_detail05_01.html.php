@@ -85,8 +85,8 @@ if (!defined('_EYOOM_')) exit;
 													<small>3개월</small>
 												</span>
 												<div class="costbox">
-													<span class="tablet">1,000,000원</span>
-                                                	<span class="cost">회당 1,000,000원</span>
+													<span class="tablet">3,000,000원</span>
+                                                	<span class="cost">회당 83,333원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -115,9 +115,9 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 													</ul>
 													<div class="side">
-														<p class="price">1,000,000원</p>
+														<p class="price">3,000,000원</p>
 														<div class="price ver2">
-															<small>1/회</small>
+															<small>1/월</small>
 															<span>1,000,000원</span>
 														</div>
 													</div>
@@ -159,7 +159,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">1,000,000원</span>
+                                        <span class="span-text-15a">월 1,000,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

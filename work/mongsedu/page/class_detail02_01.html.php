@@ -82,8 +82,8 @@ if (!defined('_EYOOM_')) exit;
                                             <div class="tit">
                                                 <span>해외대학 대비반 패키지 수강료 <small>2개월</small></span>
 												<div class="costbox">
-													<span class="tablet">700,000원</span>
-                                                	<span class="cost">회당 29,167원</span>
+													<span class="tablet">1,400,000원</span>
+                                                	<span class="cost">회당 58,333원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -112,10 +112,10 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 													</ul>
 													<div class="side">
-														<p class="price">700,000원</p>
+														<p class="price">1,400,000원</p>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>29,167원</span>
+															<small>1/월</small>
+															<span>700,000원</span>
 														</div>
 													</div>
 												</div>
@@ -194,7 +194,7 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 														<li>
 															<p>‧ 교재비</p>
-															<p>25,000</p>
+															<p>25,000원 (수강료 불포함)</p>
 														</li>
 													</ul>
 													<div class="side">
@@ -233,7 +233,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-151">
                                 <div class="frame-152">
                                     <span class="day-paid">미리 예습하는 대비반 CLASS</span >
-									<div class="day-paid-153">(12주)</div>
+									<div class="day-paid-153">(2개월)</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -243,9 +243,9 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159 ver2">
-                                        <span class="span-text-15a">해외대비반 풀패키지 : 1,400,000원</span>
-                                        <span class="span-text-15a">전공 이론 (단독) : 1,000,000원</span>
-                                        <span class="span-text-15a">에세이 토론 (단독) : 600,000원</span>
+                                        <span class="span-text-15a">해외대비반 풀패키지 - 1,400,000원</span>
+                                        <span class="span-text-15a">전공 이론 (단독) - 1,000,000원</span>
+                                        <span class="span-text-15a">에세이 토론 (단독) - 600,000원</span>
 
                                         <!-- <span class="span-text-15a">해외대학 대비반 패키지 수강료 <small>(2개월)</small> - 700,000 원 <small>(월)</small></span>
                                         <span class="span-text-15a" style="margin-top:.25em;">전공이론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 500,000 원 <small>(월)</small></span>

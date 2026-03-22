@@ -125,7 +125,7 @@ if (!defined('_EYOOM_')) exit;
                                                     <span>02</span>
                                                     <p>
                                                         <b>짧고 효과적인 학습 프로그램!</b><br/>
-                                                        맞춤 6강 수업으로 테스트를
+                                                        맞춤 10강 수업으로 테스트를
 														<br class="pc"> 함께 준비해요
                                                     </p>
                                                 </li>
@@ -177,12 +177,12 @@ if (!defined('_EYOOM_')) exit;
                                                 <li>
                                                     <span>
                                                         정규반<br/>
-                                                        <small>(6회 수업)</small>
+                                                        <small>(10회 수업)</small>
                                                     </span>
                                                     <div class="text_area">
                                                         <span class="t_top">
-                                                            6회 정규반
-                                                            <small>총 300분 (회당 50분)</small>
+                                                            10회 정규반
+                                                            <small>총 500분 (회당 50분)</small>
                                                         </span>
                                                         <div class="t_txt">
                                                             <span>테스트 실전 연습 및 집중 실력 향상</span>
@@ -319,7 +319,8 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">80,000원</span>
+                                        <span class="span-text-15a">1회 체험반 - 80,000원</span>
+                                        <span class="span-text-15a">10회 정규반 - 300,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

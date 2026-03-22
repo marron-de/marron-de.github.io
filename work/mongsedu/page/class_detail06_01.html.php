@@ -81,12 +81,12 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>
-													1:1 영어기초반 수강비
+													1:1 영어기초반 수강료
 													<small>1개월</small>
 												</span>
 												<div class="costbox">
-													<span class="tablet">1,800,000원</span>
-                                                	<span class="cost">회당 800,000원</span>
+													<span class="tablet">800,000원</span>
+                                                	<span class="cost">회당 66,666원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -95,7 +95,7 @@ if (!defined('_EYOOM_')) exit;
 													<ul>
 														<li>
 															<p>‧ 수업기간</p>
-															<p>1개월</p>
+															<p>1개월 (총 12회)</p>
 														</li>
 														<li>
 															<p>‧ 강의시간</p>
@@ -118,7 +118,7 @@ if (!defined('_EYOOM_')) exit;
 														<p class="price">800,000원</p>
 														<div class="price ver2">
 															<small>1/회</small>
-															<span>800,000원</span>
+															<span>66,666원</span>
 														</div>
 													</div>
 												</div>

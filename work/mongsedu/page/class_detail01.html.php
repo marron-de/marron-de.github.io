@@ -163,15 +163,14 @@ if (!defined('_EYOOM_')) exit;
                                                     </span>
                                                     <div class="text_area">
                                                         <span class="t_top">
-                                                            2개월 / 총 16강
-                                                            <small>원어민 온라인 16시간</small>
+                                                            2개월 / 총 24강
+                                                            <small>원어민 온라인 24시간</small>
                                                         </span>
                                                         <div class="t_txt">
-                                                            <span>기출문제 풀이 중점 수업</span>
-                                                            <p class="lst">‧ 원어민 강의 16회</p>
-                                                            <p class="lst">‧ 주2회 (월 8회, 총 16회)</p>
+                                                            <span>교재 진도 및 기출문제 풀이 중점 수업</span>
+                                                            <p class="lst">‧ 원어민 강의 24회</p>
+                                                            <p class="lst">‧ 주3회(월 12회, 총 24회)</p>
                                                             <p class="lst">‧ 최대 정원 6명</p>
-                                                            <p class="lst">‧ 원어민 문제 풀이 추가 수업 8회 무상 제공</p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -323,10 +322,10 @@ if (!defined('_EYOOM_')) exit;
 										</p>
 										<div class="descbox">
 											<p>
-												DET 시험 전 영역을 체계적으로 학습하여 실전 감각과 응용력을 강화
+												1. DET 시험 전 영역을 체계적으로 학습하여 실전 감각과 응용력을 강화
 											</p>
 											<p>
-												단어·문법·발음·문장 구성의 기초부터 통합형 문제까지 단계적으로 훈련
+												2. 단어·문법·발음·문장 구성의 기초부터 통합형 문제까지 단계적으로 훈련
 											</p>
 										</div>
                                     </div>
@@ -356,8 +355,8 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">실전반 980,000원</span>
-                                        <span class="span-text-15a">입문반 980,000원</span>
+                                        <span class="span-text-15a">실전반 - 980,000원</span>
+                                        <span class="span-text-15a">입문반 - 980,000원</span>
                                         <!-- <span class="span-text-15a">듀오링고 DET 실전반 수강료 <small>(2개월)</small> - 490,000 원</span>
                                         <span class="span-text-15a" style="margin-top:.25em;">듀오링고 DET 입문반 수강료 <small>(2개월)</small> - 600,000 원</span> -->
                                     </div>

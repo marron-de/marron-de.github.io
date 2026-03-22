@@ -508,13 +508,21 @@ const mentorpop_swiper = new Swiper('.mentorpop_swiper', {
         },
     },
 });
-function mentor_modal(i) {
+function mentor_modal(num) {
     $("body").addClass('hidden');
     $(".mentor_modal").addClass('show');
-	
+
+    const slides = document.querySelectorAll('.mentorpop_swiper .swiper-slide');
+    let targetIndex = 0;
+    slides.forEach((slide, index) => {
+        if (slide.dataset.num == num) {
+            targetIndex = index;
+        }
+    });
+
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-            mentorpop_swiper.slideTo(i - 1, 0);
+            mentorpop_swiper.slideTo(targetIndex, 0);
             mentorpop_swiper.update();
             mentorpop_swiper.updateAutoHeight(0);
         });
@@ -1015,17 +1023,19 @@ document.addEventListener('DOMContentLoaded', () => {
 /* SPECIAL */
 // 대학교 더보기
 $(document).on('click', '.univ_listwrap .more_univ', function () {
-	const wrap = $(this).closest('.univ_listwrap');
-	const list = wrap.find('.univ_listbox');
-	const btntxt = $(this).find(".change");
+    const wrap = $(this).closest('.univ_listwrap');
+    const list = wrap.find('.univ_listbox.hide, .univ_listbox:not(.hide)');
+    const btntxt = $(this).find(".change");
+	
+    const isHidden = list.eq(0).hasClass('hide');
 
-	list.toggleClass('hide');
-
-	if (list.hasClass('hide')) {
-		btntxt.text('더보기');
-	} else {
-		btntxt.text('숨기기');
-	}
+    if (isHidden) {
+        list.removeClass('hide');
+        btntxt.text('숨기기');
+    } else {
+        list.addClass('hide');
+        btntxt.text('더보기');
+    }
 });
 
 // 싱가포르 사립대 특별혜택 스와이퍼

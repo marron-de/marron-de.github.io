@@ -87,7 +87,7 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>
-													입학시험 정규반 수강료
+													입학시험 체험반 수강료
 													<small>1회</small>
 												</span>
 												<div class="costbox">
@@ -121,7 +121,7 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 													</ul>
 													<div class="side">
-														<p class="price">80,000원</p>
+														<!-- <p class="price">80,000원</p> -->
 														<div class="price ver2">
 															<small>1/회</small>
 															<span>80,000원</span>
@@ -138,7 +138,7 @@ if (!defined('_EYOOM_')) exit;
 												</span>
 												<div class="costbox">
 													<span class="tablet">300,000원</span>
-                                                	<span class="cost">회당 50,000원</span>
+                                                	<span class="cost">회당 30,000원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -147,7 +147,7 @@ if (!defined('_EYOOM_')) exit;
 													<ul>
 														<li>
 															<p>‧ 수업기간</p>
-															<p>1개월 (총 6회)</p>
+															<p>1개월 (총 10회)</p>
 														</li>
 														<li>
 															<p>‧ 강의시간</p>
@@ -170,7 +170,7 @@ if (!defined('_EYOOM_')) exit;
 														<p class="price">300,000원</p>
 														<div class="price ver2">
 															<small>1/회</small>
-															<span>50,000원</span>
+															<span>30,000원</span>
 														</div>
 													</div>
 												</div>
@@ -209,8 +209,9 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-157">
                                 <div class="frame-158">
-                                    <div class="frame-159">
-                                        <span class="span-text-15a">80,000원</span>
+                                     <div class="frame-159">
+                                        <span class="span-text-15a">1회 체험반 - 80,000원</span>
+                                        <span class="span-text-15a">10회 정규반 - 300,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

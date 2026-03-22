@@ -52,15 +52,14 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-1d">
                         <div class="tags-1e">
                             <span class="best">BEST</span>
-                        </div>						
-                        <div class="tag">
-                            <span>체험반</span>
+                        </div>                      
+                       <!--  <div class="tag">
+                            <span>발표수업</span>
                         </div>
                         <div class="tag">
-                            <span>정규반</span>
+                            <span>소규모</span>
                         </div>
-
-                        <!-- <div class="keulraeseu">
+                        <div class="keulraeseu">
                             <span class="yeong-eo">1:1 클래스</span>
                         </div>
                         <div class="frame-1f">
@@ -91,7 +90,7 @@ if (!defined('_EYOOM_')) exit;
                                             </div> -->
                                         </div>
                                         <span class="field-trip-service">
-                                            국제학교 입학 시 보게 되는 CAT4, MAP테스트 그리고 인터뷰 준비까지 실제 시험 유형에 맞춘 모의 테스트를 통해 국제학교 입학 준비를 완벽하게 할 수 있습니다. 초/중/고 학년별 그리고 희망하는 학교에 맞추어 1:1로 지도하여 성공적인 입학을 도와드립니다.
+                                            유학에 필요한 에세이·리서치·토론 역량을 12강(2개월)으로 집중 훈련해 과제 수행 능력을 높입니다. 자료조사·리포트 작성·프레젠테이션까지 이어지는 실전 아카데믹 라이팅과 상황별 영어·기초 아카데믹 영어를 강화합니다.
                                         </span>
                                     </div>
                                 </div>
@@ -103,45 +102,44 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
                                         <div class="class_benefit">
                                             <div class="img_area">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit20.png" alt="">
-                                                <span>완벽한 시험 대비가능!</span>
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit17.png" alt="">
+                                                <span>유학 필수 역량 완성!</span>
                                                 <p>
-                                                    해외학교 교직원 출신<br/>
-                                                    몽선생에서 제작한 검증된<br/>
-                                                    실전 모의 테스트 학습 제공
+                                                    북미 원어민 강사 진행 <br>
+													에세이·리서치·토론 <br>
+													12강 집중 훈련
                                                 </p>
                                             </div>
                                             <ul class="bnf_list">
                                                 <li>
                                                     <span>01</span>
                                                     <p>
-                                                        <b>어디에도 없어요!</b><br/>
-                                                        자체제작 문제집 제공 
-														<br class="pc">
-														(CAT4 50/Map 50문제 세트)
+                                                        <b>유학 과제에 바로 쓰는 구성!</b><br/>
+                                                        에세이·리서치·토론을 <br>
+														12강으로 체계적으로 완성
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <span>02</span>
                                                     <p>
-                                                        <b>짧고 효과적인 학습 프로그램!</b><br/>
-                                                        맞춤 6강 수업으로 테스트를
-														<br class="pc"> 함께 준비해요
+                                                        <b>자료조사부터 리포트까지!</b><br/>
+                                                        정보 찾기·정리·논리 전개를 <br>
+														실전 과제 흐름대로 훈련
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <span>03</span>
                                                     <p>
-                                                        <b>검증된 선생님의 1:1 맞춤수업!</b><br/>
-                                                        실전형 모의 입학 테스트 및
-														<br class="pc"> 상세 피드백 제공
+                                                        <b>훈련프레젠테이션까지 연결!</b><br/>
+                                                        리포트 작성 후 발표  <br>
+														구조·표현까지 자연스럽게 확장
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <span>04</span>
                                                     <p>
-                                                        <b>체험반부터 정규반까지!</b><br/>
-                                                        다양한 수업 방식을 제공합니다
+                                                        <b>상황별 영어+기초 <br>아카데믹 영어 강화!</b><br/>
+                                                        대학 수업·유학 생활에 필요한 <br>핵심 표현과 기본기를 함께 다져요
                                                     </p>
                                                 </li>
                                             </ul>
@@ -156,39 +154,21 @@ if (!defined('_EYOOM_')) exit;
                                         </div>
                                         <div class="class_curri">
                                             <ul class="curri_list">
-                                                <li>
+                                                <li class="red">
                                                     <span>
-                                                        체험반<br/>
+                                                        에세이 토론반 (영어수업)<br/>
                                                         <small>(1회 수업)</small>
                                                     </span>
                                                     <div class="text_area">
                                                         <span class="t_top">
-                                                            1회 체험반
-                                                            <small>총 50분</small>
+                                                            온라인 강의 12시간
+                                                            <small>회당 1시간</small>
                                                         </span>
                                                         <div class="t_txt">
                                                             <span>테스트 문제 맛보기</span>
                                                             <p class="lst">‧ CAT4, MAP 연습문제 풀이</p>
-                                                            <p class="lst">‧ 50가지 질문 유형 파악하기</p>
+                                                            <p class="lst">‧ 주 2회 (월 8회, 총 12회 수업)</p>
                                                             <p class="lst">‧ 인터뷰 예상질문 알아보기</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <span>
-                                                        정규반<br/>
-                                                        <small>(6회 수업)</small>
-                                                    </span>
-                                                    <div class="text_area">
-                                                        <span class="t_top">
-                                                            6회 정규반
-                                                            <small>총 300분 (회당 50분)</small>
-                                                        </span>
-                                                        <div class="t_txt">
-                                                            <span>테스트 실전 연습 및 집중 실력 향상</span>
-                                                            <p class="lst">‧ CAT4, MAP, CEPT 대비 수업</p>
-                                                            <p class="lst">‧ 어휘력, 라이팅 실력 향상 집중</p>
-                                                            <p class="lst">‧ 인터뷰 연습 및 피드백 제공</p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -289,9 +269,8 @@ if (!defined('_EYOOM_')) exit;
 											 수업 학습 목표
 										</p>
 										<div class="descbox">
-											<p>1. CAT4, MAP테스트 등 실전 문제 미리 파악하기</p>
-											<p>2. 학교별 출제 문제 유형을 반영하여 반복 훈련하기</p>
-											<p>3. 학생 개별 약점을 진단하고, 보강이 필요한 영역을 집중적으로 강화</p>
+											<p>1. 유학 필수 에세이·리서치·토론을 12강 집중 훈련 </p>
+											<p>2. 자료조사·리포트·프레젠테이션까지 실전 아카데믹 라이팅과 영어 기본기 강화</p>
 										</div>
                                     </div>
                                 </div>
@@ -319,13 +298,13 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">-</span>
+                                        <span class="span-text-15a">600,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">-</span>
+                                        <span class="interview">유학 필수 에세이·리서치·토론을 12강으로 집중 훈련해 자료조사·리포트·프레젠테이션까지 실전 아카데믹 라이팅과 영어 기본기를 강화합니다.</span>
                                     </div>
                                     <div class="button">
                                         <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">

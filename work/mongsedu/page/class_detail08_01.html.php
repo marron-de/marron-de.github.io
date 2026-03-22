@@ -81,12 +81,12 @@ if (!defined('_EYOOM_')) exit;
                                         <li>
                                             <div class="tit">
                                                 <span>
-													1:1 영어회화(유학영어) 수강비
+													유학 실전 스피킹 수강료
 													<small>2개월</small>
 												</span>
 												<div class="costbox">
-													<span class="tablet">600,000원</span>
-                                                	<span class="cost">회당 300,000원</span>
+													<span class="tablet">1,200,000원</span>
+                                                	<span class="cost">회당 75,000원</span>
 												</div>
                                             </div>
                                             <div class="detail">
@@ -95,7 +95,7 @@ if (!defined('_EYOOM_')) exit;
 													<ul>
 														<li>
 															<p>‧ 수업기간</p>
-															<p>2개월</p>
+															<p>2개월 (총 16회)</p>
 														</li>
 														<li>
 															<p>‧ 강의시간</p>
@@ -111,14 +111,14 @@ if (!defined('_EYOOM_')) exit;
 														</li>
 														<li>
 															<p>‧ 교재비</p>
-															<p>있음 (25,000원)</p>
+															<p>25,000원(수강료 불포함)</p>
 														</li>
 													</ul>
 													<div class="side">
-														<p class="price">300,000원</p>
+														<p class="price">1,200,000원</p>
 														<div class="price ver2">
-															<small>1/회</small>
-															<span>300,000원</span>
+															<small>1/월</small>
+															<span>600,000원</span>
 														</div>
 													</div>
 												</div>
@@ -149,7 +149,8 @@ if (!defined('_EYOOM_')) exit;
                         <div class="frame-150">
                             <div class="frame-151">
                                 <div class="frame-152">
-                                    <span class="day-paid">1:1 영어회화(유학영어) 수업</span >
+                                    <span class="day-paid">유학 실전 스피킹 수업</span>
+									<div class="day-paid-153">(2개월)</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -159,7 +160,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">600,000원</span>
+                                        <span class="span-text-15a">월 600,000원</span>
                                         <!-- <div class="frame-15b">
                                             <span class="time-15c">(등록시 1회)</span>
                                         </div> -->
@@ -168,9 +169,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="frame-15d">
                                     <div class="frame-15e">
                                         <div class="line-15f"></div>
-                                        <span class="interview">해외 유학을 앞둔 학생을 위한 1:1 맞춤형 영어회화 집중 과정입니다. 실제 유학 생활에서 가장 많이 쓰이는 표현과 상황별 대화를 기반으로, 자연스럽게 영어로 말하는 실전 커뮤니케이션 능력을 연습할 수 있습니다.  학생의 수준 · 목표 · 전공 분야를 반영한 개별 커리큘럼으로 진행되며, 발음·어휘·문장 구성·유창성에 대한 섬세한 피드백을 통해
-                                        짧은 기간 안에 말하기 실력을 단기간 끌어올릴 수 있습니다.
-                                        </span >
+                                        <span class="interview">해외 유학을 앞둔 학생을 위한 1:1 맞춤형 영어회화 집중 과정입니다. 실제 유학 생활에서 가장 많이 쓰이는 표현과 상황별 대화를 기반으로, 자연스럽게 영어로 말하는 실전 커뮤니케이션 능력을 연습할 수 있습니다.  학생의 수준 · 목표 · 전공 분야를 반영한 개별 커리큘럼으로 진행되며, 발음·어휘·문장 구성·유창성에 대한 섬세한 피드백을 통해 짧은 기간 안에 말하기 실력을 단기간 끌어올릴 수 있습니다.</span >
                                     </div>
                                     <div class="button">
                                         <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">

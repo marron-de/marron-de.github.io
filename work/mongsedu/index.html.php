@@ -801,14 +801,14 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="https://www.youtube.com/watch?v=eAGc-3y5N2w" target="_blank">
+                        <a href="https://youtu.be/eAGc-3y5N2w" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review02.png" alt="NUS 합격">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <p>몽선생 컨설팅 통해서 합격했어요!</p>
-                                <span class="title">싱가포르 국립대 합격생</span>
+                                <p>싱가포르 사립대 수속생</p>
+                                <span class="title">유학원 선택 잘했어요!</span>
                             </div>
                             <div class="etc">
                                 <span class="point">
@@ -822,14 +822,14 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="https://www.youtube.com/watch?v=3bFjjIRr5wI" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=NSKT2IAkMsY" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review03.png" alt="NUS 합격">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <p>몽선생 컨설팅 통해서 합격했어요!</p>
-                                <span class="title">싱가포르 국립대 합격생</span>
+                                <p>포트폴리오를 다 도와주셨어요!</p>
+                                <span class="title">싱가포르 예술대 합격생</span>
                             </div>
                             <div class="etc">
                                 <span class="point">
@@ -1363,7 +1363,7 @@ if (!defined('_EYOOM_')) exit;
             <div class="review_list youtube swiper tab_swiper" data-gappc="12" data-gapmob="8">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="https://youtu.be/cHvx5Et1bw8" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube01.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1375,7 +1375,7 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="https://www.youtube.com/watch?v=YZX8C3tgY7I" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube02.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1387,7 +1387,7 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="https://www.youtube.com/watch?v=IBHhYlqQeo4" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube03.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1399,7 +1399,7 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="https://youtu.be/LZKHbAkjnAY" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube04.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1411,7 +1411,7 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="https://youtu.be/vggD8UDJstA" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube05.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1423,7 +1423,7 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="https://youtu.be/9RFvO-cGQw0" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube06.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1435,7 +1435,7 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
+                        <a href="https://youtu.be/6_SkjZIBaj8?si=RKbVRfcl4C9wDYZD" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube07.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1447,7 +1447,7 @@ if (!defined('_EYOOM_')) exit;
                         </a>
                     </li>
                     <li class="swiper-slide"i>
-                        <a href="#">
+                        <a href="https://youtu.be/Is3le9niLO0" target="_blank">
                             <div class="img_area">
                                 <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_youtube08.jpg" alt="">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
@@ -1469,7 +1469,7 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="txtbox">
 					<p class="tit">언론도 주목하는 몽선생</p>
-					<a href="" class="more_btn" target="_blank">
+					<a href="https://youtu.be/eGZ-7EH42Zs" class="more_btn" target="_blank">
 						<span class="txt">TV 출연 방송 바로보기</span>
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/banner_btn_arrow.svg" alt="" class="icon">
 					</a>

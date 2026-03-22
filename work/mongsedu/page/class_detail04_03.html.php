@@ -101,12 +101,12 @@ if (!defined('_EYOOM_')) exit;
                                                     <div class="answer">지원하는 국제학교의 입학 테스트 문제 유형에 따라 테스트를 미리 해보고, 대비할 수 있습니다.</div>
                                                 </li>
                                                 <li>
-                                                    <div class="question">입학 테스트 대비반의 6강은 어떻게 구성이 되나요?</div>
+                                                    <div class="question">입학 테스트 대비반의 10강은 어떻게 구성이 되나요?</div>
                                                     <div class="answer">지원하는 국제학교의 입학 테스트 문제 유형과 학생의 실력과 보강한 부분을 고려하여 맞춤형으로 구성이 됩니다.</div>
                                                 </li>
                                                 <li>
                                                     <div class="question">CLASS 연기는 가능한가요?</div>
-                                                    <div class="answer">1강으로 제공되는 입학 테스트는 연기가 불가하며. 6강 제공되는 대비반의 경우 3시간 전까지 공지시 1회 연기가 가능합니다.</div>
+                                                    <div class="answer">1강으로 제공되는 입학 테스트는 연기가 불가하며, 10강 제공되는 대비반의 경우 3시간 전까지 공지시 1회 연기가 가능합니다.</div>
                                                 </li>
                                                 <li>
                                                     <div class="question">추가 CLASS도 가능한가요?</div>
@@ -143,8 +143,9 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-157">
                                 <div class="frame-158">
-                                    <div class="frame-159">
-                                        <span class="span-text-15a">80,000원</span>
+                                     <div class="frame-159">
+                                        <span class="span-text-15a">1회 체험반 - 80,000원</span>
+                                        <span class="span-text-15a">10회 정규반 - 300,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

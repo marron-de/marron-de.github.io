@@ -98,7 +98,7 @@ if (!defined('_EYOOM_')) exit;
                                                 <p class="tag">국제학교 학생 영어 티칭 전문</p>
                                             </div>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <div class="img_area">
                                                 <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t19.png" alt="">        
                                             </div>
@@ -107,7 +107,7 @@ if (!defined('_EYOOM_')) exit;
                                                 <p class="desc">인사이드 MBA 졸업</p> 
                                                 <p class="tag">외국계 기업 임원 출신</p>
                                             </div>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                     <div class="guide">
                                         <ul>
@@ -138,8 +138,9 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                             <div class="frame-157">
                                 <div class="frame-158">
-                                    <div class="frame-159">
-                                        <span class="span-text-15a">80,000원</span>
+                                     <div class="frame-159">
+                                        <span class="span-text-15a">1회 체험반 - 80,000원</span>
+                                        <span class="span-text-15a">10회 정규반 - 300,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

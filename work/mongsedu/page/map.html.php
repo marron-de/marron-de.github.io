@@ -39,7 +39,7 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<p class="sub">자차이용</p>
-							<p class="tit">무료주차 가능​</p>
+							<p class="tit">유료 주차 (1시간 무료)​</p>
 						</div>
 					</div>
 					<div class="item">

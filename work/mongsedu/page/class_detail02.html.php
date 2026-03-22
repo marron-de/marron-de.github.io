@@ -150,14 +150,14 @@ if (!defined('_EYOOM_')) exit;
                                                     <div class="text_area">
                                                         <span class="t_top">
                                                             2개월 / 12강
-                                                            <small>총 18시간 학습</small><br/>
-                                                            <small>상경계/IT 전공 이론</small><br/>
+                                                            <small>총 18시간 학습</small><br>
+                                                            <small>상경계/IT 전공 이론</small><br>
                                                             <small>온라인 강의 18시간 (매 1시간 30분)</small>
                                                         </span>
                                                         <div class="t_txt">
                                                             <span>전공 이론수업 중점</span>
                                                             <p class="lst">‧ 한국어 선생님 이론풀이</p>
-                                                            <p class="lst">‧ 주2회 (월8회, 총 16회 수업)</p>
+                                                            <p class="lst">‧ 주2회 (월 8회, 총 12회 수업) </p>
                                                             <p class="lst">‧ 최대 6명 소규모 온라인 수업</p>
                                                         </div>
                                                     </div>
@@ -170,12 +170,13 @@ if (!defined('_EYOOM_')) exit;
                                                     <div class="text_area">
                                                         <span class="t_top">
                                                             2개월 / 12강
-                                                            <small>총 12시간 학습</small>
+                                                            <small>총 12시간 학습</small> <br>
+                                                            <small>온라인 강의 12시간 (회당 1시간)</small><br>
                                                         </span>
                                                         <div class="t_txt">
                                                             <span>영어 에세이/토론 집중</span>
                                                             <p class="lst">‧ 영어 수업 학습제공</p>
-                                                            <p class="lst">‧ 주2회 (월8회, 총 16회 수업)</p>
+                                                            <p class="lst">‧ 주2회 (월 8회, 총 12회 수업)</p>
                                                             <p class="lst">‧ 최대 6명 소규모 온라인 수업</p>
                                                         </div>
                                                     </div>
@@ -367,7 +368,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-151">
                                 <div class="frame-152">
                                     <span class="day-paid">미리 예습하는 대비반 CLASS</span >
-									<div class="day-paid-153">(12주)</div>
+									<div class="day-paid-153">(2개월)</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
@@ -377,9 +378,9 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159 ver2">
-                                        <span class="span-text-15a">해외대비반 풀패키지 : 1,400,000원</span>
-                                        <span class="span-text-15a">전공 이론 (단독) : 1,000,000원</span>
-                                        <span class="span-text-15a">에세이 토론 (단독) : 600,000원</span>
+                                        <span class="span-text-15a">해외대비반 풀패키지 - 1,400,000원</span>
+                                        <span class="span-text-15a">전공 이론 (단독) - 1,000,000원</span>
+                                        <span class="span-text-15a">에세이 토론 (단독) - 600,000원</span>
 
                                         <!-- <span class="span-text-15a">해외대학 대비반 패키지 수강료 <small>(2개월)</small> - 700,000 원 <small>(월)</small></span>
                                         <span class="span-text-15a" style="margin-top:.25em;">전공이론 수업(단독 수강시) 수강료 <small>(2개월)</small> - 500,000 원 <small>(월)</small></span>
