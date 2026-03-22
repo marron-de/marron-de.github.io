@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIVA</title>
+	
+    <!-- Font -->
+    <link rel="stylesheet" href="css/Pretendard.css">
+    <link rel="stylesheet" href="css/Paperlogy.css">
+
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<!-- Tailwind -->
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	
+	<!-- Tailwind v4 자동완성용 / 임시추가 -->
+	<link rel="stylesheet" href="css/temp.css">
+
+</head>
+
+
+<body class="bg-[#2d2d47] text-white min-h-svh font-[Pretendard,sans-serif]">
+	
+    <div class="flex flex-col">
+
+        <!-- header -->
+        <header class="relative my-[22px]">
+            <div class="h-[40px] px-[20px] py-0 flex items-center justify-between gap-[16px]">
+               	<div class="flex items-center justify-center w-[40px]">
+					<img src="img/header_back.svg" alt="뒤로가기">
+                </div>
+                <p class="flex-1 font-semibold text-[18px] leading-none text-[#ffffff] text-center">AI 동영상 만들기</p>
+               	<div class="flex items-center justify-center w-[40px]">
+					<img src="img/header_alarm.svg" alt="알림">
+				</div>
+            </div>
+        </header>
+
+        <!-- container -->
+        <div class="flex flex-col">
+
+            <section class="relative mt-[5px] mb-[20px]">
+                <div class="relative px-[20px]">
+					<div class="bg-[#212238] py-[16px] px-[20px] rounded-[20px]">
+						<p class="font-semibold text-[14px] leading-none text-[#fb7c3e] mb-[16px]">➀ 의상업로드</p>
+						<div class="flex flex-col gap-[20px] my-[20px]">
+							<div class="relative flex items-center justify-center rounded-[10px] overflow-hidden">
+               					<button class="absolute top-[10px] right-[10px] flex items-center justify-center w-[40px]">
+									<img src="img/btn_delete.svg" alt="">
+								</button>
+								<img src="img/ai_video_img.png" alt="" class="w-full">
+							</div>
+						</div>
+						<div class="flex gap-[20px] mb-[13px]">
+							<button type="button" class="flex-1 flex flex-col items-center justify-center gap-[5px] border border-[#4f4d76] rounded-[10px] bg-[#403f5e] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)] pt-[7px] pb-[12px]">
+								<img src="img/img_camera.svg" alt="" class="w-[58px]">
+								<p class="font-semibold text-[14px] leading-none text-center text-[#ffffff]">제품 촬영</p>
+							</button>
+							<button type="button" class="flex-1 flex flex-col items-center justify-center gap-[5px] border border-[#4f4d76] rounded-[10px] bg-[#403f5e] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)] pt-[7px] pb-[12px]">
+								<img src="img/img_image.svg" alt="" class="w-[58px]">
+								<p class="font-semibold text-[14px] leading-none text-center text-[#ffffff]">이미지 업로드</p>
+							</button>
+						</div>
+						<p class="text-[12px] leading-[1.33] text-[#a3a2c3]">
+							제품을 촬영하시거나 이미지를 업로드 하세요. <br>
+							이미지는 최대 5개까지 업로드 하실 수 있습니다.
+						</p>	
+					</div>	
+				</div>	
+			</section>
+
+  			<section class="relative mb-[20px]">
+                <div class="relative px-[20px]">
+					<div class="bg-[#212238] pt-[16px] pb-[20px] px-[20px] rounded-[20px] overflow-hidden">
+						<p class="font-semibold text-[14px] leading-none text-[#fb7c3e] mb-[22px]">➁ 영상 상황설정</p>
+						<div class="flex flex-col gap-[17px]">
+							<div class="flex items-center gap-[9px]">
+								<input type="radio" name="vid_setting" id="vid_setting1" value="이미지에 맞춰 AI가 자연스럽게 연출" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+								<label for="vid_setting1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>이미지에 맞춰 AI가 자연스럽게 연출</p></label>
+							</div>
+							<div class="flex items-center gap-[9px]">
+								<input type="radio" name="vid_setting" id="vid_setting2" value="영상 상황을 직접 설정" checked class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+								<label for="vid_setting2" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>영상 상황을 직접 설정</p></label>
+							</div>
+						</div>
+						<ul class="flex flex-col gap-[27px] mt-[20px]">
+							<li class="flex flex-col border-t border-[#4f4d76] pt-[20px]">
+								<p class="flex items-center justify-between gap-[10px]" onclick="toggleAccordion(this)">
+									<span class="flex-1 font-semibold text-[13px] leading-none text-[#fff]">영상 스타일 선택</span>
+									<img src="img/acc_arrow2.svg" alt="" style="transform:rotate(180deg)" class="w-[11px] transition duration-400 ease-linear">
+								</p>
+								<div class="mt-[17px]">
+									<div class="swiper w-full" style="overflow: visible;">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style1" value="쇼츠스타일" class="hidden peer" checked>
+												<label for="vid_style1" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>쇼츠스타일</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style2" value="패션쇼" class="hidden peer">
+												<label for="vid_style2" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>패션쇼</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style3" value="시네마틱" class="hidden peer">
+												<label for="vid_style3" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>시네마틱</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style4" value="드라마틱" class="hidden peer">
+												<label for="vid_style4" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>드라마틱</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style5" value="실사형" class="hidden peer">
+												<label for="vid_style5" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>실사형</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style6" value="럭셔리" class="hidden peer">
+												<label for="vid_style6" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>럭셔리</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style7" value="빈티지" class="hidden peer">
+												<label for="vid_style7" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>빈티지</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style8" value="광고촬영" class="hidden peer">
+												<label for="vid_style8" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>광고촬영</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style9" value="스트릿패션" class="hidden peer">
+												<label for="vid_style9" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>스트릿패션</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style10" value="블로그스타일" class="hidden peer">
+												<label for="vid_style10" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>블로그스타일</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style11" value="인플루언서 촬영스타일" class="hidden peer">
+												<label for="vid_style11" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>인플루언서 촬영스타일</p></label>
+											</div>
+											<div class="swiper-slide" style="width: auto;">
+												<input type="radio" name="vid_style" id="vid_style12" value="라이프스타일" class="hidden peer">
+												<label for="vid_style12" class="flex items-center justify-center bg-[#403f5e] border border-[#4f4d76] rounded-[10px] py-[14px] px-[12px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]] font-semibold text-[13px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:bg-[#d45f26] peer-checked:border-[#fb7c3e] peer-checked:text-[#080717]"><p>라이프스타일</p></label>
+											</div>
+										</div>
+									</div>
+									<div class="mt-[20px] flex flex-col gap-[12px]">
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_style_etc" id="vid_style_etc1" value="아이돌 댄스 챌린지 (프롬프트 입력 필요)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_style_etc1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>아이돌 댄스 챌린지 (프롬프트 입력 필요)</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_style_etc" id="vid_style_etc2" value="밈 댄스 / 유행 챌린지 (프롬프트 입력 필요)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_style_etc2"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>밈 댄스 / 유행 챌린지 (프롬프트 입력 필요)</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_style_etc" id="vid_style_etc3" value="빠른 컷 편집 스타일" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_style_etc3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>빠른 컷 편집 스타일</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_style_etc" id="vid_style_etc4" value="거울 셀피 패션 영상" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_style_etc4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>거울 셀피 패션 영상</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_style_etc" id="vid_style_etc5" value="포즈 체인지 쇼츠" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_style_etc5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>포즈 체인지 쇼츠</p></label>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="flex flex-col border-t border-[#4f4d76] pt-[20px]">
+								<p class="flex items-center justify-between gap-[10px]" onclick="toggleAccordion(this)">
+									<span class="flex-1 font-semibold text-[13px] leading-none text-[#fff]">모델표정</span>
+									<img src="img/acc_arrow2.svg" alt="" style="transform:rotate(180deg)" class="w-[11px] transition duration-400 ease-linear">
+								</p>
+								<ul>
+									<li class="mt-[17px] flex flex-col gap-[12px]">
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression1" value="미소" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>미소</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression2" value="무표정(시크)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression2"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>무표정(시크)</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression3" value="웃음" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>웃음</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression4" value="자신감" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>자신감</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression5" value="장난스러운" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>장난스러운</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression6" value="진지함" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression6" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>진지함</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression7" value="수줍음" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression7" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>수줍음</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression8" value="강렬함" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression8" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>강렬함</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression9" value="윙크" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression9" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>윙크</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression10" value="신비로움" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression10"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>신비로움</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression11" value="귀여움" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression11"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>귀여움</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="vid_expression12" value="놀람" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_expression12"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>놀람</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_expression" id="model_expressio13" value="슬픔" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="model_expressio13" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>슬픔</p></label>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="flex flex-col border-t border-[#4f4d76] pt-[20px]">
+								<p class="flex items-center justify-between gap-[10px]" onclick="toggleAccordion(this)">
+									<span class="flex-1 font-semibold text-[13px] leading-none text-[#fff]">배경인물</span>
+									<img src="img/acc_arrow2.svg" alt="" style="transform:rotate(180deg)" class="w-[11px] transition duration-400 ease-linear">
+								</p>
+								<ul>
+									<li class="mt-[17px] flex flex-col gap-[12px]">
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_extras" id="vid_extras1" value="사람없음" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_extras1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>사람없음</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_extras" id="vid_extras2" value="한명" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_extras2"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>한명</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_extras" id="vid_extras3" value="두명" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_extras3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>두명</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_extras" id="vid_extras4" value="다수" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_extras4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>다수</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_extras" id="vid_extras5" value="군중" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_extras5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>군중</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_extras" id="vid_extras6" value="커플" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_extras6" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>커플</p></label>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="flex flex-col border-t border-[#4f4d76] pt-[22px]">
+								<p class="flex items-center justify-between gap-[10px]" onclick="toggleAccordion(this)">
+									<span class="flex-1 font-semibold text-[13px] leading-none text-[#fff]">특수효과</span>
+									<img src="img/acc_arrow2.svg" alt="" style="transform:rotate(180deg)" class="w-[11px] transition duration-400 ease-linear">
+								</p>
+								<ul>
+									<li class="mt-[17px] flex flex-col gap-[12px]">
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_effect" id="vid_effect1" value="없음" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_effect1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>없음</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_effect" id="vid_effect2" value="안개" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_effect2"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>안개</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_effect" id="vid_effect3" value="바람" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_effect3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>바람</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_effect" id="vid_effect4" value="비" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_effect4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>비</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_effect" id="vid_effect5" value="눈" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_effect5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>눈</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_effect" id="vid_effect6" value="햇살" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_effect6" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>햇살</p></label>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>	
+				</div>	
+			</section>			
+
+			<section class="relative mb-[20px]">
+                <div class="relative px-[20px]">
+					<div class="flex flex-col bg-[#212238] pt-[16px] pb-[20px] px-[20px] rounded-[20px]">
+						<p class="font-semibold text-[14px] leading-none text-[#fb7c3e] mb-[22px]">➂ 영상 해상도</p>
+						<ul class="flex flex-col gap-[27px]">
+							<li class="flex flex-col">
+								<div class="flex flex-col gap-[12px]">
+									<div class="flex items-center gap-[9px]">
+										<input type="radio" name="vid_ratio" id="vid_ratio1" value="모바일 가로 (16:9)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+										<label for="vid_ratio1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>모바일 가로 (16:9)</p></label>
+									</div>
+									<div class="flex items-center gap-[9px]">
+										<input type="radio" name="vid_ratio" id="vid_ratio2" value="가로 (4:3)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+										<label for="vid_ratio2"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>가로 (4:3)</p></label>
+									</div>
+									<div class="flex items-center gap-[9px]">
+										<input type="radio" name="vid_ratio" id="vid_ratio3" value="정사각형(1:1)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+										<label for="vid_ratio3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>정사각형(1:1)</p></label>
+									</div>
+									<div class="flex items-center gap-[9px]">
+										<input type="radio" name="vid_ratio" id="vid_ratio4" value="모바일 세로 (9:16)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+										<label for="vid_ratio4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>모바일 세로 (9:16)</p></label>
+									</div>
+									<div class="flex items-center gap-[9px]">
+										<input type="radio" name="vid_ratio" id="vid_ratio5" value="세로 (3:4)" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+										<label for="vid_ratio5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>세로 (3:4)</p></label>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</section>				
+
+			<section class="relative mb-[20px]">
+                <div class="relative px-[20px]">
+					<div class="flex flex-col bg-[#212238] pt-[16px] pb-[20px] px-[20px] rounded-[20px]">
+						<p class="font-semibold text-[14px] leading-none text-[#fb7c3e] mb-[22px]">➃ 사운드 연출</p>
+						<ul class="flex flex-col gap-[27px]">
+							<li class="flex flex-col border-t border-[#4f4d76] pt-[20px]">
+								<p class="flex items-center justify-between gap-[10px]" onclick="toggleAccordion(this)">
+									<span class="flex-1 font-semibold text-[13px] leading-none text-[#fff]">언어</span>
+									<img src="img/acc_arrow2.svg" alt="" style="transform:rotate(180deg)" class="w-[11px] transition duration-400 ease-linear">
+								</p>
+								<ul>
+									<li class="mt-[17px] flex flex-col gap-[12px]">
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_lang" id="vid_lang1" value="대사 없음" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_lang1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>대사 없음</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_lang" id="vid_lang2" value="한국어" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_lang2"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>한국어</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_lang" id="vid_lang3" value="중국어" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_lang3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>중국어</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_lang" id="vid_lang4" value="일본어" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_lang4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>일본어</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_lang" id="vid_lang5" value="영어" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_lang5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>영어</p></label>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="flex flex-col border-t border-[#4f4d76] pt-[20px]">
+								<p class="flex items-center justify-between gap-[10px]" onclick="toggleAccordion(this)">
+									<span class="flex-1 font-semibold text-[13px] leading-none text-[#fff]">BGM</span>
+									<img src="img/acc_arrow2.svg" alt="" style="transform:rotate(180deg)" class="w-[11px] transition duration-400 ease-linear">
+								</p>
+								<ul>
+									<li class="mt-[17px] flex flex-col gap-[12px]">
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_bgm" id="vid_bgm1" value="BGM 없음" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_bgm1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>BGM 없음</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_bgm" id="vid_bgm2" value="AI 추천" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_bgm2"class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>AI 추천</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_bgm" id="vid_bgm3" value="댄스" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_bgm3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>댄스</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_bgm" id="vid_bgm4" value="힙합" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_bgm4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>힙합</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_bgm" id="vid_bgm5" value="감성" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_bgm5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>감성</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_bgm" id="vid_bgm6" value="런웨이" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_bgm6" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>런웨이</p></label>
+										</div>
+										<div class="flex items-center gap-[9px]">
+											<input type="radio" name="vid_bgm" id="vid_bgm7" value="시네마틱" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+											<label for="vid_bgm7" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>시네마틱</p></label>
+										</div>												
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</section>				
+
+			<section class="relative">
+				<ul class="relative flex flex-col gap-[20px] px-[20px]">
+					<li class="flex flex-col bg-[#212238] py-[22px] px-[20px] rounded-[20px]">
+						<p class="flex items-center justify-between gap-[10px]" onclick="toggleAccordion(this)">
+							<span class="flex-1 font-semibold text-[14px] leading-none text-[#fb7c3e]">➄ 프롬프트 입력 (선택/500자 미만)</span>
+							<img src="img/acc_arrow.svg" alt="" class="w-[14px] transition duration-400 ease-linear">
+						</p>
+						<ul style="display:none">
+							<li class="mt-[27px]">
+								<textarea name="prompt" id="prompt" placeholder="더 자세한 표현을 하고싶으시면 프롬프트를 입력해주세요. 모델의 행동, 분위기를 지정하실수도 있고, 미처 올리지 못한 악세서리(모자, 시계, 백, 신발등)을 텍스트로 입력하셔도 됩니다. 당신의 상상력이 바로 실현되는 마법을 확인하세요!&#13;&#10;&#13;&#10;예시.&#13;&#10;모델이 셀카를 찍으며 웃고있어.&#13;&#10;모델이 커피를 마시며 책을 보고있어.&#13;&#10;9등신 / 패션모델 / 시계 / 하이힐 / 검정팬티스타킹" class="w-full h-[234px] bg-none border-none text-[12px] leading-[1.33] text-[#ffffff] placeholder-[#a3a2c3] focus:outline-none resize-none"></textarea>
+							</li>
+						</ul>
+					</li>
+				</ul>	
+			</section>				
+
+			<section class="relative mt-[30px]">
+                <div class="relative px-[20px] flex flex-col">
+					<button type="button" class="flex items-center justify-center gap-[6px] border border-[#fb7c3e] rounded-[20px] py-[23px] bg-[#d45f26] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]">
+						<img src="img/ic_shooting.svg" alt="" class="w-[22px]">
+						<span class="font-semibold text-[18px] leading-none text-[#ffffff]">AI영상 제작</span>
+					</button>
+				</div>
+			</section>	
+			
+        </div>
+
+        <!-- nav -->
+        <nav class="sticky bottom-0 z-50 bg-[#1f2031] rounded-[20px_20px_0_0] mt-[44px]">
+            <div class="h-[74px] flex items-end justify-between pt-[14px] pb-[11px] px-[22px]">
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_home.svg" alt="Home" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">Home</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_create.svg" alt="생성한 리스트" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">생성한 리스트</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[10px] items-center">
+						<img src="img/nav_AI.svg" alt="AI 생성" class="w-[50px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">AI 생성</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_token.svg" alt="토큰지갑" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">토큰지갑</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_mypage.svg" alt="마이페이지" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">마이페이지</span>
+					</a>
+				</div>
+            </div>
+        </nav>
+
+    </div>
+
+</body>
+
+
+<script>	
+	function toggleAccordion(el) {
+		const target = el.nextElementSibling;
+		const arrow = el.querySelector('img');
+
+		if (!target) return;
+
+		const isVisible = target.style.display === 'block' || getComputedStyle(target).display !== 'none';
+
+		if (isVisible) {
+			target.style.display = 'none';
+			if (arrow) arrow.style.transform = 'rotate(0deg)';
+		} else {
+			target.style.display = 'block';
+			if (arrow) arrow.style.transform = 'rotate(180deg)';
+		}
+	}
+
+	// swiper
+	const swiper = new Swiper('.swiper', {
+		observer: true,
+		observeParents: true,
+		speed: 500,	
+		slidesPerView: 'auto',
+    	spaceBetween: 12,
+		freeMode: true,
+	});
+</script>
+
+
+</html>

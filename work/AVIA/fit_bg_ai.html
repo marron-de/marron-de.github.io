@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIVA</title>
+	
+    <!-- Font -->
+    <link rel="stylesheet" href="css/Pretendard.css">
+    <link rel="stylesheet" href="css/Paperlogy.css">
+
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<!-- Tailwind -->
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	
+	<!-- Tailwind v4 자동완성용 / 임시추가 -->
+	<link rel="stylesheet" href="css/temp.css">
+
+</head>
+
+
+<body class="bg-[#2d2d47] text-white min-h-svh font-[Pretendard,sans-serif]">
+	
+    <div class="flex flex-col">
+
+        <!-- header -->
+        <header class="relative my-[22px]">
+            <div class="h-[40px] px-[20px] py-0 flex items-center justify-between gap-[16px]">
+               	<div class="flex items-center justify-center w-[40px]">
+					<img src="img/header_back.svg" alt="뒤로가기">
+                </div>
+                <p class="flex-1 font-semibold text-[18px] leading-none text-[#ffffff] text-center">AI로 원하는 배경 생성</p>
+               	<div class="flex items-center justify-center w-[40px]">
+					<img src="img/header_alarm.svg" alt="알림">
+				</div>
+            </div>
+        </header>
+
+        <!-- container -->
+        <div class="flex flex-col">
+
+            <section class="relative mt-[5px]">
+                <div class="relative px-[20px]">
+					<div class="flex flex-col gap-[20px] bg-[#212238] pt-[16px] pb-[20px] px-[20px] rounded-[20px]">
+						<div class="flex flex-col gap-[20px] pb-[20px] border-b border-[#4f4d76]">
+							<p class="font-semibold text-[13px] leading-[1.08] text-[#ffffff]">실내/외</p>
+							<div class="flex flex-wrap gap-x-[17px] gap-y-[12px]">
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="list_location" id="list_location1" value="실내" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="list_location1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>실내</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="list_location" id="list_location2" value="실외" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="list_location2" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>실외</p></label>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col gap-[20px] pb-[20px] border-b border-[#4f4d76]">
+							<p class="font-semibold text-[13px] leading-[1.08] text-[#ffffff]">분위기</p>
+							<div class="flex flex-col gap-[12px]">
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood1" value="밝은" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>밝은</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood2" value="아늑한" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood2" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>아늑한</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood3" value="모던한" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>모던한</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood4" value="미니멀한" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>미니멀한</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood5" value="럭셔리한" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>럭셔리한</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood6" value="자연스러운" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood6" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>자연스러운</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood7" value="빈티지" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood7" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>빈티지</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_mood" id="ai_mood8" value="인더스트리얼" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_mood8" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>인더스트리얼</p></label>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col gap-[20px] pb-[20px] border-b border-[#4f4d76]">
+							<p class="font-semibold text-[13px] leading-[1.08] text-[#ffffff]">조명</p>
+							<div class="flex flex-col gap-[12px]">
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_lighting" id="ai_lighting1" value="자연광" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_lighting1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>자연광</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_lighting" id="ai_lighting2" value="소프트" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_lighting2" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>소프트</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_lighting" id="ai_lighting3" value="골든아워" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_lighting3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>골든아워</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_lighting" id="ai_lighting4" value="스튜디오" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_lighting4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>스튜디오</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_lighting" id="ai_lighting5" value="LED" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_lighting5" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>LED</p></label>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col gap-[20px] pb-[20px] border-b border-[#4f4d76]">
+							<p class="font-semibold text-[13px] leading-[1.08] text-[#ffffff]">시간대</p>
+							<div class="flex flex-col gap-[12px]">
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_time" id="ai_time1" value="아침" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_time1" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>아침</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_time" id="ai_time2" value="오후" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_time2" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>오후</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_time" id="ai_time3" value="저녁" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_time3" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>저녁</p></label>
+								</div>
+								<div class="flex items-center gap-[9px]">
+									<input type="radio" name="ai_time" id="ai_time4" value="밤" class="appearance-none w-[30px] h-[30px] rounded-[100px] border-0 cursor-pointer bg-[#4f4d76] bg-center bg-no-repeat checked:bg-[url('img/radio_on.svg')] peer">
+									<label for="ai_time4" class="flex-1 text-[14px] leading-none text-[#a3a2c3] cursor-pointer peer-checked:text-[#fff]"><p>밤</p></label>
+								</div>
+							</div>
+						</div>		
+						<div class="flex flex-col gap-[18px]">
+							<p class="font-semibold text-[13px] leading-[1.08] text-[#ffffff]">참고배경 (선택)</p>
+							<div class="flex items-center gap-[20px] px-[16px]">
+								<label for="ai_file" class="flex">
+									<input type="file" name="ai_file" id="ai_file" class="hidden" accept="image/*" onchange="previewImage(this)">
+									<div class="w-[90px] aspect-[1/1] flex overflow-hidden rounded-[5px] bg-[url(img/add_file.svg)] bg-center bg-no-repeat bg-cover"></div>
+								</label>
+								<p class="flex-1 text-[12px] leading-[1.17] text-[#ffffff]">
+									원하시는 모델에 맞춰 유사한 분위기의 이미지를 업로드해주세요.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="pt-[20px] flex flex-col">
+						<button type="button" class="flex items-center justify-center gap-[6px] border border-[#fb7c3e] rounded-[20px] py-[23px] bg-[#d45f26] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]">
+							<img src="img/ic_shooting.svg" alt="" class="w-[22px]">
+							<span class="font-semibold text-[18px] leading-none text-[#ffffff]">선택 배경 생성하기</span>
+						</button>
+					</div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- nav -->
+        <nav class="sticky bottom-0 z-50 bg-[#1f2031] rounded-[20px_20px_0_0] mt-[44px]">
+            <div class="h-[74px] flex items-end justify-between pt-[14px] pb-[11px] px-[22px]">
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_home.svg" alt="Home" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">Home</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_create.svg" alt="생성한 리스트" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">생성한 리스트</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[10px] items-center">
+						<img src="img/nav_AI.svg" alt="AI 생성" class="w-[50px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">AI 생성</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_token.svg" alt="토큰지갑" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">토큰지갑</span>
+					</a>
+				</div>
+				<div class="relative">
+					<a href="#none" class="flex flex-col gap-[8px] items-center">
+						<img src="img/nav_mypage.svg" alt="마이페이지" class="w-[30px]">
+						<span class="font-semibold text-[11px] leading-none text-center text-[#a3a2c3]">마이페이지</span>
+					</a>
+				</div>
+            </div>
+			<div class="flex gap-[13px] pt-[8px] pb-[20px] px-[20px]">
+				<div class="flex-1 flex flex-col items-center gap-[8px] bg-[#403f5e] border border-[#4f4d76] rounded-[20px] pt-[13px] pb-[9px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]">
+					<img src="img/nav_fit.svg" alt="" class="w-[34px]">
+					<p class="font-semibold text-[13px] leading-[1.31] text-center text-[#ffffff]">AI로 <br>피팅하기</p>
+				</div>
+				<div class="flex-1 flex flex-col items-center gap-[8px] bg-[#403f5e] border border-[#4f4d76] rounded-[20px] pt-[13px] pb-[9px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]">
+					<img src="img/nav_vid.svg" alt="" class="w-[34px]">
+					<p class="font-semibold text-[13px] leading-[1.31] text-center text-[#ffffff]">AI 동영상<br>만들기</p>
+				</div>
+				<div class="flex-1 flex flex-col items-center gap-[8px] bg-[#403f5e] border border-[#4f4d76] rounded-[20px] pt-[13px] pb-[9px] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]">
+					<img src="img/nav_thum.svg" alt="" class="w-[34px]">
+					<p class="font-semibold text-[13px] leading-[1.31] text-center text-[#ffffff]">제품 썸네일<br>만들기</p>
+				</div>
+			</div>
+        </nav>
+
+    </div>
+
+</body>
+
+
+<script>
+	function previewImage(input) {
+		if (input.files && input.files[0]) {
+			const reader = new FileReader();
+			reader.onload = function(e) {
+				const div = input.nextElementSibling;
+				div.style.backgroundImage = 'url(' + e.target.result + ')';
+			}
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+</script>
+
+
+</html>
