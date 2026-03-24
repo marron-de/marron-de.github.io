@@ -156,8 +156,8 @@ if (!defined('_EYOOM_')) exit;
                                             <ul class="curri_list">
                                                 <li class="red">
                                                     <span>
-                                                        에세이 토론반 (영어수업)<br/>
-                                                        <small>(1회 수업)</small>
+                                                        에세이 토론반<br/>
+                                                        <small>(영어수업)</small>
                                                     </span>
                                                     <div class="text_area">
                                                         <span class="t_top">

@@ -157,8 +157,8 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="text_area">
                                     <a href="#none">
                                         <div class="badge">
-                                            <!-- <p class="best">BEST</p> -->
-                                            <p class="type">발표수업</p>
+                                            <p class="best">BEST</p>
+                                            <!-- <p class="type">발표수업</p> -->
                                             <p class="type">소규모</p>
                                         </div>
                                         <p class="red">실전 과제/시험 준비</p>

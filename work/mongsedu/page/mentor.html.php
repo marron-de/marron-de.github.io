@@ -539,12 +539,6 @@ if (!defined('_EYOOM_')) exit;
 					<li id="content-2">
 						<ul>
 							<li class="intro_sec">
-								<div class="titbox">
-									<p class="title">
-										해외대학교 교직원 출신경력! 
-										<span class="color">REAL전문가</span>
-									</p>
-								</div>
 								<div class="contbox">
 									<div class="imgbox">
 										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_ceo_pc.jpg" alt="" class="img pc">
@@ -552,31 +546,39 @@ if (!defined('_EYOOM_')) exit;
 										<span class="tag">아시아 교육 전문가</span>
 									</div>
 									<div class="txtbox">
-										<div class="top">
-											<p class="name">임홍철</p>
-											<p class="small">대표원장</p>
+										<div class="titbox">
+											<p class="title">
+												해외대학교 교직원 출신경력! 
+												<span class="color">REAL전문가</span>
+											</p>
 										</div>
-										<div class="bottom">
-											<div class="bottom_item">
-												<p class="title">학력</p>
-												<div class="desc_box">
-													<p class="desc">서강대학교 경영대학원, 석사 MBA (재학)</p>
-													<p class="desc">영국 Coventry 대학, 학사 Business Marketing (졸업)</p>
-												</div>
+										<div class="txtcont">
+											<div class="top">
+												<p class="name">임홍철</p>
+												<p class="small">대표원장</p>
 											</div>
-											<div class="bottom_item">
-												<p class="title">경력</p>
-												<div class="desc_box">
-													<p class="desc">현) 주식회사 몽선생대표</p>
-													<p class="desc">현) SM글로벌 에듀케이션 원장</p>
-													<p class="desc ver2">전) 사립대학 REG 그룹, 한국사무소 소장</p>
-													<p class="desc ver2">전) 싱가포르 교육부 Edutrust 감사 업무 팀장</p>
-													<p class="desc ver2">전) 싱가포르 사립대학 총괄매니저 10년 경력</p>
-													<p class="desc ver2">한국유학협회 KOSA 정회원사</p>
-													<p class="desc ver2">영국문화원 공식 인증사</p>
-													<p class="desc ver2">공공기관, 대학협회, 행사 및 설명회 강연 다수</p>
-													<p class="desc ver2">내일신문, 싱가포르 잡지사, 프라임경제 및 인터뷰 등 다수</p>
-													<p class="desc ver2">여행가방 싱가포르 전문가 TV출연</p>
+											<div class="bottom">
+												<div class="bottom_item">
+													<p class="title">학력</p>
+													<div class="desc_box">
+														<p class="desc">서강대학교 경영대학원, 석사 MBA (재학)</p>
+														<p class="desc">영국 Coventry 대학, 학사 Business Marketing (졸업)</p>
+													</div>
+												</div>
+												<div class="bottom_item">
+													<p class="title">경력</p>
+													<div class="desc_box ver2">
+														<p class="desc">현) 주식회사 몽선생대표</p>
+														<p class="desc">현) SM글로벌 에듀케이션 원장</p>
+														<p class="desc ver2">전) 사립대학 REG 그룹, 한국사무소 소장</p>
+														<p class="desc ver2">전) 싱가포르 교육부 Edutrust 감사 업무 팀장</p>
+														<p class="desc ver2">전) 싱가포르 사립대학 총괄매니저 10년 경력</p>
+														<p class="desc ver2">한국유학협회 KOSA 정회원사</p>
+														<p class="desc ver2">영국문화원 공식 인증사</p>
+														<p class="desc ver2">공공기관, 대학협회, 행사 및 설명회 강연 다수</p>
+														<p class="desc ver2">내일신문, 싱가포르 잡지사, 프라임경제 및 인터뷰 등 다수</p>
+														<p class="desc ver2">여행가방 싱가포르 전문가 TV출연</p>
+													</div>
 												</div>
 											</div>
 										</div>

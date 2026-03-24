@@ -93,7 +93,7 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 
-    <div class="msection ebook_area ebook_sec2">
+    <!-- <div class="msection ebook_area ebook_sec2">
         <div class="container" data-aos="fade-up">
             <div class="ms title_area class">
 				<p class="title">
@@ -179,7 +179,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="swiper-button-prev prev_btn"></div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="msection class_area ebook_sec3">
         <div class="container" data-aos="fade-up">

@@ -782,7 +782,7 @@ if (!defined('_EYOOM_')) exit;
                     <li class="swiper-slide">
                         <a href="https://www.youtube.com/watch?v=8rPfGBfnd7Y" target="_blank">
                             <div class="img_area">
-                                <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review01.png" alt="NUS 합격">
+                                <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_review01.png" alt="NUS 합격">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
@@ -803,7 +803,7 @@ if (!defined('_EYOOM_')) exit;
                     <li class="swiper-slide">
                         <a href="https://youtu.be/eAGc-3y5N2w" target="_blank">
                             <div class="img_area">
-                                <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review02.png" alt="NUS 합격">
+                                <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_review02.png" alt="NUS 합격">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
@@ -824,7 +824,7 @@ if (!defined('_EYOOM_')) exit;
                     <li class="swiper-slide">
                         <a href="https://www.youtube.com/watch?v=NSKT2IAkMsY" target="_blank">
                             <div class="img_area">
-                                <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/image/sub/thumb_review03.png" alt="NUS 합격">
+                                <img class="img" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_review03.png" alt="NUS 합격">
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
@@ -1369,8 +1369,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">[인터뷰] 미국, 영국 대신 싱가폴 유학을 선택한 이유? (미술.. 디자인 전공 분야)</span>
-                                <p>조회수 1만회 · 7개월 전</p>
+                                <span class="title">싱가포르 라셀 예술대 50명 합격 데이터가 증명하는, 2026 입시 큰 변화 3가지!</span>
+                                <p>조회수 613회 · 1개월 전</p>
                             </div>
                         </a>
                     </li>
@@ -1381,8 +1381,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">[사연] 동국대 포기하고 유학 간다고!? 20대 대학생의 진로 고민.. 해결 방법을 알려줄게요</span>
-                                <p>조회수 821회 · 2주 전</p>
+                                <span class="title">부모님들이 꼭 물어보는 싱가포르 대학 유학질문 7가지! (취업률, 대학수준, 비용 등)</span>
+                                <p>조회수 1.8천회 · 2개월 전</p>
                             </div>
                         </a>
                     </li>
@@ -1393,8 +1393,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">초등 (1-3) 저학년 때 가기좋은 말레이시아 국제학교 3곳 - ISP, 킹헨리, 세인트조셉</span>
-                                <p>조회수 1.1천회 · 4주 전</p>
+                                <span class="title">[인터뷰] 전세계 37위 명문 대학을 말레이시아에서?! 호주 모나쉬 대학 입학한 유학생 이야기</span>
+                                <p>조회수 4.4천회 · 10개월 전</p>
                             </div>
                         </a>
                     </li>
@@ -1405,8 +1405,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">1천만원 대..학비가 저렴한 말레이시아 국제학교 3곳 - 헬프, 텐비, 테일러스 (커리큘럼, 학비, 거주지역</span>
-                                <p>조회수 1.9천회 · 1개월 전</p>
+                                <span class="title">부모님들이 꼭 물어보는 싱가포르 대학 유학질문 7가지! (취업률, 대학수준, 비용 등)</span>
+                                <p>조회수 1.8천회 · 2개월 전</p>
                             </div>
                         </a>
                     </li>
@@ -1417,8 +1417,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">대학 유학비용 한 방에 해결! 6개국 전격 비교 (미국vs캐나다vs영국.. 그리고 호주, 싱가폴, 말레이시아)</span>
-                                <p>조회수 1천회 · 7일 전</p>
+                                <span class="title">말레이시아 선웨이 국제학교, "유독 중학생에게 인기 좋은 이유" (교장 인터뷰/ 설명회 현장)</span>
+                                <p>조회수  259회 · 2일 전</p>
                             </div>
                         </a>
                     </li>
@@ -1429,8 +1429,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">[인터뷰] 미국, 영국 대신 싱가폴 유학을 선택한 이유? (미술.. 디자인 전공 분야)</span>
-                                <p>조회수 1천회 · 7일 전</p>
+                                <span class="title">중학생이 유학가기 좋은 말레이시아 국제학교 3곳 (ELC, 가든, BSKL)</span>
+                                <p>조회수 3.6천회 · 6개월 전</p>
                             </div>
                         </a>
                     </li>
@@ -1441,8 +1441,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">[사연] 고1..자퇴 후 유학이요!? 한 순간에 나락... 절대 가지마세요!</span>
-                                <p>조회수 1천회 · 7일 전</p>
+                                <span class="title">[사연] 말레이시아 국제학교 3년차, 성적 하위권 학생의 현실적 진로 대안!</span>
+                                <p>조회수 2.9천회 · 7개월 전</p>
                             </div>
                         </a>
                     </li>
@@ -1453,8 +1453,8 @@ if (!defined('_EYOOM_')) exit;
                                 <img class="play" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_play.svg" alt="play">
                             </div>
                             <div class="text_area">
-                                <span class="title">제주 vs 말레이시아 국제학교의 학비와 비용 차이 알아보기 (NLCS, SJA, KIS, GIS, ISKL, IGB 등..</span>
-                                <p>조회수 1천회 · 7일 전</p>
+                                <span class="title">말레이시아 국제학교 입학 순위, 100명의 부모님이 실제 선택한 곳은? (이 영상 하나로 끝)</span>
+                                <p>조회수 2.9천회 · 2개월 전</p>
                             </div>
                         </a>
                     </li>

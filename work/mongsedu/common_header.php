@@ -63,7 +63,7 @@
 
 	<div class="top_banner">
 		<div class="container">
-			<a href="#none" class="txtbox">
+			<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="txtbox">
 				<p class="txt tit"><span class="bold">몽선생</span>의 클래스 매칭</p>
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/top_banner_icon.png" alt="" class="icon">
 				<p class="txt desc">

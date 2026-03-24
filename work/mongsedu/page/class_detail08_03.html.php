@@ -53,12 +53,12 @@ if (!defined('_EYOOM_')) exit;
                         <div class="tags-1e">
                             <span class="best">BEST</span>
                         </div>
-                        <!-- <div class="keulraeseu">
-                            <span class="yeong-eo">1:1 클래스</span>
+                        <div class="keulraeseu">
+                            <span class="yeong-eo">1:1수업</span>
                         </div>
                         <div class="frame-1f">
-                            <span class="text-16">영어</span>
-                        </div> -->
+                            <span class="text-16">2달완성</span>
+                        </div>
                     </div>
                 </div>
                 <div class="section-c tabs">
@@ -129,7 +129,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-151">
                                 <div class="frame-152">
                                     <span class="day-paid">유학 실전 스피킹 수업</span>
-									<div class="day-paid-153">(2개월)</div>
+									<div class="day-paid-153">2개월</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>

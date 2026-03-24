@@ -129,7 +129,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-151">
                                 <div class="frame-152">
                                     <span class="day-paid">미리 예습하는 대비반 CLASS</span >
-									<div class="day-paid-153">(2개월)</div>
+									<div class="day-paid-153">2개월</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>

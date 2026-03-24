@@ -152,7 +152,7 @@ if (!defined('_EYOOM_')) exit;
                                                             2개월 / 12강
                                                             <small>총 18시간 학습</small><br>
                                                             <small>상경계/IT 전공 이론</small><br>
-                                                            <small>온라인 강의 18시간 (매 1시간 30분)</small>
+                                                            <small>온라인 강의 18시간 (회당 1시간 30분)</small>
                                                         </span>
                                                         <div class="t_txt">
                                                             <span>전공 이론수업 중점</span>
@@ -368,7 +368,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-151">
                                 <div class="frame-152">
                                     <span class="day-paid">미리 예습하는 대비반 CLASS</span >
-									<div class="day-paid-153">(2개월)</div>
+									<div class="day-paid-153">2개월</div>
                                 </div>
                                 <div class="group-154">
                                     <div class="line-155"></div>
