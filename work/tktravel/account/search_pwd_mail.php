@@ -35,33 +35,27 @@
 						<div class="ac_box">
 							<div class="sub_titbox">
 								<p class="s_tit flexible">
-									<span class="txt">아이디 찾기</span>
-									<img src="<?php echo $path ?>img/join_search.png" alt="" class="icon">
+									<span class="txt">비밀번호 찾기</span>
+									<img src="<?php echo $path ?>img/ic_complete.png" alt="" class="icon">
 								</p>
 								<p class="s_sub">
-									아이디를 잊으셨나요? <br>
-									등록하신 정보로 바로 찾을 수 있습니다.
+									<span class="point">test@gmail.com</span> 
+									 으로 <br class="tablet">비밀번호 재설정 이메일을 발송하였습니다.
 								</p>
 							</div>
-							<div class="form_box">
-								<div class="form_item full input_box">
-									<input type="text" class="input_text mx408" placeholder="이름을 입력해 주세요">
+							<div class="infobox column_ver">
+								<div class="item">
+									<p class="tit">이메일을 받지 못하셨나요?</p>
+									<p class="desc">
+										스팸함을 확인해보시거나, 입력하신 회원정보가 일치하는지 확인해주세요.  <br>
+										아이디를 잊으신 경우, 먼저 아이디 찾기를 진행해주세요.
+									</p>
 								</div>
-								<!-- 260223 추가작업 -->
-								<div class="form_item full input_box">
-									<div class="input_flex">
-										<input type="text" class="input_text mx408" placeholder="휴대폰번호를 입력해 주세요">
-										<button type="button" class="input_btn">인증번호 발송</button>
-									</div>
-								</div>
-								<!-- <div class="form_item sch_box">
-									<p class="txt">비밀번호를 모르시나요?</p>
-									<a href="<?php echo $path ?>account/search_pwd.php" class="link">비밀번호찾기</a>
-								</div> -->
 							</div>
-							<!-- <div class="button_box">
-								<button type="button" class="button typeA">확인</button>
-							</div>	 -->
+							<div class="button_box">
+								<a href="<?php echo $path ?>account/login.php" class="button typeB">로그인</a>
+								<a href="<?php echo $path ?>account/search_id.php" class="button typeA">아이디 찾기</a>
+							</div>	
 						</div>
 					</div>
 

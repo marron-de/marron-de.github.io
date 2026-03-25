@@ -35,45 +35,34 @@
 						<div class="ac_box">
 							<div class="sub_titbox">
 								<p class="s_tit flexible">
-									<span class="txt">비밀번호 찾기</span>
+									<span class="txt">아이디 찾기</span>
 									<img src="<?php echo $path ?>img/join_search.png" alt="" class="icon">
 								</p>
 								<p class="s_sub">
-									비밀번호를 잊으셨나요? <br>
+									아이디를 잊으셨나요? <br>
 									등록하신 정보로 바로 찾을 수 있습니다.
 								</p>
 							</div>
 							<div class="form_box">
 								<div class="form_item full input_box">
-									<input type="text" class="input_text" placeholder="이름을 입력해 주세요">
+									<input type="text" class="input_text mx408" placeholder="이름을 입력해 주세요">
 								</div>
 								<!-- 260223 추가작업 -->
 								<div class="form_item full input_box">
-									<input type="text" class="input_text" placeholder="이메일을 입력해 주세요">
-								</div>
-								<!-- <div class="form_item sch_box">
-									<p class="txt">아이디를 모르시나요?</p>
-									<a href="<?php echo $path ?>account/search_id.php" class="link">아이디찾기</a>
-								</div> -->
-								<div class="form_item full input_box pwd_input_box">
-									<p class="label_text">
-										비밀번호 찾기 방법을 선택해주세요.
-									</p>
-									<div class="radio_wrap">
-										<div class="radio_box">
-											<input type="radio" name="pwd_method" id="pwd_method_1" class="input_radio" checked>
-											<label for="pwd_method_1" class="label_radio">이메일로 받기</label>
-										</div>
-										<div class="radio_box">
-											<input type="radio" name="pwd_method" id="pwd_method_2" class="input_radio">
-											<label for="pwd_method_2" class="label_radio">휴대폰으로 받기</label>
-										</div>
+									<div class="input_flex">
+										<input type="text" class="input_text mx408" placeholder="휴대폰번호를 입력해 주세요" value="01012345678">
+										<button type="button" class="input_btn send">인증번호 재전송</button>
 									</div>
+									<p class="input_status point">입력하신 번호로 인증번호가 발송되었습니다.</p>
+								</div>
+								<div class="form_item full input_box add_input_box">
+									<div class="input_flex">
+										<input type="text" class="input_text mx408" placeholder="인증번호 입력">
+										<button type="button" class="input_btn">확인</button>
+									</div>
+									<p class="input_status">인증번호가 오지 않는다면, 입력하신 이름과 번호가 일치하는지 확인해 주세요</p>
 								</div>
 							</div>
-							<div class="button_box">
-								<button type="button" class="button typeA">확인</button>
-							</div>	
 						</div>
 					</div>
 
