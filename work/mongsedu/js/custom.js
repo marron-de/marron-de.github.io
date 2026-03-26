@@ -384,7 +384,9 @@ window.addEventListener('pageshow', setActiveMenu);
 
 // header link active
 $(document).ready(function () {
-    const currentPid = new URLSearchParams(window.location.search).get('pid');
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPid = urlParams.get('pid');
+    const currentBoTable = urlParams.get('bo_table');
     const currentPath = window.location.pathname;
 
     $('.h_nav .link, .h_nav .h_nav_ul .link').each(function () {
@@ -393,13 +395,22 @@ $(document).ready(function () {
 
         const url = new URL(href, window.location.origin);
         const linkPid = url.searchParams.get('pid');
+        const linkBoTable = url.searchParams.get('bo_table');
         const linkPath = url.pathname;
 
-        if (linkPid && currentPid && linkPid === currentPid) {
+        let isActive = false;
+
+        if (linkPid && currentPid) {
+            if (linkPid === currentPid) isActive = true;
+        } else if (linkBoTable && currentBoTable) {
+            if (linkBoTable === currentBoTable && linkPath === currentPath) isActive = true;
+        } else if (!linkPid && !currentPid && !linkBoTable && !currentBoTable) {
+            if (linkPath === currentPath) isActive = true;
+        }
+
+        if (isActive) {
             $(this).addClass('on');
             $(this).closest('.menu_li').children('.link').addClass('on');
-        } else if (!linkPid && !currentPid && linkPath === currentPath) {
-            $(this).addClass('on');
         }
     });
 });
@@ -1066,7 +1077,6 @@ const singa_swiper = new Swiper('.singa_swiper', {
 
 
 /* 모바일 */
-
 // header nav
 $(document).on('click', '.h_bottom .h_nav > li > a.link', function (e) {
     if (window.innerWidth <= 1080) {
