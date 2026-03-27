@@ -404,7 +404,11 @@ body.hidden { overflow: hidden;}
 .input_filebox .btn.sample_btn {position: absolute; left: 1.5rem;  top: 1rem;   height: 2rem;  font: var(--B5_Rg-13); padding: 0 0.5rem; border-radius: 0.25rem;}
 .input_filebox .btn.sample_btn .icon {width: 0.875rem;}
 .input_filebox .upload_box { position: relative;  display: flex;  align-items: center;  justify-content: center; display: none;}
-.input_filebox .upload_box .del_btn { position: absolute; top: 0;  right: 0;  width: 1.25rem;  display: flex;  align-items: center;  justify-content: center;}
+.input_filebox .upload_box .del_btn { position: absolute; top: 0;  right: 0;  width: 1.25rem;  display: flex;  align-items: center;  justify-content: center; z-index: 10;}
+.input_filebox .upload_box .file_name { width: 100%; display: flex; align-items: center; gap: 0.5rem; font: var(--B2_Rg-16); color: var(--grey-grey-900); }
+.input_filebox .upload_box .file_name .icon {width: 1.25rem;}
+.input_filebox .upload_box .file_name .name {flex: 1;}
+.input_filebox.excel_ver .upload_box .del_btn { top: 50%; transform: translateY(-50%);}
 
 .input_filewrap2 { display: flex; flex-direction: column; gap: 1rem; border: 1px solid var(--grey-grey-300); border-radius: 0.5rem;  padding: 1rem;}
 .input_filewrap2 .file_note {width: calc(100% + 1rem*2); margin: 0 -1rem; font:var(--B4_Rg-14);color: var(--grey-grey-500); padding: 0 1rem 1rem; border-bottom: 1px solid #eeeff1;}
@@ -416,6 +420,7 @@ body.hidden { overflow: hidden;}
 
 .input_filebox.upload .label_file {display: none;}
 .input_filebox.upload .upload_box {display: flex;}
+.input_filebox.upload .btn.sample_btn {display: none;}
 
 
 
@@ -425,6 +430,7 @@ body.hidden { overflow: hidden;}
 .check_box.full {flex: 1;}
 .check_box .input_check { display: inline-block; width: 1.25rem; height: 1.25rem;  appearance: none; background: url(../img/checkbox_off.svg) no-repeat center / contain;  cursor: pointer; transition: var(--transition); }
 .check_box .input_check:checked { background-image: url(../img/checkbox_on.svg);}
+.check_box.ver2 .input_check:checked { background-image: url(../img/checkbox_on2.svg);}
 .check_box .label_check { flex: 1;  display: inline-block;  font:var(--B3_Rg-15); color:var(--grey-grey-700); cursor: pointer;}
 
 
@@ -724,14 +730,14 @@ body.hidden { overflow: hidden;}
 .filter_popup .pop_body {display: flex; flex-direction: column; gap: 0.75rem;     padding: 0.75rem 0 0.875rem;}
 .filter_popup .ft_list {display: flex; flex-direction: column; gap: 0.5rem;}
 .filter_popup .ft_list .ft_titbox {display: flex; align-items: center; justify-content: space-between; padding: 0 1rem;}
-.filter_popup .ft_list .ft_titbox .tit {font: var(--B3_Bd-15);color: var(--grey-grey-900);}
+.filter_popup .ft_list .ft_titbox .tit {font: var(--B3_Bd-15);color: var(--grey-grey-500);}
 .filter_popup .ft_list .ft_titbox .icon_btn {width: 1rem;}
 .filter_popup .ft_list .ft_titbox .icon_btn .icon {width: 100%;}
 .filter_popup .ft_list .check_wrap {flex-direction: column;  align-items: unset; gap: 0;}
 .filter_popup .ft_list .check_wrap .check_box {padding: 0.75rem 1rem;}
 .filter_popup .ft_list .check_wrap .check_box .label_check {font: var(--B4_Rg-14);}
 .filter_popup .ft_line {width: 100%; height: 0.625rem; min-height: 0.625rem; background: var(--grey-grey-100);}
-.filter_popup .ft_list .select_box {padding: 0.75rem 1rem;}
+.filter_popup .ft_list .select_box {padding: 0.5rem 1rem 0;}
 .filter_popup .ft_btnbox {width: 100%; height: 3.75rem; padding: 0.5rem 1rem 0.75rem; box-shadow: var(--Overflowmenu_shadow); display: flex; gap: 0.5rem;}
 .filter_popup .ft_btnbox .btn.full {flex: 1;}
 
@@ -739,22 +745,23 @@ body.hidden { overflow: hidden;}
 /* 공통 - tooltip */
 .tooltip_box {position: relative;}
 .tooltip_box.full_h {height: 100%; display: flex; align-items: center; justify-content: center;}
-.tooltip_btn {display: flex; align-items: center; justify-content: center; width: 1rem;}
+.tooltip_btn {display: flex; align-items: center; justify-content: center; width: 1.25rem;}
+.tooltip_btn .icon {width: 100%;}
 .tooltip { position: absolute; background: var(--grey-grey-100); padding: 0.5rem 0.75rem; border-radius: 0.375rem; box-shadow: var(--Tooltip_shadow); transition: var(--transition); opacity: 0; pointer-events: none; z-index: 20;}
 .tooltip.show {opacity: 1; pointer-events: all;}
 .tooltip_box.hover .tooltip {opacity: 1; pointer-events: all;}
 .tooltip::before { content: ""; position: absolute; width: 0.5rem; aspect-ratio: 8 / 17; background: url(../img/tooltip_tail_w.svg) no-repeat center / contain;}
-.tooltip.up_left {top: calc(100% + 0.563rem); left: 50%; transform: translateX(-50%);}
+.tooltip.up_left {top: calc(100% + 0.625rem); left: 50%; transform: translateX(-50%);}
 .tooltip.up_left::before { top: -0.563rem; left: 0.75rem; transform: rotate(90deg);}
 .tooltip.up_center {top: calc(100% + 0.563rem); left: 50%; transform: translateX(-50%);}
 .tooltip.up_center::before {top: -0.563rem; left: 50%; transform: translateX(-50%) rotate(90deg);}
 .tooltip.up_right {top: calc(100% + 0.563rem); left: 50%; transform: translateX(-50%);}
 .tooltip.up_right::before {top: -0.563rem; right: 0.75rem; transform: rotate(90deg);}
-.tooltip.down_left {bottom: calc(100% + 0.563rem); left: 50%; transform: translateX(-50%);}
+.tooltip.down_left {bottom: calc(100% + 0.625rem); left: 50%; transform: translateX(-50%);}
 .tooltip.down_left::before {bottom: -0.625rem; left: 0.75rem; transform: rotate(90deg) scaleX(-1); filter: drop-shadow(-0.188rem 0 0.125rem rgba(0, 0, 0, 0.16));}
-.tooltip.down_center { bottom: calc(100% + 0.563rem); left: 50%; transform: translateX(-50%);}
+.tooltip.down_center { bottom: calc(100% + 0.625rem); left: 50%; transform: translateX(-50%);}
 .tooltip.down_center::before {bottom: -0.625rem; left: 50%; transform:translateX(-50%) rotate(90deg) scaleX(-1); filter: drop-shadow(-0.188rem 0 0.125rem rgba(0, 0, 0, 0.16));}
-.tooltip.down_right {bottom: calc(100% + 0.563rem); left: 50%; transform: translateX(-50%);}
+.tooltip.down_right {bottom: calc(100% + 0.625rem); left: 50%; transform: translateX(-50%);}
 .tooltip.down_right::before {bottom: -0.625rem; right: 0.75rem; transform: rotate(90deg) scaleX(-1); filter: drop-shadow(-0.188rem 0 0.125rem rgba(0, 0, 0, 0.16));}
 .tooltip.left_up {left: calc(100% + 0.25rem); top: 50%; transform: translateY(-50%);}
 .tooltip.left_up::before {left: -0.313rem; top: 0; filter: drop-shadow(-0.188rem 0.125rem 0.125rem rgba(0, 0, 0, 0.1));}

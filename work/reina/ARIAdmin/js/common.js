@@ -315,26 +315,38 @@ $(document).ready(function () {
         const input = box.find('.input_file');
         const label = box.find('.label_file');
         const previewImg = box.find('.upload_box .img');
+        const fileNameTxt = box.find('.upload_box .file_name .name');
         const delBtn = box.find('.del_btn');
 
         input.on('change', function () {
             const file = this.files[0];
-            
-            if (file) {
+            if (!file) {
+                resetFileInput();
+                return;
+            }
+
+            if (box.hasClass('img_ver')) {
                 if (!file.type.match('image.*')) {
                     alert('이미지 파일만 등록 가능합니다.');
-                    $(this).val('');
+                    resetFileInput();
                     return;
                 }
-
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     previewImg.attr('src', e.target.result);
                     box.addClass('upload');
                 };
                 reader.readAsDataURL(file);
-            } else {
-                resetFileInput();
+
+            } else if (box.hasClass('excel_ver')) {
+                const ext = file.name.split('.').pop().toLowerCase();
+                if (ext !== 'xls' && ext !== 'xlsx') {
+                    alert('엑셀 파일(.xls, .xlsx)만 등록 가능합니다.');
+                    resetFileInput();
+                    return;
+                }
+                fileNameTxt.text(file.name);
+                box.addClass('upload');
             }
         });
 
@@ -344,7 +356,8 @@ $(document).ready(function () {
 
         function resetFileInput() {
             input.val('');
-            previewImg.attr('src', '');
+            if (previewImg.length) previewImg.attr('src', '');
+            if (fileNameTxt.length) fileNameTxt.text('');
             box.removeClass('upload');
         }
 
