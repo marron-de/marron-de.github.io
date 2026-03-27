@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEP Admin</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap layout evaluationList_wrap">
+
+		<!-- navigation -->
+		<div class="navigation">
+			<div class="nav_logo">
+                <img src="img/logo.svg" alt="" class="logo">
+				<div class="profile">
+					<img src="img/nav_profile.png" alt="" class="icon">
+				</div>
+            </div>
+			<ul class="nav">
+                <li class="show">
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav1.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 목록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 목록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav2.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 등록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 등록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav3.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전역 설정</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전역 설정</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav4.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">기업 관리</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">기업 관리</div>
+						</div>
+                    </a>
+				</li>
+            </ul>
+			<ul class="nav nav_bottom">
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_login_w.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전체 관리자 로그인</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전체 관리자 로그인</div>
+						</div>
+                    </a>
+				</li>
+			</ul>
+			<button type="button" class="nav_btn"></button>
+		</div>
+
+        <!-- container -->
+        <div class="container">
+			
+			<!-- page header -->
+			<header class="page_header">
+				<div class="leftbox">
+					<p class="breadcrumb">
+						<span class="tit small">평가 목록</span>
+						<span class="arrow"></span>
+						<span class="tit">결과분석</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="mypage_btn">
+						<p class="hello">
+							Hellow! <span class="name">에듀스</span>
+						</p>
+						<span class="icon"></span>
+					</div>
+					<div class="btnbox">
+						<button type="button" class="btn typeB login_btn">
+							<img src="img/ico_logout_b.svg" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</button>
+					</div>
+				</div>
+			</header>
+
+			<!-- page tabbox -->
+			<div class="page_tabbox no_sticky">
+				<a href="#none" class="tablink">기본정보</a>
+				<a href="#none" class="tablink">항목설정</a>
+				<a href="#none" class="tablink">분석설정</a>
+				<a href="#none" class="tablink">입력설정</a>
+				<a href="#none" class="tablink">API실행</a>
+				<a href="#none" class="tablink on">결과분석</a>
+				<a href="#none" class="tablink">결과보기</a>
+			</div>
+
+			<!-- page result -->
+			<div class="page_result">
+				<p class="total">
+					<span class="txt">분석결과</span>
+					<span class="num">253</span>
+				</p>
+			</div>
+
+			<!-- page topbox -->
+			<div class="page_topbox">
+				<div class="leftbox">
+					<div class="page_titbox">
+						<p class="page_tit">2026년 에듀스 공개 채용</p>
+						<p class="page_desc">2025.10.24(월) - 2025.10.25(화)</p>
+					</div>
+				</div>
+				<div class="rightbox"></div>
+			</div>
+
+			<!-- page tabnav -->
+			<div class="page_tabnav">
+				<div class="tab_navbox">
+					<div class="tab_nav wid120">
+						<span class="txt">타사지원</span>
+						<span class="point">00</span>
+					</div>
+					<div class="tab_nav wid120 on">
+						<span class="txt">표절</span>
+						<span class="point">00</span>
+					</div>
+					<div class="tab_nav wid120">
+						<span class="txt">블라인드</span>
+						<span class="point">00</span>
+					</div>
+					<div class="tab_nav wid120">
+						<span class="txt">적합성</span>
+						<span class="point">00</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- page content -->
+			<div class="page_cont">
+				<section class="page_section">
+					<div class="sec_top top_filer">
+						<div class="leftbox no_full">
+							<div class="select_box wid256">
+								<select class="select select2" data-placeholder="전체">
+									<option value=""></option>
+									<option value="전체">전체</option>
+								</select>
+							</div>
+							<div class="input_box input_schbox wid392">
+								<input type="text" class="input_text" placeholder="검색어를 입력해주세요">
+								<button type="button" class="sch_btn"></button>
+							</div>
+							<button type="button" class="btn typeB">
+								<img src="img/ico_refresh.svg" alt="" class="icon">
+								<span class="txt">초기화</span>
+							</button>
+						</div>								
+						<div class="rightbox">
+							<div class="opt_box select_box wid256">
+								<button type="button" class="select_btn sort_btn">
+									<span class="txt">위반개수 ∙ 내림차순</span>
+									<span class="arrow"></span>
+								</button>
+								<div class="popup select_popup sort_popup">
+									<div class="opt_list">
+										<div class="item">
+											<button type="button" class="opt_popbtn selected">
+												<span class="txt">위반개수</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<span class="txt">수험번호</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<span class="txt">이름</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<span class="txt">역량점수</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+									</div>
+									<div class="opt_line"></div>
+									<div class="radio_wrap opt_order">
+										<div class="radio_box">
+											<input type="radio" name="order" id="order_desc" class="input_radio" checked>
+											<label for="order_desc" class="label_radio">내림차순</label>
+										</div>
+										<div class="radio_box">
+											<input type="radio" name="order" id="order_asc" class="input_radio">
+											<label for="order_asc" class="label_radio">오름차순</label>
+										</div>
+									</div>
+									<div class="opt_btnbox">
+										<button type="button" class="btn typeB full">
+											<img src="img/ico_refresh.svg" alt="" class="icon">
+											<span class="txt">초기화</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="select_box wid120">
+								<select class="select select2" data-class="selected">
+									<option value="20개" selected>20개</option>
+									<option value="30개">30개</option>
+									<option value="50개">50개</option>
+									<option value="100개">100개</option>
+									<option value="전체">전체</option>
+								</select>
+							</div>
+							<div class="opt_box">
+								<button type="button" class="btn typeB icon_ver option_btn">
+									<img src="img/ico_opt.svg" alt="" class="icon">
+								</button>
+								<button type="button" class="btn typeB icon_ver option_close hide">
+									<img src="img/ico_close.svg" alt="" class="icon">
+								</button>
+								<div class="popup opt_popup option_popup">
+									<div class="opt_list">
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_list.svg" alt="" class="icon">
+												<span class="txt">목록 저장</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_clipboard.svg" alt="" class="icon">
+												<span class="txt">결과 리포트 저장</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec_cont">
+						<div class="tbl_wrap">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 40px;">
+									<col style="width: 116px;">
+									<col style="width: 136px;">
+									<col style="width: 136px;">		
+									<col style="width: 136px;">		
+									<col style="width: 136px;">	
+									<col style="width: 680px;">
+									<col style="width: 96px;">
+									<col style="width: 140px;">
+								</colgroup>									
+								<thead>
+									<tr>
+										<th data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check allCheck">
+											</div>
+										</th>
+										<th data-th="No.">No.</th>
+										<th data-th="분류">분류</th>
+										<th data-th="수험번호">수험번호</th>
+										<th data-th="이름">이름</th>
+										<th data-th="항목">항목</th>
+										<th data-th="내용">내용</th>
+										<th data-th="유사항목" class="align_center">유사항목</th>
+										<th data-th="제거" class="align_center">제거</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="No.">01</td>
+										<td data-th="분류">성별</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="항목">01번</td>
+										<td data-th="내용">
+											<span class="highlight">생각했지만 대한 배려라고 대한 배려라고 대한 배려라고  상대방에 대한 배려라고 생각했지만 결과적으로는 배려라고 생각했지만 대한 배려라고</span> 대한 배려라고 대한 배려라고
+										</td>
+										<td data-th="유사항목" class="align_center">
+											<span class="bold">04</span>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_trash.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">제거</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="sec_bottom">
+						<div class="leftbox"></div>	
+						<div class="pagination">
+							<button type="button" class="page_btn first"></button>
+							<button type="button" class="page_btn prev"></button>
+							<div class="page">
+								<a href="" class="link">1</a>
+								<a href="" class="link on">2</a>
+								<a href="" class="link">3</a>
+								<a href="" class="link">4</a>
+								<a href="" class="link">5</a>
+							</div>									
+							<button type="button" class="page_btn next"></button>
+							<button type="button" class="page_btn last"></button>
+						</div>
+						<div class="rightbox"></div>
+					</div>
+				</section>
+			</div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

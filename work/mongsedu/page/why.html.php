@@ -17,12 +17,11 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="txtbox">
 						<p class="sub">
-							교직원들이 만든 <br class="tablet">
-							전문적인 교육업체
+							해외 학교 교직원 출신의 차별점!
 						</p>
 						<p class="tit">
-							몽선생의 컨설팅은  <br class="tablet">
-							<span class="color">이런점이 달라요!</span>
+							20년 경력자의 <br class="tablet">
+							<span class="color">전문 상담을 받아보세요</span>
 						</p>
 					</div>
 					<div class="imgbox">

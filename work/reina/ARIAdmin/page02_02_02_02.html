@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEP Admin</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal ver2 show" id="selectField_modal">
+            <div class="modal_box">
+				<div class="modal_head ver2">
+					<p class="modal_title">지원 분야 선택</p>
+					<button type="button" class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="input_box input_schbox">
+						<input type="text" class="input_text" placeholder="검색어 입력">
+						<button type="button" class="sch_btn"></button>
+					</div>			
+					<div class="field_wrap">
+						<ul class="field_selectbox accordion">
+							<li>
+								<div class="acc_tit">
+									<span class="tit">경영 ∙ 인사 ∙ 총무 ∙ 재무 ∙ 사무</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="show">
+								<div class="acc_tit">
+									<span class="tit">전문 ∙ 특수 ∙ 자격직</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont" style="display: block;">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item hover">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">경영 ∙ 인사 ∙ 총무 ∙ 재무 ∙ 사무</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">경영 ∙ 인사 ∙ 총무 ∙ 재무 ∙ 사무</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">경영 ∙ 인사 ∙ 총무 ∙ 재무 ∙ 사무</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">경영 ∙ 인사 ∙ 총무 ∙ 재무 ∙ 사무</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="acc_tit">
+									<span class="tit">경영 ∙ 인사 ∙ 총무 ∙ 재무 ∙ 사무</span>
+									<span class="arrow"></span>
+								</div>
+								<ul class="acc_cont">
+									<li>
+										<div class="listbox">
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item on">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+											<div class="item">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="field_resultbox">
+							<div class="result_box">
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item hover">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+								<div class="item">
+									<span class="txt">마케팅 ∙ 광고 ∙ 홍보 ∙ PR</span>
+									<span class="num">1234</span>
+								</div>
+							</div>
+							<div class="btn_box">
+								<button type="button" class="btn typeB auto modal_btn">
+									<span class="txt">취소</span>
+								</button>
+								<button type="button" class="btn typeA auto modal_btn">
+									<span class="txt">확인</span>
+								</button>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

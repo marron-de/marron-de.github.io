@@ -16,10 +16,12 @@ if (!defined('_EYOOM_')) exit;
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_ban_bg_mob.jpg" alt="" class="tablet img">
 					</div>
 					<div class="txtbox">
-						<p class="sub">교직원들이 만든 <br class="tablet">전문적인 교육업체</p>
+						<p class="sub">
+							해외 학교 교직원 출신의 차별점!
+						</p>
 						<p class="tit">
-							몽선생의 컨설팅은 <br class="tablet">
-							<span class="color">이런점이 달라요!</span>
+							20년 경력자의 <br class="tablet">
+							<span class="color">전문 상담을 받아보세요</span>
 						</p>
 					</div>
 					<div class="imgbox">
@@ -1165,6 +1167,41 @@ if (!defined('_EYOOM_')) exit;
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <div class="img_area">
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
+									<p class="title">
+										<span class="sub">말레이시아 국제학교</span>
+										<span class="tit">1:1 개별 대면 상담회</span>
+									</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_pst02.jpg" alt="말레이시아 국제학교 1:1 개별 상담회 영어진단평가 체험">
+                                </div>
+                                <div class="text_area">
+									<div class="badgebox">
+										<span class="nation">말레이시아</span>
+										<span class="place offline">오프라인</span>
+									</div>
+                                    <span class="title">말레이시아 국제학교 1:1 개별 상담회 영어진단평가 체험</span>
+                                    <ul>
+                                        <li>
+                                            <p class="tit">장소</p>
+                                            <p class="txt">몽선생 강남지점</p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">일시</p>
+                                            <p class="txt">2026년 4월 10일(금), 11일(토), 12일(일) </p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">정원</p>
+                                            <p class="txt">20팀</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn_area">
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=11">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide end">
+                                <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
 										<span class="sub">싱가포르 사립대</span>
@@ -1194,11 +1231,11 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
-                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none" onclick="showToast('신청 마감된 설명회입니다')">신청마감</a>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
 									<p class="title">
@@ -1213,41 +1250,6 @@ if (!defined('_EYOOM_')) exit;
 										<span class="place offline">오프라인</span>
 									</div>
                                     <span class="title">말라야 사립대 대면 입시 설명회</span>
-                                    <ul>
-                                        <li>
-                                            <p class="tit">장소</p>
-                                            <p class="txt">서울 강남</p>
-                                        </li>
-                                        <li>
-                                            <p class="tit">일시</p>
-                                            <p class="txt">2025년 07월 26일 토요일 12:00</p>
-                                        </li>
-                                        <li>
-                                            <p class="tit">정원</p>
-                                            <p class="txt">30명</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="btn_area">
-                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
-                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
-                                </div>
-                            </li>
-                            <li class="swiper-slide end">
-                                <div class="img_area">
-                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
-									<p class="title">
-										<span class="sub">싱가포르 사립대&예술대</span>
-										<span class="tit">온라인 입시 설명회</span>
-									</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_pst03.jpg" alt="싱가포르 사립대&예술대 온라인 입시 설명회">
-                                </div>
-                                <div class="text_area">
-									<div class="badgebox">
-										<span class="nation">싱가포르</span>
-										<span class="place online">온라인</span>
-									</div>
-                                    <span class="title">싱가폴 사립대&예술대 온라인 입시 설명회</span>
                                     <ul>
                                         <li>
                                             <p class="tit">장소</p>
@@ -1306,8 +1308,47 @@ if (!defined('_EYOOM_')) exit;
                         </ul>
                     </li>					
                     <li id="content-2" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
+                         <ul class="swiper-wrapper">
+                             <li class="swiper-slide">
+                                <div class="img_area">
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
+									<p class="title">
+										<span class="sub">말레이시아 국제학교</span>
+										<span class="tit">1:1 개별 대면 상담회</span>
+									</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_pst02.jpg" alt="말레이시아 국제학교 1:1 개별 상담회 영어진단평가 체험">
+                                </div>
+                                <div class="text_area">
+									<div class="badgebox">
+										<span class="nation">말레이시아</span>
+										<span class="place offline">오프라인</span>
+									</div>
+                                    <span class="title">말레이시아 국제학교 1:1 개별 상담회 영어진단평가 체험</span>
+                                    <ul>
+                                        <li>
+                                            <p class="tit">장소</p>
+                                            <p class="txt">몽선생 강남지점</p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">일시</p>
+                                            <p class="txt">2026년 4월 10일(금), 11일(토), 12일(일) </p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">정원</p>
+                                            <p class="txt">20팀</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn_area">
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=11">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="content-3" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                         <ul class="swiper-wrapper">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
 									<p class="title">
@@ -1338,15 +1379,11 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="">자세히 보기</a>
-                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none" onclick="showToast('신청 마감된 설명회입니다')">신청마감</a>
                                 </div>
                             </li>
-                        </ul>
-                    </li>
-                    <li id="content-3" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
+                            <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
 									<p class="title">
@@ -1377,14 +1414,10 @@ if (!defined('_EYOOM_')) exit;
                                     </ul>
                                 </div>
                                 <div class="btn_area">
-                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=9">자세히 보기</a>
-                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
+                                    <a class="btn normal" href="#none">자세히 보기</a>
+                                    <a class="btn confirm" href="#none" onclick="showToast('신청 마감된 설명회입니다')">신청마감</a>
                                 </div>
                             </li>
-                        </ul>                        
-                    </li>
-                    <li id="content-4" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
-                        <ul class="swiper-wrapper">
                             <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
@@ -1420,6 +1453,11 @@ if (!defined('_EYOOM_')) exit;
                                     <a class="btn confirm" href="#none" onclick="showToast('신청 마감된 설명회입니다')">신청마감</a>
                                 </div>
                             </li>
+                        </ul>                        
+                    </li>
+                    <li id="content-4" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
+                         <ul class="swiper-wrapper">
+
                         </ul>
                     </li>
                 </ul>

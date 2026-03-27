@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEP Admin</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap layout evaluationList_wrap">
+
+		<!-- navigation -->
+		<div class="navigation">
+			<div class="nav_logo">
+                <img src="img/logo.svg" alt="" class="logo">
+				<div class="profile">
+					<img src="img/nav_profile.png" alt="" class="icon">
+				</div>
+            </div>
+			<ul class="nav">
+                <li class="show">
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav1.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 목록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 목록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav2.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 등록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 등록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav3.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전역 설정</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전역 설정</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav4.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">기업 관리</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">기업 관리</div>
+						</div>
+                    </a>
+				</li>
+            </ul>
+			<ul class="nav nav_bottom">
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_login_w.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전체 관리자 로그인</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전체 관리자 로그인</div>
+						</div>
+                    </a>
+				</li>
+			</ul>
+			<button type="button" class="nav_btn"></button>
+		</div>
+
+        <!-- container -->
+        <div class="container">
+			
+			<!-- page header -->
+			<header class="page_header">
+				<div class="leftbox">
+					<p class="breadcrumb">
+						<span class="tit small">평가 목록</span>
+						<span class="arrow"></span>
+						<span class="tit">평가 설정</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="mypage_btn">
+						<p class="hello">
+							Hellow! <span class="name">에듀스</span>
+						</p>
+						<span class="icon"></span>
+					</div>
+					<div class="btnbox">
+						<button type="button" class="btn typeB login_btn">
+							<img src="img/ico_logout_b.svg" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</button>
+					</div>
+				</div>
+			</header>
+
+			<!-- page tabbox -->
+			<div class="page_tabbox">
+				<a href="#none" class="tablink">기본정보</a>
+				<a href="#none" class="tablink">항목설정</a>
+				<a href="#none" class="tablink">분석설정</a>
+				<a href="#none" class="tablink">입력설정</a>
+				<a href="#none" class="tablink on">API실행</a>
+				<a href="#none" class="tablink">결과분석</a>
+				<a href="#none" class="tablink">결과보기</a>
+			</div>
+
+			<!-- page result -->
+			<div class="page_result ver2">
+				<p class="total">
+					<span class="txt">평가대상자</span>
+					<span class="num">20</span>
+				</p>
+			</div>
+
+			<!-- page content -->
+			<div class="page_cont">
+				<section class="page_section">
+					<div class="sec_cont">
+						<div class="api_wrap">
+							<div class="api_box">
+								<div class="api_titbox">
+									<p class="tit">역량평가</p>
+									<p class="alert_txt">
+										<img src="img/ico_alert_red.svg" alt="" class="icon">
+										<span class="txt">비활성화된 API를 실행하려면 먼저 실행설정에서 활성화 시켜야 합니다.</span>
+									</p>
+								</div>
+								<div class="api_list">
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">ARI역량평가</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeA">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeA wid100">
+												<img src="img/ico_play.svg" alt="" class="icon white">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">역량평가 비율 조정</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeA">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeA wid100">
+												<img src="img/ico_play.svg" alt="" class="icon white">
+												<span class="txt">실행</span>
+											</button>
+											<div class="input_box">
+												<input type="text" class="input_text" placeholder="점수비율">
+											</div>
+										</div>
+									</div>
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">직무적합도</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeC">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeC wid100">
+												<img src="img/ico_slashCircle.svg" alt="" class="icon">
+												<span class="txt">오류</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="api_box">
+								<div class="api_titbox">
+									<p class="tit">타사지원</p>
+								</div>
+								<div class="api_list">
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">타사지원</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeA">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeA wid100">
+												<img src="img/ico_play.svg" alt="" class="icon white">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">자사명오기재</p>
+											<p class="people"></p>
+										</div>
+										<div class="progress"></div>
+										<div class="btnbox">
+											<button type="button" class="btn typeB wid100">
+												<img src="img/ico_play.svg" alt="" class="icon">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="api_box">
+								<div class="api_titbox">
+									<p class="tit">블라인드 체크</p>
+								</div>
+								<div class="api_list">
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">블라인드 체크</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeB">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeD wid100">
+												<img src="img/ico_refresh_red.svg" alt="" class="icon">
+												<span class="txt">재실행</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="api_box">
+								<div class="api_titbox">
+									<p class="tit">표절검사</p>
+								</div>
+								<div class="api_list">
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">표절검사</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeA">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeA wid100">
+												<img src="img/ico_play.svg" alt="" class="icon white">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">채용내 표절</p>
+											<p class="people"></p>
+										</div>
+										<div class="progress"></div>
+										<div class="btnbox">
+											<button type="button" class="btn typeB wid100">
+												<img src="img/ico_play.svg" alt="" class="icon">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">Human-Like</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeA">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeA wid100">
+												<img src="img/ico_play.svg" alt="" class="icon white">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="api_box">
+								<div class="api_titbox">
+									<p class="tit">적합성 검사</p>
+								</div>
+								<div class="api_list">
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">분량/항목 적합성</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeA">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeA wid100">
+												<img src="img/ico_play.svg" alt="" class="icon white">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">맞춤법</p>
+											<p class="people"></p>
+										</div>
+										<div class="progress"></div>
+										<div class="btnbox">
+											<button type="button" class="btn typeB wid100">
+												<img src="img/ico_play.svg" alt="" class="icon">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="api_box">
+								<div class="api_titbox">
+									<p class="tit">질문생성</p>
+								</div>
+								<div class="api_list">
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">추가질문 1차</p>
+											<p class="people">
+												<span class="num">000</span>
+												<span class="txt">/</span>
+												<span class="total">300</span>
+											</p>
+										</div>
+										<div class="progress typeA">
+											<div class="progress_bar" style="width: 84%;">
+												<span class="percent">84%</span>
+											</div>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="btn typeA wid100">
+												<img src="img/ico_play.svg" alt="" class="icon white">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+									<div class="api_item">
+										<div class="titbox">
+											<p class="tit">추가질문 2차</p>
+											<p class="people"></p>
+										</div>
+										<div class="progress"></div>
+										<div class="btnbox">
+											<button type="button" class="btn typeB wid100">
+												<img src="img/ico_play.svg" alt="" class="icon">
+												<span class="txt">실행</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- page bottom -->
+			<div class="page_bottom">
+				<div class="leftbox">
+					<button type="button" class="btn typeB">
+						<span class="txt">목록으로</span>
+					</button>
+				</div>
+				<div class="btnbox">
+					<button type="button" class="btn typeB">
+						<span class="txt">취소</span>
+					</button>
+					<button type="button" class="btn typeA">
+						<span class="txt">저장</span>
+					</button>
+				</div>
+				<div class="rightbox"></div>
+			</div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

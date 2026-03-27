@@ -165,10 +165,10 @@ if (!defined('_EYOOM_')) exit;
                                                             <small>회당 1시간</small>
                                                         </span>
                                                         <div class="t_txt">
-                                                            <span>테스트 문제 맛보기</span>
-                                                            <p class="lst">‧ CAT4, MAP 연습문제 풀이</p>
-                                                            <p class="lst">‧ 주 2회 (월 8회, 총 12회 수업)</p>
-                                                            <p class="lst">‧ 인터뷰 예상질문 알아보기</p>
+                                                            <span>영어 에세이/토론 집중</span>
+                                                            <p class="lst">‧ 영어 수업 학습 제공</p>
+                                                            <p class="lst">‧ 주2회(월 8회, 총 12회 수업)</p>
+                                                            <p class="lst">‧ 최대 6명 소규모 온라인 수업</p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -187,72 +187,66 @@ if (!defined('_EYOOM_')) exit;
                                                 <ul class="faq_list">
                                                     <li>
                                                         <div class="question">
-                                                            <p>정규반 1강</p>
-                                                            <span>실전 입학 테스트</span>
+                                                            <p>제 1강</p>
+                                                            <span>Debate & Discussion / Essay Writting</span>
                                                         </div>
                                                         <div class="answer">
-                                                            <p>실제 유형 기반 모의시험 훈련 및 문제 해결 전략 습득</p>
+                                                            <p>대학용 기초 토론, 표현습득 / 효과적인 이메일, word 작성법</p>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="question">
-                                                            <p>정규반 2강</p>
-                                                            <span>입학 테스트 인터뷰 대비 1</span>
+                                                            <p>제 2강</p>
+                                                            <span>Debate & Discussion / Essay Writting</span>
                                                         </div>
                                                         <div class="answer">
-                                                            <p>기본 인터뷰 응답 연습 및 자연스러운 자기표현 능력 향상</p>
+                                                            <p>디베이트 찬반 포맷 훈련, 상황별 비즈 이메일 유형 연습</p>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="question">
-                                                            <p>정규반 3강</p>
-                                                            <span>입학 테스트 인터뷰 대비 2</span>
+                                                            <p>제 3강</p>
+                                                            <span>Debate & Discussion / Essay Writting</span>
                                                         </div>
                                                         <div class="answer">
-                                                            <p>의견 제시형 질문 대응력 강화 및 논리적 표현 훈련</p>
+                                                            <p>대학 수업 주제 기반 리서치 훈련, 리서치 기반 요약 & 라이팅 훈련</p>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="question">
-                                                            <p>정규반 4강</p>
-                                                            <span>입학 테스트 라이팅 대비 1</span>
+                                                            <p>제 4강</p>
+                                                            <span>Presentation  / 상황별 영어 & 롤플레이</span>
                                                         </div>
                                                         <div class="answer">
-                                                            <p>문단 구성 연습 및 기본 에세이 구조 이해</p>
+                                                            <p>발표 표현 습득 및 스크립트 작성 훈련, 유학생활 필수 영어</p>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="question">
-                                                            <p>정규반 5강</p>
-                                                            <span>입학 테스트 라이팅 대비 2</span>
+                                                            <p>제 5강</p>
+                                                            <span>Presentation  / 상황별 영어 & 롤플레이</span>
                                                         </div>
                                                         <div class="answer">
-                                                            <p>실전형 글쓰기 훈련 및 표현력, 전개력 향상</p>
+                                                            <p>대학 개별 팀발표 시뮬레이션, 필수 상황별 실전 롤플레이</p>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="question">
-                                                            <p>정규반 6강</p>
-                                                            <span>CAT4 / MAP 테스트 대비</span>
+                                                            <p>제 6강</p>
+                                                            <span>비즈니스 영어 보카 & 라이팅 / 교양 영어 어휘 정리</span>
                                                         </div>
                                                         <div class="answer">
-                                                            <p>핵심 문제 유형 분석 및 시간 관리 전략 학습</p>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="question">
-                                                            <p>체험반 1강</p>
-                                                            <span>CAT4 / MAP 테스트 대비</span>
-                                                        </div>
-                                                        <div class="answer">
-                                                            <p>핵심 문제 유형 분석 및 시간 관리 전략 학습</p>
+                                                            <p>
+                                                                통계, 경영, 경제, 마케팅, 회계 전공의 주요 영어로 어휘들 집중 훈련 <br class="pc">
+                                                                학부 공통 기본 교양 영어 어휘 연습 
+                                                            </p>
                                                         </div>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="guide">
                                                 <ul>
-                                                    <li>* 위위 수업 내용은 예시 내용이며, 실제 수업시 학생들의 실력에 따라 내용은 개별 맞춤으로 진행될 수 있습니다.</li>
+                                                    <li>* 위 수업 내용은 예시 내용이며, 학생의 수업 능력에 따라 달라질 수 있습니다. </li>
                                                 </ul>
                                             </div>
                                         </div>

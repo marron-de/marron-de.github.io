@@ -1,4 +1,4 @@
-// 아코디언 기능
+// 공통 - 아코디언 기능
 (function ($) {
 
 	const lnbUI = {
@@ -56,7 +56,7 @@
 }(jQuery));
 
 
-// 탭
+// 공통 - 탭
 $(document).ready(function () {
 	$(".tab_nav").click(function () {
 		let target = $(this);
@@ -74,7 +74,7 @@ $(document).ready(function () {
 });
 
 
-// datepicker
+// 공통 - datepicker
 $(document).ready(function () {  
   if ($(".datepicker").length) {
     $.datepicker.setDefaults({
@@ -88,7 +88,7 @@ $(document).ready(function () {
       dayNamesShort: ["S", "M", "T", "W", "T", "F", "S"],
       dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
       weekHeader: "주",
-      dateFormat: "yy-mm-dd",
+      dateFormat: "yy.mm.dd",
       firstDay: 0,
       isRTL: false,
       showMonthAfterYear: true,
@@ -129,7 +129,7 @@ $(document).ready(function () {
 });
 
 
-// select2 
+// 공통 - select2 
 $(function() {
     function formatOption(data) {
 		if (!data.id) return data.text || '';
@@ -174,8 +174,8 @@ $(document).on("mouseup", ".select2-dropdown, .select2-dropdown *", function (e)
 });
 
 
-// 모달 공통
-$(".modal .close_btn").click(function () {
+// 공통 - 모달
+$(".modal .modal_close").click(function () {
 	$("body").removeClass("hidden")
 	$(".modal").removeClass("show")
 })
@@ -187,18 +187,7 @@ $(document).mouseup(function (e) {
 });
 
 
-// 오프캔버스 공통
-$(".offcanvas .offcanvas_close").click(function () {
-	$(".offcanvas").removeClass("show")
-})
-$(document).mouseup(function (e) {
-	if ($(".offcanvas").has(e.target).length === 0) {
-		$(".offcanvas").removeClass("show")
-	}
-});
-
-
-// 팝업 공통
+// 공통 - 팝업 공통
 $(".popup .pop_close").click(function () {
 	$(this).closest(".popup").removeClass("show")
 })
@@ -220,9 +209,22 @@ $(".opt_popup .opt_popbtn").click(function () {
 $(".opt_popup .opt_close").click(function () {
 	$(".opt_popup").removeClass("show")
 })
+$(".select_popup .opt_popbtn").click(function () {
+    const popup = $(this).closest(".select_popup");
+    popup.find(".opt_popbtn").removeClass("selected");
+    $(this).addClass("selected");
+
+    const input = $(this).find('input[type="radio"]');
+    if (input.length) {
+        input.prop("checked", true).trigger("change");
+    }
+});
+$(".select_popup .opt_close").click(function () {
+	$(".opt_popup").removeClass("show")
+})
 
 
-// 네비게이션 버튼
+// 공통 - 네비게이션 버튼
 $(".navigation .nav_btn").click(function () {
 	$(".layout").toggleClass("closed")
 })
@@ -231,214 +233,40 @@ $(".navigation .nav_open").click(function () {
 })
 
 
-// 네비게이션 툴팁
+// 공통 - 네비게이션 툴팁
 $(".navigation .nav .acc_tit").hover(
   function () { $(this).addClass("hover"); },
   function () { $(this).removeClass("hover");}
 );
 
 
-// 헤더 툴팁
-$(".page_header .btn").hover(
+// 공통 - 페이지 필터
+$(".top_filer .option_btn").click(function () {
+	$(".top_filer .option_btn").addClass("hide")
+	$(".top_filer .option_close").removeClass("hide")
+	$(".top_filer .option_popup").addClass("show")
+})
+$(".top_filer .option_close").click(function () {
+	$(".top_filer .option_btn").removeClass("hide")
+	$(".top_filer .option_close").addClass("hide")
+	$(".top_filer .option_popup").removeClass("show")
+})
+$(".top_filer .sort_btn").click(function () {
+	$(".top_filer .sort_popup").addClass("show")
+})
+$(".top_filer .filter_btn").click(function () {
+	$(".top_filer .filter_popup").addClass("show")
+})
+
+
+// 공통 - 툴팁
+$(".tooltip_box").hover(
   function () { $(this).addClass("hover"); },
   function () { $(this).removeClass("hover");}
 );
 
 
-// 레이아웃 - 페이지 필터
-$(".top_filer .align_btn").click(function () {
-	$(".top_filer .align_popup").addClass("show")
-})
-$(".top_filer .setting_btn").click(function () {
-	$(".top_filer .setting_popup").addClass("show")
-})
-
-
-// 첨부파일 업로드
-$(document).ready(function () {
-    $('.file_upload').each(function () {
-        const photoBox = $(this);
-        const wrapper = photoBox.closest('.input_filebox'); 
-        const inputFile = wrapper.find('.input_file');
-        const delBtn = photoBox.find('.del_btn');
-        const uploadBox = photoBox.find('.upload_box');
-        const fileNameBox = wrapper.find('.filename');
-
-        function handleFileUpload(file) {
-            const maxSize = inputFile.data('size');
-            const sizeInBytes = convertSizeToBytes(maxSize);
-            const allowedTypes = inputFile.data('accept').split(',')
-                .map(type => type.trim().toLowerCase());
-
-            if (file.size > sizeInBytes) {
-                alert(`파일 크기는 ${maxSize} 이하로 업로드해야 합니다.`);
-                return;
-            }
-
-            const fileExtension = file.name.split('.').pop().toLowerCase();
-            if (!allowedTypes.includes(fileExtension)) {
-                alert(`지원되는 파일 형식은 ${allowedTypes.join(', ')}입니다.`);
-                return;
-            }
-
-            if (fileExtension === 'pdf') {
-                handlePdfUpload(file);
-            } else {
-                handleImageUpload(file);
-            }
-
-            fileNameBox.text(file.name); 
-        }
-
-        function handlePdfUpload(file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const pdfData = new Uint8Array(e.target.result);
-
-                pdfjsLib.getDocument(pdfData).promise.then(function (pdf) {
-                    pdf.getPage(1).then(function (page) {
-                        const canvas = document.createElement('canvas');
-                        const context = canvas.getContext('2d');
-                        const scale = 1.5;
-                        const viewport = page.getViewport({ scale: scale });
-
-                        canvas.width = viewport.width;
-                        canvas.height = viewport.height;
-
-                        page.render({
-                            canvasContext: context,
-                            viewport: viewport
-                        }).promise.then(function () {
-                            const img = $('<img class="img" />')
-                                .attr('src', canvas.toDataURL())
-                                .attr('alt', 'PDF Thumbnail');
-                            uploadBox.empty().append(img).addClass('uploaded');
-                            delBtn.show();
-                        });
-                    });
-                }).catch(function (error) {
-                    alert("PDF 로딩 오류: " + error);
-                });
-            };
-            reader.readAsArrayBuffer(file);
-        }
-
-        function handleImageUpload(file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = $('<img class="img" />')
-                    .attr('src', e.target.result)
-                    .attr('alt', '이미지 업로드');
-                uploadBox.empty().append(img).addClass('uploaded');
-                delBtn.show();
-            };
-            reader.readAsDataURL(file);
-        }
-
-        function convertSizeToBytes(sizeStr) {
-            const sizeUnit = sizeStr.slice(-2).toLowerCase();
-            const sizeValue = parseInt(sizeStr);
-            switch (sizeUnit) {
-                case 'mb': return sizeValue * 1024 * 1024;
-                case 'kb': return sizeValue * 1024;
-                case 'gb': return sizeValue * 1024 * 1024 * 1024;
-                default: return sizeValue;
-            }
-        }
-
-        inputFile.on('change', function (e) {
-            const file = e.target.files[0];
-            if (file) handleFileUpload(file);
-        });
-
-        delBtn.on('click', function () {
-            uploadBox.empty().removeClass('uploaded');
-            delBtn.hide();
-            inputFile.val('');
-            fileNameBox.text('');
-        });
-
-        uploadBox.on('click', function () {
-            inputFile.click();
-        });
-
-        uploadBox.on('dragover', function (e) {
-            e.preventDefault();
-            uploadBox.addClass('drag_over');
-        });
-
-        uploadBox.on('dragleave', function () {
-            uploadBox.removeClass('drag_over');
-        });
-
-        uploadBox.on('drop', function (e) {
-            e.preventDefault();
-            uploadBox.removeClass('drag_over');
-            const file = e.originalEvent.dataTransfer.files[0];
-            if (file) handleFileUpload(file);
-        });
-    });
-});
-
-$(document).ready(function () {
-    $('.file_upload2').each(function () {
-        const uploadBox = $(this);
-        const wrapper = uploadBox.closest('.input_filebox');
-        const inputFile = wrapper.find('.input_file');
-
-        function handleFileUpload(file) {
-            const allowedTypes = inputFile.data('accept').split(',')
-                .map(type => type.trim().toLowerCase());
-
-            const fileExtension = file.name.split('.').pop().toLowerCase();
-            if (!allowedTypes.includes(fileExtension)) {
-                alert(`지원되는 파일 형식은 ${allowedTypes.join(', ')}입니다.`);
-                return;
-            }
-
-            alert("(임시) 업로드 완료: " + file.name);
-        }
-
-        inputFile.on('change', function (e) {
-            const file = e.target.files[0];
-            if (file) handleFileUpload(file);
-        });
-
-        uploadBox.on('click', function () {
-            inputFile.click();
-        });
-
-        uploadBox.on('dragover', function (e) {
-            e.preventDefault();
-            uploadBox.addClass('drag_over');
-        });
-
-        uploadBox.on('dragleave', function () {
-            uploadBox.removeClass('drag_over');
-        });
-
-        uploadBox.on('drop', function (e) {
-            e.preventDefault();
-            uploadBox.removeClass('drag_over');
-            const file = e.originalEvent.dataTransfer.files[0];
-            if (file) handleFileUpload(file);
-        });
-    });
-});
-
-
-// 라벨 체크박스
-$(".form_label .input_check").on("change", function () {
-  const parent = $(this).closest(".form_label");
-  if ($(this).is(":checked")) {
-    parent.addClass("checked");
-  } else {
-    parent.removeClass("checked");
-  }
-});
-
-
-// 테이블 전체 체크
+// 공통 - 테이블 전체 체크
 $(function() {
     let table = $(".tbl");
 
@@ -455,9 +283,89 @@ $(function() {
 });
 
 
-// 알럿 버튼
-$(".alert_box .alert_btn").hover(
-  function () { $(this).siblings(".alert_popup").addClass("show");},
-  function () { $(this).siblings(".alert_popup").removeClass("show"); }
+// 로그인 - 인툿 비밀번호 토글 버튼
+$('.input_secret .secret_btn').on('click', function() {
+    $(this).toggleClass('on');
+    
+    const pwdInput = $(this).closest('.input_secret').find('input');
+	    
+    if (pwdInput.attr('type') === 'password') {
+        pwdInput.attr('type', 'text');
+    } else {
+        pwdInput.attr('type', 'password');
+    }
+});
+
+
+// 지원 분야 선택 popup
+$('#selectField_modal .field_selectbox .acc_cont .listbox .item').hover(
+  function () { $(this).addClass("hover"); },
+  function () { $(this).removeClass("hover");}
+);
+$('#selectField_modal .field_resultbox .result_box .item').hover(
+  function () { $(this).addClass("hover"); },
+  function () { $(this).removeClass("hover");}
 );
 
+
+// 파일 등록 
+$(document).ready(function () {
+    $('.input_filebox').each(function () {
+        const box = $(this);
+        const input = box.find('.input_file');
+        const label = box.find('.label_file');
+        const previewImg = box.find('.upload_box .img');
+        const delBtn = box.find('.del_btn');
+
+        input.on('change', function () {
+            const file = this.files[0];
+            
+            if (file) {
+                if (!file.type.match('image.*')) {
+                    alert('이미지 파일만 등록 가능합니다.');
+                    $(this).val('');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImg.attr('src', e.target.result);
+                    box.addClass('upload');
+                };
+                reader.readAsDataURL(file);
+            } else {
+                resetFileInput();
+            }
+        });
+
+        delBtn.on('click', function () {
+            resetFileInput();
+        });
+
+        function resetFileInput() {
+            input.val('');
+            previewImg.attr('src', '');
+            box.removeClass('upload');
+        }
+
+        label.on('dragover', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            box.addClass('dragover');
+        });
+
+        label.on('dragleave drop', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            box.removeClass('dragover');
+        });
+
+        label.on('drop', function (e) {
+            const files = e.originalEvent.dataTransfer.files;
+            if (files && files.length > 0) {
+                input[0].files = files;
+                input.trigger('change');
+            }
+        });
+    });
+});

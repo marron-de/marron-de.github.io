@@ -16,10 +16,12 @@ if (!defined('_EYOOM_')) exit;
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counsel_ban_bg_mob.jpg" alt="" class="tablet img">
 					</div>
 					<div class="txtbox">
-						<p class="sub">교직원들이 만든 <br class="tablet">전문적인 교육업체</p>
+						<p class="sub">
+							해외 학교 교직원 출신의 차별점!
+						</p>
 						<p class="tit">
-							몽선생의 컨설팅은 <br class="tablet">
-							<span class="color">이런점이 달라요!</span>
+							20년 경력자의 <br class="tablet">
+							<span class="color">전문 상담을 받아보세요</span>
 						</p>
 					</div>
 					<div class="imgbox">
@@ -138,7 +140,7 @@ if (!defined('_EYOOM_')) exit;
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t6.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t6.jpg" alt="" class="img tablet">
 									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
 									</div>
 								</div>
 								<div class="txtbox">
@@ -159,7 +161,7 @@ if (!defined('_EYOOM_')) exit;
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t9.jpg" alt="" class="img tablet">
 									<div class="flagbox">
 										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
+										<div class="class_tag">class</div>
 									</div>
 								</div>
 								<div class="txtbox">
@@ -194,6 +196,26 @@ if (!defined('_EYOOM_')) exit;
 									<div class="btn">자세히 보기</div>
 								</div>
 							</li>
+							<li class="item" onclick="mentor_modal(8);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t8.png" alt="" class="img pc">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t8.jpg" alt="" class="img tablet">
+									<div class="flagbox">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
+									</div>
+								</div>
+								<div class="txtbox">
+									<div class="top">
+										<p class="name">김소연 실장</p>
+										<p class="desc">kaplan 재단 교직원 출신</p>
+									</div>
+									<div class="bottom">
+										<p class="tag">미국/아시아 전문</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+									<div class="btn">자세히 보기</div>
+								</div>
+							</li>
 							<li class="item" onclick="mentor_modal(21);">
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t21.png" alt="" class="img pc">
@@ -218,9 +240,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t11.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t11.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -278,9 +298,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t17.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t17.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_canada.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -338,9 +356,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t12.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t12.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -378,9 +394,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t18.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t18.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -398,9 +412,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t19.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t19.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_france.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -438,9 +450,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t20.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t20.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -458,9 +468,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t22.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t22.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -478,9 +486,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t23.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t23.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -498,9 +504,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t24.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t24.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -518,9 +522,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t25.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t25.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
@@ -634,7 +636,7 @@ if (!defined('_EYOOM_')) exit;
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t6.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t6.jpg" alt="" class="img tablet">
 									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt="" class="flag">
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
 									</div>
 								</div>
 								<div class="txtbox">

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEP Admin</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap layout evaluationList_wrap">
+
+		<!-- navigation -->
+		<div class="navigation">
+			<div class="nav_logo">
+                <img src="img/logo.svg" alt="" class="logo">
+				<div class="profile">
+					<img src="img/nav_profile.png" alt="" class="icon">
+				</div>
+            </div>
+			<ul class="nav">
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav1.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 목록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 목록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav2.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 등록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 등록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav3.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전역 설정</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전역 설정</div>
+						</div>
+                    </a>
+				</li>
+                <li class="show">
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav4.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">기업 관리</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">기업 관리</div>
+						</div>
+                    </a>
+				</li>
+            </ul>
+			<ul class="nav nav_bottom">
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_login_w.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전체 관리자 로그인</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전체 관리자 로그인</div>
+						</div>
+                    </a>
+				</li>
+			</ul>
+			<button type="button" class="nav_btn"></button>
+		</div>
+
+        <!-- container -->
+        <div class="container">
+			
+			<!-- page header -->
+			<header class="page_header">
+				<div class="leftbox">
+					<p class="breadcrumb">
+						<span class="tit small">기업 목록</span>
+						<span class="arrow"></span>
+						<span class="tit">기업 등록</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="mypage_btn">
+						<p class="hello">
+							Hellow! <span class="name">에듀스</span>
+						</p>
+						<span class="icon"></span>
+					</div>
+					<div class="btnbox">
+						<button type="button" class="btn typeB login_btn">
+							<img src="img/ico_logout_b.svg" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</button>
+					</div>
+				</div>
+			</header>
+
+			<!-- page content -->
+			<div class="page_cont">
+				<section class="page_section ver2">
+					<div class="sec_cont">
+						<div class="form_box">
+							<div class="form_item form_flex column_ver gap20">
+								<p class="form_tit big lead100">
+									기업 설정
+									<span class="required">*</span>
+								</p>
+								<div class="form_cont form_flex column_ver">
+									<div class="form_flex wid664">
+										<div class="form_tit wid120">기업명</div>
+										<div class="form_cont full">
+											<div class="input_box">
+												<input type="text" class="input_text" placeholder="기업명 입력해주세요" value="기업명 입력해주세요">
+											</div>
+										</div>
+									</div>
+									<div class="form_flex wid664">
+										<div class="form_tit wid120">기업코드</div>
+										<div class="form_cont full">
+											<div class="input_box">
+												<input type="text" class="input_text readOnly" placeholder="기업코드를 입력해주세요" value="educe1234" readonly>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_line"></div>
+							<div class="form_item form_flex column_ver gap20">
+								<div class="form_titbox form_flex gap20">
+									<p class="form_tit big lead100">
+										비밀번호 변경
+										<span class="required">*</span>
+									</p>
+									<div class="switch_box">
+										<input type="checkbox" id="pwd_check" class="input_switch">
+									</div>
+								</div>
+							</div>
+							<div class="form_line"></div>
+							<div class="form_item form_flex column_ver gap20">
+								<p class="form_tit big lead100">
+									로고 이미지
+									<span class="required">*</span>
+								</p>
+								<div class="form_cont">
+									<div class="input_filewrap2 wid528">
+										<div class="file_note">
+											버튼을 클릭하거나,이미지 파일을 끌어다 놓으세요.
+											<br>
+											이미지 파일만 가능합니다. (480 x 214px / png, svg, gif, jpg)
+											<br>
+											배경이 없는 이미지 파일을 권장합니다. 10mb이하 등록가능합니다.
+										</div>
+										<div class="input_filebox">
+											<input type="file" name="file1" id="file1" class="input_file">
+											<label for="file1" class="label_file">
+												<img src="img/ico_image.svg" alt="" class="icon">
+												<div class="button">
+													이미지 업로드
+												</div>
+											</label>
+											<div class="upload_box">
+												<button type="button" class="del_btn">
+													<img src="img/ico_close.svg" alt="" class="icon">
+												</button>
+												<img src="" alt="" class="img">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_line"></div>
+							<div class="form_item form_flex column_ver gap20">
+								<p class="form_tit big lead100">기본정보</p>
+								<div class="form_cont form_flex column_ver">
+									<div class="form_flex wid664">
+										<div class="form_tit wid120">
+											연락처
+											<span class="required">*</span>
+										</div>
+										<div class="form_cont full">
+											<div class="input_box">
+												<input type="text" class="input_text" placeholder="연락처 입력해주세요 (-제외하고)">
+											</div>
+										</div>
+									</div>
+									<div class="form_flex wid664">
+										<div class="form_tit wid120">
+											이메일
+											<span class="required">*</span>
+										</div>
+										<div class="form_cont full">
+											<div class="input_box">
+												<input type="text" class="input_text" placeholder="hellow@educe.co.kr">
+											</div>
+										</div>
+									</div>
+									<div class="form_flex wid664">
+										<div class="form_tit wid120">
+											사용기간
+											<span class="required">*</span>
+										</div>
+										<div class="form_cont full">
+											<div class="form_flex">
+												<div class="input_box input_datebox full">
+													<div class="date_txt">
+														<span class="icon"></span>
+														<span class="txt">시작일</span>
+													</div>
+													<input type="text" class="input_text datepicker" value="2026.00.00" readonly>
+												</div>
+												<div class="input_box input_datebox full">
+													<div class="date_txt">
+														<span class="icon"></span>
+														<span class="txt">종료일</span>
+													</div>
+													<input type="text" class="input_text datepicker" value="2026.00.00" readonly>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form_flex wid664">
+										<div class="form_tit wid120">
+											사용유무
+											<span class="required">*</span>
+										</div>
+										<div class="form_cont full">
+											<div class="switch_box reverse label_ver">
+												<input type="checkbox" id="switch1" class="input_switch big" checked>
+												<label for="switch1" class="label_switch ver3">사용</label>
+											</div>
+										</div>
+									</div>
+									<div class="form_flex wid664">
+										<div class="form_tit wid120">
+											API 사용유무
+											<span class="required">*</span>
+										</div>
+										<div class="form_cont full">
+											<div class="switch_box reverse label_ver">
+												<input type="checkbox" id="switch1" class="input_switch big">
+												<label for="switch1" class="label_switch ver3">미사용</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- page bottom -->
+			<div class="page_bottom">
+				<div class="leftbox">
+					<button type="button" class="btn typeB">
+						<span class="txt">목록으로</span>
+					</button>
+				</div>
+				<div class="btnbox">
+					<button type="button" class="btn typeB">
+						<span class="txt">취소</span>
+					</button>
+					<button type="button" class="btn typeA">
+						<span class="txt">저장</span>
+					</button>
+				</div>
+				<div class="rightbox"></div>
+			</div>
+
+			<!-- toast popup -->
+			<div class="toast_popup show">
+				<div class="txtbox">
+					<img src="img/ico_toastCheck.svg" alt="" class="icon">
+					<p class="text">저장되었습니다.</p>
+				</div>
+			</div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

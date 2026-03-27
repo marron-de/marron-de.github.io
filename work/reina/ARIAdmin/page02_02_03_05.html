@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEP Admin</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal ver2 analysis_modal show" id="blindCheck_modal">
+            <div class="modal_box">
+				<div class="modal_head ver2">
+					<p class="modal_title">블라인드 체크 - 성별</p>
+					<button type="button" class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="tab_box">
+						<div class="tab_link">
+							<span class="txt">가족관계</span>
+							<span class="num">1</span>
+						</div>
+						<div class="tab_link">
+							<span class="txt">나이</span>
+							<span class="num">8</span>
+						</div>
+						<div class="tab_link on">
+							<span class="txt">성별</span>
+							<span class="num">7</span>
+						</div>
+						<div class="tab_link">
+							<span class="txt">신체조건</span>
+							<span class="num">3</span>
+						</div>
+						<div class="tab_link">
+							<span class="txt">사회적신분</span>
+							<span class="num">2</span>
+						</div>
+						<div class="tab_link">
+							<span class="txt">종교</span>
+							<span class="num">2</span>
+						</div>
+						<div class="tab_link">
+							<span class="txt">지역</span>
+							<span class="num">10</span>
+						</div>
+						<div class="tab_link">
+							<span class="txt">출신학교</span>
+							<span class="num">22</span>
+						</div>
+						<div class="tab_link">
+							<span class="txt">이름</span>
+							<span class="num">3</span>
+						</div>
+					</div>
+					<div class="filter_box">
+						<div class="filter_item filter_item2">
+							<div class="switch_box reverse">
+								<input type="checkbox" name="switch2" id="switch2" class="input_switch" checked>
+								<label for="switch2" class="label_switch wid180">전역설정 반영</label>
+							</div>
+							<div class="bar"></div>
+							<div class="check_wrap full">
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check1" class="input_check" checked>
+									<label for="check1" class="label_check">추가</label>
+								</div>
+								<div class="check_box">
+									<input type="checkbox" name="check2" id="check2" class="input_check">
+									<label for="check2" class="label_check">삭제</label>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="search_box">
+						<div class="input_box input_schbox">
+							<input type="text" class="input_text" placeholder="플레이스 홀더">
+							<button type="button" class="sch_btn"></button>
+						</div>
+						<button type="button" class="btn typeB auto">
+							<img src="img/ico_plus.svg" alt="" class="icon">
+							<span class="txt">추가</span>
+						</button>
+					</div>
+					<div class="tagbox">
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">행정병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">통신병</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+						<div class="tag">
+							<span class="txt">장교</span>
+							<button type="button" class="close_btn"></button>
+						</div>
+					</div>
+				</div>
+				<div class="modal_btnbox">
+					<div class="leftbox">
+						<button type="button" class="btn typeB auto modal_btn">
+							<img src="img/ico_reset.svg" alt="" class="icon">
+							<span class="txt">초기화</span>
+						</button>
+					</div>
+					<div class="btn_box">
+						<button type="button" class="btn typeB auto modal_btn">
+							<span class="txt">취소</span>
+						</button>
+						<button type="button" class="btn typeA auto modal_btn">
+							<span class="txt">확인</span>
+						</button>
+					</div>
+					<div class="rightbox"></div>
+				</div>
+			</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

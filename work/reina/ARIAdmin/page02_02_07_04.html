@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEP Admin</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap layout evaluationList_wrap">
+
+		<!-- navigation -->
+		<div class="navigation">
+			<div class="nav_logo">
+                <img src="img/logo.svg" alt="" class="logo">
+				<div class="profile">
+					<img src="img/nav_profile.png" alt="" class="icon">
+				</div>
+            </div>
+			<ul class="nav">
+                <li class="show">
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav1.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 목록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 목록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav2.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">평가 등록</span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">평가 등록</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav3.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전역 설정</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전역 설정</div>
+						</div>
+                    </a>
+				</li>
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_nav4.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">기업 관리</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">기업 관리</div>
+						</div>
+                    </a>
+				</li>
+            </ul>
+			<ul class="nav nav_bottom">
+                <li>
+                    <a href="" class="acc_tit">
+                        <span class="icon"><img src="img/ico_login_w.svg" alt=""></span>
+                        <span class="title">
+							<span class="txt">전체 관리자 로그인</span>
+							<span class="human"></span>
+						</span>
+						<div class="tooltip left_center">
+							<div class="txtbox">전체 관리자 로그인</div>
+						</div>
+                    </a>
+				</li>
+			</ul>
+			<button type="button" class="nav_btn"></button>
+		</div>
+
+        <!-- container -->
+        <div class="container">
+			
+			<!-- page header -->
+			<header class="page_header">
+				<div class="leftbox">
+					<p class="breadcrumb">
+						<span class="tit small">평가 목록</span>
+						<span class="arrow"></span>
+						<span class="tit">결과보기</span>
+					</p>
+				</div>
+				<div class="rightbox">
+					<div class="mypage_btn">
+						<p class="hello">
+							Hellow! <span class="name">에듀스</span>
+						</p>
+						<span class="icon"></span>
+					</div>
+					<div class="btnbox">
+						<button type="button" class="btn typeB login_btn">
+							<img src="img/ico_logout_b.svg" alt="" class="icon">
+							<span class="txt">로그아웃</span>
+						</button>
+					</div>
+				</div>
+			</header>
+
+			<!-- page tabbox -->
+			<div class="page_tabbox">
+				<a href="#none" class="tablink">기본정보</a>
+				<a href="#none" class="tablink">항목설정</a>
+				<a href="#none" class="tablink">분석설정</a>
+				<a href="#none" class="tablink">입력설정</a>
+				<a href="#none" class="tablink">API실행</a>
+				<a href="#none" class="tablink">결과분석</a>
+				<a href="#none" class="tablink on">결과보기</a>
+			</div>
+
+			<!-- page result -->
+			<div class="page_result ver2">
+				<p class="select_txt">3개 선택</p>
+				<div class="bar"></div>
+				<p class="total">
+					<span class="txt">분석결과</span>
+					<span class="num">253</span>
+				</p>
+			</div>
+
+			<!-- page topbox -->
+			<div class="page_topbox ver2">
+				<div class="leftbox">
+					<div class="page_titbox">
+						<p class="page_tit">2026년 에듀스 공개 채용</p>
+						<p class="page_desc">2025.10.24(월) - 2025.10.25(화)</p>
+					</div>
+				</div>
+				<div class="rightbox">
+					<div class="standard_box">
+						<p class="tit">합격자 기준설정 (상위 %)</p>
+						<div class="cont">
+							<div class="input_box">
+								<input type="text" class="input_text" value="100%">
+							</div>
+							<button type="button" class="btn typeA auto">
+								<span class="txt">설정</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- page content -->
+			<div class="page_cont">
+				<section class="page_section">
+					<div class="sec_top top_filer">
+						<div class="leftbox no_full">
+							<div class="select_box wid256">
+								<select class="select select2" data-placeholder="전체">
+									<option value=""></option>
+									<option value="전체">전체</option>
+								</select>
+							</div>
+							<div class="input_box input_schbox wid392">
+								<input type="text" class="input_text" placeholder="검색어를 입력해주세요">
+								<button type="button" class="sch_btn"></button>
+							</div>
+							<button type="button" class="btn typeB">
+								<img src="img/ico_refresh.svg" alt="" class="icon">
+								<span class="txt">초기화</span>
+							</button>
+						</div>								
+						<div class="rightbox">
+							<div class="opt_box select_box wid256">
+								<button type="button" class="select_btn sort_btn">
+									<span class="txt">위반개수 ∙ 내림차순</span>
+									<span class="arrow"></span>
+								</button>
+								<div class="popup select_popup sort_popup">
+									<div class="opt_list">
+										<div class="item">
+											<button type="button" class="opt_popbtn selected">
+												<span class="txt">위반개수</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<span class="txt">수험번호</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<span class="txt">이름</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<span class="txt">역량점수</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+									</div>
+									<div class="opt_line"></div>
+									<div class="radio_wrap opt_order">
+										<div class="radio_box">
+											<input type="radio" name="order" id="order_desc" class="input_radio" checked>
+											<label for="order_desc" class="label_radio">내림차순</label>
+										</div>
+										<div class="radio_box">
+											<input type="radio" name="order" id="order_asc" class="input_radio">
+											<label for="order_asc" class="label_radio">오름차순</label>
+										</div>
+									</div>
+									<div class="opt_btnbox">
+										<button type="button" class="btn typeB full">
+											<img src="img/ico_refresh.svg" alt="" class="icon">
+											<span class="txt">초기화</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="opt_box filter_box">
+								<button type="button" class="btn typeB icon_ver filter_btn">
+									<img src="img/ico_filter.svg" alt="" class="icon">
+									<span class="count">3</span>
+								</button>	
+								<div class="popup opt_popup filter_popup">
+									<div class="pop_head">
+										<p class="pop_tit">검색 필터 및 정렬</p>
+										<button type="button" class="pop_close"></button>
+									</div>
+									<div class="pop_body">
+										<div class="ft_list">
+											<div class="check_wrap">
+												<div class="check_box">
+													<input type="checkbox" name="check1" id="check1" class="input_check" checked>
+													<label for="check1" class="label_check">지원분야</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check2" id="check2" class="input_check" checked>
+													<label for="check2" class="label_check">합불</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check3" id="check3" class="input_check" checked>
+													<label for="check3" class="label_check">역량점수 구간</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check4" id="check4" class="input_check" checked>
+													<label for="check4" class="label_check">역량점수 평가등급</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check5" id="check5" class="input_check" checked>
+													<label for="check5" class="label_check">주의표시</label>
+												</div>
+											</div>
+										</div>
+										<div class="ft_line"></div>
+										<div class="ft_list">
+											<div class="ft_titbox">
+												<p class="tit">지원분야</p>
+												<button type="button" class="icon_btn">
+													<img src="img/ico_refresh.svg" alt="" class="icon">
+												</button>
+											</div>
+											<div class="check_wrap">
+												<div class="check_box">
+													<input type="checkbox" name="check6" id="check6" class="input_check" checked>
+													<label for="check6" class="label_check">개발</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check7" id="check7" class="input_check" checked>
+													<label for="check7" class="label_check">디자인</label>
+												</div>
+											</div>
+										</div>
+										<div class="ft_line"></div>
+										<div class="ft_list">
+											<div class="ft_titbox">
+												<p class="tit">합불</p>
+												<button type="button" class="icon_btn">
+													<img src="img/ico_refresh.svg" alt="" class="icon">
+												</button>
+											</div>
+											<div class="check_wrap">
+												<div class="check_box">
+													<input type="checkbox" name="check8" id="check8" class="input_check" checked>
+													<label for="check8" class="label_check">합격</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check9" id="check9" class="input_check">
+													<label for="check9" class="label_check">불합격</label>
+												</div>
+											</div>
+										</div>
+										<div class="ft_line"></div>
+										<div class="ft_list">
+											<div class="ft_titbox">
+												<p class="tit">역량점수 구간</p>
+												<button type="button" class="icon_btn">
+													<img src="img/ico_refresh.svg" alt="" class="icon">
+												</button>
+											</div>
+											<div class="check_wrap">
+												<div class="check_box">
+													<input type="checkbox" name="check10" id="check10" class="input_check" checked>
+													<label for="check10" class="label_check">최우수</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check11" id="check11" class="input_check">
+													<label for="check11" class="label_check">우수</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check12" id="check12" class="input_check" checked>
+													<label for="check12" class="label_check">양호</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check13" id="check13" class="input_check">
+													<label for="check13" class="label_check">보통</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check14" id="check14" class="input_check" checked>
+													<label for="check14" class="label_check">미흡</label>
+												</div>
+												<div class="check_box">
+													<input type="checkbox" name="check15" id="check15" class="input_check" checked>
+													<label for="check15" class="label_check">평가미달</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ft_btnbox">
+										<button type="button" class="btn typeB icon_ver">
+											<img src="img/ico_refresh.svg" alt="" class="icon">
+										</button>
+										<button type="button" class="btn typeA full">적용</button>
+									</div>
+								</div>
+							</div>
+							<div class="select_box wid120">
+								<select class="select select2" data-class="selected">
+									<option value="20개" selected>20개</option>
+									<option value="30개">30개</option>
+									<option value="50개">50개</option>
+									<option value="100개">100개</option>
+									<option value="전체">전체</option>
+								</select>
+							</div>
+							<div class="opt_box">
+								<button type="button" class="btn typeB icon_ver option_btn hide">
+									<img src="img/ico_opt.svg" alt="" class="icon">
+								</button>
+								<button type="button" class="btn typeB icon_ver option_close">
+									<img src="img/ico_close.svg" alt="" class="icon">
+								</button>
+								<div class="popup opt_popup ver2 option_popup show">
+									<div class="opt_list">
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_fileDown.svg" alt="" class="icon">
+												<span class="txt">명단 저장</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_edit.svg" alt="" class="icon">
+												<span class="txt">자기소개서 저장</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_cloudDown.svg" alt="" class="icon">
+												<span class="txt">API Data 저장</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_folderDown.svg" alt="" class="icon">
+												<span class="txt">결과지 통합 저장</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_clipboard.svg" alt="" class="icon">
+												<span class="txt">결과지 개별 저장</span>
+											</button>
+										</div>
+									</div>
+									<div class="opt_line"></div>
+									<div class="opt_list">
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_code3.svg" alt="" class="icon">
+												<span class="txt">API 재처리</span>
+											</button>
+										</div>
+										<div class="item">
+											<button type="button" class="opt_popbtn">
+												<img src="img/ico_trash_red.svg" alt="" class="icon">
+												<span class="txt red">명단 삭제</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec_cont">
+						<div class="tbl_wrap">
+							<table class="tbl">
+								<colgroup>
+									<col style="width: 40px;">
+									<col style="width: 88px;">
+									<col style="width: 116px;">
+									<col style="width: 272px;">	
+									<col style="width: 116px;">		
+									<col style="width: 101px;">		
+									<col style="width: 136px;">		
+									<col style="width: 101px;">		
+									<col style="width: 101px;">		
+									<col style="width: 101px;">		
+									<col style="width: 101px;">		
+									<col style="width: 101px;">		
+									<col style="width: 101px;">		
+									<col style="width: 140px;">
+								</colgroup>									
+								<thead>
+									<tr>
+										<th data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check allCheck">
+											</div>
+										</th>
+										<th data-th="순위">순위</th>
+										<th data-th="수험번호">수험번호</th>
+										<th data-th="지원분야">지원분야</th>
+										<th data-th="이름">이름</th>
+										<th data-th="상태" class="align_center">상태</th>
+										<th data-th="역량점수">역량점수</th>
+										<th data-th="타사지원" class="align_center">타사지원</th>
+										<th data-th="표절" class="align_center">표절</th>
+										<th data-th="블라인드" class="align_center">블라인드</th>
+										<th data-th="적합성" class="align_center">적합성</th>
+										<th data-th="생성질문" class="align_center">생성질문</th>
+										<th data-th="최종평가" class="align_center">최종평가</th>
+										<th data-th="결과보기" class="align_center">결과보기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="bg">
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeC">정상</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="적합성" class="align_center">-</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeA wid50">합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td data-th="checkbox">
+											<div class="check_box">
+												<input type="checkbox" class="input_check">
+											</div>
+										</td>
+										<td data-th="순위">01</td>
+										<td data-th="수험번호">
+											<span class="bold">A0025</span>
+										</td>
+										<td data-th="지원분야">매장관리/CS코치(서울A_기간제)</td>
+										<td data-th="이름">박수한</td>
+										<td data-th="상태" class="align_center">
+											<div class="badge typeD">오류</div>
+										</td>
+										<td data-th="역량점수">66.3(0.51%)</td>
+										<td data-th="타사지원" class="align_center">-</td>
+										<td data-th="표절" class="align_center">-</td>
+										<td data-th="블라인드" class="align_center">-</td>
+										<td data-th="적합성" class="align_center">
+											<div class="badge typeD">주의</div>
+										</td>
+										<td data-th="생성질문" class="align_center">
+											<div class="badge typeB">8</div>
+										</td>
+										<td data-th="최종평가" class="align_center">
+											<div class="badge typeF wid50">불합격</div>
+										</td>
+										<td data-th="제거">
+											<div class="tbl_flex center">
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_file.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">결과 리포트</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_pieChart.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">분석 결과지</div>
+													</div>
+												</div>
+												<div class="tooltip_box">
+													<button type="button" class="btn typeB icon_ver">
+														<img src="img/ico_code.svg" alt="" class="icon">
+													</button>			
+													<div class="tooltip down_center black">
+														<div class="txtbox">API 결과보기</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="sec_bottom">
+						<div class="leftbox">
+							<button type="button" class="btn auto typeB">
+								<img src="img/ico_code2.svg" alt="" class="icon">
+								<span class="txt">API 개별 재처리</span>
+							</button>
+						</div>	
+						<div class="pagination">
+							<button type="button" class="page_btn first"></button>
+							<button type="button" class="page_btn prev"></button>
+							<div class="page">
+								<a href="" class="link">1</a>
+								<a href="" class="link on">2</a>
+								<a href="" class="link">3</a>
+								<a href="" class="link">4</a>
+								<a href="" class="link">5</a>
+							</div>									
+							<button type="button" class="page_btn next"></button>
+							<button type="button" class="page_btn last"></button>
+						</div>
+						<div class="rightbox"></div>
+					</div>
+				</section>
+			</div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>

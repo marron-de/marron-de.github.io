@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEP Admin</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">	
+    <link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+    
+    <div class="wrap">
+		
+		<!-- modal -->
+        <div class="modal show" id="apiProcessing_modal">
+            <div class="modal_box">
+				<div class="modal_head">
+					<p class="modal_title">개별 API 처리</p>
+					<button type="button" class="modal_close"></button>
+				</div>
+				<div class="modal_body">	
+					<div class="form_box">
+						<div class="form_item form_flex column_ver">
+							<p class="form_tit big lead100">역량평가</p>
+							<div class="check_wrap">
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check1-1" class="input_check" checked>
+									<label for="check1-1" class="label_check">역량평가 비율 조정</label>
+								</div>
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check1-2" class="input_check">
+									<label for="check1-2" class="label_check">직무적합도</label>
+								</div>
+							</div>
+						</div>
+						<div class="form_line"></div>
+						<div class="form_item form_flex column_ver">
+							<p class="form_tit big lead100">타사지원</p>
+							<div class="check_wrap">
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check2-1" class="input_check" checked>
+									<label for="check2-1" class="label_check">타사지원</label>
+								</div>
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check2-2" class="input_check">
+									<label for="check2-2" class="label_check">자사명오기재</label>
+								</div>
+							</div>
+						</div>
+						<div class="form_line"></div>
+						<div class="form_item form_flex column_ver">
+							<p class="form_tit big lead100">블라인드 체크</p>
+							<div class="check_wrap">
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check3-1" class="input_check" checked>
+									<label for="check3-1" class="label_check">블라인드 체크지원</label>
+								</div>
+							</div>
+						</div>
+						<div class="form_line"></div>
+						<div class="form_item form_flex column_ver">
+							<p class="form_tit big lead100">타사지원</p>
+							<div class="check_wrap">
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check4-1" class="input_check" checked>
+									<label for="check4-1" class="label_check">표절검사</label>
+								</div>
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check4-2" class="input_check">
+									<label for="check4-2" class="label_check">채용내 표절</label>
+								</div>
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check4-3" class="input_check">
+									<label for="check4-3" class="label_check">Human-like</label>
+								</div>
+							</div>
+						</div>
+						<div class="form_line"></div>
+						<div class="form_item form_flex column_ver">
+							<p class="form_tit big lead100">적합성 검사</p>
+							<div class="check_wrap">
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check5-1" class="input_check" checked>
+									<label for="check5-1" class="label_check">분량/항목적합성</label>
+								</div>
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check5-2" class="input_check">
+									<label for="check5-2" class="label_check">맞춤법</label>
+								</div>
+							</div>
+						</div>
+						<div class="form_line"></div>
+						<div class="form_item form_flex column_ver">
+							<p class="form_tit big lead100">질문생성</p>
+							<div class="check_wrap">
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check6-1" class="input_check" checked>
+									<label for="check6-1" class="label_check">추가질문 1차</label>
+								</div>
+								<div class="check_box">
+									<input type="checkbox" name="check1" id="check6-2" class="input_check">
+									<label for="check6-2" class="label_check">추가질문 2차</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal_btnbox">
+					<button type="button" class="btn typeB big full modal_btn">
+						<img src="img/ico_checkbox.svg" alt="" class="icon">
+						<span class="txt">
+							선택실행
+							<span class="num">6</span>
+						</span>
+					</button>
+					<button type="button" class="btn typeA big full modal_btn">
+						<img src="img/ico_checkDone.svg" alt="" class="icon">
+						<span class="txt">전체실행</span>
+					</button>
+				</div>
+			</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+
+</body>
+
+</html>
