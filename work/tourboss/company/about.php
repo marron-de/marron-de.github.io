@@ -105,75 +105,143 @@
 										<div class="item">
 											<p class="year">2024</p>
 											<div class="descbox">
-												<p class="desc">문화체육부지역관광특화상품 공모전 선정</p>
-												<p class="desc">여행대장 아웃바운드 런칭 및 국내 복지몰 API연동 개발</p>
-												<p class="desc">강릉시 중화권 해외 전담여행사 선정</p>
+												<div class="desc">
+													<!-- 260329 추가작업 -->
+													<p class="txt">문화체육부지역관광특화상품 공모전 선정</p>
+													<div class="imgbox">
+														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+													</div>
+												</div>
+												<div class="desc">
+													<!-- 260329 추가작업 -->
+													<p class="txt">여행대장 아웃바운드 런칭 및 국내 복지몰 API연동 개발</p>
+													<div class="imgbox">
+														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+													</div>
+												</div>
+												<div class="desc">
+													<p class="txt">강릉시 중화권 해외 전담여행사 선정</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2023</p>
 											<div class="descbox">
-												<p class="desc">SBS, JTBC, KBS 멜론뮤직어워드 콘서트 10개 티켓유통</p>
-												<p class="desc">경상북도 "하늘여행" 열기구 운영사 선정 (4개시군)</p>
-												<p class="desc">충청북도 해외 전담여행사 선정</p>
-												<p class="desc">인천시 해외 전담여행사 선정</p>
-												<p class="desc">강원도, 경상북도 해외 전담여행사 선정</p>
+												<div class="desc">
+													<p class="txt">SBS, JTBC, KBS 멜론뮤직어워드 콘서트 10개 티켓유통</p>
+												</div>
+												<div class="desc">
+													<p class="txt">경상북도 "하늘여행" 열기구 운영사 선정 (4개시군)</p>
+												</div>
+												<div class="desc">
+													<p class="txt">충청북도 해외 전담여행사 선정</p>
+												</div>
+												<div class="desc">
+													<p class="txt">인천시 해외 전담여행사 선정</p>
+												</div>
+												<div class="desc">
+													<p class="txt">강원도, 경상북도 해외 전담여행사 선정</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2022</p>
 											<div class="descbox">
-												<p class="desc">한국관광공사 바우처 사업 "제공기업" 선정</p>
-												<p class="desc">문화체육부 "성장관광벤처기업에 선정</p>
+												<div class="desc">
+													<p class="txt">한국관광공사 바우처 사업 "제공기업" 선정</p>
+												</div>
+												<div class="desc">
+													<p class="txt">문화체육부 "성장관광벤처기업에 선정</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2021</p>
 											<div class="descbox">
-												<p class="desc">경상북도 도지사 "경북관광활성화 표창장 수상</p>
-												<p class="desc">한국관광공사 "여행가는달 쿠팡 기획전 운영사 선정</p>
-												<p class="desc">인천관광공사 미식 관광상품 공모전 우수상" 수상</p>
-												<p class="desc">경상북도, 인천, 강원도, 충청북도 국외 전담여행사 선정</p>
+												<div class="desc">
+													<p class="txt">경상북도 도지사 "경북관광활성화 표창장 수상</p>
+												</div>
+												<div class="desc">
+													<!-- 260329 추가작업 -->
+													<p class="txt">한국관광공사 "여행가는달 쿠팡 기획전 운영사 선정</p>
+													<div class="imgbox">
+														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+													</div>
+												</div>
+												<div class="desc">
+													<!-- 260329 추가작업 -->
+													<p class="txt">인천관광공사 미식 관광상품 공모전 우수상" 수상</p>
+													<div class="imgbox">
+														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+													</div>
+												</div>
+												<div class="desc">
+													<p class="txt">경상북도, 인천, 강원도, 충청북도 국외 전담여행사 선정</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2020</p>
 											<div class="descbox">
-												<p class="desc">경상북도, 인천관광공사,강원도 국외 전담여행사 선정</p>
+												<div class="desc">
+													<!-- 260329 추가작업 -->
+													<p class="txt">경상북도, 인천관광공사,강원도 국외 전담여행사 선정</p>
+													<div class="imgbox">
+														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2019</p>
 											<div class="descbox">
-												<p class="desc">MBC 월드 한류콘텐츠 공식 외국인 총판업체 선정</p>
-												<p class="desc">강원도 전라북도 경상북도 전담여행사 지정</p>
+												<div class="desc">
+													<p class="txt">MBC 월드 한류콘텐츠 공식 외국인 총판업체 선정</p>
+												</div>
+												<div class="desc">
+													<p class="txt">강원도 전라북도 경상북도 전담여행사 지정</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2018</p>
 											<div class="descbox">
-												<p class="desc">경상북도 국외 외국인 유치 실적 감사패 수상</p>
-												<p class="desc">INK콘서트, BBQxSBS슈퍼콘서트,MMA(멜론뮤직)</p>
+												<div class="desc">
+													<p class="txt">경상북도 국외 외국인 유치 실적 감사패 수상</p>
+												</div>
+												<div class="desc">
+													<p class="txt">INK콘서트, BBQxSBS슈퍼콘서트,MMA(멜론뮤직)</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2017</p>
 											<div class="descbox">
-												<p class="desc">경기도청 외국인 문화대축전 전담여행사 진행</p>
-												<p class="desc">경상북도문화관광공사 전담여행사 지정</p>
+												<div class="desc">
+													<p class="txt">경기도청 외국인 문화대축전 전담여행사 진행</p>
+												</div>
+												<div class="desc">
+													<p class="txt">경상북도문화관광공사 전담여행사 지정</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2016</p>
 											<div class="descbox">
-												<p class="desc">홍콩 EGL / TRAVEL FEVER / TRAVEL EXPERT</p>
-												<p class="desc">대만 COLA TOUR / EZ TRAVEL / LION 업무제휴</p>
+												<div class="desc">
+													<p class="txt">홍콩 EGL / TRAVEL FEVER / TRAVEL EXPERT</p>
+												</div>
+												<div class="desc">
+													<p class="txt">대만 COLA TOUR / EZ TRAVEL / LION 업무제휴</p>
+												</div>
 											</div>
 										</div>
 										<div class="item">
 											<p class="year">2015</p>
 											<div class="descbox">
-												<p class="desc">TK트래블 창설 및 KLOOK 및 KKDAY 업무제휴</p>
+												<div class="desc">
+													<p class="txt">TK트래블 창설 및 KLOOK 및 KKDAY 업무제휴</p>
+												</div>
 											</div>
 										</div>
 									</div>
