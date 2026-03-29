@@ -17,11 +17,12 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="txtbox">
 						<p class="sub">
-							해외 학교 교직원 출신의 차별점!
+							해외 학교 교직원 출신의 <br class="tablet">차별점!
 						</p>
 						<p class="tit">
-							20년 경력자의 <br class="tablet">
-							<span class="color">전문 상담을 받아보세요</span>
+							<span class="color">20년 경력자의 전문 상담을</span> 
+							<br class="tablet">
+							받아보세요
 						</p>
 					</div>
 					<div class="imgbox">
@@ -159,10 +160,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t9.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t9.jpg" alt="" class="img tablet">
-									<div class="flagbox">
-										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
-										<div class="class_tag">class</div>
-									</div>
+									<div class="class_tag">class</div>
 								</div>
 								<div class="txtbox">
 									<div class="top">
