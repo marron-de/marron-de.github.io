@@ -110,13 +110,16 @@
 													<p class="txt">문화체육부지역관광특화상품 공모전 선정</p>
 													<div class="imgbox">
 														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+														<button type="button" class="more_btn" onclick="history_popup()"></button>
 													</div>
 												</div>
 												<div class="desc">
 													<!-- 260329 추가작업 -->
 													<p class="txt">여행대장 아웃바운드 런칭 및 국내 복지몰 API연동 개발</p>
+													<!-- 260330 추가작업 -->
 													<div class="imgbox">
 														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+														<button type="button" class="more_btn" onclick="history_popup()"></button>
 													</div>
 												</div>
 												<div class="desc">
@@ -164,15 +167,19 @@
 												<div class="desc">
 													<!-- 260329 추가작업 -->
 													<p class="txt">한국관광공사 "여행가는달 쿠팡 기획전 운영사 선정</p>
+													<!-- 260330 추가작업 -->
 													<div class="imgbox">
 														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+														<button type="button" class="more_btn" onclick="history_popup()"></button>
 													</div>
 												</div>
 												<div class="desc">
 													<!-- 260329 추가작업 -->
 													<p class="txt">인천관광공사 미식 관광상품 공모전 우수상" 수상</p>
+													<!-- 260330 추가작업 -->
 													<div class="imgbox">
 														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+														<button type="button" class="more_btn" onclick="history_popup()"></button>
 													</div>
 												</div>
 												<div class="desc">
@@ -186,8 +193,10 @@
 												<div class="desc">
 													<!-- 260329 추가작업 -->
 													<p class="txt">경상북도, 인천관광공사,강원도 국외 전담여행사 선정</p>
+													<!-- 260330 추가작업 -->
 													<div class="imgbox">
 														<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+														<button type="button" class="more_btn" onclick="history_popup()"></button>
 													</div>
 												</div>
 											</div>
@@ -311,6 +320,22 @@
     	<?php include "../common/mob_nav.php" ?> <!-- 모바일 노출 -->
 
     	<?php include "../common/footer.php" ?>
+
+		  
+		<!-- 260330 추가작업  -->
+        <div id="history_popup" class="modal ver2 photo_modal">
+            <div class="modal_box">
+				<div class="modal_head">
+					<p class="tit">연혁 이미지보기</p>
+					<button type="button" class="modal_close"></button>
+				</div>
+                <div class="modal_body photo_wrap">
+					<div class="imgbox">
+						<img src="<?php echo $path ?>img/sample_img.jpg" alt="" class="img">
+					</div>
+				</div>
+			</div>
+        </div>
 
 		
     </div>

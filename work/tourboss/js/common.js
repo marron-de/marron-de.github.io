@@ -1627,3 +1627,13 @@ setTimeout(function () {
 	$('.prd_slidebox')
 		.removeClass('is_loading')
 }, 1000);
+
+
+
+//  260330 추가작업
+// about history popup
+function history_popup() {
+	$("body").addClass('hidden');
+	$("body").addClass('modal_open');
+	$("#history_popup").addClass('show');
+}
