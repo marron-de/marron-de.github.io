@@ -91,37 +91,37 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 
 
-// gallery
-const ms5_thum = new Swiper(".ms5_thum", {
+// main section3
+const ms3_thum = new Swiper(".ms3_thum", {
 	spaceBetween: 8,
-	slidesPerView: 4,
-	slidesPerGroup: 4,
+	slidesPerView: 5,
+	slidesPerGroup: 5,
 	speed: 500,
 	loop: true,
 
 	pagination: {
-		el: '.ms5_thum .pagination',
+		el: '.ms3_thum .pagination',
 		clickable: true,
 	},
 });
 
-const ms5_swiper = new Swiper(".ms5_swiper", {
+const ms3_swiper = new Swiper(".ms3_swiper", {
 	spaceBetween: 10,
 	speed: 500,
 	loop: true,
 
 	pagination: {
-		el: '.ms5_swiper .pagination',
+		el: '.ms3_swiper .pagination',
 		type: "fraction",
 	},
 
 	navigation: {
-		nextEl: ".ms5_swiper .next_btn",
-		prevEl: ".ms5_swiper .prev_btn",
+		nextEl: ".ms3_swiper .next_btn",
+		prevEl: ".ms3_swiper .prev_btn",
 	},
 
 	thumbs: {
-		swiper: ms5_thum
+		swiper: ms3_thum
 	},
 });
 
@@ -141,49 +141,44 @@ const gall_swiper = new Swiper(".gall_swiper", {
 	},
 
 	thumbs: {
-		swiper: ms5_swiper
+		swiper: ms3_swiper
 	},
 });
 
-// ms5_swiper.on('slideChange', function () {
-//     gall_swiper.slideTo(ms5_swiper.realIndex);
-// 	console.log(ms5_swiper.realIndex  + "a")
-// });
 
-// gall_swiper.on('slideChange', function () {
-//     ms5_swiper.slideTo(gall_swiper.realIndex);
-// 	console.log(gall_swiper.realIndex + "b")
-// });
+// video banner
+$(document).ready(() => {
+    $('.vidbox').each(function() {
+        const vidBox = $(this);
+        const video = vidBox.find('video').get(0);
+        const playBtn = vidBox.find('.play_btn');
 
+        const togglePlay = () => {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        };
 
-// tab function
-$(document).ready(function () {
+        playBtn.on('click', togglePlay);
+        $(video).on('click', togglePlay);
 
-	$(".tab_nav").click(function () {
+        $(video).on('play', () => {
+            vidBox.addClass('play');
+        }).on('pause ended', () => {
+            vidBox.removeClass('play');
+        });
 
-		let target = $(this);
-		let tabNavbox = target.closest('ul')
-		let tabNav = tabNavbox.find(".tab_nav")
-		let idx = tabNav.index(this);
-
-		let tabWrap = tabNavbox.closest("div");
-		let tabContbox = tabWrap.find(".tab_contbox");
-		let tabCont = tabContbox.find(".tab_cont");
-
-		tabNav.removeClass("on")
-		tabNav.eq(idx).addClass("on")
-
-		tabCont.removeClass("on")
-		tabCont.eq(idx).addClass("on")
-
-	})
-
+        video.pause();
+        video.currentTime = 0;
+        vidBox.removeClass('play');
+    });
 });
 
 
 // accordion function
 (function ($) {
-
 	const lnbUI = {
 		click: function (target, speed) {
 			let _self = this,
@@ -265,22 +260,21 @@ document.getElementById("kakao_share").addEventListener("click", function () {
 		content: {
 			title: "❤️서율의 생일파티에 초대합니다❤️",
 			description: "작은 기적이 큰 사랑이 된 날, \n함께해 주시길 바랍니다.",
-			imageUrl: "http://marronde.com/seoyul/img/kakao_share.jpg", 
-			// 공유할 이미지 URL
+			imageUrl: "http://marronde.com/seoyul/img/kakao_share_img.jpg", 
 			link: {
-				mobileWebUrl: "http://marronde.com/seoyul/", // 초대장 링크
+				mobileWebUrl: "http://marronde.com/seoyul/",
 				webUrl: "http://marronde.com/seoyul/"
 			}
 		},
 		buttons: [
 			{
-				title: "웹으로 보기",
+				title: "서율이 축하하기",
 				link: {
 					mobileWebUrl: "http://marronde.com/seoyul/",
 					webUrl: "http://marronde.com/seoyul/"
 				}
 			}
-		]
+		],
 	});
 });
 
@@ -288,17 +282,11 @@ document.getElementById("kakao_share").addEventListener("click", function () {
 // modal
 $(document).ready(function () {
 	// gallery modal
-	$(".ms5_swiper .swiper-slide").click(function () {
+	$(".ms3_swiper .swiper-slide").click(function () {
 		$("body").addClass("hidden");
 		$(".gall_modal").addClass("show");
 	});
-
-	// map modal
-	$(".ms6 .tab_contbox .tab_cont .zoomIn_btn").click(function () {
-		$("body").addClass("hidden");
-		$(".map_modal").addClass("show");
-	});
-
+	
 	// write modal
 	$(".ms8 .guestbook_bottom #write_btn").click(function () {
 		$("body").addClass("hidden");
@@ -311,8 +299,6 @@ $(document).ready(function () {
 		$(".modal").removeClass("show");
 	});
 });
-
-
 $(document).mouseup(function (e) {
 	if ($(".modal .modal_box").has(e.target).length === 0) {
 		$("body").removeClass("hidden");
