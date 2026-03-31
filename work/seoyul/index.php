@@ -83,9 +83,10 @@ include_once('../project/lib/latest.lib.php');
         </div>
 
         <!-- bgm -->
-        <audio id="bgm" loop>
-            <source src="bgm/wedding_bgm.mp3" type="audio/mp3" />
+        <audio id="bgm" loop >
+            <source src="bgm/bgm.mp3" type="audio/mp3" />
         </audio>
+		<p style="display: none;">출처 : https://www.youtube.com/watch?v=_YdFyzU8ryA</p>
 
         <!-- section -->
         <div class="container">
