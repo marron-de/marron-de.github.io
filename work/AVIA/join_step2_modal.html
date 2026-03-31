@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIVA</title>
+	
+    <!-- Font -->
+    <link rel="stylesheet" href="css/Pretendard.css">
+    <link rel="stylesheet" href="css/Paperlogy.css">
+
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<!-- Tailwind -->
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	
+	<!-- Tailwind v4 자동완성용 / 임시추가 -->
+	<link rel="stylesheet" href="css/temp.css">
+
+</head>
+
+
+<body class="bg-[#2d2d47] text-white min-h-svh font-[Pretendard,sans-serif]">
+	
+    <div class="flex flex-col min-h-screen ">
+
+        <!-- header -->
+        <header class="relative my-[22px]">
+            <div class="h-[40px] px-[20px] py-0 flex items-center justify-between gap-[16px]">
+               	<div class="flex items-center justify-center w-[40px]">
+					<img src="img/header_back.svg" alt="뒤로가기">
+                </div>
+                <p class="flex-1 font-semibold text-[18px] leading-none text-[#ffffff] text-center">회원가입</p>
+               	<div class="flex items-center justify-center w-[40px]">
+				</div>
+            </div>
+        </header>
+
+        <!-- container -->
+        <div class="flex flex-col flex-1">
+
+            <section class="relative mb-[20px]">
+                <div class="relative px-[20px]">
+					<div class="flex items-start gap-[15px] mb-[40px]">
+						<p class="w-[190px] font-medium text-[22px] leading-[1.14] text-[#ffffff] break-keep">
+							<span class="font-extrabold">이메일(아이디)</span>를 설정해주세요
+						</p>
+						<p class="text-[14px] leading-none text-[#ffffff] mt-[4px]"><span class="font-bold">2</span> / 3</p>
+					</div>
+					<div class="flex flex-col gap-[40px]">
+						<div class="flex flex-col gap-[8px]">
+							<div class="flex items-center justify-between">
+								<p class="font-semibold text-[16px] leading-none text-[#fff]">이메일</p>
+								<p class="font-semibold text-[12px] leading-[1.17] text-[rgba(255,255,255,0.7)]">aiva는 이메일을 아이디로 사용합니다</p>
+							</div>
+							<input type="text" placeholder="aiva@aiva.co.kr" class="border border-[#4f4d76] rounded-[10px] bg-[#403f5e] w-full h-[45px] px-[10px] font-semibold text-[16px] text-[#ffffff] placeholder:text-[rgba(255,255,255,0.7)]">
+						</div>
+						<div class="flex flex-col gap-[8px]">
+							<div class="flex items-center justify-between">
+							<p class="font-semibold text-[16px] leading-none text-[#fff]">비밀번호</p>
+							</div>
+							<input type="text" placeholder="8~16자리 / 영문 대소문자, 숫자, 특수문자 조합" class="border border-[#4f4d76] rounded-[10px] bg-[#403f5e] w-full h-[45px] px-[10px]  font-semibold text-[16px] text-[#ffffff] placeholder:text-[rgba(255,255,255,0.7)]">
+						</div>
+					</div>
+				</div>
+			</section>		
+
+        </div>
+
+		<!-- modal -->
+		<div class="fixed flex flex-col justify-end bg-black/50 z-100 w-full h-full">
+			<div class="flex flex-col bg-[#2b2b3f] rounded-[20px_20px_0_0] p-[20px]">
+				<p class="font-semibold text-[22px] leading-none text-[#ffffff] mb-[22px]">원활한 이용을 위해 동의해주세요</p>
+				<div class="flex flex-col gap-[15px]">
+					<div class="flex items-center gap-[12px] border-b border-b-[#403f5e] pb-[10px]">
+						<input type="checkbox" name="all_check" id="all_check"  class="appearance-none w-[30px] h-[30px] rounded-[10px] border-0 cursor-pointer bg-[url('img/checkbox_off.svg')] bg-center bg-no-repeat bg-contain checked:bg-[url('img/checkbox_on.svg')] peer">
+						<label for="all_check" class="flex-1 text-[16px] leading-none text-[#ffffff] cursor-pointer peer-checked:text-[#ffffff]">모두 동의하기</label>
+					</div>
+					<div class="flex flex-col gap-[17px]">
+						<div class="flex items-center gap-[8px]">
+							<input type="checkbox" name="check1" id="check1" class="appearance-none w-[18px] h-[18px] rounded-[6px] border-0 cursor-pointer bg-[url('img/min_checkbox_off.svg')] bg-center bg-no-repeat bg-contain checked:bg-[url('img/min_checkbox_on.svg')] peer">
+							<label for="check1" class="flex-1 text-[14px] leading-none text-[#ffffff] cursor-pointer peer-checked:text-[#ffffff]">(필수) 개인회원 약관에 동의</label>
+						</div>
+						<div class="flex items-center gap-[8px]">
+							<input type="checkbox" name="check2" id="check2" class="appearance-none w-[18px] h-[18px] rounded-[6px] border-0 cursor-pointer bg-[url('img/min_checkbox_off.svg')] bg-center bg-no-repeat bg-contain checked:bg-[url('img/min_checkbox_on.svg')] peer">
+							<label for="check2" class="flex-1 text-[14px] leading-none text-[#ffffff] cursor-pointer peer-checked:text-[#ffffff]">(필수) 개인정보 수집 및 이용에 동의</label>
+						</div>
+						<div class="flex items-center gap-[8px]">
+							<input type="checkbox" name="check3" id="check3" class="appearance-none w-[18px] h-[18px] rounded-[6px] border-0 cursor-pointer bg-[url('img/min_checkbox_off.svg')] bg-center bg-no-repeat bg-contain checked:bg-[url('img/min_checkbox_on.svg')] peer">
+							<label for="check3" class="flex-1 text-[14px] leading-none text-[#ffffff] cursor-pointer peer-checked:text-[#ffffff]">(선택) 마케팅 정보 수신 동의 - 이메일</label>
+						</div>
+						<div class="flex items-center gap-[8px]">
+							<input type="checkbox" name="check4" id="check4" class="appearance-none w-[18px] h-[18px] rounded-[6px] border-0 cursor-pointer bg-[url('img/min_checkbox_off.svg')] bg-center bg-no-repeat bg-contain checked:bg-[url('img/min_checkbox_on.svg')] peer">
+							<label for="check4" class="flex-1 text-[14px] leading-none text-[#ffffff] cursor-pointer peer-checked:text-[#ffffff]">(선택) 마케팅 정보 수신 동의 - SMS</label>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col mt-[16px]">
+					<button type="button" class="flex items-center justify-center border border-[#fb7c3e] rounded-[10px] py-[16px] px-[16px] bg-[#d45f26] shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]">
+						<span class="font-semibold text-[16px] leading-none text-[#ffffff]">입력 완료</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+        <!-- button -->
+        <div class="sticky bottom-0 z-50 px-[20px] pb-[46px] mt-[46px]">
+            <div class="flex flex-col gap-[12px]">
+				<button type="button" class="h-[45px] flex items-center justify-center rounded-[10px] border border-[#fb7c3e] bg-[#d45f26]">
+					<span class="font-semibold text-[16px] text-[#fff]">입력 완료</span>
+				</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+ 
+
+</html>
