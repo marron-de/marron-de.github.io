@@ -93,8 +93,17 @@
 								<span class="txt">구글</span>
 							</button>
 							<button type="button"  class="sns_btn">
+								<img src="<?php echo $path ?>img/login_apple.png" alt="" class="icon">
+								<span class="txt">Apple</span>
+							</button>
+							<button type="button"  class="sns_btn">
 								<img src="<?php echo $path ?>img/login_line.png" alt="" class="icon">
 								<span class="txt">LINE</span>
+							</button>
+							<!-- 260401 추가작업 -->
+							<button type="button"  class="sns_btn">
+								<img src="<?php echo $path ?>img/login_wechat.png" alt="" class="icon">
+								<span class="txt">Wechat</span>
 							</button>
 						</div>
 						<div class="login_notice">
