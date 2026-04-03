@@ -59,23 +59,23 @@ if (!defined('_EYOOM_')) exit;
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv01.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv01_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="black" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
+                        <div class="swiper-slide" data-color="black" onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_intro'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv02.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv02_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="black" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
+                        <div class="swiper-slide" data-color="black" onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_intro'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv03.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv03_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
+                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=special_duolingo'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv04.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv04_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
+                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=special_singapore'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv05.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv05_mob.png" class="tablet">
 						</div>
-                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=why'">
+                        <div class="swiper-slide" data-color="white" onclick="location.href='<?php echo G5_URL ?>/page/?pid=special_malay'">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv06.png" class="pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/img_mv06_mob.png" class="tablet">
 						</div>
