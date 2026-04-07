@@ -1168,6 +1168,41 @@ if (!defined('_EYOOM_')) exit;
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <div class="img_area">
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+									<p class="title">
+										<span class="sub">싱가포르 라셀 예술대</span>
+										<span class="tit">대면 입시 설명회</span>
+									</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_pst03.jpg" alt="싱가포르 라셀 예술대 입학설명회">
+                                </div>
+                                <div class="text_area">
+									<div class="badgebox">
+										<span class="nation">싱가포르</span>
+										<span class="place offline">오프라인</span>
+									</div>
+                                    <span class="title">싱가포르 라셀 예술대 <br>대면 입시 설명회</span>
+                                    <ul>
+                                        <li>
+                                            <p class="tit">장소</p>
+                                            <p class="txt">서울 강남역 '공간더하기'</p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">일시</p>
+                                            <p class="txt">2026년 05월 16일 토요일 11:00</p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">정원</p>
+                                            <p class="txt">20명</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn_area">
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=12">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="말레이시아">
 									<p class="title">
 										<span class="sub">말레이시아 국제학교</span>
@@ -1349,6 +1384,41 @@ if (!defined('_EYOOM_')) exit;
                     </li>
                     <li id="content-3" class="swiper tab_swiper" data-gappc="12" data-gapmob="8">
                          <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="img_area">
+                                    <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
+									<p class="title">
+										<span class="sub">싱가포르 라셀 예술대</span>
+										<span class="tit">대면 입시 설명회</span>
+									</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_pst03.jpg" alt="싱가포르 라셀 예술대 입학설명회">
+                                </div>
+                                <div class="text_area">
+									<div class="badgebox">
+										<span class="nation">싱가포르</span>
+										<span class="place offline">오프라인</span>
+									</div>
+                                    <span class="title">싱가포르 라셀 예술대 <br>대면 입시 설명회</span>
+                                    <ul>
+                                        <li>
+                                            <p class="tit">장소</p>
+                                            <p class="txt">서울 강남역 '공간더하기'</p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">일시</p>
+                                            <p class="txt">2026년 05월 16일 토요일 11:00</p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">정원</p>
+                                            <p class="txt">20명</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn_area">
+                                    <a class="btn normal" href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=12">자세히 보기</a>
+                                    <a class="btn confirm" href="<?php echo G5_URL ?>/page/?pid=counsel03">설명회 신청</a>
+                                </div>
+                            </li>
                             <li class="swiper-slide end">
                                 <div class="img_area">
                                     <img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="싱가포르">
