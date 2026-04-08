@@ -414,7 +414,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item" onclick="mentor_modal(19);">
+						<!-- <div class="swiper-slide item" onclick="mentor_modal(19);">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t19.jpg" alt=""
 									class="img">
@@ -434,7 +434,7 @@ if (!defined('_EYOOM_')) exit;
 										class="more">
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="swiper-slide item" onclick="mentor_modal(20);">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t20.jpg" alt=""

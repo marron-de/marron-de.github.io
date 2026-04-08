@@ -158,6 +158,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection presentation_area tabs main_sec1">
         <div class="container" data-aos="fade-up">
+			<!--
             <div class="ms title_area" id="row-1">
 				<div class="title">
 					<span class="live_badge">
@@ -546,6 +547,8 @@ if (!defined('_EYOOM_')) exit;
                     </li>
                 </ul>
             </div>
+			-->
+			<?php echo eb_latest('1775642588'); ?>
         </div>
     </div>
 

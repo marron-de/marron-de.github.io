@@ -852,7 +852,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item" data-num="19">
+					<!-- <div class="swiper-slide item" data-num="19">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit19.png" alt="" class="img">
@@ -893,7 +893,7 @@
 								</p>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="swiper-slide item" data-num="20">
 						<div class="infobox">
 							<div class="thumbox">

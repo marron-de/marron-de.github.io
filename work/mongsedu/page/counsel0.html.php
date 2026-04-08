@@ -298,7 +298,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 				<?php } ?>
 				
 				<div class="text-center">
-					<button class="btn-e btn-e-navy btn-e-xxl width-250px f-w-700" type="submit" value="상담 신청하기">상담 신청하기</button>
+					<button class="btn-e btn-e-navy btn-e-xxl width-250px f-w-700" type="submit" value="신청하기">신청하기</button>
 				</div>
 			</div>        
         </form>

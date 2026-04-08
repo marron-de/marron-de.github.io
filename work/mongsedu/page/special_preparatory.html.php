@@ -38,7 +38,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="item">
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec1_icon2.png" alt="" class="icon">
 					<p class="tit">
-						5과목 이론 핵심 강의 <br>
+						4과목 이론 핵심 강의 <br>
 						미리 듣고 입학 대비
 					</p>
 				</div>
@@ -79,7 +79,8 @@ if (!defined('_EYOOM_')) exit;
 					<p class="tit">입학 전</p>
 					<p class="sub">에세이, 토론 무한연습! 대학 수업에 필요한 영어능력 향상</p>
 					<p class="desc">
-						전세계 TOP MBA 인시아드 출신 강사와 검증된 선생님들이  <br class="pc">
+						이론 전공 출신 강사와 실력으로 검증된 선생님들이
+						<br class="pc">
 						해외대학에서 평가하는 에세이 쓰는 방식과 토론 연습을 직접 가르쳐요.
 					</p>
 				</div>
@@ -251,19 +252,37 @@ if (!defined('_EYOOM_')) exit;
 			<div class="sub_titbox">
 				<p class="sub_txt1"> 수강 샘플 스케줄 목록</p>
 			</div>
-			<div class="tit_btnbox">
-				<button type="button" class="btn on">경영학부</button>
-				<button type="button" class="btn">컴퓨터공학</button>
-				<button type="button" class="btn">에세이/토론</button>
-			</div>
-			<div class="imgbox">
-				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img.png" alt="" class="pc">
-				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img_m.png" alt="" class="tablet">
+			<div class="tab_wrap">
+				<div class="tab_navbox tit_btnbox">
+					<div class="tab_nav on">
+						<span class="link btn">경영학부</span>
+					</div>
+					<div class="tab_nav">
+						<span class="link btn">컴퓨터공학</span>
+					</div>
+					<div class="tab_nav">
+						<span class="link btn">에세이/토론</span>
+					</div>
+				</div>
+				<div class="tab_contbox">
+					<div class="tab_cont on imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img.png" alt="" class="pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img_m.png" alt="" class="tablet">
+					</div>
+					<div class="tab_cont imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img2.png" alt="" class="pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img2_m.png" alt="" class="tablet">
+					</div>
+					<div class="tab_cont imgbox">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img3.png" alt="" class="pc">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec5_img3_m.png" alt="" class="tablet">
+					</div>
+				</div>
 			</div>
         </div>
     </div>
 
-    <div class="msection special prep feedback prep_sec5">
+    <!-- <div class="msection special prep feedback prep_sec5">
         <div class="container" data-aos="fade-up">
 			<div class="sub_titbox">
 				<p class="sub_txt1"> 
@@ -277,7 +296,7 @@ if (!defined('_EYOOM_')) exit;
                 <img class="mobile" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_prepfeedback_m.png" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="msection special prep feedback review_area cb_review prep_sec6">
         <div class="container" data-aos="fade-up">

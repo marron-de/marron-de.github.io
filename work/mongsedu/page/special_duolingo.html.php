@@ -50,7 +50,7 @@ if (!defined('_EYOOM_')) exit;
                             <li>
                                 <div class="text_area">
                                     <span class="title">
-                                        2025 최신 기출문제 반영<br/>
+                                        최신 기출문제 반영<br/>
                                         (자체 교재)
                                     </span>
                                     <p>출제 경향 그대로! 최신 문제 유형이 <br class="pc">모두 반영되어 있어요.</p>
@@ -95,7 +95,7 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
                 <p class="sub_txt1">
-					<span class="gra">실전반/기초반,</span> <br>
+					<span class="gra">실전반/입문반,</span> <br>
 					내게 딱 맞는 커리큘럼을 선택하세요.
 				</p>
             </div>
@@ -112,7 +112,7 @@ if (!defined('_EYOOM_')) exit;
 						</p>
 						<div class="descbox">
 							<p class="desc">‧ 원어민이 기출문제를 풀어줘요.</p>
-							<p class="desc">‧ 최대 정원 5명! 소규모 학습관리를 진행해요.</p>
+							<p class="desc">‧ 최대 정원 6명! 소규모 학습관리를 진행해요.</p>
 							<p class="desc">‧ 2개월 총 24강! 타이트하고 밀도 높은 수업을 해요.</p>
 							<p class="desc">‧ 단기간 확실한 목표달성이 가능해요.</p>
 						</div>
@@ -124,24 +124,24 @@ if (!defined('_EYOOM_')) exit;
 					<div class="right">
 						<p class="tit">
 							초보도 부담없이 <br>
-							<span class="color">듀오링고</span> 기초반!
+							<span class="color">듀오링고</span> 실전반!
 						</p>
 						<div class="tagbox">
-							<p class="tag">원어민 튜터</p>
-							<p class="tag">기초부터</p>
-							<p class="tag">1개월 심화학습</p>
+							<p class="tag">최대정원 6명</p>
+							<p class="tag">실전중심</p>
+							<p class="tag">2개월 속성</p>
 							<p class="tag">듀오링고 맞춤수업</p>
 						</div>
 					</div>
 				</div>
 				<div class="item item2">
 					<p class="item_tit tablet">
-						<span class="color">기초반 1개월</span> <br>
+						<span class="color">입문반 2개월</span> <br>
 						빠르게 완성되는 영어기초
 					</p>
 					<div class="left">
 						<p class="item_tit pc">
-							<span class="color">기초반 1개월</span> <br>
+							<span class="color">입문반 2개월</span> <br>
 							빠르게 완성되는 영어기초
 						</p>
 						<div class="descbox">
@@ -158,7 +158,7 @@ if (!defined('_EYOOM_')) exit;
 					<div class="right">
 						<p class="tit">
 							초보도 부담없이 <br>
-							<span class="color">듀오링고</span> 기초반!
+							<span class="color">듀오링고</span> 입문반!
 						</p>
 						<div class="tagbox">
 							<p class="tag">원어민 수업</p>
@@ -220,6 +220,7 @@ if (!defined('_EYOOM_')) exit;
 				<p class="sub_txt4">주3회 꽉찬 수업일정</p>
                 <p class="sub_txt1">
 					1주일을 원어민과 함께하세요
+					<span class="small">월수금반/화목금반</span>
 				</p>
             </div>
             <div class="sp_duotable">
@@ -347,10 +348,10 @@ if (!defined('_EYOOM_')) exit;
                             대학 수업 방식 처럼 선생님과 학생간의 많은 소통이 이루어지는 방식이에요.
                         </div>
                     </li>
-                    <li>
+                    <!-- <li>
                         <div class="question">원어민 선생님과 한국인 선생님 수업의 차이점은 무엇인가요?</div>
                         <div class="answer">원어민 수업은 주 2회, 듀오링고 기출 문제 풀이로 시험 점수를 올려주는 방식이며 한국인 수업은 원어민 수업 복습과 기초 문법 등을 가르치고 있어요.</div>
-                    </li>
+                    </li> -->
                     <li>
                         <div class="question">수업 시간을 옮기거나 바꿀 수 있나요?</div>
                         <div class="answer">스케줄은 짜여진 시간대로 강의를 수강해야 합니다.</div>

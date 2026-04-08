@@ -488,7 +488,7 @@ if (!defined('_EYOOM_')) exit;
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide item">
+								<!-- <div class="swiper-slide item">
 									<div class="imgbox">
 										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t19.png" alt=""
 											class="img">
@@ -508,7 +508,7 @@ if (!defined('_EYOOM_')) exit;
 												class="more">
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="swiper-slide item">
 									<div class="imgbox">
 										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t20.png" alt=""
@@ -535,17 +535,16 @@ if (!defined('_EYOOM_')) exit;
 										<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_cls_t21.png" alt=""
 											class="img">
 										<div class="flagbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_biet.svg" alt="" class="flag">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
 										</div>
 									</div>
 									<div class="txtbox">
 										<div class="top">
 											<p class="name">김연수 <span class="small">실장</span></p>
-											<p class="desc">-</p>
+											<p class="desc">영유아 교육 행정경력 8년</p>
 										</div>
 										<div class="bottom">
-											<p class="tag">-</p>
+											<p class="tag">국제학교 전문 코디네이터</p>
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 												class="more">
 										</div>

@@ -461,7 +461,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
+						<!-- <div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t19.jpg" alt=""
 									class="img">
@@ -481,7 +481,7 @@ if (!defined('_EYOOM_')) exit;
 										class="more">
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="swiper-slide item" onclick="location.href='<?php echo G5_BBS_URL ?>/write.php?bo_table=qa'">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t20.jpg" alt=""

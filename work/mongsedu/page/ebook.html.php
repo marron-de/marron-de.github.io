@@ -477,7 +477,7 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="bottom">
 						<p class="txt">2개월</p>
-						<p class="small">(16강)</p>
+						<p class="small">(24강)</p>
 					</div>
 				</div>
 				<div class="item">
@@ -485,7 +485,7 @@ if (!defined('_EYOOM_')) exit;
 						<p class="txt">총 강습시간</p>
 					</div>
 					<div class="bottom">
-						<p class="txt">16시간</p>
+						<p class="txt">24시간</p>
 					</div>
 				</div>
 				<div class="item">
@@ -583,7 +583,7 @@ if (!defined('_EYOOM_')) exit;
 					<p class="desc">
 						<span class="icon"></span>
 						<span class="txt">
-							해외대학 1학년 5과목 미리 수강 (예습)
+							해외대학 1학년 4과목 미리 수강 (예습)
 						</span>
 					</p>
 					<p class="desc">
@@ -696,7 +696,8 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="titbox">
 				<p class="title">
-					<span class="tit">영어 기초반 (1:1과외)</span>					<span class="small">기초부터 차근차근</span>
+					<span class="tit">영어 기초반 (1:1과외)</span>					
+					<span class="small">기초부터 차근차근</span>
 				</p>
 			</div>
 			<div class="tblbox">
@@ -787,7 +788,7 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="bottom">
 						<p class="txt">1개월</p>
-						<p class="small">(12강)</p>
+						<p class="small">(10강)</p>
 					</div>
 				</div>
 				<div class="item">
@@ -795,7 +796,7 @@ if (!defined('_EYOOM_')) exit;
 						<p class="txt">총 강습시간</p>
 					</div>
 					<div class="bottom">
-						<p class="txt">12시간</p>
+						<p class="txt">50분 <span class="small">(1회당)</span></p>
 					</div>
 				</div>
 				<div class="item">

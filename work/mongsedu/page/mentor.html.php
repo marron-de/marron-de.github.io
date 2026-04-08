@@ -406,7 +406,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="btn">자세히 보기</div>
 								</div>
 							</li>
-							<li class="item" onclick="mentor_modal(19);">
+							<!-- <li class="item" onclick="mentor_modal(19);">
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t19.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t19.jpg" alt="" class="img tablet">
@@ -423,7 +423,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="btn">자세히 보기</div>
 								</div>
-							</li>
+							</li> -->
 							<li class="item" onclick="mentor_modal(16);">
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t16.png" alt="" class="img pc">
@@ -809,7 +809,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="btn">자세히 보기</div>
 								</div>
 							</li>
-							<li class="item" onclick="mentor_modal(19);">
+							<!-- <li class="item" onclick="mentor_modal(19);">
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t19.png" alt="" class="img pc">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t19.jpg" alt="" class="img tablet">
@@ -826,7 +826,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="btn">자세히 보기</div>
 								</div>
-							</li>
+							</li> -->
 							<li class="item" onclick="mentor_modal(18);">
 								<div class="imgbox">
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t18.png" alt="" class="img pc">
