@@ -2922,10 +2922,11 @@
 							<p class="m_txt1">MD 추천 특별한 여행</p>
 						</div>
 						<div class="right">
-							<a href="" class="m_more">
-								<span class="txt">더보기</span>
-								<span class="arrow"></span>
-							</a>
+							<!-- 260408 수정작업 -->
+							<div class="slidebox controls">
+								<div class="swiper-button-prev prev_btn"></div>      
+								<div class="swiper-button-next next_btn"></div>
+							</div>
 						</div>
 					</div>
 					<div class="slidebox">
@@ -3081,9 +3082,160 @@
 										</a>
 									</div>
 								</div>
-							</div>							
-							<div class="swiper-pagination paging"></div>
-						</div>			
+								<!-- 260408 수정작업 -->
+								<div class="swiper-slide item">
+									<div class="banner">
+										<img src="<?php echo $path ?>img/ms13_ban1.jpg" alt="" class="bg"> 
+										<div class="txtbox">
+											<p class="sub">
+												<span>Special</span>
+												<span>01</span>
+											</p>
+											<p class="tit">몰디브 초호화 풀빌라 추천</p>
+										</div>
+									</div>
+									<div class="prdlist">
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic1.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic2.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic3.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="banner">
+										<img src="<?php echo $path ?>img/ms13_ban2.jpg" alt="" class="bg"> 
+										<div class="txtbox">
+											<p class="sub">
+												<span>Special</span>
+												<span>02</span>
+											</p>
+											<p class="tit">몰디브 초호화 풀빌라 추천</p>
+										</div>
+									</div>
+									<div class="prdlist">
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic4.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic9.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic5.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide item">
+									<div class="banner">
+										<img src="<?php echo $path ?>img/ms13_ban3.jpg" alt="" class="bg"> 
+										<div class="txtbox">
+											<p class="sub">
+												<span>Special</span>
+												<span>03</span>
+											</p>
+											<p class="tit">몰디브 초호화 풀빌라 추천</p>
+										</div>
+									</div>
+									<div class="prdlist">
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic6.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic7.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="prditem">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic8.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="price">1,018,500원</p>
+													<p class="ori">1,358,000원</p>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>						
+							<div class="swiper-pagination paging relative"></div>	
+						</div>		
 					</div>
 				</div>
 			</section>

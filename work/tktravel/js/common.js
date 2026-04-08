@@ -713,13 +713,19 @@ const ms13_swiper = new Swiper('.ms13_swiper', {
 	observer: true,
 	observeParents: true,
 	speed: 500,
-	loop: true,
+	// 260408 수정작업
+	// loop: true,
 	slidesPerView: 'auto',
 	spaceBetween: 20,		
 	pagination: {
 		el: '.ms13_swiper .paging',
 		clickable: true,
 	},
+	// 260408 수정작업
+    navigation: {
+      nextEl: ".ms13 .controls .next_btn",
+      prevEl: ".ms13 .controls .prev_btn",
+    },
 	breakpoints: {
 		1080: {
 			slidesPerView: 3,
