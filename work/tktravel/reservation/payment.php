@@ -132,8 +132,15 @@
 							<div class="infoitem">
 								<p class="title">결제 수단</p>
 								<div class="paybox">
+									<!-- 260408 수정작업 -->
 									<div class="payitem on">
-										<p class="txt">신용·체크카드</p>
+										<img src="<?php echo $path ?>img/pay_visa.png" alt="" class="icon">
+									</div>
+									<div class="payitem">
+										<img src="<?php echo $path ?>img/pay_master.png" alt="" class="icon">
+									</div>
+									<div class="payitem">
+										<p class="txt">CREDIT CARD</p>
 									</div>
 									<div class="payitem">
 										<img src="<?php echo $path ?>img/pay_wechat.png" alt="" class="icon">

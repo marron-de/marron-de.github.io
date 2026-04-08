@@ -288,28 +288,16 @@
 									<p class="re_tit">결제 수단</p>
 								</div>
 								<div class="re_contbox">
+									<!-- 260408 수정작업 -->
 									<div class="paybox">
-										<!-- 여행대장
-										<div class="payitem">
-											<span class="badge">즉시할인</span>
-											<p class="txt">퀵계좌이체</p>
-										</div>
-										<div class="payitem">
-											<span class="badge">할인혜택</span>
-											<img src="<?php echo $path ?>img/pay_tosspay.png" alt="" class="icon">
-										</div>
-										<div class="payitem">
-											<img src="<?php echo $path ?>img/pay_npay.png" alt="" class="icon">
-										</div>
-										<div class="payitem">
-											<img src="<?php echo $path ?>img/pay_kakaopay.png" alt="" class="icon">
-										</div>
-										<div class="payitem">
-											<img src="<?php echo $path ?>img/pay_payco.png" alt="" class="icon">
-										</div>
-										-->
 										<div class="payitem on">
-											<p class="txt">신용·체크카드</p>
+											<img src="<?php echo $path ?>img/pay_visa.png" alt="" class="icon">
+										</div>
+										<div class="payitem">
+											<img src="<?php echo $path ?>img/pay_master.png" alt="" class="icon">
+										</div>
+										<div class="payitem">
+											<p class="txt">CREDIT CARD</p>
 										</div>
 										<div class="payitem">
 											<img src="<?php echo $path ?>img/pay_wechat.png" alt="" class="icon">
@@ -318,32 +306,6 @@
 											<img src="<?php echo $path ?>img/pay_alipay.png" alt="" class="icon">
 										</div>
 									</div>
-									<!-- 여행대장
-									<div class="paybanner">
-										<div class="banner typeA">
-											<img src="<?php echo $path ?>img/pay_coupon.png" alt="" class="icon">
-											<p class="txt">
-												<span class="color">
-													퀵계좌이체는 250원 할인
-												</span>
-											</p>
-											<button type="button" class="btn">할인받기</button>
-										</div>
-										<div class="banner typeB">
-											<img src="<?php echo $path ?>img/pay_shinhan.png" alt="" class="icon">
-											<p class="txt">신한카드 최대 3개월 무이자 할부</p>
-										</div>
-										<div class="descbox">
-											<p class="desc">
-												<span class="bold">퀵계좌이체</span> · 1만원 이상 결제 시 0.5% 즉시할인 (최대 100만원 할인)
-											</p>
-											<button type="button" class="more_btn">
-												<span class="txt">신용카드 무이자 할부 안내</span>
-												<span class="arrow"></span>
-											</button>
-										</div>
-									</div>
-									-->
 								</div>
 							</div>
 						</div>
