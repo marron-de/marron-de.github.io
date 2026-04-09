@@ -1191,11 +1191,16 @@ $(document).ready(function () {
 		const winWidth = $(window).width();
 		const search = window.location.search;
 
-		const isDetail = search.includes('pid=class_detail') || search.includes('pid=counsel_detail') || search.includes('pid=procedure_detail');
+		const isDetail = 
+			search.includes('pid=class_detail') || 
+			search.includes('pid=counsel_detail') || 
+			search.includes('pid=procedure_detail') ||
+			(search.includes('bo_table=admission') && search.includes('wr_id='));
 
 		const isClassDetail = search.includes('pid=class_detail');
 		const isProcedureDetail = search.includes('pid=procedure_detail');
 		const isCounselDetail = search.includes('pid=counsel_detail');
+		const isAdmissionDetail = search.includes('bo_table=admission') && search.includes('wr_id=');
 
 		if (winWidth < 1080 && isDetail) {
 			$('.header').addClass('detail');
@@ -1250,6 +1255,12 @@ $(document).ready(function () {
 					const targetUrl = `${window.location.origin}/page/?pid=${pidValue}`;
 					window.location.href = targetUrl;
 				});
+			}
+
+			if(isAdmissionDetail) { //설명회 상세
+
+				$('.board-view.page-detail .board-view-subj').prependTo('.board-view.page-detail .frame-15d')
+
 			}
 		}
 
