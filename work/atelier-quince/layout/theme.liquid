@@ -255,7 +255,25 @@
       }
     {% endstyle %}
 
+
+	{% comment %} XEIcon {% endcomment %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xpressengine/XEIcon@2.3.3/xeicon.min.css">
+
+	{% comment %} Swiper {% endcomment %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+	{% comment %} Fonts {% endcomment %}
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cwp0tvg.css">
+
+	{% comment %} Style {% endcomment %}
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'fonts.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'responsive.css' | asset_url | stylesheet_tag }}
+
+
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -372,5 +390,14 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+	
+	{% comment %} Swiper {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
+
+	{% comment %} Script {% endcomment %}
+	<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+
+
   </body>
 </html>
