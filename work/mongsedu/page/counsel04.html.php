@@ -133,7 +133,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">관심분야(필수)</p>
+						<p class="form_label">신청(필수)</p>
 						<div class="select_box">
 							<select name="cs_class" class="select select2" data-placeholder="관심있는 수업">
 								<option value="">관심있는 수업</option>

@@ -192,7 +192,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 						</label>
 					</div>
 				</div>
-				<h6 class="f-s-16r f-w-700 m-b-10">관심분야(필수)</h6>
+				<h6 class="f-s-16r f-w-700 m-b-10">신청(필수)</h6>
 				<div class="row m-b-10">
 					<div class="col col-12 flex_rdo type">
 						<label class="radio cst_radio">
@@ -218,7 +218,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 				</div>
 				<br/>
-				<h6 class="f-s-16r f-w-700 m-b-10">관심국가(필수)</h6>
+				<h6 class="f-s-16r f-w-700 m-b-10">국가(필수)</h6>
 				<div class="row m-b-10">
 					<div class="col col-12 flex_rdo nation">
 						<label class="radio cst_radio">

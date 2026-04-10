@@ -107,15 +107,27 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 				
 					<div class="form_item">
-						<p class="form_label">관심분야(필수)</p>
+						<p class="form_label">신청(필수)</p>
 						<div class="radio_wrap">
 							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type1" class="input_radio" required value="국제학교">
 								<label for="cs_type1" class="label_radio">국제학교</label>
 							</div>
-							<div class="radio_box">
+							<!-- <div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type2" class="input_radio" value="대학">
 								<label for="cs_type2" class="label_radio">대학</label>
+							</div> -->
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type2_1" class="input_radio" value="사립대">
+								<label for="cs_type2_1" class="label_radio">사립대</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type2_2" class="input_radio" value="예술대">
+								<label for="cs_type2_2" class="label_radio">예술대</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type2_3" class="input_radio" value="국립대">
+								<label for="cs_type2_3" class="label_radio">국립대</label>
 							</div>
 							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type3" class="input_radio" value="대학원">
@@ -126,14 +138,14 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 								<label for="cs_type4" class="label_radio">어학연수</label>
 							</div>
 							<div class="radio_box">
-								<input type="radio" name="cs_type" id="cs_type5" class="input_radio" value="캠프">
-								<label for="cs_type5" class="label_radio">캠프</label>
+								<input type="radio" name="cs_type" id="cs_type5" class="input_radio" value="스쿨링/캠프">
+								<label for="cs_type5" class="label_radio">스쿨링/캠프</label>
 							</div>
 						</div>
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">관심국가(필수)</p>
+						<p class="form_label">국가(필수)</p>
 						<div class="radio_wrap">
 							<div class="radio_box">
 								<input type="radio" name="cs_nation" id="cs_nation1" class="input_radio" required value="싱가포르">
@@ -155,9 +167,9 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 								<input type="radio" name="cs_nation" id="cs_nation5" class="input_radio" value="영국">
 								<label for="cs_nation5" class="label_radio">영국</label>
 							</div>
-							<div class="radio_box">
-								<input type="radio" name="cs_nation" id="cs_nation6" class="input_radio" value="한국">
-								<label for="cs_nation6" class="label_radio">한국</label>
+							<div class="radio_box no_full">
+								<input type="radio" name="cs_type" id="cs_type5" class="input_radio" value="스쿨링/캠프">
+								<label for="cs_type5" class="label_radio">스쿨링/캠프</label>
 							</div>
 						</div>
 					</div>
