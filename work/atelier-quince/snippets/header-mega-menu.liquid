@@ -5,13 +5,13 @@
   {% render 'header-mega-menu' %}
 {% endcomment %}
 
-<nav class="header__inline-menu">
-  <ul class="list-menu list-menu--inline" role="list">
+<nav class="header__inline-menu category">
+  <ul class="list-menu list-menu--inline catebox" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
-            <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+            <div id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu header-details">
               <summary
                 id="HeaderMenu-{{ link.handle }}"
                 class="header__menu-item list-menu__item link focus-inset"
@@ -25,50 +25,149 @@
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
+
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
-                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup sub_catewrap"
                 tabindex="-1"
               >
-                <ul
-                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
-                  role="list"
-                >
-                  {%- for childlink in link.links -%}
-                    <li>
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled" role="list">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-                    </li>
-                  {%- endfor -%}
-                </ul>
+				{%- assign menu_key = link.title | handleize -%}
+				{%- assign mega_data = blank -%}
+				{%- for entry in shop.metaobjects.mega_menu_content1.values -%}
+					{%- assign entry_key = entry.menu_name | handleize -%}
+					{%- if entry_key == menu_key -%}
+						{%- assign mega_data = entry -%}
+						{%- break -%}
+					{%- endif -%}
+				{%- endfor -%}
+				{%- if mega_data != blank -%}
+					<div class="sub_catebox">
+						{%- if mega_data.submenu_style != true -%}
+							<div class="best_box">
+								<p class="sub_catebox_tit">Artful Journey</p>
+								
+								{% if mega_data.product_1_img %}
+								<div class="item">
+									<a href="{{ mega_data.product_1_link }}">
+										<div class="imgbox"><img src="{{ mega_data.product_1_img | image_url: width: 300 }}" alt="{{ mega_data.product_1_title }}"></div>
+										<div class="txtbox">
+											<p class="label">{{ mega_data.product_1_sale }}</p>
+											<p class="txt">{{ mega_data.product_1_title }}</p>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+
+								{% if mega_data.product_2_img %}
+								<div class="item">
+									<a href="{{ mega_data.product_2_link }}">
+										<div class="imgbox"><img src="{{ mega_data.product_2_img | image_url: width: 300 }}" alt="{{ mega_data.product_2_title }}"></div>
+										<div class="txtbox">
+											<p class="label">{{ mega_data.product_2_sale }}</p>
+											<p class="txt">{{ mega_data.product_2_title }}</p>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+							</div>
+							<ul class="menu_box">
+								{% for childlink in link.links %}
+									<li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
+								{% endfor %}
+							</ul>
+							<div class="campaign_box">
+								{% if mega_data.banner_1_img %}
+								<div class="item">
+									<a href="{{ mega_data.banner_1_link }}">
+										<div class="imgbox">
+											<img src="{{ mega_data.banner_1_img | image_url: width: 400 }}" alt="{{ mega_data.banner_1_title }}">
+											<div class="label">{{ mega_data.banner_1_sale }}</div>
+										</div>
+										<div class="txtbox">
+											<p class="txt">{{ mega_data.banner_1_title }}</p>
+											<i class="xi-long-arrow-right"></i>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+
+								{% if mega_data.banner_2_img %}
+								<div class="item">
+									<a href="{{ mega_data.banner_2_link }}">
+										<div class="imgbox">
+											<img src="{{ mega_data.banner_2_img | image_url: width: 400 }}" alt="{{ mega_data.banner_2_title }}">
+											<div class="label">{{ mega_data.banner_2_sale }}</div>
+										</div>
+										<div class="txtbox">
+											<p class="txt">{{ mega_data.banner_2_title }}</p>
+											<i class="xi-long-arrow-right"></i>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+							</div>
+						{%- endif -%}
+						
+						{%- if mega_data.submenu_style == true -%}
+							<div class="about_box">
+								{% if mega_data.submenu_1_img %}
+								<div class="item">
+									<a href="{{ mega_data.submenu_1_link }}">
+										<div class="imgbox">
+											<img src="{{ mega_data.submenu_1_img | image_url: width: 400 }}" alt="{{ mega_data.submenu_1_title }}">
+											<div class="label">{{ mega_data.submenu_1_sale }}</div>
+										</div>
+										<div class="txtbox">
+											<p class="txt">{{ mega_data.submenu_1_title }}</p>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+								{% if mega_data.submenu_2_img %}
+								<div class="item">
+									<a href="{{ mega_data.submenu_2_link }}">
+										<div class="imgbox">
+											<img src="{{ mega_data.submenu_2_img | image_url: width: 400 }}" alt="{{ mega_data.submenu_2_title }}">
+											<div class="label">{{ mega_data.submenu_2_sale }}</div>
+										</div>
+										<div class="txtbox">
+											<p class="txt">{{ mega_data.submenu_2_title }}</p>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+								{% if mega_data.submenu_3_img %}
+								<div class="item">
+									<a href="{{ mega_data.submenu_3_link }}">
+										<div class="imgbox">
+											<img src="{{ mega_data.submenu_3_img | image_url: width: 400 }}" alt="{{ mega_data.submenu_3_title }}">
+											<div class="label">{{ mega_data.submenu_3_sale }}</div>
+										</div>
+										<div class="txtbox">
+											<p class="txt">{{ mega_data.submenu_3_title }}</p>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+								{% if mega_data.submenu_4_img %}
+								<div class="item">
+									<a href="{{ mega_data.submenu_4_link }}">
+										<div class="imgbox">
+											<img src="{{ mega_data.submenu_4_img | image_url: width: 400 }}" alt="{{ mega_data.submenu_4_title }}">
+											<div class="label">{{ mega_data.submenu_4_sale }}</div>
+										</div>
+										<div class="txtbox">
+											<p class="txt">{{ mega_data.submenu_4_title }}</p>
+										</div>
+									</a>
+								</div>
+								{% endif %}
+							</div>
+						{%- endif -%}
+					</div>
+				{%- endif -%}
               </div>
-            </details>
+            </div>
           </header-menu>
         {%- else -%}
           <a

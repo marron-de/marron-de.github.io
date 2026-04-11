@@ -250,7 +250,7 @@
     {%- endunless -%}
   {%- endif -%}
 
-  <div
+  <div style="display:none;"
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
@@ -318,6 +318,76 @@
         {%- endif -%}
       </div>
     </div>
+  </div>
+
+  <div id="footer" class="footer__content-bottom-wrapper custom-footer-layout">
+  	<div class="leftbox">
+  		<p class="copyright FBP">&copy; {{ 'now' | date: '%Y' }} Atelier Quince</p>
+
+		{%- if section.settings.newsletter_enable -%}
+            <div class="footer-block__newsletter newsletter_box">
+                {% comment %} {%- if section.settings.newsletter_heading != blank -%}
+                    <h2 class="newsletter_title">{{ section.settings.newsletter_heading }}</h2>
+                {%- endif -%} {% endcomment %}
+                {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <div class="newsletter_form">
+                        <div class="input_box">
+                            <input id="NewsletterForm--{{ section.id }}" type="email" name="contact[email]" class="input" placeholder="Email address" required>
+                            <button type="submit" class="btn" name="commit">
+                  				{{ 'input_arrow.svg' | inline_asset_content }}
+                            </button>
+                        </div>
+                    </div>
+                {%- endform -%}
+            </div>
+        {%- endif -%}
+		
+  		<ul class="footer_menu_new list-unstyled">
+				{% comment %} 링크수정 필요 {% endcomment %}
+  			<li><a href="">TERM & CONDITIONS</a></li>
+				{% comment %} 링크수정 필요 {% endcomment %}
+  			<li><a href="">PRIVACY POLICY</a></li>
+  			<li class="footer_toggle"><span>Company Information</span></li>
+  		</ul>
+  	</div>
+  	<ul class="rightbox f_menubox list-unstyled">
+  		<li>
+  			<span class="tit acc_tit">
+  				<p class="txt">INFO</p><span class="plus"></span>
+  			</span>
+  			<ul class="sub-cate acc_cont list-unstyled">
+				{% comment %} 링크수정 필요 {% endcomment %}
+  				<li><a href="">Shipping / Exchange / Returns</a></li> 
+  				<li><a href="mailto:info@atelierquince.com">info@atelierquince.com</a></li>
+  			</ul>
+  		</li>
+  		<li>
+  			<span class="tit acc_tit">
+  				<p class="txt">CONTACT US</p><span class="plus"></span>
+  			</span>
+  			<ul class="sub-cate acc_cont list-unstyled">
+				{% comment %} 링크수정 필요 {% endcomment %}
+  				<li><a href="">Order Tracking</a></li>
+  				<li><a href="https://299z8.channel.io/" target="_blank">Contact Us</a></li>
+				{% comment %} 링크수정 필요 {% endcomment %}
+  				<li><a href="">Corporate Sales Inquiry</a></li>
+  			</ul>
+  		</li>
+  		<li class="footer-social">
+  			<ul class="sub-cate acc_cont list-unstyled">
+  				<li>
+  					<a href="https://www.instagram.com/atelierquince/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+  						<span class="txt">Instagram</span>
+  					</a>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  	<div class="toggle_cont">
+  		Atelier Quince LLC 548 Market Street, #262609, San Francisco CA 94104 / info@atelierquince.com
+  	</div>
   </div>
 </footer>
 
