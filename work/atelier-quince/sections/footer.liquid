@@ -49,7 +49,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width">
+      <div class="footer__content-top page-width" style="display:none;">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -345,9 +345,9 @@
 		
   		<ul class="footer_menu_new list-unstyled">
 				{% comment %} 링크수정 필요 {% endcomment %}
-  			<li><a href="">TERM & CONDITIONS</a></li>
+  			<li><a href="/pages/agreement">TERM & CONDITIONS</a></li>
 				{% comment %} 링크수정 필요 {% endcomment %}
-  			<li><a href="">PRIVACY POLICY</a></li>
+  			<li><a href="/pages/privacy">PRIVACY POLICY</a></li>
   			<li class="footer_toggle"><span>Company Information</span></li>
   		</ul>
   	</div>
@@ -358,7 +358,7 @@
   			</span>
   			<ul class="sub-cate acc_cont list-unstyled">
 				{% comment %} 링크수정 필요 {% endcomment %}
-  				<li><a href="">Shipping / Exchange / Returns</a></li> 
+  				<li><a href="/pages/shipping">Shipping / Exchange / Returns</a></li> 
   				<li><a href="mailto:info@atelierquince.com">info@atelierquince.com</a></li>
   			</ul>
   		</li>
@@ -368,10 +368,9 @@
   			</span>
   			<ul class="sub-cate acc_cont list-unstyled">
 				{% comment %} 링크수정 필요 {% endcomment %}
-  				<li><a href="">Order Tracking</a></li>
+  				<li><a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">Order Tracking</a></li>
   				<li><a href="https://299z8.channel.io/" target="_blank">Contact Us</a></li>
 				{% comment %} 링크수정 필요 {% endcomment %}
-  				<li><a href="">Corporate Sales Inquiry</a></li>
   			</ul>
   		</li>
   		<li class="footer-social">

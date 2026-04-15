@@ -1,0 +1,29 @@
+<div class="home-swiperbox ver2">
+    <div class="home-inner">
+        <p class="home-title">Placemats Collection</p>
+        
+        {% assign sorted_banners = shop.metaobjects.main_collection2.values | sort: 'banner_order'| reverse %}
+        <div class="swiper home-swiper home-collection">
+            <div class="swiper-wrapper">
+                {% for item in sorted_banners %}
+					{% if item.banner_img != blank %}
+                    <a href="{{ item.banner_link }}" 
+                        target="{% if item.banner_link_target == true %}_blank{% else %}_self{% endif %}" 
+                        class="swiper-slide swiper-box">
+                        <div class="imgbox">
+                            {% if item.banner_img != blank %}
+                                <img src="{{ item.banner_img | image_url: width: 600 }}" alt="{{ item.banner_title }}">
+                            {% endif %}
+                        </div>
+                        <div class="txtbox">
+                            <p class="txt">{{ item.banner_title }}</p>
+                            <p class="desc">{{ item.banner_desc }}</p>
+                        </div>
+                    </a>
+                	{% endif %}
+                {% endfor %}
+            </div>
+            <div class="swiper-scrollbar home-scrollbar home-collection-scrollbar"></div>   
+        </div>
+    </div>
+</div>

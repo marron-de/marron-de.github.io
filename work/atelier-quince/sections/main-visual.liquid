@@ -1,0 +1,56 @@
+
+{%- style -%}
+    
+  #MainContent { padding:0;margin-top:0;}
+  
+{%- endstyle -%}
+
+<div class="home-swiperbox home-visualbox">
+    {% assign sorted_banners = shop.metaobjects.main_visual.values | sort: 'banner_order' | reverse %}
+
+    {% comment %} 메인 비주얼 배너(PC) {% endcomment %}
+    <div class="swiper pc-main-visual pc_view">
+        <div class="swiper-wrapper home-visual">
+            {% for item in sorted_banners %}
+                {% if item.banner_1_img_pc != blank %}
+                <div class="swiper-slide visual-box">
+                    <div class="imgbox">
+                        <img src="{{ item.banner_1_img_pc | image_url: width: 1920 }}" alt="{{ item.banner_1_title | escape }}">
+                    </div>
+                    <div class="txtbox">
+                        <p class="txt GM">{{ item.banner_1_title }}</p>
+                        <a class="GM" href="{{ item.banner_1_link | default: '#' }}" 
+                           target="{% if item.banner_1_link_target == true %}_blank{% else %}_self{% endif %}">
+                           {{ item.banner_1_link_title }}
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination pc-main-visual-pag"></div>
+    </div>
+
+    {% comment %} 메인 비주얼 배너(모바일) {% endcomment %}
+    <div class="swiper mob-main-visual mob_view">
+        <div class="swiper-wrapper home-visual">
+            {% for item in sorted_banners %}
+                {% if item.banner_1_img_mob != blank %}
+                <div class="swiper-slide visual-box">
+                    <div class="imgbox">
+                        <img src="{{ item.banner_1_img_mob | image_url: width: 750 }}" alt="{{ item.banner_1_title | escape }}">
+                    </div>
+                    <div class="txtbox">
+                        <p class="txt GM">{{ item.banner_1_title }}</p>
+                        <a class="GM" href="{{ item.banner_1_link | default: '#' }}" 
+                           target="{% if item.banner_1_link_target == true %}_blank{% else %}_self{% endif %}">
+                           {{ item.banner_1_link_title }}
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination mob-main-visual-pag"></div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="home-swiperbox home-newbox ver2">
+    <div class="home-inner">
+        <p class="home-title">New Arrivals</p>
+        
+        {% comment %} 메타객체 불러오기 {% endcomment %}
+        {% assign metaobject = shop.metaobjects['mian_new'] %}
+        {% assign sorted_banners = metaobject.values | sort: 'product_order' | reverse %}
+
+        <div class="swiper home-swiper main-new">
+            <div class="swiper-wrapper thumbnail ver2">
+                {% for item in sorted_banners %}
+                    {% assign product = item.product_ref.value %}
+                    {% if product != blank %}
+                        
+                        {% comment %} 1. 메타필드 숫자 가져오기 {% endcomment %}
+                        {% assign ori_price = product.metafields.custom.ori_price | plus: 0 %}
+                        
+                        {% comment %} 2. 세일 여부 및 할인율 계산 {% endcomment %}
+                        {% assign on_sale = false %}
+                        {% assign discount_percent = 0 %}
+                        
+                        {% if ori_price > product.price %}
+                            {% assign on_sale = true %}
+                            {% assign diff = ori_price | minus: product.price %}
+                            {% assign discount_percent = diff | times: 100 | divided_by: ori_price %}
+                        {% endif %}
+
+                        <div class="swiper-slide swiper-box col col33 {% if on_sale %}sale{% endif %} {% if sold_out %}sold-out{% endif %}">
+                            <div class="thumbnail-image">
+                                <a href="{{ product.url }}" class="noborder">
+                                    <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}" class="thumb-img">
+                                </a>
+                            </div>
+
+                            <div class="iconbox">
+								<div class="icons">
+									{% for icon in product.metafields.custom.iconlist.value %}
+										{% if icon != blank %}
+											<span>
+												<img src="{{ icon | image_url: width: 100 }}" alt="icon" />
+											</span>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+
+                            <div class="thumbnail-info">
+                                <p class="name Pretendard"><a href="{{ product.url }}">{{ product.title }}</a></p>
+                                <p class="desc">{{ product.metafields.custom.simple_description | strip_html }}</p>
+
+                                <div class="price Pretendard {% if on_sale %}sale_on{% endif %}">
+                                    {% if on_sale %}
+                                        <div class="top_price">
+                                            <span style="text-decoration:line-through; opacity:0.35; margin-right:5px;" class="sale_price">{{ ori_price | money }}</span>
+                                            <span class="discount pro_rate">{{ discount_percent }}<span>% SALE</span></span>
+                                        </div>
+                                        <div>{{ product.price | money }}</div>
+                                    {% else %}
+                                        <div>{{ product.price | money }}</div>
+                                    {% endif %}
+                                </div>
+                                
+                                {% if product.metafields.custom.count != blank %}
+                                    <div class="custom_opt1">(Per set: {{ product.metafields.custom.count | strip_html }})</div>
+                                {% endif %}
+								{% unless product.available %}
+									<div class="soldout Pretendard">Sold Out</div>
+								{% endunless %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="swiper-scrollbar home-scrollbar main-new-scrollbar"></div>
+        </div>
+    </div>
+</div>
