@@ -110,52 +110,125 @@
 			</div>
 		</div>
 		<div class="h_right">
-			<div class="lang_box">
-				<div class="lang_selbtn">
-					<span class="icon kr"></span>
-					<span class="txt">KR | KRW</span>
-					<span class="arrow"></span>
-					<span class="lang_icon"></span>
-				</div>
-				<div class="popup lang_popup">
-					<div class="item">
-						<span class="icon hk"></span>
-						<span class="txt">HK | HKD</span>
-					</div>
-					<div class="item">
-						<span class="icon sg"></span>
-						<span class="txt">SG | SGD</span>
-					</div>
-					<div class="item">
-						<span class="icon tw"></span>
-						<span class="txt">TW | TWD</span>
-					</div>
-					<div class="item">
-						<span class="icon my"></span>
-						<span class="txt">MY | MYR</span>
-					</div>
-					<div class="item">
-						<span class="icon us"></span>
-						<span class="txt">US | USD</span>
-					</div>
-					<div class="item active">
-						<span class="icon kr"></span>
-						<span class="txt">KR | KRW</span>
-					</div>
-					<div class="item">
-						<span class="icon ph"></span>
-						<span class="txt">PH | PHP</span>
-					</div>
-					<div class="item">
+			<!-- 260416 수정작업 start -->
+			<div class="locale_box">
+				<div class="lang_box">
+					<div class="lang_selbtn">
 						<span class="icon cn"></span>
-						<span class="txt">CN | CNY</span>
+						<span class="txt">中文 (繁體)</span>
+						<span class="arrow"></span>
+						<span class="lang_icon"></span>
 					</div>
-					<div class="item">
-						<span class="icon th"></span>
-						<span class="txt">TH | THB</span>
+					<div class="popup lang_popup">
+						<div class="item">
+							<span class="icon cn"></span>
+							<span class="txt">中文 (繁體)</span>
+						</div>
+						<div class="item">
+							<span class="icon cn"></span>
+							<span class="txt">中文 (簡體)</span>
+						</div>
+						<div class="item">
+							<span class="icon us"></span>
+							<span class="txt">English</span>
+						</div>
+						<div class="item">
+							<span class="icon kr"></span>
+							<span class="txt">한국어</span>
+						</div>
 					</div>
-				</div>
+				</div>			
+				<div class="currency_box">
+					<div class="currency_selbtn">
+						<span class="txt">KRW</span>
+						<span class="arrow"></span>
+					</div>
+					<div class="popup currency_popup">
+						<ul class="menu">
+							<li class="menu_item">
+								<span class="region">Asia-Pacific</span>
+								<ul class="submenu">
+									<li class="item">
+										<span class="tit">AUD</span>
+										<span class="txt">Australian Dollar</span>
+									</li>
+									<li class="item">
+										<span class="tit">CNY</span>
+										<span class="txt">Chinese Yuan</span>
+									</li>
+									<li class="item">
+										<span class="tit">HKD</span>
+										<span class="txt">Hong Kong Dollar</span>
+									</li>
+									<li class="item">
+										<span class="tit">IDR</span>
+										<span class="txt">Indonesian Rupiah</span>
+									</li>
+									<li class="item">
+										<span class="tit">INR</span>
+										<span class="txt">Indian Rupee</span>
+									</li>
+									<li class="item">
+										<span class="tit">JPY</span>
+										<span class="txt">Japanese Yen</span>
+									</li>
+									<li class="item active">
+										<span class="tit">KRW</span>
+										<span class="txt">South Korean Won</span>
+									</li>
+									<li class="item">
+										<span class="tit">MYR</span>
+										<span class="txt">Malaysian Ringgit</span>
+									</li>
+									<li class="item">
+										<span class="tit">PHP</span>
+										<span class="txt">Philippine Peso</span>
+									</li>
+									<li class="item">
+										<span class="tit">SGD</span>
+										<span class="txt">Singapore Dollar</span>
+									</li>
+									<li class="item">
+										<span class="tit">THB</span>
+										<span class="txt">Thai Baht</span>
+									</li>
+									<li class="item">
+										<span class="tit">TWD</span>
+										<span class="txt">New Taiwan Dollar</span>
+									</li>
+									<li class="item">
+										<span class="tit">VND</span>
+										<span class="txt">Vietnamese Dong</span>
+									</li>
+								</ul>
+							</li>
+							<li class="menu_item">
+								<span class="region">The Americas</span>
+								<ul class="submenu">
+									<li class="item">
+										<span class="tit">USD</span>
+										<span class="txt">United States Dollar</span>
+									</li>
+								</ul>
+							</li>
+							<li class="menu_item">
+								<span class="region">Europe</span>
+								<ul class="submenu">
+									<li class="item">
+										<span class="tit">EUR</span>
+										<span class="txt">European Euro</span>
+									</li>
+									<li class="item">
+										<span class="tit">GBP</span>
+										<span class="txt">British Pound</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>			
 			</div>			
+			<!-- 260416 수정작업 end -->		
 			<div class="top_nav">
 				<li>
 					<a href="<?php echo $path ?>mypage/travel.php" class="link">

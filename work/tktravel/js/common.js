@@ -1582,3 +1582,59 @@ function history_popup() {
 	$("body").addClass('modal_open');
 	$("#history_popup").addClass('show');
 }
+
+
+// 260416 수정작업
+// currency button
+$(document).ready(function () {
+	$(".lang_selbtn").on("click", function (e) {
+		e.stopPropagation();
+		$(".currency_popup").removeClass("open");
+	});
+
+	$(".currency_selbtn").on("click", function (e) {
+		e.stopPropagation();
+
+		const selbtn = $(this);
+		const currenBox = selbtn.closest(".currency_box");
+		const popup = currenBox.find(".currency_popup");
+		const body = $("body");
+
+		const isOpen = popup.hasClass("open");
+
+		$(".lang_popup").removeClass("open");
+		$(".currency_popup").removeClass("open");
+		$(".currency_selbtn").removeClass("active");
+
+		if (!isOpen) {
+			selbtn.addClass("active");
+			popup.addClass("open");
+			body.addClass("currency_open");
+		}
+	});
+
+	$(".currency_box .currency_popup .item").on("click", function (e) {
+		e.stopPropagation(); 
+
+		const item = $(this);
+		const popup = item.closest(".currency_popup");
+		
+		popup.find(".item").removeClass("active");
+		item.addClass("active");
+
+		const txt = item.find(".tit").text();
+		$(".currency_selbtn").find(".txt").text(txt);
+
+		$(".currency_popup").removeClass("open");
+		$(".currency_selbtn").removeClass("active");
+		$("body").removeClass("currency_open");
+	});
+
+	$(document).on("click", function (e) {
+		if ($(e.target).closest(".currency_box").length === 0) {
+			$(".currency_selbtn").removeClass("active");
+			$(".currency_popup").removeClass("open");
+			$("body").removeClass("currency_open");
+		}
+	});
+});
