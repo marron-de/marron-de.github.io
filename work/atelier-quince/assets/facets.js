@@ -177,7 +177,11 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderActiveFacets(html) {
-    const activeFacetElementSelectors = ['.active-facets-mobile', '.active-facets-desktop'];
+    const activeFacetElementSelectors = [
+    '.active-facets-mobile', 
+    '.active-facets-desktop',
+    '.prd_top_box' // 이 부분을 추가하세요!
+  ];
 
     activeFacetElementSelectors.forEach((selector) => {
       const activeFacetsElement = html.querySelector(selector);

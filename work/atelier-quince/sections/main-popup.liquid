@@ -1,0 +1,80 @@
+{%- comment -%} 메인 팝업 1 {%- endcomment -%}
+{%- liquid
+  assign popup_items1 = shop.metaobjects.main_popup1.values | sort: 'banner_order' | reverse
+-%}
+{%- if popup_items1.size > 0 -%}
+<div id="mainPopup1" class="swiper main-popup main-popup1">   
+    <div class="swiper-wrapper">         
+        {%- for item in popup_items1 -%}
+            <div class="swiper-slide">        
+                <a href="{{ item.banner_link }}" target="{% if item.banner_link_target %}_blank{% else %}_self{% endif %}">
+                    {%- if item.banner_img -%}
+                        {{ item.banner_img | image_url: width: 1000 | image_tag: loading: 'lazy', alt: item.banner_img.alt | default: 'Main Popup Image 1' }}
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag }}
+                    {%- endif -%}
+                </a>
+            </div>
+        {%- endfor -%}
+    </div>  
+    <div class="swiper-pagination main-popup-pagination"></div>
+    <div class="main-popup-btnbox">
+        <div class="popup-btn popup-today">Not open today</div>
+        <div class="popup-btn popup-close">Close</div>
+    </div>
+</div>
+{%- endif -%}
+
+{%- comment -%} 메인 팝업 2 {%- endcomment -%}
+{%- liquid
+  assign popup_items2 = shop.metaobjects.main_popup2.values | sort: 'banner_order' | reverse
+-%}
+{%- if popup_items2.size > 0 -%}
+<div id="mainPopup2" class="swiper main-popup main-popup2">    
+    <div class="swiper-wrapper">                
+        {%- for item in popup_items2 -%}
+            <div class="swiper-slide">        
+                <a href="{{ item.banner_link }}" target="{% if item.banner_link_target %}_blank{% else %}_self{% endif %}">
+                    {%- if item.banner_img -%}
+                        {{ item.banner_img | image_url: width: 1000 | image_tag: loading: 'lazy', alt: item.banner_img.alt | default: 'Main Popup Image 2' }}
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag }}
+                    {%- endif -%}
+                </a>
+            </div>
+        {%- endfor -%}
+    </div>  
+    <div class="swiper-pagination main-popup-pagination"></div>
+    <div class="main-popup-btnbox">
+        <div class="popup-btn popup-today">Not open today</div>
+        <div class="popup-btn popup-close">Close</div>
+    </div>
+</div>
+{%- endif -%}
+
+{%- comment -%} 메인 팝업 3 {%- endcomment -%}
+{%- liquid
+  assign popup_items3 = shop.metaobjects.main_popup3.values | sort: 'banner_order' | reverse
+-%}
+{%- if popup_items3.size > 0 -%}
+<div id="mainPopup3" class="swiper main-popup main-popup3">    
+    <div class="swiper-wrapper">            
+        {%- for item in popup_items3 -%}
+            <div class="swiper-slide">        
+                <a href="{{ item.banner_link }}" target="{% if item.banner_link_target %}_blank{% else %}_self{% endif %}">
+                    {%- if item.banner_img -%}
+                        {{ item.banner_img | image_url: width: 1000 | image_tag: loading: 'lazy', alt: item.banner_img.alt | default: 'Main Popup Image 3' }}
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag }}
+                    {%- endif -%}
+                </a>
+            </div>
+        {%- endfor -%}
+    </div>  
+    <div class="swiper-pagination main-popup-pagination"></div>
+    <div class="main-popup-btnbox">
+        <div class="popup-btn popup-today">Not open today</div>
+        <div class="popup-btn popup-close">Close</div>
+    </div>
+</div>
+{%- endif -%}

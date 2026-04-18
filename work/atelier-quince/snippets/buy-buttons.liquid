@@ -10,7 +10,7 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }}>
+<div {{ block.shopify_attributes }} class="product-button">
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -74,7 +74,7 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit button button--full-width product-button {% if show_dynamic_checkout %} button--secondary {% else %} button--primary {% endif %} {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == null -%}soldout {%- elsif show_dynamic_checkout -%}add-to-bag {%- else -%} {%- endif -%}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
@@ -84,11 +84,11 @@
           >
             <span>
               {%- if product.selected_or_first_available_variant == null -%}
-                {{ 'products.product.unavailable' | t }}
+                {% comment %} {{ 'products.product.unavailable' | t }} {% endcomment %}Buy Now
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
+                {% comment %} {{ 'products.product.sold_out' | t }} {% endcomment %} Sold Out
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %} Add to Cart
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
@@ -105,7 +105,7 @@
         <button
           type="submit"
           name="add"
-          class="product-form__submit button button--full-width button--primary"
+          class="product-form__submit button button--full-width button--primary soldout"
           disabled
         >
           {{ 'products.product.sold_out' | t }}
@@ -148,4 +148,4 @@
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-</div>
+</>
