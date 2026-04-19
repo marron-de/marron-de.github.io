@@ -1,0 +1,46 @@
+<div class="review_section">
+
+	<div class="review_banner">
+	{%- assign review_banners = shop.metaobjects.reveiw_banner.values | sort: 'banner_order' -%}
+	
+	{%- for banner in review_banners -%}
+		<div class="banner">			
+			<div class="imgbox">
+			<picture>
+				{%- if banner.banner_img_mob != blank -%}
+				<source media="(max-width: 767px)" srcset="{{ banner.banner_img_mob | image_url: width: 800 }}">
+				{%- endif -%}
+				
+				{%- if banner.banner_img_pc != blank -%}
+				<img src="{{ banner.banner_img_pc | image_url: width: 1920 }}" 
+					alt="{{ banner.system.handle }}" 
+					loading="lazy">
+				{%- endif -%}
+			</picture>
+			</div>
+		</div>
+	{%- endfor -%}
+	</div> 
+
+ 	<div class="review_content">
+		<div class="yotpo-widget-instance" data-yotpo-instance-id="1317186"/>
+	</div>
+
+    <div class="review_notice">
+	{%- assign notices = shop.metaobjects.review_notice.values | sort: 'acc_order' -%}
+	
+	{%- for notice in notices -%}
+		<div class="notice_box">
+		{%- if notice.acc_title != blank -%}
+			<p class="tit">{{ notice.acc_title }}</p>
+		{%- endif -%}
+		
+		{%- if notice.acc_desc != blank -%}
+			<div class="txtbox">
+			{{ notice.acc_desc}}
+			</div>
+		{%- endif -%}
+		</div>
+	{%- endfor -%}
+	</div>
+</div>

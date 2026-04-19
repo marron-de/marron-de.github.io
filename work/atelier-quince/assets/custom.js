@@ -592,6 +592,118 @@ const relatedSlider = new Swiper(".related-slider", {
 });
 
 
+// cart
+
+const cartBanner = new Swiper(".cart_banner", {     
+    loop: true,
+    speed:500,     
+    autoplay: {        
+        delay: 5000,        
+        disableOnInteraction: false,      
+    },        
+    pagination: {           
+        el: '.cart_banner_pag',           
+        clickable: true,        
+    },   
+});
+const mobcartBanner = new Swiper(".mob_cart_banner", {  
+    loop: true,
+    speed:500,     
+    autoplay: {        
+        delay: 5000,        
+        disableOnInteraction: false,      
+    },    
+    pagination: {           
+        el: '.mob_cart_banner_pag',          
+        clickable: true,        
+    },   
+});
+
+const gift_banner = new Swiper(".gift_banner", {  
+    speed:500,     
+    slidesPerView: 'auto',
+    spaceBetween: 12, 
+    speed: 500,
+    breakpoints: {             
+        1024: {     
+            spaceBetween: 24,
+        }           
+    }
+});
+
+window.addEventListener('load', () => {
+    const totalPriceEl = document.getElementById('total_price');
+    const giftContainer = document.querySelector('.gift_banner');
+    
+    if (!totalPriceEl || !giftContainer) return;
+	
+    const rawTotal = totalPriceEl.getAttribute('data-price') || totalPriceEl.innerText || "0";
+	
+    const currentPrice = parseInt(rawTotal.replace(/[^0-9]/g, '')) || 0;
+    
+    const totalDashArray = 133.518;
+    const slides = giftContainer.querySelectorAll('.swiper-slide');
+
+    if (slides.length === 0) return;
+
+    slides.forEach(slide => {
+        const rawTarget = slide.getAttribute('data-price');
+        if (!rawTarget || rawTarget.includes('{')) return;
+		
+        let targetPrice = parseFloat(rawTarget.replace(/[^0-9.]/g, '')) || 0;
+		
+
+        if (targetPrice === 0) return;
+
+        let percent = Math.min((currentPrice / targetPrice) * 100, 100);
+        
+        const priceSpan = slide.querySelector('.price');
+        const descEl = slide.querySelector('.desc');
+
+        if (descEl) {
+            if (currentPrice === 0) {
+                descEl.innerHTML = "Fill your cart and check out your free gifts!";
+            } else if (percent >= 100) {
+                descEl.innerHTML = "Congratulations!<br>Gift unlocked!";
+                slide.classList.add('is_complete');
+            } else {
+                const diff = Math.max(0, (targetPrice - currentPrice) / 100);
+                const formattedDiff = '$' + diff.toLocaleString('en-US', { 
+                    style: 'decimal', 
+                    minimumFractionDigits: 2, 
+                    maximumFractionDigits: 2 
+                });
+                
+                descEl.innerHTML = `Only <span class="price">${formattedDiff}</span> away from your gift!`;
+            }
+        }
+
+        const circle = slide.querySelector('.circle');
+        if (circle) {
+            const offset = totalDashArray * (1 - (percent / 100));
+            circle.style.strokeDasharray = `${totalDashArray}`;
+            circle.style.strokeDashoffset = `${offset}px`;
+            circle.style.transition = 'stroke-dashoffset 0.5s ease-in-out';
+        }
+
+        slide.setAttribute('data-percent', Math.floor(percent));
+    });
+});
+
+// cart recommend
+const cart_recommendswiper = new Swiper(".cart_recommendswiper", {  
+    speed:500,     
+    slidesPerView: 'auto',
+    spaceBetween: 12, 
+    speed: 500,
+    breakpoints: {             
+        1024: {     
+            spaceBetween: 24,
+        }           
+    }
+});
+
+
 // collection
 $('.collection-slide').flickity({
 	// options
