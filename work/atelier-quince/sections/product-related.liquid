@@ -2,25 +2,10 @@
 {% if related_products != blank %}
 <div class="row conbox product-related">
 	<h4 class="colpadding2 FBP">Recommended</h4>
-
-	<div class="pc_view">
-		<ul class="thumbnail">
-			{% for product in related_products %}
-				<li class="col col33">{% render 'product-card-item', product: product %}</li>
-			{% endfor %}
-		</ul>
-	</div>
-
-	<div class="swiper related-slider mob_view">
-		<ul class="thumbnail swiper-wrapper">
-			{% for product in related_products %}
-				<li class="col col33 swiper-slide">
-					{% render 'product-card-item', product: product %}
-				</li>
-			{% endfor %}
-		</ul>
-		<div class="swiper-button-prev"><i class="xi-angle-left-thin"></i></div>
-		<div class="swiper-button-next"><i class="xi-angle-right-thin"></i></div>
-	</div>
+	<ul class="thumbnail">
+		{% for product in related_products %}
+			<li class="col col33">{% render 'product-card-item', product: product %}</li>
+		{% endfor %}
+	</ul>
 </div>
 {% endif %}

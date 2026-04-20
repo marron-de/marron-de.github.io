@@ -83,6 +83,11 @@ $(function () {
 	let delta = 5; 
 	let navbarHeight = $("#header").outerHeight();
 
+	// 플로팅 버튼 관련 변수
+    let wrap = $('#detail_fixed_toggle_btn_wrap');
+    let footer = $('#footer');
+    let margin = 0;
+
 	$(window).scroll(function (event) {
 		didScroll = true;
 	});
@@ -92,6 +97,7 @@ $(function () {
 	setInterval(function () {
 		if (didScroll) {
 			hasScrolled();
+			updateFloatingButton();
 			didScroll = false;
 		}
 	}, 250); 
@@ -110,6 +116,26 @@ $(function () {
 
 		lastScrollTop = st; // 현재 멈춘 위치를 기준점으로 재설정
 	}
+
+	function updateFloatingButton() {
+        if (!footer.length || !wrap.length) return;
+
+        let scrollBottom = $(window).scrollTop() + $(window).height();
+        let footerTop = footer.offset().top;
+
+        if (scrollBottom > footerTop) {
+            let gap = scrollBottom - footerTop + margin;
+            wrap.css({
+                'position': 'fixed',
+                'bottom': gap + 'px'
+            });
+        } else {
+            wrap.css({
+                'position': 'fixed',
+                'bottom': margin + 'px'
+            });
+        }
+    }
 })
 
 // header serach icon
@@ -118,6 +144,24 @@ $('.header__icon--search').click(function () {
 });
 $('.search-modal__close-button').click(function () {
 	$('body').removeClass("search-active");
+});
+
+$('.header-box .burger').click(function () {
+	$('body').toggleClass("nav-active");
+});
+
+$('#header .category .sub-catebox li .cate_btn').click(function(){
+	let This = $(this)
+	let Target = This.parent()
+	Target.addClass("show")
+});
+
+$('#header .category .sub-catebox .sub_catetop .sub_cateback').click(function(){
+	$('#header .category .sub-catebox li').removeClass("show")
+});
+
+$('#header .lang_wrap .lang_tit').click(function () {
+	$('#header .lang_wrap .lang_pop').toggleClass("open");
 });
 
 
@@ -134,7 +178,6 @@ const tabSwiper = new Swiper(".tab_swiper", {
     slidesPerView: "auto",     
     freeMode: true,    
 });
-
 
 
 // main Popup
@@ -591,9 +634,23 @@ const relatedSlider = new Swiper(".related-slider", {
     },
 });
 
+$('.detail_fixed_toggle_btn_wrap #buy_btn').on('click', function (e) {
+    e.preventDefault();
+    let realSubmitBtn = $('button[id^="ProductSubmitButton-"]');
+
+    if (realSubmitBtn.length > 0) {
+        if (realSubmitBtn.is(':disabled')) {
+            alert('현재 구매할 수 없는 상품입니다.');
+            return;
+        }
+        realSubmitBtn.trigger('click');
+    } else {
+        alert('상품 옵션을 확인해주세요.');
+    }
+});
+
 
 // cart
-
 const cartBanner = new Swiper(".cart_banner", {     
     loop: true,
     speed:500,     

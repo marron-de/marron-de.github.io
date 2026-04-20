@@ -34,19 +34,23 @@
 	.conbox { padding: 2.5rem 0.75rem 3.75rem; max-width: 100%;}
     
     @media only screen and (device-width: 780px),
-        only screen and (max-width: 780px),
-        screen and (max-device-width: 780px) {
+	only screen and (max-width: 780px),
+	screen and (max-device-width: 780px) {
+
+		#MainContent {padding:0 20px;}
+
+		.product-related.conbox {padding:0}
             
-            .collection-single-header {  position:relative; max-width:1200px; margin:0 auto; text-align:center; }
-            .collection-single-header h3 { margin:40px 0 40px; font-size:22px; font-weight:300; }
-            .collection-single-header p { column-count:1; }
-            .issue { margin-top:60px; }
-            .lookbook img, .issue .slide-img { width:100% !important; left:0 !important; top:0 !important; margin:0 !important; padding:10px 0; gap: 20px}
-            .issue .slide-img img { display:block !important; height:auto !important; max-width:100% !important; width:100% !important; }
-                        
-            .colleciton-single-desc { font-size: 1rem !important;}    		
-            .colleciton-single-desc * {  font-size: 1rem !important; }    			
-            .colleciton-single-desc .serif {  font-size: 1rem !important;}
+		.collection-single-header {  position:relative; max-width:1200px; margin:0 auto; text-align:center; }
+		.collection-single-header h3 { margin:40px 0 40px; font-size:22px; font-weight:300; }
+		.collection-single-header p { column-count:1; }
+		.issue { margin-top:60px; }
+		.lookbook img, .issue .slide-img { width:100% !important; left:0 !important; top:0 !important; margin:0 !important; padding:10px 0; gap: 20px}
+		.issue .slide-img img { display:block !important; height:auto !important; max-width:100% !important; width:100% !important; }
+					
+		.colleciton-single-desc { font-size: 1rem !important;}    		
+		.colleciton-single-desc * {  font-size: 1rem !important; }    			
+		.colleciton-single-desc .serif {  font-size: 1rem !important;}
 
     }
     
@@ -66,7 +70,8 @@
     <div class="row collection-single-header">
       <h3 class="serif">{{ product.title }}</h3>
       <div class="colleciton-single-desc">
-        {{ product.metafields.custom.detail_desc}}
+        <div class="pc_view">{{ product.metafields.custom.detail_desc}}</div>
+        <div class="mob_view">{{ product.metafields.custom.detail_desc_mob}}</div>
       </div>
     </div>
 

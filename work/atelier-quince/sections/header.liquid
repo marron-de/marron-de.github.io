@@ -136,187 +136,432 @@
       assign localization_forms = true
     endif
   -%}
-  <header id="header" class="header fixed-header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
-    {%- liquid
-      if section.settings.menu != blank
-        render 'header-drawer'
-      endif
+	<header class="header fixed-header pc_view header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+		{%- liquid
+		if section.settings.menu != blank
+			render 'header-drawer'
+		endif
 
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif
-    -%}
+		if section.settings.logo_position == 'top-center' or section.settings.menu == blank
+			render 'header-search', input_id: 'Search-In-Modal-1'
+		endif
+		-%}
 
-    {%- if section.settings.logo_position != 'middle-center' -%}
-      {%- if request.page_type == 'index' -%}
-        <h1 class="header__heading logobox">
-          {%- endif -%}
-            <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-              {%- if settings.logo != blank -%}
-                <div class="header__heading-logo-wrapper logo">
-                  {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                  {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                  {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                  {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                  {{
-                    settings.logo
-                    | image_url: width: 600
-                    | image_tag:
-                      class: 'header__heading-logo motion-reduce',
-                      widths: widths,
-                      height: logo_height,
-                      width: settings.logo_width,
-                      alt: logo_alt,
-                      sizes: sizes,
-                      preload: true
-                  }}
-                </div>
-              {%- else -%}
-                <span class="h2">{{ shop.name }}</span>
-              {%- endif -%}
-            </a>
-          {%- if request.page_type == 'index' -%}
-        </h1>
-      {%- endif -%}
-    {%- endif -%}
+		{%- if section.settings.logo_position != 'middle-center' -%}
+		{%- if request.page_type == 'index' -%}
+			<h1 class="header__heading logobox">
+			{%- endif -%}
+				<a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+				{%- if settings.logo != blank -%}
+					<div class="header__heading-logo-wrapper logo">
+					{%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+					{%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+					{% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+					{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+					{{
+						settings.logo
+						| image_url: width: 600
+						| image_tag:
+						class: 'header__heading-logo motion-reduce',
+						widths: widths,
+						height: logo_height,
+						width: settings.logo_width,
+						alt: logo_alt,
+						sizes: sizes,
+						preload: true
+					}}
+					</div>
+				{%- else -%}
+					<span class="h2">{{ shop.name }}</span>
+				{%- endif -%}
+				</a>
+			{%- if request.page_type == 'index' -%}
+			</h1>
+		{%- endif -%}
+		{%- endif -%}
 
-    {%- liquid
-      if section.settings.menu != blank
-        if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
-        endif
-      endif
-    %}
+		{%- liquid
+		if section.settings.menu != blank
+			if section.settings.menu_type_desktop == 'dropdown'
+			render 'header-dropdown-menu'
+			elsif section.settings.menu_type_desktop != 'drawer'
+			render 'header-mega-menu'
+			endif
+		endif
+		%}
 
-    {%- if section.settings.logo_position == 'middle-center' -%}
-      {%- if request.page_type == 'index' -%}
-        <h1 class="header__heading">
-      {%- endif -%}
-      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if settings.logo != blank -%}
-          <div class="header__heading-logo-wrapper">
-            {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-            {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-            {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
-            {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-            {{
-              settings.logo
-              | image_url: width: 600
-              | image_tag:
-                class: 'header__heading-logo',
-                widths: widths,
-                height: logo_height,
-                width: settings.logo_width,
-                alt: logo_alt,
-                sizes: sizes,
-                preload: true
-            }}
-          </div>
-        {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
-        {%- endif -%}
-      </a>
-      {%- if request.page_type == 'index' -%}
-        </h1>
-      {%- endif -%}
-    {%- endif -%}
+		{%- if section.settings.logo_position == 'middle-center' -%}
+		{%- if request.page_type == 'index' -%}
+			<h1 class="header__heading">
+		{%- endif -%}
+		<a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+			{%- if settings.logo != blank -%}
+			<div class="header__heading-logo-wrapper">
+				{%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+				{%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+				{% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
+				{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+				{{
+				settings.logo
+				| image_url: width: 600
+				| image_tag:
+					class: 'header__heading-logo',
+					widths: widths,
+					height: logo_height,
+					width: settings.logo_width,
+					alt: logo_alt,
+					sizes: sizes,
+					preload: true
+				}}
+			</div>
+			{%- else -%}
+			<span class="h2">{{ shop.name }}</span>
+			{%- endif -%}
+		</a>
+		{%- if request.page_type == 'index' -%}
+			</h1>
+		{%- endif -%}
+		{%- endif -%}
 
-    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %} shoppingbag">
-      <div class="desktop-localization-wrapper">
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-          <localization-form class="small-hide medium-hide" data-prevent-hide>
-            {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {% endif %}
+		<div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %} shoppingbag">
+		<div class="desktop-localization-wrapper">
+			{%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+			<localization-form class="small-hide medium-hide" data-prevent-hide>
+				{%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
+				<div>
+					<h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
+					{%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+				</div>
+				{%- endform -%}
+			</localization-form>
+			{% endif %}
 
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <localization-form class="small-hide medium-hide" data-prevent-hide>
-            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-      </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
-
-      {%- if shop.customer_accounts_enabled -%}
-        <a
-          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
-          rel="nofollow"
-        >
-          {%- if section.settings.enable_customer_avatar -%}
-            <account-icon>
-              {%- if customer and customer.has_avatar? -%}
-                {{ customer | avatar }}
-              {%- else -%}
-                <span class="svg-wrapper">
-                  {% comment %} {{ 'icon-account.svg' | inline_asset_content }} {% endcomment %}
-                  {{ 'ico_profile.png' | asset_img_url: 'master' | img_tag }}
-                </span>
-              {%- endif -%}
-            </account-icon>
-          {%- else -%}
-            <span class="svg-wrapper">
-              {% comment %} {{ 'icon-account.svg' | inline_asset_content }} {% endcomment %}
-              {{ 'ico_profile.png' | asset_img_url: 'master' | img_tag }}
-            </span>
-          {%- endif -%}
-          <span class="visually-hidden">
-            {%- liquid
-              if customer
-                echo 'customer.account_fallback' | t
-              else
-                echo 'customer.log_in' | t
-              endif
-            -%}
-          </span>
-        </a>
-      {%- endif -%}
-
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            {% render block %}
-        {%- endcase -%}
-      {%- endfor -%}
-
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {% if cart == empty %}
-          <span class="svg-wrapper">            
-            {% comment %} {{ 'icon-cart-empty.svg' | inline_asset_content }} {% endcomment %}
-            {{ 'ico_cart.png' | asset_img_url: 'master' | img_tag }}
-          </span>
-        {% else %}
-          <span class="svg-wrapper">
-            {% comment %} {{ 'icon-cart.svg' | inline_asset_content }} {% endcomment %}
-            {{ 'ico_cart.png' | asset_img_url: 'master' | img_tag }}
-          </span>
-        {% endif %}
-        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        <div class="basketcount">
-			{% comment %} 카트 아이템 개수가 0개여도 0을 표시하도록 로직 변경 {% endcomment %}
-			<span aria-hidden="true">
-				{{ cart.item_count }}
-			</span>
-			<span class="visually-hidden">
-				{{ 'sections.header.cart_count' | t: count: cart.item_count }}
-			</span>
+			{%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+			<localization-form class="small-hide medium-hide" data-prevent-hide>
+				{%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+				<div>
+					<h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+					{%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+				</div>
+				{%- endform -%}
+			</localization-form>
+			{%- endif -%}
 		</div>
-      </a>
-    </div>
-  </header>
+		{% render 'header-search', input_id: 'Search-In-Modal' %}
+
+		{%- if shop.customer_accounts_enabled -%}
+			<a
+			href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+			class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+			rel="nofollow"
+			>
+			{%- if section.settings.enable_customer_avatar -%}
+				<account-icon>
+				{%- if customer and customer.has_avatar? -%}
+					{{ customer | avatar }}
+				{%- else -%}
+					<span class="svg-wrapper">
+					{% comment %} {{ 'icon-account.svg' | inline_asset_content }} {% endcomment %}
+					{{ 'ico_profile.png' | asset_img_url: 'master' | img_tag }}
+					</span>
+				{%- endif -%}
+				</account-icon>
+			{%- else -%}
+				<span class="svg-wrapper">
+				{% comment %} {{ 'icon-account.svg' | inline_asset_content }} {% endcomment %}
+				{{ 'ico_profile.png' | asset_img_url: 'master' | img_tag }}
+				</span>
+			{%- endif -%}
+			<span class="visually-hidden">
+				{%- liquid
+				if customer
+					echo 'customer.account_fallback' | t
+				else
+					echo 'customer.log_in' | t
+				endif
+				-%}
+			</span>
+			</a>
+		{%- endif -%}
+
+		{%- for block in section.blocks -%}
+			{%- case block.type -%}
+			{%- when '@app' -%}
+				{% render block %}
+			{%- endcase -%}
+		{%- endfor -%}
+
+		<a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+			{% if cart == empty %}
+			<span class="svg-wrapper">            
+				{% comment %} {{ 'icon-cart-empty.svg' | inline_asset_content }} {% endcomment %}
+				{{ 'ico_cart.png' | asset_img_url: 'master' | img_tag }}
+			</span>
+			{% else %}
+			<span class="svg-wrapper">
+				{% comment %} {{ 'icon-cart.svg' | inline_asset_content }} {% endcomment %}
+				{{ 'ico_cart.png' | asset_img_url: 'master' | img_tag }}
+			</span>
+			{% endif %}
+			<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+			<div class="basketcount">
+				{% comment %} 카트 아이템 개수가 0개여도 0을 표시하도록 로직 변경 {% endcomment %}
+				<span aria-hidden="true">
+					{{ cart.item_count }}
+				</span>
+				<span class="visually-hidden">
+					{{ 'sections.header.cart_count' | t: count: cart.item_count }}
+				</span>
+			</div>
+		</a>
+		</div>
+	</header>
+
+	<div class="mob_header mob_view">
+		<div class="header-box">
+			<div class="burger">
+				<img src="{{ 'ico_menu.png' | asset_url }}" alt="Menu" class="img"/>
+			</div>
+			
+			{%- if section.settings.logo_position != 'middle-center' -%}
+			{%- if request.page_type == 'index' -%}
+				<div class="h_logobox">
+				{%- endif -%}
+					<a href="{{ routes.root_url }}" class="h_logo_img">
+					{%- if settings.logo != blank -%}
+						{%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+						{%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+						{% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+						{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+						{{
+							settings.logo
+							| image_url: width: 600
+							| image_tag:
+							class: 'logo_img',
+							widths: widths,
+							height: logo_height,
+							width: settings.logo_width,
+							alt: logo_alt,
+							sizes: sizes,
+							preload: true
+						}}
+					{%- else -%}
+						<span class="h2">{{ shop.name }}</span>
+					{%- endif -%}
+					</a>
+				{%- if request.page_type == 'index' -%}
+				</div>
+			{%- endif -%}
+			{%- endif -%}         
+					
+			<div class="category FBP">
+				<ul class="catebox">        
+					<li class="cate-shop">
+						<ul id="sub_catebox" class="sub-catebox Pretendard">
+						{%- for link in section.settings.menu.links -%}
+							{%- liquid
+							assign menu_key = link.title | handleize
+							assign mega_data = blank
+							
+							# 메타오브젝트에서 현재 메뉴 핸들과 일치하는 설정값 찾기
+							for entry in shop.metaobjects.mega_menu_content1.values
+								assign entry_key = entry.menu_name | handleize
+								if entry_key == menu_key
+								assign mega_data = entry
+								break
+								endif
+							endfor
+							-%}
+
+							{%- if mega_data != blank -%}
+							{% comment %} 메가 메뉴 스타일 케이스 {% endcomment %}
+							<li class="mega-menu-item">
+								<div class="link cate_btn">
+								<p>{{ link.title }}</p>
+								<i class="xi-angle-right arrow"></i>
+								</div>
+
+								<div class="sub_catewrap">
+								<div class="sub_catetop">
+									<div class="sub_cateback">
+									<i class="xi-angle-left"></i>
+									<span class="txt">{{ link.title }}</span>
+									</div>
+								</div>
+
+								<div class="sub_catebox">
+									{%- if mega_data.submenu_style != true -%}
+									{% comment %} [스타일 1] 베스트 상품(2개) + 메뉴 리스트 + 캠페인 배너(2개) {% endcomment %}
+									
+									{%- if mega_data.product_1_img != blank or mega_data.product_2_img != blank -%}
+										<div class="best_box">
+										<p class="sub_catebox_tit">Artful Journey</p>
+										{%- for i in (1..2) -%}
+											{%- liquid
+											assign p_img = "product_" | append: i | append: "_img"
+											assign p_link = "product_" | append: i | append: "_link"
+											assign p_title = "product_" | append: i | append: "_title"
+											assign p_sale = "product_" | append: i | append: "_sale"
+											-%}
+											{%- if mega_data[p_img] != blank -%}
+											<div class="item">
+												<a href="{{ mega_data[p_link] | default: '#' }}">
+												<div class="imgbox">
+													{{ mega_data[p_img] | image_url: width: 300 | image_tag: alt: mega_data[p_title], loading: 'lazy' }}
+												</div>
+												<div class="txtbox">
+													<p class="txt">{{ mega_data[p_title] | default: 'Featured Product' }}</p>
+													{%- if mega_data[p_sale] != blank -%}<p class="label">{{ mega_data[p_sale] }}</p>{%- endif -%}
+												</div>
+												</a>
+											</div>
+											{%- endif -%}
+										{%- endfor -%}
+										</div>
+									{%- endif -%}
+
+									{%- if link.links.size > 0 -%}
+										<ul class="menu_box">
+											<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+										{%- for childlink in link.links -%}
+											<li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
+										{%- endfor -%}
+										</ul>
+									{%- endif -%}
+
+									{%- if mega_data.banner_1_img != blank or mega_data.banner_2_img != blank -%}
+										<div class="campaign_box">
+										{%- for i in (1..2) -%}
+											{%- liquid
+											assign b_img = "banner_" | append: i | append: "_img"
+											assign b_link = "banner_" | append: i | append: "_link"
+											assign b_title = "banner_" | append: i | append: "_title"
+											assign b_sale = "banner_" | append: i | append: "_sale"
+											-%}
+											{%- if mega_data[b_img] != blank -%}
+											<div class="item">
+												<a href="{{ mega_data[b_link] | default: '#' }}">
+												<div class="imgbox">
+													{{ mega_data[b_img] | image_url: width: 400 | image_tag: alt: mega_data[b_title], loading: 'lazy' }}
+													{%- if mega_data[b_sale] != blank -%}<div class="label">{{ mega_data[b_sale] }}</div>{%- endif -%}
+												</div>
+												<div class="txtbox">
+													<p class="txt">{{ mega_data[b_title] | default: 'Campaign' }}</p>
+													<i class="xi-long-arrow-right"></i>
+												</div>
+												</a>
+											</div>
+											{%- endif -%}
+										{%- endfor -%}
+										</div>
+									{%- endif -%}
+
+									{%- else -%}
+									{% comment %} [스타일 2] 정보성 서브메뉴 그리드 (최대 4개) {% endcomment %}
+									<div class="about_box">
+										{%- for i in (1..4) -%}
+										{%- liquid
+											assign s_img = "submenu_" | append: i | append: "_img"
+											assign s_link = "submenu_" | append: i | append: "_link"
+											assign s_title = "submenu_" | append: i | append: "_title"
+											assign s_sale = "submenu_" | append: i | append: "_sale"
+										-%}
+										{%- if mega_data[s_img] != blank -%}
+											<div class="item">
+											<a href="{{ mega_data[s_link] | default: '#' }}">
+												<div class="imgbox">
+												{{ mega_data[s_img] | image_url: width: 400 | image_tag: alt: mega_data[s_title], loading: 'lazy' }}
+												{%- if mega_data[s_sale] != blank -%}<div class="label">{{ mega_data[s_sale] }}</div>{%- endif -%}
+												</div>
+												<div class="txtbox">
+												<p class="txt">{{ mega_data[s_title] | default: 'Explore' }}</p>
+												</div>
+											</a>
+											</div>
+										{%- endif -%}
+										{%- endfor -%}
+									</div>
+									{%- endif -%}
+								</div>
+								</div>
+							</li>
+
+							{%- else -%}
+							{% comment %} 메타오브젝트 데이터가 없는 일반 메뉴의 경우 처리 (선택 사항) {% endcomment %}
+							{%- if link.links.size > 0 -%}
+								<li class="normal-menu-item">
+									<div class="link cate_btn">
+										<p>{{ link.title }}</p>
+										<i class="xi-angle-right arrow"></i>
+									</div>
+									<ul class="simple-dropdown">
+										{%- for childlink in link.links -%}
+											<li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
+										{%- endfor -%}
+									</ul>
+								</li>
+							{%- else -%}
+								<li>
+									<a href="{{ link.url }}" class="link cate_btn">
+										<p>{{ link.title }}</p>
+										<i class="xi-angle-right arrow"></i>
+									</a>
+								</li>
+							{%- endif -%}
+							{%- endif -%}
+						{%- endfor -%}
+						</ul>
+					</li>
+				</ul>
+				<div class="lang_wrap">
+					<div class="lang_tit">
+						<img src="{{ 'country_us.png' | asset_url }}" alt="" class="img"/>
+						<i class="ph ph-caret-down arrow"></i>
+					</div>
+					<div class="lang_pop">          
+						<div class="lang_item">                            
+							<a href="https://atelierquince.co.kr/" class="link">
+								<img src="{{ 'country_kr.png' | asset_url }}" alt="" class="img"/>
+								<span class="txt">KR</span>
+							</a>
+						</div>    
+						<div class="lang_item">
+							<a href="https://atelierquince.com/" class="link">
+								<img src="{{ 'country_us.png' | asset_url }}" alt="" class="img"/>
+								<span class="txt">EN</span>
+							</a>
+						</div>         
+					</div>
+				</div>
+			</div>              
+			
+			<div class="shoppingbag">                  
+				<ul>                  
+					<li> 
+						{% render 'header-search', input_id: 'Search-In-Modal' %}                  
+					</li>                     
+					<li>
+						{% if customer %}
+							<a href="{{ routes.account_url }}"><img src="{{ 'ico_profile.png' | asset_url }}" alt="Account" class="icon"/></a>
+						{% else %}
+							<a href="{{ routes.account_login_url }}"><img src="{{ 'ico_profile.png' | asset_url }}" alt="Login" class="icon"/></a>
+						{% endif %}
+					</li>                                     
+					<li>
+						<a href="{{ routes.cart_url }}">
+							<img src="{{ 'ico_cart.png' | asset_url }}" alt="Cart" class="icon"/>
+							<span class="basketcount">{{ cart.item_count }}</span>
+						</a>
+					</li>                 
+				</ul>             
+			</div>
+						
+		</div>              
+		<div class="category-back"></div> 
+	</div>
 </{{ header_tag }}>
+
+
 
 {%- if settings.cart_type == 'notification' -%}
   {%- render 'cart-notification',

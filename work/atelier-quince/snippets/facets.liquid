@@ -28,9 +28,9 @@
   endif
 -%}
 
-<div id="searchSticky" class="searchData facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+<div id="searchSticky" class="searchData product_searchdata_popup xans-product-searchdata facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
-    <facet-filters-form class="facets small-hide">
+    <facet-filters-form class="facets">
       <form
         id="FacetFiltersForm"
         class="searchCondition {% if filter_type == 'horizontal' %}facets__form{% else %}facets__form-vertical{% endif %}"
@@ -226,17 +226,21 @@
 						</li>
 					</ul>
 
-					{% comment %} 모바일용 결과 라벨 {% endcomment %}
-					<div class="xans-product-searchconditiondata filter_list mob_view">
+					{%- assign has_active_filters = false -%}
+					{%- for filter in results.filters -%}
+						{%- if filter.active_values.size > 0 or filter.min_value.value != null or filter.max_value.value != null -%}
+							{%- assign has_active_filters = true -%}
+							{%- break -%}
+						{%- endif -%}
+					{%- endfor -%}
+
+					{%- if has_active_filters -%}
+					<div class="xans-element- xans-product xans-product-searchconditiondata filter_list mob_view">
 						<ul class="list">
 							{%- for filter in results.filters -%}
-							{%- comment -%} 일반 필터 (컬러, 사이즈 등) {%- endcomment -%}
-							{%- for value in filter.active_values -%}
-								<li>
-									<facet-remove>
-										<a href="{{ value.url_to_remove }}" class="active-facets__button">
-										<span class="active-facets__button-inner">
-											{%- liquid
+								{%- for value in filter.active_values -%}
+									<li class="xans-record-">
+										{%- liquid
 											assign label_handle = filter.label | downcase
 											if label_handle contains 'color' or label_handle contains '색상'
 												echo 'Color : '
@@ -245,46 +249,33 @@
 											else
 												echo filter.label | append: ' : '
 											endif
-											-%}
-											{{ value.label | escape }}
-											<span class="svg-wrapper">
-											{{- 'icon-close-small.svg' | inline_asset_content -}}
-											</span>
-										</span>
-										</a>
-									</facet-remove>
-								</li>
-							{%- endfor -%}
+										-%}
+										{{ value.label | escape }}
+										<button type="button" class="btnSearchDelete" onclick="location.href='{{ value.url_to_remove }}'">삭제</button>
+									</li>
+								{%- endfor -%}
 
-							{%- comment -%} 가격 범위 필터 {%- endcomment -%}
-							{%- if filter.type == 'price_range' -%}
-								{%- assign min = filter.min_value.value -%}
-								{%- assign max = filter.max_value.value -%}
-								{%- if min != null or max != null -%}
-								<li class="price">
-									<facet-remove>
-									<a href="{{ filter.url_to_remove }}" class="active-facets__button">
-										<span class="active-facets__button-inner">
-										Price : {{ min | default: 0 | money }} - {{ max | default: filter.range_max | money }}
-										<span class="svg-wrapper">
-											{{- 'icon-close-small.svg' | inline_asset_content -}}
-										</span>
-										</span>
-									</a>
-									</facet-remove>
-								</li>
+								{%- comment -%} 2. 가격 범위 필터 {%- endcomment -%}
+								{%- if filter.type == 'price_range' -%}
+									{%- assign min = filter.min_value.value -%}
+									{%- assign max = filter.max_value.value -%}
+									{%- if min != null or max != null -%}
+									<li class="xans-record-">
+										Price : {{ min | default: 0 | money }} ~ {{ max | default: filter.range_max | money }}
+										<button type="button" class="btnSearchDelete" onclick="location.href='{{ filter.url_to_remove }}'">삭제</button>
+									</li>
+									{%- endif -%}
 								{%- endif -%}
-							{%- endif -%}
 							{%- endfor -%}
 						</ul>
-					</div>
+						<button type="button" class="btnRefresh ec-product-searchdata-reset" onclick="location.href='{{ results.url_to_reset }}'"></button>
+					</div>					
+					{%- endif -%}
 				</div>
             {%- endif -%}
 	
 			<facet-remove class="active-facets__button-wrapper">
-				<a href="{{ results_url }}" class="btnRefresh ec-product-searchdata-reset Pretendard active-facets__button-remove underlined-link">
-					Filter Reset
-				</a>
+				<a href="{{ collection.url }}"  onclick="window.location.href=this.getAttribute('href'); return false;"  class="btnRefresh ec-product-searchdata-reset Pretendard active-facets__button-remove underlined-link"> Filter Reset </a>
 			</facet-remove>
 			
           </div>
@@ -824,7 +815,7 @@
   {%- endif -%}
   <div
     class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
-    role="status"
+    role="status" style="display:none"
   >
     <h2 class="product-count__text text-body">
       <span id="ProductCount">

@@ -61,11 +61,13 @@
 
     
     @media only screen and (device-width: 780px), only screen and (max-width: 780px),screen and (max-device-width: 780px) {
+
+		#footer {margin-top:0}
         
         .category-sub-shop { display:none; }
         .product-header { margin-top:-30px; }
         
-        #MainContent { padding: 90px 0 0;}
+        #MainContent { padding: 0;}
         
         .carousel-nav .slide-img { width: calc((100% - 10px*2)/3); aspect-ratio: 1/1;}
         .carousel-nav .slide-img + .slide-img { margin-left: 10px;}
@@ -882,7 +884,6 @@
 
 		</div>
 	</div>
-
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
@@ -935,8 +936,14 @@
       {{ product | structured_data }}
     </script>
   </div>
+  
+	<div id="detail_fixed_toggle_btn_wrap" class="detail_fixed_toggle_btn_wrap">
+		<a href="#none" class="detail_fixed_toggle_btn buy" id="buy_btn">Add to Cart</a>
+		<a href="#none" class="detail_fixed_toggle_btn top" id="top_btn"><i class="xi-angle-up-thin"></i></a>
+	</div>
 
 </product-info>
+
 
 {% schema %}
 {

@@ -29,18 +29,37 @@
   }
 
   .template-search--empty {
-    padding-bottom: 18rem;
+    padding-bottom: 5rem;
   }
 
-  @media screen and (min-width: 750px) {
-    .template-search__header {
-      margin-bottom: 5rem;
-    }
+  .empty_txt {
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+	line-height:1.6;
+    opacity: 0.5;
+    min-height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  @media screen and (min-width: 780px) {
+
+    .template-search__header { margin-bottom: 5rem; }
+	
+	.search__button .icon {height: 1.8rem;}
+
+  }
+  
+  @media only screen and (device-width: 780px),
+	only screen and (max-width: 780px),
+	screen and (max-device-width: 780px) {
+
+	#MainContent {padding-top:0 }
+
   }
 
-  .search__button .icon {
-    height: 1.8rem;
-  }
 </style>
 
 {%- liquid
@@ -64,15 +83,15 @@
 {%- endstyle -%}
 
 {% paginate search.results by 24 %}
-  <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
+  <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %}">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h1 class="h2 center">
+      {% comment %} <h1 class="h2 center">
         {%- if search.performed -%}
           {{- 'templates.search.title' | t -}}
         {%- else -%}
           {{- 'general.search.search' | t -}}
         {%- endif -%}
-      </h1>
+      </h1> {% endcomment %}
       <div class="template-search__search">
         {%- if settings.predictive_search_enabled -%}
           <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
@@ -141,197 +160,418 @@
           {%- endif -%}
         {%- endunless -%}
         {%- if search.results_count == 0 and search.filters == empty -%}
-          <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+          <p role="status" class="empty_txt">{{ 'templates.search.no_results' | t: terms: search.terms | newline_to_br }}</p>
         {%- endif -%}
       {%- endif -%}
     </div>
-    {%- if search.performed -%}
-      {%- if section.settings.enable_sorting
-        and section.settings.filter_type == 'vertical'
-        and search.filters != empty
-      -%}
-        <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
-          <form class="facets-vertical-form" id="FacetSortForm">
-            <div class="facet-filters sorting caption">
-              <div class="facet-filters__field">
-                <h2 class="facet-filters__label caption-large text-body">
-                  <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-                </h2>
-                <div class="select">
-                  {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
-                  <select
-                    name="sort_by"
-                    class="facet-filters__sort select__select caption-large"
-                    id="SortBy"
-                    aria-describedby="a11y-refresh-page-message"
-                  >
-                    {%- for option in search.sort_options -%}
-                      <option
-                        value="{{ option.value | escape }}"
-                        {% if option.value == sort_by %}
-                          selected="selected"
-                        {% endif %}
-                      >
-                        {{ option.name | escape }}
-                      </option>
-                    {%- endfor -%}
-                  </select>
-                  <span class="svg-wrapper">
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
-                  </span>
-                </div>
-              </div>
-            </div>
+	<div class="prdList_wrap">
+		{%- if search.performed -%}
+		<div class="product_searchdata_wrap product_searchdata_popup_wrap">
+			{%- if search.filters != empty -%}
+			{%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+				<aside
+				aria-labelledby="verticalTitle"
+				class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+				id="main-search-filters"
+				data-id="{{ section.id }}"
+				>
+				{% render 'facets',
+					results: search,
+					enable_filtering: section.settings.enable_filtering,
+					enable_sorting: section.settings.enable_sorting,
+					filter_type: section.settings.filter_type,
+					paginate: paginate
+				%}
+				</aside>
+			{%- endif -%}
+			{%- endif -%}
+		</div>
+		<div class="product_listnormal_wrap">			
+			{%- if search.results.size == 0 and search.filters != empty -%}
+				<div class="prd_menu_box">
+					<div class="left">
+						<div id="category" class="xans-layout xans-layout-category detail_category">
+							<button type="button" class="xans-product-headcategory cate_btn">
+								<span>
+									{%- if linklists['main-menu'].links.size > 0 -%}
+										{{ linklists['main-menu'].links.first.title }}
+									{%- else -%}
+										카테고리
+									{%- endif -%}
+								</span>
+								<i class="ph ph-caret-down arrow"></i>
+							</button>
 
-            <div class="product-count-vertical light" role="status">
-              <h2 class="product-count__text text-body">
-                <span id="ProductCountDesktop">
-                  {%- if search.results_count -%}
-                    {{ 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
-                  {%- elsif search.products_count == search.all_products_count -%}
-                    {{ 'products.facets.product_count_simple' | t: count: search.products_count }}
-                  {%- else -%}
-                    {{
-                      'products.facets.product_count'
-                      | t: product_count: search.products_count, count: search.all_products_count
-                    }}
-                  {%- endif -%}
-                </span>
-              </h2>
-              {%- render 'loading-spinner' -%}
-            </div>
-          </form>
-        </facet-filters-form>
-      {%- endif -%}
-      <div
-        {% if section.settings.filter_type == 'vertical' %}
-          class="facets-vertical page-width"
-        {% endif %}
-      >
-        {%- if search.filters != empty -%}
-          {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-            <aside
-              aria-labelledby="verticalTitle"
-              class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-              id="main-search-filters"
-              data-id="{{ section.id }}"
-            >
-              {% render 'facets',
-                results: search,
-                enable_filtering: section.settings.enable_filtering,
-                enable_sorting: section.settings.enable_sorting,
-                filter_type: section.settings.filter_type,
-                paginate: paginate
-              %}
-            </aside>
-          {%- endif -%}
-        {%- endif -%}
-        <div class="product-grid-container" id="ProductGridContainer">
-          {%- if search.results.size == 0 and search.filters != empty -%}
-            <div
-              class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-              id="product-grid"
-              data-id="{{ section.id }}"
-            >
-              <div class="loading-overlay gradient"></div>
-              <div class="title-wrapper center">
-                <h2 class="title title--primary">
-                  {{ 'sections.collection_template.empty' | t -}}
-                  <br>
-                  {{
-                    'sections.collection_template.use_fewer_filters_html'
-                    | t: link: search_url, class: 'underlined-link link'
-                  }}
-                </h2>
-              </div>
-            </div>
-          {%- else -%}
-            <div
-              class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-              id="product-grid"
-              data-id="{{ section.id }}"
-            >
-              <div class="loading-overlay gradient"></div>
-              <ul
-                class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
-                role="list"
-              >
-                {%- assign skip_card_product_styles = false -%}
-                {%- for item in search.results -%}
-                  {% assign lazy_load = false %}
-                  {%- if forloop.index > 2 -%}
-                    {%- assign lazy_load = true -%}
-                  {%- endif -%}
+							<div class="cate_popup">
+								<ul class="drop_menu">
+									{%- for link in linklists['main-menu'].links -%}
+										<li class="listitem {% if link.active or link.child_active %}selected{% endif %}">
+											<a href="{{ link.url }}">{{ link.title }}</a>
+										</li>
+									{%- endfor -%}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<facet-filters-form class="facets facets-vertical-sor sortingArea">
+							<form class="facets-vertical-form" id="FacetSortForm">
+								<div class="sort">
+									{%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
+									<select name="sort_by" id="SortBy" aria-describedby="a11y-refresh-page-message">
+										{%- for option in search.sort_options -%}
+											<option value="{{ option.value | escape }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+												{{ option.name | escape }}
+											</option>
+										{%- endfor -%}
+									</select>
+								</div>
+								<input type="hidden" name="q" value="{{ search.terms | escape }}">
+							</form>
+						</facet-filters-form>               
+					</div>
+				</div>
 
-                  <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                    {% endif %}
-                  >
-                    {%- case item.object_type -%}
-                      {%- when 'product' -%}
-                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                        {% render 'card-product',
-                          card_product: item,
-                          media_aspect_ratio: section.settings.image_ratio,
-                          image_shape: section.settings.image_shape,
-                          show_secondary_image: section.settings.show_secondary_image,
-                          show_vendor: section.settings.show_vendor,
-                          show_rating: section.settings.show_rating,
-                          lazy_load: lazy_load,
-                          skip_styles: skip_card_product_styles
-                        %}
-                        {%- assign skip_card_product_styles = true -%}
-                      {%- when 'article' -%}
-                        {% render 'article-card',
-                          article: item,
-                          show_image: true,
-                          show_date: section.settings.article_show_date,
-                          show_author: section.settings.article_show_author,
-                          show_badge: true,
-                          media_aspect_ratio: 1,
-                          lazy_load: lazy_load
-                        %}
-                      {%- when 'page' -%}
-                        <div class="article-card-wrapper card-wrapper underline-links-hover">
-                          <div
-                            class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
-                            style="--ratio-percent: 100%;"
-                          >
-                            <div class="card__content">
-                              <div class="card__information">
-                                <h3 class="card__heading">
-                                  <a href="{{ item.url }}" class="full-unstyled-link">
-                                    {{ item.title | truncate: 50 | escape }}
-                                  </a>
-                                </h3>
-                              </div>
-                              <div class="card__badge {{ settings.badge_position }}">
-                                <span class="badge color-{{ settings.color_schemes | first }}">
-                                  {{- 'templates.search.page' | t -}}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    {%- endcase -%}
-                  </li>
-                {%- endfor -%}
-              </ul>
-              {%- if paginate.pages > 1 -%}
-                {% render 'pagination', paginate: paginate %}
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-        </div>
-      </div>
-    {%- endif -%}
+				{%- liquid
+					assign active_filter_count = 0
+					for filter in search.filters
+						assign active_filter_count = active_filter_count | plus: filter.active_values.size
+						if filter.type == 'price_range'
+							if filter.min_value.value != blank or filter.max_value.value != blank
+								assign active_filter_count = active_filter_count | plus: 1
+							endif
+						endif
+					endfor
+				-%}
+				<div class="prd_top_box">
+					<div class="left">              
+						<div class="xans-product-searchdata pc_view">
+							<div class="xans-product-searchconditiondata">
+								<ul class="list">
+								{%- for filter in search.filters -%}
+									{%- for value in filter.active_values -%}
+									<li>
+										{%- assign label_handle = filter.label | downcase -%}
+										{%- if label_handle contains 'color' or label_handle contains '색상' -%}
+											{%- liquid
+												assign custom_color = value.value
+												assign color_label = value.label | downcase | strip
+												case color_label
+													when 'black' then assign custom_color = '#000000'
+													when 'green' then assign custom_color = '#2E7D32'
+													when 'yellow' then assign custom_color = '#FFD600'
+													when 'pink' then assign custom_color = '#FF6F91'
+													when 'brown' then assign custom_color = '#8B5A2B'
+													when 'gold' then assign custom_color = '#d3be4b'
+													when 'blue' then assign custom_color = '#1976D2'
+													when 'ivory' then assign custom_color = '#FFFFF0'
+													when 'charcoal' or 'chacoal' then assign custom_color = '#36454F'
+													when 'clear' then assign custom_color = 'rgba(255,255,255,0)'
+													when 'navy' then assign custom_color = '#0B3D91'
+													when 'wine' then assign custom_color = '#722F37'
+													when 'beige' then assign custom_color = '#F5F5DC'
+													when 'gray' or 'grey' then assign custom_color = '#808080'
+													when 'white' then assign custom_color = '#FFFFFF'
+													when 'grey & navy' then assign custom_color = 'linear-gradient(90deg, #808080 50%, #0B3D91 50%)'
+												endcase
+											-%}
+											<span class="icoColor" style="background: {{custom_color}};"></span>
+											{{ value.label }}
+										{%- elsif label_handle contains 'size' or label_handle contains '사이즈' -%}
+											Size : {{ value.label }}
+										{%- else -%}
+											{{ filter.label }}: {{ value.label }}
+										{%- endif -%}
+										<a href="{{ value.url_to_remove }}" class="btnSearchDelete">삭제</a>
+									</li>
+									{%- endfor -%}
+
+									{%- if filter.type == 'price_range' -%}
+										{%- if filter.min_value.value != blank or filter.max_value.value != blank -%}
+											<li>
+												Price : {{ filter.min_value.value | default: 0 | money }} - {{ filter.max_value.value | default: filter.range_max | money }}
+												<a href="{{ filter.url_to_remove }}" class="btnSearchDelete">삭제</a>
+											</li>
+										{%- endif -%}
+									{%- endif -%}
+								{%- endfor -%}
+								</ul>
+							</div>
+						</div>
+						
+						<button type="button" class="prd_sch_mob_button mob_view">
+							{{- 'ico_filter.svg' | inline_asset_content -}}
+							<span class="txt">Filter</span>
+							<span class="total">{{ search.results_count }} results</span>
+						</button>
+					</div>
+
+					<div class="right">
+						{%- if active_filter_count > 0 -%}
+						<div class="xans-product-searchdata pc_view reset_btnbox">
+							<div class="xans-product-searchconditiondata">
+								<a href="{{ routes.search_url }}?q={{ search.terms | escape }}&sort_by={{ search.sort_by | default: 'relevance' }}" class="btnRefresh ec-product-searchdata-reset"></a>
+							</div>
+						</div>
+						{%- endif -%}
+
+						<div class="sortingArea">
+							<div class="btnSorting eProductSort">
+								<button type="button" class="bigView selected">
+									{{- 'bigView.svg' | inline_asset_content -}}
+								</button>
+								<button type="button" class="smallView">
+									{{- 'smallView.svg' | inline_asset_content -}}
+								</button>
+							</div>
+						</div>
+					</div>            
+				</div>
+			{%- endif -%}
+			{% comment %} {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' and search.filters != empty
+			-%}
+				<facet-filters-form class="facets facets-vertical-sort page-width small-hide">
+					<form class="facets-vertical-form" id="FacetSortForm">
+						<div class="facet-filters sorting caption">
+						<div class="facet-filters__field">
+							<h2 class="facet-filters__label caption-large text-body">
+							<label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+							</h2>
+							<div class="select">
+							{%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
+							<select
+								name="sort_by"
+								class="facet-filters__sort select__select caption-large"
+								id="SortBy"
+								aria-describedby="a11y-refresh-page-message"
+							>
+								{%- for option in search.sort_options -%}
+								<option
+									value="{{ option.value | escape }}"
+									{% if option.value == sort_by %}
+									selected="selected"
+									{% endif %}
+								>
+									{{ option.name | escape }}
+								</option>
+								{%- endfor -%}
+							</select>
+							<span class="svg-wrapper">
+								{{- 'icon-caret.svg' | inline_asset_content -}}
+							</span>
+							</div>
+						</div>
+						</div>
+
+						<div class="product-count-vertical light" role="status">
+						<h2 class="product-count__text text-body">
+							<span id="ProductCountDesktop">
+							{%- if search.results_count -%}
+								{{ 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+							{%- elsif search.products_count == search.all_products_count -%}
+								{{ 'products.facets.product_count_simple' | t: count: search.products_count }}
+							{%- else -%}
+								{{
+								'products.facets.product_count'
+								| t: product_count: search.products_count, count: search.all_products_count
+								}}
+							{%- endif -%}
+							</span>
+						</h2>
+						{%- render 'loading-spinner' -%}
+						</div>
+					</form>
+				</facet-filters-form>
+			{%- endif -%} {% endcomment %}
+
+			<div class="product-grid-container" id="ProductGridContainer">
+			{%- if search.results.size == 0 and search.filters != empty -%}
+				<div
+				class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+				id="product-grid"
+				data-id="{{ section.id }}"
+				>
+				<div class="loading-overlay gradient"></div>
+					<div class="title-wrapper center">
+						<h2 class="title title--primary">
+						{{ 'sections.collection_template.empty' | t -}}
+						<br>
+						{{
+							'sections.collection_template.use_fewer_filters_html'
+							| t: link: search_url, class: 'underlined-link link'
+						}}
+						</h2>
+					</div>
+				</div>
+			{%- else -%}
+				<div
+				class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}" >
+					<div class="loading-overlay gradient"></div>
+					<ul class="thumbnail grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+						{%- for item in search.results -%}
+							{%- liquid
+								assign lazy_load = false
+								if forloop.index > 2
+									assign lazy_load = true
+								endif
+
+								assign current_item = item
+								assign ori_price = current_item.metafields.custom.ori_price | plus: 0
+								assign on_sale = false
+								assign discount_percent = 0
+								
+								if ori_price > current_item.price and current_item.object_type == 'product'
+									assign on_sale = true
+									assign diff = ori_price | minus: current_item.price
+									assign discount_percent = diff | times: 100 | divided_by: ori_price
+								endif
+								
+								assign sold_out = false
+								if current_item.object_type == 'product' and current_item.available == false
+									assign sold_out = true
+								endif
+							-%}
+
+							<li class="col col25 {% if on_sale %}sale{% endif %} {% if sold_out %}sold-out{% endif %}"
+								{% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}
+							>
+								<div class="thumbnail-image">
+									<a href="{{ current_item.url }}" class="noborder">
+										{%- if current_item.featured_image -%}
+											<img src="{{ current_item.featured_image | image_url: width: 600 }}" alt="{{ current_item.title | escape }}" class="thumb-img" loading="lazy">
+										{%- endif -%}
+									</a>
+								</div>
+
+								{%- if current_item.metafields.custom.iconlist.value != blank -%}
+								<div class="iconbox">
+									<div class="icons">
+										{%- for icon in current_item.metafields.custom.iconlist.value -%}
+											{%- if icon != blank -%}
+												<span><img src="{{ icon | image_url: width: 100 }}" alt="icon" /></span>
+											{%- endif -%}
+										{%- endfor -%}
+									</div>
+								</div>
+								{%- endif -%}
+
+								<div class="thumbnail-info">
+									<p class="name Pretendard"><a href="{{ current_item.url }}">{{ current_item.title }}</a></p>
+									
+									{%- if current_item.metafields.custom.simple_description != blank -%}
+										<p class="desc">{{ current_item.metafields.custom.simple_description | strip_html }}</p>
+									{%- elsif current_item.excerpt != blank -%}
+										<p class="desc">{{ current_item.excerpt | strip_html | truncatewords: 10 }}</p>
+									{%- endif -%}
+
+									{%- if current_item.object_type == 'product' -%}
+										<div class="price Pretendard {% if on_sale %}sale_on{% endif %}">
+											{%- if on_sale -%}
+												<div class="top_price">
+													<span style="text-decoration:line-through; opacity:0.35; margin-right:5px;" class="sale_price">{{ ori_price | money }}</span>
+													<span class="discount pro_rate">{{ discount_percent }}<span>% SALE</span></span>
+												</div>
+												<div>{{ current_item.price | money }}</div>
+											{%- else -%}
+												<div>{{ current_item.price | money }}</div>
+											{%- endif -%}
+										</div>
+									{%- endif -%}
+									
+									{%- if current_item.metafields.custom.count != blank -%}
+										<div class="custom_opt1">(Per set: {{ current_item.metafields.custom.count | strip_html }})</div>
+									{%- endif -%}
+
+									{%- if sold_out -%}
+										<div class="soldout Pretendard">Sold Out</div>
+									{%- endif -%}
+								</div>
+							</li>
+						{%- endfor -%}
+					</ul>
+					{%- if paginate.pages > 1 -%}
+						{% render 'pagination', paginate: paginate %}
+					{%- endif -%}
+				</div>
+			{%- endif -%}
+			</div>
+
+		</div>
+
+		{%- endif -%}
+  	</div>
   </div>
 {% endpaginate %}
 {% if section.settings.image_shape == 'arch' %}
   {{ 'mask-arch.svg' | inline_asset_content }}
 {%- endif -%}
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.prditem'); // 상품 목록
+    const tabContainers = document.querySelectorAll('.menu_category'); // 모든 탭 메뉴
+
+    // data-cate 값 추출 후 중복 제거 + 정렬
+    const categories = Array.from(items)
+        .flatMap(item => item.dataset.cate ? item.dataset.cate.split(',') : [])
+        .map(v => v.trim())
+        .filter((v, i, a) => v && a.indexOf(v) === i)
+        .sort((a, b) => a.localeCompare(b, 'ko'));
+
+    tabContainers.forEach(tabContainer => {
+        // 전체 탭 추가
+        const allTab = document.createElement('li');
+        allTab.className = 'tab_nav active';
+        allTab.textContent = 'Total';
+        tabContainer.appendChild(allTab);
+
+        // 카테고리 탭 추가
+        categories.forEach(cate => {
+            const li = document.createElement('li');
+            li.classList.add('tab_nav');
+            li.dataset.cate = cate;
+            li.textContent = cate;
+            tabContainer.appendChild(li);
+        });
+
+        // 클릭 이벤트
+        const tabs = tabContainer.querySelectorAll('.tab_nav');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const cate = tab.dataset.cate;
+                items.forEach(item => {
+                    const itemCates = item.dataset.cate ? item.dataset.cate.split(',').map(v => v.trim()) : [];
+                    if (!cate || cate === 'Total' || itemCates.includes(cate)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 초기 활성 탭에 맞춰 상품 표시
+        const activeCate = tabContainer.querySelector('.tab_nav.active').dataset.cate;
+        items.forEach(item => {
+            const itemCates = item.dataset.cate ? item.dataset.cate.split(',').map(v => v.trim()) : [];
+            if (!activeCate || activeCate === 'Total' || itemCates.includes(activeCate)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+document.querySelector(".detail_category .cate_btn").addEventListener("click", function() {
+	document.querySelector(".detail_category").classList.toggle("show");
+});
+</script>
+
 
 {% schema %}
 {
