@@ -1,4 +1,5 @@
 
+// 01 고학년결과지
 // 방사형 차트
 const radarChart = document.querySelectorAll('.radar_chart .graph');
 radarChart.forEach((chartCanvas) => {
@@ -175,14 +176,14 @@ lineChart2.forEach((chartCanvas) => {
 					label: '데이터',
 					data: scores,
 					borderColor: '#32baff',
-					borderWidth: 2.8,
+					borderWidth: 2,
 					pointBackgroundColor: '#fff',
-					pointRadius: 6,
-					pointBorderWidth: 2.8,
+					pointRadius: 4.5,
+					pointBorderWidth: 2,
 					pointHoverBackgroundColor: '#fff',
 					pointHoverBorderColor: '#32baff',
-					pointHoverRadius: 8,
-					pointHoverBorderWidth: 2.8,
+					pointHoverRadius: 4.5,
+					pointHoverBorderWidth: 2,
 					clip: false,
 				},
 			]
@@ -196,7 +197,7 @@ lineChart2.forEach((chartCanvas) => {
 					font: {
 						family: 'Pretendard',
 						weight: '700',
-						size: 13,
+						size: 12,
 					},
 					clip: false,
 					offset: function(context) {
@@ -206,12 +207,12 @@ lineChart2.forEach((chartCanvas) => {
 					anchor: function(context) {
 						const value = context.dataset.data[context.dataIndex];
 						if (value >= 95) return 'start';
-						return value <= 6 ? 'end' : (value <= 45 ? 'start' : 'end');
+						return value <= 6 ? 'end' : (value <= 47.25 ? 'start' : 'end');
 					},
 					align: function(context) {
 						const value = context.dataset.data[context.dataIndex];
 						if (value >= 95) return 'bottom';
-						return value <= 6 ? 'top' : (value <= 45 ? 'bottom' : 'top');
+						return value <= 6 ? 'top' : (value <= 47.25 ? 'bottom' : 'top');
 					},
 					formatter: function(value) {
 						return value;
@@ -225,11 +226,21 @@ lineChart2.forEach((chartCanvas) => {
 				x: {
 					offset: true,
 					ticks: {
+						callback: function(value, index) {
+                            const label = this.getLabelForValue(value);
+                            if (label.indexOf('\n') !== -1) {
+                                return label.split('\n'); 
+                            }
+                            return label;
+                        },
+						maxRotation: 0, 
+                        minRotation: 0,
+						autoSkip: false,
 						padding: 12,
 						font: {
 							family: 'Pretendard',
 							weight: '400',
-							size: 13,
+							size: 12,
 							color: '#7e7e7f',
 						},
 					},
@@ -245,7 +256,7 @@ lineChart2.forEach((chartCanvas) => {
 						font: {
 							family: 'Pretendard',
 							weight: '400',
-							size: 13,
+							size: 12,
 							color: '#7e7e7f',
 						},
 					},
@@ -702,12 +713,12 @@ barChart4.forEach((chartCanvas) => {
                         gradient.addColorStop(0, '#1475AD');
                         gradient.addColorStop(1, '#53C5FF');
                     } else { 
-                        gradient.addColorStop(0, '#FF6863');
-                        gradient.addColorStop(1, '#BC1914');
+                        gradient.addColorStop(0, '#BC1914');
+                        gradient.addColorStop(1, '#FF6863');
                     }
                     return gradient;
                 },
-                barThickness: 42,
+                barThickness: 30,
                 borderRadius: { topLeft: 8, topRight: 8, bottomLeft: 0, bottomRight: 0 },
                 borderSkipped: false
             }]
@@ -725,7 +736,7 @@ barChart4.forEach((chartCanvas) => {
                         const index = context.dataIndex;
                         return index === 0 ? '#5151fb' : index === 1 ? '#32baff' : '#e61f19';
                     },
-                    font: { family: 'Pretendard', weight: '700', size: 15 },
+                    font: { family: 'Pretendard', weight: '700', size: 13 },
                     formatter: (value) => value
                 }
             },
@@ -739,7 +750,7 @@ barChart4.forEach((chartCanvas) => {
                     ticks: {
                         padding: 8,
                         color: '#7e7e7f',
-						font: { family: 'Pretendard', weight: '400', size: 13 },
+						font: { family: 'Pretendard', weight: '400', size: 12 },
                     }
                 },
                 y: {
@@ -749,7 +760,7 @@ barChart4.forEach((chartCanvas) => {
                         stepSize: stepVal,
                         padding: 8,
                         color: '#7e7e7f',
-						font: { family: 'Pretendard', weight: '400', size: 13 },
+						font: { family: 'Pretendard', weight: '400', size: 12 },
                     },
                     grid: { color: '#e5e8ec', drawTicks: false },
                     border: { display: false }
@@ -794,7 +805,7 @@ barChart5.forEach((chartCanvas) => {
                     }
                     return gradient;
                 },
-                barThickness: 80,
+                barThickness: 30,
                 borderRadius: { topLeft: 8, topRight: 8, bottomLeft: 0, bottomRight: 0 },
                 borderSkipped: false
             }]
@@ -809,21 +820,31 @@ barChart5.forEach((chartCanvas) => {
                     align: 'top',
                     offset: 8,					
                     color: (context) => context.dataIndex === pointIndex ? '#e61f19' : '#32BAFF',
-                    font: { family: 'Pretendard', weight: '800', size: 14 },
+                    font: { family: 'Pretendard', weight: '800', size: 13 },
                     formatter: (value) => value + '%'
                 }
             },
             layout: {
-                padding: { top: 0, left: -10, right: 0, bottom: -8 }
+                padding: { top: 0, left: -10, right: 0, bottom: -4 }
             },
             scales: {
                 x: {
                     grid: { display: false },
                     border: { display: true, color: '#e5e8ec' },
                     ticks: {
-                        padding: 8,
+						callback: function(value, index) {
+                            const label = this.getLabelForValue(value);
+                            if (label.indexOf('\n') !== -1) {
+                                return label.split('\n'); 
+                            }
+                            return label;
+                        },
+                        padding: 4,
                         color: '#7e7e7f',
-						font: { family: 'Pretendard', weight: '400', size: 13 },
+						font: { family: 'Pretendard', weight: '400', size: 12 },
+						maxRotation: 0, 
+                        minRotation: 0,
+						autoSkip: false,
                     }
                 },
                 y: {
@@ -833,7 +854,7 @@ barChart5.forEach((chartCanvas) => {
                         stepSize: 20,
                         padding: 10,
                         color: '#7e7e7f',
-						font: { family: 'Pretendard', weight: '400', size: 13 },
+						font: { family: 'Pretendard', weight: '400', size: 12 },
                         callback: function(value) {
                             return value + '%';
                         }
@@ -881,7 +902,7 @@ barChart6.forEach((chartCanvas) => {
                         ctx.strokeStyle = '#4a4a4a';
                         ctx.lineWidth = 1;
                         ctx.moveTo(centerX, y);
-                        ctx.lineTo(centerX, y - 15);
+                        ctx.lineTo(centerX, y - 10);
                         ctx.stroke();
                         ctx.restore();
                     }
@@ -897,10 +918,10 @@ barChart6.forEach((chartCanvas) => {
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(flagX, flagTopY);
-                ctx.lineTo(flagX, flagTopY - 36);
+                ctx.lineTo(flagX, flagTopY - 32);
                 ctx.stroke();
                 ctx.beginPath();
-                ctx.rect(flagX, flagTopY - 36, 32, 24);
+                ctx.rect(flagX, flagTopY - 32, 16, 14);
                 ctx.fill();
                 ctx.stroke();
                 ctx.restore();
@@ -926,21 +947,21 @@ barChart6.forEach((chartCanvas) => {
                 datalabels: {
                     display: (context) => context.dataset.data[0] > 0,
                     align: (context) => context.dataset.data[0] <= 5 ? 'top' : 'center',
-                    offset: (context) => context.dataset.data[0] <= 5 ? 32 : 0,
+                    offset: (context) => context.dataset.data[0] <= 5 ? 24 : 0,
                     color: (context) => context.dataset.data[0] <= 5 ? '#4a4a4a' : '#ffffff',
-                    font: { family: 'Pretendard', weight: '800', size: 14 },
+                    font: { family: 'Pretendard', weight: '800', size: 12 },
                     formatter: (value) => value + '%',
 					textAlign: 'right'
                 }
             },
             layout: {
-                padding: { top: 0, left: 0, right: 14, bottom: 1 }
+                padding: { top: 0, left: -10, right: 10, bottom: 1 }
             },
             scales: {
                 x: {
                     stacked: true,
                     beginAtZero: true,
-                    max: totalScore,
+					max : totalScore,
                     grid: {
                         display: true,
                         color: '#e5e8ec',
@@ -948,7 +969,11 @@ barChart6.forEach((chartCanvas) => {
                         lineWidth: 1,
                         z: -1
                     },
-                    ticks: { display: false },
+					ticks: { 
+						display: false,
+						stepSize: totalScore / 10,
+						autoSkip: false
+					},
                     border: { 
                         display: true,
                         color: '#e5e8ec'
@@ -1121,12 +1146,29 @@ bubbleChart.forEach((chartCanvas) => {
 });
 
 // 도넛 차트 (색상 순서만 다름)
+function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+    const chars = text.split('');
+    let line = '';
+    let testY = y;
+
+    for (let n = 0; n < chars.length; n++) {
+        let testLine = line + chars[n];
+        let metrics = ctx.measureText(testLine);
+        if (metrics.width > maxWidth && n > 0) {
+            ctx.fillText(line, x, testY);
+            line = chars[n];
+            testY += lineHeight;
+        } else {
+            line = testLine;
+        }
+    }
+    ctx.fillText(line, x, testY);
+    return testY + lineHeight; 
+}
 const doughnutChart = document.querySelectorAll('.doughnut_chart .graph');
 doughnutChart.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]').reverse();
     const scores = JSON.parse(chartCanvas.dataset.scores || '[]').reverse();
-   	const pointIdx = chartCanvas.dataset.point !== undefined ? parseInt(chartCanvas.dataset.point) : null;
-    const isVer2 = chartCanvas.classList.contains('ver2'); 
     const ctx = chartCanvas.getContext('2d');
 
     new Chart(ctx, {
@@ -1135,7 +1177,7 @@ doughnutChart.forEach((chartCanvas) => {
             labels: labels,
             datasets: [{
                 data: scores,
-                backgroundColor: ['#32baff', '#e61f19', '#bf1b21', '#75171b','#430c0f'],
+                backgroundColor: ['#32baff', '#e61f19', '#bf1b21', '#75171b', '#430c0f'],
                 borderWidth: 0,
             }]
         },
@@ -1148,17 +1190,18 @@ doughnutChart.forEach((chartCanvas) => {
                 datalabels: { display: false }
             },
             layout: {
-                padding: { top: 40, bottom: 30, left: 160, right: 160 }
+                padding: { top: 40, bottom: 30, left: 70, right: 70 }
             }
         },
         plugins: [{
             afterDraw: (chart) => {
                 const { ctx } = chart;
                 chart.data.datasets.forEach((dataset, i) => {
-                    chart.getDatasetMeta(i).data.forEach((datapoint, index) => {
-                        if (!scores[index] || scores[index] === 0) return;
+                    const meta = chart.getDatasetMeta(i);
+                    const items = [];
 
-                        const isPoint = (pointIdx !== null && index === (labels.length - 1 - pointIdx));
+                    meta.data.forEach((datapoint, index) => {
+                        if (!scores[index] || scores[index] === 0) return;
 
                         const view = datapoint;
                         const midpoint_angle = view.startAngle + (view.endAngle - view.startAngle) / 2;
@@ -1168,39 +1211,85 @@ doughnutChart.forEach((chartCanvas) => {
 
                         const startX = view.x + cos * d;
                         const startY = view.y + sin * d;
-                        
-                        const lineLength = 60; 
-                        const endX = cos >= 0 ? startX + lineLength : startX - lineLength;
-                        const endY = startY; 
 
+                        const diagLength = 16;
+                        const midX = startX + cos * diagLength;
+                        const midY = startY + sin * diagLength;
+                        const isRight = cos >= 0;
+
+                        items.push({
+                            index, startX, startY, midX, midY,
+                            endY: midY, 
+                            isRight, cos, sin,
+                            scoreText: `${scores[index]}%`,
+                            labelText: labels[index] 
+                        });
+                    });
+					
+                    const minGap = 30; 
+                    ['right', 'left'].forEach(side => {
+                        const sideItems = items
+                            .filter(it => it.isRight === (side === 'right'))
+                            .sort((a, b) => a.endY - b.endY);
+
+                        if (sideItems.length > 0) {
+                            for (let move = 0; move < 10; move++) {
+                                for (let j = 1; j < sideItems.length; j++) {
+                                    const prev = sideItems[j - 1];
+                                    const curr = sideItems[j];
+                                    if (curr.endY - prev.endY < minGap) {
+                                        const overlap = minGap - (curr.endY - prev.endY);
+                                        curr.endY += overlap / 2;
+                                        prev.endY -= overlap / 2;
+                                    }
+                                }
+                            }
+                        }
+                    });
+
+                    items.forEach(it => {
+                        const { startX, startY, midX, isRight, scoreText, labelText, endY } = it;
+                        const horizLength = 10;
+                        const endX = isRight ? midX + horizLength : midX - horizLength;
+
+                        // 점 그리기
+                        ctx.beginPath();
+                        ctx.arc(startX, startY, 2.5, 0, Math.PI * 2);
+                        ctx.fillStyle = '#231916';
+                        ctx.fill();
+
+                        // 지시선 그리기
                         ctx.beginPath();
                         ctx.moveTo(startX, startY);
+                        ctx.lineTo(midX, endY); 
                         ctx.lineTo(endX, endY);
                         ctx.strokeStyle = '#231916';
                         ctx.lineWidth = 1;
                         ctx.stroke();
+						
+                        ctx.textAlign = isRight ? 'left' : 'right';
+                        const textX = isRight ? endX + 6 : endX - 6;
+						
+                        ctx.font = '800 12px Pretendard';
+                        ctx.fillStyle = '#231916';
+                        ctx.textBaseline = 'bottom';
+                        ctx.fillText(scoreText, textX, endY - 2);
 
-                        const isRight = endX >= view.x;
-                        ctx.textBaseline = 'middle';
+                        ctx.font = '400 10px Pretendard';
+						ctx.letterSpacing = '-0.1em';
+                        ctx.fillStyle = '#4a4a4a';
+                        ctx.textBaseline = 'top';
                         
-                        const scoreText = `${scores[index]}%`;
-                        const labelText = ` (${labels[index]})`;
+                        const maxWidth = 100; // 한 줄 최대 너비
+                        const lineHeight = 15; // 줄 간격
+						
+                        const lines = labelText.split('\n');
+                        let currentY = endY + 2;
 
-                        ctx.font = '800 16px Pretendard';
-                        const scoreWidth = ctx.measureText(scoreText).width;
-                        ctx.font = '400 14px Pretendard';
-                        const labelWidth = ctx.measureText(labelText).width;
-                        
-                        let startTextX = isRight ? endX + 8 : endX - 8 - (scoreWidth + labelWidth);
-                        ctx.textAlign = 'left'; 
-                        
-                        ctx.fillStyle = isPoint ? '#e61f19' : '#4a4a4a';
-                        ctx.font = '800 16px Pretendard';
-                        ctx.fillText(scoreText, startTextX, endY);
-                        
-                        ctx.fillStyle = (isVer2 && isPoint) ? '#e61f19' : '#4a4a4a';
-                        ctx.font = (isVer2 && isPoint) ? '700 14px Pretendard' : '400 14px Pretendard';
-                        ctx.fillText(labelText, startTextX + scoreWidth, endY);
+                        lines.forEach(lineStr => {
+                            const cleanLine = lineStr.trim();
+                           currentY = wrapText(ctx, lineStr.trim(), textX, currentY, maxWidth, lineHeight);
+                        });
                     });
                 });
             }
@@ -1213,11 +1302,9 @@ const doughnutChart2 = document.querySelectorAll('.doughnut_chart2 .graph');
 doughnutChart2.forEach((chartCanvas) => {
     const labels = JSON.parse(chartCanvas.dataset.labels || '[]').reverse();
     const scores = JSON.parse(chartCanvas.dataset.scores || '[]').reverse();
-   	const pointIdx = chartCanvas.dataset.point !== undefined ? parseInt(chartCanvas.dataset.point) : null;
-    const isVer2 = chartCanvas.classList.contains('ver2'); 
     const ctx = chartCanvas.getContext('2d');
 
-    new Chart(ctx, {
+     new Chart(ctx, {
         type: 'doughnut',
         data: {
             labels: labels,
@@ -1236,17 +1323,18 @@ doughnutChart2.forEach((chartCanvas) => {
                 datalabels: { display: false }
             },
             layout: {
-                padding: { top: 40, bottom: 30, left: 160, right: 160 }
+                padding: { top: 40, bottom: 30, left: 70, right: 70 }
             }
         },
         plugins: [{
             afterDraw: (chart) => {
                 const { ctx } = chart;
                 chart.data.datasets.forEach((dataset, i) => {
-                    chart.getDatasetMeta(i).data.forEach((datapoint, index) => {
-                        if (!scores[index] || scores[index] === 0) return;
+                    const meta = chart.getDatasetMeta(i);
+                    const items = [];
 
-                        const isPoint = (pointIdx !== null && index === (labels.length - 1 - pointIdx));
+                    meta.data.forEach((datapoint, index) => {
+                        if (!scores[index] || scores[index] === 0) return;
 
                         const view = datapoint;
                         const midpoint_angle = view.startAngle + (view.endAngle - view.startAngle) / 2;
@@ -1256,42 +1344,784 @@ doughnutChart2.forEach((chartCanvas) => {
 
                         const startX = view.x + cos * d;
                         const startY = view.y + sin * d;
-                        
-                        const lineLength = 60; 
-                        const endX = cos >= 0 ? startX + lineLength : startX - lineLength;
-                        const endY = startY; 
 
+                        const diagLength = 16;
+                        const midX = startX + cos * diagLength;
+                        const midY = startY + sin * diagLength;
+                        const isRight = cos >= 0;
+
+                        items.push({
+                            index, startX, startY, midX, midY,
+                            endY: midY, 
+                            isRight, cos, sin,
+                            scoreText: `${scores[index]}%`,
+                            labelText: labels[index] 
+                        });
+                    });
+					
+                    const minGap = 30; 
+                    ['right', 'left'].forEach(side => {
+                        const sideItems = items
+                            .filter(it => it.isRight === (side === 'right'))
+                            .sort((a, b) => a.endY - b.endY);
+
+                        if (sideItems.length > 0) {
+                            for (let move = 0; move < 10; move++) {
+                                for (let j = 1; j < sideItems.length; j++) {
+                                    const prev = sideItems[j - 1];
+                                    const curr = sideItems[j];
+                                    if (curr.endY - prev.endY < minGap) {
+                                        const overlap = minGap - (curr.endY - prev.endY);
+                                        curr.endY += overlap / 2;
+                                        prev.endY -= overlap / 2;
+                                    }
+                                }
+                            }
+                        }
+                    });
+
+                    items.forEach(it => {
+                        const { startX, startY, midX, isRight, scoreText, labelText, endY } = it;
+                        const horizLength = 10;
+                        const endX = isRight ? midX + horizLength : midX - horizLength;
+
+                        // 점 그리기
+                        ctx.beginPath();
+                        ctx.arc(startX, startY, 2.5, 0, Math.PI * 2);
+                        ctx.fillStyle = '#231916';
+                        ctx.fill();
+
+                        // 지시선 그리기
                         ctx.beginPath();
                         ctx.moveTo(startX, startY);
+                        ctx.lineTo(midX, endY); 
                         ctx.lineTo(endX, endY);
                         ctx.strokeStyle = '#231916';
                         ctx.lineWidth = 1;
                         ctx.stroke();
+						
+                        ctx.textAlign = isRight ? 'left' : 'right';
+                        const textX = isRight ? endX + 6 : endX - 6;
+						
+                        ctx.font = '800 12px Pretendard';
+                        ctx.fillStyle = '#231916';
+                        ctx.textBaseline = 'bottom';
+                        ctx.fillText(scoreText, textX, endY - 2);
 
-                        const isRight = endX >= view.x;
-                        ctx.textBaseline = 'middle';
+                        ctx.font = '400 10px Pretendard';
+						ctx.letterSpacing = '-0.1em';
+                        ctx.fillStyle = '#4a4a4a';
+                        ctx.textBaseline = 'top';
                         
-                        const scoreText = `${scores[index]}%`;
-                        const labelText = ` (${labels[index]})`;
+                        const maxWidth = 100; // 한 줄 최대 너비
+                        const lineHeight = 15; // 줄 간격
+						
+                        const lines = labelText.split('\n');
+                        let currentY = endY + 2;
 
-                        ctx.font = '800 16px Pretendard';
-                        const scoreWidth = ctx.measureText(scoreText).width;
-                        ctx.font = '400 14px Pretendard';
-                        const labelWidth = ctx.measureText(labelText).width;
-                        
-                        let startTextX = isRight ? endX + 8 : endX - 8 - (scoreWidth + labelWidth);
-                        ctx.textAlign = 'left'; 
-                        
-                        ctx.fillStyle = isPoint ? '#e61f19' : '#4a4a4a';
-                        ctx.font = '800 16px Pretendard';
-                        ctx.fillText(scoreText, startTextX, endY);
-                        
-                        ctx.fillStyle = (isVer2 && isPoint) ? '#e61f19' : '#4a4a4a';
-                        ctx.font = (isVer2 && isPoint) ? '700 14px Pretendard' : '400 14px Pretendard';
-                        ctx.fillText(labelText, startTextX + scoreWidth, endY);
+                        lines.forEach(lineStr => {
+                            const cleanLine = lineStr.trim();
+                           currentY = wrapText(ctx, lineStr.trim(), textX, currentY, maxWidth, lineHeight);
+                        });
                     });
                 });
             }
         }]
     });
+});
+
+
+
+// 02 저저학년결과지 & AUS결과지
+// 세로 막대형 차트 (그룹형 멀티)
+const bar2chart1 = document.querySelectorAll('.bar2_chart1 .graph');
+bar2chart1.forEach((chartCanvas) => {
+    const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
+    const barCtx = chartCanvas.getContext('2d');
+
+    const rawScores = [];
+    for (let i = 1; i <= labels.length; i++) {
+        const scoreKey = `scores${i}`;
+        if (chartCanvas.dataset[scoreKey]) {
+            rawScores.push(JSON.parse(chartCanvas.dataset[scoreKey]));
+        }
+    }
+
+    const colors = [
+        { start: '#282785', end: '#5353FF', label: '#5151fb' },
+        { start: '#1475AD', end: '#53C5FF', label: '#32baff' },
+        { start: '#BC1914', end: '#FF6863', label: '#FF6863' }
+    ];
+
+    const datasets = [0, 1, 2].map(i => ({
+        data: rawScores.map(score => score[i]), 
+        backgroundColor: function(context) {
+            const {ctx, chartArea, scales: {x}} = context.chart;
+            if (!chartArea) return null;
+            const val = context.parsed.x;
+            const xLeft = x.getPixelForValue(0);
+            const xRight = x.getPixelForValue(val);
+			
+            const gradient = ctx.createLinearGradient(xLeft, 0, xRight, 0);
+            gradient.addColorStop(0, colors[i].start);
+            gradient.addColorStop(1, colors[i].end);
+            return gradient;
+        },
+        barThickness: 18, 
+        borderRadius: { topLeft: 0, topRight: 8, bottomLeft: 0, bottomRight: 8 }, 
+        borderSkipped: false
+    }));
+
+    new Chart(barCtx, {
+        type: 'bar',
+        plugins: [ChartDataLabels],
+        data: {
+            labels: labels,
+            datasets: datasets,
+        },
+        options: {
+            indexAxis: 'y', 
+            responsive: false,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                datalabels: {
+                    anchor: 'end',
+                    align: 'right',
+                    offset: 5,
+                    color: function(context) {
+                        return colors[context.datasetIndex].label;
+                    },
+                    font: { family: 'Pretendard', weight: '800', size: 12 },
+                }
+            },
+            layout: {
+                padding: { top: 0, left: 0, right: 0, bottom: -8 }
+            },
+            scales: {
+                x: {
+                    max: 100,
+                    beginAtZero: true,
+                    grid: { display: true, drawTicks: false },
+                    border: { display: true, color: '#d8dadd' },
+                    ticks: {
+                        stepSize: 20,
+                        padding: 8,
+                        color: '#7e7e7f',
+                        font: { family: 'Pretendard', size: 12 },
+                        callback: (value) => value + '%'
+                    }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: {
+						callback: function(value, index) {
+                            const label = this.getLabelForValue(value);
+                            if (label.indexOf('\n') !== -1) {
+                                return label.split('\n'); 
+                            }
+                            return label;
+                        },
+                    afterFit: function(axis) {
+                        axis.width = axis.chart.width * 0.8;
+                    },
+                        padding: 4,
+                        color: '#7e7e7f',
+                        font: { family: 'Pretendard', size: 12 }
+                    }
+                }
+            }
+        }
+    });
+});
+
+// 세로 막대형 차트 (단일)
+const bar2chart2 = document.querySelectorAll('.bar2_chart2 .graph');
+bar2chart2.forEach((chartCanvas) => {
+    const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
+    const scores = JSON.parse(chartCanvas.dataset.scores || '[]');
+	const maxVal = parseFloat(chartCanvas.dataset.max);
+    const stepVal = parseFloat(chartCanvas.dataset.step);
+    const barCtx = chartCanvas.getContext('2d');
+
+    new Chart(barCtx, {
+        type: 'bar',
+        plugins: [ChartDataLabels],
+        data: {
+            labels: labels,
+            datasets: [{
+                data: scores,
+                backgroundColor: function(context) {
+                    const {ctx, chartArea, scales: {y}} = context.chart;
+                    if (!chartArea) return null;
+
+                    const index = context.dataIndex;
+                    const val = context.parsed.y;
+                    const yTop = y.getPixelForValue(val);
+                    const yBottom = y.getPixelForValue(0);
+                    const gradient = ctx.createLinearGradient(0, yBottom, 0, yTop);
+
+                    if (index === 0) { 
+                        gradient.addColorStop(0, '#282785');
+                        gradient.addColorStop(1, '#5353FF');
+                    } else if (index === 1) { 
+                        gradient.addColorStop(0, '#1475AD');
+                        gradient.addColorStop(1, '#53C5FF');
+                    } else { 
+                        gradient.addColorStop(0, '#BC1914');
+                        gradient.addColorStop(1, '#FF6863');
+                    }
+                    return gradient;
+                },
+                barThickness: 32,
+                borderRadius: { topLeft: 8, topRight: 8, bottomLeft: 0, bottomRight: 0 },
+                borderSkipped: false
+            }]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                datalabels: {
+                    anchor: 'end',
+                    align: 'top',
+                    offset: 5,
+                    color: function(context) {
+                        const index = context.dataIndex;
+                        return index === 0 ? '#5151fb' : index === 1 ? '#32baff' : '#e61f19';
+                    },
+                    font: { family: 'Pretendard', weight: '700', size: 13 },
+                    formatter: (value) => value
+                }
+            },
+            layout: {
+                padding: { top: 0, left: -5, right: 0, bottom: -8 }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    border: { display: true, color: '#e5e8ec' },
+                    ticks: {
+                        padding: 8,
+                        color: '#7e7e7f',
+						font: { family: 'Pretendard', weight: '400', size: 12 },
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    max: maxVal,
+                    ticks: {
+                        stepSize: stepVal,
+                        padding: 8,
+                        color: '#7e7e7f',
+						font: { family: 'Pretendard', weight: '400', size: 12 },
+                    },
+                    grid: { color: '#e5e8ec', drawTicks: false },
+                    border: { display: false }
+                }
+            }
+        }
+    });
+});
+
+// 세로 막대형 차트 (포인트)
+// data-point="인덱스번호" 값에 해당하는 막대를 빨간색으로 표시
+// data-blue="인덱스번호" 값에 해당하는 막대 값을 파란색으로 표시
+// data-red="인덱스번호" 값에 해당하는 막대 값을 빨간색으로 표시
+const bar2Chart3 = document.querySelectorAll('.bar2_chart3 .graph');
+bar2Chart3.forEach((chartCanvas) => {
+    const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
+    const scores = JSON.parse(chartCanvas.dataset.scores || '[]');	
+    const pointIndex = parseInt(chartCanvas.dataset.point);    
+    const blueIndex = parseInt(chartCanvas.dataset.blue);    
+    const redIndex = parseInt(chartCanvas.dataset.red);    
+    const barCtx = chartCanvas.getContext('2d');
+	
+    new Chart(barCtx, {
+        type: 'bar',
+        plugins: [ChartDataLabels],
+        data: {
+            labels: labels,
+            datasets: [{
+                data: scores,
+                backgroundColor: function(context) {
+                    const {ctx, chartArea, scales: {y}} = context.chart;
+                    if (!chartArea) return null;
+
+                    const index = context.dataIndex;
+                    const val = context.parsed.y;
+                    const yTop = y.getPixelForValue(val);
+                    const yBottom = y.getPixelForValue(0);
+                    const gradient = ctx.createLinearGradient(0, yBottom, 0, yTop);
+
+                    if (index === pointIndex) {
+                        gradient.addColorStop(0, '#BC1914'); 
+                        gradient.addColorStop(1, '#FF6863');
+                    } else {
+                        gradient.addColorStop(0, '#1475AD'); 
+                        gradient.addColorStop(1, '#53C5FF'); 
+                    }
+                    return gradient;
+                },
+                barThickness: 32,
+                borderRadius: { topLeft: 8, topRight: 8, bottomLeft: 0, bottomRight: 0 },
+                borderSkipped: false
+            }]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                datalabels: {
+                    anchor: 'end',
+                    align: 'top',
+                    offset: 8,					
+                    color: (context) => {
+						const index = context.dataIndex;
+						if (index === redIndex) return '#e61f19';  
+						if (index === blueIndex) return '#32baff'; 
+						return '#747983'; 
+					},
+                    font: { family: 'Pretendard', weight: '800', size: 13 },
+                    formatter: (value) => value + '%'
+                }
+            },
+            layout: {
+                padding: { top: 0, left: -8, right: 0, bottom: -8 }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    border: { display: true, color: '#e5e8ec' },
+                    ticks: {
+                        padding: 8,
+                        color: '#7e7e7f',
+						font: { family: 'Pretendard', weight: '400', size: 12 },
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 20,
+                        padding: 8,
+                        color: '#7e7e7f',
+						font: { family: 'Pretendard', weight: '400', size: 12 },
+                        callback: function(value) {
+                            return value + '%';
+                        }
+                    },
+                    grid: { color: '#e5e8ec', drawTicks: false },
+                    border: { display: false }
+                }
+            }
+        }
+    });
+});
+
+// 가로 막대형 차트 
+const bar2Chart4 = document.querySelectorAll('.bar2_chart4 .graph');
+bar2Chart4.forEach((chartCanvas) => {
+	const rawLabels = JSON.parse(chartCanvas.dataset.labels || '[]');
+    const labels = rawLabels.map(label => label.split('\n'));
+    const scores = JSON.parse(chartCanvas.dataset.scores || '[]');
+    const barCtx = chartCanvas.getContext('2d');
+
+    new Chart(barCtx, {
+		type: 'bar',
+		plugins: [
+			ChartDataLabels,
+			{
+			beforeDraw: (chart) => {
+				const {ctx, scales: {y}} = chart;
+				ctx.save();
+				ctx.textAlign = 'right';
+				ctx.textBaseline = 'middle';
+				ctx.font = '400 13px Pretendard';
+				ctx.fillStyle = '#7e7e7f';
+
+				y.ticks.forEach((tick, index) => {
+					const label = y.getLabelForValue(tick.value);
+					const xPos = y.width; 
+					const yPos = y.getPixelForTick(index);
+					
+					if (Array.isArray(label)) {
+						label.forEach((line, i) => {
+							ctx.fillText(line, xPos - 10, yPos + (i - (label.length - 1) / 2) * 15);
+						});
+					} else {
+						ctx.fillText(label, xPos - 10, yPos);
+					}
+				});
+				ctx.restore();
+			}
+			}, {
+				id: 'hideOriginalTicks',
+				afterUpdate: (chart) => {
+					chart.scales.y.options.ticks.display = false;
+				}
+			}
+		],
+		data: {
+			labels: labels,
+			datasets: [{
+				data: scores,
+				backgroundColor: function(context) {
+					const chart = context.chart;
+					const {ctx, chartArea, scales} = chart;
+					if (!chartArea) return null;
+					const x = scales.x;
+					const value = context.dataset.data[context.dataIndex];
+					const barEndX = x.getPixelForValue(value);
+					const barStartX = x.getPixelForValue(0);
+					const gradient = ctx.createLinearGradient(barStartX, 0, barEndX, 0);
+					gradient.addColorStop(0, '#149de3');
+					gradient.addColorStop(1, '#53c5ff');
+					return gradient;
+				},
+				borderRadius: { topLeft: 0, topRight: 8, bottomLeft: 0, bottomRight: 8 },
+				borderSkipped: false,
+				barThickness: 15
+			}]
+		},
+		options: {
+			indexAxis: 'y',
+			responsive: true,
+			maintainAspectRatio: false,
+			plugins: {
+            	legend: { display: false },
+				datalabels: {
+					formatter: function(value) {
+						return parseFloat(value).toFixed(2);
+					},
+					anchor: 'end',
+					align: (context) => context.dataset.data[context.dataIndex] >= 90 ? 'left' : 'right',
+					offset: (context) => context.dataset.data[context.dataIndex] >= 90 ? 5 : 5,
+					color: (context) => context.dataset.data[context.dataIndex] >= 90 ? '#ffffff' : '#32baff',
+					font: { family: 'Pretendard', weight: '700', size: 13 }
+				}
+			},
+			layout: {
+				 padding: { top:0, left:0, right: 0, bottom:-8, } 
+			},
+			scales: {
+				x: {
+					max: 100,
+					beginAtZero: true,
+					grid: {  display: true, drawTicks: false  },
+					border: { 
+						display: true, 
+						color: '#d8dadd'
+					},
+					ticks: { 
+						stepSize: 20,
+						padding: 8,
+						font: { family: 'Pretendard', weight: '400', size: 12 },
+						color: '#7e7e7f',
+					}
+				},
+				y: {
+					grid: { display: false },
+					afterFit: function(axis) {
+						axis.width = axis.chart.width * 0.28;
+					},
+					border: { display: false },
+					ticks: {
+						crossAlign: 'far', 
+						textAlign: 'right',
+						align: 'center', 
+						padding: 8,
+						font: { family: 'Pretendard', weight: '400', size: 12 },
+						color: '#7e7e7f',
+					}
+				}
+			},
+		},
+	});
+});
+
+// 산점도 차트 
+const lineGuidePlugin = {
+    id: 'lineGuide',
+    afterDraw: (chart) => {
+        const { ctx, scales: { x, y } } = chart;
+        ctx.save();
+        
+        ctx.fillStyle = '#7e7e7f';
+        ctx.font = '400 12px Pretendard';
+        ctx.textAlign = 'right';
+		
+        ctx.fillText('990', x.left - 12, y.top + 8); 
+        ctx.fillText('(토익)', x.left - 10, y.top + 24); 
+        
+        ctx.textAlign = 'left';
+        ctx.fillText('(학점)', x.right - 18, y.bottom + 40);
+
+        chart.data.datasets.forEach((dataset, i) => {
+            const meta = chart.getDatasetMeta(i);
+            meta.data.forEach((point) => {
+                const { x: pixelX, y: pixelY } = point;
+                const radius = 8;
+
+                ctx.strokeStyle = dataset.borderColor;
+                ctx.lineWidth = 1.5;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(pixelX, pixelY); ctx.lineTo(x.left, pixelY); ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(pixelX, pixelY); ctx.lineTo(pixelX, y.bottom); ctx.stroke();
+                ctx.setLineDash([]);
+
+                const grad = ctx.createLinearGradient(pixelX, pixelY - radius, pixelX, pixelY + radius);
+                if (i === 0) {
+                    grad.addColorStop(0, '#ff6863');
+                    grad.addColorStop(1, '#bc1914');
+                } else {
+                    grad.addColorStop(0, '#53c5ff');
+                    grad.addColorStop(1, '#149de3');
+                }
+
+                ctx.beginPath();
+                ctx.arc(pixelX, pixelY, radius, 0, Math.PI * 2);
+                ctx.fillStyle = grad;
+                ctx.fill();
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+            });
+        });
+        ctx.restore();
+    }
+};
+const scatter2Chart = document.querySelectorAll('.scatter2_chart .graph');
+scatter2Chart.forEach((chartCanvas) => {
+    const scatterCtx = chartCanvas.getContext('2d');
+    const p1 = JSON.parse(chartCanvas.dataset.point1 || '{"x":0, "y":0}');
+    const p2 = JSON.parse(chartCanvas.dataset.point2 || '{"x":0, "y":0}');
+    const xLabels = ['0', '3.0', '3.5', '4.0', '4.5'];
+    
+    const getXPixelPos = (val) => {
+        if (val <= 0) return 0;
+        if (val <= 3.0) return (val / 3.0); 
+        if (val <= 4.5) return 1 + ((val - 3.0) / 0.5); 
+        return 4;
+    };
+
+    new Chart(scatterCtx, {
+        type: 'scatter',
+        plugins: [lineGuidePlugin],
+        data: {
+            datasets: [
+                { data: [{ x: getXPixelPos(p1.x), y: p1.y }], borderColor: '#bc1914', pointRadius: 0 },
+                { data: [{ x: getXPixelPos(p2.x), y: p2.y }], borderColor: '#149de3', pointRadius: 0 }
+            ]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            layout: { 
+                padding: { top: 0, left: 0, right: 0, bottom: 6 } 
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    min: 0,
+                    max: 4, 
+                    grid: { display: true, color: '#d8dadd', drawTicks: false },
+                    ticks: {
+                        stepSize: 1,
+                        padding: 12, 
+                        color: '#747983',
+                        font: { family: 'Pretendard', size: 12 },
+                        callback: (val) => xLabels[Math.round(val)] || ''
+                    }
+                },
+                y: {
+					min: 600,
+					max: 990,
+					grid: {
+						drawTicks: false,
+						color: (ctx) => [700, 800, 900, 990].includes(ctx.tick.value) ? '#d8dadd' : 'transparent'
+					},
+					ticks: {
+						stepSize: 10,
+						padding: 12,
+						color: '#747983',
+						font: { family: 'Pretendard', size: 12 },
+						autoSkip: false, 
+						callback: (val) => [700, 800, 900].includes(val) ? val : ''
+					},
+					border: { display: false }
+				}
+            }
+        }
+    });
+});
+
+// 방사형 차트
+const radar2Chart = document.querySelectorAll('.radar2_chart .graph');
+radar2Chart.forEach((chartCanvas) => {
+    const labels   = JSON.parse(chartCanvas.dataset.labels  || '[]');
+	const totalData = JSON.parse(chartCanvas.dataset.total || '[]');
+    const userData = JSON.parse(chartCanvas.dataset.user || '[]');	
+	const radarCtx = chartCanvas.getContext('2d');
+
+	new Chart(radarCtx, {
+		type: 'radar',
+		data: {
+			labels: labels,
+			datasets: [
+				{
+					label: '전체',
+					data: userData,
+					backgroundColor: 'rgba(50, 186, 255, 0.203)',
+					borderColor: '#32baff',
+					borderWidth: 1,
+					pointBackgroundColor: '#32baff',
+					pointRadius: 4,
+					pointHoverRadius: 4
+				},
+				{
+					label: '응시자',
+					data: totalData,
+					backgroundColor: 'rgba(230, 31, 25, 0.2082)',
+					borderColor: '#e61f19',
+					borderWidth: 1,
+					pointBackgroundColor: '#e61f19',
+					pointRadius: 4,
+					pointHoverRadius: 4
+				}
+			]
+		},
+		options: {
+			scales: {
+				r: {
+					min: 0,
+					max: 100,
+					ticks: { display: false},
+					grid: { display: false},
+					angleLines: {
+						color: '#ddd'
+					},
+					pointLabels: {
+						callback: function(label) {
+							if (label.indexOf('\n') !== -1) {
+								return label.split('\n');
+							}
+							return label;
+						},
+						textAlign: 'center',
+						padding: 10,
+						color: '#231916',
+						font: { family: 'Pretendard', weight: '800', size: 13 },
+					}
+				}
+			},
+			plugins: {
+				legend: {display: false},
+				tooltip: { enabled: false }
+			}
+		}
+	});
+});
+
+// 선형 차트
+const line2Chart = document.querySelectorAll('.line2_chart .graph');
+line2Chart.forEach((chartCanvas) => {
+    const labels = JSON.parse(chartCanvas.dataset.labels || '[]');
+	const scores = JSON.parse(chartCanvas.dataset.scores || '[]');
+	const lineCtx = chartCanvas.getContext('2d');
+
+	new Chart(lineCtx, {
+		type: 'line',
+		plugins: [ChartDataLabels],
+		data: {
+			labels: labels,
+			datasets: [
+				{
+					label: '데이터',
+					data: scores,
+					borderColor: '#bf1b21',
+					borderWidth: 2.8,
+					pointBackgroundColor: '#fff',
+					pointRadius: 6,
+					pointBorderWidth: 2.8,
+					pointHoverBackgroundColor: '#fff',
+					pointHoverBorderColor: '#bf1b21',
+					pointHoverRadius: 8,
+					pointHoverBorderWidth: 2.8,
+					clip: false,
+				},
+			]
+		},
+		options: {
+			plugins: {
+				legend: { display: false,},
+				tooltip: {enabled: true,},
+				datalabels: {
+					color: '#bf1b21',
+					font: {
+						family: 'Pretendard',
+						weight: '700',
+						size: 13,
+					},
+					clip: false,
+					offset: function(context) {
+						const value = context.dataset.data[context.dataIndex];
+						return value >= 95 ? 6 : 2;
+					},
+					anchor: function(context) {
+						const value = context.dataset.data[context.dataIndex];
+						if (value >= 95) return 'start';
+						return value <= 6 ? 'end' : (value <= 40 ? 'start' : 'end');
+					},
+					align: function(context) {
+						const value = context.dataset.data[context.dataIndex];
+						if (value >= 95) return 'bottom';
+						return value <= 6 ? 'top' : (value <= 40 ? 'bottom' : 'top');
+					},
+					formatter: function(value) {
+						return value;
+					}
+				},
+			},
+			layout: {
+				padding: {top: 0, left: -12, right: 0, bottom: -12, }
+			},
+			scales: {
+				x: {
+					offset: true,
+					ticks: {
+						padding: 12,
+						font: {
+							family: 'Pretendard',
+							weight: '400',
+							size: 13,
+							color: '#7e7e7f',
+						},
+					},
+					grid: {display: false,},
+				},
+				y: {
+					min: 0,
+					max: 100,
+					beginAtZero: true,
+					ticks: {
+						stepSize: 20,
+						padding: 12,
+						font: {
+							family: 'Pretendard',
+							weight: '400',
+							size: 13,
+							color: '#7e7e7f',
+						},
+					},
+					border: {display: false,},
+				},
+			},
+		},
+	});
 });

@@ -57,17 +57,36 @@
 }(jQuery));
 
 
+// tab function
+$(document).ready(function () {
+	$(".tab_wrap .tab_nav").click(function () {
+		let clickedTab = $(this);
+		let tabWrap = clickedTab.closest(".tab_wrap");
+		let allTabs = tabWrap.find(".tab_nav");
+		let allContents = tabWrap.find(".tab_cont");
+		let idx = allTabs.index(clickedTab);
+
+		allTabs.removeClass("on");
+		clickedTab.addClass("on");
+		allContents.removeClass("on");
+		allContents.eq(idx).addClass("on");
+	});
+});
+
+
 // tab swiper
 $(document).ready(function () {
-	const index = parseInt($('.swiper.tab_swiper').attr('data-index'), 10) || 0;
+    $('.swiper.tab_swiper').each(function (i, el) {
+        const index = parseInt($(el).attr('data-index'), 10) || 0;
 
-	const tab_swiper = new Swiper('.tab_swiper', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 'auto',
-		speed: 500,
-		initialSlide: index,
-	})
+        new Swiper(el, {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            speed: 500,
+            initialSlide: index,
+        });
+    });
 });
 
 
