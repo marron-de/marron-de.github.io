@@ -416,6 +416,80 @@ $(document).ready(function () {
 });
 
 
+// 상단배너 팝업
+const bannerSwiper = new Swiper(".banner_modal .banner_swiper", {
+	observer: true,
+	observeParents: true,
+	effect : 'fade',
+	fadeEffect: { 
+	crossFade: true 
+	},
+    loop: true,
+    speed: 500,
+    pagination: {
+        el: window.innerWidth >= 1080 ? '.banner_controls .pagination' : '.cs_modal_btnbox .pagination',
+        type: 'custom',
+        clickable: true,
+        renderCustom: function (swiper, current, total) {
+            return '<span class="swiper-pagination-current">' + current + '</span>' + 
+                   '<span class="swiper-pagination-bar"></span>' + 
+                   '<span class="swiper-pagination-total">' + total + '</span>';
+        }
+    },
+    navigation: {
+        nextEl: ".banner_controls .next_btn",
+        prevEl: ".banner_controls .prev_btn",
+    },
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+    on: {
+        resize: function () {
+            const newEl = window.innerWidth >= 1080 ? '.banner_controls .pagination' : '.cs_modal_btnbox .pagination';
+            if (this.params.pagination.el !== newEl) {
+                this.params.pagination.el = newEl;
+                this.pagination.destroy();
+                this.pagination.init();
+                this.pagination.render();
+                this.pagination.update();
+            }
+        }
+    }
+});
+
+$(document).ready(function () {
+    const banner = $('#banner_modal');
+    const cookieName = 'banner_hide_today';
+
+    function setCookie(name, value, exp) {
+        const date = new Date();
+        date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+        document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+    }
+
+    function getCookie(name) {
+        const value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return value ? value[2] : null;
+    }
+
+    if (getCookie(cookieName) !== 'Y') {
+        banner.addClass('show');
+    }
+
+    $('.banner_modal .today_btn').on('click', function (e) {
+        e.preventDefault();
+        setCookie(cookieName, 'Y', 1);
+        banner.removeClass('show');
+    });
+
+    $('.banner_modal .cm_modal_close').on('click', function () {
+        banner.removeClass('show');
+    });
+});
+
+
+
 /* 메인 */
 function main_sch_popup() {
 	$(".main-contents .mv_wrap .text_area .sch_popup").addClass("show");
@@ -1092,45 +1166,6 @@ $(document).on('click', '.h_bottom .h_nav > li > a.link', function (e) {
                 li.addClass('on');
             }
         }
-    }
-});
-
-// 상단배너 닫기
-$(document).ready(function () {
-	if ($(window).width() < 1080) {
-
-		$(document).mouseup(function (e) {
-			if ($('.top_banner .container').has(e.target).length === 0) {
-				$('.top_banner').addClass('hide');
-			}
-		});
-	}
-});
-
-// 상단배너 오늘더이상보지않기
-(() => {
-    const cookieName = 'top_banner_hide';
-    const cookieValue = document.cookie.match('(^|;) ?' + cookieName + '=([^;]*)(;|$)');
-    const isHide = cookieValue ? cookieValue[2] : null;
-
-    if (isHide === 'Y') {
-        const target = document.querySelector('.top_banner');
-        if (target) target.style.display = 'none';
-    }
-})();
-$(document).ready(function () {
-    const banner = $('.top_banner');
-    const cookieName = 'top_banner_hide';
-
-    $('.today_btn').on('click', function () {
-        setCookie(cookieName, 'Y', 1);
-        banner.addClass('hide');
-    });
-
-    function setCookie(name, value, exp) {
-        const date = new Date();
-        date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
-        document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
     }
 });
 

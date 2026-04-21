@@ -9,6 +9,97 @@ if (!defined('_EYOOM_')) exit;
 	.header .top_banner {display: flex;}
 </style>
 
+
+<div id="banner_modal" class="cm_modal banner_modal">	
+	<div class="cm_modal_inner">
+		<div class="top_btns">
+			<button href="" class="today_btn pc">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/today_btn_x.png" alt="" class="icon">	
+				<span class="txt">오늘 그만보기</span>
+			</button>
+			<button type="button" class="cm_modal_close"></button>
+		</div>
+		<div class="cm_modal_box">
+			<div class="swiper banner_swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide item item1">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_img.png" alt="" class="img">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/ic_live.png" alt="" class="icon">
+									<span class="txt">온라인</span>
+								</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">5월6일(수)</p>
+								<p class="tit">
+									말레이시아 국제학교 설명회 <br>
+									16년 경력자 참여
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=23" class="btn typeB">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide item item2">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg_mob.jpg" alt="" class="bg tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">서울 강남</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">5월16일(토)</p>
+								<p class="tit">
+									싱가포르 예술대 <br>
+									입학처장 단독 설명회
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=21" class="btn typeB">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide item item3">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg_mob.jpg" alt="" class="bg tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox"></div>
+							<div class="bottombox">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_talk.png" alt="" class="talk_img">
+								<p class="tit">
+									몽선생의 클래스 매칭
+								</p>
+								<p class="desc">
+									검증된 선생님과 <span class="color">완벽한 유학</span>을 준비하고 싶다면?
+								</p>
+								<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="btn typeC">클래스 바로가기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="banner_controls">
+					<div class="swiper-button-prev prev_btn"></div>
+					<div class="swiper-pagination pagination"></div>
+					<div class="swiper-button-next next_btn"></div>
+				</div>
+			</div>
+			<div class="cs_modal_btnbox tablet">
+				<button type="button" class="today_btn">오늘 그만보기</button>
+				<div class="swiper-pagination pagination"></div>
+				<button type="button" class="cm_modal_close">닫기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <div class="main-contents">
     <div class="main_banner">
         <div class="container" data-aos="fade">
