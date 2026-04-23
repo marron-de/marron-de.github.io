@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="../css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-ui.min.js">
+	</script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap">
+
+		<!-- SMS 발송 모달 -->
+		<div id="memberSMS_modal" class="modal show">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">SMS 발송</p>
+					<button class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="" id="" autocomplete="off" method="post" enctype="multipart/form-data"class="form form_box">
+						<div class="input_area">
+							<div class="leftbox">
+								<div class="sms_inputbox">
+									<div class="input_box">
+										<input type="text" class="input_text size_md" placeholder="제목을 입력해주세요." readonly>
+									</div>
+									<div class="input_box">
+										<textarea rows="10" class="input_text size_md" placeholder="내용을 입력해주세요"></textarea>
+										<div class="label_text size_md label_byte">
+											<p class="tit">SMS</p>
+											<p class="count">
+												<span class="num">0</span>
+												<span class="total">/2000byte</span>
+											</p>
+										</div>
+									</div>
+									<button type="button" class="button typeE size_md full save_btn">문자저장</button>
+								</div>
+								<div class="sms_sendbox">
+									<div class="radio_wrap">
+										<div class="radio_box size_md">
+											<input type="radio" name="send_type" id="send_now" class="input_radio" checked onclick="sendCheck('show1')">
+											<label for="send_now" class="label_radio">즉시전송</label>
+										</div>
+										<div class="radio_box size_md">
+											<input type="radio" name="send_type" id="send_plan" class="input_radio" onclick="sendCheck('show2')">
+											<label for="send_plan" class="label_radio">예약전송</label>
+										</div>
+									</div>
+									<div class="radio_showbox">
+										<div class="radio_show show" id="radio_show1">
+											<i class="ph-duotone ph-paper-plane-tilt icon"></i>
+											<div class="descbox">
+												<p class="desc">즉시 전송됩니다.</p>
+												<p class="desc">시간 설정은 예약전송을 체크해 주세요.</p>
+											</div>
+										</div>
+										<div class="radio_show" id="radio_show2">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text icon_ver icon_date size_md calender_btn" value="날짜선택" readonly>
+												<input type="time" name="sg_sdate_plan2" value="09:00:00" class="input_text size_md">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rightbox">
+								<div class="numlist">									
+									<div class="num_left">
+										<p class="num_tit">번호입력</p>
+										<div class="tab_wrap size_md">
+											<div class="tab_navbox tabs_ver">
+												<div class="tab_nav on">
+													<span class="link">불러오기</span>
+												</div>
+												<div class="tab_nav">
+													<span class="link">직접입력</span>
+												</div>
+											</div>
+											<div class="tab_contbox">
+												<div class="tab_cont tab_cont1 on">
+													<button type="button" class="button typeF size_sm full">최근발송내역</button>
+													<button type="button" class="button typeF size_sm full">엑셀로 불러오기</button>
+												</div>
+												<div class="tab_cont tab_cont2">
+													<div class="input_box">
+														<input type="text" class="input_text size_md" placeholder="번호만 입력해주세요.">
+														<button type="button" class="input_btn size_md">번호추가 +</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>									
+									<div class="num_right">
+										<p class="num_tit">받는사람</p>
+										<div id="send_list" class="send_list">
+											<p class="number">010-1234-5678</p>
+											<p class="number">010-1234-5678</p>
+											<p class="number">010-1234-5678</p>
+											<p class="number">010-1234-5678</p>
+											<p class="number">010-1234-5678</p>
+											<p class="number">010-1234-5678</p>
+											<p class="number">010-1234-5678</p>
+											<p class="number">010-1234-5678</p>
+										</div>
+										<div class="btnbox">
+											<button type="button" class="button typeF size_sm full">목록 지우기</button>
+											<button type="button" class="button typeF size_sm full">중복제거</button>
+										</div>
+										<div class="total">
+											<p class="tit">전체</p>
+											<p class="count">8명</p>
+										</div>
+									</div>
+								</div>
+								<div class="numsend">
+									<div class="input_box">
+										<input type="text" class="input_text sizem" placeholder="메시지 발송 키">
+										<button type="button" class="button typeA full send_btn">문자보내기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="cont_area">
+						<div class="tab_wrap">
+							<div class="tab_navbox round_ver">
+								<div class="tab_nav on">
+									<span class="link">메모장</span>
+								</div>
+								<div class="tab_nav">
+									<span class="link">예약내역</span>
+								</div>
+								<div class="tab_nav">
+									<span class="link">회원내역</span>
+								</div>
+							</div>
+							<div class="tab_contbox">
+								<div class="tab_cont tab_cont1 on">
+									<div class="topbox">
+										<div class="left">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text size_md" placeholder="메모내용 검색">
+												<button type="button" class="input_btn size_md">검색</button>
+											</div>
+										</div>
+									</div>
+									<div class="listbox">
+										<div class="listitem">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="4/25(토) 출발유력 상품 안내" placeholder="제목을 입력해주세요.">
+											</div>
+											<div class="input_box">
+												<textarea rows="10" class="input_text size_md" value="" placeholder="내용을 입력해주세요.">안녕하세요, TK트래블입니다.&#13;&#10;&#13;&#10;4/25(토) 출발유력 상품 안내&#13;&#10;&#13;&#10;1. 고창 청보리+유채꽃 39,900원&#13;&#10;https://appletour.co.kr/ZCOqCv8Y&#13;&#10;&#13;&#10;2. 장수 철쭉+남원 광한루원 29,900&#13;&#10;https://appletour.co.kr/4bfDANFX&#13;&#10;&#13;&#10;3. 천안 각원사겹벚꽃+아산 현충사 19,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026031153404646&#13;&#10;&#13;&#10;4. 단양 잔도길+구인사 34,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026021548181586&#13;&#10;&#13;&#10;5. 양구 펀치볼둘레길 37,900&#13;&#10;https://appletour.co.kr/6XW8MPHU&#13;&#10;&#13;&#10;감사합니다.</textarea>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="button typeE size_sm full">수정</button>
+												<button type="button" class="button typeE size_sm full">삭제</button>
+												<button type="button" class="button typeE size_sm full">적용</button>
+											</div>
+										</div>
+										<div class="listitem">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="4/25(토) 출발유력 상품 안내" placeholder="제목을 입력해주세요.">
+											</div>
+											<div class="input_box">
+												<textarea rows="10" class="input_text size_md" value="" placeholder="내용을 입력해주세요.">안녕하세요, TK트래블입니다.&#13;&#10;&#13;&#10;4/25(토) 출발유력 상품 안내&#13;&#10;&#13;&#10;1. 고창 청보리+유채꽃 39,900원&#13;&#10;https://appletour.co.kr/ZCOqCv8Y&#13;&#10;&#13;&#10;2. 장수 철쭉+남원 광한루원 29,900&#13;&#10;https://appletour.co.kr/4bfDANFX&#13;&#10;&#13;&#10;3. 천안 각원사겹벚꽃+아산 현충사 19,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026031153404646&#13;&#10;&#13;&#10;4. 단양 잔도길+구인사 34,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026021548181586&#13;&#10;&#13;&#10;5. 양구 펀치볼둘레길 37,900&#13;&#10;https://appletour.co.kr/6XW8MPHU&#13;&#10;&#13;&#10;감사합니다.</textarea>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="button typeE size_sm full">수정</button>
+												<button type="button" class="button typeE size_sm full">삭제</button>
+												<button type="button" class="button typeE size_sm full">적용</button>
+											</div>
+										</div>
+										<div class="listitem">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="4/25(토) 출발유력 상품 안내" placeholder="제목을 입력해주세요.">
+											</div>
+											<div class="input_box">
+												<textarea rows="10" class="input_text size_md" value="" placeholder="내용을 입력해주세요.">안녕하세요, TK트래블입니다.&#13;&#10;&#13;&#10;4/25(토) 출발유력 상품 안내&#13;&#10;&#13;&#10;1. 고창 청보리+유채꽃 39,900원&#13;&#10;https://appletour.co.kr/ZCOqCv8Y&#13;&#10;&#13;&#10;2. 장수 철쭉+남원 광한루원 29,900&#13;&#10;https://appletour.co.kr/4bfDANFX&#13;&#10;&#13;&#10;3. 천안 각원사겹벚꽃+아산 현충사 19,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026031153404646&#13;&#10;&#13;&#10;4. 단양 잔도길+구인사 34,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026021548181586&#13;&#10;&#13;&#10;5. 양구 펀치볼둘레길 37,900&#13;&#10;https://appletour.co.kr/6XW8MPHU&#13;&#10;&#13;&#10;감사합니다.</textarea>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="button typeE size_sm full">수정</button>
+												<button type="button" class="button typeE size_sm full">삭제</button>
+												<button type="button" class="button typeE size_sm full">적용</button>
+											</div>
+										</div>
+										<div class="listitem">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="4/25(토) 출발유력 상품 안내" placeholder="제목을 입력해주세요.">
+											</div>
+											<div class="input_box">
+												<textarea rows="10" class="input_text size_md" value="" placeholder="내용을 입력해주세요.">안녕하세요, TK트래블입니다.&#13;&#10;&#13;&#10;4/25(토) 출발유력 상품 안내&#13;&#10;&#13;&#10;1. 고창 청보리+유채꽃 39,900원&#13;&#10;https://appletour.co.kr/ZCOqCv8Y&#13;&#10;&#13;&#10;2. 장수 철쭉+남원 광한루원 29,900&#13;&#10;https://appletour.co.kr/4bfDANFX&#13;&#10;&#13;&#10;3. 천안 각원사겹벚꽃+아산 현충사 19,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026031153404646&#13;&#10;&#13;&#10;4. 단양 잔도길+구인사 34,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026021548181586&#13;&#10;&#13;&#10;5. 양구 펀치볼둘레길 37,900&#13;&#10;https://appletour.co.kr/6XW8MPHU&#13;&#10;&#13;&#10;감사합니다.</textarea>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="button typeE size_sm full">수정</button>
+												<button type="button" class="button typeE size_sm full">삭제</button>
+												<button type="button" class="button typeE size_sm full">적용</button>
+											</div>
+										</div>
+										<div class="listitem">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="4/25(토) 출발유력 상품 안내" placeholder="제목을 입력해주세요.">
+											</div>
+											<div class="input_box">
+												<textarea rows="10" class="input_text size_md" value="" placeholder="내용을 입력해주세요.">안녕하세요, TK트래블입니다.&#13;&#10;&#13;&#10;4/25(토) 출발유력 상품 안내&#13;&#10;&#13;&#10;1. 고창 청보리+유채꽃 39,900원&#13;&#10;https://appletour.co.kr/ZCOqCv8Y&#13;&#10;&#13;&#10;2. 장수 철쭉+남원 광한루원 29,900&#13;&#10;https://appletour.co.kr/4bfDANFX&#13;&#10;&#13;&#10;3. 천안 각원사겹벚꽃+아산 현충사 19,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026031153404646&#13;&#10;&#13;&#10;4. 단양 잔도길+구인사 34,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026021548181586&#13;&#10;&#13;&#10;5. 양구 펀치볼둘레길 37,900&#13;&#10;https://appletour.co.kr/6XW8MPHU&#13;&#10;&#13;&#10;감사합니다.</textarea>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="button typeE size_sm full">수정</button>
+												<button type="button" class="button typeE size_sm full">삭제</button>
+												<button type="button" class="button typeE size_sm full">적용</button>
+											</div>
+										</div>
+										<div class="listitem">
+											<div class="input_box">
+												<input type="text" class="input_text size_md" value="4/25(토) 출발유력 상품 안내" placeholder="제목을 입력해주세요.">
+											</div>
+											<div class="input_box">
+												<textarea rows="10" class="input_text size_md" value="" placeholder="내용을 입력해주세요.">안녕하세요, TK트래블입니다.&#13;&#10;&#13;&#10;4/25(토) 출발유력 상품 안내&#13;&#10;&#13;&#10;1. 고창 청보리+유채꽃 39,900원&#13;&#10;https://appletour.co.kr/ZCOqCv8Y&#13;&#10;&#13;&#10;2. 장수 철쭉+남원 광한루원 29,900&#13;&#10;https://appletour.co.kr/4bfDANFX&#13;&#10;&#13;&#10;3. 천안 각원사겹벚꽃+아산 현충사 19,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026031153404646&#13;&#10;&#13;&#10;4. 단양 잔도길+구인사 34,900&#13;&#10;https://www.romancetour.co.kr/niabbs5/inc.php?inc=sangse&sangse_code=2026021548181586&#13;&#10;&#13;&#10;5. 양구 펀치볼둘레길 37,900&#13;&#10;https://appletour.co.kr/6XW8MPHU&#13;&#10;&#13;&#10;감사합니다.</textarea>
+											</div>
+											<div class="btnbox">
+												<button type="button" class="button typeE size_sm full">수정</button>
+												<button type="button" class="button typeE size_sm full">삭제</button>
+												<button type="button" class="button typeE size_sm full">적용</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab_cont tab_cont2">
+									<div class="topbox">
+										<div class="left">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text icon_ver icon_date size_md calender_btn nofull" value="2026-04-23" readonly>
+												<input type="text" class="input_text size_md" placeholder="상품명 검색">
+												<button type="button" class="input_btn size_md">검색</button>
+											</div>
+										</div>
+										<div class="right">
+											<div class="input_box">
+												<p class="label_text input_txt size_md">
+													※ 문자수신 거부도 포함
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="listbox">
+										<div class="listitem">
+											<span class="num">01</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">02</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">03</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">04</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">05</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">06</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">07</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">08</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">09</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+										<div class="listitem">
+											<span class="num">10</span>
+											<span class="bar">|</span>
+											<span class="tit">
+												2026 성북시티투어_목요코스_성북 아트& 헤리티지 코스_한양도성 심우장+간송미술관+성북구립미술관+길상사
+											</span>
+										</div>
+									</div>
+									<div class="pagination">
+										<button type="button" class="page page_btn start"></button>
+										<button type="button" class="page page_btn prev"></button>
+										<a href="#none" class="page page_link">1</a>
+										<a href="#none" class="page page_link active">2</a>
+										<a href="#none" class="page page_link">3</a>
+										<a href="#none" class="page page_link">4</a>
+										<button type="button" class="page page_btn next"></button>
+										<button type="button" class="page page_btn end"></button>
+									</div>
+								</div>
+								<div class="tab_cont tab_cont3">
+									<div class="topbox">
+										<div class="left">
+											<div class="input_box input_flex">
+												<input type="text" class="input_text size_md" placeholder="이름 검색">
+												<button type="button" class="input_btn size_md">검색</button>
+											</div>
+										</div>
+										<div class="right">
+											<div class="input_box">
+												<p class="label_text input_txt size_md">
+													※ 문자수신 거부 제외하고 보여집니다.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="tbl_box">
+										<table class="tbl">
+											<colgroup>
+												<col style="width: 100px;">
+												<col style="width: 82px;">
+												<col style="width: 170px;">
+												<col style="width: 100px;">
+												<col style="width: 170px;">
+												<col style="width: 120px;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th data-th="회원등급">회원등급</th>
+													<th data-th="고객명">고객명</th>
+													<th data-th="연락처">연락처</th>
+													<th data-th="아이디">아이디</th>
+													<th data-th="이메일">이메일</th>
+													<th data-th="가입일">가입일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td data-th="회원등급">일반회원</td>
+													<td data-th="고객명">홍길동</td>
+													<td data-th="연락처">010-1234-5678</td>
+													<td data-th="아이디">test</td>
+													<td data-th="이메일">test@test.com</td>
+													<td data-th="가입일">2025.04.23</td>
+												</tr>
+												<tr>
+													<td data-th="회원등급">일반회원</td>
+													<td data-th="고객명">홍길동</td>
+													<td data-th="연락처">010-1234-5678</td>
+													<td data-th="아이디">test</td>
+													<td data-th="이메일">test@test.com</td>
+													<td data-th="가입일">2025.04.23</td>
+												</tr>
+												<tr>
+													<td data-th="회원등급">일반회원</td>
+													<td data-th="고객명">홍길동</td>
+													<td data-th="연락처">010-1234-5678</td>
+													<td data-th="아이디">test</td>
+													<td data-th="이메일">test@test.com</td>
+													<td data-th="가입일">2025.04.23</td>
+												</tr>
+												<tr>
+													<td data-th="회원등급">일반회원</td>
+													<td data-th="고객명">홍길동</td>
+													<td data-th="연락처">010-1234-5678</td>
+													<td data-th="아이디">test</td>
+													<td data-th="이메일">test@test.com</td>
+													<td data-th="가입일">2025.04.23</td>
+												</tr>
+												<tr>
+													<td data-th="회원등급">일반회원</td>
+													<td data-th="고객명">홍길동</td>
+													<td data-th="연락처">010-1234-5678</td>
+													<td data-th="아이디">test</td>
+													<td data-th="이메일">test@test.com</td>
+													<td data-th="가입일">2025.04.23</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal_btnbox">
+						<button class="modal_btn button auto typeE">저장</button>
+						<button class="modal_btn button auto typeF modal_close">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 캘린더 팝업 -->
+		<div id="calender_popup"></div>
+		
+    </div>
+
+
+    <!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+		replaceModule('../common/calender_popup.html', '#calender_popup');
+	</script>
+	<script src="../js/common.js"></script>
+
+	<script>
+		function sendCheck(type) {
+			const show1 = document.getElementById('radio_show1');
+			const show2 = document.getElementById('radio_show2');
+
+			if (type === 'show1') {
+				show1.classList.add('show');
+				show2.classList.remove('show');
+			} else {
+				show2.classList.add('show');
+				show1.classList.remove('show');
+			}
+		}
+	</script>
+
+
+</body>
+
+</html>
