@@ -1,7 +1,7 @@
 // layout
 function updateLayout() {
 	const windowWidth = window.innerWidth;
-	const maxWidth = 1280;
+	const maxWidth = 1088;
 	const widthPercentage = 0.9;
 
 	let calculatedWidth = windowWidth * widthPercentage;
@@ -96,7 +96,33 @@ document.addEventListener('DOMContentLoaded', () => {
 		navbox.classList.toggle("open");
 	});
 
-	document.querySelectorAll('.navbox .link').forEach(link => {
+	document.querySelectorAll('.m_header .link').forEach(link => {
+		link.addEventListener('click', function (e) {
+			const href = this.getAttribute('href');
+
+			if (href.startsWith('#')) {
+				e.preventDefault();
+
+				header.classList.remove("open");
+				navbox.classList.remove("open");
+
+				const targetElement = document.querySelector(href);
+				if (targetElement) {
+					
+					const offset = href === '#intro' ? 0 : 7 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+					const elementPosition = targetElement.getBoundingClientRect().top;
+					const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+					window.scrollTo({
+						top: offsetPosition,
+						behavior: 'smooth'
+					});
+				}
+			}
+		});
+	});
+
+	document.querySelectorAll('.m_navbox .link').forEach(link => {
 		link.addEventListener('click', function (e) {
 			const href = this.getAttribute('href');
 
@@ -156,6 +182,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // course swiper
+function cloneSlides(selector, multiply = 3) {
+	const container = document.querySelector(selector);
+	if (!container) return;
+
+	const wrapper = container.querySelector('.swiper-wrapper');
+	const slides = Array.from(wrapper.children)
+		.filter(slide => !slide.hasAttribute('data-clone'));
+
+	const originalCount = slides.length;
+	const cloneCount = originalCount * (multiply - 1);
+
+	for (let i = 0; i < cloneCount; i++) {
+		const clone = slides[i % originalCount].cloneNode(true);
+		clone.setAttribute('data-clone', 'true');
+		wrapper.appendChild(clone);
+	}
+
+	return originalCount;
+}
+const originalCourse = cloneSlides('.course_swiper', 3);
 const course_swiper = new Swiper('.course_swiper', {
 	observer: true,
 	observeParents: true,
@@ -164,9 +210,20 @@ const course_swiper = new Swiper('.course_swiper', {
 	loop:true,
 	speed: 500,
 	spaceBetween: 5,
+	initialSlide: 0,
+    navigation: {
+      nextEl: ".course_swiper .next_btn",
+      prevEl: ".course_swiper .prev_btn",
+    },	
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
 	breakpoints: {
 		1080: {
-			spaceBetween: 8,
+			centeredSlides: false,
+			spaceBetween: 16,
+			initialSlide: 1,
 		},
 	},
 })
