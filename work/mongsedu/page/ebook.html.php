@@ -57,7 +57,7 @@ if (!defined('_EYOOM_')) exit;
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook03.jpg" alt="도쿄 대학 상담">
                         </div>
                         <div class="text_area">
-							<span class="title">예술대 포트폴리오반 </span>
+							<span class="title">포트폴리오반 </span>
 							<p>국립대, 사립대, 국제학생 상담</p>
                         </div>
                     </li>
@@ -617,7 +617,7 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="titbox">
 				<p class="title">
-					<span class="tit">예술대 포틀폴리오 합격반!</span>
+					<span class="tit">포트폴리오 합격반!</span>
 					<span class="small">95% 이상의 합격률 달성</span>
 				</p>
 			</div>

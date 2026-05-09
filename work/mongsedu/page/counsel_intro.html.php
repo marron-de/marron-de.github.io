@@ -1145,7 +1145,7 @@ if (!defined('_EYOOM_')) exit;
 
     <div class="msection presentation_area tabs counsel_sec3">
         <div class="container" data-aos="fade-up">
-            <div class="ms title_area" id="row-1">
+            <!-- <div class="ms title_area" id="row-1">
 				<div class="title">
 					<span class="live_badge">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/ic_live.png" alt="" class="icon">
@@ -1532,7 +1532,8 @@ if (!defined('_EYOOM_')) exit;
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> -->
+			<?php echo eb_latest('1775642588'); ?>
         </div>
     </div>
 

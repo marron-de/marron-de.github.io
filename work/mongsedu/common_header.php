@@ -370,3 +370,69 @@
 		</ul>
 	</div>
 </div>
+
+<!-- sticky sidemenu -->
+<div class="sticky_sidemenu">
+	<div class="top_btn">
+		<span class="arrow"></span>
+		<span class="txt">TOP</span>
+	</div>
+	<div class="menuwrap">
+		<div class="menulist">
+			<div class="item kakao">
+				<a href="https://pf.kakao.com/_fxmxmWV" class="link" target="_blank">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_kakao.png" class="icon kakao" alt="">
+					<p class="txt">카톡상담</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="tel:02-6052-9003" class="link">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon1.png" class="icon" alt="">
+					<p class="txt">전화상담</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="sms:010-8114-9003" class="link">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon2.png" class="icon" alt="">
+					<p class="txt">문자상담</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="link">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon3.png" class="icon" alt="">
+					<p class="txt">캠프신청</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="link">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon4.png" class="icon" alt="">
+					<p class="txt">자료요청</p>
+				</a>
+			</div>
+			<div class="line"></div>
+		</div>
+		<ul class="menusns accordion">
+			<li>	
+				<div class="acc_tit">
+					<span class="txt">SNS</span>
+					<span class="arrow"></span>
+				</div>
+				<ul class="acc_cont">
+					<li>
+						<div class="snslist">
+							<a href="https://blog.naver.com/mongssing" class="link" target="_blank">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_blog.png" class="icon" alt="">
+							</a>
+							<a href="https://www.youtube.com/@%EB%AA%BD%EC%84%A0%EC%83%9D" class="link" target="_blank">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_youtube.png" class="icon" alt="">
+							</a>
+							<a href="https://www.instagram.com/mongsedu/" class="link" target="_blank">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_insta.png" class="icon" alt="">
+							</a>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

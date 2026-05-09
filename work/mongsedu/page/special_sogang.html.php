@@ -465,7 +465,7 @@ if (!defined('_EYOOM_')) exit;
 				<p class="sub_txt2 desc">
 					총 200만원 이상의 혜택과 미국대학 + 싱가포르대학 편입 옵션까지
 				</p>
-            	<a href="" class="sub_btn typeC">입학혜택 상담하기</a>
+            	<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="sub_btn typeC">입학혜택 상담하기</a>
 			</div>
         </div>
     </div>    

@@ -491,7 +491,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="showToast()">
+                            <li onclick="pro_modal(2)">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure02.jpg" alt="UC버클리 출신 관리하는 입학컨설팅">
 									<div class="img_txtbox">
@@ -518,7 +518,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="showToast()">
+                            <li onclick="pro_modal(3)">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure03.jpg" alt="패스웨이 과정으로 미국대학 쉽게가기">
 									<div class="img_txtbox">
@@ -543,7 +543,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="showToast()">
+                            <li onclick="pro_modal(4)">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04.jpg" alt="국내 내신으로 미국 TOP100대학 입학" class="pc">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure04_m.jpg" alt="국내 내신으로 미국 TOP100대학 입학" class="tablet">
@@ -723,4 +723,37 @@ if (!defined('_EYOOM_')) exit;
             </div>
         </div>
     </div>
+</div>
+
+<div id="pro_modal2" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_modal2_img.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro_modal3" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_modal3_img.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro_modal4" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_modal4_img.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
 </div>

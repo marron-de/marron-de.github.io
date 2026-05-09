@@ -36,12 +36,12 @@ if (!defined('_EYOOM_')) exit;
 								</span>
 							</div>
 							<div class="bottombox">
-								<p class="sub">5월6일(수)</p>
+								<p class="sub">5월28일(목)</p>
 								<p class="tit">
 									말레이시아 국제학교 설명회 <br>
 									16년 경력자 참여
 								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=23" class="btn typeB">설명회 바로가기</a>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=24" class="btn typeB">설명회 바로가기</a>
 							</div>
 						</div>
 					</div>
@@ -99,8 +99,8 @@ if (!defined('_EYOOM_')) exit;
 	</div>
 </div>
 
-
 <div class="main-contents">
+
     <div class="main_banner">
         <div class="container" data-aos="fade">
             <div class="mv_wrap">
@@ -1854,6 +1854,182 @@ if (!defined('_EYOOM_')) exit;
             </div>
         </div>
     </div>
-
+    
+    <div class="msection faq_area tabs main_sec9">
+        <div class="container" data-aos="fade-up">
+            <div class="ms title_area green" id="row-4">				
+				<div class="title">
+					<span class="tit">자주하는 질문 <span class="color1">BEST</span></span>
+				</div>
+                <div class="tab swiper tab_swiper" data-gappc="0" data-gapmob="12">
+                    <ul class="tab_tit swiper-wrapper">
+                        <li class="swiper-slide"><a href="#" class="show" id="tab-41">말레이시아 국제학교</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-42">싱가포르/말레이시아 대학</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-43">기타 질문</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tabs_cont">
+                <ul class="panel faq-box">
+                    <li id="content-41">
+                        <ul class="faq_list">
+							<li>
+								<div class="question">
+									말레이시아 국제학교 학비는 보통 얼마인가요?
+								</div>
+								<div class="answer">
+									학교 등급에 따라 연간 1,000만 원~3,500만 원까지 다양합니다. 가성비 높은 학교부터 명문 보딩스쿨까지 예산에 맞춘 선택이 가능합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									쿠알라룸푸르와 조호바루 중 어느 지역의 국제학교가 더 유리할까요?
+								</div>
+								<div class="answer">
+									인프라와 교육열은 쿠알라룸푸르가 높고, 쾌적한 주거 환경과 통학 편의성은 조호바루가 강점입니다. 가족의 생활 패턴에 따라 결정해야 합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									영국식과 미국식 교육 커리큘럼의 차이점은 무엇인가요?
+								</div>
+								<div class="answer">
+									영국식(IGCSE/A-Level)은 학업적 깊이가 있고, 미국식(AP)은 창의성과 활동을 중시합니다. 자녀의 향후 대학 진학 국가를 고려하는 것이 좋습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									가디언(보호자) 비자 발급 절차와 부모님이 동반할 때 주의사항은 무엇인가요?
+								</div>
+								<div class="answer">
+									학생 비자 1건당 부모 중 1명이 동반 비자를 받을 수 있습니다. 최근 심사가 까다로워졌으므로 전문 수속 대행을 통하는 것이 안전합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									말레이시아 국제학교 졸업 후 해외 명문대 진학 사례가 많은가요?
+								</div>
+								<div class="answer">
+									말레이시아 국제학교 졸업생들은 뛰어난 영어 실력을 바탕으로 영국, 호주, 미국뿐 아니라 아시아권 명문대로 다수 진학하고 있습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									입학 시기는 언제인가요? (9월 학기 vs 1월 학기 준비 전략)
+								</div>
+								<div class="answer">
+									보통 8~9월이 신학기이며, 1월에도 중도 입학이 가능합니다. 다만 인기 학교는 대기가 길 수 있으니 최소 6개월 전 준비를 권장합니다.
+								</div>
+							</li>
+                		</ul>
+                    </li>
+                    <li id="content-42">
+                        <ul class="faq_list">
+							<li>
+								<div class="question">
+									말레이시아 국제학교 학비는 보통 얼마인가요?
+								</div>
+								<div class="answer">
+									학교 등급에 따라 연간 1,000만 원~3,500만 원까지 다양합니다. 가성비 높은 학교부터 명문 보딩스쿨까지 예산에 맞춘 선택이 가능합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									쿠알라룸푸르와 조호바루 중 어느 지역의 국제학교가 더 유리할까요?
+								</div>
+								<div class="answer">
+									인프라와 교육열은 쿠알라룸푸르가 높고, 쾌적한 주거 환경과 통학 편의성은 조호바루가 강점입니다. 가족의 생활 패턴에 따라 결정해야 합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									영국식과 미국식 교육 커리큘럼의 차이점은 무엇인가요?
+								</div>
+								<div class="answer">
+									영국식(IGCSE/A-Level)은 학업적 깊이가 있고, 미국식(AP)은 창의성과 활동을 중시합니다. 자녀의 향후 대학 진학 국가를 고려하는 것이 좋습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									가디언(보호자) 비자 발급 절차와 부모님이 동반할 때 주의사항은 무엇인가요?
+								</div>
+								<div class="answer">
+									학생 비자 1건당 부모 중 1명이 동반 비자를 받을 수 있습니다. 최근 심사가 까다로워졌으므로 전문 수속 대행을 통하는 것이 안전합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									말레이시아 국제학교 졸업 후 해외 명문대 진학 사례가 많은가요?
+								</div>
+								<div class="answer">
+									말레이시아 국제학교 졸업생들은 뛰어난 영어 실력을 바탕으로 영국, 호주, 미국뿐 아니라 아시아권 명문대로 다수 진학하고 있습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									입학 시기는 언제인가요? (9월 학기 vs 1월 학기 준비 전략)
+								</div>
+								<div class="answer">
+									보통 8~9월이 신학기이며, 1월에도 중도 입학이 가능합니다. 다만 인기 학교는 대기가 길 수 있으니 최소 6개월 전 준비를 권장합니다.
+								</div>
+							</li>
+                		</ul>
+                    </li>
+                    <li id="content-43">
+                        <ul class="faq_list">
+							<li>
+								<div class="question">
+									말레이시아 국제학교 학비는 보통 얼마인가요?
+								</div>
+								<div class="answer">
+									학교 등급에 따라 연간 1,000만 원~3,500만 원까지 다양합니다. 가성비 높은 학교부터 명문 보딩스쿨까지 예산에 맞춘 선택이 가능합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									쿠알라룸푸르와 조호바루 중 어느 지역의 국제학교가 더 유리할까요?
+								</div>
+								<div class="answer">
+									인프라와 교육열은 쿠알라룸푸르가 높고, 쾌적한 주거 환경과 통학 편의성은 조호바루가 강점입니다. 가족의 생활 패턴에 따라 결정해야 합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									영국식과 미국식 교육 커리큘럼의 차이점은 무엇인가요?
+								</div>
+								<div class="answer">
+									영국식(IGCSE/A-Level)은 학업적 깊이가 있고, 미국식(AP)은 창의성과 활동을 중시합니다. 자녀의 향후 대학 진학 국가를 고려하는 것이 좋습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									가디언(보호자) 비자 발급 절차와 부모님이 동반할 때 주의사항은 무엇인가요?
+								</div>
+								<div class="answer">
+									학생 비자 1건당 부모 중 1명이 동반 비자를 받을 수 있습니다. 최근 심사가 까다로워졌으므로 전문 수속 대행을 통하는 것이 안전합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									말레이시아 국제학교 졸업 후 해외 명문대 진학 사례가 많은가요?
+								</div>
+								<div class="answer">
+									말레이시아 국제학교 졸업생들은 뛰어난 영어 실력을 바탕으로 영국, 호주, 미국뿐 아니라 아시아권 명문대로 다수 진학하고 있습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									입학 시기는 언제인가요? (9월 학기 vs 1월 학기 준비 전략)
+								</div>
+								<div class="answer">
+									보통 8~9월이 신학기이며, 1월에도 중도 입학이 가능합니다. 다만 인기 학교는 대기가 길 수 있으니 최소 6개월 전 준비를 권장합니다.
+								</div>
+							</li>
+                		</ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
 </div>

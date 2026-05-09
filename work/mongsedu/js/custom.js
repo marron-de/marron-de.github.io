@@ -381,7 +381,6 @@ function setActiveMenu() {
 $(document).ready(setActiveMenu);
 window.addEventListener('pageshow', setActiveMenu);
 
-
 // header link active
 $(document).ready(function () {
     const urlParams = new URLSearchParams(window.location.search);
@@ -413,6 +412,17 @@ $(document).ready(function () {
             $(this).closest('.menu_li').children('.link').addClass('on');
         }
     });
+});
+
+
+// top button
+$(document).ready(function () {
+	$('.sticky_sidemenu .top_btn').click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
 });
 
 
@@ -551,7 +561,6 @@ const icon_swiper = new Swiper(".icon_swiper", {
 		disableOnInteraction: false,
 	},	
 });
-
 
 
 /* 상담하기 */
@@ -695,6 +704,16 @@ $(function () {
 		tabs.filter('[href="' + currentId + '"]').addClass('show');
 	});
 });
+
+
+
+/* 수속하기 */
+// 미국+아시아 입학수속/컨설팅 상세 모달
+function pro_modal(i) {
+	$("body").addClass('hidden');
+	$("#pro_modal"+i).addClass('show');
+}
+
 
 
 // 상담학교 리스트 타이틀 너비

@@ -77,6 +77,7 @@
 .presentation_list .panel ul li .img_area .title { position: absolute;  left: 0;  bottom: 0;  display: flex;  flex-direction: column;  gap: 0.125rem;  width: 100%;  padding: 0 1rem 1rem; z-index: 10;}
 .presentation_list .panel ul li .img_area .title span { position: relative;  left: unset; bottom: unset;  font-weight: 500; font-size: 1rem;  line-height: 120%;  letter-spacing: -0.04em;  color: #fff;}
 .presentation_list .panel ul li .img_area .title span.tit {  font-weight: 700;  font-size: 1.375rem;  line-height: 120%;  letter-spacing: -0.02em;}
+.presentation_list .panel ul li .img_area .bg { aspect-ratio: 285 / 180; object-fit: cover;}
 .presentation_list .panel ul li .text_area { gap: 0.625rem;  padding: 1rem; flex: 1;  flex-wrap: unset;  flex-direction: column;align-items: unset;}
 .presentation_list .panel ul li .text_area .badgebox { display: flex; gap: 0.375rem;}
 .presentation_list .panel ul li .text_area .badgebox .nation, 
@@ -86,6 +87,13 @@
 .presentation_list .panel ul li .text_area ul li { align-items: flex-start;  gap: 0.625rem;}
 .presentation_list .panel ul li .text_area ul p { font-weight: 500;  font-size: 0.75rem;  letter-spacing: -0.04em;  color: var(--basic-gray); display: block;}
 .presentation_list .panel ul li .text_area ul p.txt { font-weight: 600;  flex: 1;}
+
+.presentation_list .panel ul li.end .img_area {pointer-events: none;}
+.presentation_list .panel ul li.end .img_area::before { content: "설명회 마감";  position: absolute;  left: 0;  top: 0;  width: 100%; height: 100%;  backdrop-filter: blur(0.375rem); background: rgba(96, 96, 96, 0.4); font-weight: 700; font-size: 1.375rem;  line-height: 120%; letter-spacing: -0.02em; text-align: center; color: var(--basic-white); display: flex; align-items: center; justify-content: center;  z-index: 30;}
+.presentation_list .panel ul li.end .text_area .badgebox .nation {color: #aaa; border: 1px solid var(--basic-border); background: #fbfbfb;}
+.presentation_list .panel ul li.end .text_area .badgebox .place {color: #fff; background: var(--basic-lightgray);}
+.presentation_list .panel ul li.end .text_area .title {color: var(--basic-gray);}
+.presentation_list .panel ul li.end .text_area ul p {color: #c1c1c1 !important;}
 
 
 .counsel_list .panel ul {  gap: 3rem 0.75rem;}
@@ -288,6 +296,14 @@ font-size: 0.813rem;line-height: 100%;letter-spacing: -0.02em;color: var(--typeB
 .msection.award_area .award_wrap .award_group .item .text_area .tit {  font-weight: 700;   font-size: 1.125rem;  line-height: 144%;  letter-spacing: -0.05em;  color: var(--typeB-dark);}
 .msection.award_area .award_wrap .award_group .item .text_area .sub { font-weight: 700;  font-size: 0.875rem;  letter-spacing: -0.02em;  color: var(--typeA-main);}
 .msection.award_area .award_wrap .award_group .item .text_area .country {  font-weight: 700;  font-size: 0.875rem; text-align: center;  color: var(--typeA-sub2);  padding: 0.25rem 0.5rem; border: 1px solid var(--typeA-bg1); border-radius: 0.25rem; background: var(--typeA-bg3);}
+
+.main_sec9 {margin-top: 4.5rem; margin-bottom: 6rem;}
+.main_sec9 .ms.title_area .tab_swiper {margin: 0;}
+.main_sec9.faq_area .faq-box .faq_list li .question {color: var(--typeA-dark)}
+.main_sec9.faq_area .faq-box .faq_list li .question:before {color: var(--typeA-main)}
+.main_sec9.faq_area .faq-box .faq_list li .answer {color: var(--typeA-sub1)} 
+.main_sec9.faq_area .faq-box .faq_list li .answer:before {color: var(--typeA-main);}
+
 
 
 
@@ -964,9 +980,9 @@ border-radius: 0.313rem;padding: 0.25rem 0.5rem; background: var(--typeB-bg3); d
 .board-view .board-view-subj .topbox .bl-itembox .bl-subitem .icon  {width: 1.25rem;} 
 .board-view .board-view-subj .topbox .bl-itembox .bl-subitem .pc {display: inline-block;}
 .board-view .board-view-subj .topbox .bl-itembox .bl-subitem .bl-photo {display: none;}
-.board-view .board-view-subj .bottombox { display: flex;  align-items: center;  justify-content: space-between;}
+.board-view .board-view-subj .bottombox { display: flex;  align-items: flex-start;  justify-content: space-between;}
 .board-view .board-view-subj .bottombox .title {font-weight: 700; font-size: 2rem; line-height: 150%; letter-spacing: -0.03em; color: var(--basic-black);}
-.board-view .board-view-subj .bottombox .share_btn { width: 1.625rem; height: unset; aspect-ratio: 1 / 1;  background: url(../img/sub/ic_share.svg) no-repeat center / contain; cursor: pointer;}
+.board-view .board-view-subj .bottombox .share_btn { width: 1.625rem; height: unset; aspect-ratio: 1 / 1;  background: url(../img/sub/ic_share.svg) no-repeat center / contain; cursor: pointer; margin-top: 0.625rem;}
 .board-view-file { display: none;}
 .board-view .btn-e {  padding: 0.5rem 1rem; font-size: 0.975rem; border-radius: 0.375rem;}
 .board-view .board-view-info {display: none;}
@@ -977,6 +993,7 @@ border-radius: 0.313rem;padding: 0.25rem 0.5rem; background: var(--typeB-bg3); d
 .board-view .board-view-con { order: 1;}
 .board-view .board-view-file-conts { order: 2;}
 .board-view .board-view-file-conts.thum_use #bo_v_img .view_image:nth-child(1){ display: none;}
+.board-view .board-view-file-conts.thum_use #bo_v_img .view_image:nth-child(2){ display: none;}
 /* .board-view .board-view-con, .board-view .board-view-con * { font-family: var(--font-family) !important; font-size: 1.063rem !important; line-height: 160% !important;  letter-spacing: -0.02em !important;  color: var(--basic-middlegray);}
 .board-view .board-view-con p {margin: 0 !important;} */
 .board-view .board-view-con ol, 
@@ -1567,7 +1584,7 @@ padding: 0.5rem  1rem; background: var(--typeC-sub2); margin-bottom: 2rem;}
 .page-company .com_sec4 .company_swiper .item .contbox .tit {font-weight: 700;
 font-size: 1.25rem;line-height: 150%;letter-spacing: -0.05em;color: var(--basic-black) }
 .page-company .com_sec4 .company_swiper .item .contbox .tit .color {color: var(--typeA-main); }
-.page-company .com_sec4 .company_swiper .item .contbox .desc {font-weight: 400;font-size: 1.063rem;line-height: 190%;letter-spacing: -0.06em;
+.page-company .com_sec4 .company_swiper .item .contbox .desc {font-weight: 400;font-size: 1.063rem;line-height: 200%;letter-spacing: -0.06em;
 color: var(--basic-middlegray); }
 .page-company .com_sec4 .company_swiper .prev_btn,
 .page-company .com_sec4 .company_swiper .next_btn { background:#fff;  width: 2.5rem; height: unset;  aspect-ratio: 1 / 1;  border-radius: 50%;  box-shadow: 0.125rem 0.125rem 0.188rem 0 rgba(0, 0, 0, 0.15); opacity: 1; display: flex; align-items: center; justify-content: center; z-index: 20;}

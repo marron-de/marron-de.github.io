@@ -143,7 +143,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
 							</div>
-							<a href="" class="more_btn">자세히 보기</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=class_detail02" class="more_btn">자세히 보기</a>
 						</div>
 						<div class="item">
 							<p class="tit">에세이/토론 훈련</p>
@@ -177,7 +177,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
 							</div>
-							<a href="" class="more_btn">자세히 보기</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=class_detail02" class="more_btn">자세히 보기</a>
 						</div>
 					</div>
 				</div>
@@ -222,7 +222,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 								</div>
 							</div>
-							<a href="" class="more_btn">자세히 보기</a>
+							<a href="<?php echo G5_URL ?>/page/?pid=class_detail02" class="more_btn">자세히 보기</a>
 						</div>
 					</div>
 				</div>
@@ -518,7 +518,9 @@ if (!defined('_EYOOM_')) exit;
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec6_icon.png" alt="" class="img">
 								</div>
 								<p class="txt">
-									사례 몇가지 더 전달 필요합니다.
+									싱가포르, 홍콩 국립대 컨설팅 문의에요. <br>
+									현재 IB 전형으로 준비중인데요. <br>
+									비교과 활도과 자소서, 에세이 첨삭 도와주세요.
 								</p>
 							</div>
 							<div class="bottom">
@@ -533,11 +535,8 @@ if (!defined('_EYOOM_')) exit;
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/prep_sec6_icon.png" alt="" class="img">
 								</div>
 								<p class="txt">
-									예술대 입학하고 싶어요 <br>
-									말레이시아 국제학교 재학중인데요. <br>
-									포트폴리오를 어떻게 시작해야 할까요? <br>
-									저는 입시미술 경험이 없고 취미로만 해서 <br>
-									준비방법을 자세히 알고싶어요.
+									9세 아이 방학때 경험을 쌓고 싶은데 <br>
+									스쿨링과 방학캠프중 어떤게 좋을까요? <br>몽선생이 전문적으로 하는 곳을 추천해주세요.
 								</p>
 							</div>
 							<div class="bottom">
@@ -615,7 +614,7 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 				</div>
 			</div>
-			<a href="" class="sub_btn typeB">수강문의</a>
+			<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="sub_btn typeB">수강문의</a>
         </div>
     </div>    
 
