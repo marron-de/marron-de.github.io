@@ -59,7 +59,7 @@ if (!defined('_EYOOM_')) exit;
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/com_sec2_card3.png" alt="" class="card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
 				</div>
 			</div>
-			<a href="" class="sub_btn typeA tablet">몽선생 멘토 보러가기</a>
+			<a href="<?php echo G5_URL ?>/page/?pid=mentor" class="sub_btn typeA tablet">몽선생 멘토 보러가기</a>
         </div>
     </div>
 

@@ -882,6 +882,27 @@ if (!defined('_EYOOM_')) exit;
 	</div>
 </div>
 
+<div id="ebook2_modal" class="cm_modal detail_modal ebook_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="titbox">
+				<p class="title">
+					<span class="tit">듀오링고 DET 실전반!</span>
+					<span class="small">원어민 소규모 수업구성</span>
+				</p>
+			</div>
+			<form enctype="multipart/form-data" id="catalogform" name="catalogform" method="post"  action="<?php echo G5_URL ?>/page/?pid=catalogfrm_send">
+
+			</form>
+			<div class="btnbox">
+				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeC">상카달로그 신청</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="cm_modal privacy_modal">	
 	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
