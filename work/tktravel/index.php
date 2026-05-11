@@ -474,18 +474,23 @@
 				<div class="inner tab_wrap">
 					<div class="m_titbox row_ver">
 						<p class="m_txt1">티켓 🎟️</p>
-						<div class="swiper tab_swiper tab_round_swiper">
+						<!-- 260511 추가작업 : 'badge_ver' 클래스 추가 -->
+						<div class="swiper tab_swiper tab_round_swiper badge_ver">
 							<div class="swiper-wrapper tab_navbox round_ver">
 								<div class="swiper-slide tab_nav on">
+									<div class="badge typeC">Best</div>
 									<span class="link">인기 상품</span>
 								</div>
 								<div class="swiper-slide tab_nav">
+									<div class="badge typeD">추천</div>
 									<span class="link">입장권</span>
 								</div>
 								<div class="swiper-slide tab_nav">
+									<div class="badge typeA">New</div>
 									<span class="link">eSIM</span>
 								</div>
 								<div class="swiper-slide tab_nav">
+									<div class="badge typeB">Sale</div>
 									<span class="link">국내 축제</span>
 								</div>
 							</div>
