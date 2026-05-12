@@ -41,7 +41,7 @@ if (!defined('_EYOOM_')) exit;
 									말레이시아 국제학교 설명회 <br>
 									16년 경력자 참여
 								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=24" class="btn typeB">설명회 바로가기</a>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=31" class="btn typeB">설명회 바로가기</a>
 							</div>
 						</div>
 					</div>
@@ -60,7 +60,7 @@ if (!defined('_EYOOM_')) exit;
 									싱가포르 예술대 <br>
 									입학처장 단독 설명회
 								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=21" class="btn typeB">설명회 바로가기</a>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=29" class="btn typeB">설명회 바로가기</a>
 							</div>
 						</div>
 					</div>
