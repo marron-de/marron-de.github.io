@@ -3,6 +3,10 @@
  * page file : /theme/THEME_NAME/page/aboutus.html.php
  */
 if (!defined('_EYOOM_')) exit;
+
+$catalogfrm_url = EYOOM_CORE_URL.'/page/proc/catalogfrm_send.php';
+$ebookfrm_url = EYOOM_CORE_URL.'/page/proc/ebookfrm_send.php';
+
 ?>
 
 <div class="sub-page page-class page-ebook">
@@ -190,58 +194,58 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="ebook_list">
                 <ul>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="ebook2_modal(1)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook07.jpg" alt="유학서비스 책자">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook2_1.jpg" alt="유학서비스 책자">
                         </div>
                         <div class="text_area">
 							<span class="title">유학서비스 책자</span>
-							<p>수속, CLASS 등 비용 안내</p>
+							<p>SIM, PSB, KAPAN, JCU 등</p>
                         </div>
                     </li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="ebook2_modal(2)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook08.jpg" alt="말레이시아 국제학교 책자">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook2_2.jpg" alt="말레이시아 국제학교 책자">
                         </div>
                         <div class="text_area">
 							<span class="title">말레이시아 국제학교 책자</span>
 							<p>40여개 학교정보, MAP</p>
                         </div>
                     </li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="ebook2_modal(3)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook09.jpg" alt="싱가포르 대학 책자">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook2_3.jpg" alt="싱가포르 대학 책자">
                         </div>
                         <div class="text_area">
 							<span class="title">싱가포르 대학 책자</span>
 							<p>국립대, 사립대, 예술대 통합본</p>
                         </div>
                     </li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="ebook2_modal(4)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook10.jpg" alt="말레이시아 대학 책자">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook2_4.jpg" alt="말레이시아 대학 책자">
                         </div>
                         <div class="text_area">
 							<span class="title">말레이시아 대학 책자</span>
 							<p>사립대, 국립대 통합본</p>
                         </div>
                     </li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="ebook2_modal(5)">
                         <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook11.jpg" alt="미국 대학 책자">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook2_5.jpg" alt="홍콩 대학 책자">
+                        </div>
+                        <div class="text_area">
+							<span class="title">홍콩 대학 책자</span>
+							<p>3대 공립대 통합본</p>
+						</div>
+                    </li>
+                    <li onclick="ebook2_modal(6)">
+                        <div class="img_area">
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook2_6.jpg" alt="미국 대학 책자">
                         </div>
                         <div class="text_area">
 							<span class="title">미국 대학 책자</span>
-							<p>주요 TOP100대학 </p>
-						</div>
-                    </li>
-                    <li onclick="nocontent_modal()">
-                        <div class="img_area">
-                            <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebook12.jpg" alt="영국 대학 책자">
-                        </div>
-                        <div class="text_area">
-							<span class="title">영국 대학 책자</span>
-							<p>주요 TOP50대학 </p>
+							<p>주요 TOP 100대학</p>
                         </div>
                     </li>
                 </ul>
@@ -408,7 +412,7 @@ if (!defined('_EYOOM_')) exit;
                 <p class="tit">몽선생의 유학정보 <br class="tablet">카달로그를 받아보고 싶다면?</p >
             </div>
             <div class="frm_form">
-				<form name="ebookfrm" id="ebookfrm" action="" method="POST" enctype="multipart/form-data" class="frm" data-aos="fade-up">
+				<form name="ebookfrm" id="ebookfrm" action="<?php echo $ebookfrm_url; ?>" method="POST" enctype="multipart/form-data" class="frm" data-aos="fade-up">
 					<div class="form_wrap">
 						<p class="form_tit">원활한 소통을 위해 아래 정보들을 입력해주세요.</p>
 						<div class="form_box">
@@ -525,7 +529,7 @@ if (!defined('_EYOOM_')) exit;
 				<p class="note_txt">*원어민 선생님과 듀오링고 기출 문제를 집중적으로 풀고 단기간에 효과를 볼 수 있어요.</p>
 			</div>
 			<div class="btnbox">
-				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeA modal_close">닫기</button>
 				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
 			</div>
 		</div>
@@ -604,7 +608,7 @@ if (!defined('_EYOOM_')) exit;
 				<p class="note_txt">*영어가 완성되지 않은 예비 유학생을 위한, 실전 대학 수업 대비반 수업 입니다.</p>
 			</div>
 			<div class="btnbox">
-				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeA modal_close">닫기</button>
 				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
 			</div>
 		</div>
@@ -683,7 +687,7 @@ if (!defined('_EYOOM_')) exit;
 				<p class="note_txt">*그림과 전공 작품 모든 것을 빠르고 효과적으로 준비할 수 있는 프로그램 입니다.</p>
 			</div>
 			<div class="btnbox">
-				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeA modal_close">닫기</button>
 				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
 			</div>
 		</div>
@@ -756,7 +760,7 @@ if (!defined('_EYOOM_')) exit;
 				<p class="note_txt">*레벨테스트를 통해, 영어 레벨을 확인하고 수강 기간을 맞춤으로 설정할 수 있어요.</p>
 			</div>
 			<div class="btnbox">
-				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeA modal_close">닫기</button>
 				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
 			</div>
 		</div>
@@ -835,69 +839,310 @@ if (!defined('_EYOOM_')) exit;
 				<p class="note_txt">*체험 클래스 1회를 통해 수업을 미리 확인하고 등록할 수 있어요.</p>
 			</div>
 			<div class="btnbox">
-				<button type="button" class="btn typeA">닫기</button>
+				<button type="button" class="btn typeA modal_close">닫기</button>
 				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div id="ebook_modal0" class="cm_modal detail_modal ebook_modal">	
+<div id="ebook2_modal" class="cm_modal detail_modal ebook2_modal">	
 	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
 		<div class="cm_modal_box">
 			<div class="titbox">
 				<p class="title">
-					<span class="tit">제목이 들어갑니다.</span>
-					<span class="small">부제목이 들어갑니다.</span>
+					<span class="tit"></span>
+					<span class="small"></span>
 				</p>
-				<p class="desc">
-					줄거리가 짧게 들어갑니다. <br>
-					서비스 내역은 클릭하게 되면 이런식으로 팝업이 뜨는데요. 저희 엑셀로 된 자료를 드릴거에요. 상단 제목만 잘보이게 하고, 엑셀의 상세 내용은 블러처리하고 하단에 상담 신청 후 리스트 받기 이런거를 넣으시면 되어요.
-				</p>
+			</div>			
+			<div class="swiprbox">
+				<div class="swiper ebook2_swiper ebook2_swiper1 on">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img1.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img2.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img3.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img4.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img5.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img6.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img7.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img8.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img9.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img10.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m1_img11.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="swiper-scrollbar scrollbar"></div>
+				</div>		
+				<div class="swiper ebook2_swiper ebook2_swiper2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m2_img1.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m2_img2.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m2_img3.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m2_img4.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m2_img5.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m2_img6.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="swiper-scrollbar scrollbar"></div>
+				</div>	
+				<div class="swiper ebook2_swiper ebook2_swiper3">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m3_img1.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m3_img2.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m3_img3.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m3_img4.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m3_img5.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m3_img6.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="swiper-scrollbar scrollbar"></div>
+				</div>	
+				<div class="swiper ebook2_swiper ebook2_swiper4">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m4_img1.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m4_img2.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m4_img3.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m4_img4.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m4_img5.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m4_img6.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="swiper-scrollbar scrollbar"></div>
+				</div>	
+				<div class="swiper ebook2_swiper ebook2_swiper5">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img1.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img2.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img3.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img4.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img5.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img6.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img7.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img8.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img9.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img10.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img11.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img12.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img13.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img14.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img15.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img16.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img17.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img18.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m5_img19.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="swiper-scrollbar scrollbar"></div>
+				</div>	
+				<div class="swiper ebook2_swiper ebook2_swiper6">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img1.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img2.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img3.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img4.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img5.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img6.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img7.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img8.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img9.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img10.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img11.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img12.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img13.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img14.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img15.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img16.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img17.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img18.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img19.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img20.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img21.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img22.jpg" alt="" class="img">
+						</div>
+						<div class="swiper-slide item">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/eb2_m6_img23.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="swiper-scrollbar scrollbar"></div>
+				</div>	
 			</div>
-			<div class="contbox">
-				<div class="contitem">
-					<p class="cont_tit">무료 접수 신청</p>
-					<p class="cont_desc">
-						줄거리가 짧게 들어갑니다. <br>
-						서비스 내역은 클릭하게 되면 이런식으로 팝업이 뜨는데요. 저희 엑셀로 된 자료를 드릴거에요. 상단 제목만 잘보이게 하고, 엑셀의 상세 내용은 블러처리하고 하단에 상담 신청 후 리스트 받기 이런거를 넣으시면 되어요.
-					</p>
+			<form name="catalogform" id="catalogform" action="<?php echo $catalogfrm_url; ?>" method="POST" enctype="multipart/form-data" class="frm">
+				<input type="hidden" name="frm_catalog" value="">
+				<div class="form_wrap">
+					<p class="form_note">*기재된 메일주소로 전체 카달로그를 보내드립니다.</p>
+					<div class="form_box">
+						<div class="form_item">
+							<div class="input_box">
+								<p class="label_text">
+									이름<span class="required">*</span>
+								</p>
+								<input type="text" name="frm_name" class="input_text" placeholder="" required>							
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<p class="label_text">
+									연락처<span class="required">*</span>
+								</p>
+								<input type="text" name="frm_tel" class="input_text" placeholder="-  없이 입력 숫자만 입력" required>							
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<p class="label_text">
+									이메일<span class="required">*</span>
+								</p>
+								<input type="text" name="frm_email" class="input_text" placeholder="" required>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="contitem">
-					<p class="cont_desc">
-						줄거리가 짧게 들어갑니다. <br>
-						서비스 내역은 클릭하게 되면 이런식으로 팝업이 뜨는데요. 저희 엑셀로 된 자료를 드릴거에요. 상단 제목만 잘보이게 하고, 엑셀의 상세 내용은 블러처리하고 하단에 상담 신청 후 리스트 받기 이런거를 넣으시면 되어요.
-					</p>
-				</div>
-			</div>
-			<div class="note_box">
-				<p class="note_txt">*미국대학은 일반적으로 국내고 내신과 영어공인시험이 요구되고, 대학에 따라사 SAT 및 자소서를 추가로 요청합니다.</p>
-			</div>
-			<div class="btnbox">
-				<button type="button" class="btn typeA">닫기</button>
-				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div id="ebook2_modal" class="cm_modal detail_modal ebook_modal">	
-	<div class="cm_modal_inner">
-		<button type="button" class="cm_modal_close"></button>
-		<div class="cm_modal_box">
-			<div class="titbox">
-				<p class="title">
-					<span class="tit">듀오링고 DET 실전반!</span>
-					<span class="small">원어민 소규모 수업구성</span>
-				</p>
-			</div>
-			<form enctype="multipart/form-data" id="catalogform" name="catalogform" method="post"  action="<?php echo G5_URL ?>/page/?pid=catalogfrm_send">
-
+				<div class="form_btnbox">
+					<div class="check_box">
+						<input type="checkbox" name="frm_agree" class="input_check" id="ct1_agree" required>
+						<label for="ct1_agree" class="label_check">개인정보수집 및 이용안내 동의</label>
+					</div>
+					<button type="button" class="term_view" onclick="privacy_modal()">내용보기</button>
+				</div>					
 			</form>
 			<div class="btnbox">
-				<button type="button" class="btn typeA">닫기</button>
-				<button type="button" class="btn typeC">상카달로그 신청</button>
+				<button type="button" class="btn typeA modal_close">닫기</button>
+				<button type="button" class="btn typeC" onclick="catalogSubmit_modal()">카달로그 신청</button>
 			</div>
 		</div>
 	</div>
@@ -924,8 +1169,7 @@ if (!defined('_EYOOM_')) exit;
 				<p class="modal_tit">카달로그를 신청할까요?</p>
 				<p class="modal_desc">
 					조금만 기기려주시면 <br>
-					이메일로 카달로그를 보내드리겠습니다. <br>
-					(테스트 모달) 
+					이메일로 카달로그를 보내드리겠습니다.
 				</p>
 			</div>
 			<div class="btnbox">
@@ -948,15 +1192,78 @@ if (!defined('_EYOOM_')) exit;
 
 	/* 폼 제출 팝업 */
 	function formSubmit_modal() {
-		$("body").addClass('hidden');
-		$(".formSubmit_modal").addClass('show');
+		const form = $('#ebookfrm');
+		const name    = form.find('[name="frm_name"]').val().trim();
+		const tel     = form.find('[name="frm_tel"]').val().trim();
+		const email   = form.find('[name="frm_email"]').val().trim();
+		const content = form.find('[name="frm_content"]').val().trim();
+		const agree   = form.find('[name="frm_agree"]').is(':checked');
+
+		if (!name) {
+			showToast('이름을 입력해주세요.');
+			form.find('[name="frm_name"]').focus();
+			return;
+		}
+		if (!tel) {
+			showToast('연락처를 입력해주세요.');
+			form.find('[name="frm_tel"]').focus();
+			return;
+		}
+		if (!email) {
+			showToast('이메일을 입력해주세요.');
+			form.find('[name="frm_email"]').focus();
+			return;
+		}
+		if (!content) {
+			showToast('문의사항을 입력해주세요.');
+			form.find('[name="frm_content"]').focus();
+			return;
+		}
+		if (!agree) {
+			showToast('개인정보수집 및 이용안내에 동의해주세요.');
+			return;
+		}
+
+		// 유효성 통과 → 확인 모달 오픈
+		$('body').addClass('hidden');
+		$('.formSubmit_modal').addClass('show');
 	}
 
 	/* 폼 제출 */
 	function form_submit() {
-		$('body').removeClass('hidden');
-		$('.formSubmit_modal').removeClass('show');
-		// $('#ebookfrm').trigger('submit');
+		$('#ebookfrm').submit();
+	}
+
+
+	/* 카달로그 신청 폼 제출 */
+	function catalogSubmit_modal() {
+		const form = $('#catalogform');
+		const name = form.find('[name="frm_name"]').val().trim();
+		const tel = form.find('[name="frm_tel"]').val().trim();
+		const email = form.find('[name="frm_email"]').val().trim();
+		const agree = form.find('[name="frm_agree"]').is(':checked');
+
+		if (!name) {
+			showToast('이름을 입력해주세요.');
+			form.find('[name="frm_name"]').focus();
+			return;
+		}
+		if (!tel) {
+			showToast('연락처를 입력해주세요.');
+			form.find('[name="frm_tel"]').focus();
+			return;
+		}
+		if (!email) {
+			showToast('이메일을 입력해주세요.');
+			form.find('[name="frm_email"]').focus();
+			return;
+		}
+		if (!agree) {
+			showToast('개인정보수집 및 이용안내에 동의해주세요.');
+			return;
+		}
+
+		form.submit();
 	}
 
 </script>

@@ -199,20 +199,28 @@ $('.select').each(function () {
 
 
 // modal
-$(".cm_modal .cm_modal_close").click(function () {
-	$("body").removeClass("hidden")
-	$(".cm_modal").removeClass("show")
+$(".cm_modal .cm_modal_close, .cm_modal .modal_close").click(function () {
+	$(this).closest('.cm_modal').removeClass("show");
+	if ($(".cm_modal.show").length === 0) {
+        $("body").removeClass("hidden");
+    }
 })
 $(document).mouseup(function (e) {
-	$('.cm_modal.show').each(function () {
+    const openModals = $('.cm_modal.show');
+    
+    if (openModals.length > 0) {
+        const $lastModal = openModals.last();
 
-		if ($(this).hasClass('notclose')) return;
+        if ($lastModal.hasClass('notclose')) return;
 
-		if ($(this).find('.cm_modal_box').has(e.target).length === 0) {
-			$(this).removeClass('show');
-			$('body').removeClass('hidden');
-		}
-	});
+        if ($lastModal.find('.cm_modal_box').has(e.target).length === 0) {
+            $lastModal.removeClass('show');
+            
+            if ($('.cm_modal.show').length === 0) {
+                $('body').removeClass('hidden');
+            }
+        }
+    }
 });
 
 
@@ -878,6 +886,43 @@ function ebook_modal(i) {
 	$("body").addClass('hidden');
 	$("#ebook_modal"+i).addClass('show');
 }
+function ebook2_modal(i) {
+    $("body").addClass('hidden');
+    $("#ebook2_modal").addClass('show');
+
+    $(".ebook2_swiper").removeClass('on');
+    $(".ebook2_swiper" + i).addClass('on');
+
+    if (i == 1) {
+        $("#ebook2_modal .tit").text("유학서비스 책자");
+        $("#ebook2_modal .small").text("SIM, PSB, KAPAN, JCU 등");
+        $("#ebook2_modal [name='frm_catalog']").val("유학서비스 책자");
+    } else if (i == 2) {
+        $("#ebook2_modal .tit").text("말레이시아 국제학교 책자");
+        $("#ebook2_modal .small").text("40여개 학교정보, MAP");
+        $("#ebook2_modal [name='frm_catalog']").val("말레이시아 국제학교 책자");
+    } else if (i == 3) {
+        $("#ebook2_modal .tit").text("싱가포르 대학 책자");
+        $("#ebook2_modal .small").text("국립대, 사립대, 예술대 통합본");
+        $("#ebook2_modal [name='frm_catalog']").val("싱가포르 대학 책자");
+    } else if (i == 4) {
+        $("#ebook2_modal .tit").text("말레이시아 대학 책자");
+        $("#ebook2_modal .small").text("사립대, 국립대 통합본");
+        $("#ebook2_modal [name='frm_catalog']").val("말레이시아 대학 책자");
+    } else if (i == 5) {
+        $("#ebook2_modal .tit").text("홍콩 대학 책자");
+        $("#ebook2_modal .small").text("3대 공립대 통합본");
+        $("#ebook2_modal [name='frm_catalog']").val("홍콩 대학 책자");
+    } else if (i == 6) {
+        $("#ebook2_modal .tit").text("미국 대학 책자");
+        $("#ebook2_modal .small").text("주요 TOP 100대학");
+        $("#ebook2_modal [name='frm_catalog']").val("미국 대학 책자");
+    }				
+}
+function ebook3_modal(i) {
+	$("body").addClass('hidden');
+	$("#ebook3_modal"+i).addClass('show');
+}
 
 // 전자북 스와이퍼
 const ebook_swiper = new Swiper('.ebook_swiper', {
@@ -892,6 +937,22 @@ const ebook_swiper = new Swiper('.ebook_swiper', {
 	navigation: {
 		nextEl: ".ebook_swiperbox .next_btn",
 		prevEl: ".ebook_swiperbox .prev_btn",
+	},
+})
+const ebook2_swiper = new Swiper('.ebook2_swiper', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 'auto',
+	spaceBetween: '4',
+	speed: 500,
+	scrollbar: {
+		el: ".ebook2_swiper .scrollbar",
+		draggable: true,
+	},
+	breakpoints: {
+		1080: {
+			spaceBetween: '8',
+		},
 	},
 })
 
