@@ -7,6 +7,13 @@ if (!defined('_EYOOM_')) exit;
 $catalogfrm_url = EYOOM_CORE_URL.'/page/proc/catalogfrm_send.php';
 $ebookfrm_url = EYOOM_CORE_URL.'/page/proc/ebookfrm_send.php';
 
+include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
+
+// 첫 번째 캡챠 (ebookfrm용)
+$captcha_html  = captcha_html();
+$captcha_js    = chk_captcha_js();
+
+
 ?>
 
 <div class="sub-page page-class page-ebook">
@@ -434,6 +441,11 @@ $ebookfrm_url = EYOOM_CORE_URL.'/page/proc/ebookfrm_send.php';
 							<div class="form_item">
 								<div class="input_box">
 									<textarea name="frm_content" class="input_text" placeholder="문의사항" required></textarea>
+								</div>
+							</div>
+							<div class="form_item">
+								<div class="vc-captcha">
+									<?php echo $captcha_html; ?>
 								</div>
 							</div>
 						</div>
@@ -1219,12 +1231,14 @@ $ebookfrm_url = EYOOM_CORE_URL.'/page/proc/ebookfrm_send.php';
 			form.find('[name="frm_content"]').focus();
 			return;
 		}
+
+		<?php echo $captcha_js; ?>
+
 		if (!agree) {
 			showToast('개인정보수집 및 이용안내에 동의해주세요.');
 			return;
 		}
-
-		// 유효성 통과 → 확인 모달 오픈
+		
 		$('body').addClass('hidden');
 		$('.formSubmit_modal').addClass('show');
 	}
@@ -1258,6 +1272,7 @@ $ebookfrm_url = EYOOM_CORE_URL.'/page/proc/ebookfrm_send.php';
 			form.find('[name="frm_email"]').focus();
 			return;
 		}
+
 		if (!agree) {
 			showToast('개인정보수집 및 이용안내에 동의해주세요.');
 			return;
