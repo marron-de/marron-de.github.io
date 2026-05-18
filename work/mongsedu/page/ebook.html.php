@@ -1115,6 +1115,7 @@ $captcha_js    = chk_captcha_js();
 			</div>
 			<form name="catalogform" id="catalogform" action="<?php echo $catalogfrm_url; ?>" method="POST" enctype="multipart/form-data" class="frm">
 				<input type="hidden" name="frm_catalog" value="">
+				<input type="text" name="hp_field" style="display:none !important" tabindex="-1" autocomplete="off" value="">
 				<div class="form_wrap">
 					<p class="form_note">*기재된 메일주소로 전체 카달로그를 보내드립니다.</p>
 					<div class="form_box">
@@ -1256,6 +1257,10 @@ $captcha_js    = chk_captcha_js();
 		const tel = form.find('[name="frm_tel"]').val().trim();
 		const email = form.find('[name="frm_email"]').val().trim();
 		const agree = form.find('[name="frm_agree"]').is(':checked');
+		
+		if (form.find('[name="hp_field"]').val() !== '') {
+			return; // 봇 차단, 조용히 막음
+		}
 
 		if (!name) {
 			showToast('이름을 입력해주세요.');
