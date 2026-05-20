@@ -1,0 +1,124 @@
+{%- style -%}
+
+	#main {padding-bottom:5rem}
+    .cate-collections > a { text-decoration:underline; color:#1C3327; }
+    
+    .collection-single-header {  position:relative; max-width:1200px; margin:10vh auto 20vh; text-align:center; }
+    .collection-single-header h3 { margin:0 0 40px; font-size:28px; font-weight:300; }
+    
+    .collection-single-header p { font-size:14px; line-height:1.45; margin:0 auto; text-align:center;  letter-spacing:0.04em; }
+    .collection-single-header p.ko { letter-spacing:-0.005em; opacity:0.85; font-size:15px; }
+    
+    .collection-slide .flickity-button { width:20%; height:100%; }
+    .collection-slide .flickity-button svg { display:none; }
+
+    .collection-slide-wrap { margin:160px -80px 80px; }
+    .collection-slide .slide-img { margin:0 80px; }
+    .collection-slide .slide-img img { height:60vh; }
+
+    .lookbook { font-size:0em;}
+    .lookbook img { display: block; padding: 12px 50px; position: relative; width: 100%; max-width: 1200px; width: 100%; }
+
+    .issue-slide .slide-img {  }
+    .issue-slide .slide-img img { display:block !important; height:100vh !important; max-width:auto !important; width:auto !important; }
+
+    .issue { font-size:0em; }
+    .issue .slide-img { display: block; padding: 12px 50px; position: relative;  width: 100% !important; max-width: 1200px !important; margin: 0 auto !important;
+    left: auto !important;  right: auto !important;  top: auto !important; bottom: auto !important;  display: flex; flex-direction: column; gap: 24px;} 
+    .issue .slide-img img { width:100%; padding:0; }
+    
+    .colleciton-single-desc { font-family: 'FBP', 'Pretendard','UNO',sans-serif !important; font-size: 1.2rem !important; line-height: 1.7 !important;}
+    .colleciton-single-desc * { font-family: inherit !important; font-size: 1.2rem !important; line-height: 1.7 !important;}
+    .colleciton-single-desc .serif { font-family: 'FBP', 'Pretendard','UNO',sans-serif !important; font-size: 1.2rem !important; line-height: 1.7 !important;}
+    
+    .thumbnail li.code-1 { display: none;}
+
+	.conbox { padding: 2.5rem 0.75rem 3.75rem; max-width: 100%;}
+    
+    @media only screen and (device-width: 780px),
+	only screen and (max-width: 780px),
+	screen and (max-device-width: 780px) {
+
+		#MainContent {padding: 90px 20px 0;}
+
+		.product-related.conbox {padding:0}
+
+		#main {padding-bottom:0}
+            
+		.collection-single-wrap {padding-top:3rem; padding-bottom:5rem}
+		.collection-single-header {  position:relative; max-width:1200px; margin:0 auto; text-align:center; }
+		.collection-single-header h3 { margin:0 0 40px; font-size:22px; font-weight:300; }
+		.collection-single-header p { column-count:1; }
+		.issue { margin-top:60px; }
+		.lookbook img, .issue .slide-img { width:100% !important; left:0 !important; top:0 !important; margin:0 !important; padding:10px 0; gap: 20px}
+		.issue .slide-img img { display:block !important; height:auto !important; max-width:100% !important; width:100% !important; }
+					
+		.colleciton-single-desc { font-size: 1rem !important;}    		
+		.colleciton-single-desc * {  font-size: 1rem !important; }    			
+		.colleciton-single-desc .serif {  font-size: 1rem !important;}
+
+    }
+    
+{%- endstyle -%}
+
+<product-info
+  id="MainProduct-{{ section.id }}"
+  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
+  data-section="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+  data-update-url="true"
+  data-url="{{ product.url }}"
+>
+
+  <div class="section collection-single-wrap">
+    {% comment %} 1. 상품 헤더 및 상세 설명 {% endcomment %}
+    <div class="row collection-single-header">
+      <h3 class="serif">{{ product.title }}</h3>
+      <div class="colleciton-single-desc">
+        <div class="pc_view">{{ product.metafields.custom.detail_desc}}</div>
+        <div class="mob_view">{{ product.metafields.custom.detail_desc_mob}}</div>
+      </div>
+    </div>
+
+    {% comment %} 2. 상품 미디어(메인+추가이미지 전체) {% endcomment %}
+    <div class="lookbook">
+      <div class="issue">
+        {% for media in product.media %}
+          {% if media.media_type == 'image' %}
+            <div class="slide-img">
+              <img src="{{ media | image_url: width: 1200 }}" alt="{{ product.title }}" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    {% comment %} 3. 관련 상품 (PC & Mobile 스와이퍼) {% endcomment %}
+    {% assign related_products = product.metafields.custom.related.value %}
+    {% if related_products != blank %}
+    <div class="row conbox product-related">
+        <h4 class="colpadding2 FBP">Recommended</h4>
+
+        <div class="pc_view">
+            <ul class="thumbnail">
+                {% for product in related_products %}
+                    <li class="col col33">{% render 'product-card-item', product: product %}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="swiper related-slider mob_view">
+            <ul class="thumbnail swiper-wrapper">
+                {% for product in related_products %}
+                    <li class="col col33 swiper-slide">
+						{% render 'product-card-item', product: product %}
+					</li>
+                {% endfor %}
+            </ul>
+            <div class="swiper-button-prev"><i class="xi-angle-left-thin"></i></div>
+            <div class="swiper-button-next"><i class="xi-angle-right-thin"></i></div>
+        </div>
+    </div>
+    {% endif %}
+  </div>
+</product-info>

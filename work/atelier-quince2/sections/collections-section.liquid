@@ -1,0 +1,69 @@
+{% assign metaobject_list = shop.metaobjects['collection_content'].values | sort: 'product_order' %}
+
+<div class="collection-wrap pc_view">
+    <div class="row collection-list collection-slide" id="product-slider">
+        {% for item in metaobject_list %}
+            {% assign target_collection = item.product_collection.value %}
+            
+            {% if target_collection != blank %}
+                {% for product in target_collection.products %}
+                    <div class="collection-item">
+                        <div class="collection-item-inner">
+                            <div class="collection-info">
+                                <p class="collection-no">{{ product.metafields.custom.simple_description }}</p>
+                                <p class="collection-title serif">
+                                    <a href="{{ product.url }}">{{ product.title }}</a>
+                                </p>
+                            </div>
+                            <div class="collection-image">
+                                <a href="{{ product.url }}">
+                                    <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}">
+                                </a>
+                            </div>
+                            <p class="collection-desc Font pc_view">
+                                {{ product.metafields.custom.thum_desc }}
+                            </p>
+                            <p class="collection-desc Font mob_view">
+                                {{ product.metafields.custom.thum_desc_mob }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="collection-wrap mob_view">
+	<div class="row collection-list">
+        {% for item in metaobject_list %}
+            {% assign target_collection = item.product_collection.value %}
+            
+            {% if target_collection != blank %}
+                {% for product in target_collection.products %}
+                    <div class="collection-item">
+                        <div class="collection-item-inner">
+                            <div class="collection-info">
+                                <p class="collection-no">{{ product.metafields.custom.simple_description }}</p>
+                                <p class="collection-title serif">
+                                    <a href="{{ product.url }}">{{ product.title }}</a>
+                                </p>
+                            </div>
+                            <div class="collection-image">
+                                <a href="{{ product.url }}">
+                                    <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}">
+                                </a>
+                            </div>
+                            <p class="collection-desc Font pc_view">
+                                {{ product.metafields.custom.thum_desc }}
+                            </p>
+                            <p class="collection-desc Font mob_view">
+                                {{ product.metafields.custom.thum_desc_mob }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

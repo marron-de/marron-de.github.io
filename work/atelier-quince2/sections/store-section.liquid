@@ -1,0 +1,76 @@
+{% assign offline_stores = shop.metaobjects.store_offline.values | sort: 'store_order' | reverse%}
+{% assign online_stores = shop.metaobjects.store_online.values | sort: 'store_order' | reverse %}
+{% assign online_slides = shop.metaobjects.store_online_slider.values | sort: 'store_banner_order' | reverse %}
+
+<div class="store-wrap type-1">
+    <div class="store-titbox">
+        <h2 class="title">STORE</h2>
+    </div>
+    <div class="store-list-wrap">
+        <ul class="store-list">
+            <li class="on"><a href="#" onclick="tabActive(this,event)" data-num="type-1">Offline Stores</a></li>
+            <li><a href="#" onclick="tabActive(this,event)" data-num="type-2">Online Stores</a></li>
+        </ul>
+        <ul class="store-second-depth">
+            <li class="on"><a href="#" onclick="secondTabActive(this,event)" data-depth="depth-1">All</a></li>
+            <li><a href="#" onclick="secondTabActive(this,event)" data-depth="depth-2">Seoul</a></li>
+            <li><a href="#" onclick="secondTabActive(this,event)" data-depth="depth-3">Rest of Korea</a></li>
+        </ul>
+    </div>
+    <div class="store-content">
+        <div class="store-tab-list">
+            
+            {% for store in offline_stores %}
+			{% assign depth_value = 'depth-1' %}
+			{% case store.store_depth %}
+				{% when 'Seoul' %}
+					{% assign depth_value = 'depth-2' %}
+				{% when 'Rest of Korea' %}
+					{% assign depth_value = 'depth-3' %}
+			{% endcase %}
+            <div class="store-tab {% if forloop.first %}on{% endif %}" data-num="type-1" data-depth="{{ depth_value }}" onclick="posCurrent(this)">
+                <div class="store-info">
+                    <div class="store-info-item en">
+                        <p class="tit">{{ store.store_title }}</p>
+                        <p class="desc">{{ store.store_desc}}</p>
+                    </div>
+                    <div class="icon"><i class="ph ph-map-pin"></i><i class="ph-fill ph-map-pin"></i></div>
+                </div>
+                <div class="store-map">
+                    {{ store.store_map }}
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="store-tab" data-num="type-2">
+                <div class="store-linkbox">
+                    {% for store in online_stores %}
+                    <a href="{{ store.store_link }}" class="store-info" target="{% if store.storer_link_target %}_blank{% else %}_self{% endif %}">
+                        <div class="store-info-item kr">
+                            <p class="tit">{{ store.store_kr_title }}</p>
+                            <p class="desc">{{ store.store_kr_desc }}</p>
+                        </div>
+                        <div class="store-info-item en">
+                            <p class="tit">{{ store.store_en_title }}</p>
+                            <p class="desc">{{ store.store_en_desc }}</p>
+                        </div>
+                        <div class="icon"><i class="ph ph-share-fat"></i></div>
+                    </a>
+                    {% endfor %}
+                </div>
+				<div class="store-slider">
+                    <div class="swiper location-slider">    
+                        <div class="swiper-wrapper"> 
+                            {% for slide in online_slides %}
+                            <div class="swiper-slide">
+                                <img src="{{ slide.store_banner_img | image_url: width: 1000 }}" alt="{{ slide.store_banner_name }}">
+                            </div>
+                            {% endfor %}
+                        </div>             
+                    </div>
+                </div>
+            </div>
+
+        </div>            
+    </div>
+</div>
