@@ -104,14 +104,14 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 								<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="linktab">방문상담</a>
 							</li>
 							<li>
-								<a href="<?php echo G5_URL ?>/page/?pid=counsel02" class="linktab">화상상담</a>
+								<a href="<?php echo G5_URL ?>/page/?pid=counsel02" class="linktab">유선/화상상담</a>
 							</li>
 							<li>
 								<a href="<?php echo G5_URL ?>/page/?pid=counsel03" class="linktab">설명회</a>
 							</li>
-							<li>
+							<!-- <li>
 								<a href="<?php echo G5_URL ?>/page/?pid=counsel04" class="linktab">수업/CLASS</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 
@@ -133,17 +133,17 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">신청(필수)</p>
+						<p class="form_label">관심분야<span class="required">*</span></p>
 						<div class="radio_wrap">
 							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type1" class="input_radio" required value="국제학교">
 								<label for="cs_type1" class="label_radio">국제학교</label>
 							</div>
-							<!-- <div class="radio_box">
+							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type2" class="input_radio" value="대학">
 								<label for="cs_type2" class="label_radio">대학</label>
-							</div> -->
-							<div class="radio_box">
+							</div>
+							<!-- <div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type2_1" class="input_radio" value="사립대">
 								<label for="cs_type2_1" class="label_radio">사립대</label>
 							</div>
@@ -154,7 +154,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type2_3" class="input_radio" value="국립대">
 								<label for="cs_type2_3" class="label_radio">국립대</label>
-							</div>
+							</div> -->
 							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type3" class="input_radio" value="대학원">
 								<label for="cs_type3" class="label_radio">대학원</label>
@@ -162,6 +162,10 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type4" class="input_radio" value="어학연수">
 								<label for="cs_type4" class="label_radio">어학연수</label>
+							</div>
+							<div class="radio_box">
+								<input type="radio" name="cs_type" id="cs_type6" class="input_radio" value="수업">
+								<label for="cs_type6" class="label_radio">수업</label>
 							</div>
 							<div class="radio_box no_full">
 								<input type="radio" name="cs_type" id="cs_type5" class="input_radio" value="스쿨링/캠프">
@@ -171,7 +175,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">국가(필수)</p>
+						<p class="form_label">관심국가<span class="required">*</span></p>
 						<div class="radio_wrap">
 							<div class="radio_box">
 								<input type="radio" name="cs_nation" id="cs_nation1" class="input_radio" required value="싱가포르">
@@ -223,7 +227,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 
 					<?php if ($is_use_captcha) { ?>
 					<div class="form_item">
-						<p class="form_label">자동등록방지</p>
+						<p class="form_label">자동등록방지<span class="required">*</span></p>
 						<div class="vc-captcha"><?php echo $captcha_html; ?></div>
 					</div>
 					<?php } ?>
