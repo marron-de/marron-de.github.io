@@ -3,6 +3,13 @@
 /* PC */
 @media screen and (max-width: 1560px) {    
 
+  	.sticky_sidemenu { right: 2rem; }
+
+}
+
+
+@media screen and (max-width: 1560px) {    
+
   	html {font-size: 15.5px !important;}  
 
 }
@@ -49,8 +56,10 @@
 	.header .h_inner .h_logo a { width: 5.6rem;}
 	.header .h_inner .back_btn {background: url(../img/common/back_btn.svg) no-repeat center / contain; width: 3.2rem; aspect-ratio: 1 / 1;}
 	.header .h_inner .menu_open {background: url(../img/common/menu_open.svg) no-repeat center / contain; width: 2.4rem; aspect-ratio: 1 / 1;}
+	.header .h_inner .home_btn {background: url(../img/common/home_btn.svg) no-repeat center / contain; width: 2.6rem; aspect-ratio: 1 / 1; margin-left: auto;}
 	.header.detail .h_inner .h_logo a {display: none;}
 	.header.detail .h_inner .back_btn {display: block;}
+	.header.detail .h_inner .home_btn {display: block;}
 	.header .h_inner .h_side {display: none;}
 	.header .h_inner .h_nav { gap: unset; justify-content: space-between;}
 	.header .h_inner .h_nav > li > .link { height: unset;  font-size: 1.4rem;  font-weight: 600;  padding: 1.6rem 0;}
@@ -144,7 +153,7 @@
 
 
 	.counsel-btn, .eb-backtotop { z-index: 100; bottom: 8.4rem; width: 5.6rem; height: unset; aspect-ratio: 1 / 1; font-size: 2.4rem; display: flex; align-items: center; justify-content: center;}
-	.counsel-btn { right: 1.6rem;}
+	.counsel-btn { right: 1.6rem; display: none}
 	.eb-backtotop { right: 1.6rem; display: none;}
 	.counsel-btn.hide, .eb-backtotop.hide {display: none;}
 
@@ -175,9 +184,12 @@
 	.detail_modal .cm_modal_box .note_box .note_txt { font-size: 1.3rem;  line-height: 160%;}
 	.detail_modal .cm_modal_box .btnbox .btn { font-size: 1.5rem; height: 5rem; border-radius: 0.6rem; }
 
-	.image_modal .cm_modal_box { width: 100%; height: 100%; max-height: 100%; border-radius: 2rem; padding: 0 1rem; }
-	.image_modal .cm_modal_box .cm_modal_imgbox {padding: 1rem 0;}
+    .image_modal .cm_modal_inner { max-width: 32.8rem; }
+	.image_modal .cm_modal_box { width: 100%; height: 100%; max-height: 100%; border-radius: 1.6rem; padding: 0 0.8rem; }
+	.image_modal .cm_modal_close {width: 2.6rem;}
+	.image_modal .cm_modal_box .cm_modal_imgbox {padding: 0.8rem 0;}
 	.image_modal .cm_modal_box .cm_modal_imgbox::-webkit-scrollbar {display: none;}
+	.image_modal .cm_modal_box .cm_modal_imgbox .img { border-radius: 1rem;}
 
 
 
@@ -261,17 +273,18 @@
 	.presentation_list .panel ul.swiper-wrapper li .img_area {height: 12.4rem;}
 	.presentation_list .panel ul li .img_area img:not(.flag) { height: 100%;   object-fit: cover;}
 	.presentation_list .panel ul li .img_area .bg {aspect-ratio: 204/124;}
-	.presentation_list .panel ul.swiper-wrapper li .img_area .flag { top: 1.2rem;  left: 1.2rem;  width: 3rem;}
+	.presentation_list .panel ul li.end .img_area::before { font-size: 2.2rem;}
+	.presentation_list .panel ul.swiper-wrapper li .img_area .flag { top: 1.2rem;  left: 1.2rem;  width: 3rem; border-radius: 0.2rem;}
 	.presentation_list .panel ul.swiper-wrapper li .img_area .title { gap: 0.4rem;  padding: 0 1.2rem 1.4rem;}
 	.presentation_list .panel ul.swiper-wrapper li .img_area .title span.tit { font-weight: 800; font-size: 1.8rem;}
-	.presentation_list .panel ul.swiper-wrapper li .text_area {  gap: 1.4rem;  padding: 1rem 1.2rem 1.8rem;}
+	.presentation_list .panel ul.swiper-wrapper li .text_area {  gap: 1rem;  padding: 1rem 1.2rem 1.8rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox { gap: 0.4rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox .nation, 
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox .place {  border-radius: 0.3rem;  padding: 0.3rem 0.6rem;  font-size: 1.1rem;}
-	.presentation_list .panel ul.swiper-wrapper li .text_area .title { font-size: 1.6rem; letter-spacing: -0.02em;}
+	.presentation_list .panel ul.swiper-wrapper li .text_area .title { font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 0.4rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area ul {  gap: 0.6rem;}
-	.presentation_list .panel ul.swiper-wrapper li .text_area ul li { gap: 0.8rem;}
-	.presentation_list .panel ul.swiper-wrapper li .text_area ul p {  font-size: 1.2rem;  color: var(--typeB-sub2);}
+	.presentation_list .panel ul.swiper-wrapper li .text_area ul li { gap: 1.2rem;}
+	.presentation_list .panel ul.swiper-wrapper li .text_area ul p {  font-size: 1.3rem;}
 
 	.presentation_list .panel > li > ul:not(.swiper-wrapper) > li { width: 100%; border-radius: 1.4rem;}
 	.presentation_list .panel ul:not(.swiper-wrapper) li .img_area {height: 18.8rem;}
@@ -279,7 +292,7 @@
 	.presentation_list .panel ul:not(.swiper-wrapper) li .img_area .title {gap: 0.4rem; padding: 0 2rem 2rem;}
 	.presentation_list .panel ul:not(.swiper-wrapper) li .img_area .title span {  font-size: 2rem;}
 	.presentation_list .panel ul:not(.swiper-wrapper) li .img_area .title span.tit { font-size: 2.8rem;}
-	.presentation_list .panel ul:not(.swiper-wrapper) li .text_area { padding: 1.6rem 1.6rem 2rem;  gap: 1.4rem;}
+	.presentation_list .panel ul:not(.swiper-wrapper) li .text_area { padding: 1.6rem 1.6rem 2rem;  gap: 1rem;}
 	.presentation_list .panel ul:not(.swiper-wrapper) li .text_area .badgebox { gap: 0.6rem;}
 	.presentation_list .panel ul:not(.swiper-wrapper) li .text_area .badgebox .nation, 
 	.presentation_list .panel ul:not(.swiper-wrapper) li .text_area .badgebox .place { font-size: 1.2rem;   padding: 0.4rem 0.8rem; border-radius: 0.5rem;}
@@ -298,7 +311,7 @@
 	.counsel_list .panel > li > ul > li .img_area .img_txtbox .sub { font-size: 1.2rem;}
 	.counsel_list .panel > li > ul > li .img_area .img_txtbox .tit { font-size: 1.8rem;}
 	.counsel_list .panel > li > ul > li .img_area .img_txtbox .tit .color { font-size: 1.8rem;}
-	.counsel_list .panel > li > ul > li .img_area .flag { bottom: 1rem;  left: 1rem;  width: 3rem;}
+	.counsel_list .panel > li > ul > li .img_area .flag { bottom: 1rem;  left: 1rem;  width: 3rem; border-radius: 0.2rem;}
 	
 	.counsel_list .panel > li > ul > li .text_area { padding: 1.2rem 0 0;}
 	.counsel_list .panel > li > ul > li .text_area > a { gap: 0.4rem;}
@@ -779,11 +792,9 @@
 	.board-view.page-detail .frame-2e.sm.float ul li { gap: 1.6rem;}
 	.board-view.page-detail .frame-2e.sm.float ul li span { width: 5.2rem;}
 	.board-view.page-detail .frame-2e.sm ul li p { gap: 0.6rem;}
-	.board-view.page-detail .frame-2e.sm ul li p .state_badge {  border-radius: 0.4rem;  padding: 0.6rem 0.5rem; font-size: 1.1rem;}
+	.board-view.page-detail .frame-2e.sm ul li p .state_badge { border-radius: 0.4rem; padding: 0 0.5rem; font-size: 1.1rem; height: 2rem;  width: unset; }
 	.board-view.page-detail .view-top-btn { position: relative; right: auto; top: auto;}
 	.board-view.page-detail .fixed_btnbox { z-index: 10;}
-
-
 
 
 	/* 수업듣기 상세 */	
@@ -809,7 +820,6 @@
 
 
 	/* 수속하기 */
-
 	.banner_area.procedure.ver2 { padding-bottom: 4rem;}
 	.banner_area.procedure .banner .imgbox { width: 60%;  max-width: 22.1rem;}
 
@@ -1079,6 +1089,7 @@
 	.page-form .counsel_wrap .form_box { gap: 3.2rem;}
 	.page-form .counsel_wrap .form_box .form_item { gap: 1.2rem;}
 	.page-form .counsel_wrap .form_box .form_label { font-size: 1.4rem;}
+	.page-form .counsel_wrap .form_box .form_label.bk {font-size: 1.6rem;}
 	.page-form .counsel_wrap .tab_box { gap: 0.8rem 0.6rem;  flex-wrap: wrap;}
 	.page-form .counsel_wrap .tab_box > li { flex: unset;}
 	.page-form .counsel_wrap .tab_box > li .linktab {  font-size: 1.4rem;  padding: 1.2rem 1.6rem;  border-radius: 0.6rem;}
@@ -1178,6 +1189,7 @@
 	.page-univ .univ_list .item .txtbox .bottom { margin-top: 1rem;}
 	.page-univ .univ_list .item .txtbox .bottom .txt { font-size: 1.2rem;}
 	.page-univ .univ_list .item .txtbox .bottom .more { width: 1.6rem;}
+	.page-univ .univ_list .item.no_item .no_item_txt { padding: 12rem 0; font-size: 1.7rem;}
 
 	.page-univ .msection.univ_info_list { padding: 4.8rem 0 4rem; gap: 4rem;}
 	.page-univ .msection.univ_info_list.ver2 {padding-top: 0;}
@@ -1228,6 +1240,32 @@
 	.basicboard_form .ms.title_area .tab_tit > li:last-child::before {display: none;}
 	.basicboard_form .ms.title_area .tab_tit > li a { font-size: 1.5rem;}
 	.basicboard_form .ms.title_area .btnbox .btn { font-size: 1.2rem;  height: 3.4rem;  padding: 0 1.2rem;}
+
+	.admission_ver .banner_area.ver2 { padding-bottom: 4rem; }	
+	.admission_ver .basicboard_form .ms.title_area { margin-bottom: 2rem;  gap: 1.6rem 1rem;}
+	.admission_ver .basicboard_form .ms.title_area .tab_tit { order: 2; flex: unset;   width: 100%; margin: 0; gap: 1rem;}
+	.admission_ver .basicboard_form .ms.title_area .tab_tit > li { padding-right: 1rem; }
+	.admission_ver .basicboard_form .ms.title_area .tab_tit > li a { font-size: 1.5rem;}
+	.admission_ver .presentation_list .panel ul {gap: 2.4rem 0.8rem;}
+	.presentation_list .panel > li > ul:not(.swiper-wrapper) > li { width: calc((100% - 0.8rem) / 2); border-radius: 1rem;}
+    .admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area {padding: 1rem 1rem 1.8rem; gap: 1rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .img_area { height: 10.7rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .img_area .flag { top: 1.2rem; left: 1.2rem; width: 3rem; border-radius: 0.2rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .img_area .title { padding: 0 1.2rem 1.2rem;}
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .img_area .title span {      font-weight: 700; font-size: 1rem; line-height: 100%;}
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .img_area .title span.tit {font-weight: 800; font-size: 1.7rem; line-height: 100%; letter-spacing: -0.02em; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area .badgebox {  gap: 0.4rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area .badgebox .nation, 
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area .badgebox .place { font-size: 1.1rem; padding: 0 0.6rem; border-radius: 0.3rem; height: 2rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area .title {  font-size: 1.6rem; letter-spacing: -0.04em; margin-bottom: 0.4rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area ul { gap: 0.6rem;}
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area ul li { gap: 1rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .text_area ul p {  color: var(--basic-middlegray);  font-size: 1.2rem; line-height: 130%;  letter-spacing: -0.02em;}
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .btn_area { padding: 0 1rem 1rem;  gap: 0.5rem; flex-direction: column; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li .btn_area a {font-size: 1.4rem; padding: 1rem 0; border-radius: 0.6rem; }
+	.admission_ver .presentation_list .panel ul:not(.swiper-wrapper) li.end .img_area::before {font-size: 1.8rem;}	
+	.basicboard_paging.ver2 { margin-top: 4rem; }
+
 	.basicboard_form .bl-wrap { gap: 1.2rem;}
 	.basicboard_form .bl-list { border-radius: 0.6rem; padding: 1.6rem;  gap: 1.2rem 0.6rem;  flex-wrap: wrap; justify-content: unset;}
 	.board-list .bl-head .bl-num-checkbox, .board-list .bl-list .bl-num-checkbox { width: unset !important;  display: flex !important; gap: 0.4rem;  order: 1; }
@@ -1449,7 +1487,7 @@
 	.ebook2_modal .cm_modal_box .form_item .input_box .label_text { width: 4.4rem;  font-size: 1.4rem;}
 	.ebook2_modal .cm_modal_box .form_item .input_box .input_text { height: 4.4rem;  border-radius: 0.4rem; padding: 0 01.6rem; font-size: 1.5rem;}
 	.ebook2_modal .cm_modal_box .form_btnbox .check_box { gap: 0.6rem;}
-	.ebook2_modal .cm_modal_box .form_btnbox .check_box .input_check { width: 2.4rem;}
+	.ebook2_modal .cm_modal_box .form_btnbox .check_box .input_check { width: 2.4rem; height: 2.4rem;}
 	.ebook2_modal .cm_modal_box .form_btnbox .check_box .label_check { font-size: 1.4rem;}
 	.ebook2_modal .cm_modal_box .form_btnbox .term_view {  font-size: 1.1rem;   border-radius: 0.4rem; padding: 0.5rem 0.6rem;}
 

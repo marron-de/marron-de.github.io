@@ -45,7 +45,26 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item item2">
+					<div class="swiper-slide item item4">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner4_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner4_bg_mob.jpg" alt="" class="bg tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">설명회</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">5월30일(토)</p>
+								<p class="tit">
+									<span class="color">싱가포르 대학 온라인 설명회</span>
+									<br>국립대/사립대 통합
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=31" class="btn typeE">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="swiper-slide item item2">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg_mob.jpg" alt="" class="bg tablet">
@@ -63,7 +82,7 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=29" class="btn typeB">설명회 바로가기</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="swiper-slide item item3">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg.jpg" alt="" class="bg pc">
@@ -1864,8 +1883,9 @@ if (!defined('_EYOOM_')) exit;
                 <div class="tab swiper tab_swiper" data-gappc="0" data-gapmob="12">
                     <ul class="tab_tit swiper-wrapper">
                         <li class="swiper-slide"><a href="#" class="show" id="tab-41">말레이시아 국제학교</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-42">싱가포르/말레이시아 대학</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-43">기타 질문</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-42">싱가포르 대학</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-43">말레이시아 대학</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-44">유학 상담 · 수속</a></li>
                     </ul>
                 </div>
             </div>
@@ -1927,50 +1947,66 @@ if (!defined('_EYOOM_')) exit;
                         <ul class="faq_list">
 							<li>
 								<div class="question">
-									말레이시아 국제학교 학비는 보통 얼마인가요?
+									싱가포르 대학은 한국 내신 몇 등급이면 지원 가능한가요?
 								</div>
 								<div class="answer">
-									학교 등급에 따라 연간 1,000만 원~3,500만 원까지 다양합니다. 가성비 높은 학교부터 명문 보딩스쿨까지 예산에 맞춘 선택이 가능합니다.
+									싱가포르 국립대인 NUS, NTU, SMU는 일반적으로 한국 내신 1~2등급 이상의 최상위권 성적이 필요합니다.
+									또한 AP, SAT, IB 같은 추가 공인시험 점수가 요구되는 경우가 많습니다.
+									반면 싱가포르 사립대 SIM, PSB, Kaplan, JCU 등은 고등학교 평균 내신 약 55~70점 이상이면 지원 가능한 경우가 많으며, 예술대학은 포트폴리오 중심 평가로 내신 반영 비율이 낮은 편입니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									쿠알라룸푸르와 조호바루 중 어느 지역의 국제학교가 더 유리할까요?
+									검정고시로 싱가포르 대학 지원이 가능한가요?
 								</div>
 								<div class="answer">
-									인프라와 교육열은 쿠알라룸푸르가 높고, 쾌적한 주거 환경과 통학 편의성은 조호바루가 강점입니다. 가족의 생활 패턴에 따라 결정해야 합니다.
+									네, 가능합니다. 싱가포르 국립대 NUS, NTU, SMU는 검정고시만으로 입학하기 매우 어렵지만, 사립대 SIM, PSB, Kaplan, JCU 및 예술대학은 검정고시 성적을 인정하는 경우가 많습니다.특히 검정고시 이후 파운데이션 과정이나 디플로마 과정을 통해 싱가포르 대학으로 진학하는 사례도 많습니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									영국식과 미국식 교육 커리큘럼의 차이점은 무엇인가요?
+									SIM·PSB·JCU 같은 싱가포르 사립대의 장점은 무엇인가요?
 								</div>
 								<div class="answer">
-									영국식(IGCSE/A-Level)은 학업적 깊이가 있고, 미국식(AP)은 창의성과 활동을 중시합니다. 자녀의 향후 대학 진학 국가를 고려하는 것이 좋습니다.
+									싱가포르 사립대의 가장 큰 장점은 한국 학생도 비교적 현실적으로 해외 명문대 학위를 취득할 수 있다는 점입니다.
+									SIM, PSB, JCU 등의 대학은 영국·호주 본교 학위를 운영하는 경우가 많으며, 일부 과정은 교환학생이나 해외 캠퍼스 이동도 가능합니다.
+									또한 한국보다 졸업 기간이 짧은 경우가 많고, 영어 환경 속에서 해외 취업 경험까지 연결할 수 있다는 장점이 있습니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									가디언(보호자) 비자 발급 절차와 부모님이 동반할 때 주의사항은 무엇인가요?
+									싱가포르 사립대 졸업 후 취업은 가능한가요?
 								</div>
 								<div class="answer">
-									학생 비자 1건당 부모 중 1명이 동반 비자를 받을 수 있습니다. 최근 심사가 까다로워졌으므로 전문 수속 대행을 통하는 것이 안전합니다.
+									싱가포르 사립대 졸업 후 현지 및 해외 취업에 성공하는 사례는 꾸준히 있습니다. 싱가포르 사립대학 평균 취업률은 약 60% 이상으로 조사된 바 있으며(출처: SkillsFuture Singapore), 국제학생 비율이 높은 환경 특성상 글로벌 취업을 준비하는 학생들도 많습니다. 또한 싱가포르는 아시아 금융·IT·물류 허브 국가로 평가되며, 미국·영국 대비 상대적으로 취업 비자 제도가 유연한 편이라는 장점이 있습니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									말레이시아 국제학교 졸업 후 해외 명문대 진학 사례가 많은가요?
+									NUS·NTU는 어떤 학생들이 합격하나요?
 								</div>
 								<div class="answer">
-									말레이시아 국제학교 졸업생들은 뛰어난 영어 실력을 바탕으로 영국, 호주, 미국뿐 아니라 아시아권 명문대로 다수 진학하고 있습니다.
+									NUS, NTU, SMU 같은 싱가포르 국립대는 한국 특목고·자사고·국제학교 출신 학생들의 지원 비율이 높습니다.
+									특히 IB, AP, A-Level 등의 국제 커리큘럼 성적이 매우 중요하게 평가됩니다.
+									예를 들어 IB 기준으로는 평균 40점 이상 수준의 최상위권 성적이 합격권으로 평가되며, 전세계 상위권 학생들과 경쟁해야 하기 때문에 높은 학업 역량이 요구됩니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									입학 시기는 언제인가요? (9월 학기 vs 1월 학기 준비 전략)
+									싱가포르 대학 학비와 생활비는 얼마나 드나요?
 								</div>
 								<div class="answer">
-									보통 8~9월이 신학기이며, 1월에도 중도 입학이 가능합니다. 다만 인기 학교는 대기가 길 수 있으니 최소 6개월 전 준비를 권장합니다.
+									싱가포르 사립대 SIM, PSB, Kaplan, JCU 등은 전체 졸업까지 학비 포함 약 6천만~8천만원 수준이 일반적입니다.
+									국립대 NUS, NTU, SMU는 학비와 생활비를 포함하면 전체 유학 비용이 약 1억~1억5천만원 이상 들어갈 수 있습니다.
+									예술대학 LASALLE은 전공에 따라 차이가 있지만 일반적으로 약 1억원 내외의 비용이 발생합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									싱가포르 대학 입학 시 영어 점수 기준은 어떻게 되나요?
+								</div>
+								<div class="answer">
+									싱가포르 대학은 대부분 IELTS 또는 TOEFL 같은 영어 공인점수를 요구합니다. 사립대 SIM, PSB, Kaplan, JCU 등은 일반적으로 IELTS 5.5~6.0 수준을 요구하며, 조건부 입학이나 영어과정(EAP)을 제공하는 학교도 있습니다. 국립대 NUS, NTU, SMU는 훨씬 높은 영어 능력을 요구하며, IELTS 6.5~7.0 이상의 점수가 필요한 경우가 많습니다.
 								</div>
 							</li>
                 		</ul>
@@ -1979,50 +2015,135 @@ if (!defined('_EYOOM_')) exit;
                         <ul class="faq_list">
 							<li>
 								<div class="question">
-									말레이시아 국제학교 학비는 보통 얼마인가요?
+									말레이시아 대학 졸업장은 한국에서도 인정되나요?
 								</div>
 								<div class="answer">
-									학교 등급에 따라 연간 1,000만 원~3,500만 원까지 다양합니다. 가성비 높은 학교부터 명문 보딩스쿨까지 예산에 맞춘 선택이 가능합니다.
+									네, 말레이시아 대학 졸업장은 대부분 한국에서도 정식 학력으로 인정됩니다. 다만 한국 교육부 인정 여부와 전공별 인증 조건은 학교에 따라 차이가 있을 수 있습니다. 특히 모나쉬 말레이시아, 노팅엄 말레이시아 같은 해외분교 형태의 대학은 본교와 동일한 학위를 발급하기 때문에 국제적으로 인지도가 높은 편입니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									쿠알라룸푸르와 조호바루 중 어느 지역의 국제학교가 더 유리할까요?
+									말레이시아 대학 학비는 어느정도 들어가나요?
 								</div>
 								<div class="answer">
-									인프라와 교육열은 쿠알라룸푸르가 높고, 쾌적한 주거 환경과 통학 편의성은 조호바루가 강점입니다. 가족의 생활 패턴에 따라 결정해야 합니다.
+									말레이시아 대학은 졸업까지 학비가 약 5천만원 수준으로 한국 대학 등록금과 비슷하며, 실제 유학생활 (기숙사,용돈) 등도 저렴한 편이라 졸업까지 약 7천~9천만원이 총 유학비용으로 지출됩니다. 
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									영국식과 미국식 교육 커리큘럼의 차이점은 무엇인가요?
+									말레이시아 대학 순위는 어느 정도인가요?
 								</div>
 								<div class="answer">
-									영국식(IGCSE/A-Level)은 학업적 깊이가 있고, 미국식(AP)은 창의성과 활동을 중시합니다. 자녀의 향후 대학 진학 국가를 고려하는 것이 좋습니다.
+									말레이시아에는 세계대학순위(QS 기준)에 진입한 대학들이 많이 있습니다. 대표적으로 말라야대학교(UM)는 세계 100위권 수준으로 평가되며, UKM·USM·UPM 같은 국립대도 아시아권에서 경쟁력이 높은 편입니다. 사립대 기준으로는 Taylor’s University, Sunway University, UCSI 등이 국제학생들에게 인기가 많습니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									가디언(보호자) 비자 발급 절차와 부모님이 동반할 때 주의사항은 무엇인가요?
+									말레이시아 대학은 영어로 수업하나요?
 								</div>
 								<div class="answer">
-									학생 비자 1건당 부모 중 1명이 동반 비자를 받을 수 있습니다. 최근 심사가 까다로워졌으므로 전문 수속 대행을 통하는 것이 안전합니다.
+									대부분의 말레이시아 사립대학과 국제과정은 영어로 수업을 진행합니다. 특히 해외분교 대학이나 국제학생 비율이 높은 대학들은 영어 사용 환경이 매우 강한 편입니다. 다만 일부 국립대 전공이나 현지 과정은 말레이어 수업이 포함될 수 있기 때문에 전공별 확인이 필요합니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									말레이시아 국제학교 졸업 후 해외 명문대 진학 사례가 많은가요?
+									모나쉬·테일러스·선웨이의 차이는 무엇인가요?
 								</div>
 								<div class="answer">
-									말레이시아 국제학교 졸업생들은 뛰어난 영어 실력을 바탕으로 영국, 호주, 미국뿐 아니라 아시아권 명문대로 다수 진학하고 있습니다.
+									Monash Malaysia는 호주 모나쉬대학교의 말레이시아 캠퍼스로, 본교와 동일한 학위를 제공하는 해외분교 형태입니다. Taylor’s University는 호텔경영·비즈니스·디자인 분야가 강점인 말레이시아 대표 사립대이며, 국제학생 비율이 높은 편입니다. Sunway University는 영국 Lancaster University와 복수학위 프로그램으로 유명하며, 시설과 캠퍼스 환경이 우수하다는 평가를 받고 있습니다.
 								</div>
 							</li>
 							<li>
 								<div class="question">
-									입학 시기는 언제인가요? (9월 학기 vs 1월 학기 준비 전략)
+									말레이시아 대학 편입은 쉬운 편인가요?
 								</div>
 								<div class="answer">
-									보통 8~9월이 신학기이며, 1월에도 중도 입학이 가능합니다. 다만 인기 학교는 대기가 길 수 있으니 최소 6개월 전 준비를 권장합니다.
+									말레이시아 대학은 미국·영국식 학점 시스템을 사용하는 경우가 많아 편입이 비교적 유연한 편입니다. 특히 디플로마 → 학사과정, 또는 타국 대학으로의 학점 인정 사례도 많은 편입니다. 다만 전공 연계성, GPA, 영어 성적에 따라 인정 범위는 달라질 수 있습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									한국 내신이 낮아도 말레이시아 대학 진학이 가능한가요?
+								</div>
+								<div class="answer">
+									네, 가능합니다. 말레이시아 사립대학은 한국 내신 4~6등급 수준 학생들도 지원 가능한 경우가 많으며, 파운데이션 과정을 통해 대학 진학이 가능한 학교들도 많습니다. 특히 입시 경쟁보다는 영어 능력과 기본 학업 역량을 중심으로 평가하는 경우가 많아 한국 학생들에게 진입장벽이 비교적 낮은 편입니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									말레이시아 대학 졸업 후 영국·호주 편입도 가능한가요?
+								</div>
+								<div class="answer">
+									네, 가능합니다. 말레이시아 대학은 영국·호주 대학과 연계된 트위닝(Twinning) 프로그램이나 Credit Transfer 시스템을 운영하는 경우가 많습니다. 이를 통해 말레이시아에서 1~2년 공부 후 영국·호주 본교로 편입하거나, 최종 학위를 해외 본교에서 받는 방식도 가능합니다.
+								</div>
+							</li>
+                		</ul>
+                    </li>
+                    <li id="content-44">
+                        <ul class="faq_list">
+							<li>
+								<div class="question">
+									유학 상담은 어디서 받을 수 있나요?
+								</div>
+								<div class="answer">
+									몽선생 유학원은 서울 강남역 도보 1분 거리에 위치하고 있습니다. 사전 예약 후 방문하시면 싱가포르·말레이시아 유학 상담을 편하게 받을 수 있으며, 학생 성향과 예산에 맞춘 1:1 맞춤 상담이 진행됩니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									몽선생 유학원은 어느 국가를 전문적으로 다루나요?
+								</div>
+								<div class="answer">
+									몽선생 유학원은 싱가포르·말레이시아 대학 교직원 출신 전문가들이 직접 운영하는 유학원입니다. 
+									특히 대표 원장은 싱가포르에서 약 12년간 국제교류부서 팀장으로 근무하며 실제 학교 행정과 국제학생 관리 경험을 보유하고 있습니다. 단순 유학 알선이 아닌, 현지 교육 시스템과 입학 프로세스를 실제 경험한 전문가 중심의 상담이 강점입니다. 
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									유학 상담 시간은 얼마나 진행되나요?
+								</div>
+								<div class="answer">
+									평균적으로 약 60분 내외의 1:1 심층 유학 상담이 진행됩니다. 담당 실장과 학생의 성적, 영어 실력, 예산, 진로 방향 등을 종합적으로 분석하여 국가·학교·전공별 맞춤 상담을 제공합니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									온라인 상담도 가능한가요?
+								</div>
+								<div class="answer">
+									네, 가능합니다. 해외 거주자나 지방 거주자를 위해 ZOOM 기반 실시간 온라인 유학 상담도 운영하고 있습니다. 온라인 상담 역시 오프라인과 동일하게 1:1 맞춤 방식으로 진행됩니다.
+								</div>
+							</li>						
+							<li>
+								<div class="question">
+									유학 전에 준비할 수 있는 수업이나 프로그램도 있나요?
+								</div>
+								<div class="answer">
+									네, 준비 과정이 마련되어 있습니다. 몽선생 유학원은 국제학교 입학시험 대비, IELTS·SAT·AP 같은 영어 및 공인시험 준비, 해외대학 예습반 등 다양한 맞춤형 교육 프로그램을 운영하고 있습니다. 특히 국제학교부터 해외대학 진학까지 연결되는 장기 로드맵 형태의 준비가 가능하다는 점이 특징입니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									무료 수속은 무엇인가요?
+								</div>
+								<div class="answer">
+									무료 수속은 별도의 유학원 수속비 없이 학교 지원 및 입학 절차를 진행하는 방식입니다. 일부 싱가포르·말레이시아 대학 및 국제학교는 학교 공식 파트너 유학원을 통해 진행될 경우 수속비가 발생하지 않는 경우가 있습니다. 다만 학교별 정책과 지원 과정에 따라 포함 범위는 달라질 수 있습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									말레이시아 현지 정착 서비스는 어디까지 지원되나요?
+								</div>
+								<div class="answer">
+									말레이시아 현지 정착 서비스는 공항 픽업, 숙소 계약, 은행 계좌 개설, 통신 개통, 학교 등교 준비 등 초기 생활 적응 과정 전반을 지원합니다. 또한 보호자 동반 정착, 생활 안내, 지역 정보 제공 등 말레이시아 현지 생활에 필요한 부분들도 함께 안내하고 있습니다.
+								</div>
+							</li>
+							<li>
+								<div class="question">
+									말레이시아 현지 직원이나 법인 운영도 하고 있나요?
+								</div>
+								<div class="answer">
+									네, 말레이시아 현지 직원 및 법인 운영이 이루어지고 있습니다. 몽선생 유학원은 2000년대 초반부터 쿠알라룸프 현지에서 활동해온 담당자가 상주하고 있으며, 말레이시아 현지 법인 사업자 등록도 운영 중입니다. 이를 통해 한국과 말레이시아 양국에서 안정적인 학생 관리 및 현지 지원 시스템을 제공하고 있습니다.
 								</div>
 							</li>
                 		</ul>

@@ -569,7 +569,7 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="showToast()">
+                            <li onclick="pro_modal(5)">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure05.jpg" alt="미국+싱가포르 2개국 입학 컨설팅">
 									<div class="img_txtbox ver3">
@@ -753,6 +753,17 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="cm_modal_imgbox">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_modal4_img.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro_modal5" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro_modal5_img.jpg" alt="" class="img">
 			</div>
 		</div>
 	</div>

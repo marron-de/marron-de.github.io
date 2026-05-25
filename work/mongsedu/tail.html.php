@@ -165,6 +165,7 @@ $(document).ready(function() {
 
 
 <script src="<?php echo EYOOM_THEME_URL; ?>/js/custom.js?ver=<?php echo G5_JS_VER; ?>"></script>
+<script type="module" src="<?php echo EYOOM_THEME_URL; ?>/js/univ_info.js?ver=<?php echo G5_JS_VER; ?>"></script>
 
 <?php
 if ( $config['cf_analytics'] ) echo $config['cf_analytics'];

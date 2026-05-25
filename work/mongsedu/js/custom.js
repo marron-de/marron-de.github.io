@@ -20,6 +20,11 @@ function updateLayoutMargin() {
 
     document.body.style.setProperty('--margin-left', `${margin}px`);
     document.body.style.setProperty('--margin-right', `${margin}px`);
+
+    const sideMenu = document.querySelector('.sticky_sidemenu');
+    if (sideMenu) {
+		sideMenu.classList.add('show');
+    }
 }
 window.addEventListener('resize', updateLayoutMargin);
 document.addEventListener('DOMContentLoaded', updateLayoutMargin);
@@ -844,7 +849,6 @@ $(document).ready(function () {
 			},
 			breakpoints: {
 				1080: {
-					slidesPerView: 4,
 					spaceBetween: 12,
 				},
 			},
@@ -872,13 +876,6 @@ $(document).ready(function () {
 		});
 	}
 });
-
-// 학교정보 상세 모달
-function univ_modal(i) {
-	$("body").addClass('hidden');
-	$("#univ_modal_"+i).addClass('show');
-}
-
 
 /* 전자북/책자 */
 // 전자북/책자 상세 모달
@@ -1372,7 +1369,12 @@ $(document).ready(function () {
 				});
 			}
 
-			if(isAdmissionDetail) { //설명회 상세
+			if(isAdmissionDetail) { //설명회 상세<?php echo G5_BBS_URL ?>/board.php?bo_table=admission
+
+				$('.header .h_inner .back_btn').on('click', function() {
+					const targetUrl = `${window.location.origin}/bbs/board.php?bo_table=admission`;
+					window.location.href = targetUrl;
+				});
 
 				$('.board-view.page-detail .board-view-subj').prependTo('.board-view.page-detail .frame-15d')
 

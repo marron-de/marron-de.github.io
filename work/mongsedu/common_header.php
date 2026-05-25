@@ -88,6 +88,7 @@
 				<a href="<?php echo G5_URL; ?>">
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/logo.svg" class="logo_img" alt="<?php echo $config['cf_title']; ?>">
 				</a>
+				<button type="button" class="home_btn" onclick="location.href='<?php echo G5_URL ?>'"></button>
 				<button type="button" class="menu_open tablet"></button>
 			</div>
 			<ul class="h_nav">

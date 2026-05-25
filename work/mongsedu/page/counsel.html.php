@@ -55,14 +55,14 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 			</div> 
             <ul class="cs_info">
                 <li>
-                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_picker.svg" alt="" class="icon">
+                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_picker_color.svg" alt="" class="icon">
                     <div class="text_area">
                         <span>방문상담</span>
                         <p>몽선생 사무실에 방문하여 보다 상세한 상담이 가능해요.</p>
                     </div>
                 </li>
                 <li>
-                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_phone.svg" alt="" class="icon">
+                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_phone_color.svg" alt="" class="icon">
                     <div class="text_area">
                         <span>전화상담</span>
                         <p>02)6052-9003</p>
@@ -70,7 +70,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
                 </li>
                 <li>
 					<a href="https://pf.kakao.com/_fxmxmWV" class="link" target="_blank">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_kakaotalk.svg" alt="" class="icon">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_kakaotalk_color.svg" alt="" class="icon">
 						<div class="text_area">
 							<span>카톡상담</span>
 							<p>간단한 응대는 실시간 카톡상담이 더 빨라요.</p>
@@ -98,7 +98,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 				</h5>
 				<div class="form_box">
 					<div class="form_item">
-						<p class="form_label">원하시는 상담 종류를 선택해주세요.</p>
+						<p class="form_label">*는 필수 표시 정보입니다.</p>
 						<ul class="tab_box">
 							<li class="on">
 								<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="linktab">방문상담</a>
@@ -116,11 +116,11 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">상담 전 아래 내용을 기재 해 주시기 바랍니다.</p>
+						<!-- <p class="form_label">상담 전 아래 내용을 기재 해 주시기 바랍니다.</p> -->
 						<div class="input_box">
-							<input type="text" name="cs_name" class="input_text" placeholder="이름(필수)" required>
-							<input type="text" name="cs_tel" class="input_text" placeholder="연락처(필수) - 없이 입력 숫자만 입력" required>
-							<input type="text" name="cs_email" class="input_text" placeholder="이메일(선택)">
+							<input type="text" name="cs_name" class="input_text" placeholder="이름*" required>
+							<input type="text" name="cs_tel" class="input_text" placeholder="연락처*" required>
+							<input type="text" name="cs_email" class="input_text" placeholder="이메일*">
 							<!-- <div class="select_box">
 								<select name="cs_gender" class="select select2" data-placeholder="성별">
 									<option value="">성별</option>
@@ -133,7 +133,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">관심분야<span class="required">*</span></p>
+						<p class="form_label bk">관심분야<span class="required">*</span></p>
 						<div class="radio_wrap">
 							<div class="radio_box">
 								<input type="radio" name="cs_type" id="cs_type1" class="input_radio" required value="국제학교">
@@ -168,14 +168,14 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 								<label for="cs_type6" class="label_radio">수업</label>
 							</div>
 							<div class="radio_box no_full">
-								<input type="radio" name="cs_type" id="cs_type5" class="input_radio" value="스쿨링/캠프">
-								<label for="cs_type5" class="label_radio">스쿨링/캠프</label>
+								<input type="radio" name="cs_type" id="cs_type5" class="input_radio" value="캠프/스쿨링">
+								<label for="cs_type5" class="label_radio">캠프/스쿨링</label>
 							</div>
 						</div>
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">관심국가<span class="required">*</span></p>
+						<p class="form_label bk">관심국가<span class="required">*</span></p>
 						<div class="radio_wrap">
 							<div class="radio_box">
 								<input type="radio" name="cs_nation" id="cs_nation1" class="input_radio" required value="싱가포르">
@@ -205,7 +205,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 					</div>
 
 					<div class="form_item">
-						<p class="form_label">문의사항</p>
+						<p class="form_label bk">문의사항</p>
 						<div class="input_box">
 							<textarea name="cs_content" class="input_text" placeholder="문의사항을 남겨주세요." required></textarea>
 							<!-- <?php echo $editor_html; ?> -->
@@ -227,7 +227,7 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 
 					<?php if ($is_use_captcha) { ?>
 					<div class="form_item">
-						<p class="form_label">자동등록방지<span class="required">*</span></p>
+						<p class="form_label bk">자동등록방지<span class="required">*</span></p>
 						<div class="vc-captcha"><?php echo $captcha_html; ?></div>
 					</div>
 					<?php } ?>
@@ -237,13 +237,13 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 							<input type="checkbox" name="cs_agree" class="input_check" value="1" id="cs_agree" required>
 							<label for="cs_agree" class="label_check">개인정보수집 및 이용안내 동의</label>
 						</div>
-						<button type="button" class="agree_view" onclick="privacy_modal()">내용보기</button>
+						<button type="button" class="agree_view" onclick="privacy_modal()">내용 보기</button>
 					</div>	
 				
 				</div>
 				<div class="form_btnbox">
 					<!-- <button class="form_btn submit_btn" type="submit" value="신청하기" dus>신청하기</button> -->
-					<button type="button" class="form_btn submit_btn" value="신청하기" disabled onclick="formSubmit_modal(this.form)">신청하기</button>
+					<button type="button" class="form_btn submit_btn" value="상담신청하기" disabled onclick="formSubmit_modal(this.form)">상담신청하기</button>
 				</div>
 			</div> 
         </form>

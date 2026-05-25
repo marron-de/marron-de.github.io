@@ -542,7 +542,7 @@ $captcha_js    = chk_captcha_js();
 			</div>
 			<div class="btnbox">
 				<button type="button" class="btn typeA modal_close">닫기</button>
-				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+				<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="btn typeC">상담신청 후 리스트 받기</a>
 			</div>
 		</div>
 	</div>
@@ -621,7 +621,7 @@ $captcha_js    = chk_captcha_js();
 			</div>
 			<div class="btnbox">
 				<button type="button" class="btn typeA modal_close">닫기</button>
-				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+				<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="btn typeC">상담신청 후 리스트 받기</a>
 			</div>
 		</div>
 	</div>
@@ -700,7 +700,7 @@ $captcha_js    = chk_captcha_js();
 			</div>
 			<div class="btnbox">
 				<button type="button" class="btn typeA modal_close">닫기</button>
-				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+				<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="btn typeC">상담신청 후 리스트 받기</a>
 			</div>
 		</div>
 	</div>
@@ -773,7 +773,7 @@ $captcha_js    = chk_captcha_js();
 			</div>
 			<div class="btnbox">
 				<button type="button" class="btn typeA modal_close">닫기</button>
-				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+				<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="btn typeC">상담신청 후 리스트 받기</a>
 			</div>
 		</div>
 	</div>
@@ -852,7 +852,7 @@ $captcha_js    = chk_captcha_js();
 			</div>
 			<div class="btnbox">
 				<button type="button" class="btn typeA modal_close">닫기</button>
-				<button type="button" class="btn typeC">상담신청 후 리스트 받기</button>
+				<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="btn typeC">상담신청 후 리스트 받기</a>
 			</div>
 		</div>
 	</div>
