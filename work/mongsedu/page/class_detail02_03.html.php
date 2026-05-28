@@ -154,9 +154,9 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="interview">유학을 준비하는 학생들이 전공 관련 기본 이론을 미리 학습하고, 에세이 작성 및 토론 능력을 강화하여 실제 대학 입학 후 수업 환경에 빠르게 적응할 수 있도록 돕는 것을 목표로 합니다. </span >
                                     </div>
                                     <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

@@ -1,24 +1,19 @@
-import { univData1 } from '../univ_info/univ_info_data1.js';
-import { univData2 } from '../univ_info/univ_info_data2.js';
-import { univData3 } from '../univ_info/univ_info_data3.js';
-import { univData4 } from '../univ_info/univ_info_data4.js';
-import { univData5 } from '../univ_info/univ_info_data5.js';
-import { univData6 } from '../univ_info/univ_info_data6.js';
-import { univData7 } from '../univ_info/univ_info_data7.js';
-import { univData8 } from '../univ_info/univ_info_data8.js';
-import { univData9 } from '../univ_info/univ_info_data9.js';
+import { univData1 } from '../univ_info/univ_info_data1.js'; // 말레이시아 대학
+import { univData2 } from '../univ_info/univ_info_data2.js'; // 말레이시아 국제학교
+import { univData3 } from '../univ_info/univ_info_data3.js'; // 송도 대학
+import { univData4 } from '../univ_info/univ_info_data4.js'; // 베트남 국제학교
+import { univData5 } from '../univ_info/univ_info_data5.js'; // 태국 국제학교
+import { univData6 } from '../univ_info/univ_info_data6.js'; // 싱가포르 국립대
+import { univData7 } from '../univ_info/univ_info_data7.js'; // 홍콩 국립대
+import { univData8 } from '../univ_info/univ_info_data8.js'; // 싱가포르 예술대
+import { univData9 } from '../univ_info/univ_info_data9.js'; // 싱가포르 사립대
 
 const univData = Object.assign({},
-	univData1,
-	univData2,
-	univData3,
-	univData4,
-	univData5,
-	univData6,
-	univData7,
-	univData8,
-	univData9,
+    univData1, univData2, univData3,
+    univData4, univData5, univData6,
+    univData7, univData8, univData9,
 );
+
 let currentKey = '';
 let currentItem = null;
 

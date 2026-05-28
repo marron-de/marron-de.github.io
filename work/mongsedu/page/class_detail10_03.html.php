@@ -147,9 +147,9 @@ if (!defined('_EYOOM_')) exit;
                                         </span >
                                     </div>
                                     <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

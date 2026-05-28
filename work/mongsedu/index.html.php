@@ -22,7 +22,7 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="swiper banner_swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide item item1">
+					<!-- <div class="swiper-slide item item1">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg_mob.jpg" alt="" class="bg tablet">
@@ -44,6 +44,45 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=31" class="btn typeB">설명회 바로가기</a>
 							</div>
 						</div>
+					</div> -->
+					<div class="swiper-slide item item5">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg_mob.jpg" alt="" class="bg tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">온라인 설명회</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">6월27일(토) 11:00</p>
+								<p class="tit">
+									<span class="color">싱가포르 | 말레이시아</span>
+									<br>
+									명문 사립대 입학설명회
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=36" class="btn typeF">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide item item2">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg_mob.jpg" alt="" class="bg tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">온라인 설명회</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">6월27일(토) 13:00</p>
+								<p class="tit">
+									아시아 TOP 예술대 <br>
+									LASALLE 입학설명회
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=35" class="btn typeB">설명회 바로가기</a>
+							</div>
+						</div>
 					</div>
 					<div class="swiper-slide item item4">
 						<div class="bgbox">
@@ -52,37 +91,19 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<div class="txtbox">
 							<div class="topbox">
-								<span class="badge">설명회</span>
+								<span class="badge">온라인 설명회</span>
 							</div>
 							<div class="bottombox">
-								<p class="sub">5월30일(토)</p>
+								<p class="sub">6월27일(토) 17:30</p>
 								<p class="tit">
-									<span class="color">싱가포르 대학 온라인 설명회</span>
-									<br>국립대/사립대 통합
+									<span class="color">2027학년도 대비</span>
+									<br>
+									싱가포르 | 홍콩 국립대 설명회
 								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=31" class="btn typeE">설명회 바로가기</a>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=34" class="btn typeE">설명회 바로가기</a>
 							</div>
 						</div>
 					</div>
-					<!-- <div class="swiper-slide item item2">
-						<div class="bgbox">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg_mob.jpg" alt="" class="bg tablet">
-						</div>
-						<div class="txtbox">
-							<div class="topbox">
-								<span class="badge">서울 강남</span>
-							</div>
-							<div class="bottombox">
-								<p class="sub">5월16일(토)</p>
-								<p class="tit">
-									싱가포르 예술대 <br>
-									입학처장 단독 설명회
-								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=29" class="btn typeB">설명회 바로가기</a>
-							</div>
-						</div>
-					</div> -->
 					<div class="swiper-slide item item3">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg.jpg" alt="" class="bg pc">

@@ -352,9 +352,9 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="interview">검증된 원어민 선생님이 직접 학생의 현재 수준을 진단하여, 문법·어휘·듣기·스피킹 등 기초 전 영역을 체계적으로 학습할 수 있도록 설계되었습니다. 수업은 학생의 이해도와 학습 속도에 맞춰 진행되며, 복잡한 문법 개념도 실생활 예시와 반복 훈련을 통해 단기간 실력 향상을 기대할 수 있습니다.</span >
                                     </div>
                                     <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

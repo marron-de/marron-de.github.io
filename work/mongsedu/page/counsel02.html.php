@@ -174,7 +174,27 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 						</div>
 					</div>
 
-					<div class="form_item">
+					<div class="form_item class_item">
+						<p class="form_label bk">관심 수업<span class="required">*</span></p>
+						<div class="select_box">
+							<select name="cs_class" class="select select2" data-placeholder="관심 수업">
+								<option value="">관심 수업</option>
+								<?php echo eb_contents('1779794640'); ?>
+							</select>
+						</div>		
+					</div>
+
+					<div class="form_item camp_item">
+						<p class="form_label bk">관심 캠프/스쿨링<span class="required">*</span></p>
+						<div class="select_box">
+							<select name="cs_camp" class="select select2" data-placeholder="관심 캠프/스쿨링">
+								<option value="">관심 캠프/스쿨링</option>
+								<?php echo eb_contents('1779794675'); ?>
+							</select>
+						</div>		
+					</div>
+
+					<div class="form_item flag_item">
 						<p class="form_label bk">관심국가<span class="required">*</span></p>
 						<div class="radio_wrap">
 							<div class="radio_box">
@@ -306,54 +326,103 @@ $counsel_part = explode(',', $config['cf_counsel_part']);
 <script src="<?php echo EYOOM_THEME_URL; ?>/plugins/sweetalert2/sweetalert2.min.js"></script>
 
 <script>
-	// 필수값 체크
 	const form = $('#csregister');
 	const btn = form.find('.submit_btn');
-	const checkRequired = () => {
-	let ok = true;
-	form.find('[required]').each(function () {
-		const el = $(this);
+	
+	// 필수값 체크 함수
+    const checkRequired = () => {
+        let ok = true;
+        form.find('[required]').each(function () {
+            const el = $(this);
 
-		if (el.is(':checkbox')) {
-		if (!el.is(':checked')) ok = false;
-		} else if (el.is(':radio')) {
-		const name = el.attr('name');
-		if (!form.find('input[name="' + name + '"]:checked').length) ok = false;
-		} else {
-		if (!el.val()) ok = false;
-		}
-	});
-	btn.prop('disabled', !ok);
-	};
-	form.on('input change', 'input, select, textarea', checkRequired);
-	checkRequired();
+            if (el.is(':checkbox')) {
+                if (!el.is(':checked')) ok = false;
+            } else if (el.is(':radio')) {
+                const name = el.attr('name');
+                if (!form.find('input[name="' + name + '"]:checked').length) ok = false;
+            } else {
+                if (!el.val()) ok = false;
+            }
+        });
+        btn.prop('disabled', !ok);
+    };
 
-	// 개인정보 모달
-	function privacy_modal() {
-		$("body").addClass('hidden');
-		$(".privacy_modal").addClass('show');
-	}
+	// 관심분야 변경 시 토글 처리
+    form.on('change', 'input[name="cs_type"]', function() {
+        const typeValue = $(this).val();
+        
+        $('.flag_item input[name="cs_nation"]').removeAttr('required');
+        
+        // 초기화: 두 셀렉트박스의 required와 name을 모두 제거하고 값 리셋
+        $('.class_item select').removeAttr('required').removeAttr('name').val('').trigger('change');
+        $('.camp_item select').removeAttr('required').removeAttr('name').val('').trigger('change');
 
-	// 입력값 체크
-	function formSubmit_modal(f) {
-		// let k = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		// if (!k.test(String(f.cs_email.value).toLowerCase())) {
-		// 	$("body").addClass('hidden');
-		// 	$(".formAlert_modal").addClass('show');
-		// 	return;
-		// }
+        if (typeValue === '수업') {
+            $('.flag_item').hide();
+            $('.camp_item').hide();
+            $('.class_item').css('display', 'flex');
+            
+            // 수업 셀렉트박스에만 name="cs_class"와 required 부여
+            $('.class_item select').attr('name', 'cs_class').attr('required', true);
+            $('.flag_item input[name="cs_nation"]').prop('checked', false);
 
-		<?php echo $captcha_js; ?>
+        } else if (typeValue === '캠프/스쿨링') {
+            $('.flag_item').hide();
+            $('.class_item').hide();
+            $('.camp_item').css('display', 'flex');
+            
+            // 캠프 셀렉트박스에만 name="cs_class"와 required 부여
+            $('.camp_item select').attr('name', 'cs_class').attr('required', true);
+            $('.flag_item input[name="cs_nation"]').prop('checked', false);
 
-		$("body").addClass('hidden');
-		$(".formSubmit_modal").addClass('show');
-	}
+        } else {
+            $('.class_item').hide();
+            $('.camp_item').hide();
+            $('.flag_item').css('display', 'flex');
+            
+            $('.flag_item input[name="cs_nation"]').first().attr('required', true);
+        }
 
-	// 폼 제출
-	function form_submit() {
-		$('body').removeClass('hidden');
-		$('.formSubmit_modal').removeClass('show');
-		$('#csregister').trigger('submit');
-	}
+        checkRequired();
+    });
+
+    form.on('input change', 'input, select, textarea', checkRequired);
+    
+    if(form.find('input[name="cs_type"]:checked').length) {
+        form.find('input[name="cs_type"]:checked').trigger('change');
+    } else {
+        checkRequired();
+    }
+
+	// 이벤트 바인딩 및 초기 실행
+    form.on('input change', 'input, select, textarea', checkRequired);
+    
+    // 페이지 로드 시 선택되어 있는 관심분야가 있다면 해당 화면에 맞추어 레이아웃 초기화
+    if(form.find('input[name="cs_type"]:checked').length) {
+        form.find('input[name="cs_type"]:checked').trigger('change');
+    } else {
+        checkRequired();
+    }
+
+    // 개인정보 모달
+    function privacy_modal() {
+        $("body").addClass('hidden');
+        $(".privacy_modal").addClass('show');
+    }
+
+    // 입력값 체크
+    function formSubmit_modal(f) {
+        <?php echo $captcha_js; ?>
+
+        $("body").addClass('hidden');
+        $(".formSubmit_modal").addClass('show');
+    }
+
+    // 폼 제출
+    function form_submit() {
+        $('body').removeClass('hidden');
+        $('.formSubmit_modal').removeClass('show');
+        $('#csregister').trigger('submit');
+    }
 
 </script>

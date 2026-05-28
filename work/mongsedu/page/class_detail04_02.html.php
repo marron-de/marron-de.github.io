@@ -149,9 +149,9 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="interview">국제학교 입학 시 보게 되는 CAT4, MAP테스트 그리고 인터뷰 준비까지 실제 시험 유형에 맞춘 모의 테스트를 통해 국제학교 입학 준비를 완벽하게 할 수 있습니다. <br> 초/중/고 학년별 그리고 희망하는 학교에 맞추어 1:1로 지도하여 성공적인 입학을 도와드립니다.</span >
                                     </div>
                                     <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

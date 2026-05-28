@@ -133,9 +133,9 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="interview">최대 정원 4명의 소수 정원으로 개인 맞춤 수업을 제공합니다. 온라인과 오프라인 병행수업으로  학생별 강점과 약점을 세밀하게 분석하고 개별 피드백을 제공하여 IELTS 6.0 목표 점수에 빠르게 도달할 수 있도록 모의시험과 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
                                     </div>
                                     <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

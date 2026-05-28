@@ -210,9 +210,9 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="interview">몽선생 듀오링고 CLASS는 DET 전문 원어민 선생님이 문제를 함께 풀이하며 2개월안에 빠르게 목표 점수를 도달할 수 있도록 구성되어 있습니다. <br>목표 점수에 빠르게 도달할 수 있도록 기출문제 교재를 통해 영역별 전략 훈련을 반복 훈련하는 과정입니다.</span >
                                     </div>
                                     <div class="button">
-                                        <div class="button-160">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

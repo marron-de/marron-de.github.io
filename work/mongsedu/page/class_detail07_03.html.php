@@ -153,9 +153,9 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="interview">유학 필수 에세이·리서치·토론을 12강으로 집중 훈련해 자료조사·리포트·프레젠테이션까지 실전 아카데믹 라이팅과 영어 기본기를 강화합니다.</span>
                                     </div>
                                     <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

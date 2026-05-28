@@ -467,7 +467,6 @@ $captcha_js    = chk_captcha_js();
     </div>
 </div>
 
-
 <div id="ebook_modal1" class="cm_modal detail_modal ebook_modal ver2">	
 	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
@@ -1246,8 +1245,17 @@ $captcha_js    = chk_captcha_js();
 
 	/* 폼 제출 */
 	function form_submit() {
-		$('#ebookfrm').submit();
-	}
+        const form = $('#ebookfrm');
+        const name = form.find('[name="frm_name"]').val().trim();
+        const tel  = form.find('[name="frm_tel"]').val().trim();
+		
+        if (!name || !tel) {
+            showToast('입력 정보가 올바르지 않습니다.');
+            return false;
+        }
+		
+        form.submit();
+    }
 
 
 	/* 카달로그 신청 폼 제출 */

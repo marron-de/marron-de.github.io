@@ -140,6 +140,11 @@
 					</a>
 				</li>
 				<li>
+					<a href="<?php echo G5_URL ?>/page/?pid=schooling" class="link">
+						<span class="txt">스쿨링/캠프</span>
+					</a>
+				</li>
+				<li>
 					<a href="<?php echo G5_URL ?>/page/?pid=special_duolingo" class="link point">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/menu_special_icon.svg" alt="" class="icon1">
 						<span class="txt">SPECIAL</span>
@@ -284,6 +289,11 @@
 			<li>
 				<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="title">
 					<span class="txt">CLASS</span>
+				</a>
+			</li>
+			<li>				
+				<a href="<?php echo G5_URL ?>/page/?pid=schooling" class="title">
+					<span class="txt">스쿨링/캠프</span>
 				</a>
 			</li>
 			<li class="special">

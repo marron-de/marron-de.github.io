@@ -162,9 +162,9 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="interview">실제 예술대 졸업한 선생님과 함께 각 전공에서 요구하는 스타일과 평가 기준에 맞춰 아이디어 기획, 작업 과정, 최종 작품 완성까지 전 과정을 단계별로 함께 진행하며, 꾸준한 피드백과 보완을 통해 합격 기준에 맞는 포트폴리오를 완성하도록 돕습니다.</span >
                                     </div>
                                     <div class="button">
-                                        <div class="button-160" onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel'">
+                                        <a href="https://pf.kakao.com/_fxmxmWV" class="button-160" target="_blank">
                                             <span class="service-request">CLASS 상담받기</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

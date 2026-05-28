@@ -111,7 +111,7 @@
 							</div>
 							<div class="txtbox">
 								<div class="tagbox">
-									<span class="tag">말레이시아</span>
+									<span class="tag">싱가포르</span>
 								</div>
 								<p class="title">
 									<span class="name">유성준 멘토</span>

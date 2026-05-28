@@ -9,6 +9,10 @@ window.addEventListener('load', function () {
 });
 
 
+// lucide
+lucide.createIcons();
+
+
 // layout
 function updateLayoutMargin() {
     const windowWidth = window.innerWidth;
@@ -387,8 +391,12 @@ function setActiveMenu() {
 		$('.header .h_inner .h_nav:not(.h_side) > li').eq(0).addClass('active');
 	}
 
-	if (search.indexOf('pid=special_duolingo') !== -1 || search.indexOf('pid=special_sogang') !== -1 || search.indexOf('pid=special_preparatory') !== -1 || search.indexOf('pid=special_malay') !== -1 || search.indexOf('pid=special_singapore') !== -1) {
+	if (search.indexOf('pid=schooling') !== -1) {
 		$('.header .h_inner .h_nav:not(.h_side) > li').eq(4).addClass('active');
+	}
+
+	if (search.indexOf('pid=special_duolingo') !== -1 || search.indexOf('pid=special_sogang') !== -1 || search.indexOf('pid=special_preparatory') !== -1 || search.indexOf('pid=special_malay') !== -1 || search.indexOf('pid=special_singapore') !== -1) {
+		$('.header .h_inner .h_nav:not(.h_side) > li').eq(5).addClass('active');
 	}
 }
 $(document).ready(setActiveMenu);
@@ -576,6 +584,7 @@ const icon_swiper = new Swiper(".icon_swiper", {
 });
 
 
+
 /* 상담하기 */
 // 선생님 스와이퍼
 $(document).ready(function () {
@@ -637,6 +646,22 @@ function mentor_modal(num) {
 }
 $('.mentor_modal .next_btn, .mentor_modal .prev_btn').on('mouseup', function(e){
 	e.stopPropagation();
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const hash = window.location.hash;
+  if (hash === '#class') {
+    const radio = document.querySelector('input[name="cs_type"][value="수업"]');
+    if (radio) {
+      radio.checked = true;
+      radio.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  } else if (hash === '#schooling') {
+    const radio = document.querySelector('input[name="cs_type"][value="캠프/스쿨링"]');
+    if (radio) {
+      radio.checked = true;
+      radio.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  }
 });
 
 
@@ -726,9 +751,6 @@ function pro_modal(i) {
 	$("body").addClass('hidden');
 	$("#pro_modal"+i).addClass('show');
 }
-
-
-
 // 상담학교 리스트 타이틀 너비
 $(window).on("load", function(){
 
@@ -766,7 +788,6 @@ $(".school_moreview").click(function () {
 $(".school_moreview2").click(function () {
 	$(this).closest('.school_listbox').addClass('on');
 })
-
 // 질문 스와이퍼
 const question_swiper = new Swiper('.question_swiper', {
 	observer: true,
@@ -809,14 +830,11 @@ $('.page-univ .search_inputbox .input').on('input', function () {
 		btn.removeClass('show');
 	}
 });
-
 $('.page-univ .search_inputbox .del_btn').on('click', function (e) {
 	e.stopPropagation(); 
 	const input = $(this).siblings('.input');
 	input.val('').trigger('input').focus();
 });
-
-
 // 학교정보 메인 리스트
 const univ_swiper = new Swiper('.univ_swiper', {
 	observer: true,
@@ -832,7 +850,6 @@ const univ_swiper = new Swiper('.univ_swiper', {
 		prevEl: ".univ_swiper .prev_btn",
 	},
 })
-
 // 학교정보 스와이퍼
 $(document).ready(function () {
 	$('.univlist_swiper:not(.grid_ver)').each(function () {
@@ -876,6 +893,82 @@ $(document).ready(function () {
 		});
 	}
 });
+// 학교정보 검색
+$(document).ready(function() {
+    const searchInput = $('.page-univ .board .search_inputbox .input');
+    const deleteBtn = $('.page-univ .board .search_inputbox .del_btn');
+
+    searchInput.on('keydown', function(e) {
+        if (e.key === 'Enter') {
+            const kw = $(this).val().trim();
+            if (kw) {
+                location.href = '/page/?pid=univ_result&kw=' + encodeURIComponent(kw);
+            }
+        }
+    });
+
+    searchInput.on('keyup input', function() {
+        const value = $(this).val().toLowerCase().trim();
+
+        $('.univlist_swiper .item').each(function() {
+            const titleText = $(this).find('.title').text().toLowerCase();
+            const hashText = $(this).find('.hashtag').text().toLowerCase();
+
+            if (titleText.indexOf(value) > -1 || hashText.indexOf(value) > -1) {
+                $(this).removeClass('hide');
+            } else {
+                $(this).addClass('hide');
+            }
+        });
+
+        $('.univlist_swiper').each(function() {
+            if (this.swiper) {
+                this.swiper.update();
+                this.swiper.slideTo(0);
+            }
+        });
+    });
+
+    deleteBtn.on('click', function() {
+        searchInput.val('').trigger('input');
+    });
+});
+$(function() {
+    function getUrlParam(name) {
+        const search = location.search.substr(1);
+        if (!search) return "";
+        const params = search.split("&");
+        for (let i = 0; i < params.length; i++) {
+            const temp = params[i].split("=");
+            if (temp[0] === name) return temp[1];
+        }
+        return "";
+    }
+
+    const fromSearch = getUrlParam('from');
+    const tabIdNum = getUrlParam('tab');
+
+    if (fromSearch === 'search' && tabIdNum) {
+        const targetTabAnchor = $('#tab-' + tabIdNum);
+
+        if (targetTabAnchor.length) {
+            $('.tab_tit li a').removeClass('show');
+            $('.counsel_list .panel > li').hide();
+
+            targetTabAnchor.addClass('show').trigger('click');
+
+            setTimeout(function() {
+                const $swiperContainer = $('.tab_swiper');
+                if ($swiperContainer.length && $swiperContainer[0].swiper) {
+                    const tabIndex = targetTabAnchor.closest('.swiper-slide').index();
+                    $swiperContainer[0].swiper.slideTo(tabIndex, 300);
+                }
+            }, 200);
+        }
+    }
+});
+
+
 
 /* 전자북/책자 */
 // 전자북/책자 상세 모달
@@ -973,6 +1066,7 @@ const mentor_swiper2 = new Swiper('.mentor_swiper.ver2', {
 	},
 })
 
+
 // 상담안내
 function cloneSlides(selector, multiply = 3) {
     const containers = document.querySelectorAll(selector);
@@ -994,7 +1088,6 @@ function cloneSlides(selector, multiply = 3) {
     });
 }
 cloneSlides('.prdservice_swiper', 3);
-
 $('.prdservice_swiper').each(function () {
     const swiper = $(this);
     const isVisible = swiper.closest('.tab_cont').hasClass('on');
@@ -1019,7 +1112,6 @@ $('.prdservice_swiper').each(function () {
         }
     });
 });
-
 function setTitleWidth(scope) {
     const target = scope
         ? $(scope).find(".prdservice_swiper .item .infoitem .descbox")
@@ -1051,7 +1143,6 @@ function setTitleWidth(scope) {
         box[0].style.setProperty("--title-width", maxWidth / rootSize + "rem");
     });
 }
-
 $(window).on("load", function () {
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
@@ -1059,7 +1150,6 @@ $(window).on("load", function () {
         });
     });
 });
-
 $('.page-procedureban .prd_service .btn_area .btn').on('click', function () {
     const index = $(this).parent().index();
     const wrap = $(this).closest('.tab_wrap');
@@ -1087,6 +1177,7 @@ $('.page-procedureban .prd_service .btn_area .btn').on('click', function () {
     }, 20);
 });
 
+
 // 몽쌤소개
 const company_swiper = new Swiper('.company_swiper', {
 	observer: true,
@@ -1107,6 +1198,7 @@ const company_swiper = new Swiper('.company_swiper', {
 		},
 	},
 })
+
 
 // 찾아오시는길
 $(document).on('click', '.page-map .copy_btn', function (e) {
@@ -1182,6 +1274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 /* SPECIAL */
 // 대학교 더보기
 $(document).on('click', '.univ_listwrap .more_univ', function () {
@@ -1227,6 +1320,106 @@ const singa_swiper = new Swiper('.singa_swiper', {
 
 
 
+/* 스쿨링 */
+// 아시아 국가별 캠프 알아보기
+const campflag_swiper = new Swiper('.campflag_swiper', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 'auto',
+	speed: 500,
+	spaceBetween: 6,
+	breakpoints: {
+		1080: {
+			spaceBetween: 14,
+		},
+	},
+})
+
+// 국가별 캠프 리스트
+$(document).ready(function () {
+	$('.schlist_swiper').each(function () {
+		new Swiper(this, {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			slidesPerGroup: 1,
+			speed: 500,
+			spaceBetween: 8,
+			grabCursor: true,
+			grid: {
+				rows: 1,
+				fill: 'row'
+			},
+			breakpoints: {
+				1080: {
+					slidesPerView: '3',
+					slidesPerGroup: 3,
+					spaceBetween: 16,
+					grid: {
+						rows: 2,
+						fill: 'row'
+					},
+				},
+			},
+			navigation: {
+				nextEl: $(this).closest('.schlist_wrap').find('.schlist_controls .next_btn')[0],
+				prevEl: $(this).closest('.schlist_wrap').find('.schlist_controls .prev_btn')[0],
+			},
+		});
+	});
+});
+
+// 숏클립 스쿨링/캠프
+const shortclip_swiper = new Swiper('.shortclip_swiper', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 'auto',
+	speed: 500,
+	spaceBetween: 8,
+	breakpoints: {
+		1080: {
+			spaceBetween: 12,
+		},
+	},
+	navigation: {
+		nextEl: ".sec5_controls .next_btn",
+		prevEl: ".sec5_controls .prev_btn",
+	},
+})
+
+// 수업시간 샘플
+$(document).ready(function () {
+	if ($(window).width() < 1081) {
+		const schtbl_swiper = new Swiper('.schtbl_swiper', {
+			observer: true,
+			observeParents: true,
+			speed: 500,
+			spaceBetween: 16,	
+			scrollbar: {
+				el: ".schtbl_swiper .scrollbar",
+				draggable: true,
+			},
+		})
+	}
+});
+
+// 내용 더보기
+$(document).ready(function () {
+    $('.sch_sec6 .more').on('click', function () {
+        const desc = $(this).siblings('.desc');
+
+        desc.toggleClass('show');
+
+        if (desc.hasClass('show')) {
+            $(this).text('접기');
+        } else {
+            $(this).text('더보기');
+        }
+    });
+});
+
+
+
 /* 모바일 */
 // header nav
 $(document).on('click', '.h_bottom .h_nav > li > a.link', function (e) {
@@ -1245,6 +1438,8 @@ $(document).on('click', '.h_bottom .h_nav > li > a.link', function (e) {
         }
     }
 });
+
+
 
 
 // mobile nav active

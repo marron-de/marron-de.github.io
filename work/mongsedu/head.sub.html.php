@@ -43,6 +43,10 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/css/common.css?
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/css/font.css?ver='.G5_CSS_VER.'">',0);
 ?>
 
+<!-- lucide -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">

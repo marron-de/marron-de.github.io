@@ -17,7 +17,7 @@
 				<p class="note_txt"></p>
 			</div>
 			<div class="btnbox">
-				<button type="button" class="btn typeB prev_btn">이전 대학</button>
+				<button type="button" class="btn typeA prev_btn">이전 대학</button>
 				<button type="button" class="btn typeB next_btn">다음 대학</button>
 			</div>
 		</div>

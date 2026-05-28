@@ -68,7 +68,7 @@
 
 <div class="swiper-slide item" onclick="univ_modal('4_4', this);">
 	<div class="imgbox">
-		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univdefault.jpg" alt="" class="img">
+		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_thai4.jpg" alt="" class="img">
 		<div class="flagbox">
 			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
 		</div>
@@ -91,7 +91,7 @@
 
 <div class="swiper-slide item" onclick="univ_modal('4_5', this);">
 	<div class="imgbox">
-		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_thai4.jpg" alt="" class="img">
+		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/univ_thai5.jpg" alt="" class="img">
 		<div class="flagbox">
 			<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
 		</div>
