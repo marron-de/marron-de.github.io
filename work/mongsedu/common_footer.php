@@ -142,8 +142,8 @@
 <!-- toast popup -->
 <div class="toast_popup">
 	<div class="txtbox">
-		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/toast_emoji1.png" alt=" " class="emoji">
 		<p class="txt">컨설팅 준비중 입니다.</p>
+		<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/toast_emoji1.png" alt=" " class="emoji">
 	</div>
 </div>
 

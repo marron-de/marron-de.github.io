@@ -285,6 +285,7 @@
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox .nation, 
 	.presentation_list .panel ul.swiper-wrapper li .text_area .badgebox .place {  border-radius: 0.3rem;  padding: 0.3rem 0.6rem;  font-size: 1.1rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area .title { font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 0.4rem;}
+	.presentation_list .panel ul.swiper-wrapper li .text_area .title br {display: none;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area ul {  gap: 0.6rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area ul li { gap: 1.2rem;}
 	.presentation_list .panel ul.swiper-wrapper li .text_area ul p {  font-size: 1.3rem;}
@@ -506,13 +507,15 @@
 	.page-detail .frame-158 { width: 100%;}
 	.page-detail .tab_contbox .tab_cont .frame-158 {margin-bottom: 0;}
 	.page-detail .tab_contbox .tab_cont.on .frame-158 { margin-bottom: 1rem;}
-	.page-detail .frame-159 { width: 100%;  gap: 1rem;  border-radius: 0.8rem;padding:1.6rem  1.4rem;background: var(--basic-pale);}
+	.page-detail .frame-159 { width: 100%;  gap: 1.2rem;  border-radius: 0.8rem;padding:1.6rem;background: var(--basic-pale);}
 	.page-detail .frame-159.ver2 { padding: 2rem 1.4rem; gap: 1.4rem;}
-	.page-detail .span-text-15a { font-size: 1.6rem;}
+	.page-detail .span-text-15a { font-weight: 700; font-size: 1.6rem;}
 	.page-detail .span-text-15a small { font-size: 1.4rem; font-weight: 600;}
+	.page-detail .span-text-15a-1 {font-size: 1.3rem;}
 	.page-detail .frame-15b {display: none;}
 	.page-detail .tab_contbox .tab_cont.on .frame-15b{display: block;}
-	.page-detail .frame-15d { gap: 2rem;  border-top: 0;  padding-top: 2.4rem;}
+	.page-detail .frame-15d { gap: 2rem; padding-top: 2.4rem;}
+	.page-detail .frame-15d::before {display: none;}
 	.page-detail .interview { font-size: 1.5rem;}
 	
 	.page-detail .holding_cont { position: relative; background: #fff; width: calc(100% + 1.6rem * 2);  margin: 0 -1.6rem; padding: 0 2rem; z-index: 1;}
@@ -539,9 +542,12 @@
 	.page-detail .frame-f .title-yeong-eoro-gyeol-gu-reul-mandeul-sigan-keorieo-yuhag-ibenteu-11 { font-size: 2rem; line-height: 100%;}
 	.page-detail .frame-f .im-si-deiteo-ibnida-chu-hu-sujeong-yejeong-ibnida-il-sang-ui-soso-han-sungandeul-eul-hamkke-nanu-neun-gonggan-ibnida { font-size: 1.4rem; line-height: 150%; font-weight: 400;}
 
-	.page-detail .fixed_btnbox { position: fixed;  left: 0;  bottom: 0;  width: 100%;  border-top: 1px solid var(--basic-border);  padding: 1.2rem 1.6rem 2rem;   background: #fff;}
-	.page-detail .fixed_btnbox .button-160 {  border-radius: 1rem; padding: 1.7rem 0;}
-	.page-detail .fixed_btnbox .service-request { font-size: 1.5rem;}
+	.page-detail .fixed_btnbox,	.page-schdetail 
+	.fixed_btnbox { position: fixed;  left: 0;  bottom: 0;  width: 100%;  border-top: 1px solid var(--basic-border);  padding: 1.2rem 1.6rem 2rem;   background: #fff; z-index: 100;}
+	.page-detail .fixed_btnbox .button-160,	
+	.page-schdetail .fixed_btnbox .button-160 {  border-radius: 1rem; padding: 1.7rem 0;  color: #fff; display: flex; align-items: center; justify-content: center; text-align: center;}
+	.page-detail .fixed_btnbox .service-request, 
+	.page-schdetail .fixed_btnbox .button-160  .txt { font-size: 1.5rem; font-weight: 700; color: inherit;}
 
 	
 	.page-detail .frame-section.mb { margin-bottom: 6.4rem;}
@@ -2300,7 +2306,7 @@
 	.page-schooling .schooling_sec2 .contbox .rightbox .kakao_box .txtbox .btn {  font-size: 1.5rem; padding: 1.6rem; border-radius: 0.8rem;}
 	.page-schooling .schooling_sec3 { margin: 5.6rem 0 4rem;}
 	.page-schooling .schooling_sec3 .titbox .tit { font-size: 2rem;}
-	.page-schooling .schooling_sec3 .campflag_swiper { width: calc(100% + 1.6rem * 2);  margin: 0 -1.6rem;  padding: 0 1.6rem;}
+	.page-schooling .schooling_sec3 .campflag_swiper { width: calc(100% + 1.6rem * 2);  margin: 0 -1.6rem;  padding: 0 1.6rem; overflow: hidden;}
 	.page-schooling .schooling_sec3 .campflag_swiper .swiper-wrapper { justify-content: unset;}
 	.page-schooling .schooling_sec3 .campflag_swiper .item { width: 10.9rem;  height: 10.9rem;}
 	.page-schooling .schooling_sec3 .campflag_swiper .item > .link { padding: 0.8rem;  gap: 0.4rem; border-radius: 1rem;}
@@ -2343,7 +2349,7 @@
 	.page-schooling .schooling_sec5 { padding: 4.8rem 0 5.6rem; margin-bottom: 0;}
 	.page-schooling .schooling_sec5 .title_area { margin-bottom: 2.4rem;}
 	.page-schooling .schooling_sec5 .title_area .sec5_controls {display: none;}
-	.page-schooling .schooling_sec5 .shortclip_swiper { width: calc(100% + 1.6rem * 2);  border-radius: 0; margin: 0 -1rem; padding: 0 1rem;}
+	.page-schooling .schooling_sec5 .shortclip_swiper { width: calc(100% + 1.6rem * 2);  border-radius: 0; margin: 0 -1.6rem; padding: 0 1.6rem;}
 	.page-schooling .schooling_sec5 .shortclip_swiper .item { width: 18rem;  border-radius: 1rem;}
 	.page-schooling .schooling_sec5 .shortclip_swiper .item .imgbox .play { top: calc(50% - 1.6rem); width: 4rem;}
 	.page-schooling .schooling_sec5 .shortclip_swiper .item .txtbox .top { padding: 1rem;}
@@ -2368,8 +2374,8 @@
 	.page-schdetail .sub_titbox { margin-bottom: 2.4rem; gap: 1.2rem;}
 	.page-schdetail .sub_titbox .sub_txt1 {  font-size: 2.2rem;}
 	.page-schdetail .sub_titbox .sub_txt3 {  font-size: 1.4rem;}
-	.page-schdetail .sch_sec1 {  padding: 5.6rem 0 4.8rem; margin-bottom: 0;}
-	.page-schdetail .sch_sec1 .titbox { gap: 0.2rem;}
+	.page-schdetail .sch_sec1 { min-height: unset; padding: 5.6rem 0 4.8rem; margin-bottom: 1.6rem;}	
+	.page-schdetail .sch_sec1 .titbox .tit { max-width: 34.825rem; margin: 0; width: 102%;}
 	.page-schdetail .sch_sec1 .titbox .sub_tit { font-size: 1.2rem; border-radius: 0.4rem; padding: 0.5rem 0.7rem;}
 	.page-schdetail .sch_sec1 .banbox {  margin-top: 4rem;  border-radius: 1.4rem;   padding: 2.4rem 1.6rem;  flex-direction: column;  align-items: center; gap: 1.6rem;}
 	.page-schdetail .sch_sec1 .banbox .leftbox { align-items: center; gap: 0.8rem; padding: 0;}
@@ -2383,14 +2389,14 @@
 	.page-schdetail .sch_sec1 .banbox .rightbox .plus { width: 1.6rem;  margin: 0 -0.8rem; align-self: self-start;  margin-top: 1.8rem;}
 	.page-schdetail .sch_sec2 { margin-bottom: 6.4rem;}
 	.page-schdetail .sch_sec2 .sub_titbox { margin-bottom: 2rem; }
-	.page-schdetail .sch_sec2 .sub_titbox .sub_txt1 {line-height: 150%;}
+	.page-schdetail .sch_sec2 .sub_titbox .sub_txt1 {line-height: 150%; font-size: 2rem;}
 	.page-schdetail .sch_sec2 .contbox .item {  width: 100%; height: 17.2rem; padding: 2rem; border-radius: 1rem;}
 	.page-schdetail .sch_sec2 .contbox .item .txtbox .tit {  font-size: 1.8rem;}
 	.page-schdetail .sch_sec3 { margin-bottom: 6.4rem; }
 	.page-schdetail .sch_sec3 .sub_titbox .sub_txt3 {font-size: 1.5rem;}
 	.page-schdetail .sch_sec3 .sub_titbox .sub_txt1 {line-height: 150%;}
 	.page-schdetail .sch_sec3 .contbox { gap: 1.2rem;}
-	.page-schdetail .sch_sec3 .contbox .item { height: 15.4rem;  flex-direction: column;  align-items: flex-start;  gap: 1.2rem; padding: 2.4rem 1.8rem;  border-radius: 1rem;}
+	.page-schdetail .sch_sec3 .contbox .item { height: unset; flex-direction: column;  align-items: flex-start;  gap: 1.2rem; padding: 2.4rem 1.8rem;  border-radius: 1rem;}
 	.page-schdetail .sch_sec3 .contbox .item .number { font-size: 4.8rem; line-height: 100%;}
 	.page-schdetail .sch_sec3 .contbox .item .txtbox { gap: 0.6rem;}
 	.page-schdetail .sch_sec3 .contbox .item .txtbox .tit { font-size: 1.5rem;}
@@ -2404,11 +2410,11 @@
 	.page-schdetail .sch_sec4 .tblbox .tbody .tr .td { padding: 1.8rem 1.4rem;  line-height: 160%;}
 	.page-schdetail .sch_sec5 {  margin-bottom: 5.6rem; padding: 5.6rem 0 6.4rem;}
 	.page-schdetail .sch_sec5 .sub_titbox { gap: 1rem;}
-	.page-schdetail .sch_sec5 .sub_titbox .sub_txt3 {  font-size: 1.2rem;}
+	.page-schdetail .sch_sec5 .sub_titbox .sub_txt1 {font-size: 2.2rem;}
 	.page-schdetail .sch_sec5 .tab_wrap { gap: 2.4rem;}
 	.page-schdetail .sch_sec5 .tab_wrap .tab_navbox { padding: 0.5rem 0.4rem;}
 	.page-schdetail .sch_sec5 .tab_wrap .tab_navbox .tab_nav .link { font-size: 1.4rem;  height: 3.8rem;  padding: 0 2rem;}
-	.page-schdetail .sch_sec5 .tblbox { border-radius: 1rem; border: 0;}
+	.page-schdetail .sch_sec5 .tblbox { border-radius: 1rem;}
 	.page-schdetail .sch_sec5 .tblbox .tblitem { border-bottom: 1px solid #aaa;}
 	.page-schdetail .sch_sec5 .tblbox .tblitem:last-child {border-bottom: 0;}
 	.page-schdetail .sch_sec5 .tblbox .tblitem .left {  width: 6.8rem;  font-weight: 600; font-size: 1.5rem; line-height: 130%; border-bottom: 0;}
@@ -2416,13 +2422,15 @@
 	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item { width: 100%; flex-direction: row;  font-size: 1.5rem;  border-bottom: 1px solid var(--basic-border);}
 	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item:last-child {border-bottom: 0;}
 	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .head { height: unset;  width: 7.7rem; font-weight: 600;  line-height: 130%;  padding: 1rem 1.6rem;  justify-content: unset; border-right: 0;}
-	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .cont { height: unset;  flex: 1;  flex-direction: row-reverse;  gap: 0.2rem;  padding: 1rem 1.6rem;  text-align: left;  border-right: 0; justify-content: flex-end;}
-	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .cont.bg { background: none;}
+	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .cont { height: unset;  flex: 1;  flex-direction: row-reverse; flex-wrap: wrap; justify-content: flex-end; gap: 0.2rem;  padding: 1rem 1.6rem;  text-align: left;  border-right: 0;}
+	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .cont.reverse {flex-direction: row; justify-content: flex-start;}
 	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .cont .icon1 { width: 1.3rem;}
 	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .cont .icon2 { width: 1.	2rem;}
+	.page-schdetail .sch_sec5 .tblbox .tblitem .right .item .cont .pc_hide {display: inline-block;}
 	.page-schdetail .sch_sec5 .tab_cont2 .tblbox .tblitem.head {display: none;}
 	.page-schdetail .sch_sec5 .tab_cont2 .tblbox .tblitem { border-bottom: 0; }
 	.page-schdetail .sch_sec5 .tab_cont2 .tblbox .tblitem .left { font-size: 1.5rem;  line-height: 130%;}
+	.page-schdetail .sch_sec5 .tab_cont2 .tblbox .tblitem:last-child .right .item {border-bottom: 1px solid var(--basic-border);}
 	.page-schdetail .sch_sec5 .tab_cont2 .tblbox .tblitem:not(.head) .right .item .head {  width: 11.6rem;  display: flex;}
 	.page-schdetail .sch_sec5 .tab_cont2 .tblbox .tblitem .right .item .cont { padding: 1rem 1.6rem;}
 	.page-schdetail .sch_sec5 .tab_cont2 .tblbox .tblitem:nth-child(2n+1) .right .item .cont { background: none;}
@@ -2477,14 +2485,17 @@
 	.page-schdetail .sch_sec9 .contbox2 .item .leftbox .bottom .desc { font-size: 1.4rem;}
 	.page-schdetail .sch_sec9 .contbox2 .item .rightbox .btn { height: 4.8rem;  border-radius: 0.8rem; padding: 0 3.2rem; font-size: 1.4rem;}
 
-
-
-
 	
 	/* 스쿨링 이튼상세 */
-	.page-schdetail1 .sch_sec1 .titbox .tit { max-width: 34.825rem; margin: 0; width: 102%;}
-
-
+	.page-schdetail1 .sch_sec1 { background-image: url(../img/sub/sch1_sec1_bg_m.png); margin-bottom: 0;}
+	.page-schdetail1 .sch_sec1 .titbox { gap: 0.2rem;}	
+	.page-schdetail1 .sch_sec5 .sub_titbox .sub_txt3 {font-size: 1.2rem;}
+	.page-schdetail1 .sch_sec5 .tblbox { border: 0;}
+	.page-schdetail1 .sch_sec5 .tblbox .tblitem .right .item .cont.bg { background: none;}
+	
+	/* 스쿨링 엡솜상세 */
+	.page-schdetail2 .sch_sec1 { background-image: url(../img/sub/sch2_sec1_bg_m.jpg);}
+	.page-schdetail2 .sch_sec1 .titbox { gap: 0.6rem;}
 
 
 

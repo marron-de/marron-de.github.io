@@ -1212,22 +1212,22 @@ $captcha_js    = chk_captcha_js();
 		const agree   = form.find('[name="frm_agree"]').is(':checked');
 
 		if (!name) {
-			showToast('이름을 입력해주세요.');
+			showToast('이름을 입력해주세요.', 'emoji1');
 			form.find('[name="frm_name"]').focus();
 			return;
 		}
 		if (!tel) {
-			showToast('연락처를 입력해주세요.');
+			showToast('연락처를 입력해주세요.', 'emoji1');
 			form.find('[name="frm_tel"]').focus();
 			return;
 		}
 		if (!email) {
-			showToast('이메일을 입력해주세요.');
+			showToast('이메일을 입력해주세요.', 'emoji1');
 			form.find('[name="frm_email"]').focus();
 			return;
 		}
 		if (!content) {
-			showToast('문의사항을 입력해주세요.');
+			showToast('문의사항을 입력해주세요.', 'emoji1');
 			form.find('[name="frm_content"]').focus();
 			return;
 		}
@@ -1235,7 +1235,7 @@ $captcha_js    = chk_captcha_js();
 		<?php echo $captcha_js; ?>
 
 		if (!agree) {
-			showToast('개인정보수집 및 이용안내에 동의해주세요.');
+			showToast('개인정보수집 및 이용안내에 동의해주세요.', 'emoji1');
 			return;
 		}
 		
@@ -1250,7 +1250,7 @@ $captcha_js    = chk_captcha_js();
         const tel  = form.find('[name="frm_tel"]').val().trim();
 		
         if (!name || !tel) {
-            showToast('입력 정보가 올바르지 않습니다.');
+            showToast('입력 정보가 올바르지 않습니다.', 'emoji2');
             return false;
         }
 		
@@ -1271,23 +1271,23 @@ $captcha_js    = chk_captcha_js();
 		}
 
 		if (!name) {
-			showToast('이름을 입력해주세요.');
+			showToast('이름을 입력해주세요.', 'emoji1');
 			form.find('[name="frm_name"]').focus();
 			return;
 		}
 		if (!tel) {
-			showToast('연락처를 입력해주세요.');
+			showToast('연락처를 입력해주세요.', 'emoji1');
 			form.find('[name="frm_tel"]').focus();
 			return;
 		}
 		if (!email) {
-			showToast('이메일을 입력해주세요.');
+			showToast('이메일을 입력해주세요.', 'emoji1');
 			form.find('[name="frm_email"]').focus();
 			return;
 		}
 
 		if (!agree) {
-			showToast('개인정보수집 및 이용안내에 동의해주세요.');
+			showToast('개인정보수집 및 이용안내에 동의해주세요.', 'emoji1');
 			return;
 		}
 

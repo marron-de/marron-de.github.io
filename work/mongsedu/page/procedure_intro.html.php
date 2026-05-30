@@ -92,13 +92,13 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<p class="tit">홍콩 <br class="tablet">대학</p>
 					</a>
-					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.')">
+					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.', 'emoji1')">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
 						</div>
 						<p class="tit">싱가폴 <br class="tablet">국제학교</p>
 					</a>
-					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.')">
+					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.', 'emoji1')">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
 						</div>

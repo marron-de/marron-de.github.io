@@ -24,7 +24,7 @@ if (!defined('_EYOOM_')) exit;
 						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info01&tab=12&from=search" class="link">말레이시아 국제학교 상담</a></li>
 						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=23&from=search" class="link">싱가포르 대학 상담</a></li>
 						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=22&from=search" class="link">말레이시아 대학 상담</a></li>
-						<li><a href="#none" class="link"  onclick="showToast('학교 정보 준비중입니다')">한국 국제학교 배치 상담</a></li>
+						<li><a href="#none" class="link"  onclick="showToast('학교 정보 준비중입니다', 'emoji1')">한국 국제학교 배치 상담</a></li>
 						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=25&from=search" class="link">송도 글로벌 캠퍼스</a></li>
 					</ul>
 				</div>

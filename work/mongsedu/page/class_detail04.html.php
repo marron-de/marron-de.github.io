@@ -321,6 +321,7 @@ if (!defined('_EYOOM_')) exit;
                                     <div class="frame-159">
                                         <span class="span-text-15a">1회 체험반 - 80,000원</span>
                                         <span class="span-text-15a">10회 정규반 - 300,000원</span>
+                                        <span class="span-text-15a-1">*입학테스트 4과목 이상시 - 350,000원</span>
                                     </div>
                                 </div>
                                 <div class="frame-15d">

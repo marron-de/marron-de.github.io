@@ -1502,7 +1502,8 @@ $(document).ready(function () {
 			search.includes('pid=class_detail') || 
 			search.includes('pid=counsel_detail') || 
 			search.includes('pid=procedure_detail') ||
-			(search.includes('bo_table=admission') && search.includes('wr_id='));
+			(search.includes('bo_table=admission') && search.includes('wr_id=')) ||
+			search.includes('pid=schooling_detail');
 
 		const isClassDetail = search.includes('pid=class_detail');
 		const isProcedureDetail = search.includes('pid=procedure_detail');
@@ -1611,23 +1612,27 @@ $(document).ready(function () {
 const showToast = (function() {
     let timer;
 
-    return function(txt) {
+    return function(txt, emojiKey) {
         const toast = $('.toast_popup');
-		
+        
         if (toast.hasClass('show')) {
             return;
         }
-		
+        
         if (txt) toast.find('.txt').text(txt);
-		
+        
+        if (emojiKey) {
+            const baseUrl = `${themeUrl}/img/sub/`;
+            toast.find('.emoji').attr('src', `${baseUrl}toast_${emojiKey}.png`);
+        }
+        
         toast.addClass('show');
-		
+        
         timer = setTimeout(() => {
             toast.removeClass('show');
         }, 2500);
     };
 })();
-
 
 // 컨텐츠 준비중
 function nocontent_modal() {

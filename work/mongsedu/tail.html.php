@@ -161,7 +161,9 @@ $(document).ready(function() {
 </script>
 <?php } ?>
 
-
+<script>
+    const themeUrl = '<?php echo EYOOM_THEME_URL; ?>';
+</script>
 
 
 <script src="<?php echo EYOOM_THEME_URL; ?>/js/custom.js?ver=<?php echo G5_JS_VER; ?>"></script>

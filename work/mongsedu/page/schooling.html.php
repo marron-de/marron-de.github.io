@@ -7,6 +7,7 @@ if (!defined('_EYOOM_')) exit;
 
 
 <div class="sub-page page-counsel page-schooling">
+
 	<div class="banner_area">
 		<div class="imgbox">
 			<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/school_ban_img.jpg" alt="" class="img pc">
@@ -58,7 +59,7 @@ if (!defined('_EYOOM_')) exit;
 			<div class="swiper campflag_swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다')">
+						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_malay.png" alt="" class="img">
 							</div>
@@ -69,7 +70,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다')">
+						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_malay.png" alt="" class="img">
 							</div>
@@ -80,7 +81,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다')">
+						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_singapore.png" alt="" class="img">
 							</div>
@@ -91,7 +92,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다')">
+						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_thai.png" alt="" class="img">
 							</div>
@@ -102,7 +103,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다')">
+						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_pili.png" alt="" class="img">
 							</div>
@@ -122,11 +123,11 @@ if (!defined('_EYOOM_')) exit;
             <div class="ms title_area" id="row-1">
                 <div class="tab swiper tab_swiper" data-gappc="0" data-gapmob="5">
                     <ul class="tab_tit swiper-wrapper">
-                        <li class="swiper-slide"><a href="#" class="show" id="tab-11">전체보기</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-12">스쿨링</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-13">어학원캠프</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-14">기숙형캠프</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-15">추천 프로그램</a></li>
+                        <li class="swiper-slide"><a href="#" class="show" id="tab-11" data-cate="ALL">전체보기</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-12" data-cate="SCH">스쿨링</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-13" data-cate="LNG">어학원캠프</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-14" data-cate="RES">기숙형캠프</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-15" data-cate="REC">추천 프로그램</a></li>
                     </ul>
                 </div>
             </div>
@@ -140,7 +141,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper schlist_swiper sch_list">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail01'">
+									<div class="swiper-slide item SCH REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail01'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum1.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -208,13 +209,17 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item RES REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail02'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum2.jpg" alt="" class="img">
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
 											</div>
-											<div class="bottom"></div>
+											<div class="bottom">
+												<div class="deco_img">
+													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker2.png" alt="">
+												</div>
+											</div>
 										</div>
 										<div class="txtbox">
 											<div class="hashtag">
@@ -272,7 +277,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item RES" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum3.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -329,14 +334,14 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item RES" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum4.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -393,20 +398,24 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item SCH REC" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum5.jpg" alt="" class="img">
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
 											</div>
-											<div class="bottom"></div>
+											<div class="bottom">
+												<div class="deco_img">
+													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker1.png" alt="">
+												</div>
+											</div>
 										</div>
 										<div class="txtbox">
 											<div class="hashtag">
@@ -457,20 +466,24 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item SCH REC" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum6.jpg" alt="" class="img">
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
 											</div>
-											<div class="bottom"></div>
+											<div class="bottom">
+												<div class="deco_img">
+													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker1.png" alt="">
+												</div>
+											</div>
 										</div>
 										<div class="txtbox">
 											<div class="hashtag">
@@ -521,20 +534,24 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item LNG REC" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum7.jpg" alt="" class="img">
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_ph.svg" alt="" class="flag">
 											</div>
-											<div class="bottom"></div>
+											<div class="bottom">
+												<div class="deco_img">
+													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker2.png" alt="">
+												</div>
+											</div>
 										</div>
 										<div class="txtbox">
 											<div class="hashtag">
@@ -585,14 +602,14 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
 											</div>
 										</div>
 									</div>									
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item LNG" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum8.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -649,14 +666,14 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다')">
+									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum9.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -713,14 +730,14 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item end" onclick="showToast('마감된 스쿨링/캠프입니다')">
+									<div class="swiper-slide item LNG end" onclick="showToast('마감된 스쿨링/캠프입니다', 'emoji2')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum10.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -777,7 +794,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
+												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -796,74 +813,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper schlist_swiper sch_list">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum1.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
-											</div>
-											<div class="bottom">
-												<div class="deco_img">
-													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker1.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">말레이시아</p>
-												<p class="tag state">모집중</p>
-											</div>
-											<div class="titbox">
-												<p class="tit">말레이시아 EATON 국제학교, 쿠알라룸프</p>
-												<p class="desc">2027년1월 국제학교 정규수업 스쿨링</p>
-											</div>
-											<div class="infobox">
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
-														<span class="txt">기간</span>
-													</div>
-													<p class="desc">2027/1/11 ~ 1/29</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
-														<span class="txt">대상</span>
-													</div>
-													<p class="desc">유치~중등</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
-														<span class="txt">숙소</span>
-													</div>
-													<p class="desc">레지던스 포함</p>
-												</div>
-											</div>
-											<div class="bottom">
-												<div class="pricebox">
-													<p class="price ori">
-														<span class="tit">정상가</span>
-														<span class="desc">5,000,000원</span>
-													</p>
-													<p class="price total">
-														<span class="tit">할인가</span>
-														<span class="desc">
-															<span class="number">4,800,000원</span>
-															<span class="sale">
-																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">5%</span>
-															</span>
-														</span>
-													</p>
-												</div>
-												<a href="<?php echo G5_URL ?>/page/?pid=schooling_detail01" class="more">
-													<span class="txt">상세보기</span>
-													<span class="icon"></span>
-												</a>
-											</div>
-										</div>
-									</div>
+									
 								</div>
 							</div>
 						</div>
@@ -876,134 +826,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper schlist_swiper sch_list">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum7.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_ph.svg" alt="" class="flag">
-											</div>
-											<div class="bottom"></div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">필리핀</p>
-												<p class="tag state">모집중</p>
-											</div>
-											<div class="titbox">
-												<p class="tit">필리핀 파인스 어학원, 바기오</p>
-												<p class="desc">2027년 겨울방학 가족 영어캠프</p>
-											</div>
-											<div class="infobox">
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
-														<span class="txt">기간</span>
-													</div>
-													<p class="desc">2026/12/27~2/20 (4주, 6주, 8주 선택)</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
-														<span class="txt">대상</span>
-													</div>
-													<p class="desc">7세~15세</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
-														<span class="txt">숙소</span>
-													</div>
-													<p class="desc">바기오 파인스 메인캠퍼스 기숙사</p>
-												</div>
-											</div>
-											<div class="bottom">
-												<div class="pricebox">
-													<p class="price ori">
-														<span class="tit">정상가</span>
-														<span class="desc">3,660,000원</span>
-													</p>
-													<p class="price total">
-														<span class="tit">할인가</span>
-														<span class="desc">
-															<span class="number">할인없음</span>
-															<!-- <span class="sale">
-																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">20%</span>
-															</span> -->
-														</span>
-													</p>
-												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
-													<span class="txt">상세보기</span>
-													<span class="icon"></span>
-												</a>
-											</div>
-										</div>
-									</div>									
-									<div class="swiper-slide item">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum8.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_ph.svg" alt="" class="flag">
-											</div>
-											<div class="bottom"></div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">필리핀</p>
-												<p class="tag state">모집중</p>
-											</div>
-											<div class="titbox">
-												<p class="tit">필리핀 블루오션 어학원, 세부</p>
-												<p class="desc">2027년 겨울방학 어학원 캠프</p>
-											</div>
-											<div class="infobox">
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
-														<span class="txt">기간</span>
-													</div>
-													<p class="desc">2026/11/29~2/20 (4주, 6주, 8주, 12주 선택)</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
-														<span class="txt">대상</span>
-													</div>
-													<p class="desc">7세 ~ 16세</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
-														<span class="txt">숙소</span>
-													</div>
-													<p class="desc">EGI 리조트 호텔</p>
-												</div>
-											</div>
-											<div class="bottom">
-												<div class="pricebox">
-													<p class="price ori">
-														<span class="tit">정상가</span>
-														<span class="desc">6,800,000원</span>
-													</p>
-													<p class="price total">
-														<span class="tit">할인가</span>
-														<span class="desc">
-															<span class="number">할인없음</span>
-															<!-- <span class="sale">
-																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">20%</span>
-															</span> -->
-														</span>
-													</p>
-												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
-													<span class="txt">상세보기</span>
-													<span class="icon"></span>
-												</a>
-											</div>
-										</div>
-									</div>		
+										
 								</div>
 							</div>
 						</div>
@@ -1016,198 +839,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper schlist_swiper sch_list">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum2.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
-											</div>
-											<div class="bottom"></div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">말레이시아</p>
-												<p class="tag state">모집중</p>
-											</div>
-											<div class="titbox">
-												<p class="tit">말레이시아 Epsom 국제학교, 쿠알라룸프</p>
-												<p class="desc">2027년 1월,  영국식 보딩 겨울방학캠프</p>
-											</div>
-											<div class="infobox">
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
-														<span class="txt">기간</span>
-													</div>
-													<p class="desc">2027년 1월예정 (2주~4주)</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
-														<span class="txt">대상</span>
-													</div>
-													<p class="desc">초등고학년~중고등</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
-														<span class="txt">숙소</span>
-													</div>
-													<p class="desc">기숙사 포함</p>
-												</div>
-											</div>
-											<div class="bottom">
-												<div class="pricebox">
-													<p class="price ori">
-														<span class="tit">정상가</span>
-														<span class="desc">3,350,000원</span>
-													</p>
-													<p class="price total">
-														<span class="tit">할인가</span>
-														<span class="desc">
-															<span class="number">할인없음</span>
-															<!-- <span class="sale">
-																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">20%</span>
-															</span> -->
-														</span>
-													</p>
-												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
-													<span class="txt">상세보기</span>
-													<span class="icon"></span>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide item">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum3.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
-											</div>
-											<div class="bottom"></div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">말레이시아</p>
-												<p class="tag state">모집중</p>
-											</div>
-											<div class="titbox">
-												<p class="tit">말레이시아 UCSI 국제학교, 쿠알라룸프</p>
-												<p class="desc">2026년 7월, 국제학교 보딩 영어캠프</p>
-											</div>
-											<div class="infobox">
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
-														<span class="txt">기간</span>
-													</div>
-													<p class="desc">2026/7/19 ~ 8/02</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
-														<span class="txt">대상</span>
-													</div>
-													<p class="desc">만 7-14세</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
-														<span class="txt">숙소</span>
-													</div>
-													<p class="desc">기숙사 포함</p>
-												</div>
-											</div>
-											<div class="bottom">
-												<div class="pricebox">
-													<p class="price ori">
-														<span class="tit">정상가</span>
-														<span class="desc">3,050,000원</span>
-													</p>
-													<p class="price total">
-														<span class="tit">할인가</span>
-														<span class="desc">
-															<span class="number">2,860,000원</span>
-															<span class="sale">
-																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">6.2%</span>
-															</span>
-														</span>
-													</p>
-												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
-													<span class="txt">상세보기</span>
-													<span class="icon"></span>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide item">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum4.jpg" alt="" class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
-											</div>
-											<div class="bottom"></div>
-										</div>
-										<div class="txtbox">
-											<div class="hashtag">
-												<p class="tag">말레이시아</p>
-												<p class="tag state">모집중</p>
-											</div>
-											<div class="titbox">
-												<p class="tit">말레이시아 Raffles 국제학교, 조호바루</p>
-												<p class="desc">2026년 7월, 국제학교 영어캠프(보딩/통학 선택)</p>
-											</div>
-											<div class="infobox">
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
-														<span class="txt">기간</span>
-													</div>
-													<p class="desc">2026/6/29~8/21 (기간 선택)</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
-														<span class="txt">대상</span>
-													</div>
-													<p class="desc">만6세~만16세</p>
-												</div>
-												<div class="infoitem">
-													<div class="tit">
-														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
-														<span class="txt">숙소</span>
-													</div>
-													<p class="desc">기숙사/ 기숙사 미포함도 선택 가능 </p>
-												</div>
-											</div>
-											<div class="bottom">
-												<div class="pricebox">
-													<p class="price ori">
-														<span class="tit">정상가</span>
-														<span class="desc">3,200,000원</span>
-													</p>
-													<p class="price total">
-														<span class="tit">할인가</span>
-														<span class="desc">
-															<span class="number">2,800,000원</span>
-															<span class="sale">
-																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">5%</span>
-															</span>
-														</span>
-													</p>
-												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다')">
-													<span class="txt">상세보기</span>
-													<span class="icon"></span>
-												</a>
-											</div>
-										</div>
-									</div>
+									
 								</div>
 							</div>
 						</div>
@@ -1220,11 +852,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper schlist_swiper sch_list">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item no_item">
-										<div class="no_item_txt">
-											스쿨링/캠프 준비중입니다.
-										</div>
-									</div>		
+									
 								</div>
 							</div>
 						</div>
@@ -1536,5 +1164,29 @@ if (!defined('_EYOOM_')) exit;
         </div>
     </div>
 </div>
+
+<script>
+$(document).ready(function () {
+    $(".tab_tit a[data-cate]").not("[data-cate='ALL']").each(function () {
+        const cate = $(this).data("cate");
+        const tabId = $(this).attr("id").replace("tab-", "content-");
+        const $target = $("#" + tabId + " .swiper-wrapper");
+
+        const $items = $("#content-11 .swiper-wrapper .swiper-slide").filter(function () {
+            return $(this).hasClass(cate);
+        });
+
+        if ($items.length > 0) {
+            $target.append($items.clone(true));
+        } else {
+            $target.append(`
+                <div class="swiper-slide item no_item">
+                    <div class="no_item_txt">스쿨링/캠프 준비중입니다.</div>
+                </div>
+            `);
+        }
+    });
+});
+</script>
 
 
