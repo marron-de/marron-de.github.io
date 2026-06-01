@@ -1,5 +1,5 @@
 
-/* common */
+/* common (동일) */
 * { margin: 0; padding: 0; outline: none; box-sizing: border-box; -webkit-tap-highlight-color: transparent;}
 body {margin: 0; padding: 0; -ms-overflow-style: none; scrollbar-width: none; }
 body::-webkit-scrollbar {display: none;}
@@ -13,8 +13,7 @@ input,textarea,button,select {font-family: inherit;}
 
 body.hidden { overflow: hidden;}
 body.menu { overflow: hidden;}
-body::before { content: "";  position: fixed;  left: 0;  top: 0;  width: 100%;  height: 100%; background-color: rgba(0,0,0,0.5); z-index: 99;  transition: all 0.4s ease; opacity: 0; pointer-events: none;cursor: pointer;}
-body.hidden::before { opacity: 1;  pointer-events: auto;}
+
   
 .wrap {width: 100%; position: relative; font-size: 1.6rem;}
 .pc {display: block;}
@@ -26,7 +25,7 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 .inner.wide {width: 100%; max-width: unset; padding-left: 4rem; padding-right: 4rem;}
 
   
-/*header*/
+/*header (동일)*/
 .header { position: relative; left: 0;  top: 0; width: 100%;  min-height: 20rem; z-index: 50; background: #000; display: flex; flex-direction: column; gap: 3.6rem; padding: 3.8rem 0 3rem;}
 .header .h_inner { position: relative; display: flex; align-items: center;  justify-content: space-between;  padding: 0 4rem;}
 .header .h_top { width: 100%; gap: 6.6rem;}
@@ -55,51 +54,9 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 .header .h_bottom .h_schbox .sch_input { width: 100%;  height: 100%;  border: none;   background: none;  border-radius: 0;  font-size: 1.6rem;  color: #000;  padding-right: 3rem; text-overflow: ellipsis;}
 .header .h_bottom .h_schbox .sch_input::placeholder {color: #666666;}
 .header .h_bottom .h_schbox .sch_btn { background: url(../img/ico_search.png) no-repeat center / contain;  width: 2rem;  aspect-ratio: 1 / 1;  position: absolute;  right: 2.6rem;  top: 50%; transform: translateY(-50%);}
-
-  
-/* nav box */
-.navbox {position: fixed; top: 0; right: 0; width: 90%; max-width: 360px; height: 100%; box-sizing: border-box;   background-color: #fff; overflow-y: scroll;  overflow-x: hidden; -ms-overflow-style: none; z-index: 250; display: flex; flex-direction: column; transition: all 0.6s ease; pointer-events: none; transform: translateX(100%); opacity: 1; pointer-events: unset; padding: 0; }
-.navbox.open { transform: translateX(0);}
-.navbox::-webkit-scrollbar {display: none;}
-.navbox .headbox {position: relative;  padding: 2rem 1.6rem;  display: flex;  flex-direction: column; gap: 2.4rem; background: #000; }
-.navbox .headbox .menu_close {background: url(../img/ico_close.svg) no-repeat center / contain; width: 1.8rem; aspect-ratio: 1 / 1;position: absolute;  right: 1.6rem; top: 2rem;}
-.navbox .headbox .title { font-size: 1.6rem; line-height: 1.385; font-weight: 500; color: #fff;}
-.navbox .headbox .title .name {font-weight: 700;}
-.navbox .headbox .top_nav {display: flex;  align-items: center;  gap: 0.875rem; }
-.navbox .headbox .top_nav .link { font-size: 1.3rem; line-height: 1.429; font-weight: 500;color: #fff;  display: inline-block; }
-.navbox .headbox .top_nav .bar {  width: 1px; height: 1rem; background:#fff; opacity: 0.5; }
-.navbox .schbox {  position: relative;  width: calc(100% - 2rem * 2);  height: 4.4rem;  min-height: 4.4rem;  background: #fff;  padding: 0 1.6rem;  border: 1px solid #ddd;  border-radius: 10rem;  margin: 2.4rem auto 0;}
-.navbox .schbox .sch_input { width: 100%;  height: 100%;  border: none;   background: none;  border-radius: 0;  font-size: 1.3rem;  color: #000;  padding-right: 3rem; text-overflow: ellipsis;}
-.navbox .schbox .sch_input::placeholder {color: #666666;}
-.navbox .schbox .sch_btn { background: url(../img/ico_search.png) no-repeat center / contain;  width: 1.6rem;  aspect-ratio: 1 / 1;  position: absolute;  right: 1.6rem;  top: 50%; transform: translateY(-50%);}
-.navbox .subbox {display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 1rem; padding: 2rem 1.6rem;  }
-.navbox .subbox > .item { width: calc((100% - 1rem * 2) / 3);}
-.navbox .subbox > .item .link {display: flex; flex-direction: column;  align-items: center;  gap: 1rem; font-size: 1.3rem; font-weight: 600;  color: #000;}
-.navbox .subbox > .item .link .imgbox {  width: 4rem;  aspect-ratio: 1 / 1;  display: flex;  align-items: center;  justify-content: center;  background: #f1f5f9;   border-radius: 1rem;}
-.navbox .subbox > .item .link .imgbox .icon { width: 2.4rem;}
-.navbox .menubox { width: 100%; flex: 1; border-top: 1px solid #ddd; padding: 2rem 0;}
-.navbox .menubox::-webkit-scrollbar {display: none;}
-.navbox .menubox > li { display: flex; flex-direction: column; width: 100%;}
-.navbox .menubox > li .acc_tit {cursor: pointer;}
-.navbox .menubox > li .acc_tit, 
-.navbox .menubox > li .title { font-size: 1.6rem;  line-height: 1.4;  font-weight: 600;   color: #000;  padding: 1.2rem 1.6rem; display: flex;  align-items: center;  justify-content: space-between; gap: 1rem;}
-.navbox .menubox > li .acc_tit .tit{flex: 1;}
-.navbox .menubox > li .acc_tit .icon{background: url(../img/acc_arrow.png) no-repeat center/contain; width: 1.6rem; aspect-ratio: 1/1; transition: all 0.4s ease;}
-.navbox .menubox > li.show > .acc_tit .icon {transform: rotate(180deg);}
-.navbox .menubox > li .acc_cont { display: none; background: #f1f5f9;}
-.navbox .menubox > li .acc_cont > li { width: 100%; padding: 0.6rem 1.6rem 0.6rem 2rem; font-size: 1.4rem; line-height: 1.429; color: #333333;font-weight: 500;}
-.navbox .menubox > li .acc_cont > li:nth-child(1) { margin-top: 1.2rem;}
-.navbox .menubox > li .acc_cont > li:last-child { margin-bottom: 1.2rem;}
-.navbox .menubox > li .acc_cont .acc_tit { padding: 0;  font-size: 1.4rem; font-weight: 500; color: #333;}
-.navbox .menubox > li .acc_cont .title { padding: 0;  font-size: 1.4rem; font-weight: 500; color: #333;}
-.navbox .menubox > li .acc_cont > li.show > .acc_tit .icon {transform: rotate(180deg);}
-.navbox .menubox > li .acc_cont > li .acc_cont {position: relative;}
-.navbox .menubox > li .acc_cont > li .acc_cont::before { content: "";  position: absolute;  left: 0.8rem;  top: 1rem;  width: 1px;  height: calc(100% - 1.5rem);  background: #9db0c3;  opacity: 0.5;}
-.navbox .menubox > li .acc_cont > li .acc_cont > li:nth-child(1) { padding-top: 1rem;}
-.navbox .menubox > li .acc_cont > li .acc_cont > li { padding: 0 2rem 0.8rem;  margin-bottom: 0.8rem;  font-size: 1.3rem; margin: 0; color: #666666;} 
     
 
-/* footer */
+/* footer (동일) */
 .footer { position: relative;  width: 100%;  background: #000000; color: #fff;  padding: 4rem 0 6rem;}
 .footer .f_inner { position: relative; width: 100%; padding: 0 8rem; display: flex; flex-direction: column;  gap: 3rem;}
 .footer .f_tit {font-size: 1.4rem; font-weight: 700;}
@@ -131,9 +88,61 @@ body.hidden::before { opacity: 1;  pointer-events: auto;}
 .footer .f_bottombox .copyright {font-size: 1.2rem; line-height: 1.5; color: #bbbcc9;}
 
 
-/* popup */
+/* popup (동일) */
 .popup { position: absolute;  left: 50%;  top: calc(100% + 1rem);  transform: translateX(-50%);  border-radius: 1rem;  box-shadow: 0 0.2rem 2rem 0 rgba(0, 0, 0, 0.2);   background: #fff;  min-width: 10rem;  display: flex;   flex-direction: column;   transition: all 0.4s ease;  opacity: 0;  pointer-events: none;  z-index: 30;}
 .popup.show{opacity: 1; pointer-events: auto;}
 .popup .linkbox {  padding: 1.2rem 1rem;  display: flex;  flex-direction: column;}
 .popup .linkbox > li {position: relative;}
 .popup .linkbox > li .link {  display: block;  font-size: 1.4rem;   padding: 0.6rem 0.4rem;  color: #000;  font-weight: 500;}
+
+
+/* datepicker */
+#datepicker:focus>.ui-datepicker { display: block; }
+.ui-datepicker { font-family: inherit; display: none; margin-top: 1.2rem; margin-left: 0; margin-right: 0px;  width: auto;  box-shadow: 0 0.4rem 2rem 0 rgba(0, 0, 0, 0.1); border: 1px solid #f5f5f5; border-radius: 1.6rem; padding: 2rem 1.6rem;  background: #fff;}
+.ui-datepicker * {font-family: inherit !important;}
+.ui-widget.ui-widget-content {border: 1px solid #f5f5f5;}
+.ui-datepicker .ui-datepicker-header { position: relative; padding: 0 1rem; display: flex;  align-items: center; border-radius: 0; background: #fff; margin-bottom: 2rem;  border: 0;}
+.ui-datepicker .ui-datepicker-title { flex: 1;  margin: 0;  padding: 0;  text-align: left; order: 1; font-weight: 600; font-size: 1.6rem; line-height: 1.4; letter-spacing: 0.01em;  color: #000; display: flex; align-items: center; gap: 1.2rem;}
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year { width: 33%;}
+.ui-datepicker .ui-datepicker-title select { margin: 0; width: fit-content; max-width: 100%; appearance: none;  font-weight: 600; font-size: 1.6rem; line-height: 1.4; letter-spacing: 0.01em; color: #434343;  background: url(../img/datepicker_arrow.png) no-repeat right 0 center / 1.4rem #fff; border: none; padding-right: 2rem; transition: all 0.4s ease; cursor: pointer;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position: relative; width: 1.6rem  !important; height: auto !important; left: auto; right:auto; top: auto; aspect-ratio: 1 / 1; display: flex; cursor: pointer;}
+.ui-datepicker .ui-datepicker-prev {order: 2; margin-right: 0.8rem;}
+.ui-datepicker .ui-datepicker-next {order: 3;}
+.ui-datepicker .ui-datepicker-prev span, 
+.ui-datepicker .ui-datepicker-next span { background: no-repeat center / contain; width: 100%; height: 100%;}
+.ui-datepicker .ui-datepicker-prev span{ background-image: url(../img/datepicker_prev.png);}
+.ui-datepicker .ui-datepicker-next span{ background-image: url(../img/datepicker_next.png);}
+.ui-datepicker-calendar { width: 100%; }  
+.ui-datepicker table {margin: 0;}
+.ui-datepicker-calendar>thead>tr>th { width: 3.4rem; height: 3.4rem;  padding: 0;  }
+.ui-datepicker-calendar>thead>tr>th span {font-weight: 500; font-size: 1.6rem; line-height: 1.4; letter-spacing: 0.01em; color: #000;}
+.ui-datepicker-calendar>thead>tr>th span[title="일요일"] {color: #F93337;}
+.ui-datepicker-calendar>thead>tr>th span[title="토요일"] {color: #4c88fb;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { border: none; background-color: transparent;text-align: center; width: 3.4rem; height: 3.4rem; padding: 0; font-weight: 500; font-size: 1.6rem; line-height: 1.4;    display: flex;  align-items: center; justify-content: center;letter-spacing: 0.01em;color: #434343;}
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,
+.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus,
+.ui-button:hover,.ui-button:focus { border: none; background-color: transparent;text-align: center; width: 3.4rem; height: 3.4rem; padding: 0; font-weight: 500; font-size: 1.6rem; line-height: 1.4;   display: flex;  align-items: center; justify-content: center;letter-spacing: 0.01em;color: #434343;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {font-weight: 700; color: #000;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {border: none; background: transparent; position: relative; color: #fff}
+.ui-state-active::before, .ui-widget-content .ui-state-active::before, .ui-widget-header .ui-state-active::before, a.ui-button:active::before, .ui-button:active::before, .ui-button.ui-state-active:hover::before { content: ""; border-radius: 0.8rem; background: #000;  width: 3.4rem; aspect-ratio: 1 / 1; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: -1;}
+.ui-state-disabled { cursor: auto; color: #c4c4c4;}    
+.ui-datepicker-calendar>tbody>tr>.ui-state-disabled:hover {cursor: auto;  background-color: #fff;}  
+.ui-state-disabled, .ui-widget-content .ui-state-disabled , .ui-widget-header .ui-state-disabled { opacity: 1;}
+.ui-state-disabled, .ui-widget-content .ui-state-disabled span, .ui-widget-header .ui-state-disabled span { color: #c4c4c4; font-weight: 400;}  
+
+
+/* modal */
+.modal { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; background: rgba(0, 0, 0, 0.5); transition:all 0.4s ease; pointer-events: none; opacity: 0;}
+.modal.show { pointer-events: auto; opacity: 1;}
+.modal .modal_box { position: absolute;  left: 50%;  top: 50%;   transform: translate(-50%, -50%);  border-radius: 2rem;  background: #fff;  max-width: 90%;   max-height: 90%;  display: flex;  flex-direction: column;  transition: all 0.4s ease;  margin-top: 4rem;  opacity: 0;  overflow: hidden;}
+.modal.show .modal_box { margin-top: 0; opacity: 1;}
+.modal .modal_box .modal_head { width: 100%;  height: 10rem; min-height: 10rem;  display: flex;   align-items: center;  justify-content: space-between; background: #000; padding: 0 3.2rem;}
+.modal .modal_box .modal_head .modal_tit {font-weight: 600;font-size: 2.4rem;line-height: 100%;color: #fff;}
+.modal .modal_box .modal_head .modal_close {background: url(../img/modal_close.png) no-repeat center/contain; width: 3.6rem; aspect-ratio: 1/1;}
+.modal .modal_box .modal_body {position: relative; flex: 1; overflow: auto;}
+.modal .modal_box .modal_body::-webkit-scrollbar {display: none;}
+.modal .modal_box .modal_foot { display: flex; justify-content: center;  gap: 1.2rem;  margin: 4rem 4rem 4.5rem;}
+.modal .modal_box .modal_foot .modal_btn { font-size: 1.6rem;line-height: 100%;color: #465568; border: 1px solid transparent;max-width: 50%; padding: 1.2rem 4.6rem;}
+.modal .modal_box .modal_foot .modal_btn.typeA {background: #000; color: #fff; border-color: #000;}
+.modal .modal_box .modal_foot .modal_btn.typeB {background: #fff; color: #465568; border-color: #99a7b4;}

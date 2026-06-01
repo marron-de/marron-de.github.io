@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIVA</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- datepicker -->
+    <link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui.min.js">
+    </script>
+	
+    <!-- Font -->
+    <link rel="stylesheet" href="css/Pretendard.css">
+    <link rel="stylesheet" href="css/Paperlogy.css">
+
+	<!-- style -->
+    <link rel="stylesheet" href="css/commons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body class="hidden">
+
+
+    <div class="wrap admin_wrap">
+
+        <!-- header -->
+        <header class="header">
+            <div class="h_inner h_top">
+                <div class="h_logo">
+                    <a href="">
+                        <img src="img/logo.png" alt="" />
+                    </a>
+                </div>
+                <ul class="h_nav">
+                	<li><a href="" class="link">트렌드픽</a></li>
+                	<li><a href="" class="link">입점특가</a></li>
+                	<li><a href="" class="link">AI pick</a></li>
+                	<li><a href="" class="link">위클리 베스트</a></li>
+                	<li><a href="" class="link">시즌오프</a></li>
+                	<li><a href="" class="link">리뷰왕선정존</a></li>
+                </ul>
+                <div class="h_side">
+					<div class="my_select">
+						<div class="tit" onclick="select_popup()">
+							<span class="txt">푸딩푸딩이</span>
+							<span class="arrow"></span>
+						</div>
+						<div class="popup select_popup">
+							<ul class="linkbox">
+								<li><a href="" class="link">메뉴 이름</a></li>
+								<li><a href="" class="link">메뉴 이름</a></li>
+								<li><a href="" class="link">메뉴 이름</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="btnbox">
+						<a href="" class="btn my_btn"></a>
+						<a href="" class="btn wish_btn pc"></a>
+						<a href="" class="btn cart_btn pc"></a>
+						<button type="button" class="btn menu_open tablet"></button>	
+					</div>
+                </div>
+            </div>
+            <div class="h_inner h_bottom">
+                <ul class="h_category">          
+                    <li><a href="" class="link">여성의류</a></li>
+                    <li><a href="" class="link">남성의류</a></li>
+                    <li><a href="" class="link">여성신발</a></li>
+                    <li><a href="" class="link">여성가방</a></li>
+                    <li><a href="" class="link">여성주얼리</a></li>
+                    <li><a href="" class="link">여성잡화</a></li>
+                    <li><a href="" class="link">남성신발</a></li>
+                    <li><a href="" class="link">남성가방</a></li>
+                    <li><a href="" class="link">남성잡화</a></li>
+                    <li><a href="" class="link">아동의류</a></li>
+                    <li><a href="" class="link">아동잡화</a></li>
+				</ul>
+                <div class="h_schbox">
+					<input type="text" class="sch_input" placeholder="업체명, 제품명, 판매자명을 검색하세요">
+					<button type="button" class="sch_btn"></button>
+                </div>
+            </div>
+        </header>
+
+        <!-- container -->
+        <div class="container">
+
+			<div class="adm_topbox">
+				<div class="top_left">
+					<div class="logo">
+						<div class="thum">
+							<img src="img/nako_img.png" alt="" class="img">
+						</div>
+						<p class="txt">NAKO®</p>
+					</div>
+				</div>
+				<div class="top_right">
+					<div class="leftbox">
+						<div class="infobox">
+							<div class="item">
+								<p class="tit">상점등급 :</p>
+								<p class="desc">
+									<img src="img/ico_seller.png" alt="" class="icon">
+									<span class="txt">파워셀러</span>
+								</p>
+							</div>
+							<div class="item">
+								<p class="tit">판매상태 :</p>
+								<p class="desc">
+									<!-- 
+										정상 판매중 : state1
+										심사중 : state2
+										판매제한 : state3
+										휴점중 : state4
+									-->
+									<span class="state_dot state1"></span>
+									<span class="txt">정상 판매중</span>
+								</p>
+							</div>
+						</div>
+						<div class="noticebox">
+							<p class="tit">Notice</p>
+							<div class="cont">
+								<p class="desc">판매자 연락두절에 대한 제재 강화 </p>
+								<div class="bar"></div>
+								<p class="date">2026.05.15</p>
+							</div>
+						</div>
+					</div>
+					<div class="rightbox">
+						<p class="date">2026.12.25 PM 04:28</p>
+					</div>
+				</div>
+			</div>
+
+			<section class="section adm_sec">
+				<div class="adm_side">
+					<ul class="accordion sidemenu">
+						<li>
+							<a href="" class="title">
+								<p class="tit">대시보드</p>
+								<span class="arrow"></span>
+							</a>
+						</li>
+						<li class="show">
+							<div class="acc_tit">
+								<p class="tit">판매 관리</p>
+								<span class="arrow"></span>
+							</div>
+							<ul class="acc_cont" style="display: block;">
+								<li>
+									<ul class="submenu">
+										<li><a href="" class="link">주문통합검색</a></li>
+										<li class="on"><a href="" class="link">발송관리</a></li>
+										<li><a href="" class="link">배송현황 관리</a></li>
+										<li><a href="" class="link">구매확정 내역</a></li>
+										<li><a href="" class="link">취소 관리</a></li>
+										<li><a href="" class="link">반품 관리</a></li>
+										<li><a href="" class="link">교환 관리</a></li>
+										<li><a href="" class="link">판매방해 고객관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="acc_tit">
+								<p class="tit">정산 관리</p>
+								<span class="arrow"></span>
+							</div>
+							<ul class="acc_cont">
+								<li>
+									<ul class="submenu">
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="acc_tit">
+								<p class="tit">상품 관리</p>
+								<span class="arrow"></span>
+							</div>
+							<ul class="acc_cont">
+								<li>
+									<ul class="submenu">
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="acc_tit">
+								<p class="tit">문의/리뷰 관리</p>
+								<span class="arrow"></span>
+							</div>
+							<ul class="acc_cont">
+								<li>
+									<ul class="submenu">
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="acc_tit">
+								<p class="tit">스토어 관리</p>
+								<span class="arrow"></span>
+							</div>
+							<ul class="acc_cont">
+								<li>
+									<ul class="submenu">
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="acc_tit">
+								<p class="tit">AI 모델 생성</p>
+								<span class="arrow"></span>
+							</div>
+							<ul class="acc_cont">
+								<li>
+									<ul class="submenu">
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+										<li><a href="" class="link">서브메뉴</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="adm_cont">
+					<div class="adm_titbox">
+						<img src="img/adm_tit_icon1.png" alt="" class="icon">
+						<p class="tit">판매 관리 :: 발송관리</p>
+					</div>
+					<div class="dash_row">
+						<div class="dash_col full adm_sendbox">
+							<div class="send_item">
+								<p class="send_tit red">빠른확인!</p>
+								<div class="send_cont">
+									<div class="item">
+										<img src="img/send_tit_icon1.png" alt="" class="icon">
+										<div class="txtbox">
+											<p class="tit">발송기한 초과</p>
+											<p class="desc">2건</p>
+										</div>
+										<button type="button" class="info_btn"></button>
+									</div>
+									<div class="item">
+										<img src="img/send_tit_icon1-1.png" alt="" class="icon">
+										<div class="txtbox">
+											<p class="tit">자동처리 예정</p>
+											<p class="desc">0건</p>
+										</div>
+										<button type="button" class="info_btn"></button>
+									</div>
+								</div>
+							</div>
+							<div class="send_item">
+								<p class="send_tit green">발송처리</p>
+								<div class="send_cont">
+									<div class="item">
+										<img src="img/send_tit_icon2.png" alt="" class="icon">
+										<div class="txtbox">
+											<p class="tit">신규주문(발주전)</p>
+											<p class="desc green">48건</p>
+										</div>
+										<button type="button" class="info_btn"></button>
+									</div>
+									<div class="item">
+										<img src="img/send_tit_icon2-1.png" alt="" class="icon">
+										<div class="txtbox">
+											<p class="tit">신규주문(발주후)</p>
+											<p class="desc">3건</p>
+										</div>
+										<button type="button" class="info_btn"></button>
+									</div>
+									<div class="item">
+										<img src="img/send_tit_icon2-2.png" alt="" class="icon">
+										<div class="txtbox">
+											<p class="tit">발송전 취소요청</p>
+											<p class="desc">4건</p>
+										</div>
+										<button type="button" class="info_btn"></button>
+									</div>
+									<div class="item">
+										<img src="img/send_tit_icon2-3.png" alt="" class="icon">
+										<div class="txtbox">
+											<p class="tit">발송전 배송지 변경</p>
+											<p class="desc">0건</p>
+										</div>
+										<button type="button" class="info_btn"></button>
+									</div>
+									<div class="item">
+										<img src="img/send_tit_icon2-4.png" alt="" class="icon">
+										<div class="txtbox">
+											<p class="tit">발송마감</p>
+											<p class="desc">29건</p>
+										</div>
+										<button type="button" class="info_btn"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dash_row">
+						<div class="dash_col full adm_search">
+							<div class="sch_item">
+								<p class="sch_tit">조회기간</p>
+								<div class="sch_cont">
+									<div class="sch_row mb12">
+										<div class="check_wrap">
+											<div class="check_box">
+												<input type="checkbox" name="date_type" id="date_all" class="input_check" checked>
+												<label for="date_all" class="label_check">전체</label>
+											</div>
+											<div class="check_box">
+												<input type="checkbox" name="date_type" id="date_pay" class="input_check">
+												<label for="date_pay" class="label_check">결제일</label>
+											</div>
+											<div class="check_box">
+												<input type="checkbox" name="date_type" id="date_confirm" class="input_check">
+												<label for="date_confirm" class="label_check">발주확인일</label>
+											</div>
+											<div class="check_box">
+												<input type="checkbox" name="date_type" id="date_process" class="input_check">
+												<label for="date_process" class="label_check">발주처리일</label>
+											</div>
+										</div>
+									</div>	
+									<div class="sch_row">
+										<div class="period_box">
+											<button type="button" class="btn">오늘</button>
+											<button type="button" class="btn on">1주일</button>
+											<button type="button" class="btn">1개월</button>
+											<button type="button" class="btn">3개월</button>
+										</div>
+										<div class="date_box">
+											<div class="date_item">
+												<input type="text" class="datepicker input" placeholder="2026.05.23" readonly>
+												<button type="button" class="btn"></button>
+											</div>
+											<span class="date_txt">~</span>
+											<div class="date_item">
+												<input type="text" class="datepicker input" placeholder="2026.05.23" readonly>
+												<button type="button" class="btn"></button>
+											</div>
+										</div>
+										<div class="input_box w100 mx508 minus16">
+											<input type="text" class="input_text" placeholder="주문번호, 수취인명, 구매자명, 구매자연락처, 구매자ID, 상품번호, 송장번호등 검색 키워드 입력">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sch_itembox">
+								<div class="sch_item center">
+									<p class="sch_tit">조회기간</p>
+									<div class="sch_cont">
+										<div class="sch_row">
+											<div class="select_box">
+												<select class="select">
+													<option value="발송대기">발송대기</option></option>
+												</select>
+											</div>
+											<div class="select_box">
+												<select class="select">
+													<option value="전체">전체</option></option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sch_item center">
+									<p class="sch_tit">배송방법</p>
+									<div class="sch_cont">
+										<div class="sch_row">
+											<div class="select_box">
+												<select class="select">
+													<option value="전체">전체</option></option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sch_item center">
+									<p class="sch_tit">결제위치</p>
+									<div class="sch_cont">
+										<div class="sch_row">
+											<div class="select_box">
+												<select class="select">
+													<option value="전체">전체</option></option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sch_bottom">
+								<button type="button" class="sch_btn">위 조건으로 검색</button>
+							</div>
+						</div>
+					</div>
+					<div class="dash_row">
+						<div class="dash_col full">
+							<div class="titbox">
+								<div class="left">
+									<p class="adm_tit">
+										주문목록 
+										<span class="small">(Total 24개)</span>
+									</p>
+								</div>
+								<div class="right">
+									<div class="select_box">
+										<select class="select">
+											<option value="내림차순">상품주문번호 내림차순</option>
+										</select>
+									</div>
+									<div class="select_box">
+										<select class="select">
+											<option value="200개씩 보기">20개씩 보기</option>
+											<option value="50개씩 보기">50개씩 보기</option>
+											<option value="100개씩 보기" selected>100개씩 보기</option>
+										</select>
+									</div>
+									<button type="button" class="ico_btn">
+										<img src="img/ico_excel.png" alt="" class="icon">
+										<span class="txt">엑셀 다운</span>
+									</button>
+								</div>
+							</div>
+							<div class="contbox">
+								<div class="tbl_wrap ver2">
+									<div class="tbl_topbtnbox">
+										<div class="leftbox">
+											<button type="button" class="btn">
+												<span class="txt">발주확인</span>
+											</button>
+											<button type="button" class="btn">
+												<span class="txt">발송처리</span>
+											</button>
+											<button type="button" class="btn">
+												<span class="txt">엑셀 일괄 발송처리</span>
+											</button>
+											<button type="button" class="btn">
+												<span class="txt">발송지연 처리</span>
+											</button>
+											<button type="button" class="btn">
+												<span class="txt">판매자 직접취소 처리</span>
+											</button>
+										</div>
+										<div class="rightbox">
+											<button type="button" class="btn ver2">
+												<span class="txt">구매확정 후 취소처리 바로가기</span>
+												<span class="arrow"></span>
+											</button>
+										</div>
+									</div>
+									<div class="tbl_topftbox">
+										<p class="tit">합포장 송장번호 한번에 입력하기</p>
+										<div class="select_box">
+											<select class="select">
+												<option value="">선택</option>
+											</select>
+										</div>
+										<div class="select_box">
+											<select class="select">
+												<option value="">택배사명 선택</option>
+											</select>
+										</div>
+										<div class="input_box input_flex">
+											<input type="text" class="input_text" placeholder="송장번호를 입력하세요">
+											<button type="button" class="input_btn">선택건 적용</button>
+										</div>
+									</div>
+									<div class="tbl_layout">
+										<div class="tbl_box w372 sticky">
+											<table class="tbl">
+												<colgroup>
+													<col style="width: 34px;">
+													<col style="width: 102px;">
+													<col style="width: 94px;">
+													<col style="width: 140px;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</th>
+														<th data-th="상품주문번호">상품주문번호</th>
+														<th data-th="주문번호">주문번호</th>
+														<th data-th="주문일자">배송방법</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">
+															<div class="select_box">
+																<select class="select">
+																	<option value="배송없음">배송없음</option>
+																	<option value="택배,등기,소포" selected>택배,등기,소포</option>
+																	<option value="직접전달">직접전달</option>
+																	<option value="방문수령">방문수령</option>
+																	<option value="퀵서비스">퀵서비스</option>
+																</select>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">
+															<div class="select_box">
+																<select class="select">
+																	<option value="배송없음">배송없음</option>
+																	<option value="택배,등기,소포" selected>택배,등기,소포</option>
+																	<option value="직접전달">직접전달</option>
+																	<option value="방문수령">방문수령</option>
+																	<option value="퀵서비스">퀵서비스</option>
+																</select>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">
+															<div class="select_box">
+																<select class="select">
+																	<option value="배송없음">배송없음</option>
+																	<option value="택배,등기,소포" selected>택배,등기,소포</option>
+																	<option value="직접전달">직접전달</option>
+																	<option value="방문수령">방문수령</option>
+																	<option value="퀵서비스">퀵서비스</option>
+																</select>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">
+															<div class="select_box">
+																<select class="select">
+																	<option value="배송없음">배송없음</option>
+																	<option value="택배,등기,소포" selected>택배,등기,소포</option>
+																	<option value="직접전달">직접전달</option>
+																	<option value="방문수령">방문수령</option>
+																	<option value="퀵서비스">퀵서비스</option>
+																</select>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">배송없음</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">택배,등기,소포</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">직접전달</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">방문수령</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">퀵서비스</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">배송없음</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">택배,등기,소포</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">직접전달</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">방문수령</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">퀵서비스</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">배송없음</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">택배,등기,소포</td>
+													</tr>
+													<tr>
+														<td data-th="allcheck">
+															<div class="check_box">
+																<input type="checkbox" class="input_check">
+															</div>
+														</td>
+														<td data-td="상품주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="주문번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-td="배송방법">직접전달</td>
+													</tr>
+													<tr>
+														<td colspan="3"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="tbl_box overflow">
+											<table class="tbl">
+												<colgroup>
+													<col style="width: 140px;">
+													<col style="width: 230px;">
+													<col style="width: 75px;">
+													<col style="width: 110px;">
+													<col style="width: 64px;">
+													<col style="width: 85px;">
+													<col style="width: 64px;">
+													<col style="width: 64px;">
+													<col style="width: 62px;">
+													<col style="width: 100px;">
+													<col style="width: 150px;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th data-th="택배사">택배사</th>
+														<th data-th="송장번호">송장번호</th>
+														<th data-th="배송추적">배송추적</th>
+														<th data-th="발송일">발송일</th>
+														<th data-th="구매자명">구매자명</th>
+														<th data-th="구매자ID">구매자ID</th>
+														<th data-th="수취인명">수취인명</th>
+														<th data-th="주문상태">주문상태</th>
+														<th data-th="결제위치">결제위치</th>
+														<th data-th="상품번호">상품번호</th>
+														<th data-th="상품명">상품명</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td data-td="택배사">
+															<div class="select_box">
+																<select class="select">
+																	<option value="">택배사 선택</option>
+																	<option value="CJ대한통운">CJ대한통운</option>
+																</select>
+															</div>
+														</td>
+														<td data-td="송장번호">
+															<div class="input_box">
+																<input type="text" class="input_text" placeholder="송장번호 입력">
+															</div>
+														</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">김다영</td>
+														<td data-th="구매자ID">youngs0128</td>
+														<td data-th="수취인명">김다영</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">
+															<div class="select_box">
+																<select class="select">
+																	<option value="">택배사 선택</option>
+																	<option value="CJ대한통운">CJ대한통운</option>
+																</select>
+															</div>
+														</td>
+														<td data-td="송장번호">
+															<div class="input_box">
+																<input type="text" class="input_text" placeholder="송장번호 입력">
+															</div>
+														</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">강경희</td>
+														<td data-th="구매자ID">karen6908</td>
+														<td data-th="수취인명">강경희</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">
+															<div class="select_box">
+																<select class="select">
+																	<option value="">택배사 선택</option>
+																	<option value="CJ대한통운">CJ대한통운</option>
+																</select>
+															</div>
+														</td>
+														<td data-td="송장번호">
+															<div class="input_box">
+																<input type="text" class="input_text" placeholder="송장번호 입력">
+															</div>
+														</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">강경희</td>
+														<td data-th="구매자ID">karen6908</td>
+														<td data-th="수취인명">강경희</td>
+														<td data-th="주문상태">배송완료</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">
+															<div class="select_box">
+																<select class="select">
+																	<option value="">택배사 선택</option>
+																	<option value="CJ대한통운">CJ대한통운</option>
+																</select>
+															</div>
+														</td>
+														<td data-td="송장번호">
+															<div class="input_box">
+																<input type="text" class="input_text" placeholder="송장번호 입력">
+															</div>
+														</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">김동연</td>
+														<td data-th="구매자ID">youngs0128</td>
+														<td data-th="수취인명">김동연</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">박수현</td>
+														<td data-th="구매자ID">soodaisuki</td>
+														<td data-th="수취인명">박수현</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">박수현</td>
+														<td data-th="구매자ID">soodaisuki</td>
+														<td data-th="수취인명">박수현</td>
+														<td data-th="주문상태">배송완료</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">박수현</td>
+														<td data-th="구매자ID">soodaisuki</td>
+														<td data-th="수취인명">박수현</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">서선민</td>
+														<td data-th="구매자ID">soodaisuki</td>
+														<td data-th="수취인명">서선민</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">서선민</td>
+														<td data-th="구매자ID">soodaisuki</td>
+														<td data-th="수취인명">서선민</td>
+														<td data-th="주문상태">배송완료</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">서선민</td>
+														<td data-th="구매자ID">soodaisuki</td>
+														<td data-th="수취인명">서선민</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">김수민</td>
+														<td data-th="구매자ID">brain0519</td>
+														<td data-th="수취인명">김수민</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">이경민</td>
+														<td data-th="구매자ID">angle998</td>
+														<td data-th="수취인명">이경민</td>
+														<td data-th="주문상태">배송완료</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">김다영</td>
+														<td data-th="구매자ID">youngs0128</td>
+														<td data-th="수취인명">김다영</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">강경희</td>
+														<td data-th="구매자ID">karen6908</td>
+														<td data-th="수취인명">강경희</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">강경희</td>
+														<td data-th="구매자ID">karen6908</td>
+														<td data-th="수취인명">강경희</td>
+														<td data-th="주문상태">배송완료</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">김동연</td>
+														<td data-th="구매자ID">kimdongyon</td>
+														<td data-th="수취인명">김동연</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td data-td="택배사">CJ대한통운</td>
+														<td data-td="송장번호">20165954856321</td>
+														<td data-td="배송추적">
+															<a href="" class="link">배송추적</a>
+														</td>
+														<td data-th="발송일">2026.12.25 16:25</td>
+														<td data-th="구매자명">박수현</td>
+														<td data-th="구매자ID">soodaisuki</td>
+														<td data-th="수취인명">박수현</td>
+														<td data-th="주문상태">배송중</td>
+														<td data-th="결제위치">Mobile</td>
+														<td data-th="상품번호">
+															<a href="" class="link">260521073516</a>
+														</td>
+														<td data-th="상품명">상품명</td>
+													</tr>
+													<tr>
+														<td colspan="999">
+															<div class="custom_scrollbar">
+																<div class="bar" style="width: 21.2rem;"></div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="pagination">
+										<button type="button" class="page_btn start"></button>
+										<button type="button" class="page_btn prev"></button>
+										<a href="" class="page_link on">1</a>
+										<a href="" class="page_link">2</a>
+										<a href="" class="page_link">3</a>
+										<a href="" class="page_link">4</a>
+										<a href="" class="page_link">5</a>
+										<a href="" class="page_link">6</a>
+										<a href="" class="page_link">7</a>
+										<a href="" class="page_link">8</a>
+										<a href="" class="page_link">9</a>
+										<a href="" class="page_link">10</a>
+										<button type="button" class="page_btn next"></button>
+										<button type="button" class="page_btn end"></button>
+									</div>
+								</div>
+								<div class="tbl_bottom">
+									<div class="item">
+										<p class="tit">구매확정 관리</p>
+										<div class="cont">
+											<button type="button" class="btn">구매확정 요청</button>
+											<button type="button" class="btn">구매확정 연장</button>
+										</div>
+									</div>
+									<div class="item">
+										<p class="tit">교환/반품</p>
+										<div class="cont">
+											<button type="button" class="btn">판매자 직접 반품</button>
+											<button type="button" class="btn">판매자 직접 교환</button>
+										</div>
+									</div>
+									<div class="item">
+										<p class="tit">정보 수정</p>
+										<div class="cont">
+											<button type="button" class="btn">송장수정</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="f_inner">
+				<div class="f_topbox">
+					<div class="leftbox">
+						<p class="tit">고객센터 02.1234.5678</p>
+						<p class="info">운영시간 : 평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00 제외)</p>
+						<div class="btnbox">
+							<a href="" class="btn">
+								<span class="txt">FAQ</span>
+								<span class="arrow"></span>
+							</a>
+							<a href="" class="btn">
+								<span class="txt">1:1 문의</span>
+								<span class="arrow"></span>
+							</a>
+						</div>
+					</div>
+					<div class="rightbox sns_box">
+						<a href="" class="link ver2" target="_blank">
+							<img src="img/ico_youtube.png" alt="" class="icon">
+						</a>
+						<a href="" class="link" target="_blank">
+							<img src="img/ico_facebook.png" alt="" class="icon">
+						</a>
+						<a href="" class="link" target="_blank">
+							<img src="img/ico_instargram.png" alt="" class="icon">
+						</a>
+					</div>
+				</div>
+				<div class="f_centerbox">
+					<div class="notice_box">
+						<p class="f_tit">NOTICE</p>
+						<div class="listbox">
+							<a href="" class="f_desc">
+								[공지] 택배 없는 날 및 공휴일로 인한 배송 지연 안내
+							</a>
+							<a href=""  class="f_desc">
+								기상악화로 인한 배송 지연 양해 안내
+							</a>
+							<a href=""  class="f_desc">
+								[공지] 서비스 점검 안내
+							</a>
+							<a href=""  class="f_desc">
+								[공지][29CM/무신사스토어] 통합 계정 서비스 런칭 및 약관 전부 개정 안내
+							</a>
+							<a href=""  class="f_desc">
+								[공지] 29CM 개인정보처리방침 개정(25.7.1 시행)
+							</a>
+						</div>
+					</div>
+					<div class="menubox">
+						<div class="menuitem">
+							<p class="f_tit">MY ORDER</p>
+							<div class="listbox">
+								<a href="" class="f_desc">주문배송</a>
+								<a href="" class="f_desc">취소/교환/반품 내역</a>
+								<a href="" class="f_desc">상품리뷰 내역</a>
+								<a href="" class="f_desc">증빙서류발급</a>
+							</div>
+						</div>
+						<div class="menuitem">
+							<p class="f_tit">MY ACCOUNT</p>
+							<div class="listbox">
+								<a href="" class="f_desc">회원정보수정</a>
+								<a href="" class="f_desc">나의 멤버십 등급</a>
+								<a href="" class="f_desc">마일리지현황</a>
+								<a href="" class="f_desc">쿠폰</a>
+							</div>
+						</div>
+						<div class="menuitem">
+							<p class="f_tit">HELP</p>
+							<div class="listbox">
+								<a href="" class="f_desc">1:1 문의</a>
+								<a href="" class="f_desc">입점 및 제휴 문의</a>
+								<a href="" class="f_desc">나의 Q&A내역</a>
+								<a href="" class="f_desc">공지사항</a>
+								<a href="" class="f_desc">FAQ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="f_bottombox">
+					<div class="linkbox">
+						<a href="" class="link bold">개인정보처리방침</a>
+						<span class="bar"> </span>
+						<a href="" class="link">이용약관</a>
+						<span class="bar"></span>
+						<a href="" class="link">분쟁해결기준 </a>
+						<span class="bar"></span>
+						<a href="" class="link">결제대행위탁사</a>
+					</div>
+					<div class="infotxt">
+						(주)로제나(ROGENA) (대표: 박기삼)<br>
+						주소: 서울특별시 강남구 테헤란로 123, 7층 (우: 06234) <br>
+						대표전화: 02-1234-5678 | 이메일: contact@logena.co.kr <br>
+						사업자등록번호: 123-45-67890 | 통신판매업 신고번호: 제2025-서울강남-00001호 <br>
+						개인정보보호책임자: 김종성 (privacy@logena.co.kr)
+					</div>
+					<p class="copyright">
+						© 2025 LOGENA Co., Ltd. All rights reserved.
+					</p>
+				</div>
+            </div>
+        </footer>
+
+		<!-- modal -->
+		<div id="prdOrdInfo_modal" class="modal show">
+			<div class="modal_box">
+				<div class="modal_head">
+					<p class="modal_tit"></p>
+					<button type="button" class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<div class="ordInfo_wrap">
+						<div class="ordInfo_box">
+							<p class="ordInfo_tit">상품주문정보 조회</p>
+							<div class="infobox">
+								<p class="tit">상품주문정보 조회</p>
+								<p class="desc green">2026051528034091</p>
+							</div>
+							<div class="tbl_wrap">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 172px;">	
+										<col style="width: 388px;">	
+										<col style="width: 172px;">	
+										<col style="width: 388px;">	
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>상품명</th>
+											<td colspan="3">[M-4XL] 살안타템 오버핏 하늘하늘 컬러 스트라이프 시스루 긴팔 셔츠 5color</td>
+										</tr>
+										<tr>
+											<th>상품주문상태</th>
+											<td>배송완료</td>
+											<th>클레임</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th>수량클레임여부</th>
+											<td>N</td>
+											<th>구매확정연장상태</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th>구매자명</th>
+											<td>이경민</td>
+											<th>구매자 ID</th>
+											<td>angle123</td>
+										</tr>
+										<tr>
+											<th>옵션</th>
+											<td colspan="3">색상 : 화이트 / 사이즈 : L</td>
+										</tr>
+										<tr>
+											<th>주문수량</th>
+											<td>1</td>
+											<th>초기주문수량</th>
+											<td>1</td>
+										</tr>
+										<tr>
+											<th>최종 상품금액</th>
+											<td>29,800원</td>
+											<th>상품별  할인액</th>
+											<td>쿠폰 (-680원)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="ordInfo_box">
+							<p class="ordInfo_tit">배송 정보</p>
+							<div class="tbl_wrap">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 172px;">	
+										<col style="width: 388px;">	
+										<col style="width: 172px;">	
+										<col style="width: 388px;">	
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>발송지연사유</th>
+											<td>입고 지연으로 인한 지연</td>
+											<th>당일발송여부</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>발송기한</th>
+											<td>2026.12.25 14:48:54</td>
+											<th>예약구매여부</th>
+											<td>N</td>
+										</tr>
+										<tr>
+											<th>발송처리일</th>
+											<td>2026.12.25 14:48:54</td>
+											<th>발주확인일</th>
+											<td>2026.12.25 14:48:54</td>
+										</tr>
+										<tr>
+											<th>최초 집화처리일시</th>
+											<td>2026.12.25 14:48:54</td>
+											<th>최종 집화처리일시</th>
+											<td>2026.12.25 14:48:54</td>
+										</tr>
+										<tr>
+											<th>배송방법</th>
+											<td>택배,등기,소포</td>
+											<th>배송완료일</th>
+											<td>2026.12.25 14:48:54</td>
+										</tr>
+										<tr>
+											<th>출하일시</th>
+											<td>2026.12.25 14:48:54</td>
+											<th>배송속성</th>
+											<td>당일발송</td>
+										</tr>
+										<tr>
+											<th>택배사</th>
+											<td>CJ대한 통운</td>
+											<th>배송상세상태</th>
+											<td>배송완료</td>
+										</tr>
+										<tr>
+											<th>구매확정일</th>
+											<td>2026.12.25 14:48:54</td>
+											<th>송장번호</th>
+											<td>
+												<div class="tbl_inline">
+													<p class="txt">51263598458412</p>
+													<button type="button" class="small_btn">배송조회</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>오류송장등록사유</th>
+											<td>등신임</td>
+											<th>오류송장 등록일</th>
+											<td>2026.12.25 14:48:54</td>
+										</tr>
+										<tr>
+											<th>개인통관고유부호</th>
+											<td>P123456789512</td>
+											<th></th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="ordInfo_box">
+							<p class="ordInfo_tit">배송지 정보</p>
+							<div class="tbl_wrap">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 172px;">	
+										<col style="width: 948px;">	
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>수취인명</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th>연락처 1</th>
+											<td>010-1234-5678</td>
+										</tr>
+										<tr>
+											<th>연락처 2</th>
+											<td>010-1234-5678</td>
+										</tr>
+										<tr>
+											<th>배송지</th>
+											<td>서울특별시 영등포구 여의대방로1길 3 (신길동, 한림캐슬) 601호</td>
+										</tr>
+										<tr>
+											<th>배송메모</th>
+											<td>1층 현관비번 *4592* / 문앞에 놔주세요</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="ordInfo_box">
+							<p class="ordInfo_tit">주문 처리 이력</p>
+							<div class="tbl_wrap">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 172px;">	
+										<col style="width: 948px;">	
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>주문</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt"></span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>결제완료</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt"></span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>발주확인</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt">발송기한 : 2026.05.15</span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>발송처리</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt">발송방법 : 택배,등기,소포</span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>집화처리</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt"></span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>배송상태최종변경</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt"></span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>배송완료처리</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt">배송완료일 2026.05.16</span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>시스템 배송완료처리</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt"></span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>자동 구매확정 등록</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt">스스템 자동집계, 자동 구매확정 예정일 2026.05.20</span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>구매확정 안내 발송</th>
+											<td>
+												<div class="tbl_inline between">
+													<span class="txt"></span>
+													<span class="date">2026.05.15 09:15:58</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal_foot">
+					<button type="button" class="modal_btn typeB modal_close">닫기</button>
+				</div>
+			</div>
+		</div>
+
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+
+
+</body>
+
+</html>
