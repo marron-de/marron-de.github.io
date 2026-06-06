@@ -68,7 +68,7 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
 				<p class="sub_txt1">
-					왜 EATON 국제학교일까? <br class="tablet">
+					왜 <span class="color">EATON</span> 국제학교일까? <br class="tablet">
 					차원이 다른 스쿨링 캠프
 				</p>
 			</div>
@@ -135,7 +135,7 @@ if (!defined('_EYOOM_')) exit;
             <div class="sub_titbox">
 				<p class="sub_txt3">몽선생이 직접 준비한 프로그램 혜택</p>
 				<p class="sub_txt1">
-					안전한 <span class="color"> 말레이시아 생활</span> 정착까지
+					안전한 <span class="color">말레이시아 생활</span> 정착까지
 				</p>
 			</div>
 			<div class="contbox">
@@ -191,7 +191,7 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
 				<p class="sub_txt1">
-					<span class="color">EATON 스쿨링</span> 프로그램 안내
+					<span class="color">EATON </span> 스쿨링 프로그램 안내
 				</p>
 			</div>
 			<div class="tblbox">
@@ -259,6 +259,110 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 			</div>
 			
+		</div>
+	</div>
+
+	<div class="msection sch_sec10">
+        <div class="container" data-aos="fade-up">
+            <div class="sub_titbox">
+				<p class="sub_txt1">
+					<span class="color">EATON </span> 스쿨링 숙소정보
+				</p>
+			</div>
+			<div class="contbox">
+				<div class="slidebox">
+					<div class="swiper room_piclist">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img1.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img2.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img3.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img4.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img6.png" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-button-prev prev_btn"></div>
+						<div class="swiper-pagination pagination"></div>
+						<div class="swiper-button-next next_btn"></div>
+					</div>
+					<div class="swiper room_thumlist">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img1.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img2.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img3.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img4.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img6.png" alt="" class="img">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="txtbox">
+					<div class="top">
+						<p class="tit">KLIA-KLIA2, 에어포트 트랜짓 호텔</p>
+						<div class="txtitem">
+							<p class="tit2">숙소설명</p>
+							<p class="desc">
+								KLIA2 근처에 위치한 이 호텔은 무료 셔틀 버스를 제공하여 편리성을 제공합니다. 깨끗하고 아늑한 객실에서 편안하게 머무르며 친절하고 도움이되는 스태프를 칭찬한 손님들이 있습니다.
+							</p>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="txtitem">
+							<p class="tit2">숙소위치</p>
+							<p class="desc flex">
+								<span class="txt">
+									No 36 Menara Santa Jalan Ampang, 쿠알라룸푸르 50450
+								</span>
+								<a href="" class="link" target="_blank">지도보기</a>
+							</p>
+						</div>
+						<div class="txtitem">
+							<p class="tit2">편의시설</p>
+							<div class="chklist">
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">주차장</span>
+								</div>
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">24시간 프런트 데스크</span>
+								</div>
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">레스토랑</span>
+								</div>
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">공항 이동 교통편 서비스</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -421,7 +525,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="left">정규 시간표</div>
 									<div class="right">
 										<div class="item">
-											<div class="head">9:05-10:00</div>
+											<div class="head">8:05-10:00</div>
 										</div>
 										<div class="item">
 											<div class="head">10:20-11:20</div>
@@ -450,8 +554,8 @@ if (!defined('_EYOOM_')) exit;
 									<div class="left">월</div>
 									<div class="right">
 										<div class="item">
-											<div class="head">9:05-10:00</div>
-											<div class="cont"><span class="txt">작문</span>
+											<div class="head">8:05-10:00</div>
+											<div class="cont"><span class="txt">스페링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -463,7 +567,7 @@ if (!defined('_EYOOM_')) exit;
 										<div class="item">
 											<div class="head">11:20-12:20</div>
 											<div class="cont">
-												<span class="txt">영어보충</span>
+												<span class="txt">중국어</span>
 											</div>
 										</div>
 										<div class="item">
@@ -475,7 +579,7 @@ if (!defined('_EYOOM_')) exit;
 										<div class="item">
 											<div class="head">1:45-2:25</div>
 											<div class="cont">
-												<span class="txt">영어보충</span>
+												<span class="txt">중국어</span>
 											</div>
 										</div>
 										<div class="item">
@@ -502,8 +606,8 @@ if (!defined('_EYOOM_')) exit;
 									<div class="left">화</div>
 									<div class="right">
 										<div class="item">
-											<div class="head">9:05-10:00</div>
-											<div class="cont"><span class="txt">작문</span>
+											<div class="head">8:05-10:00</div>
+											<div class="cont"><span class="txt">스페링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -554,8 +658,8 @@ if (!defined('_EYOOM_')) exit;
 									<div class="left">수</div>
 									<div class="right">
 										<div class="item">
-											<div class="head">9:05-10:00</div>
-											<div class="cont"><span class="txt">작문</span>
+											<div class="head">8:05-10:00</div>
+											<div class="cont"><span class="txt">스페링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -606,8 +710,8 @@ if (!defined('_EYOOM_')) exit;
 									<div class="left">목</div>
 									<div class="right">
 										<div class="item">
-											<div class="head">9:05-10:00</div>
-											<div class="cont"><span class="txt">작문</span>
+											<div class="head">8:05-10:00</div>
+											<div class="cont"><span class="txt">스페링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -658,7 +762,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="left">금</div>
 									<div class="right">
 										<div class="item">
-											<div class="head">9:05-10:00</div>
+											<div class="head">8:05-10:00</div>
 											<div class="cont"><span class="txt">리딩</span>
 											</div>
 										</div>
@@ -743,7 +847,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="item">
 										<div class="head">월</div>
 										<div class="cont">
-											<span class="txt">작문</span>
+											<span class="txt">스페링 / 작문</span>
 										</div>
 									</div>
 									<div class="item">
@@ -935,7 +1039,7 @@ if (!defined('_EYOOM_')) exit;
 					<div class="top">혜택 02</div>
 					<div class="bottom">
 						<p class="desc">선착순 10명</p>
-						<p class="tit">여행자 보험 1인 무료</p>
+						<p class="tit">여행자 보험 <br class="pc">1인 무료</p>
 					</div>
 				</div>
 				<div class="item item3">
