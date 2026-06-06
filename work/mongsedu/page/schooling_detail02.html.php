@@ -8,14 +8,31 @@ if (!defined('_EYOOM_')) exit;
 
 <div class="sub-page page-schdetail page-schdetail2">
 
-	<div class="msection sch_sec1">
+	<div class="msection sch_sec1 slide_ver">
         <div class="container contbox" data-aos="fade-up">
-			<div class="titbox">
-				<p class="sub_tit">영어캠프 2026-2027</p>
-				<div class="tit">
-					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec1_tit.png" alt="" class="img pc">
-					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec1_tit_m.png" alt="" class="img tablet">
+			<div class="swiper sch_sec1_swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide item">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec1_bg1.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec1_bg1_mb.png" alt="" class="img tablet">
+						</div>
+						<div class="txtbox">
+							<p class="sub">
+								영국식 커리큘럼을 찾는다면?
+							</p>
+							<p class="tit">
+								말레이시아 EPSOM 국제학교 <br>
+								2~4주 보딩 캠프
+							</p>
+							<p class="sub_tit">
+								<span class="txt">영어캠프 2026-2027</span>
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="icon">
+							</p>
+						</div>
+					</div>
 				</div>
+				<div class="swiper-scrollbar scrollbar"></div>
 			</div>
 		</div>
 	</div>
@@ -24,11 +41,11 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
 				<p class="sub_txt1 pc">
-					왜 EPSOM 국제학교일까? 
+					왜 <span class="color">EPSOM</span> 국제학교일까? 
 					차원이 다른 캠프
 				</p>
 				<p class="sub_txt1 tablet">
-					왜 EPSOM 국제학교일까? <br>
+					왜 <span class="color">EPSOM</span> 국제학교일까? <br>
 					차원이 다른 보딩 캠프
 				</p>
 			</div>
@@ -160,7 +177,7 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
 				<p class="sub_txt1">
-					<span class="color">Epsom 캠프</span> 프로그램 안내
+					<span class="color">EPSOM 캠프</span> 프로그램 안내
 				</p>
 			</div>
 			<div class="tblbox">
@@ -225,6 +242,110 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 			</div>
 			
+		</div>
+	</div>
+
+	<div class="msection sch_sec10">
+        <div class="container" data-aos="fade-up">
+            <div class="sub_titbox">
+				<p class="sub_txt1">
+					<span class="color">EATON </span> 스쿨링 숙소정보
+				</p>
+			</div>
+			<div class="contbox">
+				<div class="slidebox">
+					<div class="swiper room_piclist">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img1.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img2.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img3.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img4.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img6.png" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-button-prev prev_btn"></div>
+						<div class="swiper-pagination pagination"></div>
+						<div class="swiper-button-next next_btn"></div>
+					</div>
+					<div class="swiper room_thumlist">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img1.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img2.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img3.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img4.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img6.png" alt="" class="img">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="txtbox">
+					<div class="top">
+						<p class="tit">KLIA-KLIA2, 에어포트 트랜짓 호텔</p>
+						<div class="txtitem">
+							<p class="tit2">숙소설명</p>
+							<p class="desc">
+								KLIA2 근처에 위치한 이 호텔은 무료 셔틀 버스를 제공하여 편리성을 제공합니다. 깨끗하고 아늑한 객실에서 편안하게 머무르며 친절하고 도움이되는 스태프를 칭찬한 손님들이 있습니다.
+							</p>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="txtitem">
+							<p class="tit2">숙소위치</p>
+							<p class="desc flex">
+								<span class="txt">
+									No 36 Menara Santa Jalan Ampang, 쿠알라룸푸르 50450
+								</span>
+								<a href="" class="link" target="_blank">지도보기</a>
+							</p>
+						</div>
+						<div class="txtitem">
+							<p class="tit2">편의시설</p>
+							<div class="chklist">
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">주차장</span>
+								</div>
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">24시간 프런트 데스크</span>
+								</div>
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">레스토랑</span>
+								</div>
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">공항 이동 교통편 서비스</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 

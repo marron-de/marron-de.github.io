@@ -1418,6 +1418,38 @@ $(document).ready(function () {
     });
 });
 
+// 스쿨링 숙소정보
+const room_thumlist = new Swiper('.room_thumlist', {
+	observer: true,
+	observeParents: true,
+	loop:true,
+	speed: 500,
+	slidesPerView: 'auto',
+	spaceBetween: 4,
+	breakpoints: {
+		1080: {
+			spaceBetween: 5,
+		},
+	},
+})
+const room_piclist = new Swiper('.room_piclist', {
+	observer: true,
+	observeParents: true,
+	loop:true,
+	speed: 500,
+	pagination: {
+		el: ".room_piclist .pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".room_piclist .next_btn",
+		prevEl: ".room_piclist .prev_btn",
+	},
+	thumbs: {
+		swiper : room_thumlist,
+	}
+})
+
 
 
 /* 모바일 */

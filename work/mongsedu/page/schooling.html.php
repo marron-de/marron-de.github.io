@@ -347,7 +347,11 @@ if (!defined('_EYOOM_')) exit;
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
 											</div>
-											<div class="bottom"></div>
+											<div class="bottom">
+												<div class="deco_img">
+													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker2.png" alt="">
+												</div>
+											</div>
 										</div>
 										<div class="txtbox">
 											<div class="hashtag">
@@ -413,7 +417,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 											<div class="bottom">
 												<div class="deco_img">
-													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker1.png" alt="">
+													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker2.png" alt="">
 												</div>
 											</div>
 										</div>
@@ -480,9 +484,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
 											</div>
 											<div class="bottom">
-												<div class="deco_img">
-													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker1.png" alt="">
-												</div>
+												<div class="deco_img"></div>
 											</div>
 										</div>
 										<div class="txtbox">
@@ -547,11 +549,7 @@ if (!defined('_EYOOM_')) exit;
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_ph.svg" alt="" class="flag">
 											</div>
-											<div class="bottom">
-												<div class="deco_img">
-													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker2.png" alt="">
-												</div>
-											</div>
+											<div class="bottom"></div>
 										</div>
 										<div class="txtbox">
 											<div class="hashtag">
@@ -615,7 +613,11 @@ if (!defined('_EYOOM_')) exit;
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_ph.svg" alt="" class="flag">
 											</div>
-											<div class="bottom"></div>
+											<div class="bottom">
+												<div class="deco_img">
+													<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_sticker2.png" alt="">
+												</div>
+											</div>
 										</div>
 										<div class="txtbox">
 											<div class="hashtag">
@@ -1144,20 +1146,36 @@ if (!defined('_EYOOM_')) exit;
             <div class="faq-box">
                 <ul class="faq_list">
                     <li>
-                        <div class="question">말레이시아 국제학교 학비는 보통 얼마인가요?</div>
-                        <div class="answer">학교 등급에 따라 연간 1,000만 원~3,500만 원까지 다양합니다. 가성비 높은 학교부터 명문 보딩스쿨까지 예산에 맞춘 선택이 가능합니다.​</div>
+                        <div class="question">어떤 국가의 스쿨링 및 캠프를 운영하나요?</div>
+                        <div class="answer">몽선생은 말레이시아, 싱가포르, 태국, 필리핀 등 다양한 국가의 영어 캠프 및 스쿨링 프로그램을 안내하고 있습니다. 학생의 연령, 영어 수준, 예산에 따라 적합한 국가를 추천해 드려요.​</div>
                     </li>
                     <li>
-                        <div class="question">쿠알라룸푸르와 조호바루 중 어느 지역의 국제학교가 더 유리할까요?​</div>
-                        <div class="answer">인프라와 교육열은 쿠알라룸푸르가 높고, 쾌적한 주거 환경과 통학 편의성은 조호바루가 강점입니다. 가족의 생활 패턴에 따라 결정해야 합니다.</div>
+                        <div class="question">영어 실력이 부족해도 참여할 수 있나요?​</div>
+                        <div class="answer">네, 대부분의 스쿨링·캠프는 영어 실력이 완벽하지 않아도 참여할 수 있어요. 다만 국제학교 정규수업에 참여하는 스쿨링은 기본적인 듣기와 생활 영어가 있으면 적응이 더 수월해요. 일반 영어캠프의 경우 현지에서 레벨테스트를 진행한 뒤, 학생의 영어 수준에 맞는 반으로 배정되어 수업이 진행돼요.</div>
                     </li>
                     <li>
-                        <div class="question">가디언(보호자) 비자 발급 절차와 부모님이 동반할 때 주의사항은 무엇인가요?​</div>
-                        <div class="answer">학생 비자 1건당 부모 중 1명이 동반 비자를 받을 수 있습니다. 최근 심사가 까다로워졌으므로 전문 수속 대행을 통하는 것이 안전합니다.</div>
+                        <div class="question">우리 아이에게 어느 나라가 가장 잘 맞을까요?​</div>
+                        <div class="answer">말레이시아는 국제학교 경험과 비용 균형이 좋아요. 싱가포르는 학업 분위기와 도시 안전성이 강점이에요. 태국은 어린 학생이 부담 없이 참여하기 좋은 데이캠프와 활동형 프로그램이 많아요. 필리핀은 1:1 영어 수업 비중이 높아 단기간 영어 실력 향상을 원하는 학생에게 잘 맞아요.</div>
                     </li>
                     <li>
-                        <div class="question">말레이시아 국제학교 졸업 후 해외 명문대 진학 사례가 많은가요?​</div>
-                        <div class="answer">말레이시아 국제학교 졸업생들은 뛰어난 영어 실력을 바탕으로 영국, 호주, 미국뿐 아니라 아시아권 명문대로 다수 진학하고 있습니다.​</div>
+                        <div class="question">스쿨링과 영어캠프는 어떤 차이가 있나요?​</div>
+                        <div class="answer">스쿨링은 실제 국제학교 정규수업에 참여하거나 학교 생활을 경험하는 프로그램에 가까워요. 영어캠프는 영어 수업, 스포츠, 액티비티, 프로젝트 활동을 중심으로 구성되는 단기 프로그램이에요. 국제학교 적응을 목표로 한다면 스쿨링, 단기간 영어 노출과 즐거운 경험이 목적이라면 캠프가 더 잘 맞아요.</div>
+                    </li>
+                    <li>
+                        <div class="question">몽선생 단독 프로그램인 이튼 국제학교 스쿨링은 다른 캠프와 무엇이 다른가요?​</div>
+                        <div class="answer">이튼 국제학교 스쿨링은 단순히 영어 수업만 듣는 캠프가 아니라, 실제 국제학교 정규수업과 학교생활을 경험하는 프로그램에 가까워요. 현지 커리큘럼 안에서 수업을 듣고, 다국적 학생들과 함께 생활하며 자연스럽게 영어를 사용하는 환경을 경험할 수 있습니다. 또한 학교 중심 운영으로 생활관리까지 체계적으로 이루어져, 아이가 국제학교 분위기와 수업 방식에 미리 적응해볼 수 있다는 점이 일반 영어캠프와 가장 큰 차이예요.</div>
+                    </li>
+                    <li>
+                        <div class="question">아이 혼자 해외 캠프에 보내도 괜찮을까요?​</div>
+                        <div class="answer">캠프 유형에 따라 달라요. 말레이시아와 필리핀의 보딩형 캠프는 기숙사 생활과 생활 관리가 포함되는 경우가 많아 아이 혼자 참여하기 좋아요. 반면 싱가포르나 태국의 데이캠프는 숙소가 제공되지 않는 경우가 많아 부모 동반이나 보호자 체류가 필요한 경우가 많아요.</div>
+                    </li>
+                    <li>
+                        <div class="question">캠프 기간은 몇 주가 적당한가요?</div>
+                        <div class="answer">처음 해외 캠프를 경험하는 학생은 2주 프로그램으로 시작하는 것이 부담이 적어요. 영어 실력 향상이나 생활 적응까지 기대한다면 3~4주 이상이 더 효과적이에요. 특히 9세~11세는 적응 기간을 고려해야 하고, 12세~14세는 목표에 따라 집중형 프로그램을 선택하는 것이 좋아요.</div>
+                    </li>
+                    <li>
+                        <div class="question">비용에는 보통 무엇이 포함되나요?​</div>
+                        <div class="answer">프로그램마다 다르지만 일반적으로 수업료, 교재 또는 활동비, 식사, 액티비티, 보험, 공항 픽업, 기숙사 또는 숙소가 포함될 수 있어요. 다만 항공권, 개인 용돈, 보호자 숙소, 주말 선택 액티비티, 비자 비용은 별도인 경우가 많기 때문에 신청 전 포함·불포함 항목을 꼭 확인해야 해요.​</div>
                     </li>
                 </ul>
             </div>
