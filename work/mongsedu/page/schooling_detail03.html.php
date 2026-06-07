@@ -302,7 +302,6 @@ if (!defined('_EYOOM_')) exit;
 					<div class="top">
 						<p class="tit">UCSI 국제학교 내 기숙사 </p>
 						<div class="txtitem">
-							<p class="tit2">숙소설명</p>
 							<p class="desc">
 								UCSI International School 기숙사는 학생들이 안전하고 체계적인 환경에서 생활할 수 있도록 운영되는 보딩 시설로 캠프 기간 동안 학생들은 24시간 관리·감독을 받으며 생활하게 되며, 하우스페어런트가 배정되어 학생들의 생활 관리와 안전을 지원합니다.
 							</p>

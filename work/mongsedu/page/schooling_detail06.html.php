@@ -296,7 +296,6 @@ if (!defined('_EYOOM_')) exit;
 					<div class="top">
 						<p class="tit">Staybridge Suites Bangkok Thonglor</p>
 						<div class="txtitem">
-							<p class="tit2">숙소설명</p>
 							<p class="desc">
 								Staybridge Suites Bangkok Thonglor는 태국 방콕 통로 지역에 위치한 레지던스형 호텔로 객실 내 간이 주방과 생활 편의시설이 갖춰져 있어 보호자 동반형 캠프 또는 장기 체류형 일정에 적합합니다.
 							</p>

@@ -296,7 +296,6 @@ if (!defined('_EYOOM_')) exit;
 					<div class="top">
 						<p class="tit">Amaranta Ratchada</p>
 						<div class="txtitem">
-							<p class="tit2">숙소설명</p>
 							<p class="desc">
 								Amaranta Ratchada는 태국 방콕 라차다 지역에 위치한 레지던스형 호텔 숙소로 넓은 객실과 주방 시설을 갖추고 있어 보호자 동반형 캠프 또는 가족 단위 체류에 적합합니다. 합리적인 가격대에서 넓은 공간을 원하는 가족에게 추천할 수 있는 숙소입니다.
 							</p>

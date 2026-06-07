@@ -371,7 +371,6 @@ if (!defined('_EYOOM_')) exit;
 					<div class="top">
 						<p class="tit">샤알람 아이시티 레지던스 힐텐</p>
 						<div class="txtitem">
-							<p class="tit2">숙소설명</p>
 							<p class="desc">
 								Hill10 Residence I-City는 말레이시아 샤알람 i-City 지역에 위치한 서비스 레지던스형 숙소로 DoubleTree by Hilton 옆에 위치에 있습니다. 가족 단위 체류에 적합한 객실 구조와 생활 편의시설을 갖추고 있으며. i-City 테마파크, Central i-City Mall 등 주변 편의시설 접근성이 좋아 스쿨링 기간 동안 안정적으로 머물 수 있는 숙소입니다.
 							</p>
@@ -607,7 +606,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="right">
 										<div class="item">
 											<div class="head">8:05-10:00</div>
-											<div class="cont"><span class="txt">스페링 / 작문</span>
+											<div class="cont"><span class="txt">스펠링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -659,7 +658,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="right">
 										<div class="item">
 											<div class="head">8:05-10:00</div>
-											<div class="cont"><span class="txt">스페링 / 작문</span>
+											<div class="cont"><span class="txt">스펠링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -711,7 +710,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="right">
 										<div class="item">
 											<div class="head">8:05-10:00</div>
-											<div class="cont"><span class="txt">스페링 / 작문</span>
+											<div class="cont"><span class="txt">스펠링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -763,7 +762,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="right">
 										<div class="item">
 											<div class="head">8:05-10:00</div>
-											<div class="cont"><span class="txt">스페링 / 작문</span>
+											<div class="cont"><span class="txt">스펠링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -815,7 +814,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="right">
 										<div class="item">
 											<div class="head">8:05-10:00</div>
-											<div class="cont"><span class="txt">스페링 / 작문</span>
+											<div class="cont"><span class="txt">스펠링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -899,7 +898,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="item">
 										<div class="head">월</div>
 										<div class="cont">
-											<span class="txt">스페링 / 작문</span>
+											<span class="txt">스펠링 / 작문</span>
 										</div>
 									</div>
 									<div class="item">

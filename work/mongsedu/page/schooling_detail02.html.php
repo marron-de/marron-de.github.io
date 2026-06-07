@@ -310,7 +310,6 @@ if (!defined('_EYOOM_')) exit;
 					<div class="top">
 						<p class="tit">EPSOM College 국제학교 내 기숙사 </p>
 						<div class="txtitem">
-							<p class="tit2">숙소설명</p>
 							<p class="desc">
 								캠프기간동안 학교 캠퍼스 내 기숙사에서 생활하며, 각 기숙사에는 Housemaster 또는 Housemistress를 포함한 전담 보딩 스태프가 배정되어 생활 관리와 정서적 지원을 제공합니다
 							</p>

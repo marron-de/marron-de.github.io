@@ -262,7 +262,7 @@ if (!defined('_EYOOM_')) exit;
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">할인없음</span>
+															<span class="number">3,350,000원</span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>
@@ -329,7 +329,7 @@ if (!defined('_EYOOM_')) exit;
 															<span class="number">2,860,000원</span>
 															<span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
-																<span class="percent">6.2%</span>
+																<span class="percent">6%</span>
 															</span>
 														</span>
 													</p>
@@ -528,7 +528,7 @@ if (!defined('_EYOOM_')) exit;
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">할인없음</span>
+															<span class="number">5,400,000원</span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>
@@ -592,7 +592,7 @@ if (!defined('_EYOOM_')) exit;
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">할인없음</span>
+															<span class="number">3,660,000원</span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>
@@ -660,7 +660,7 @@ if (!defined('_EYOOM_')) exit;
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">할인없음</span>
+															<span class="number">6,800,000원</span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>
@@ -675,7 +675,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+									<div class="swiper-slide item" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail09'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum9.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -724,7 +724,7 @@ if (!defined('_EYOOM_')) exit;
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">할인없음</span>
+															<span class="number">910,000원</span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>
@@ -788,7 +788,7 @@ if (!defined('_EYOOM_')) exit;
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">할인없음</span>
+															<span class="number">910,000원</span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>

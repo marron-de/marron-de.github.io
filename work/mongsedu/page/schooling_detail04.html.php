@@ -297,7 +297,6 @@ if (!defined('_EYOOM_')) exit;
 					<div class="top">
 						<p class="tit">RAFFLES 국제학교 내 기숙사 </p>
 						<div class="txtitem">
-							<p class="tit2">숙소설명</p>
 							<p class="desc">
 								학생들은 캠프 기간 동안 학교 기숙사에서 생활하며, 보딩 스태프의 관리 아래 안전하고 체계적인 생활을 하게 됩니다. 기숙사 생활은 영어 사용 환경 속에서 친구들과 교류하고, 수업 후 저녁 활동과 주말 액티비티까지 함께 경험할 수 있도록 구성되어 있습니다
 							</p>
