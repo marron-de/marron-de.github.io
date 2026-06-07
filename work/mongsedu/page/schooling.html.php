@@ -277,7 +277,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item RES" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+									<div class="swiper-slide item RES" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail03'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum3.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -341,7 +341,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item RES" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+									<div class="swiper-slide item RES" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail04'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum4.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -409,7 +409,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item SCH REC" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+									<div class="swiper-slide item SCH REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail05'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum5.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -477,7 +477,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item SCH REC" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+									<div class="swiper-slide item SCH REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail06'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum6.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -543,7 +543,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item LNG REC" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+									<div class="swiper-slide item LNG REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail07'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum7.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -607,7 +607,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>									
-									<div class="swiper-slide item LNG" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+									<div class="swiper-slide item LNG" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail08'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum8.jpg" alt="" class="img">
 											<div class="flagbox">

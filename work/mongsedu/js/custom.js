@@ -1387,6 +1387,25 @@ const shortclip_swiper = new Swiper('.shortclip_swiper', {
 	},
 })
 
+
+
+/* 스쿨링 상세 */
+// 인트로 슬라이드
+const sch_sec1_swiper = new Swiper('.sch_sec1_swiper', {
+	observer: true,
+	observeParents: true,
+	effect : 'fade',
+	speed: 500,
+	scrollbar: {
+		el: ".sch_sec1 .scrollbar",
+		draggable: true,
+	},
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+})
+
 // 수업시간 샘플
 $(document).ready(function () {
 	if ($(window).width() < 1081) {

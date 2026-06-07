@@ -6,7 +6,7 @@ if (!defined('_EYOOM_')) exit;
 ?>
 
 
-<div class="sub-page page-schdetail page-schdetail1">
+<div class="sub-page page-schdetail color1 page-schdetail1">
 
 	<div class="msection sch_sec1">
         <div class="container contbox" data-aos="fade-up">
@@ -135,7 +135,7 @@ if (!defined('_EYOOM_')) exit;
             <div class="sub_titbox">
 				<p class="sub_txt3">몽선생이 직접 준비한 프로그램 혜택</p>
 				<p class="sub_txt1">
-					안전한 <span class="color">말레이시아 생활</span> 정착까지
+					안전한 말레이시아 생활 정착까지
 				</p>
 			</div>
 			<div class="contbox">
@@ -291,6 +291,30 @@ if (!defined('_EYOOM_')) exit;
 							<div class="swiper-slide item">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img6.png" alt="" class="img">
 							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img7.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img8.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img9.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img10.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img11.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img12.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img13.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img14.png" alt="" class="img">
+							</div>
 						</div>
 						<div class="swiper-button-prev prev_btn"></div>
 						<div class="swiper-pagination pagination"></div>
@@ -316,16 +340,40 @@ if (!defined('_EYOOM_')) exit;
 							<div class="swiper-slide item">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img6.png" alt="" class="img">
 							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img7.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img8.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img9.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img10.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img11.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img12.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img13.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch1_sec10_img14.png" alt="" class="img">
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="txtbox">
 					<div class="top">
-						<p class="tit">KLIA-KLIA2, 에어포트 트랜짓 호텔</p>
+						<p class="tit">샤알람 아이시티 레지던스 힐텐</p>
 						<div class="txtitem">
 							<p class="tit2">숙소설명</p>
 							<p class="desc">
-								KLIA2 근처에 위치한 이 호텔은 무료 셔틀 버스를 제공하여 편리성을 제공합니다. 깨끗하고 아늑한 객실에서 편안하게 머무르며 친절하고 도움이되는 스태프를 칭찬한 손님들이 있습니다.
+								Hill10 Residence I-City는 말레이시아 샤알람 i-City 지역에 위치한 서비스 레지던스형 숙소로 DoubleTree by Hilton 옆에 위치에 있습니다. 가족 단위 체류에 적합한 객실 구조와 생활 편의시설을 갖추고 있으며. i-City 테마파크, Central i-City Mall 등 주변 편의시설 접근성이 좋아 스쿨링 기간 동안 안정적으로 머물 수 있는 숙소입니다.
 							</p>
 						</div>
 					</div>
@@ -334,9 +382,9 @@ if (!defined('_EYOOM_')) exit;
 							<p class="tit2">숙소위치</p>
 							<p class="desc flex">
 								<span class="txt">
-									No 36 Menara Santa Jalan Ampang, 쿠알라룸푸르 50450
+									40000 Shah Alam, Selangor, Malaysia
 								</span>
-								<a href="" class="link" target="_blank">지도보기</a>
+								<a href="https://maps.app.goo.gl/WL8VSAAfa8eLNxST7" class="link" target="_blank">지도보기</a>
 							</p>
 						</div>
 						<div class="txtitem">
@@ -344,19 +392,23 @@ if (!defined('_EYOOM_')) exit;
 							<div class="chklist">
 								<div class="chk">
 									<span class="icon"></span>
-									<span class="txt">주차장</span>
+									<span class="txt">24시간 보안</span>
 								</div>
 								<div class="chk">
 									<span class="icon"></span>
-									<span class="txt">24시간 프런트 데스크</span>
+									<span class="txt">수영장</span>
 								</div>
 								<div class="chk">
 									<span class="icon"></span>
-									<span class="txt">레스토랑</span>
+									<span class="txt">피트니스센터</span>
 								</div>
 								<div class="chk">
 									<span class="icon"></span>
-									<span class="txt">공항 이동 교통편 서비스</span>
+									<span class="txt">놀이터</span>
+								</div>
+								<div class="chk">
+									<span class="icon"></span>
+									<span class="txt">인근 대형 쇼핑몰</span>
 								</div>
 							</div>
 						</div>
@@ -631,7 +683,7 @@ if (!defined('_EYOOM_')) exit;
 										<div class="item">
 											<div class="head">1:45-2:25</div>
 											<div class="cont">
-												<span class="txt">수학</span>
+												<span class="txt">중국어</span>
 											</div>
 										</div>
 										<div class="item">
@@ -763,7 +815,7 @@ if (!defined('_EYOOM_')) exit;
 									<div class="right">
 										<div class="item">
 											<div class="head">8:05-10:00</div>
-											<div class="cont"><span class="txt">리딩</span>
+											<div class="cont"><span class="txt">스페링 / 작문</span>
 											</div>
 										</div>
 										<div class="item">
@@ -877,7 +929,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-						<div class="note_txt">*예시 시간표로 스케줄 변동가능성 있습니다. </div>
+						<div class="note_txt">*예시 시간표이며 학년별로 스케줄이 다를 수 있습니다. </div>
 						<div class="btnbox">
 							<a href="<?php echo G5_URL ?>/page/?pid=counsel#schooling" type="button" class="sub_btn typePoint">상담 신청하기</a>
 						</div>
@@ -933,10 +985,10 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
 				<p class="sub_txt1 pc">
-					한눈에 보는 <span class="color">EATON 스쿨링</span> 프로그램 특징
+					한눈에 보는 <span class="color">EATON</span> 스쿨링 프로그램 특징
 				</p>
 				<p class="sub_txt1 tablet">
-					<span class="color">EATON 스쿨링</span> 프로그램 특징
+					<span class="color">EATON</span> 스쿨링 프로그램 특징
 				</p>
 			</div>
 			<div class="contbox">
