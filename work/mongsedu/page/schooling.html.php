@@ -59,7 +59,7 @@ if (!defined('_EYOOM_')) exit;
 			<div class="swiper campflag_swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+						<a href="#none" class="link" data-cate="asia1">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_malay.png" alt="" class="img">
 							</div>
@@ -70,7 +70,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+						<a href="#none" class="link" data-cate="asia2">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_malay.png" alt="" class="img">
 							</div>
@@ -81,7 +81,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+						<a href="#none" class="link" data-cate="asia3">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_singapore.png" alt="" class="img">
 							</div>
@@ -92,7 +92,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+						<a href="#none" class="link" data-cate="asia4">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_thai.png" alt="" class="img">
 							</div>
@@ -103,7 +103,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="#none" class="link" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+						<a href="#none" class="link" data-cate="asia5">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_pili.png" alt="" class="img">
 							</div>
@@ -128,6 +128,7 @@ if (!defined('_EYOOM_')) exit;
                         <li class="swiper-slide"><a href="#" id="tab-13" data-cate="LNG">어학원캠프</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-14" data-cate="RES">기숙형캠프</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-15" data-cate="REC">추천 프로그램</a></li>
+                        <li class="swiper-slide" style="display:none"><a href="#" id="tab-16" data-cate="ALL2">임시</a></li>
                     </ul>
                 </div>
             </div>
@@ -141,7 +142,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper schlist_swiper sch_list">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item SCH REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail01'">
+									<div class="swiper-slide item ALL2 SCH REC asia1" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail01'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum1.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -209,7 +210,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item RES REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail02'">
+									<div class="swiper-slide item ALL2 RES REC asia1" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail02'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum2.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -277,7 +278,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item RES" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail03'">
+									<div class="swiper-slide item ALL2 RES asia1" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail03'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum3.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -341,7 +342,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item RES" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail04'">
+									<div class="swiper-slide item ALL2 RES REC asia2" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail04'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum4.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -409,7 +410,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item SCH REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail05'">
+									<div class="swiper-slide item ALL2 SCH REC asia4" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail05'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum5.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -427,7 +428,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tag state">모집중</p>
 											</div>
 											<div class="titbox">
-												<p class="tit">태국 Regent 국제학교, 방콕</p>
+												<p class="tit">태국 Regents 국제학교, 방콕</p>
 												<p class="desc">2026년 7월, 국제학교 통학 영어캠프</p>
 											</div>
 											<div class="infobox">
@@ -462,11 +463,11 @@ if (!defined('_EYOOM_')) exit;
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">5,000,000원</span>
-															<span class="sale">
+															<span class="number">5,620,000원</span>
+															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>
-															</span>
+															</span> -->
 														</span>
 													</p>
 												</div>
@@ -477,7 +478,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item SCH REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail06'">
+									<div class="swiper-slide item ALL2 SCH asia4" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail06'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum6.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -543,7 +544,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item LNG REC" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail07'">
+									<div class="swiper-slide item ALL2 LNG asia5" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail07'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum7.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -607,7 +608,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>									
-									<div class="swiper-slide item LNG" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail08'">
+									<div class="swiper-slide item ALL2 LNG REC asia5" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail08'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum8.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -675,7 +676,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail09'">
+									<div class="swiper-slide item ALL2 asia3" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail09'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum9.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -739,7 +740,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item LNG end" onclick="showToast('마감된 스쿨링/캠프입니다', 'emoji2')">
+									<div class="swiper-slide item ALL2 LNG end" onclick="showToast('마감된 스쿨링/캠프입니다', 'emoji2')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum10.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -847,6 +848,19 @@ if (!defined('_EYOOM_')) exit;
 						</div>
                     </li>
                     <li id="content-15">
+						<div class="schlist_wrap">
+							<div class="schlist_controls">
+								<div class="swiper-button-prev prev_btn"></div>
+								<div class="swiper-button-next next_btn"></div>
+							</div>
+							<div class="swiper schlist_swiper sch_list">
+								<div class="swiper-wrapper">
+									
+								</div>
+							</div>
+						</div>
+                    </li>
+                    <li id="content-16">
 						<div class="schlist_wrap">
 							<div class="schlist_controls">
 								<div class="swiper-button-prev prev_btn"></div>
@@ -1185,6 +1199,7 @@ if (!defined('_EYOOM_')) exit;
 
 <script>
 $(document).ready(function () {
+    
     $(".tab_tit a[data-cate]").not("[data-cate='ALL']").each(function () {
         const cate = $(this).data("cate");
         const tabId = $(this).attr("id").replace("tab-", "content-");
@@ -1204,6 +1219,51 @@ $(document).ready(function () {
             `);
         }
     });
+
+    $(".campflag_swiper .swiper-slide .link[data-cate]").on("click", function (e) {
+        e.preventDefault();
+
+        const asiaClass = $(this).data("cate");
+
+        $("#tab-16").hide(); 
+        $(".tab_tit a").not("#tab-16").removeClass("show"); 
+        
+        $(".tabs_cont .panel > li").hide().css("animation", "none");
+        
+        $("#content-16 .swiper-slide").hide();
+        $("#content-16 .swiper-slide." + asiaClass).show();
+
+        const swiper = document.querySelector("#content-16 .schlist_swiper")?.swiper;
+        if (swiper) {
+            swiper.params.grid.rows = 1;
+            swiper.params.breakpoints[1080].grid.rows = 1;
+            swiper.update();
+        }
+
+        $("#content-16").show();
+        
+        setTimeout(function () {
+            $("#content-16").css("animation", "1.2s ease 0s fadeIn");
+        }, 10);
+    });
+
+    $(".tab_tit a[data-cate]").on("click", function () {
+        const tabId = $(this).attr("id").replace("tab-", "content-");
+        
+        $(".tab_tit a").not("#tab-16").removeClass("show");
+        $(this).addClass("show");
+
+        $(".tabs_cont .panel > li").hide().css("animation", "none");
+
+        $("#content-11 .swiper-slide").show();
+		
+        $("#" + tabId).show();
+
+        setTimeout(function () {
+            $("#" + tabId).css("animation", "1.2s ease 0s fadeIn");
+        }, 10);
+    });
+
 });
 </script>
 
