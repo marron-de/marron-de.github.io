@@ -272,30 +272,7 @@ $(".search_btn").click(function (e) {
 });
 
 
-
-// main
-const ms1_swiper = new Swiper(".ms1_swiper", { 
-	observer: true, 	
-	observeParents: true,  	 
-	loop: true, 
-	speed: 500,
-	navigation: {
-		nextEl: '.ms1 .next_btn',
-		prevEl: '.ms1 .prev_btn',
-	},
-	pagination: {
-		el: '.ms1 .ms1_pag',
-		clickable: true,
-	},
-	autoplay: {        
-		delay: 5000,        
-		disableOnInteraction: false,      
-	},
-});
-
-
-
-/* product */
+/* 제품 */
 // detila swiper
 const prdThum_swiper = new Swiper(".prdThum_swiper", { 
 	observer: true, 	
@@ -308,8 +285,50 @@ const prdThum_swiper = new Swiper(".prdThum_swiper", {
 	},
 });
 
+
+
+
+/* 모바일 */
+
+/* mobile landing */
+$(window).on("load", function () {
+    $(".mob_landing").addClass("hide");
+});
+
+
+// mobile modal
+$(".mob_modal .modal_close, .mob_modal .back_btn").click(function () {
+    $("body").removeClass("modal_open");
+    $(".mob_modal").removeClass("show");
+});
+$(document).mouseup(function (e) {
+    if ($(".mob_modal .modal_box").has(e.target).length === 0) {
+        $("body").removeClass("modal_open");
+        $(".mob_modal").removeClass("show");
+    }
+});
+
+
+// main section1 swiper
+const mob_ms1_swiper = new Swiper(".mob_ms1_swiper", { 
+	observer: true, 	
+	observeParents: true,  	 
+	loop: true, 
+	speed: 500,
+	pagination: {
+		el: '.mob_ms1_swiper .paging',
+    	type: "fraction",
+	},
+	// autoplay: {        
+	// 	delay: 5000,        
+	// 	disableOnInteraction: false,      
+	// },
+});
+
+
 // width button
 $(".wish_btn").click(function (e) {
     e.preventDefault(); 
     $(this).toggleClass("on");
 });
+
