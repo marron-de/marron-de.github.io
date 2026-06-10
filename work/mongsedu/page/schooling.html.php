@@ -1223,7 +1223,10 @@ $(document).ready(function () {
     $(".campflag_swiper .swiper-slide .link[data-cate]").on("click", function (e) {
         e.preventDefault();
 
-        const asiaClass = $(this).data("cate");
+        $(".campflag_swiper .swiper-slide .link[data-cate]").not(this).removeClass("active");
+		$(this).addClass("active");
+
+		const asiaClass = $(this).data("cate");
 
         $("#tab-16").hide(); 
         $(".tab_tit a").not("#tab-16").removeClass("show"); 
@@ -1250,13 +1253,15 @@ $(document).ready(function () {
     $(".tab_tit a[data-cate]").on("click", function () {
         const tabId = $(this).attr("id").replace("tab-", "content-");
         
+        $(".campflag_swiper .swiper-slide .link[data-cate]").removeClass("active");
+
         $(".tab_tit a").not("#tab-16").removeClass("show");
         $(this).addClass("show");
 
         $(".tabs_cont .panel > li").hide().css("animation", "none");
 
         $("#content-11 .swiper-slide").show();
-		
+        
         $("#" + tabId).show();
 
         setTimeout(function () {

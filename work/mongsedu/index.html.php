@@ -104,6 +104,31 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div>
+					<div class="swiper-slide item item6">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner6_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner6_bg_mob.jpg" alt="" class="bg tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">온라인 설명회</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">7월8일(수) 20:00</p>
+								<p class="tit">
+									<span class="before">
+										스쿨링/방학캠프 <br>
+										설명회
+									</span>
+									<span class="after">
+										스쿨링/방학캠프 <br>
+										설명회
+									</span>
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=37" class="btn typeG">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
 					<div class="swiper-slide item item3">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg.jpg" alt="" class="bg pc">

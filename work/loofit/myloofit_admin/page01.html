@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>01대시보드</title>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<script src="js/swiper-bundle.min.js"></script>
+
+	<!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-ui.min.js">
+	</script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+	<!-- chart.js -->
+	<script src="js/chart.js"></script>
+	<script src="js/chartjs-plugin-datalabels.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"rel="stylesheet">
+	<link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+
+	<div class="wrap dashboard_wrap">
+
+		<!-- 01대시보드 -->
+
+        <div class="layout">
+
+            <!-- sidenav -->
+            <div class="navbox">
+				<div class="sidenav">
+					<div class="side_logobox">
+						<div class="logo_btn">
+							<img src="img/company_logo.jpg" alt="" class="logo_img">
+						</div>
+						<div class="popup logo_popup" id="compayLogoPopup">
+							<div class="pop_head">
+								<p class="tit">기업프로필 등록</p>
+								<button type="button" class="pop_close"></button>
+							</div>
+							<div class="pop_body">
+								<div class="logofile">
+									<div class="file_img">
+										<img src="img/company_logo.jpg" alt="" class="img">
+									</div>
+									<div class="txtbox">
+										<div class="file_box">
+											<input type="file" name="" id="logoFile">
+											<label for="logoFile">이미지 업로드</label>
+										</div>
+										<p class="info_txt">png 파일만 등록</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="side_navbox">
+						<div class="item on">
+							<a href="page00.html" class="link">
+								<img src="img/sidenav_icon1_off.png" alt="" class="off">
+								<img src="img/sidenav_icon1_on.png" alt="" class="on">
+							</a>
+						</div>
+						<div class="item">
+							<a href="page01_01_01.html" class="link">
+								<img src="img/sidenav_icon7_off.png" alt="" class="off">
+								<img src="img/sidenav_icon7_on.png" alt="" class="on">
+							</a>
+						</div>
+						<div class="item">
+							<a href="page02_01.html" class="link">
+								<img src="img/sidenav_icon8_off.png" alt="" class="off">
+								<img src="img/sidenav_icon8_on.png" alt="" class="on">
+							</a>
+						</div>
+						<div class="item">
+							<a href="page04_01.html" class="link">
+								<img src="img/sidenav_icon2_off.png" alt="" class="off">
+								<img src="img/sidenav_icon2_on.png" alt="" class="on">
+							</a>
+						</div>
+						<div class="bar"></div>
+						<div class="item">
+							<a href="page05_01_01.html" class="link">
+								<img src="img/sidenav_icon6_off.png" alt="" class="off">
+								<img src="img/sidenav_icon6_on.png" alt="" class="on">
+							</a>
+						</div>
+					</div>
+					<div class="side_last">
+						<div class="item">
+							<a href="" class="link">
+								<img src="img/ico_help.png" alt="" class="on">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="contnav">
+					<div class="cont_workspace">
+						<div class="swiper workspace workspace">
+							<div class="swiper-wrapper">
+							  <div class="swiper-slide item" onclick="workspacePopup()">
+								<p class="title">
+									<span class="tit">에듀스</span>
+									<span class="group">수퍼어드민</span>
+								</p>
+								<a href="" class="home_link">
+									<img src="img/ico_home.png" alt="" class="icon">
+								</a>
+							  </div>
+							  <div class="swiper-slide item">
+								<p class="title">
+									<span class="tit">에듀스</span>
+									<span class="group">수퍼어드민</span>
+								</p>
+								<p class="people">
+									<img src="img/ico_man.png" alt="" class="icon">
+									<span class="txt">3</span>
+								</p>
+								<a href="" class="home_link">
+									<img src="img/ico_home.png" alt="" class="icon">
+								</a>
+							  </div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="workspace_popup">
+							<div class="titbox">
+								<p class="plan">Basic Plan</p>
+								<button type="button" class="btn ver2">관리</button>
+							</div>
+							<div class="listbox">								
+								<p class="list_txt">워크스페이스</p>
+								<div class="items">
+									<div class="item">
+										<p class="txt">
+											개발그룹 <span class="color">2</span>
+										</p>
+										<button type="button" class="del_btn"></button>
+									</div>
+									<div class="item">
+										<p class="txt">
+											경영지원 <span class="color">1</span>
+										</p>
+										<button type="button" class="del_btn"></button>
+									</div>	
+								</div>	
+								<button type="button" class="btn ver3 add_btn">
+									<img src="img/ico_plus2.png" alt="" class="icon">
+									<span class="txt">새 워크스페이스</span>
+								</button>						
+							</div>
+						</div>
+					</div>
+					<div class="cont_nav">
+						<a href="" class="nav_tit">
+							<span class="arrow"></span>
+							<span class="txt">대시보드</span>
+						</a>
+						<div class="nav_list">
+							<div class="item on">
+								<a href="page00.html" class="link">기본 통계</a>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+
+            <!-- container -->
+            <div class="container">
+				
+				<header class="page_header">
+					<div class="leftbox">
+					</div>
+					<div class="rightbox">
+						<div class="alarm_obx">
+							<button type="button" class="alarm_btn">
+								<img src="img/ico_alarm.png" alt="" class="icon">
+								<span class="num">1</span>
+							</button>
+						</div>
+						<a href="" class="account_link" target="_blank">
+							<span class="txt">가</span>
+						</a>
+						<div class="popup alarm_popup">
+							<div class="pop_head">
+								<p class="title">모든 알림</p>
+								<button type="button" class="pop_close"></button>
+							</div>
+							<div class="pop_body">
+								<div class="tab_wrap">
+									<ul class="tab_navbox">
+										<li class="tab_nav nav1 on">
+											<span class="txt">전체</span>
+										</li>
+										<li class="tab_nav nav2">
+											<span class="txt">관리</span>
+											<span class="num">2</span>
+										</li>
+										<li class="tab_nav nav3">
+											<span class="txt">채용</span>
+											<span class="num">4</span>
+										</li>
+										<li class="tab_nav nav4">
+											<span class="txt">피드</span>
+											<span class="num">4</span>
+										</li>
+									</ul>
+									<ul class="tab_contbox">
+										<li class="tab_cont on">
+											<div class="alarm_list">
+												<div class="alarm_item">
+													<div class="profile">
+														<img src="img/ico_profile.png" alt="" class="img">
+													</div>
+													<div class="txtbox">
+														<p class="tit">
+															Plan 변경이 완료되었습니다.
+														</p>
+														<p class="desc">
+															Basic에서 Advenced로 변경
+														</p>
+														<p class="date">
+															2024-12-24 17:00
+														</p>
+														<div class="alarm_dot dot1"></div>
+													</div>
+												</div>
+												<div class="alarm_item">
+													<div class="profile">
+														<img src="img/ico_profile.png" alt="" class="img">
+													</div>
+													<div class="txtbox">
+														<p class="tit">
+															박수한 님이 지원하였습니다.
+														</p>
+														<p class="desc">
+															2024년 AI 개발자 채용
+														</p>
+														<p class="date">
+															2024-12-24 10:10
+														</p>
+														<div class="alarm_dot dot2"></div>
+													</div>
+												</div>
+												<div class="alarm_item">
+													<div class="profile">
+														<img src="img/ico_profile.png" alt="" class="img">
+													</div>
+													<div class="txtbox">
+														<p class="tit">
+															조일우 님이 피드를 남겼습니다.
+														</p>
+														<p class="desc">
+															<a href="" class="link">바로 확인하기</a>
+														</p>
+														<p class="date">2024-12-24 17:00</p>
+														<div class="alarm_dot dot3"></div>
+													</div>
+												</div>
+												<div class="alarm_item confirmed">
+													<div class="profile">
+														<img src="img/ico_profile.png" alt="" class="img">
+													</div>
+													<div class="txtbox">
+														<p class="tit">
+															박수한님이 지원하였습니다.
+														</p>
+														<p class="desc">
+															2024년 AI 개발자 채용
+														</p>
+														<p class="date">
+															2024-12-24 17:00
+														</p>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="tab_cont">
+											<div class="alarm_list">
+												<div class="no_alarm">
+													<img src="img/ico_noalarm.png" alt="" class="icon">
+													<p class="txt">아직 알림이 없습니다.</p>
+												</div>
+											</div>
+										</li>
+										<li class="tab_cont">
+											<div class="alarm_list">
+												<div class="no_alarm">
+													<img src="img/ico_noalarm.png" alt="" class="icon">
+													<p class="txt">아직 알림이 없습니다.</p>
+												</div>
+											</div>
+										</li>
+										<li class="tab_cont">
+											<div class="alarm_list">
+												<div class="no_alarm">
+													<img src="img/ico_noalarm.png" alt="" class="icon">
+													<p class="txt">아직 알림이 없습니다.</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="alarm_check check_box">
+										<input type="checkbox" id="allRead" class="input_check">
+										<label for="allRead" class="label_check center">
+											모두 읽음 표시
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<p class="page_tit mb3">대시보드</p>
+
+				<div class="page_cont">
+					<div class="page_item">
+						<section class="section">
+							<div class="sec_top">
+								<div class="leftbox">
+									<p class="sec_cont_tit">기본 통계</p>
+								</div>
+								<div class="rightbox"></div>
+							</div>
+							<div class="sec_cont">
+								<div class="card_box">
+									<div class="card_item">
+										<div class="top">
+											<img src="img/box_icon1.png" alt="" class="icon">
+											<p class="txt">등록 기업수</p>
+										</div>
+										<div class="line"></div>
+										<div class="bottom">
+											<div class="item">
+												<p class="tit">이번 달</p>
+												<p class="desc">
+													<span class="num">10</span>
+													<span class="txt">개</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">오늘</p>
+												<p class="desc color2">
+													<span class="num">10</span>
+													<span class="txt">개</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card_item">
+										<div class="top">
+											<img src="img/box_icon2.png" alt="" class="icon">
+											<p class="txt">가입 기업수</p>
+										</div>
+										<div class="line"></div>
+										<div class="bottom">
+											<div class="item">
+												<p class="tit">이번 달</p>
+												<p class="desc">
+													<span class="num">10</span>
+													<span class="txt">개</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">오늘</p>
+												<p class="desc color2">
+													<span class="num">10</span>
+													<span class="txt">개</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card_item">
+										<div class="top">
+											<img src="img/box_icon3.png" alt="" class="icon">
+											<p class="txt">Plan 현황</p>
+										</div>
+										<div class="line"></div>
+										<div class="bottom">
+											<div class="item">
+												<p class="tit">이번 달</p>
+												<p class="desc">
+													<span class="num">10</span>
+													<span class="txt">개</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">오늘</p>
+												<p class="desc color2">
+													<span class="num">10</span>
+													<span class="txt">개</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card_item">
+										<div class="top">
+											<img src="img/box_icon4.png" alt="" class="icon">
+											<p class="txt">Plan 결제</p>
+										</div>
+										<div class="line"></div>
+										<div class="bottom">
+											<div class="item">
+												<p class="tit">이번 달</p>
+												<p class="desc">
+													<span class="num">180,000</span>
+													<span class="txt">원</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">오늘</p>
+												<p class="desc">
+													<span class="num">20,000</span>
+													<span class="txt">원</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card_item">
+										<div class="top">
+											<img src="img/box_icon5.png" alt="" class="icon">
+											<p class="txt">AI솔루션 결제</p>
+										</div>
+										<div class="line"></div>
+										<div class="bottom">
+											<div class="item">
+												<p class="tit">이번 달</p>
+												<p class="desc">
+													<span class="num">180,000</span>
+													<span class="txt">원</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">오늘</p>
+												<p class="desc">
+													<span class="num">20,000</span>
+													<span class="txt">원</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card_item total_item">
+										<div class="top">
+											<img src="img/box_icon6.png" alt="" class="icon">
+											<p class="txt">총 결제금액</p>
+										</div>
+										<div class="line"></div>
+										<div class="bottom">
+											<div class="item">
+												<p class="tit">이번 달</p>
+												<p class="desc color1">
+													<span class="num">900,000</span>
+													<span class="txt">원</span>
+												</p>
+											</div>
+											<div class="item">
+												<p class="tit">오늘</p>
+												<p class="desc color2">
+													<span class="num">300,000</span>
+													<span class="txt">원</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>							
+						</section>
+						<section class="section">
+							<div class="sec_top">
+								<div class="leftbox">
+									<p class="sec_cont_tit">등록 · 가입 현황</p>
+								</div>
+								<div class="rightbox">
+									<div class="chartfilter_box">
+										<button type="button" id="chart1_daybtn" class="filter_btn day on">일별</button>
+										<button type="button" id="chart1_monthbtn" class="filter_btn month">월별</button>
+									</div>
+								</div>
+							</div>
+							<div class="sec_cont padding_0">
+								<div class="chart_box">
+									<div class="chart_top">
+										<div class="select_box">
+											<select class="select">
+												<option value="">8월</option>
+												<option value="">9월</option>
+												<option value="">10월</option>
+												<option value="">11월</option>
+												<option value="">12월</option>
+											</select>
+										</div>
+									</div>
+									<div class="chart">
+										<canvas id="chart1" width="1432" height="400"></canvas>
+									</div>
+									<div class="chart_labels">
+										<div class="label">
+											<span class="line_color color1"></span>
+											<span class="label_txt">등록</span>
+										</div>
+										<div class="label">
+											<span class="line_color color2"></span>
+											<span class="label_txt">가입</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</section>
+						<section class="section">
+							<div class="sec_top">
+								<div class="leftbox">
+									<p class="sec_cont_tit">Plan 현황</p>
+								</div>
+								<div class="rightbox">
+									<div class="chartfilter_box">
+										<button type="button" id="chart2_daybtn" class="filter_btn day on">일별</button>
+                            			<button type="button" id="chart2_monthbtn" class="filter_btn month">월별</button>
+									</div>
+								</div>
+							</div>
+							<div class="sec_cont padding_0">
+								<div class="chart_box">
+									<div class="chart_top">
+										<div class="select_box">
+											<select class="select">
+												<option value="">8월</option>
+												<option value="">9월</option>
+												<option value="">10월</option>
+												<option value="">11월</option>
+												<option value="">12월</option>
+											</select>
+										</div>
+									</div>
+									<div class="chart">
+										<canvas id="chart2" width="1432" height="400"></canvas>
+									</div>
+									<div class="chart_labels">
+										<div class="label">
+											<span class="box_color color1"></span>
+											<span class="label_txt">Enterprise</span>
+										</div>
+										<div class="label">
+											<span class="box_color color2"></span>
+											<span class="label_txt">Advanced</span>
+										</div>
+										<div class="label">
+											<span class="box_color color3"></span>
+											<span class="label_txt">Basic</span>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</section>
+						<section class="section">
+							<div class="sec_top">
+								<div class="leftbox">
+									<p class="sec_cont_tit">매출현황</p>
+								</div>
+								<div class="rightbox">
+									<p class="sec_cont_desc">최종 업데이트 2024-10-24 17:45</p>
+									<div class="chartfilter_box">
+										<button type="button" id="chart3_daybtn" class="filter_btn day on">일별</button>
+                            			<button type="button" id="chart3_monthbtn" class="filter_btn month">월별</button>
+									</div>
+								</div>
+							</div>
+							<div class="sec_cont padding_0">
+								<div class="chart_box">
+									<div class="chart_top">
+										<div class="select_box">
+											<select class="select">
+												<option value="">8월</option>
+												<option value="">9월</option>
+												<option value="">10월</option>
+												<option value="">11월</option>
+												<option value="">12월</option>
+											</select>
+										</div>
+									</div>
+									<div class="chart">
+										<canvas id="chart3" width="1432" height="400"></canvas>
+									</div>
+								</div>
+							</div>						
+						</section>					
+					</div>
+				</div>
+
+            </div>
+
+        </div>
+
+	</div>
+
+
+
+	<!-- JS -->
+	<script src="js/common.js"></script>
+	<script>
+        const dayLabels = ['2024-11-03 (일)', '2024-11-04 (월)', '2024-11-05 (화)', '2024-11-06 (수)', '2024-11-07 (목)',
+            '2024-11-08 (금)', '2024-11-09 (토)'
+        ];
+        const monthLabels = ['2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12'];
+
+        const config1 = {
+            type: 'line',
+            data: {
+                labels: dayLabels,
+                datasets: [{
+                        label: '등록',
+                        data: [2, 2, 2, 3, 3, 2, 2],
+                        borderColor: '#7c00ff',
+                        borderWidth: 3.5,
+                        pointBackgroundColor: '#fff',
+                        pointRadius: 6,
+                        pointBorderWidth: 3.5,
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#7c00ff',
+                        pointHoverRadius: 8,
+                        pointHoverBorderWidth: 3.5,
+                    },
+                    {
+                        label: '가입',
+                        data: [1, 2, 3, 1, 1, 2, 3],
+                        borderColor: '#32baff',
+                        borderWidth: 3.5,
+                        pointBackgroundColor: '#fff',
+                        pointRadius: 6,
+                        pointBorderWidth: 3.5,
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#32baff',
+                        pointHoverRadius: 8,
+                        pointHoverBorderWidth: 3.5,
+                    },
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        enabled: true,
+                    }
+                },
+                responsive: false,
+                layout: {
+                    padding: {
+                        top: 0,
+                        left: -18,
+                        right: 0,
+                        bottom: 0,
+                    }
+                },
+                scales: {
+                    x: {
+                        offset: true,
+                        ticks: {
+                            padding: 12,
+                            font: {
+                                family: 'Pretendard',
+                                weight: '400',
+                                size: 13,
+                                color: '#627383',
+                            },
+                        },
+                        grid: {
+                            display: false,
+                        },
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1,
+                            padding: 18,
+                            font: {
+                                family: 'Pretendard',
+                                weight: '400',
+                                size: 13,
+                                color: '#627383',
+                            },
+                        },
+                        border: {
+                            display: false,
+                        },
+                    },
+                },
+            },
+        };
+        const chart1 = document.getElementById('chart1').getContext('2d');
+        const chartBox1 = new Chart(chart1, config1);
+
+        function createGradient(context, colorStart, colorEnd) {
+            const chart = context.chart;
+            const ctx = chart.ctx;
+            const yValue = context.raw;
+            const yPosition = chart.scales.y.getPixelForValue(yValue);
+
+
+            if (isNaN(yPosition) || yPosition === Infinity || yPosition === -Infinity) {
+                return colorStart;
+            }
+
+            const gradient = ctx.createLinearGradient(0, yPosition, 0, chart.scales.y.getPixelForValue(0));
+            gradient.addColorStop(0, colorStart);
+            gradient.addColorStop(1, colorEnd);
+            return gradient;
+        }
+        const config2 = {
+            type: 'bar',
+            data: {
+                labels: dayLabels,
+                datasets: [{
+                        label: 'Premium',
+                        data: [4, 4, 4, 5.5, 5.5, 5.5, 5.5],
+                        backgroundColor: function (context) {
+                            return createGradient(context, '#B875FF', '#7E04FF');
+                        },
+                        borderRadius: 8,
+                        barThickness: 24,
+                    },
+                    {
+                        label: 'Basic',
+                        data: [2.5, 2.5, 2.5, 2.5, 4.2, 4.2, 2.5],
+                        backgroundColor: function (context) {
+                            return createGradient(context, '#6ACDFF', '#11A1EB');
+                        },
+                        borderRadius: 8,
+                        barThickness: 24,
+                    },
+                    {
+                        label: 'Free',
+                        data: [5, 5, 5, 5, 3.4, 3.4, 4.9],
+                        backgroundColor: function (context) {
+                            return createGradient(context, '#ADB2BB', '#505051');
+                        },
+                        borderRadius: 8,
+                        barThickness: 24,
+                    },
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        enabled: true,
+                    }
+                },
+                responsive: false,
+                layout: {
+                    padding: {
+                        top: 0,
+                        left: -18,
+                        right: 0,
+                        bottom: 0,
+                    }
+                },
+                scales: {
+                    x: {
+                        offset: true,
+                        ticks: {
+                            padding: 12,
+                            font: {
+                                family: 'Pretendard',
+                                weight: '400',
+                                size: 13,
+                                color: '#627383',
+                            },
+                        },
+                        grid: {
+                            display: false,
+                        },
+                    },
+                    y: {
+                        beginAtZero: false,
+                        suggestedMin: 1,
+                        ticks: {
+                            stepSize: 1,
+                            padding: 18,
+                            font: {
+                                family: 'Pretendard',
+                                weight: '400',
+                                size: 13,
+                                color: '#627383',
+                            },
+                        },
+                        border: {
+                            display: false,
+                        },
+                    },
+                },
+            },
+        };
+        const chart2 = document.getElementById('chart2').getContext('2d');
+        const chartBox2 = new Chart(chart2, config2);
+
+        const config3 = {
+            type: 'line',
+            data: {
+                labels: dayLabels,
+                datasets: [{
+                    label: '매출현황',
+                    data: [200000, 200000, 200000, 300000, 300000, 200000, 200000],
+                    borderColor: '#7c00ff',
+                    borderWidth: 3.5,
+                    pointBackgroundColor: '#fff',
+                    pointRadius: 6,
+                    pointBorderWidth: 3.5,
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#7c00ff',
+                    pointHoverRadius: 8,
+                    pointHoverBorderWidth: 3.5,
+                }, ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        enabled: true,
+                    }
+                },
+                responsive: false,
+                layout: {
+                    padding: {
+                        top: 0,
+                        left: -18,
+                        right: 0,
+                        bottom: 0,
+                    }
+                },
+                scales: {
+                    x: {
+                        offset: true,
+                        ticks: {
+                            padding: 12,
+                            font: {
+                                family: 'Pretendard',
+                                weight: '400',
+                                size: 13,
+                                color: '#627383',
+                            },
+                        },
+                        grid: {
+                            display: false,
+                        },
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 100000,
+                            padding: 18,
+                            font: {
+                                family: 'Pretendard',
+                                weight: '400',
+                                size: 13,
+                                color: '#627383',
+                            },
+                        },
+                        border: {
+                            display: false,
+                        },
+                    },
+                },
+            },
+        };
+        const chart3 = document.getElementById('chart3').getContext('2d');
+        const chartBox3 = new Chart(chart3, config3);
+
+
+        // 차트 업데이트
+        document.getElementById('chart1_daybtn').addEventListener('click', () => {
+            chartBox1.data.datasets[0].data = [2, 2, 2, 3, 3, 2, 2];
+            chartBox1.data.datasets[1].data = [1, 2, 3, 1, 1, 2, 3];
+            chartBox1.data.labels = dayLabels;
+            chartBox1.update();
+        });
+        document.getElementById('chart1_monthbtn').addEventListener('click', () => {
+            chartBox1.data.datasets[0].data = [1, 2, 3, 1, 1, 2, 3];
+            chartBox1.data.datasets[1].data = [2, 2, 2, 3, 3, 2, 2];
+            chartBox1.data.labels = monthLabels;
+            chartBox1.update();
+        });
+
+        document.getElementById('chart2_daybtn').addEventListener('click', () => {
+            chartBox2.data.datasets[0].data = [4, 4, 4, 5.5, 5.5, 5.5, 5.5];
+            chartBox2.data.datasets[1].data = [2.5, 2.5, 2.5, 2.5, 4.2, 4.2, 2.5];
+            chartBox2.data.datasets[2].data = [5, 5, 5, 5, 3.4, 3.4, 4.9];
+            chartBox2.data.labels = dayLabels;
+            chartBox2.update();
+        });
+        document.getElementById('chart2_monthbtn').addEventListener('click', () => {
+            chartBox2.data.datasets[0].data = [2.5, 2.5, 2.5, 2.5, 4.2, 4.2, 2.5],
+                chartBox2.data.datasets[1].data = [5, 5, 5, 5, 3.4, 3.4, 4.9],
+                chartBox2.data.datasets[2].data = [4, 4, 4, 5.5, 5.5, 5.5, 5.5],
+                chartBox2.data.labels = monthLabels;
+            chartBox2.update();
+        });
+
+        document.getElementById('chart3_daybtn').addEventListener('click', () => {
+            chartBox3.data.datasets[0].data = [200000, 200000, 200000, 300000, 300000, 200000, 200000];
+            chartBox3.data.labels = dayLabels;
+            chartBox3.update();
+        });
+        document.getElementById('chart3_monthbtn').addEventListener('click', () => {
+            chartBox3.data.datasets[0].data = [100000, 200000, 300000, 100000, 100000, 200000, 300000];
+            chartBox3.data.labels = monthLabels;
+            chartBox3.update();
+        });
+    </script>
+
+</body>
+
+</html>

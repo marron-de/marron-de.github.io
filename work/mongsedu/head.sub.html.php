@@ -21,6 +21,7 @@ if ($config['cf_add_meta']) echo $config['cf_add_meta'];
 ?>
 
 <!-- favicon -->
+<link rel="canonical" href="https://www.mongs.co.kr/">
 <link rel="icon" type="image/png" href="<?php echo EYOOM_THEME_URL ?>/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="<?php echo EYOOM_THEME_URL ?>/favicon/favicon.svg" />
 <link rel="shortcut icon" href="<?php echo EYOOM_THEME_URL ?>/favicon/favicon.ico" />

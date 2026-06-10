@@ -447,7 +447,7 @@ $(document).ready(function () {
 });
 
 
-// 상단배너 팝업
+// 메인배너 팝업
 const bannerSwiper = new Swiper(".banner_modal .banner_swiper", {
 	observer: true,
 	observeParents: true,
