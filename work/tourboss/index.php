@@ -4058,15 +4058,20 @@
 							</p>
 						</div>
 						<div class="right">
-							<div class="slide_controls">
-								<div class="swiper-button-prev prev_btn"></div>  
+							<!-- 260611 추가작업 -->
+							<div class="slide_controls ver2">
 								<div class="swiper-pagination paging"></div>  
-								<div class="swiper-button-next next_btn"></div>
+								<div class="btnbox">
+									<button type="button" class="play_btn"></button>  
+									<div class="swiper-button-prev prev_btn"></div>  
+									<div class="swiper-button-next next_btn"></div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="contbox">
-						<div class="swiper ms18_swiper">
+						<!-- 260611 추가작업 -->
+						<!-- <div class="swiper ms18_swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide item">
 									<div class="vid_box">
@@ -4214,6 +4219,195 @@
 													<p class="tit">튀르키예 일주 9일 YP</p>
 													<span class="arrow"></span>
 												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+						<div class="shortbox">
+							<div class="swiper ms18_shorts">
+								<div class="swiper-wrapper">
+									<a href="" class="swiper-slide item" target="_blank">
+										<div class="vid_box">
+											<video class="video" poster="<?php echo $path ?>img/ms18_short1_thum.jpg" src="<?php echo $path ?>video/ms18_short1_1.mp4" loop muted playsinline autoplay></video>					
+										</div>
+										<button type="button" class="volume_btn"></button>
+										<div class="txtbox">
+											<img src="<?php echo $path ?>img/ico_shorts.png" alt="" class="icon">
+											<p class="tit">
+												유튜브 쇼츠 타이틀 입니다. 유튜브 쇼츠 타이틀 입니다.
+											</p>
+										</div>
+									</a>
+									<a href="" class="swiper-slide item" target="_blank">
+										<div class="vid_box">
+											<video class="video" poster="<?php echo $path ?>img/ms18_short2_thum.jpg" src="<?php echo $path ?>video/ms18_short1_2.mp4" loop muted playsinline autoplay></video>					
+										</div>
+										<button type="button" class="volume_btn"></button>
+										<div class="txtbox">
+											<img src="<?php echo $path ?>img/ico_insta.png" alt="" class="icon">
+											<p class="tit">
+												인스타그램 쇼츠 타이틀 입니다.
+											</p>
+										</div>
+									</a>
+									<a href="" class="swiper-slide item" target="_blank">
+										<div class="vid_box">
+											<video class="video" poster="<?php echo $path ?>img/ms18_short3_thum.jpg" src="<?php echo $path ?>video/ms18_short1_3.mp4" loop muted playsinline autoplay></video>					
+										</div>
+										<button type="button" class="volume_btn"></button>
+										<div class="txtbox">
+											<img src="<?php echo $path ?>img/ico_insta.png" alt="" class="icon">
+											<p class="tit">
+												인스타그램 쇼츠 타이틀 입니다.
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="prdbox">
+							<div class="swiper ms18_list">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide item">
+										<p class="prd_tit">
+											<span class="txt">추천 상품</span>
+											<span class="icon"></span>
+										</p>
+										<div class="listbox">
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic1.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic2.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic3.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide item">
+										<p class="prd_tit">
+											<span class="txt">추천 상품2</span>
+											<span class="icon"></span>
+										</p>
+										<div class="listbox">
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic1.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic2.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic3.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide item">
+										<p class="prd_tit">
+											<span class="txt">추천 상품3</span>
+											<span class="icon"></span>
+										</p>
+										<div class="listbox">
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic1.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic2.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
+											</a>
+											<a href="<?php echo $path ?>product/view.php" class="listitem">
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_pic3.jpg" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<p class="tit">튀르키예 일주 9일 YP</p>
+													<div class="pricebox">
+														<p class="price">1,018,500원</p>
+														<p class="ori">1,358,000원</p>
+													</div>
+												</div>
+												<span class="arrow"></span>
 											</a>
 										</div>
 									</div>

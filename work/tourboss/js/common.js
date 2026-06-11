@@ -1637,3 +1637,83 @@ function history_popup() {
 	$("body").addClass('modal_open');
 	$("#history_popup").addClass('show');
 }
+
+
+// 260611 추가작업
+const originalMS18_list = cloneSlides('.ms18_list', 3);
+const originalMS18_short = cloneSlides('.ms18_shorts', 3);
+const ms18_list = new Swiper('.ms18_list', {
+	observer: true,
+	observeParents: true,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true,
+	},
+	loop:true,
+	speed: 500,
+	allowTouchMove: false,
+	spaceBetween: 20,
+});
+const ms18_shorts = new Swiper('.ms18_shorts', {
+	observer: true,
+	observeParents: true,
+	loop:true,
+	speed: 500,
+	centeredSlides: true,
+	slidesPerView: 2,
+	spaceBetween: 10,	
+    thumbs: {
+        swiper: ms18_list
+    },
+    navigation: {
+      nextEl: ".ms18 .slide_controls.ver2 .next_btn",
+      prevEl: ".ms18 .slide_controls.ver2 .prev_btn",
+    },	
+	pagination: {
+		el: '.ms18 .slide_controls.ver2 .paging',
+		type: 'custom',
+		clickable: true,
+		renderCustom: function (swiper, current, total) {
+			const fixedCurrent = ((swiper.realIndex % originalMS18_short) + 1);
+			const fixedTotal = originalMS18_short;
+			return '<span class="current">' + ('0' + fixedCurrent).slice(-2) + '</span><span class="bar"></span>' + '<span class="total">' + ('0' + fixedTotal).slice(-2) + '</span>';
+		}
+	},
+	breakpoints: {
+		1080: {
+			slidesPerView: 3,
+			spaceBetween: 8,
+		},
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+})
+ms18_shorts.controller.control = ms18_list;
+
+// 재생/멈춤
+$('.ms18 .slide_controls.ver2 .play_btn').on('click', function() {
+    $(this).toggleClass('stop');
+    if ($(this).hasClass('stop')) {
+        ms18_shorts.autoplay.stop();
+    } else {
+        ms18_shorts.autoplay.start();
+    }
+});
+
+// 볼륨 버튼 - 클릭한 슬라이드만 소리 on
+$('.ms18_shorts').on('click', '.volume_btn', function(e) {
+    e.preventDefault();
+    const $btn = $(this);
+    const $video = $btn.closest('.item').find('video')[0];
+    
+    $btn.toggleClass('on');
+    $video.muted = !$btn.hasClass('on');
+});
+
+// 슬라이드 전환시 모든 영상 음소거
+ms18_shorts.on('slideChange', function() {
+    $('.ms18_shorts .volume_btn').removeClass('on');
+    $('.ms18_shorts video').prop('muted', true);
+});
