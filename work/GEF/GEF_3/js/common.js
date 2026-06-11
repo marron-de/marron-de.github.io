@@ -61,3 +61,41 @@ const ms5_swiper = new Swiper(".ms5_swiper", {
 		disableOnInteraction: false,      
 	},
 });
+
+
+// 260611 추가
+// scroll nav
+$(function () {
+	let didScroll;
+	let lastScrollTop = 0;
+	let delta = 5; 
+	let navbarHeight = $("#header").outerHeight();
+
+	$(window).scroll(function (event) {
+		didScroll = true;
+	});
+
+	hasScrolled();
+
+	setInterval(function () {
+		if (didScroll) {
+			hasScrolled();
+			didScroll = false;
+		}
+	}, 250);
+	
+	function hasScrolled() {
+		let st = $(this).scrollTop();
+
+		if (Math.abs(lastScrollTop - st) <= delta)
+			return;
+
+		if (st > 0) {
+			$("body").addClass("down")
+		} else {
+			$("body").removeClass("down")
+		}
+
+		lastScrollTop = st; 
+	}
+})
