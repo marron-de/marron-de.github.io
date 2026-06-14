@@ -132,7 +132,7 @@ $(document).ready(function () {
 // select2 
 $(document).ready(function() {
     function formatOption(data) {
-        if (!data.id || $(data.element).data('hidden')) {
+       	if (!data.element || $(data.element).data('hidden')) {
             return null; 
         }
 
@@ -174,21 +174,6 @@ $(document).mouseup(function (e) {
 	if ($(".modal .modal_box").has(e.target).length === 0 && $(".ui-datepicker").has(e.target).length === 0) {
 		$("body").removeClass("hidden")
 		$(".modal").removeClass("show")
-	}
-});
-
-
-// 오프캔버스 공통
-$(".offcanvas .close_btn").click(function () {
-	$(".offcanvas").removeClass("show")
-})
-$(".offcanvas .arrowclose_btn").click(function () {
-	$(".offcanvas").removeClass("show")
-})
-
-$(document).mouseup(function (e) {
-	if ($(".offcanvas").has(e.target).length === 0) {
-		$(".offcanvas").removeClass("show")
 	}
 });
 
@@ -275,9 +260,22 @@ $('.chartfilter_box .filter_btn').on('click', function () {
 
 // 리스트타입 
 $(document).ready(function() {
-	$(".list_type .opt_btn").click(function () {
+	$(".sec_top top_filer .opt_btn").click(function () {
 		$(this).siblings(".opt_popup").addClass("show")
 	})
+});
+
+
+// 03고객지원_01목록_01디폴트
+$(document).ready(function() {
+	$('.tbl_wrap tbody tr').has('.answer_btn').css('cursor', 'pointer');
+    $('.tbl_wrap tbody tr').has('.answer_btn').on('click', function() {
+        let currentTr = $(this);
+        let answerTr = currentTr.next('.answer_tr');
+
+        currentTr.toggleClass('on');
+        answerTr.toggleClass('show');
+    });
 });
 
 

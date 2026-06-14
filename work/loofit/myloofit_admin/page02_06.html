@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>마이루핏 어드민</title>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<script src="js/swiper-bundle.min.js"></script>
+
+	<!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-ui.min.js">
+	</script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+	<!-- chart.js -->
+	<script src="js/chart.js"></script>
+	<script src="js/chartjs-plugin-datalabels.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"rel="stylesheet">
+	<link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+
+	<div class="wrap">
+
+        <div class="modal type2 show" id="memberInfoPopup">
+			<div class="modal_box">
+				<div class="modal_head">
+					<div class="info_titbox">
+						<p class="name">이현민</p>
+						<div class="info_tit">
+							<button type="button" class="prev_btn"></button>
+							<div class="title">
+								<p class="tit">박시은</p>
+								<p class="paging">2/3</p>
+							</div>
+							<button type="button" class="next_btn"></button>
+						</div>
+						<p class="name">김태영</p>
+					</div>
+					<button type="button" class="close_btn"></button>
+				</div>
+				<div class="modal_body">
+					<div class="member_infobox">
+						<div class="top">
+							<div class="profile">
+								<img src="img/member_profile.png" alt="" class="img">
+							</div>
+							<div class="info">
+								<p class="tit">박시은 (3sh0402@gmail.com)</p>
+								<p class="desc">
+									회원번호 : 420  /  가입일 2026-05-18  /  2026-05-18 14:25
+								</p>
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="leftbox">
+								<div class="infocont1">
+									<div class="item">
+										<p class="tit">AI가 추천해준 공고</p>
+										<p class="num">18</p>
+									</div>
+									<div class="bar"></div>
+									<div class="item">
+										<p class="tit">지원제안 받은 공고</p>
+										<p class="num">18</p>
+									</div>
+									<div class="bar"></div>
+									<div class="item">
+										<p class="tit">내가 지원한 채용</p>
+										<p class="num dot">18</p>
+									</div>
+								</div>
+								<div class="infocont2">
+									<div class="item">
+										<p class="tit">관심업종</p>
+										<div class="tagbox">
+											<span class="tag typeA">IT/전자</span>
+											<span class="tag typeA">디자인</span>
+											<span class="tag typeA">생산/제조</span>
+										</div>
+									</div>
+									<div class="bar"></div>
+									<div class="item">
+										<p class="tit">관심직무</p>
+										<div class="tagbox">
+											<span class="tag typeB">품질보증</span>
+											<span class="tag typeB">프로젝트 매니저</span>
+										</div>
+									</div>
+									<div class="bar"></div>
+									<div class="item">
+										<p class="tit">기술태그</p>
+										<div class="tagbox">
+											<span class="tag typeC">#AWS</span>
+											<span class="tag typeC">#FIGMA</span>
+											<span class="tag typeC">#GM4</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rightbox">
+								<div class="txtbox">
+									<div class="item">
+										<p class="tit">역량 기술서</p>
+										<p class="desc color1">작성완료</p>
+									</div>
+									<div class="item">
+										<p class="tit">전공 및 교육 과정</p>
+										<p class="desc color2">미작성</p>
+									</div>
+									<div class="item">
+										<p class="tit">자격사항</p>
+										<p class="desc color2">미작성</p>
+									</div>
+								</div>
+								<button type="button" class="btn full">
+									워크스페이스 바로가기
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="form_box big_gap">
+						<div class="form_item">
+							<p class="form_tit mb24">AI매칭 정보</p>
+							<div class="input_box">
+								<p class="label_text">학교 전공</p>
+								<div class="input_item">
+									<input type="text" class="input_text" placeholder="학교명">
+									<input type="text" class="input_text" placeholder="전공명">
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<p class="label_text">보유역량</p>
+								<textarea class="input_text" placeholder="(예시)&#13;&#10;마케팅 기획 : 시장·경쟁사 분석, 타깃 고객 정의, 캠페인 기획&#13;&#10;Tool : Excel, PowerPoint, Figma, Google Analytics(GA4)"></textarea>
+								<p class="word_number absol">
+									<span class="bold">0</span>/300자
+								</p>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<p class="label_text">전공 및 교육과정</p>
+								<textarea class="input_text" placeholder="(예시)&#13;&#10;마케팅원론: 시장 세분화(STP), 소비자 행동 분석, 마케팅 믹스(4P) 이해&#13;&#10;소비자행동론 : 고객 의사결정 과정, 브랜드 인식 및 구매 요인 분석&#13;&#10;SBA(서울산업진흥원) <스타트업 마케팅> 과정 수료"></textarea>
+								<p class="word_number absol">
+									<span class="bold">0</span>/300자
+								</p>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<p class="label_text">자격증</p>
+								<textarea class="input_text" placeholder="(예시)&#13;&#10;Google Anayltics(GA4) 인증&#13;&#10;컴퓨터활용능력 2급"></textarea>
+								<p class="word_number absol">
+									<span class="bold">0</span>/300자
+								</p>
+							</div>
+						</div>
+						<div class="form_item">
+							<div class="input_box">
+								<p class="label_text">
+									기타 <span class="normal">(그 외 직무역량 위주로 작성해주세요.)</span>
+								</p>
+								<textarea class="input_text" placeholder="기타"></textarea>
+								<p class="word_number absol">
+									<span class="bold">0</span>/300자
+								</p>
+							</div>
+						</div>
+						<div class="form_item">
+							<p class="form_tit">알림설정</p>
+							<div class="form_flex check_ver">
+								<div class="input_subitem">
+									<p class="form_subtit">AI매칭 공고</p>
+									<div class="check_wrap">
+										<div class="check_box">
+											<input type="checkbox" name="AIMatching1" id="AIMatching1" class="input_check" checked>
+											<label for="AIMatching1" class="label_check">이메일</label>
+										</div>
+										<div class="check_box">
+											<input type="checkbox" name="AIMatching2" id="AIMatching2" class="input_check">
+											<label for="AIMatching2" class="label_check">알림톡</label>
+										</div>
+									</div>
+								</div>
+								<div class="input_subitem">
+									<p class="form_subtit">지원제안</p>
+									<div class="check_wrap">
+										<div class="check_box">
+											<input type="checkbox" name="proposal1" id="proposal1" class="input_check" checked>
+											<label for="proposal1" class="label_check">이메일</label>
+										</div>
+										<div class="check_box">
+											<input type="checkbox" name="proposal2" id="proposal2" class="input_check">
+											<label for="proposal2" class="label_check">알림톡</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clevr_box">
+						<div class="form_tit">
+							Clevr <span class="required">20</span>
+						</div>
+						<div class="contbox">
+							<div class="item">
+								<div class="imgbox">
+									<img src="img/clever_icon1.png" alt="" class="img">
+								</div>
+								<div class="txtbox">
+									<p class="title">
+										<span class="tit">Clevr</span>
+										<span class="desc">취업전반</span>
+									</p>
+									<div class="msgbox">
+										<div class="msgitem left">
+											<p class="txt">
+												마케팅원론: 시장 세분화(STP), 소비자 행동 분석, 마케팅 믹스(4P) 이해 <br>
+												소비자행동론 : 고객 의사결정 과정, 브랜드 인식 및 구매 요인 분석 <br>
+												SBA(서울산업진흥원) &lt;스타트업 마케팅&gt; 과정 수료
+											</p>
+										</div>
+										<div class="msgitem right">
+											<p class="txt">
+												마케팅원론과 소비자행동론 학습 내용을 바탕으로 시장 분석과 <br>
+												소비자 니즈를 이해하는 역량을 키워왔습니다. <br>
+												특히 STP 전략과 4P 분석을 활용해 고객 관점에서 문제를 바라보고,  <br>
+												효과적인 마케팅 방향을 고민하는 경험을 쌓았습니다.
+											</p>
+										</div>
+										<div class="msgitem left">
+											<p class="txt">
+												마케팅원론: 시장 세분화(STP), 소비자 행동 분석, 마케팅 믹스(4P) 이해 <br>
+												소비자행동론 : 고객 의사결정 과정, 브랜드 인식 및 구매 요인 분석 <br>
+												SBA(서울산업진흥원) &lt;스타트업 마케팅&gt; 과정 수료
+											</p>
+										</div>
+										<div class="msgitem right">
+											<p class="txt">
+												마케팅원론과 소비자행동론 학습 내용을 바탕으로 시장 분석과 <br>
+												소비자 니즈를 이해하는 역량을 키워왔습니다. <br>
+												특히 STP 전략과 4P 분석을 활용해 고객 관점에서 문제를 바라보고,  <br>
+												효과적인 마케팅 방향을 고민하는 경험을 쌓았습니다.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="imgbox">
+									<img src="img/clever_icon2.png" alt="" class="img">
+								</div>
+								<div class="txtbox">
+									<p class="title">
+										<span class="tit">Refe</span>
+										<span class="desc">기계.모빌리터</span>
+									</p>
+									<div class="msgbox">
+										<div class="msgitem left">
+											<p class="txt">
+												마케팅원론: 시장 세분화(STP), 소비자 행동 분석, 마케팅 믹스(4P) 이해 <br>
+												소비자행동론 : 고객 의사결정 과정, 브랜드 인식 및 구매 요인 분석 <br>
+												SBA(서울산업진흥원) &lt;스타트업 마케팅&gt; 과정 수료
+											</p>
+										</div>
+										<div class="msgitem right">
+											<p class="txt">
+												마케팅원론과 소비자행동론 학습 내용을 바탕으로 시장 분석과 <br>
+												소비자 니즈를 이해하는 역량을 키워왔습니다. <br>
+												특히 STP 전략과 4P 분석을 활용해 고객 관점에서 문제를 바라보고,  <br>
+												효과적인 마케팅 방향을 고민하는 경험을 쌓았습니다.
+											</p>
+										</div>
+										<div class="msgitem left">
+											<p class="txt">
+												마케팅원론: 시장 세분화(STP), 소비자 행동 분석, 마케팅 믹스(4P) 이해 <br>
+												소비자행동론 : 고객 의사결정 과정, 브랜드 인식 및 구매 요인 분석 <br>
+												SBA(서울산업진흥원) &lt;스타트업 마케팅&gt; 과정 수료
+											</p>
+										</div>
+										<div class="msgitem right">
+											<p class="txt">
+												마케팅원론과 소비자행동론 학습 내용을 바탕으로 시장 분석과 <br>
+												소비자 니즈를 이해하는 역량을 키워왔습니다. <br>
+												특히 STP 전략과 4P 분석을 활용해 고객 관점에서 문제를 바라보고,  <br>
+												효과적인 마케팅 방향을 고민하는 경험을 쌓았습니다.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btnbox">
+							<button type="button" class="btn ver2">더보기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- JS -->
+	<script src="js/common.js"></script>
+
+</body>
+
+</html>

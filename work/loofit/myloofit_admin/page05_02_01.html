@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>마이루핏 어드민</title>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<script src="js/swiper-bundle.min.js"></script>
+
+	<!-- jquery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- datepicker -->
+	<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-ui.min.js">
+	</script>
+
+	<!-- Select2 -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+	<!-- chart.js -->
+	<script src="js/chart.js"></script>
+	<script src="js/chartjs-plugin-datalabels.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"rel="stylesheet">
+	<link href="css/Pretendard.css">
+
+</head>
+
+<body>
+
+
+	<div class="wrap">
+
+        <div class="modal type2 show" id="companyInfoPopup">
+			<div class="modal_box">
+				<div class="modal_head">
+					<p class="h_title">기업정보</p>
+					<button type="button" class="close_btn"></button>
+				</div>
+				<div class="modal_body">
+					<div class="form_titbox">
+						<div class="tag">IT/전자</div>
+						<p class="title">
+							<span class="tit">화이트박스</span>
+							<span class="txt">120-85-65923</span>
+						</p>
+					</div>
+					<div class="form_box big_gap">
+						<div class="input_box">
+							<p class="form_tit">소유자</p>
+							<div class="input_item flex_start">
+								<div class="input_textbox">
+									<div class="badgebox">
+										<div class="badge typeB">
+											장형준 &lt;3sh0402@gmail.com
+										</div>
+									</div>
+								</div>		
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="form_tit">연락처</p>
+							<input type="text" class="input_text" placeholder="010-0000-0000">
+						</div>
+						<div class="input_wrap">
+							<div class="input_box date">
+								<p class="form_tit">가입일</p>
+								<input type="text" class="input_text datepicker" value="2024-08-01">
+							</div>
+							<div class="input_box date">
+								<p class="form_tit">등록일</p>
+								<input type="text" class="input_text datepicker" value="2024-08-01">
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="form_tit">사용 Plan</p>
+							<div class="input_item">
+								<div class="input_textbox flex">
+									<select class="plan_select">
+										<option value="Enterprise Plan" selected>Enterprise Plan</option>
+										<option value="Advanced Plan">Advanced Plan</option>
+										<option value="Basic Plan">Basic Plan</option>
+									</select>
+									<input type="text" class="plan_input" value="90,000">
+									<span class="txt">/월</span>
+								</div>		
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="form_tit">사용 기간</p>
+							<p class="input_default">2024-10-24 ~ 2025-11-24</p>
+						</div>
+						<div class="input_box">
+							<p class="form_tit">알림톡 잔액</p>
+							<div class="input_item">
+								<div class="input_textbox">
+									<div class="success_box small">
+										<div class="txtbox">
+											<img src="img/ico_notice4.png" alt="" class="icon">
+											<p class="txt">알림톡 : 110건 발송가능</p>	
+										</div>
+									</div>	
+								</div>	
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="form_tit">채용사이트</p>
+							<p class="input_default">www.loofit.io/whitebox</p>
+						</div>
+						<div class="input_wrap">
+							<div class="input_box">
+								<p class="form_tit">진행중인 공고</p>
+								<p class="input_default">09</p>
+							</div>
+							<div class="input_box">
+								<p class="form_tit">지원제안</p>
+								<p class="input_default">09</p>
+							</div>
+							<div class="input_box">
+								<p class="form_tit">AI매칭</p>
+								<p class="input_default">09</p>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="form_tit">계정정지</p>
+							<div class="input_item">
+								<div class="input_textbox">
+									<div class="success_box small">
+										<div class="txtbox">
+											<img src="img/ico_notice4.png" alt="" class="icon">
+											<p class="txt">정상이용</p>	
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn ver3">계정사용</button>
+							</div>
+						</div>
+						<div class="input_box">
+							<p class="form_tit">
+								결제내역 <span class="required">200</span>
+							</p>
+							<div class="tbl_wrap ver2">
+								<table class="tbl">
+									<colgroup>
+										<col style="width: 140px;">
+										<col style="width: 181px;">
+										<col style="width: 130px;">
+										<col style="width: 121px;">
+										<col style="width: 180px;">
+									</colgroup>										
+									<thead>
+										<tr>
+											<th data-th="결제일">결제일</th>
+											<th data-th="항목">항목</th>
+											<th data-th="금액">금액</th>
+											<th data-th="결제">결제</th>
+											<th data-th="영수증">영수증</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-th="결제일">2024-10-24</td>
+											<td data-th="항목">Advanced Plan 구매</td>
+											<td data-th="금액">120,000</td>
+											<td data-th="결제">완료</td>
+											<td data-th="영수증">
+												<button type="button" class="small_btn">
+													<img src="img/ico_receipt.png" alt="" class="icon">
+													<span class="txt">영수증</span>
+												</button>
+											</td>											
+										</tr>
+										<tr>
+											<td data-th="결제일">2024-10-24</td>
+											<td data-th="항목">Advanced Plan 구매</td>
+											<td data-th="금액">120,000</td>
+											<td data-th="결제">완료</td>
+											<td data-th="영수증">
+												<button type="button" class="small_btn">
+													<img src="img/ico_receipt.png" alt="" class="icon">
+													<span class="txt">영수증</span>
+												</button>
+											</td>											
+										</tr>
+										<tr>
+											<td data-th="결제일">2024-10-24</td>
+											<td data-th="항목">Advanced Plan 구매</td>
+											<td data-th="금액">120,000</td>
+											<td data-th="결제">완료</td>
+											<td data-th="영수증">
+												<button type="button" class="small_btn">
+													<img src="img/ico_receipt.png" alt="" class="icon">
+													<span class="txt">영수증</span>
+												</button>
+											</td>											
+										</tr>
+										<tr>
+											<td data-th="결제일">2024-10-24</td>
+											<td data-th="항목">Advanced Plan 구매</td>
+											<td data-th="금액">120,000</td>
+											<td data-th="결제">완료</td>
+											<td data-th="영수증">
+												<button type="button" class="small_btn">
+													<img src="img/ico_receipt.png" alt="" class="icon">
+													<span class="txt">영수증</span>
+												</button>
+											</td>											
+										</tr>
+										<tr>
+											<td data-th="결제일">2024-10-24</td>
+											<td data-th="항목">Advanced Plan 구매</td>
+											<td data-th="금액">120,000</td>
+											<td data-th="결제">완료</td>
+											<td data-th="영수증">
+												<button type="button" class="small_btn">
+													<img src="img/ico_receipt.png" alt="" class="icon">
+													<span class="txt">영수증</span>
+												</button>
+											</td>											
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="input_btnbox">
+								<div class="leftbox"></div>
+								<div class="centerbox">
+									<button type="button" class="btn ver2">더보기</button>
+								</div>
+								<div class="rightbox"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal_foot">
+					<button type="button" class="page_btn">
+						<img src="img/btn_arrow_left.png" alt="" class="icon">
+						<span class="txt">이전</span>
+					</button>				
+					<button type="button" class="page_btn">
+						<span class="txt">다음</span>
+						<img src="img/btn_arrow_right.png" alt="" class="icon">
+					</button>	
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- JS -->
+	<script src="js/common.js"></script>
+
+</body>
+
+</html>
