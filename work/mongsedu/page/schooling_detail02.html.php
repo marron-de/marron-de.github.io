@@ -259,7 +259,7 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
 				<p class="sub_txt1">
-					<span class="color">EATON </span> 캠프 숙소정보
+					<span class="color">EPSOM </span> 캠프 숙소정보
 				</p>
 			</div>
 			<div class="contbox">
@@ -280,6 +280,30 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper-slide item">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img6.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img7.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img8.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img9.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img10.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img11.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img12.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img13.png" alt="" class="img">
 							</div>
 						</div>
 						<div class="swiper-button-prev prev_btn"></div>
@@ -302,6 +326,30 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper-slide item">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img6.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img7.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img8.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img9.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img10.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img11.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img12.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch2_sec10_img13.png" alt="" class="img">
 							</div>
 						</div>
 					</div>

@@ -142,7 +142,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper schlist_swiper sch_list">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item ALL2 SCH REC asia1" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail01'">
+									<div class="swiper-slide item ALL2 SCH REC asia1" data-end="2027-01-29" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail01'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum1.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -210,7 +210,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 RES REC asia1" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail02'">
+									<div class="swiper-slide item ALL2 RES REC asia1" data-end="2027-01-31" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail02'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum2.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -228,7 +228,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tag state">모집중</p>
 											</div>
 											<div class="titbox">
-												<p class="tit">말레이시아 Epsom 국제학교, 쿠알라룸프</p>
+												<p class="tit">말레이시아 EPSOM 국제학교, 쿠알라룸프</p>
 												<p class="desc">2027년 1월,  영국식 보딩 겨울방학캠프</p>
 											</div>
 											<div class="infobox">
@@ -278,7 +278,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 RES asia1" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail03'">
+									<div class="swiper-slide item ALL2 RES asia1" data-end="2026-08-02" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail03'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum3.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -342,7 +342,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 RES REC asia2" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail04'">
+									<div class="swiper-slide item ALL2 RES REC asia2" data-end="2026-08-21" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail04'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum4.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -360,7 +360,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tag state">모집중</p>
 											</div>
 											<div class="titbox">
-												<p class="tit">말레이시아 Raffles 국제학교, 조호바루</p>
+												<p class="tit">말레이시아 RAFFLES 국제학교, 조호바루</p>
 												<p class="desc">2026년 7월, 국제학교 영어캠프(보딩/통학 선택)</p>
 											</div>
 											<div class="infobox">
@@ -410,7 +410,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 SCH REC asia4" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail05'">
+									<div class="swiper-slide item ALL2 SCH REC asia4 end" data-end="2026-08-14" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail05'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum5.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -428,7 +428,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tag state">모집중</p>
 											</div>
 											<div class="titbox">
-												<p class="tit">태국 Regents 국제학교, 방콕</p>
+												<p class="tit">태국 REGENTS 국제학교, 방콕</p>
 												<p class="desc">2026년 7월, 국제학교 통학 영어캠프</p>
 											</div>
 											<div class="infobox">
@@ -478,7 +478,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 SCH asia4" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail06'">
+									<div class="swiper-slide item ALL2 SCH asia4 end" data-end="2026-08-07" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail06'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum6.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -494,7 +494,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tag state">모집중</p>
 											</div>
 											<div class="titbox">
-												<p class="tit">태국 Anglo 국제학교, 방콕</p>
+												<p class="tit">태국 ANGLO 국제학교, 방콕</p>
 												<p class="desc">2026년 7월, 국제학교 통학 영어캠프</p>
 											</div>
 											<div class="infobox">
@@ -544,7 +544,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 LNG asia5" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail07'">
+									<div class="swiper-slide item ALL2 LNG asia5" data-end="2027-02-20" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail07'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum7.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -608,7 +608,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>									
-									<div class="swiper-slide item ALL2 LNG REC asia5" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail08'">
+									<div class="swiper-slide item ALL2 LNG REC asia5" data-end="2027-02-20" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail08'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum8.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -676,7 +676,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 asia3" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail09'">
+									<div class="swiper-slide item ALL2 asia3" data-end="2026-07-31" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail09'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum9.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -740,7 +740,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item ALL2 LNG end" onclick="showToast('마감된 스쿨링/캠프입니다', 'emoji2')">
+									<div class="swiper-slide item ALL2 LNG end" data-end="2026-07-31" onclick="showToast('마감된 스쿨링/캠프입니다', 'emoji2')">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum10.jpg" alt="" class="img">
 											<div class="flagbox">
@@ -1267,6 +1267,22 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#" + tabId).css("animation", "1.2s ease 0s fadeIn");
         }, 10);
+    });
+	
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    $('.swiper-slide[data-end]').each(function() {
+        const endDate = new Date($(this).data('end'));
+        endDate.setHours(0, 0, 0, 0);
+
+        const isEnded = endDate < today || $(this).hasClass('end');
+
+        if (isEnded) {
+            $(this).addClass('end');
+            $(this).attr('onclick', "showToast('마감된 스쿨링/캠프입니다', 'emoji2')");
+            $(this).find('.tag.state').text('마감');
+        }
     });
 
 });

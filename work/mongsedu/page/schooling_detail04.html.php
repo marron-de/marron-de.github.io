@@ -274,6 +274,18 @@ if (!defined('_EYOOM_')) exit;
 							<div class="swiper-slide item">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img3.png" alt="" class="img">
 							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img4.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img6.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img7.png" alt="" class="img">
+							</div>
 						</div>
 						<div class="swiper-button-prev prev_btn"></div>
 						<div class="swiper-pagination pagination"></div>
@@ -289,6 +301,18 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper-slide item">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img3.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img4.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img5.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img6.png" alt="" class="img">
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch4_sec10_img7.png" alt="" class="img">
 							</div>
 						</div>
 					</div>
