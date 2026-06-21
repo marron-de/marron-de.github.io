@@ -49,6 +49,12 @@ $(document).mouseup(function (e) {
 		$(".navbox").removeClass("open");
 	}
 });
+$(document).ready(function() {
+    $('.navbox .menubox > li .link').on('click', function() {
+		$("body").removeClass("hidden");
+		$(".navbox").removeClass("open");
+    });
+});
 
 
 // top button
