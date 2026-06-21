@@ -581,54 +581,71 @@ function updateBullets(swiper, total) {
         b.classList.toggle('swiper-pagination-bullet-active', (i + 1) === current);
     });
 }
+// 260621 수정작업
 const originalMS1 = cloneSlides('.ms1_swiper', 3);
 const ms1_swiper = new Swiper('.ms1_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	loop: true,
-	centeredSlides: true,
-	spaceBetween: 20,
-	// initialSlide: 1,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-	},
-	pagination: {
-		el: '.ms1 .paging',
-		clickable: true,
-		renderCustom: function (swiper) {
-			return renderPagination(swiper, originalMS1);
-		},
-	},
-	navigation: {
-		nextEl: '.ms1 .next_btn',
-		prevEl: '.ms1 .prev_btn',
-	},
-	on: {
+    observer: true,
+    observeParents: true,
+    speed: 500,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    // 추가
+    pagination: {
+        el: '.ms1 .paging',
+        type: 'bullets',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.ms1 .next_btn',
+        prevEl: '.ms1 .prev_btn',
+    },
+    on: {
         init(swiper) {
             initBullets(originalMS1);
             updateBullets(swiper, originalMS1);
+            applyBreakpoint(swiper);
         },
         slideChange(swiper) {
             updateBullets(swiper, originalMS1);
+        },
+        resize(swiper) {
+            applyBreakpoint(swiper);
         }
     },
-	breakpoints: {
-		1080: {
-			slidesPerView: 'auto',
-			spaceBetween: 40,
-			pagination: {
-				el: '.ms1 .paging',
-				type: 'custom',
-				clickable: true,
-				renderCustom: function (swiper) {
-					return renderPagination(swiper, originalMS1);
-				},
-			},
-		},
-	},
-});	
+});
+function applyBreakpoint(swiper) {
+    const w = swiper.el.offsetWidth;
+
+    if (w >= 1080) {
+        swiper.params.slidesPerView = 'auto';
+        swiper.params.spaceBetween = 40;
+        swiper.params.pagination.type = 'custom';
+        swiper.params.pagination.renderCustom = function(sw) {
+            return renderPagination(sw, originalMS1);
+        };
+        swiper.update();
+        swiper.pagination.init();
+        swiper.pagination.render();
+        swiper.pagination.update();
+    } else {
+        swiper.params.slidesPerView = 1;
+        swiper.params.spaceBetween = 20;
+        swiper.params.pagination.type = 'bullets';
+        swiper.params.pagination.renderCustom = undefined;
+        swiper.update();
+        swiper.pagination.init();
+        swiper.pagination.render();
+        swiper.pagination.update();
+        // bullets 덮어쓰기 방지
+        initBullets(originalMS1);
+        updateBullets(swiper, originalMS1);
+    }
+}
 
 // main section3
 const ms2_prd_swiper = new Swiper('.ms2_prd_swiper', {
