@@ -6,82 +6,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TK트래블 포트폴리오</title>
+    <title>TK 웹테크</title>
 
-    <!-- jquery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-	<!-- Swiper -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-	<!-- lucide -->
-	<script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/Pretendard.css">
+    <?php include "script.php" ?>
 
 </head>
 
 <body>
 
 
-    <div class="wrap">
+    <div class="wrap main_wrap">     
 
-        <!-- header -->
-        <header class="header" id="header">
-            <div class="inner h_inner">
-                <div class="h_logo">
-                    <a href="index.html">
-                        <img src="img/logo.svg" alt="" />
-                    </a>
-                </div>
-                <ul class="h_nav">
-					<li><a href="#ABOUT" class="link">About</a></li>
-					<li><a href="#WORK" class="link">Work</a></li>
-					<li><a href="#CONTACT" class="link">Contact</a></li>
-                </ul>
-                <div class="h_side">
-					<button type="button" class="menu_open">
-						<i data-lucide="text-align-justify" class="icon"></i>
-					</button>	
-                </div>
-            </div>
-        </header>
 
-        <!-- nav box -->
-        <div class="navbox">	
-			<div class="headbox">
-				<div class="logo">
-					<img src="img/f_logo.svg" alt="" class="img">
-				</div>
-				<button class="menu_close">
-					<i data-lucide="x"></i>
-				</button>		
-			</div>
-			<ul class="menubox accordion">
-				<li><a href="#ABOUT" class="link">About</a></li>
-				<li><a href="#WORK" class="link">Work</a></li>
-				<li><a href="#CONTACT" class="link">Contact</a></li>
-			</ul>	
-		</div>
+    	<?php include "common/header.php" ?>
 
-        <!-- container -->
+    	<?php include "common/navbox.php" ?>
+
+
+		<!-- container -->
         <div class="container">
 
             <section id="ABOUT" class="main_section ms1">
@@ -762,68 +704,10 @@
 
         </div>
 
-        <!-- footer -->
-        <footer class="footer">
-            <div class="inner f_inner">
-				<div class="f_top">
-					<div class="leftbox">
-						<div class="f_logo">
-							<img src="img/f_logo.svg" alt="" class="img">
-						</div>
-						<div class="f_info">
-							<p class="adr">
-								서울특별시 동대문구 신이문로 39, <br class="tablet">
-								명경빌딩 5층 (02409)
-							</p>
-							<div class="infobox">
-								<div class="item">
-									<p class="tit">TEL</p>
-									<p class="desc">070-8276-1919</p>
-								</div>
-								<div class="item">
-									<p class="tit">FAX</p>
-									<p class="desc">02-6383-8003</p>
-								</div>
-								<div class="item">
-									<p class="tit">E-MAIL</p>
-									<p class="desc">cs@tktravelkorea.com</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="rightbox">
-						<button type="button" id="top_btn" class="top_btn"></button>
-					</div>
-				</div>
-				<div class="f_bottom">
-					<p class="copyright">
-						© 2026 TK TRAVEL KOREA. ALL RIGHT RESERVED.
-					</p>
-					<div class="snsbox">
-						<a href="" class="link" target="_blank">
-							<img src="img/ico_whatsapp.svg" alt="" class="icon">
-						</a>
-						<a href="" class="link" target="_blank">
-							<img src="img/ico_line.svg" alt="" class="icon">
-						</a>
-						<a href="" class="link" target="_blank">
-							<img src="img/ico_wechat.svg" alt="" class="icon">
-						</a>
-						<a href="" class="link" target="_blank">
-							<img src="img/ico_facebook.svg" alt="" class="icon">
-						</a>
-						<a href="" class="link" target="_blank">
-							<img src="img/ico_instagram.svg" alt="" class="icon">
-						</a>
-						<a href="" class="link" target="_blank">
-							<img src="img/ico_youtube.svg" alt="" class="icon">
-						</a>
-					</div>
-				</div>
-            </div>			
-        </footer>
+    	<?php include "common/footer.php" ?>
 
-        <!-- modal -->
+
+		<!-- detail modal -->
         <div class="modal detail_modal">
 			<div class="modal_inner">
 				<div class="modal_topbox">
@@ -876,6 +760,7 @@
 			</div>
         </div>
 
+		
     </div>
 
 
