@@ -9,9 +9,9 @@
 		</button>		
 	</div>
 	<ul class="menubox accordion">
-		<li><a href="#ABOUT" class="link">About</a></li>
-		<li><a href="#WORK" class="link">Work</a></li>
-		<li><a href="#CONTACT" class="link">Contact</a></li>
-		<li><a href="<?php echo $path ?>inquiry_list.php" class="link">Inquiry</a></li>
+		<li><a href="<?php echo $path ?>#ABOUT" class="link">About</a></li>
+		<li><a href="<?php echo $path ?>#WORK" class="link">Work</a></li>
+		<li><a href="<?php echo $path ?>#CONTACT" class="link">Contact</a></li>
+		<li><a href="<?php echo $path ?>inquiry/inquiry_list.php" class="link">Inquiry</a></li>
 	</ul>	
 </div>

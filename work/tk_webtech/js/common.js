@@ -170,16 +170,56 @@ $(document).ready(function () {
 });
 
 
+// datepicker
+$(document).ready(function () {
+	if ($(".datepicker").length) {
+		$.datepicker.setDefaults({
+			closeText: "닫기",
+			prevText: "이전달",
+			nextText: "다음달",
+			currentText: "오늘",
+			monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+			monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+			dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+			dayNamesShort: ["S", "M", "T", "W", "T", "F", "S"],
+			dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+			weekHeader: "주",
+			dateFormat: "yy-mm-dd",
+			firstDay: 0,
+			isRTL: false,
+			showMonthAfterYear: true,
+			showOtherMonths: true,
+			yearSuffix: "년"
+		});
+
+		const today = new Date();
+		const year = today.getFullYear();
+		const month = String(today.getMonth() + 1).padStart(2, '0');
+		const day = String(today.getDate()).padStart(2, '0');
+		const formatted = `${year}-${month}-${day}`;
+		$(".datepicker.today").attr("placeholder", formatted);
+
+		$(".datepicker").datepicker({
+			// maxDate: 'today'
+		});
+	}
+});
+
+
 /* modal */
 $(".modal .modal_close").click(function () {
 	$("body").removeClass("open")
 	$(".modal").removeClass("show")
 })
 $(document).mouseup(function (e) {
-	if ($(".modal .modal_inner").has(e.target).length === 0) {
-		$("body").removeClass("open")
-		$(".modal").removeClass("show")
-	}
+    if ($(".modal .modal_box").has(e.target).length === 0 && 
+        !$(e.target).closest('.ui-datepicker').length && 
+        !$(e.target).closest('#ui-datepicker-div').length) {
+        
+        $("body").removeClass("hidden");
+        $("body").removeClass("open");
+        $(".modal").removeClass("show");
+    }
 });
 
 
@@ -306,3 +346,25 @@ $(document).ready(function() {
 
 });
 
+
+// inquiry modal
+$(".inquiry_btn").click(function (e) {
+	e.preventDefault();
+    $("body").addClass("open")
+    $(".inquiry_modal").addClass("show")
+})
+$(document).ready(function() {
+   $('.acc_arrow').on('click', function() {
+        $(this).closest('.term_item').toggleClass('show');
+    });
+});
+
+
+// inquiry list
+$(document).ready(function () {
+	$(".tbl .secret_mode").click(function (e) {
+		e.preventDefault(); 
+    	$("body").addClass("open")
+		$('.pwd_modal').addClass('show');
+	})
+});

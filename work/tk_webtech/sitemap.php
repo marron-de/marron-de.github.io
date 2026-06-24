@@ -84,7 +84,7 @@
                     <p class="tit">01 메인 </p>
                     <ul class="site_sub_menu">
 						<li><a href="index.php">01 메인</a></li>
-                        <li><a href="detail_modal.php">02 상세보기popup</a></li>
+                        <li><a href="common/detail_modal.php">02 상세보기popup</a></li>
                     </ul>
                 </li>
 
@@ -93,10 +93,10 @@
                 <li>
                     <p class="tit">02 온라인문의 </p>
                     <ul class="site_sub_menu wid4">
-						<li><a href="inquiry_modal.php">01 문의하기popup</a></li>
-						<li><a href="inquiry_list.php">02 목록</a></li>
-						<li><a href="pwd_modal.php">03 비밀번호popup</a></li>
-						<li><a href="inquiry_view.php">04 상세</a></li>
+						<li><a href="inquiry/inquiry_modal.php">01 문의하기popup</a></li>
+						<li><a href="inquiry/inquiry_list.php">02 목록</a></li>
+						<li><a href="inquiry/pwd_modal.php">03 비밀번호popup</a></li>
+						<li><a href="inquiry/inquiry_view.php">04 상세</a></li>
                     </ul>
                 </li>
             </ul>

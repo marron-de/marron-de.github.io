@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TK 웹테크</title>
 
-    <?php include "script.php" ?>
+    <?php include "../script.php" ?>
 
 </head>
 
@@ -75,7 +75,7 @@
 
 
     <!-- JS -->
-    <script src="js/common.js"></script>
+    <script src="../js/common.js"></script>
 
 
 

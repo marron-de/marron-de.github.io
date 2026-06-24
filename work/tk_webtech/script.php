@@ -15,6 +15,10 @@ $path = ($currentFile === 'index.php') ? '' : '../';
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- datepicker -->
+<link type="text/css" href="<?php echo $path ?>css/jquery-ui.css" rel="stylesheet" />
+<script type="text/javascript" src="<?php echo $path ?>js/jquery-ui.min.js"></script>
+
 <!-- Phosphor Icons -->
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
