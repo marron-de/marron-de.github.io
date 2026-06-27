@@ -253,6 +253,14 @@ const ms1_swiper = new Swiper('.ms1_swiper', {
 		},
 	}
 })
+$('.ms1_swiper .play_btn').on('click', function () {
+    $(this).toggleClass('on');
+    if ($(this).hasClass('on')) {
+        ms1_swiper.autoplay.stop();
+    } else {
+        ms1_swiper.autoplay.start();
+    }
+});
 
 $('.ms2 .item .imgbox .img').each(function() {
     const imgbox = $(this).closest('.imgbox');
