@@ -45,7 +45,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div> -->
-					<div class="swiper-slide item item5">
+					<!-- <div class="swiper-slide item item5">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg_mob.jpg" alt="" class="bg tablet">
@@ -64,7 +64,7 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=36" class="btn typeF">설명회 바로가기</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="swiper-slide item item2">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
@@ -75,7 +75,7 @@ if (!defined('_EYOOM_')) exit;
 								<span class="badge">온라인 설명회</span>
 							</div>
 							<div class="bottombox">
-								<p class="sub">6월27일(토) 13:00</p>
+								<p class="sub">7월25일(토) 11:00</p>
 								<p class="tit">
 									아시아 TOP 예술대 <br>
 									LASALLE 입학설명회
@@ -94,7 +94,7 @@ if (!defined('_EYOOM_')) exit;
 								<span class="badge">온라인 설명회</span>
 							</div>
 							<div class="bottombox">
-								<p class="sub">6월27일(토) 17:30</p>
+								<p class="sub">7월25일(토) 17:30</p>
 								<p class="tit">
 									<span class="color">2027학년도 대비</span>
 									<br>
@@ -104,7 +104,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item item6">
+					<!-- <div class="swiper-slide item item6">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner6_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner6_bg_mob.jpg" alt="" class="bg tablet">
@@ -128,7 +128,7 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=37" class="btn typeG">설명회 바로가기</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="swiper-slide item item3">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg.jpg" alt="" class="bg pc">

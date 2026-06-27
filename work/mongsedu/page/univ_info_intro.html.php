@@ -98,34 +98,125 @@ if (!defined('_EYOOM_')) exit;
 						<div class="swiper-button-prev prev_btn"></div>
 						<div class="swiper-pagination pagination"></div>
 					</div>
-					<div class="text_area">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
-						<span>
-							싱가포르 NO.1 사립대학교 SIM</br/>
-							수능/내신 점수로 전세계 TOP100대학 입학
-						</span>
-						<ul>
-							<li>
-								<span>설립년도</span>
-								<p>1964년</p>
-							</li>
-							<li>
-								<span>재학생 수</span>
-								<p>약 17,000여 명</p>
-							</li>
-							<li>
-								<span>평가</span>
-								<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
-							</li>
-							<li>
-								<span>대표전공</span>
-								<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
-							</li>
-							<li>
-								<span>평균학비(연간)</span>
-								<p>약 3,500~8,000만원</p>
-							</li>
-						</ul>
+					<div class="text_area swiper univ_txtswiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
             </div>

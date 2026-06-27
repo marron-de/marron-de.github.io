@@ -835,10 +835,12 @@ $('.page-univ .search_inputbox .del_btn').on('click', function (e) {
 	const input = $(this).siblings('.input');
 	input.val('').trigger('input').focus();
 });
-// 학교정보 메인 리스트
+
+// 학교정보 메인 이미지
 const univ_swiper = new Swiper('.univ_swiper', {
 	observer: true,
 	observeParents: true,
+	loop:true,
 	speed: 500,
 	spaceBetween: 20,
 	pagination: {
@@ -850,6 +852,18 @@ const univ_swiper = new Swiper('.univ_swiper', {
 		prevEl: ".univ_swiper .prev_btn",
 	},
 })
+// 학교정보 메인 텍스트
+const univ_txtswiper = new Swiper('.univ_txtswiper', {
+	observer: true,
+	observeParents: true,	
+	effect : 'fade',
+	fadeEffect: { 
+	crossFade: true 
+	},
+	speed: 500,
+})
+univ_swiper.controller.control = univ_txtswiper;
+univ_txtswiper.controller.control = univ_swiper;
 // 학교정보 스와이퍼
 $(document).ready(function () {
 	$('.univlist_swiper:not(.grid_ver)').each(function () {
@@ -1489,7 +1503,6 @@ $(document).on('click', '.h_bottom .h_nav > li > a.link', function (e) {
         }
     }
 });
-
 
 
 
