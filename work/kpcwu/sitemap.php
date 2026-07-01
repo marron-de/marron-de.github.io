@@ -151,6 +151,9 @@
                 <!------------ 07 로그인 ----------->
                 <li><a href="login/login.php" class="tit">07 로그인</a></li>
 
+                <!------------ 08 검색결과 ----------->
+                <li><a href="search/search.php" class="tit">08 검색결과</a></li>
+
             </ul>
         </div>
     </div>

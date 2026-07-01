@@ -90,6 +90,97 @@
 								게시물 내용입니다. 게시물 내용입니다. 게시물 내용입니다. 
 							</p>
 						</div>
+						<div class="cmtbox">
+							<div class="titbox">
+								<p class="tit">
+									댓글 <span class="num">2</span>
+								</p>
+							</div>
+							<div class="listbox">
+								<div class="item">
+									<div class="thumbox">
+										<img src="<?php echo $path ?>img/profile_img.png" alt="" class="img cover">
+									</div>
+									<div class="txtbox">
+										<div class="info">
+											<p class="txt">홍길동</p>
+											<div class="bar"></div>
+											<p class="txt">2026.01.16</p>
+										</div>
+										<p class="desc">
+											테스트 댓글입니다. 테스트 댓글입니다. 테스트 댓글입니다. 테스트 댓글입니다. 테스트 댓글입니다. 
+										</p>
+									</div>
+									<div class="btnbox">
+										<button type="button" class="button typeB btn">
+											수정
+										</button>
+										<button type="button" class="button typeB btn">
+											삭제
+										</button>
+									</div>
+								</div>
+								<div class="item">
+									<div class="thumbox">
+										<img src="<?php echo $path ?>img/profile_img.png" alt="" class="img cover">
+									</div>
+									<div class="txtbox">
+										<div class="info">
+											<p class="txt">홍길동</p>
+											<div class="bar"></div>
+											<p class="txt">2026.01.16</p>
+										</div>
+										<p class="desc">
+											테스트 댓글입니다. 테스트 댓글입니다. <br>
+											테스트 댓글입니다. 테스트 댓글입니다. <br>
+											테스트 댓글입니다. 테스트 댓글입니다. <br>
+											테스트 댓글입니다. 테스트 댓글입니다. <br>
+											테스트 댓글입니다. 테스트 댓글입니다.
+										</p>
+									</div>
+									<div class="btnbox">
+										<button type="button" class="button typeB btn">
+											수정
+										</button>
+										<button type="button" class="button typeB btn">
+											삭제
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="writebox form_box">
+								<div class="form_item input_box">
+									<div class="input_flex">
+										<input type="text" class="input_text full" placeholder="이름">
+										<input type="password" class="input_text full" placeholder="비밀번호">
+									</div>
+								</div>
+								<div class="form_item input_box">
+									<div class="input_flex">
+										<textarea class="input_text full" placeholder="댓글을 입력해주세요."></textarea>
+									</div>
+								</div>
+								<div class="form_item bottom">
+									<div class="captcha_box">
+										<div class="captcha_img">
+											<img src="<?php echo $path ?>img/captcha_img.png" alt="" class="img ">
+										</div>
+										<div class="captcha_btns">
+											<button type="button" class="btn volume_btn">
+												<i data-lucide="volume-2" class="icon"></i>
+											</button>
+											<button type="button" class="btn reset_btn">
+												<i data-lucide="rotate-ccw" class="icon"></i>
+											</button>
+										</div>
+										<div class="input_box captcha_inputbox">
+											<input type="text" class="input_text full" placeholder="숫자 6자리">
+										</div>
+									</div>
+									<button type="button" class="button typeA auto cmt_btn">댓글 쓰기</button>
+								</div>
+							</div>
+						</div>
 						<div class="bottombox">
 							<div class="leftbox">
 								<a href="" class="paging_btn">
