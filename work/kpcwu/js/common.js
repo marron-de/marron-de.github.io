@@ -1,9 +1,8 @@
 
-/* common */
 // layout
 $(window).on('resize', function() {
     const windowWidth = $(window).width();
-    const maxWidth = 1200;
+    const maxWidth = 1280;
     const widthPercentage = 0.9;
 
     let calculatedWidth = windowWidth * widthPercentage;
@@ -20,7 +19,12 @@ $(document).ready(function() {
     $(window).trigger('resize');
 });
 
-// accordion function
+
+// lucide
+lucide.createIcons();
+
+
+// accordion
 (function (jQuery) {
 	const lnbUI = {
 		click: function (targetSelector, speed) {
@@ -83,61 +87,50 @@ $(document).ready(function () {
   });
 });
 
+
 // tab function
 $(document).ready(function () {
+	$(".tab_nav").click(function () {
+		let clickedTab = $(this);
+		let tabWrap = clickedTab.closest(".tab_wrap");
+		let allTabs = tabWrap.find(".tab_nav");
+		let allContents = tabWrap.find(".tab_cont");
+		let idx = allTabs.index(clickedTab);
 
-	function activateTab(tabWrap, target) {
-		let tabs = tabWrap.find(".tab_nav");
-		let contents = tabWrap.find(".tab_cont");
-		let idx = tabs.index(target);
-
-		tabs.removeClass("on");
-		target.addClass("on");
-		contents.removeClass("on");
-		contents.eq(idx).addClass("on");
-	}
-
-	$(".tab_wrap").each(function () {
-		let tabWrap = $(this);
-
-		if ($(window).width() >= 1080 && tabWrap.hasClass("hover_type")) {
-			tabWrap.find(".tab_nav").hover(function () {
-				activateTab(tabWrap, $(this));
-			});
-		} else {
-			tabWrap.find(".tab_nav").click(function () {
-				activateTab(tabWrap, $(this));
-			});
-		}
+		allTabs.removeClass("on");
+		clickedTab.addClass("on");
+		allContents.removeClass("on");
+		allContents.eq(idx).addClass("on");
 	});
 });
 
+
 // tab swiper
 $(document).ready(function () {
-	const index = parseInt($('.swiper.tab_swiper').attr('data-index'), 10) || 0;
+	$('.tab_swiper').each(function () {
 
-	const tab_default_swiper = new Swiper('.tab_swiper:not(.tab_round_swiper)', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 'auto',
-		speed: 500,
-		initialSlide: index,
-	})
+		const $this = $(this);
+		const index = parseInt($this.attr('data-index'), 10) || 0;
+		const gapPc = parseInt($this.data('gappc'), 10) || 0;
+		const gapMob = parseInt($this.data('gapmob'), 10) || 0;
 
-	const tab_round_swiper = new Swiper('.tab_swiper.tab_round_swiper', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 'auto',
-		spaceBetween: 10,
-		speed: 500,
-		initialSlide: index,
-		breakpoints: {
-			1080: {
-				spaceBetween: 12,
+		new Swiper(this, {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: gapMob,
+			speed: 500,
+			initialSlide: index,
+			breakpoints: {
+				1080: {
+					spaceBetween: gapPc,
+				},
 			},
-		},
-	})
+		});
+
+	});
 });
+
 
 // datepicker
 $(document).ready(function () {
@@ -157,8 +150,26 @@ $(document).ready(function () {
 			firstDay: 0,
 			isRTL: false,
 			showMonthAfterYear: true,
-			showOtherMonths: true,
-			yearSuffix: "년"
+			// yearSuffix: "년",
+
+			changeMonth: true,
+			changeYear: true,
+				onChangeMonthYear: function () {
+				setTimeout(function () {
+					$(".ui-datepicker-year option").each(function () {
+						const year = $(this).val();
+						$(this).text(year + "년");
+					});
+				}, 0);
+			},
+			beforeShow: function () {
+				setTimeout(function () {
+					$(".ui-datepicker-year option").each(function () {
+						const year = $(this).val();
+						$(this).text(year + "년");
+					});
+				}, 0);
+			}
 		});
 
 		const today = new Date();
@@ -169,26 +180,28 @@ $(document).ready(function () {
 		$(".datepicker.today").attr("placeholder", formatted);
 
 		$(".datepicker").datepicker({
-			// maxDate: 'today'
+			maxDate: 'today'
 		});
 	}
 });
 
+
 // modal
-$(document).ready(function () {
-	$(".modal .modal_close").click(function () {
-		$("body").removeClass("hidden")
-		$("body").removeClass("modal_open")
-		$(".modal").removeClass("show")
-	})
-});
+$(".modal .modal_close").click(function () {
+	$("body").removeClass("open")
+	$(".modal").removeClass("show")
+})
 $(document).mouseup(function (e) {
-	if ($(".modal .modal_box").has(e.target).length === 0) {
-		$("body").removeClass("hidden")
-		$("body").removeClass("modal_open")
-		$(".modal").removeClass("show")
-	}
+    if ($(".modal .modal_box").has(e.target).length === 0 && 
+        !$(e.target).closest('.ui-datepicker').length && 
+        !$(e.target).closest('#ui-datepicker-div').length) {
+        
+        $("body").removeClass("hidden");
+        $("body").removeClass("open");
+        $(".modal").removeClass("show");
+    }
 });
+
 
 // popup
 $(document).ready(function () {
@@ -204,73 +217,6 @@ $(document).mouseup(function (e) {
 	}
 });
 
-// multi range
-$(".range_box").each(function () {
-	const rangeBox = $(this);
-
-	const inputLeft = rangeBox.find("input[type=range]").first();
-	const inputRight = rangeBox.find("input[type=range]").last();
-
-	const thumbLeft = rangeBox.find(".thumb_left");
-	const thumbRight = rangeBox.find(".thumb_right");
-	const rangeFill = rangeBox.find(".range");
-
-	const label_min = rangeBox.find(".label_range .min");
-	const label_max = rangeBox.find(".label_range .max");
-
-	const rangeMin = Number(inputLeft.attr("min"));
-	const rangeMax = Number(inputLeft.attr("max"));
-
-	if (!inputLeft.val()) inputLeft.val(rangeMin);
-	if (!inputRight.val()) inputRight.val(rangeMax);
-
-	const updateLabel = () => {
-		label_min.text(Number(inputLeft.val()).toLocaleString());
-		label_max.text(Number(inputRight.val()).toLocaleString());
-	};
-
-	const setLeftValue = () => {
-		let left = Number(inputLeft.val());
-		let right = Number(inputRight.val());
-
-		// 겹침 완전 허용 → left > right 일 때만 막기
-		if (left > right) {
-			left = right;
-			inputLeft.val(left);
-		}
-
-		const percent = ((left - rangeMin) / (rangeMax - rangeMin)) * 100;
-
-		thumbLeft.css("left", percent + "%");
-		rangeFill.css("left", percent + "%");
-
-		updateLabel();
-	};
-
-	const setRightValue = () => {
-		let left = Number(inputLeft.val());
-		let right = Number(inputRight.val());
-
-		// 겹침 완전 허용 → right < left 일 때만 막기
-		if (right < left) {
-			right = left;
-			inputRight.val(right);
-		}
-
-		const percent = ((right - rangeMin) / (rangeMax - rangeMin)) * 100;
-
-		thumbRight.css("right", 100 - percent + "%");
-		rangeFill.css("right", 100 - percent + "%");
-
-		updateLabel();
-	};
-
-	setLeftValue();
-	setRightValue();
-
-	inputLeft.on("input", setLeftValue);
-	inputRight.on("input", setRightValue);
-});
 
 // breadcrumb
 $(document).ready(function () {	
@@ -278,12 +224,12 @@ $(document).ready(function () {
         e.stopPropagation();
         const box = $(this).closest('.catebox');
         if (box.hasClass('show')) {
-            $("body").removeClass('pop_open');
+            $("body").removeClass('open');
             box.removeClass('show');
             return;
         }		
         $('.catebox').not(box).removeClass('show');		
-        $("body").addClass('pop_open');
+        $("body").addClass('open');
         box.addClass('show');
     });
 	
@@ -292,1202 +238,277 @@ $(document).ready(function () {
     });
 	
     $(document).on('click', function () {
-		$("body").removeClass('pop_open');
+		$("body").removeClass('open');
         $('.catebox').removeClass('show');
     });
 
 });
 
 
-
-/* header */
-// search button
+// header search
 $(document).ready(function () {
-    $(".header .input_box_sch .input_text").on("click", function (e) {
-        e.stopPropagation();
-
-        const input = $(this);
-        const schBox = input.closest(".schbox");
-        const popup = schBox.find(".search_popup");
-
-        input.addClass("active");
-        popup.addClass("show");
-
-        // 다른 검색 팝업 닫기
-        $(".schbox .search_popup").not(popup).removeClass("show");
-        $(".schbox .input_text").not(input).removeClass("active");
-    });
-
-    // 외부 클릭 시 팝업 닫기
-    $(document).on("click", function (e) {
-        if ($(e.target).closest(".schbox").length === 0) {
-            $(".schbox .search_popup").removeClass("show");
-            $(".schbox .input_text").removeClass("active");
-        }
-    });
-});
-
-// language button
-$(document).ready(function () {
-	$(".lang_selbtn").on("click", function (e) {
+	$(document).on("click", ".header .search_btn", function (e) {
 		e.stopPropagation();
+		const isOn = $(this).hasClass("on");
 
-		const selbtn = $(this);
-		const langBox = selbtn.closest(".lang_box");
-		const popup = langBox.find(".lang_popup");
-		const body = $("body");
+		if (isOn) {
+			$("body").removeClass("search");
+			$(".header .search_btn").removeClass("on");
+			$(".search_modal").removeClass("open");
+		} else {
+			$("body").addClass("search");
+			$(".header .search_btn").addClass("on");
+			$(".search_modal").addClass("open");
 
-		const isOpen = popup.hasClass("open");
-
-		$(".lang_popup").removeClass("open");
-		$(".lang_selbtn").removeClass("active");
-
-		if (!isOpen) {
-			selbtn.addClass("active");
-			popup.addClass("open");
-			body.addClass("lang_open");
+			$("body").removeClass("menu");
+			$(".header").removeClass("menu");
+			$(".header .menu_btn").removeClass("on");
+			$(".navbox").removeClass("open");
 		}
-	});
-
-	$(".lang_box .lang_popup .item").on("click", function (e) {
-		e.stopPropagation(); 
-
-		const item = $(this);
-		const popup = item.closest(".lang_popup");
-		
-		popup.find(".item").removeClass("active");
-		item.addClass("active");
-
-		const iconClass = item.find(".icon").attr("class");
-		const txt = item.find(".txt").text();
-		$(".lang_selbtn").find(".icon").attr("class", iconClass);
-		$(".lang_selbtn").find(".txt").text(txt);
-
-
-		$(".lang_popup").removeClass("open");
-		$(".lang_selbtn").removeClass("active");
-		$("body").removeClass("lang_open");
-	});
-
-	$(document).on("click", function (e) {
-		if ($(e.target).closest(".lang_box").length === 0) {
-			$(".lang_selbtn").removeClass("active");
-			$(".lang_popup").removeClass("open");
-			$("body").removeClass("lang_open");
-		}
-	});
-});
-
-
-
-/* navbox */
-const nav_menu_swiper = new Swiper('.navbox .nav_menu', {
-	observer: true, 	
-	observeParents: true, 
-	slidesPerView: 'auto',
-	speed: 500,
-})
-
-// pc navbox button 
-$(document).ready(function () {
-	$(".navbox .nav_menu .menu").on("click", function () {
-		$(".navbox").toggleClass("open");
 	});
 });
 $(document).mouseup(function (e) {
-	if ($(window).width() > 1080) {
-		if ($(".navbox .nav_menubox").has(e.target).length === 0) {
-			$(".navbox").removeClass("open");
-		}
+	if ($(".search_modal").has(e.target).length === 0 && !$(e.target).closest(".header .search_btn").length) {
+		$("body").removeClass("search");
+		$(".header .search_btn").removeClass("on");
+		$(".search_modal").removeClass("open");
 	}
 });
 
-// mobile navbox button
+
+// header navbox
 $(document).ready(function () {
-  $(".header .menu_open").on("click", function () {
-    if ($("body").hasClass("menu")) {
-      $("body").removeClass("menu");
-      $(".navbox").removeClass("open");
-      $(".nav_menubox").removeClass("open");
-    } else {
-      $("body").addClass("menu");
-      $(".navbox").addClass("open");
-      $(".nav_menubox").addClass("open");
-    }
-  });
-});
+    $(document).on("click", ".header .menu_btn:not(.on)", function (e) {
+        e.stopPropagation();
+        $("body").addClass("menu");
+        $(".header").addClass("menu");
+        $(".header .menu_btn").addClass("on");
+        $(".navbox").addClass("open");
 
-
-// mobile profile popup
-function profile_popup() {
-	$("#profile_popup").addClass('show');
-}
-$(document).ready(function () {
-	$('#profile_popup #profile_btn').on('click', function () {
-		$('#profile_input').click();
-	});
-
-	$('#profile_popup #profile_input').on('change', function () {
-		const file = this.files[0];
-		if (!file) return;
-
-		const reader = new FileReader();
-		reader.onload = function (e) {
-			$('#profile_preview').attr('src', e.target.result);
-		};
-		reader.readAsDataURL(file);
-	});
-
-	$('#profile_popup .change_btn').on('click', function () {
-		const btn = $(this);
-		const input = btn.closest('.cont_cont').find('.input_text');
-
-		if (btn.text() === '변경') {
-			input.addClass('focus')
-			input.prop('readonly', false).focus();
-			btn.text('수정');
-		}
-		else {
-			input.removeClass('focus')
-			input.prop('readonly', true);
-			btn.text('변경');
-		}
-	});
-
-});
-
-// mobile search popup
-$(document).ready(function () {
-	$(".mob_nav .search_open").on("click", function () {
-		$("body").addClass("menu");
-		$(".header .h_left .schbox").addClass("show");
-	});
-	$(".header .h_left .schbox .search_close").on("click", function () {
-		$("body").removeClass("menu");
-		$(".header .h_left .schbox").removeClass("show");
-	});
-});
-
-/* mobile side menu (수정필요) */
-$(document).ready(function () {
-  $(".side_menu .side_menulist .menuitem .acc_tit").on("click", function (e) {
-    if ($(window).width() <= 1080) {
-      const currentItem = $(this).closest(".menuitem");
-
-      if (currentItem.hasClass("show")) {
-        currentItem.removeClass("show"); 
-      } else {
-        $(".side_menu .side_menulist .menuitem").removeClass("show"); 
-        currentItem.addClass("show");
-      }
-    }
-  });
-});
-
-
-
-/* fixed nav */
-// top button
-$(document).ready(function () {
-	$('.fixed_nav .top_btn').click(function () {
-		$('html, body').animate({
-			scrollTop: 0
-		}, 400);
-		return false;
-	});
-});
-
-
-
-/* footer */
-// board swiper
-document.querySelectorAll('.footer .f_top .swiperbox').forEach(function (el) {
-	new Swiper(el, {
-		observer: true,
-		observeParents: true,
-		direction: 'vertical',
-		spaceBetween: 10,
-		speed: 500,
-		loop:true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-		},
-	});
-});
-
-
-
-/* 메인 */
-// main popup
-const main_popup_swiper = new Swiper('.main_popup_swiper', {
-	observer: true,
-	observeParents: true,
-	loop: true,
-	speed:500,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-	},
-	pagination: {
-		el: '.main_popup_swiper .paging',
-		clickable: true,
-	},
-})
-
-// main section1
-// 수동 복제
-function cloneSlides(selector, multiply = 3) {
-	const container = document.querySelector(selector);
-	if (!container) return;
-
-	const wrapper = container.querySelector('.swiper-wrapper');
-	const slides = Array.from(wrapper.children)
-		.filter(slide => !slide.hasAttribute('data-clone'));
-
-	const originalCount = slides.length;
-	const cloneCount = originalCount * (multiply - 1);
-
-	for (let i = 0; i < cloneCount; i++) {
-		const clone = slides[i % originalCount].cloneNode(true);
-		clone.setAttribute('data-clone', 'true');
-		wrapper.appendChild(clone);
-	}
-
-	return originalCount; // 원본 개수 반환
-}
-function renderPagination(swiper, originalCount) {
-	const fixedCurrent = (swiper.realIndex % originalCount) + 1;
-
-	const currentStr = ('0' + fixedCurrent).slice(-2);
-	const totalStr = ('0' + originalCount).slice(-2);
-
-	return `<span class="current">${currentStr}</span> / <span class="total">${totalStr}</span>`;
-}
-function initBullets(total) {
-    const paging = document.querySelector('.ms1 .paging');
-    let html = '';
-
-    for (let i = 1; i <= total; i++) {
-        html += `<span class="swiper-pagination-bullet" data-index="${i}"></span>`;
-    }
-    paging.innerHTML = html;
-}
-function updateBullets(swiper, total) {
-    const bullets = document.querySelectorAll('.ms1 .paging .swiper-pagination-bullet');
-    const current = (swiper.realIndex % total) + 1;
-
-    bullets.forEach((b, i) => {
-        b.classList.toggle('swiper-pagination-bullet-active', (i + 1) === current);
+        $("body").removeClass("search");
+        $(".header .search_btn").removeClass("on");
+        $(".search_modal").removeClass("open");
     });
-}
-const originalMS1 = cloneSlides('.ms1_swiper', 3);
+
+    $(document).on("click", ".header .menu_btn.on", function (e) {
+        e.stopPropagation();
+        $("body").removeClass("menu");
+        $(".header").removeClass("menu");
+        $(".header .menu_btn").removeClass("on");
+        $(".navbox").removeClass("open");
+    });
+});
+
+
+
+/* 메인*/
 const ms1_swiper = new Swiper('.ms1_swiper', {
 	observer: true,
 	observeParents: true,
+	effect: 'fade',
+	loop:true,
 	speed: 500,
-	loop: true,
-	centeredSlides: true,
-	spaceBetween: 20,
-	// initialSlide: 1,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-	},
 	pagination: {
-		el: '.ms1 .paging',
+		el: '.ms1_swiper .paging',
 		clickable: true,
-		renderCustom: function (swiper) {
-			return renderPagination(swiper, originalMS1);
-		},
 	},
 	navigation: {
-		nextEl: '.ms1 .next_btn',
-		prevEl: '.ms1 .prev_btn',
+		nextEl: ".ms1_swiper .next_btn",
+		prevEl: ".ms1_swiper .prev_btn",
 	},
-	on: {
-        init(swiper) {
-            initBullets(originalMS1);
-            updateBullets(swiper, originalMS1);
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false,
+	},
+})
+
+
+// 조직현황
+function status_map(index) {
+    $(".status_sec1 .mapbtn button").removeClass("on");
+    $(".status_sec1 .mapbtn button").eq(index - 1).addClass("on");
+
+    $(".status_sec1 .mapbox .map").attr("src", "../img/status_map" + index + ".png");
+
+    const infoData = [
+        {
+            title: "노동조합",
+            address: "서울특별시 영등포구 대림로 146 2층",
+            tel: "02-834-5375",
+            fax: "02-843-1436"
         },
-        slideChange(swiper) {
-            updateBullets(swiper, originalMS1);
+        {
+            title: "포항지부",
+            address: "경상북도 포항시 남구 중앙로91번길 6 , 2층",
+            tel: "054-283-2221",
+            fax: "054-277-2932"
+        },
+        {
+            title: "여수지부",
+            address: "전남 여수시 중흥동 1772-10",
+            tel: "061-683-5406",
+            fax: "061-683-5407"
+        },
+        {
+            title: "전남동부경남서부지부",
+            address: "전라남도 광양시 광양읍 익신산단1길 59 2층",
+            tel: "061-762-9688",
+            fax: "061-762-9687"
+        },
+        {
+            title: "울산지부",
+            address: "울산광역시 울주군 청량읍 용암길 13",
+            tel: "052-269-0482",
+            fax: "052-268-0483"
+        },
+        {
+            title: "충남지부",
+            address: "충청남도 서산시 대산읍 망일산로 589",
+            tel: "041-667-3979",
+            fax: "041-669-3922"
+        },
+        {
+            title: "전북지부",
+            address: "전라북도 군산시 동아로 11",
+            tel: "063-910-5272",
+            fax: "063-467-5272"
+        },
+        {
+            title: "경인지부",
+            address: "인천시 서구 백범로 622번길 9(가좌동) 근로자문화센터 별관 1층",
+            tel: "032-517-7114",
+            fax: "032-521-8109"
+        },
+        {
+            title: "강원충북지부",
+            address: "강원도 동해시 감추6길 34 4층",
+            tel: "033-532-7669",
+            fax: "033-533-7669"
         }
-    },
-	breakpoints: {
-		1080: {
-			slidesPerView: 'auto',
-			spaceBetween: 40,
-			pagination: {
-				el: '.ms1 .paging',
-				type: 'custom',
-				clickable: true,
-				renderCustom: function (swiper) {
-					return renderPagination(swiper, originalMS1);
-				},
-			},
-		},
-	},
-});	
+    ];
 
-// main section3
-const ms2_prd_swiper = new Swiper('.ms2_prd_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerView: 1,
-	spaceBetween: 20,
-	breakpoints: {
-		1080: {
-			slidesPerView: 'auto',
-			spaceBetween: 40,
-		},
-	},
-});
+    const currentInfo = infoData[index - 1];
 
-// main product
-$('.prd_slidebox').each(function() {
-  const el = this;
-  const swiperEl = $(el).find('.prd_swiper:not(.ver2)')[0];
-  const nextBtn = $(el).find('.next_btn')[0];
-  const prevBtn = $(el).find('.prev_btn')[0];
-  const swiperEl2 = $(el).find('.prd_swiper.ver2')[0];
-  const scrollbar = $(el).find('.scrollbar')[0];
-
-  const prd_swiper = new Swiper(swiperEl, {
-    observer: true,
-    observeParents: true,
-    speed: 500,
-	slidesPerView: 'auto',
-    spaceBetween: 12,
-    navigation: {
-      nextEl: nextBtn,
-      prevEl: prevBtn,
-    },
-    breakpoints: {
-      1080: {
-        spaceBetween: 20
-      },
+    if (currentInfo) {
+        $(".status_sec1 .txtbox .sub_txt2").text(currentInfo.title);
+        $(".status_sec1 .txtbox .desc").text(currentInfo.address);
+        $(".status_sec1 .txtbox .infobox .item").eq(0).find(".txt").text(currentInfo.tel);
+        $(".status_sec1 .txtbox .infobox .item").eq(1).find(".txt").text(currentInfo.fax);
     }
-  });
+}
+$(document).ready(function () {
+    $(".status_sec1 .mapbtn button").removeClass("on");
+    $(".status_sec1 .mapbtn button").eq(0).addClass("on");
 
-  const prd_swiper2 = new Swiper(swiperEl2, {
-    observer: true,
-    observeParents: true,
-    speed: 500,
-	slidesPerView: 'auto',
-    spaceBetween: 12,
-	scrollbar: {
-		el: scrollbar,
-		draggable: true,
-	},
-    breakpoints: {
-      1080: {
-        spaceBetween: 20
-      },
-    }
-  });
-});
-$('.prd_swiper .item .imgbox .wish_btn').on('click', function (e) {
-	e.preventDefault(); 
-    e.stopPropagation();
-    $(this).toggleClass('on');
+    $(".status_sec1 .mapbtn button").each(function (i) {
+        $(this).attr("onclick", "status_map(" + (i + 1) + ")");
+    });
 });
 
-// main banner
-const m_banner_swiper = new Swiper('.m_banner_swiper', {
-	observer: true,
-	observeParents: true,
-	slidesPerView: 'auto',
-	spaceBetween: 12,
-	speed: 500,
-	breakpoints: {
-		1080: {
-			spaceBetween: 30,
-		},
-	},
-})
 
-// main section13
-const ms13_swiper = new Swiper('.ms13_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	loop: true,
-	slidesPerView: 'auto',
-	spaceBetween: 20,		
-	pagination: {
-		el: '.ms13_swiper .paging',
-		clickable: true,
-	},
-	breakpoints: {
-		1080: {
-			slidesPerView: 3,
-		},
-	},
-});
-
-// main section14
-$('.ms14 .tab_cont').each(function() {
-  const el = this;
-  const swiperEl = $(el).find('.ms14_swiper')[0];
-
-  const ms14_swiper = new Swiper(swiperEl, {
-    observer: true,
-	observeParents: true,
-	direction: 'horizontal',
-	speed: 500,
-	loop: true,
-	slidesPerView: 'auto',
-	spaceBetween: 24,	
-	breakpoints: {
-		1080: {
-			direction: 'vertical',
-			spaceBetween: 30,
-		},
-	},
-  });
-});
-
-// main section15
-const originalMS15 = cloneSlides('.ms15_swiper', 3);
-const ms15_swiper = new Swiper('.ms15_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	loop: true,
-	centeredSlides: true,
-	slidesPerView: 1,
-	spaceBetween: 20,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-	},	
-	breakpoints: {
-		1080: {
-			speed: 6000,
-			slidesPerView: 'auto',
-			spaceBetween: 24,
-			allowTouchMove: false,
-			autoplay: {
-				delay: 0,
-				disableOnInteraction: false,
-			},
-		},
-	},
-});	
-
-// main section18
-const ms18_swiper = new Swiper('.ms18_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	loop: true,
-	spaceBetween: 20,	
-	// autoplay: {
-	// 	delay: 5000,
-	// 	disableOnInteraction: false,
-	// },
-    navigation: {
-      nextEl: ".ms18 .slide_controls .next_btn",
-      prevEl: ".ms18 .slide_controls .prev_btn",
-    },	
-	pagination: {
-		el: '.ms18 .slide_controls .paging',
-		type: 'custom',
-		clickable: true,
-		renderCustom: function (swiper, current, total) {
-			return '<span class="current">' + ('0' + current).slice(-2) + '</span><span class="bar"></span>' + '<span class="total">' + ('0' + total).slice(-2) + '</span>';
-		}
-	},
-});
-// main section18 video
+// 걸어온 길
 $(function () {
+	const historyBox = $('.history_sec1 .history_box');
+	const historyItems = $('.history_sec1 .history_item');
 
-  $('.ms18 .swiper-slide').each(function () {
-    const slide = $(this);
-    const video = slide.find('video').get(0);
-    const vidbox = slide.find('.vid_box');
-    const playBtn = slide.find('.play_btn');
-
-    if (!video) return;
-
-    playBtn.on('click', function (e) {
-      e.stopPropagation();
-
-      if (!video.paused && !video.ended) {
-        video.pause();
-        vidbox.removeClass('on');
-        return;
-      }
-
-      vidbox.addClass('on');
-      video.play().catch(err => console.warn(err));
-    });
-
-    vidbox.on('click', function () {
-      if (!video.paused && !video.ended) {
-        video.pause();
-        vidbox.removeClass('on');
-      }
-    });
-
-    video.addEventListener('ended', function () {
-      vidbox.removeClass('on');
-    });
-  });
-
-});
-
-// main event
-const m_event_swiper = new Swiper('.m_event_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	loop: true,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-	},
-	pagination: {
-		el: '.m_event_swiper .paging',
-		type: 'custom',
-		clickable: true,
-		renderCustom: function (swiper, current, total) {
-			return '<span class="current">' + ('0' + current).slice(-2) + '</span>' + ' / ' + '<span class="total">' + ('0' + total).slice(-2) + '</span>';
-		}
-	},
-})
-
-// EVENT 특가 popup
-function event_popup() {
-	$("body").addClass('hidden');
-	$("#event_popup").addClass('show');
-}
-
-
-
-/* 제품 목록 */
-// product filter
-$(document).ready(function () {
-
-    $(".select_box.filter_ver").each(function () {
-        const box = $(this);
-        const accTit = box.find(".select .txt");
-        const accHead = box.find(".select");
-
-        const placeholder = accHead.data("placeholder") || "선택하세요";
-        const textAllSelected = "전부 선택됨";
-
-        const checkboxes = box.find("input[type=checkbox]");
-        const allCheck = box.find(".all_check").prev("input[type=checkbox]");
-
-        function updateCount() {
-            const normalChecks = checkboxes.not(allCheck);
-            const checkedList = normalChecks.filter(":checked");
-            const count = checkedList.length;
-			
-            if (count === normalChecks.length) {
-                allCheck.prop("checked", true);
-            } else {
-                allCheck.prop("checked", false);
-            }
-			
-            if (count === normalChecks.length && count > 0) {
-                accTit.text(textAllSelected);
-                accHead.addClass("selected");
-                return;
-            }
-
-            if (count > 0) {
-                accTit.text(count + "개 선택중");
-                accHead.addClass("selected");
-            } else {
-                accTit.text(placeholder);
-                accHead.removeClass("selected");
-            }
-        }
-		
-        allCheck.on("change", function () {
-            const isChecked = $(this).is(":checked");
-            checkboxes.not(allCheck).prop("checked", isChecked);
-            updateCount();
-        });
-		
-        checkboxes.not(allCheck).on("change", updateCount);
-
-        updateCount();
-    });
-});
-
-// wish button
-$('.prd_listbox .item .txtbox .wish_btn').on('click', function (e) {
-	e.preventDefault(); 
-    e.stopPropagation();
-    $(this).toggleClass('on');
-});
-
-// schedule popup
-$(document).ready(function () {
-	$(".prd_listbox .item .schedule_btn").on("click", function (e) {
-		e.preventDefault(); 
-    	e.stopPropagation();
-		$("body").addClass('hidden');
-		$("#schedule_popup").addClass('show');
-	});
-});
-
-// 할인호텔 날짜선택 popup
-function roomDate_popup() {
-	$("body").addClass('hidden');
-	$("body").addClass('modal_open');
-	$("#roomDate_popup").addClass('show');
-}
-// 할인호텔 날짜선택 popup period calender (기간선택만 구현)
-$(document).ready(function () {
-	let checkIn = null;
-	let checkOut = null;
-
-	function getDateObj(dateEl) {
-		const cal = dateEl.closest(".calender");
-		const selects = cal.find(".date_select");
-		const y = Number(selects.eq(0).val());
-		const m = Number(selects.eq(1).val());
-		const d = Number(dateEl.find(".num").text());
-		return new Date(y, m - 1, d);
+	if (!historyBox.length || !historyItems.length) {
+		return;
 	}
 
-	function clearAll() {
-		$(".calender_wrap .date").removeClass("check_in check_out period selected");
-	}
+	const lastIndex = historyItems.length - 1;
 
-	function markRange() {
-		$(".calender_wrap .calender").each(function () {
-			const cal = $(this);
-			const selects = cal.find(".date_select");
-			const y = Number(selects.eq(0).val());
-			const m = Number(selects.eq(1).val());
+	function updateProgress() {
+		const winH = $(window).height();
+		const docH = $(document).height();
+		const scrollTop = $(window).scrollTop();
+		const isBottom = scrollTop + winH >= docH - 2;
+		const boxTop = historyBox.offset().top;
+		const boxHeight = historyBox.outerHeight();
 
-			cal.find(".date").each(function () {
-				const item = $(this);
-				if (item.hasClass("hide")) return;
+		const currentScrollY = scrollTop + (winH * 0.5) - boxTop;
+		let linePercent = (currentScrollY / boxHeight) * 100;
 
-				const d = Number(item.find(".num").text());
-				const cur = new Date(y, m - 1, d);
-
-				if (cur.getTime() === checkIn.getTime()) {
-					item.addClass("check_in selected");
-				}
-				if (checkOut && cur.getTime() === checkOut.getTime()) {
-					item.addClass("check_out selected");
-				}
-				if (checkOut && cur > checkIn && cur < checkOut) {
-					item.addClass("period");
-				}
-			});
-		});
-	}
-
-	$(document).on("click", ".date_popup .calender_wrap .date:not(.hide)", function () {
-		const el = $(this);
-		const pick = getDateObj(el);
-
-		if (!checkIn || (checkIn && checkOut)) {
-			checkIn = pick;
-			checkOut = null;
-			clearAll();
-			markRange();
-			return;
+		if (isBottom) {
+			linePercent = 100;
 		}
 
-		if (!checkOut) {
-			if (pick < checkIn) {
-				checkOut = checkIn;
-				checkIn = pick;
-			} else {
-				checkOut = pick;
+		linePercent = Math.max(0, Math.min(100, linePercent));
+		historyBox.css('--height', linePercent + '%');
+
+		historyItems.each(function (index) {
+			const historyItem = $(this);
+			const top = historyItem.offset().top - scrollTop;
+			const start = winH;
+			const end = winH * 0.5;
+			let percent = (start - top) / (start - end) * 100;
+
+			percent = Math.max(0, Math.min(100, percent));
+
+			if (index === lastIndex && isBottom) {
+				percent = 100;
 			}
-			clearAll();
-			markRange();
-		}
-	});
-});
 
-// 할인호텔 객실및인원수 popup
-function roomOption_popup() {
-	$("body").addClass('hidden');
-	$("body").addClass('modal_open');
-	$("#roomOption_popup").addClass('show');
-}
-
-// 수량조절 button
-$(document).ready(function () {
-	$(".control_box .input_plus").on("click", function () {
-		const input = $(this).siblings('.input_count');
-		let value = parseInt(input.val(), 10);
-		if (isNaN(value)) value = 0;
-		input.val(value + 1);
-	});
-
-	$(".control_box .input_minus").on("click", function () {
-	const input = $(this).siblings('.input_count');
-		let value = parseInt(input.val(), 10);
-		if (isNaN(value)) value = 0;
-		const isRoom = $(this).closest('.input_item').find('.label_text').text().includes('객실');
-		const min = isRoom ? 1 : 0;
-		if (value > min) {
-			input.val(value - 1);
-		}
-	});
-});
-
-// mobile filter button
-$(document).ready(function () {
-	$(".pr_sec.list .mob_filter_btn").on("click", function () {
-		$("body").addClass('filter_open');
-		$(".pr_sec.list .pr_filter").addClass('show');
-	});
-});
-$(document).mouseup(function (e) {
-	if ($(".pr_sec.list .pr_filter").has(e.target).length === 0) {		
-		$("body").removeClass('filter_open');
-		$(".pr_sec.list .pr_filter").removeClass("show")
-	}
-});
-
-
-
-/* 제품 상세 */
-// product gallery popup
-function gallery_popup() {
-	$("body").addClass('hidden');
-	$("body").addClass('modal_open');
-	$("#gallery_popup").addClass('show');
-}
-const gall_photo_thum = new Swiper('.gall_photo_thum', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerView: 'auto',
-	spaceBetween: 10,
-	breakpoints: {
-		1080: {
-			spaceBetween: 8,
-		},
-	},
-});
-const gall_photo_list = new Swiper('.gall_photo_list', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	thumbs: {
-		swiper: gall_photo_thum
-	},
-    navigation: {
-      nextEl: ".gall_photo_list .next_btn",
-      prevEl: ".gall_photo_list .prev_btn",
-    },
-});
-
-// tab nav active
-$(function () {
-  const tabNavs = $(".pr_sec.view .tab_nav");
-  const sections = $(".pr_sec.view .vc_sec");
-
-  function onScroll() {
-    const scrollPos = $(window).scrollTop() + 200;
-
-    sections.each(function (i) {
-      const sectionTop = $(this).offset().top;
-      const sectionBottom = sectionTop + $(this).outerHeight();
-
-      if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-        tabNavs.removeClass("on");
-        tabNavs.eq(i).addClass("on");
-        return false;
-      }
-    });
-  }
-  $(window).on("scroll", onScroll);
-  onScroll();
-});
-
-// date swiper
-$(document).ready(function () {
-    const swiperEl = $('.swiper.date_swiper');
-    const todayString = swiperEl.attr('data-today');
-    let todayDate = 1;
-
-    if (todayString) {
-        todayDate = parseInt(todayString.split('-')[2], 10);
-    }
-
-    const slides = swiperEl.find('.swiper-slide');
-    let todayIndex = 0;
-
-    slides.each(function (i) {
-        const num = parseInt($(this).find('.num').text(), 10);
-        if (num === todayDate) {
-            $(this).addClass('today').addClass('selected');
-            todayIndex = i;
-        }
-    });
-
-    const date_swiper = new Swiper('.date_swiper', {
-        observer: true,
-        observeParents: true,
-        slidesPerView: 'auto',
-		spaceBetween: 8,
-        speed: 500,
-        initialSlide: todayIndex,
-        breakpoints: {
-            1080: {
-                spaceBetween: 0
-            }
-        }
-    });
-	
-	slides.on('click', function () {
-        slides.removeClass('selected');
-        $(this).addClass('selected');
-    });
-});
-$(document).ready(function () {
-	$(".select_datebox .fulldate_btn").on("click", function () {
-		const btn = $(this)
-		const wrap = $(this).closest(".select_datebox").siblings(".calender_wrap");
-
-		btn.toggleClass('active');
-		wrap.toggleClass('show');
-
-		const todayStr = wrap.data('today');
-		if (!todayStr) return;
-
-		const parts = todayStr.split('-');
-		const tYear = Number(parts[0]);
-		const tMonth = Number(parts[1]);
-		const tDay = Number(parts[2]);
-
-		wrap.find('.calender').each(function () {
-			const cal = $(this);
-
-			const year = Number(cal.find('.date_select').eq(0).val());
-			const month = Number(cal.find('.date_select').eq(1).val());
-
-			cal.find('.date').removeClass('today selected');
-
-			if (year !== tYear || month !== tMonth) return;
-
-			cal.find('.date').each(function () {
-				const num = Number($(this).find('.num').text());
-				if (num === tDay) {
-					$(this).addClass('today selected');
-				}
-			});
+			if (percent >= 100) {
+				historyItem.addClass('on');
+			} else {
+				historyItem.removeClass('on');
+			}
 		});
-	});
-});
-
-// calender select
-$(function () {
-  $('.pr_sec.view .calender').on('click', '.date:not(.hide)', function () {
-    $('.calender .date').removeClass('selected');
-    $(this).addClass('selected');
-  });
-});
-
-// room swiper
-$('.select_roombox .item').each(function() {
-  const el = this;
-  const swiperEl = $(el).find('.room_swiper')[0];
-
-  const room_swiper = new Swiper(swiperEl, {
-    observer: true,
-    observeParents: true,
-    speed: 500,
-  });
-});
-
-// room optoin
-$(document).ready(function () {
-	$(".pr_sec.view .vc_sec_option .select_roombox .room_info .opt_btn").on("click", function () {
-		const wrap = $(this).closest(".item"); 
-		wrap.find(".room_option").addClass("show");
-	});
-
-	$(".pr_sec.view .vc_sec_option .select_roombox .room_close_btn").on("click", function () {
-		$(this).siblings(".room_option").removeClass("show");
-	});
-
-	$(document).on('change', '.option_select select', function () {
-		let item = $(this).closest('.pr_sec.view .vc_sec_option .select_roombox .item');
-		let container = item.closest('.pr_sec.view .vc_sec_option .select_roombox');
-
-		container.find('.item').removeClass('selected');
-
-		if ($(this).val() !== '') {
-			item.addClass('selected');
-			$(".pr_sec.view .pr_result").addClass("selected");
-		}
-	});
-});
-
-// detail more veiw button 
-$(document).ready(function () {
-	$(".pr_sec.view .vc_sec_detail .vc_box1 .view_more").on("click", function () {
-		const contbox = $('.pr_sec.view .vc_sec_detail .vc_box1 .vc_contbox');
-		const txt = $(this).find('.txt');
-
-		contbox.toggleClass('show');
-
-		if (txt.text() === '더보기') {
-			txt.text('접기');
-		} else {
-			txt.text('더보기');
-		}
-	});
-	
-	$(".pr_sec.view .vc_sec_detail .vc_box2 .descmore").on("click", function () {
-		const contbox = $(this).closest(".descbox");
-		const txt = $(this).find('.txt');
-
-		contbox.toggleClass('show');
-
-		if (txt.text() === '더보기') {
-			txt.text('접기');
-		} else {
-			txt.text('더보기');
-		}
-	});
-	
-	$(".pr_sec.view .vc_sec_review .vc_box1 .review_more").on("click", function () {
-		const contbox = $(this).closest(".txtbox");
-		const txt = $(this).find('.txt');
-
-		contbox.toggleClass('show');
-
-		if (txt.text() === '더보기') {
-			txt.text('접기');
-		} else {
-			txt.text('더보기');
-		}
-	});
-});
-
-// review write popup
-function rv_write_popup() {
-	$("body").addClass('hidden');
-	$("body").addClass('modal_open');
-	$("#rv_write_popup").addClass('show');
-}
-$(function () {
-  const fileInput = $('#rv_write_popup #rv_file');
-  const fileBox = $('#rv_write_popup .file_box');
-  const fileNameDisplay = $('#rv_write_popup .label_file .name');
-  const fileBtn = $('#rv_write_popup .file_btn');
-  const deleteBtn = $('#rv_write_popup .label_file .delete');
-
-  fileInput.on('change', function () {
-    const files = this.files;
-
-    if (files.length > 0) {
-      const names = Array.from(files).map(f => f.name).join(', ');
-      fileNameDisplay.text(names);
-      fileBox.addClass('attached');
-    } else {
-      fileNameDisplay.text('파일을 선택해주세요');
-      fileBox.removeClass('attached');
-    }
-  });
-
-  fileBtn.on('click', function () {
-    fileInput.trigger('click');
-  });
-
-  deleteBtn.on('click', function (e) {
-    e.preventDefault();
-    fileInput.val('');  
-    fileNameDisplay.text('파일을 선택해주세요');
-    fileBox.removeClass('attached');
-  });
-});
-
-// review photo 
-const rv_photo_swiper = new Swiper('.rv_photo_swiper', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerView: 'auto',
-	spaceBetween: 10,
-});
-$(document).ready(function () {
-	$(".rv_photo_swiper .swiper-slide").click(function () {
-		$("body").addClass('hidden');
-		$("body").addClass('modal_open');
-		$('#rv_photo_popup').addClass('show');
-	})
-});
-const rv_photo_thum = new Swiper('.rv_photo_thum', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerView: 'auto',
-	spaceBetween: 10,
-	breakpoints: {
-		1080: {
-			spaceBetween: 8,
-		},
-	},
-});
-const rv_photo_list = new Swiper('.rv_photo_list', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	thumbs: {
-		swiper: rv_photo_thum
-	},
-    navigation: {
-      nextEl: ".rv_photo_list .next_btn",
-      prevEl: ".rv_photo_list .prev_btn",
-    },
-});
-
-// wish button
-$(document).ready(function () {
-	$(".pr_sec.view .wish_btn").on("click", function () {
-		$(this).toggleClass('on');
-	});
-});
-
-// mobile detail option select
-$(document).on("change", '.pr_sec.view .vc_sec_option input[name="prd_opt"]', function () {
-	$(".pr_sec.view .pr_result").addClass("selected");
-});
-
-// mobile detail info popup
-$(document).ready(function () {
-	$(".pr_sec.view .pr_result .mob_side_box .opt_btn").on("click", function () {
-		$("body").addClass('pr_side_open');
-		$(".pr_sec.view .pr_result").addClass('show');
-	});
-});
-$(document).mouseup(function (e) {
-	if ($(".pr_sec.view .pr_result .side_box").has(e.target).length === 0) {
-		$("body").removeClass('pr_side_open');
-		$(".pr_sec.view .pr_result").removeClass("show");
 	}
+
+	$(window).on('scroll resize', updateProgress);
+	updateProgress();
 });
 
-// mobile detail option popup
-$(document).ready(function () {
-	$(".pr_sec.view .pr_result .side_box .opt_btn").on("click", function () {
-		$("body").addClass('hidden');
-		$(".pr_sec.view .pr_result").removeClass("show");
-		$("#detailOption_popup").addClass('show');
+
+// 조합가입안내 - 가입안내
+$(function () {
+	const inputFile = $('.input_file');
+
+	if (!inputFile.length) {
+		return;
+	}
+
+	inputFile.on('change', function () {
+		const fileName = this.files.length ? this.files[0].name : '';
+		const labelFile = $(this).siblings('.label_file');
+		labelFile.text(fileName);
+		if (fileName) {
+			labelFile.addClass('on');
+		} else {
+			labelFile.removeClass('on');
+		}
 	});
 });
 $(function () {
-  $('#detailOption_popup:not(.date_popup) .calender').on('click', '.date:not(.hide)', function () {
-    $('.calender .date').removeClass('selected');
-    $(this).addClass('selected');
-  });
-});
+	const moreBtn = $('.form_termbox .form_term .more_btn');
 
+	if (!moreBtn.length) {
+		return;
+	}
 
-
-/* 예약하기 */
-// detail info more button
-$(document).ready(function() {
-    $(".re_sec .re_sec_detail .more_btn").on("click", function() {
-        const prdInfo = $(this).closest(".prd_info");
-        prdInfo.toggleClass("hide"); 
-    });
-});
-
-// vehicle select
-const vhc_list = new Swiper('.vhc_list', {
-	observer: true,
-	observeParents: true,
-	speed: 500,
-	slidesPerView: 'auto',
-	spaceBetween: 24,
-    navigation: {
-      nextEl: ".vhc_listbox .next_btn",
-      prevEl: ".vhc_listbox .prev_btn",
-    },
-	breakpoints: {
-		1080: {
-			spaceBetween: 30,
-		},
-	},
-});
-
-// payment select
-$(document).ready(function() {
-  $(".re_sec .re_sec_pay .paybox .payitem").on("click", function() {
-    $(".re_sec .re_sec_pay .paybox .payitem").removeClass("on");
-    $(this).addClass("on");
-  });
-});
-
-// terms check
-$(document).ready(function () {
-  $("#allTerms").on("click", function () {
-    const isChecked = $(this).is(':checked');
-    $('input[name="terms"]').prop('checked', isChecked);
-  });
-
-  $('input[name="terms"]:not(#allTerms)').on("click", function () {
-    const allChecked =
-      $('input[name="terms"]:not(#allTerms)').length ===
-      $('input[name="terms"]:not(#allTerms):checked').length;
-
-    $('#allTerms').prop('checked', allChecked);
-  });
-});
-
-// terms popup
-function terms_popup() {
-	$("body").addClass('hidden');
-	$("#terms_popup").addClass('show');
-}
-
-// privacy popup
-function privacy_popup() {
-	$("body").addClass('hidden');
-	$("#privacy_popup").addClass('show');
-}
-
-// refund popup
-function refund_popup() {
-	$("body").addClass('hidden');
-	$("#refund_popup").addClass('show');
-}
-
-// mobile info popup
-$(document).ready(function () {
-	$(".re_sec .side_area .mob_side_box .reserve_btn").on("click", function () {
-		$("body").addClass('re_side_open');
-		$(".re_sec .side_area").addClass('show');
+	moreBtn.on('click', function () {
+		$(this).closest('.form_term').toggleClass('show');
 	});
 });
-$(document).mouseup(function (e) {
-	if ($(".re_sec .side_area .side_box").has(e.target).length === 0 && $(".term_popup .modal_box").has(e.target).length === 0) {
-		$("body").removeClass('re_side_open');
-		$(".re_sec .side_area").removeClass("show");
+
+
+// 규약
+$(function () {
+	const termHistory = $('.term_history');
+ 
+	if (!termHistory.length) {
+		return;
 	}
+ 
+	termHistory.find('.titbox button').on('click', function () {
+		const wrap = $(this).closest('.term_history');
+		const txt = $(this).find('.txt');
+ 
+		wrap.toggleClass('on');
+		txt.text(wrap.hasClass('on') ? '접기' : '더보기');
+	});
 });
-
-
-
-/* 출발 일정 확인 */
-// 일정 날짜선택 popup
-function scheduleDate_popup() {
-	$("body").addClass('hidden');
-	$("body").addClass('modal_open');
-	$("#scheduleDate_popup").addClass('show');
-}
-
 
 
 /* 로그인 */
@@ -1511,129 +532,3 @@ $(document).ready(function () {
     });
   });
 });
-
-
-
-/* 마이페이지 */
-// check button
-$(document).ready(function () {
-  $("#tbl_allChk").on("click", function () {
-    const isChecked = $(this).is(':checked');
-    $('input[name="tbl_chk"]').prop('checked', isChecked);
-  });
-
-  $('input[name="tbl_chk"]:not(#tbl_allChk)').on("click", function () {
-    const allChecked =
-      $('input[name="tbl_chk"]:not(#tbl_allChk)').length ===
-      $('input[name="tbl_chk"]:not(#tbl_allChk):checked').length;
-
-    $('#tbl_allChk').prop('checked', allChecked);
-  });
-});
-
-
-
-/* 10 고객센터 */
-// qna pwd popup
-$(document).ready(function () {
-	$(".tbl .secret_mode").click(function (e) {
-		e.preventDefault(); 
-		$("body").addClass('hidden');
-		$('#qna_pwd_popup').addClass('show');
-	})
-});
-
-// write file 
-$(function () {
-  $('.input_box_file').each(function () {
-    const box = $(this);
-    const input = box.find('.input_file');
-    const label = box.find('.input_name');
-    const text = label.find('.txt');
-    const btn = box.find('.input_btn');
-    const del = label.find('.delete');
-
-    btn.on('click', function (e) {
-      e.preventDefault();
-      input.trigger('click');
-    });
-
-    label.on('click', function (e) {
-      if ($(e.target).hasClass('delete')) return;
-      e.preventDefault();
-      input.trigger('click');
-    });
-
-    input.on('change', function () {
-      const name = this.files.length ? this.files[0].name : '파일을 첨부해주세요';
-      text.text(name);
-      box.toggleClass('attached', this.files.length > 0);
-    });
-
-    del.on('click', function (e) {
-      e.preventDefault();
-      input.val('');
-      text.text('파일을 첨부해주세요');
-      box.removeClass('attached');
-    });
-  });
-});
-
-
-// 260120 추가작업
-// 제품 상세 공유하기 팝업
-$(document).ready(function () {
-	$(".pr_sec.view .share_btn").click(function (e) {
-		e.preventDefault(); 
-		$("body").addClass('hidden');
-		$("body").addClass('modal_open');
-		$('#share_popup').addClass('show');
-	})
-});
-
-$(document).ready(function () {
-	$("#share_popup .copy_btn").on("click", function () {
-		
-		if (navigator.clipboard) {
-			navigator.clipboard.writeText(window.location.href).then(function () {
-				alert("URL이 복사되었습니다.");
-			});
-		} else {
-			const temp = $("<input>");
-			$("body").append(temp);
-			temp.val(window.location.href).select();
-			document.execCommand("copy");
-			temp.remove();
-			alert("URL이 복사되었습니다.");
-
-			$("body").removeClass('hidden');
-			$("body").removeClass('modal_open');
-			$('#share_popup').removeClass('show');
-		}
-
-	});
-});
-
-
-
-// 260121 추가작업
-// 효과 구현을 위해 임시 추가하였고 실제로는 상품로드 완료되면 동작하게 작업 
-setTimeout(function () {
-	$('.prd_listbox')
-		.removeClass('is_loading')
-}, 1000);
-
-setTimeout(function () {
-	$('.prd_slidebox')
-		.removeClass('is_loading')
-}, 1000);
-
-
-
-//  260330 추가작업
-// about history popup
-function history_popup() {
-	$("body").addClass('hidden');
-	$("body").addClass('modal_open');
-	$("#history_popup").addClass('show');
-}

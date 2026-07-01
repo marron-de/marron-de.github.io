@@ -16,6 +16,12 @@ $path = ($currentFile === 'index.php') ? '' : '../';
 <link type="text/css" href="<?php echo $path ?>css/jquery-ui.css" rel="stylesheet" />
 <script type="text/javascript" src="<?php echo $path ?>js/jquery-ui.min.js"></script>
 
+<!-- Phosphor Icons -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+<!-- lucide -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
 <!-- CSS -->
 <link rel="stylesheet" href="<?php echo $path ?>css/common.css">
 <link rel="stylesheet" href="<?php echo $path ?>css/style.css">
@@ -24,6 +30,9 @@ $path = ($currentFile === 'index.php') ? '' : '../';
 <!-- Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo $path ?>css/JalnanGothic.css">
 <link rel="stylesheet" href="<?php echo $path ?>css/Pretendard.css">
 <link rel="stylesheet" href="<?php echo $path ?>css/Paperlogy.css">

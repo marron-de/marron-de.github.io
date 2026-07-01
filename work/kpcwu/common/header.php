@@ -1,147 +1,67 @@
 <!-- header -->
 <header class="header">
-    <div class="inner h_inner">
-		<div class="h_left">		
-			<div class="logobox">
-				<a href="<?php echo $path ?>index.php"><img src="<?php echo $path ?>img/logo.png" alt="" /></a>
-			</div>
-			<div class="schbox">
-				<div class="titbox">
-					<div class="tit">검색</div>
-					<div class="close_btn search_close"></div>
-				</div>
-				<div class="bodybox">
-					<div class="input_box input_box_sch">
-						<input type="text" class="input_text" placeholder="어디로 여행을 떠나세요?">
-						<button type="button" class="sch_btn"></button>
-					</div>
-					<div class="popup search_popup">
-						<div class="pop_body">
-							<div class="contbox">
-								<div class="contitem">
-									<div class="cont_tit">
-										<span class="tit">인기검색어</span>
-										<span class="desc">2025.11.01 기준</span>
-									</div>
-									<div class="lankwrap">
-										<div class="lankbox">
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">1</span>
-													<span class="tit">당일 투어</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">2</span>
-													<span class="tit">패키지 투어</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">3</span>
-													<span class="tit">K-POP</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">4</span>
-													<span class="tit">할인 호텔</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">5</span>
-													<span class="tit">스키투어</span>
-												</a>
-											</div>
-										</div>
-										<div class="lankbox">
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">6</span>
-													<span class="tit">당일 투어</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">7</span>
-													<span class="tit">패키지 투어</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">8</span>
-													<span class="tit">K-POP</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">9</span>
-													<span class="tit">할인 호텔</span>
-												</a>
-											</div>
-											<div class="item">
-												<a href="" class="link">
-													<span class="num">10</span>
-													<span class="tit">스키투어</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="contitem">
-									<div class="cont_tit">
-										<span class="tit">추천해시태그</span>
-										<span class="desc"></span>
-									</div>
-									<div class="badgebox">
-										<a href="" class="badge">#당일투어</a>
-										<a href="" class="badge">#패키지투어</a>
-										<a href="" class="badge">#K-POP</a>
-										<a href="" class="badge">#할인호텔</a>
-										<a href="" class="badge">#스키투어</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+	<div class="inner h_inner">
+		<div class="h_logo">
+			<a href="">
+				<img src="<?php echo $path ?>img/logo_bk.png" alt="" class="img">
+			</a>
+		</div>
+		<ul class="h_nav">
+			<li>
+				<a href="<?php echo $path ?>company/about.php" class="link">소개</a>
+				<ul class="h_nav_ul">
+					<li><a href="<?php echo $path ?>company/about.php" class="link">플랜트건설노조는</a></li>
+					<li><a href="<?php echo $path ?>company/status.php" class="link">조직현황</a></li>
+					<li><a href="<?php echo $path ?>company/member.php" class="link">임원소개</a></li>
+					<li><a href="<?php echo $path ?>company/history.php" class="link">걸어온 길</a></li>
+					<li><a href="<?php echo $path ?>company/location.php" class="link">오시는 길</a></li>
+					<li><a href="<?php echo $path ?>company/join_info.php" class="link">조합가입안내</a></li>
+					<li><a href="<?php echo $path ?>company/rules.php" class="link">규약</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="<?php echo $path ?>board/list_gallery.php" class="link">소식</a>
+				<ul class="h_nav_ul">
+					<li><a href="<?php echo $path ?>board/list_gallery.php" class="link">성명/보도</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic.php" class="link">알림</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic.php" class="link">중앙소식</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="<?php echo $path ?>board/list_basic2.php" class="link">지부소식</a>
+				<ul class="h_nav_ul">
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">포항</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">여수</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">전남동부/경남서부</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">울산</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">충남</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">전북</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">경인</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">강원/충북</a></li>
+					<li><a href="<?php echo $path ?>board/list_basic2.php" class="link">반도체사업단</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="<?php echo $path ?>board/list_webzine.php" class="link">자료</a>
+				<ul class="h_nav_ul">
+					<li><a href="<?php echo $path ?>board/list_webzine.php" class="link">선전자료</a></li>
+					<li><a href="<?php echo $path ?>board/list_webzine.php" class="link">미디어자료</a></li>
+					<li><a href="<?php echo $path ?>board/list_webzine.php" class="link">문서자료</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="h_side">
+			<a href="<?php echo $path ?>login/login.php" type="button" class="side_btn login_btn"></a>
+			<button type="button" class="side_btn search_btn"></button>
+			<button type="button" class="side_btn menu_btn"></button>
+		</div>
+	</div>
+	<div class="search_modal">
+		<div class="inner">
+			<div class="search_box">
+				<input type="text" class="sch_input" placeholder="검색어를 입력해주세요">
+				<button type="button" class="sch_btn"></button>
 			</div>
 		</div>
-		<div class="h_right">
-			<div class="top_nav">
-				<li>
-					<a href="<?php echo $path ?>mypage/travel.php" class="link">
-						예약조회
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo $path ?>group/reservation.php" class="link">
-						단체문의
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo $path ?>cs/notice.php" class="link">
-						고객센터
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo $path ?>account/join_terms.php" class="link">
-						회원가입
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo $path ?>account/login.php" class="link ver2">
-						로그인
-					</a>
-				</li>
-			</div>	
-			<!-- 모바일 노출 start-->
-			<div class="sidebox tablet">
-				<button type="button" class="btn menu_open"></button>
-			</div>
-			<!-- 모바일 노출 end -->
-		</div>
-    </div>
+	</div>
 </header>
