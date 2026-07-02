@@ -85,7 +85,7 @@
 				</div>
 			</section>
 
-			<section class="section ms2">
+			<section class="section ms2" data-aos="fade-in">
 				<div class="inner">
 					<p class="ms2_tit">Union Slogan</p>
 					<div class="contbox">
