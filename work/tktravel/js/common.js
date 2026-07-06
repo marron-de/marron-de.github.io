@@ -1655,3 +1655,25 @@ $(document).ready(function () {
 		}
 	});
 });
+
+
+// 260706 수정작업
+$('.sns_select .select').on('change', function() {
+    const inputBox = $(this).closest('.input_box');
+    const label = inputBox.find('.label_text');
+    if ($(this).val() === 'LINE') {
+        inputBox.addClass('line_ver');
+        label.addClass('flexible');
+        inputBox.find('.label_text').append('<span class="point">LINE QR 이미지를 꼭 업로드 해주세요!</span>');
+    } else {
+        inputBox.removeClass('line_ver');
+        label.removeClass('flexible');
+        inputBox.find('.label_text .point').remove();
+    }
+});
+
+function line_popup() {
+	$("body").addClass('hidden');
+	$("body").addClass('modal_open');
+	$("#line_popup").addClass('show');
+}

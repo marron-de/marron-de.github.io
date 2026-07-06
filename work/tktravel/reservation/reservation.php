@@ -154,9 +154,9 @@
 											</div>
 										</div>
 										<div class="form_item input_box">
-											<label class="label_text required">
+											<p class="label_text">
 												<span class="required">휴대폰</span>
-											</label>
+											</p>
 											<input type="text" class="input_text" placeholder="휴대폰 번호를 입력해 주세요">
 										</div>
 										<div class="form_item input_box">
@@ -165,21 +165,33 @@
 											</p>
 											<input type="text" class="input_text" placeholder="이메일를 입력해 주세요">
 										</div>
+										<!-- 260706 수정작업 start -->
 										<div class="form_item input_box">
-											<label class="label_text required">
+											<p class="label_text felxible">
 												<span class="required">SNS 아이디</span>
-											</label>
+											</p>
 											<div class="input_flex">
 												<div class="select_box sns_select">
 													<select class="select">
 														<option value="카카오톡">카카오톡</option>
 														<option value="페이스북">페이스북</option>
 														<option value="구글">구글</option>
+														<option value="LINE">LINE ID</option>
 													</select>
 												</div>
 												<input type="text" class="input_text" placeholder="아이디를 입력해 주세요">
+												<div class="sns_linebox">
+													<button type="button" class="input_btn line_upload" onclick="line_popup()">
+														<img src="<?php echo $path ?>img/ms17_down_icon.png" alt="" class="icon">
+														<span class="txt">UPLOAD</span>
+													</button>
+													<div class="line_qr">
+														<img src="<?php echo $path ?>img/QR_img.png" alt="" class="img">
+													</div>
+												</div>
 											</div>
 										</div>
+										<!-- 260706 수정작업 end -->
 										<div class="form_item input_box full">
 											<label class="label_text">특별 요청</label>
 											<textarea class="input_text h100" placeholder="특별요청사항/SNS ID/항공편/미팅시간/호텔명/호텔주소를 꼭 입력해 주세요!"></textarea>
@@ -400,6 +412,31 @@
     	<?php include "../common/fixed_nav.php" ?>
 
     	<?php include "../common/footer.php" ?>
+
+
+		<!-- 260706 수정작업 -->
+		<div id="line_popup" class="modal">
+            <div class="modal_box">
+                <p class="modal_tit">LINE QR 이미지</p>
+                <p class="modal_desc">
+					QR 이미지를 업로드 해주세요.
+				</p>
+				<div class="input_box">
+					<div class="input_box_file">
+						<label for="bo_file1" class="input_name">
+							<span class="txt">파일을 첨부해주세요</span>
+							<span class="delete"></span>
+						</label>
+						<input type="file" id="bo_file1" class="input_file" placeholder="파일을 첨부해주세요">
+						<button type="button" class="input_btn">파일 선택</button>
+					</div>
+				</div>
+                <div class="modal_btnbox">
+                    <button class="modal_btn typeA">확인</button>
+                    <button class="modal_btn typeB modal_close">취소 </button>
+                </div>
+            </div>
+        </div>
 
 		
 		<!-- 서비스이용약관 popup -->
