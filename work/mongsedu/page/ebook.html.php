@@ -269,7 +269,7 @@ $captcha_js    = chk_captcha_js();
             </div>
             <div class="ebook_list2">
 				 <ul>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="pro2_modal(1)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd01.jpg" alt="싱가포르 사립대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -292,7 +292,7 @@ $captcha_js    = chk_captcha_js();
 							</div>
 						</div>
 					</li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="pro2_modal(2)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd02.jpg" alt="싱가포르 국립대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -315,7 +315,7 @@ $captcha_js    = chk_captcha_js();
 							</div>
 						</div>
 					</li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="pro2_modal(3)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd03.jpg" alt="싱가포르 예술대 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -338,7 +338,7 @@ $captcha_js    = chk_captcha_js();
 							</div>
 						</div>
 					</li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="pro2_modal(4)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd04.jpg" alt="말레이시아 대학 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -361,7 +361,7 @@ $captcha_js    = chk_captcha_js();
 							</div>
 						</div>
 					</li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="pro2_modal(5)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd05.jpg" alt="말레이시아 국제학교 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -384,7 +384,7 @@ $captcha_js    = chk_captcha_js();
 							</div>
 						</div>
 					</li>
-                    <li onclick="nocontent_modal()">
+                    <li onclick="pro2_modal(6)">
 						<div class="img_area">
                             <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_ebookpcd06.jpg" alt="미국대학 서비스 상세내역" class="img">
 							<div class="img_txtbox">
@@ -1160,6 +1160,74 @@ $captcha_js    = chk_captcha_js();
 	</div>
 </div>
 
+
+<div id="pro2_modal1" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro2_modal2_img.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro2_modal2" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro2_modal2_img2.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro2_modal3" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro2_modal2_img3.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro2_modal4" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro2_modal2_img4.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro2_modal5" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro2_modal2_img5.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pro2_modal6" class="cm_modal image_modal">	
+	<div class="cm_modal_inner">
+		<button type="button" class="cm_modal_close"></button>
+		<div class="cm_modal_box">
+			<div class="cm_modal_imgbox">
+				<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/pro2_modal2_img6.jpg" alt="" class="img">
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <div class="cm_modal privacy_modal">	
 	<div class="cm_modal_inner">
 		<button type="button" class="cm_modal_close"></button>
@@ -1191,6 +1259,7 @@ $captcha_js    = chk_captcha_js();
 		</div>	
 	</div>
 </div>
+
 
 
 

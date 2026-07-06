@@ -112,21 +112,40 @@ if (!defined('_EYOOM_')) exit;
 											유학비용예산까지 전체적인 유학정보를 현지 지사장을 통해 확인할 수 있습니다.
 										</p>
 									</div>
-									<div class="counselingbox">
-										<div class="box_tit">상담 가능학교</div>
-										<div class="box_list">
-											<div class="item">
-												<p class="tit">1 티어</p>
-												<p class="desc">
-													<span class="txt">가든, MKIS, ISKL, BSKL, 앨리스스미스</span>
-												</p>
+									<div class="counselingwrap">
+										<div class="counselingbox">
+											<div class="box_tit">상담 가능학교 (쿠알라룸프)</div>
+											<div class="box_list">
+												<div class="item">
+													<p class="tit">1 티어</p>
+													<p class="desc">
+														<span class="txt">가든, MKIS, ISKL, BSKL, 앨리스스미스</span>
+													</p>
+												</div>
+												<div class="item">
+													<p class="tit">2~3 티어</p>
+													<p class="desc">
+														<span class="txt">세인트조셉, ISP, 텐비, 킹헨리, 앱솜, 오아시스, 선웨이 외 20여개</span>
+														<span class="small">(말레이시아의 모든 국제학교 상담가능)</span>
+													</p>
+												</div>
 											</div>
-											<div class="item">
-												<p class="tit">2~3 티어</p>
-												<p class="desc">
-													<span class="txt">세인트조셉, ISP, 텐비, 킹헨리, 앱솜, 오아시스, 선웨이 외 20여개</span>
-													<span class="small">(말레이시아의 모든 국제학교 상담가능)</span>
-												</p>
+										</div>
+										<div class="counselingbox">
+											<div class="box_tit">상담 가능학교 (조호바루)</div>
+											<div class="box_list">
+												<div class="item">
+													<p class="tit">1 티어</p>
+													<p class="desc">
+														<span class="txt">말보루, 래플스</span>
+													</p>
+												</div>
+												<div class="item">
+													<p class="tit">2~3 티어</p>
+													<p class="desc">
+														<span class="txt">포레스트 시티, 선웨이, 텐비, 인빅투스, 헬프 외 10여개</span>
+													</p>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -142,7 +161,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img1.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												말레이시아 국제학교 비교 분석 및 학교별 커리큘럼 (20분)	
+												쿠알라룸프/조호바루 유학비용 및 예산
 											</p>
 										</div>
 										<div class="item">
@@ -150,7 +169,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img2.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												약 40여개 학교 커리큘럼 및 연령대별 추천학교 선정
+												약 100여개 국제학교 비교 및 연령대별 추천
 											</p>
 										</div>
 										<div class="item">
@@ -158,7 +177,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img3.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												거주지, 비용예산 및 정착관련 상담 (20분)
+												부동산, 콘도 및 거주지 상담
 											</p>
 										</div>
 										<div class="item">
@@ -166,7 +185,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img4.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												학교 위치에 따른 추천거주지, 비용예산 확인
+												현지 생활정보 및 정착 상담
 											</p>
 										</div>
 										<div class="item">
@@ -174,7 +193,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img5.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												커리큘럼에 따른 진로로드맵 (5분)
+												대입 성취도 및 진로 로드맵
 											</p>
 										</div>
 										<div class="item">
@@ -182,7 +201,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img6.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												영국A레벨, IB등에 따라 대학 진로상담 및 국제학교 로드맵
+												A레벨, IB, AP 등 국제학교 커리큘럼 비교
 											</p>
 										</div>
 									</div>

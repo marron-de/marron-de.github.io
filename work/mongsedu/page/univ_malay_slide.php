@@ -13,7 +13,7 @@
 		</div>
 		<p class="title">
 			Taylors University <br>
-			테일러스 대학
+			테일러스 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -35,7 +35,7 @@
 		</div>
 		<p class="title">
 			Sunway University <br>
-			선웨이 대학
+			선웨이 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -56,7 +56,7 @@
 		</div>
 		<p class="title">
 			Malaya University <br>
-			말라야 국립대학
+			말라야 국립대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -78,7 +78,7 @@
 		</div>
 		<p class="title">
 			Monash University <br>
-			호주, 모나쉬대학
+			호주 모나쉬 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -100,7 +100,7 @@
 		</div>
 		<p class="title">
 			Help University <br>
-			헬프 대학
+			헬프 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -122,7 +122,7 @@
 		</div>
 		<p class="title">
 			Inti University <br>
-			인티 대학
+			인티 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>

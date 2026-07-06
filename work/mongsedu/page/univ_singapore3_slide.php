@@ -11,8 +11,8 @@
 			<p class="tag">#경영학강세</p>
 		</div>
 		<p class="title">
-			Kaplan <br>
-			카플란 사립대
+			Kaplan Singapore <br>
+			카플란 사립대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -34,8 +34,8 @@
 			<p class="tag">#교육부설립</p>
 		</div>
 		<p class="title">
-			SIM <br>
-			SIM 사립대
+			Singapore Institute of Management <br>
+			SIM 사립대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -57,8 +57,8 @@
 			<p class="tag">#교환학생</p>
 		</div>
 		<p class="title">
-			JCU <br>
-			제임스쿡대학
+			James Cook University <br>
+			제임스쿡 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -79,8 +79,8 @@
 			<p class="tag">#공과계열강세</p>
 		</div>
 		<p class="title">
-			PSB <br>
-			PSB 사립대
+			PSB Academy <br>
+			PSB 사립대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>

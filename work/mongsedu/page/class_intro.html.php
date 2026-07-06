@@ -619,7 +619,7 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="text_area">
                                     <div class="cost_info">
                                         <div class="info">
-                                            <p>&nbsp;</p>
+                                            <!-- <p>&nbsp;</p> -->
                                             <span>12회 수강권</span>
                                         </div>
                                         <div class="cost">

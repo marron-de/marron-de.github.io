@@ -1,7 +1,7 @@
 export const univData7 = { // 홍콩 국립대
 	'7_1': {
-		nameEn: "HKU",
-		nameKo: "홍콩대",
+		nameEn: "University of Hongkong ",
+		nameKo: "홍콩 대학교",
 		desc: "홍콩 1위의 대학으로써 법, 의학, 금융, 국제경영, 교육학 등 다양한 분야에서 세계적인 인지도를 가지고 있는 연구중심 대학입니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1911년",
@@ -17,8 +17,8 @@ export const univData7 = { // 홍콩 국립대
 		item_tit_desc_6: "약 20개 국가별 로컬전형 성적<br>IB, AP 스쿨 등 국제전형 성적<br>한국 교과정 성적만으로 접수가능(내신 또는 수능)<br>영어 외 제2 외국어 조건 필수",
 	},
 	'7_2': {
-		nameEn: "HKUST",
-		nameKo: "홍콩 과기대",
+		nameEn: "Hongkong University of Science and Technology",
+		nameKo: "홍콩 과기대학교",
 		desc: "공학, 기술분야에서 강점을 가진 연구중심 대학으로써 산학 협력파트너쉽이 우수하여 타 대학과 교환학생 및 협력기업간 연계가 잘 되어 있습니다",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1991년",
@@ -34,8 +34,8 @@ export const univData7 = { // 홍콩 국립대
 		item_tit_desc_6: "약 20개 국가별 로컬전형 성적<br>IB, AP 스쿨 등 국제전형 성적<br>한국 교과정 성적만으로 접수가능(내신 또는 수능)<br>CV(이력서)제출 필수",
 	},
 	'7_3': {
-		nameEn: "CUHK",
-		nameKo: "홍콩 중문대",
+		nameEn: "Chinese University of Hong Kong",
+		nameKo: "홍콩 중문 대학교",
 		desc: "홍콩의 3개 명문대학으로 손꼽히며, 가장 규모가 큰 캠퍼스를 운영하고 있습니다. 특히 의학, 공학, 경영학, 사회과학, 인공지능(AI), 데이터 과학 등에서 강한 영향력을 가진 대학입니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1963년",
@@ -51,8 +51,8 @@ export const univData7 = { // 홍콩 국립대
 		item_tit_desc_6: "약 20개 국가별 로컬전형 성적<br>IB, AP 스쿨 등 국제전형 성적<br>한국 교과정 성적만으로 접수가능(내신 또는 수능)",
 	},
 	'7_4': {
-		nameEn: "CityU",
-		nameKo: "홍콩 성시대",
+		nameEn: "City University of Hongkong",
+		nameKo: "홍콩 시립 대학교",
 		desc: "첨단 연구시설을 보유한 도시형 대학으로써 공학, 과학계열에서 강세인 대학입니다. 특히 홍콩대학 중 유일하게 수의학을 배울 수 있는 대학입니다. ",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1984년",

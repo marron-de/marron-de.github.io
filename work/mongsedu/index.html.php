@@ -842,26 +842,27 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="text_area">
                                     <a href="#none">
                                         <span class="title">말레이시아 국제학교</span>
-                                        <p>쿠알라룸푸르 전 지역 / 50여개</p>
+                                        <p>조호바루 / 쿠알라룸푸 / 80여개</p>
                                     </a>
                                 </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail02'" class="swiper-slide">						
+                            </li>							
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail11'" class="swiper-slide">	
                                 <div class="img_area">
-                                    <p class="nation">한국</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel02.jpg" alt="한국 인가/비인가" class="img">
-									<div class="shape color2"></div>
+                                    <p class="nation">태국/베트남</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel04.jpg" alt="베트남/태국 국제학교" class="img">
+									<div class="shape color4"></div>
 									<div class="img_bottom">
 										<div class="flagbox">
-											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
+                                    		<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="태국" class="">
+                                    		<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_biet.svg" alt="베트남">
 										</div>
-										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher2.png" alt="">
+										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher4.png" alt="">
 									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
-                                        <span class="title">한국 인가/비인가</span>
-                                        <p>송도/제주 외 전 지역 비인가 학교</p>
+                                        <span class="title">태국 / 베트남 국제학교</span>
+                                        <p>주요 국제학교 100여개</p>
                                     </a>
                                 </div>
                             </li>
@@ -884,6 +885,25 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail02'" class="swiper-slide">						
+                                <div class="img_area">
+                                    <p class="nation">한국</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel02.jpg" alt="한국 인가/비인가" class="img">
+									<div class="shape color2"></div>
+									<div class="img_bottom">
+										<div class="flagbox">
+											<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="한국">
+										</div>
+										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher2.png" alt="">
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <span class="title">한국 인가 / 비인가</span>
+                                        <p>송도/제주 외 전 지역 비인가 학교</p>
+                                    </a>
+                                </div>
+                            </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail05'" class="swiper-slide">			
                                 <div class="img_area">
                                     <p class="nation">말레이시아/싱가포르</p>
@@ -899,28 +919,8 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
-                                        <span class="title">주요 국제학교 입학시험 상담</span>
+                                        <span class="title">주요 국제학교 입학시험</span>
                                         <p>주요 국제학교 80개 대상</p>
-                                    </a>
-                                </div>
-                            </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail11'" class="swiper-slide">	
-                                <div class="img_area">
-                                    <p class="nation">베트남/태국</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel04.jpg" alt="베트남/태국 국제학교" class="img">
-									<div class="shape color4"></div>
-									<div class="img_bottom">
-										<div class="flagbox">
-                                    		<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_biet.svg" alt="베트남">
-                                    		<img class="flag pc" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="태국" class="">
-										</div>
-										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher4.png" alt="">
-									</div>
-                                </div>
-                                <div class="text_area">
-                                    <a href="#none">
-                                        <span class="title">베트남/태국 국제학교</span>
-                                        <p>주요 국제학교 10여개</p>
                                     </a>
                                 </div>
                             </li>

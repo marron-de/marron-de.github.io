@@ -20,12 +20,14 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="cm_popup univsch_popup">
 					<ul class="linkbox">
-						<li><a href="<?php echo G5_URL ?>/page/?pid=faq" class="link tit">자주 받는 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info01&tab=12&from=search" class="link">말레이시아 국제학교 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=23&from=search" class="link">싱가포르 대학 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=22&from=search" class="link">말레이시아 대학 상담</a></li>
-						<li><a href="#none" class="link"  onclick="showToast('학교 정보 준비중입니다', 'emoji1')">한국 국제학교 배치 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=25&from=search" class="link">송도 글로벌 캠퍼스</a></li>
+						<li><a class="link tit">자주 찾는 학교</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=National%20University%20of%20Singapore" class="link">National University of Singapore (NUS)</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=가든%20국제학교" class="link">가든 국제학교</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Kaplan%20Singapore" class="link">Kaplan Singapore</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Lasalle%20College%20of%20the%20Arts" class="link">Lasalle College of the Arts</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=세인트조셉%20국제학교" class="link">세인트조셉 국제학교</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Taylors%20University" class="link">Taylors University</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Monash%20University" class="link">Monash University</a></li>
 					</ul>
 				</div>
 			</div>
@@ -93,6 +95,12 @@ if (!defined('_EYOOM_')) exit;
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
 								</div>
 							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
+								<div class="flagbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
+								</div>
+							</div>
 						</div>						
 						<div class="swiper-button-next next_btn"></div>
 						<div class="swiper-button-prev prev_btn"></div>
@@ -100,6 +108,35 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="text_area swiper univ_txtswiper">
 						<div class="swiper-wrapper">
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
 							<div class="swiper-slide item">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
 								<span>
@@ -321,18 +358,18 @@ if (!defined('_EYOOM_')) exit;
 				</div>
                 <div class="tab swiper tab_swiper" data-gappc="12" data-gapmob="12">
                     <ul class="tab_tit swiper-wrapper">
-                        <li class="swiper-slide"><a href="#" class="show" id="tab-11">전체보기</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-12">말레이시아</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-13">싱가포르</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-14">한국 비인가</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-15">한국 인가</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-16">태국/베트남</a></li>
+                        <!-- <li class="swiper-slide"><a href="#" class="show" id="tab-11">전체보기</a></li> -->
+                        <li class="swiper-slide"><a href="#" class="show" id="tab-12">쿠알라룸프</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-13">조호바루</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-15">태국</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-14">싱가포르</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-16">베트남</a></li>
                     </ul>
                 </div>
             </div>
             <div class="counsel_list tabs_cont">
                 <ul class="panel">
-                    <li id="content-11">
+                    <!-- <li id="content-11">
 						<div class="univlist_wrap">
 							<div class="univlist_controls">
 								<div class="swiper-button-prev prev_btn"></div>
@@ -346,7 +383,7 @@ if (!defined('_EYOOM_')) exit;
 								</div>
 							</div>
 						</div>
-                    </li>
+                    </li> -->
                     <li id="content-12">
 						<div class="univlist_wrap">
 							<div class="univlist_controls">
@@ -373,7 +410,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
                     </li>
-                    <li id="content-14">
+                    <li id="content-15">
 						<div class="univlist_wrap">
 							<div class="univlist_controls">
 								<div class="swiper-button-prev prev_btn"></div>
@@ -381,12 +418,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper univlist_swiper univ_list">
 								<div class="swiper-wrapper">
-									<?php include (EYOOM_THEME_PATH.'/page/univ_no_slide.php'); ?>									
+									<?php include (EYOOM_THEME_PATH.'/page/univ_thai_slide.php'); ?>
 								</div>
 							</div>
 						</div>
                     </li>
-                    <li id="content-15">
+                    <li id="content-14">
 						<div class="univlist_wrap">
 							<div class="univlist_controls">
 								<div class="swiper-button-prev prev_btn"></div>
@@ -407,7 +444,6 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper univlist_swiper univ_list">
 								<div class="swiper-wrapper">
-									<?php include (EYOOM_THEME_PATH.'/page/univ_thai_slide.php'); ?>
 									<?php include (EYOOM_THEME_PATH.'/page/univ_biet_slide.php'); ?>
 								</div>
 							</div>
@@ -426,13 +462,13 @@ if (!defined('_EYOOM_')) exit;
 				</div>
                 <div class="tab swiper tab_swiper" data-gappc="12" data-gapmob="12">
                     <ul class="tab_tit swiper-wrapper">
-                        <li class="swiper-slide"><a href="#" class="show" id="tab-21">전체보기</a></li>
+                        <!-- <li class="swiper-slide"><a href="#" class="show" id="tab-21">전체보기</a></li> -->
+                        <li class="swiper-slide"><a href="#" class="show" id="tab-23">싱가포르</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-22">말레이시아</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-23">싱가포르</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-24">홍콩</a></li>
                         <li class="swiper-slide"><a href="#" id="tab-25">송도</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-26">미국</a></li>
-                        <li class="swiper-slide"><a href="#" id="tab-27">영국</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-26" onclick="showToast('자료준비중입니다', 'emoji1')">미국</a></li>
+                        <li class="swiper-slide"><a href="#" id="tab-27" onclick="showToast('자료준비중입니다', 'emoji1')">영국</a></li>
                     </ul>
                 </div>
             </div>
@@ -456,19 +492,6 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
                     </li>
-                    <li id="content-22">
-						<div class="univlist_wrap">
-							<div class="univlist_controls">
-								<div class="swiper-button-prev prev_btn"></div>
-								<div class="swiper-button-next next_btn"></div>
-							</div>
-							<div class="swiper univlist_swiper univ_list">
-								<div class="swiper-wrapper">
-									<?php include (EYOOM_THEME_PATH.'/page/univ_malay_slide.php'); ?>
-								</div>
-							</div>
-						</div>
-                    </li>
                     <li id="content-23">
 						<div class="univlist_wrap">
 							<div class="univlist_controls">
@@ -480,6 +503,19 @@ if (!defined('_EYOOM_')) exit;
 									<?php include (EYOOM_THEME_PATH.'/page/univ_singapore_slide.php'); ?>		
 									<?php include (EYOOM_THEME_PATH.'/page/univ_singapore2_slide.php'); ?>
 									<?php include (EYOOM_THEME_PATH.'/page/univ_singapore3_slide.php'); ?>	
+								</div>
+							</div>
+						</div>
+                    </li>
+                    <li id="content-22">
+						<div class="univlist_wrap">
+							<div class="univlist_controls">
+								<div class="swiper-button-prev prev_btn"></div>
+								<div class="swiper-button-next next_btn"></div>
+							</div>
+							<div class="swiper univlist_swiper univ_list">
+								<div class="swiper-wrapper">
+									<?php include (EYOOM_THEME_PATH.'/page/univ_malay_slide.php'); ?>
 								</div>
 							</div>
 						</div>

@@ -11,8 +11,8 @@
 			<p class="tag">#아시아 1위</p>
 		</div>
 		<p class="title">
-			NUS <br>
-			NUS 싱가포르 국립대
+			National University of Singapore <br>
+			싱가포르 국립 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -34,8 +34,8 @@
 			<p class="tag">#종합대학</p>
 		</div>
 		<p class="title">
-			NTU <br>
-			NTU 난양공대
+			Nanyang Technology University <br>
+			난양공과 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -57,8 +57,8 @@
 			<p class="tag">#단과대학</p>
 		</div>
 		<p class="title">
-			SMU <br>
-			SMU 싱가포르 경영대
+			Singapore Management University <br>
+			싱가포르 경영 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -80,8 +80,8 @@
 			<p class="tag">#단과대학</p>
 		</div>
 		<p class="title">
-			SUTD <br>
-			SUTD 기술디자인대
+			Singapore University of Technology Design <br>
+			싱가포르 기술디자인 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -103,8 +103,8 @@
 			<p class="tag">#취업</p>
 		</div>
 		<p class="title">
-			SUSS <br>
-			SUSS 사회과학대학
+			Singapore University of Social Science <br>
+			싱가포르 사회과학 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>

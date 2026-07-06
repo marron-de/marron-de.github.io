@@ -11,8 +11,8 @@
 			<p class="tag">#아시아1위</p>
 		</div>
 		<p class="title">
-			Lasalle <br>
-			라셀 예술대
+			Lasalle College of the Arts <br>
+			싱가포르 종합 예술 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -34,8 +34,8 @@
 			<p class="tag">#영국왕립음대</p>
 		</div>
 		<p class="title">
-			NAFA <br>
-			나파 예술대
+			Nanyang Academy of Fine Arts <br>
+			나파 예술 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>

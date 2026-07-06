@@ -11,8 +11,8 @@
 			<p class="tag">#국립대</p>
 		</div>
 		<p class="title">
-			HKU <br>
-			홍콩대
+			University of Hongkong  <br>
+			홍콩 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -34,8 +34,8 @@
 			<p class="tag">#파트너쉽</p>
 		</div>
 		<p class="title">
-			HKUST <br>
-			홍콩 과기대
+			Hongkong University of Science and Technology <br>
+			홍콩 과기대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -56,8 +56,8 @@
 			<p class="tag">#캠퍼스 시설 우수</p>
 		</div>
 		<p class="title">
-			CUHK <br>
-			홍콩 중문대
+			Chinese University of Hong Kong <br>
+			홍콩 중문 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>
@@ -78,8 +78,8 @@
 			<p class="tag">#공과계열 강세</p>
 		</div>
 		<p class="title">
-			CityU <br>
-			홍콩 성시대
+			City University of Hongkong <br>
+			홍콩 시립 대학교
 		</p>
 		<div class="bottom">
 			<p class="txt">학교 자세히보기</p>

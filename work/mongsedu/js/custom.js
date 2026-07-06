@@ -663,6 +663,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+$('.mentor_modal .share_btn').on('click', function() {
+	const id = $(this).closest('.item').data('num');
+	const url = location.origin + location.pathname + location.search + '&mentor_modal=' + id;
+    navigator.clipboard.writeText(url);
+    alert('링크가 복사되었습니다.');
+});
+$(function() {
+	const params = new URLSearchParams(location.search);
+	const modalId = params.get('mentor_modal');
+	if (modalId) mentor_modal(parseInt(modalId));
+});
 
 
 
@@ -750,6 +761,10 @@ $(function () {
 function pro_modal(i) {
 	$("body").addClass('hidden');
 	$("#pro_modal"+i).addClass('show');
+}// 미국+아시아 입학수속/컨설팅 상세 모달
+function pro2_modal(i) {
+	$("body").addClass('hidden');
+	$("#pro2_modal"+i).addClass('show');
 }
 // 상담학교 리스트 타이틀 너비
 $(window).on("load", function(){
@@ -821,7 +836,7 @@ $(document).on("mouseup", function (e) {
 		$(".page-univ .tit_area.board .search_box").removeClass("on");
 	}
 });
-``
+
 $('.page-univ .search_inputbox .input').on('input', function () {
 	const btn = $(this).siblings('.del_btn');
 	if ($(this).val().trim() !== '') {
@@ -856,6 +871,7 @@ const univ_swiper = new Swiper('.univ_swiper', {
 const univ_txtswiper = new Swiper('.univ_txtswiper', {
 	observer: true,
 	observeParents: true,	
+	loop:true,
 	effect : 'fade',
 	fadeEffect: { 
 	crossFade: true 

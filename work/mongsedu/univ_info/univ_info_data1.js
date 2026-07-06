@@ -1,7 +1,7 @@
 export const univData1 = { // 말레이시아 대학
 	'1_1': {
 		nameEn: "Taylors University",
-		nameKo: "테일러스대학교",
+		nameKo: "테일러스 대학교",
 		desc: "말레이시아 사립대 중 최상위권으로 평가되는 글로벌 대학으로 호텔,관광분야 세계 TOP수준으로 유명함. 산업연계교육과 실무중심 커리큘럼",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1969년",
@@ -18,7 +18,7 @@ export const univData1 = { // 말레이시아 대학
 	},
 	'1_2': {
 		nameEn: "Sunway University",
-		nameKo: "선웨이대학교",
+		nameKo: "선웨이 대학교",
 		desc: "말레이시아 대표 비영리 사립 연구중심 대학으로 영국 Lancaster University 등과 복수학위 제공. 세계 대학 상위 2%에 들어가는 빠르게 성장 중인 대학",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "2004년",
@@ -35,7 +35,7 @@ export const univData1 = { // 말레이시아 대학
 	},
 	'1_3': {
 		nameEn: "Malaya University",
-		nameKo: "말라야대학교",
+		nameKo: "말라야 국립대학교",
 		desc: "말레이시아 최고의 국립대이자 가장 오래된 대학으로 QS 세계대학순위에서도 꾸준히 상위권 유지. 연구 중심 종합대학으로 의대·공대·사회과학 모두 강함",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1905년",
@@ -52,7 +52,7 @@ export const univData1 = { // 말레이시아 대학
 	},
 	'1_4': {
 		nameEn: "Monash University",
-		nameKo: "모나쉬대학교 말레이시아캠퍼스",
+		nameKo: "호주 모나쉬 대학교",
 		desc: "호주 명문 Monash University의 말레이시아 캠퍼스로 말레이시아 최초 외국 대학 캠퍼스. 글로벌 수준 연구 및 교육 제공 (Group of Eight 소속)",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1998년",
@@ -69,7 +69,7 @@ export const univData1 = { // 말레이시아 대학
 	},
 	'1_5': {
 		nameEn: "Help University",
-		nameKo: "헬프대학교",
+		nameKo: "헬프 대학교",
 		desc: "말레이시아에서 역사가 오래된 사립대 중 하나로 심리학·경영학 분야로 특히 유명함. 영국·호주 대학과 연계 프로그램 강점",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1986년",
@@ -86,7 +86,7 @@ export const univData1 = { // 말레이시아 대학
 	},
 	'1_6': {
 		nameEn: "Inti University",
-		nameKo: "인티대학교",
+		nameKo: "인티 대학교",
 		desc: "영국/미국식 교육 시스템 기반 사립대로 해외 대학 편입(트위닝 프로그램) 강점. 국제 학생 비율이 높은 글로벌 캠퍼스",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1986년",

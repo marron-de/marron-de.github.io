@@ -1,7 +1,7 @@
 export const univData8 = { // 싱가포르 예술대
 	'8_1': {
-		nameEn: "Lasalle",
-		nameKo: "라셀 예술대",
+		nameEn: "Lasalle College of the Arts",
+		nameKo: "싱가포르 종합 예술 대학교",
 		desc: "싱가포르의 대표적인 예술대학으로써 각종 건축디자인상을 수상한 아름다운 독립캠퍼스가 있으며, 교과정은 자체 전문대 과정과 UAS 싱가포르 예술국립대학과정으로 구성되어 있습니다",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1984년",
@@ -17,8 +17,8 @@ export const univData8 = { // 싱가포르 예술대
 		item_tit_desc_6: "학력기준 : 고등학교 졸업<br>영어기준 : 영어공인시험점수(아이엘츠, 토플, 듀오링고 등)<br>실기평가 : 포트폴리오, 오디션, 에세이 등",
 	},
 	'8_2': {
-		nameEn: "NAFA",
-		nameKo: "나파 예술대",
+		nameEn: "Nanyang Academy of Fine Arts",
+		nameKo: "나파 예술 대학교",
 		desc: "싱가포르에서 가장 역사가 긴 예술대학으로써 3개의 시티캠퍼스 빌딩이 벤쿨렌 스트리트에 자리잡혀 있습니다. 교과정은 자체 전문대과정, UAS 예술 국립대과정, 영국 왕립음대 음악과로 구성되어 있습니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1938년",

@@ -1,7 +1,7 @@
 export const univData6 = { // 싱가포르 국립대
 	'6_1': {
-		nameEn: "NUS",
-		nameKo: "NUS 싱가포르 국립대",
+		nameEn: "National University of Singapore",
+		nameKo: "싱가포르 국립 대학교",
 		desc: "1905년 의과대학으로 출범하여 현재는 아시아 No.1 대학으로 인문, 상경, 과학 등 수많은 분야에서 최고수준의 연구중심 대학입니다. ",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1905년 ",
@@ -17,8 +17,8 @@ export const univData6 = { // 싱가포르 국립대
 		item_tit_desc_6: "약 20개 국가별 로컬전형 성적<br> IB, AP 스쿨 등 국제전형 성적<br> 한국 교과정 성적만으로 접수 불가",
 	},
 	'6_2': {
-		nameEn: "NTU",
-		nameKo: "NTU 난양공대",
+		nameEn: "Nanyang Technology University",
+		nameKo: "난양공과 대학교",
 		desc: "난양 공과 대학은 아시아 최고의 공학전공분야를 운영하고 있으며, 동시에 종합대학으로써 경영, 사회 인문학까지 폭넓은 전공을 운영하고 있습니다",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1991년",
@@ -34,8 +34,8 @@ export const univData6 = { // 싱가포르 국립대
 		item_tit_desc_6: "약 20개 국가별 로컬전형 성적<br>IB, AP 스쿨 등 국제전형 성적<br>한국 교과정 성적만으로 접수가능(내신 또는 수능)",
 	},
 	'6_3': {
-		nameEn: "SMU",
-		nameKo: "SMU 싱가포르 경영대",
+		nameEn: "Singapore Management University",
+		nameKo: "싱가포르 경영 대학교",
 		desc: "싱가포르 경영대학은 3대 국립대 중 하나로써 경영, 법, 컴퓨터 분야를 중심으로하는 연구중심 대학입니다. 특히 상경계열 분야에서 인지도가 높습니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "2000년",
@@ -51,8 +51,8 @@ export const univData6 = { // 싱가포르 국립대
 		item_tit_desc_6: "약 20개 국가별 로컬성적을 기타전형으로 통합지원<br>IB, AP 스쿨 등 국제전형 성적<br>한국 교과정 성적만으로 접수가능(내신과 수능)",
 	},
 	'6_4': {
-		nameEn: "SUTD",
-		nameKo: "SUTD 기술디자인대",
+		nameEn: "Singapore University of Technology Design",
+		nameKo: "싱가포르 기술디자인 대학교",
 		desc: "싱가포르 기술디자인대학은 설립당시 MIT 대학과 파트너쉽관계로 기술과 디자인 융합전공프로그램을 개발하였고 현재 5개의 전공 프로그램을 운영하고 있습니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "2000년",
@@ -68,8 +68,8 @@ export const univData6 = { // 싱가포르 국립대
 		item_tit_desc_6: "한국 교과정 포함 약 20개 국가별 로컬성적을 기타전형으로 통합지원 가능",
 	},
 	'6_5': {
-		nameEn: "SUSS",
-		nameKo: "SUSS 사회과학대학",
+		nameEn: "Singapore University of Social Science",
+		nameKo: "싱가포르 사회과학 대학교",
 		desc: "싱가포르 사회과학 대학은 경영학부, 인적자원개발학부, 인문행동과학학부, 기술과학 학부를 운영하고 있으며, 우수한 취업지원 프로그램을 운영하고 있습니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "2017년",

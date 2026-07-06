@@ -1,7 +1,7 @@
 export const univData9 = { // 싱가포르 사립대
 	'9_1': {
-		nameEn: "Kaplan",
-		nameKo: "카플란 사립대",
+		nameEn: "Kaplan Singapore",
+		nameKo: "카플란 사립대학교",
 		desc: "Kaplan Singapore는 글로벌 교육재단이 운영하는 사립대학입니다. 아일랜드 UCD 더블린대학을 필두로 경영계열 중심의 다양한 전공을 결합할 수 있는 융복합 구조가 특징이며, 경영계열에 있어 진로에 맞게 유연하게 설계할 수 있는 실용적인 학문을 갖춘 사립대학입니다. ",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1989년",
@@ -16,8 +16,8 @@ export const univData9 = { // 싱가포르 사립대
 		note: "* 입학조건 : 고졸 이상 (성적 반영없음), 영어 공인점수 (아이엘츠, 토플, 듀오링고 중 택1)",
 	},
 	'9_2': {
-		nameEn: "SIM",
-		nameKo: "SIM 사립대",
+		nameEn: "Singapore Institute of Management",
+		nameKo: "SIM 사립대학교",
 		desc: "싱가포르 SIM은 교육부에서 설립한 명실상부 NO.1 인지도를 갖춘 사립대 입니다. 가장 큰 캠퍼스 규모와 영국 버밍엄대학, 호주 RMIT 대학등 명문대 선택이 가능하여 브랜드 가치를 고려한다면 가장 먼저 검토되는 사립대학입니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1964년",
@@ -32,8 +32,8 @@ export const univData9 = { // 싱가포르 사립대
 		note: "* 입학조건 : 고3평균 70점이상 또는 수능 4등급이상 영어 공인점수 (아이엘츠, 토플, 듀오링고 중 택1)",
 	},
 	'9_3': {
-		nameEn: "JCU",
-		nameKo: "제임스쿡대학",
+		nameEn: "James Cook University",
+		nameKo: "제임스쿡 대학교",
 		desc: "호주 James Cook University가 직접 운영하는 직영 캠퍼스로, 본교와 동일한 커리큘럼과 학위를 제공합니다. 교수진과 교육 시스템이 그대로 적용되어 학위의 안정성이 높으며, 교환학생이나 트랜스퍼를 통해 본교로 이동할 수 있는 기회도 열려 있는등 싱가포르에서 가장 ‘대학다운 구조’를 가진 학교입니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "2003년(싱가포르)",
@@ -48,8 +48,8 @@ export const univData9 = { // 싱가포르 사립대
 		note: "* 입학조건 : 고3평균 55점이상 /  영어 공인점수 (아이엘츠, 토플, 듀오링고 중 택1)",
 	},
 	'9_4': {
-		nameEn: "PSB",
-		nameKo: "PSB 사립대",
+		nameEn: "PSB Academy",
+		nameKo: "PSB 사립대학교",
 		desc: "PSB Academy는 공대·이공계 분야에 강점을 가진 실무형 대학입니다. 실습과 프로젝트 중심 수업을 통해 현장에서 바로 활용 가능한 역량을 키울 수 있도록 설계되어 있으며, 산업과 연계된 커리큘럼이 특징으로 취업까지 연결되는 현실적인 학업 구조를 원하는 학생들에게 적합한 사립대학입니다.",
 		item_tit_1: "설립년도",
 		item_tit_desc_1: "1964년",

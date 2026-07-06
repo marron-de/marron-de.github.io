@@ -12,7 +12,7 @@ if (!defined('_EYOOM_')) exit;
             <span class="title">학교정보</span>
 			<div class="search_box">
 				<div class="search_inputbox" onclick="univsch_popup()">
-					<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ic_search_blue.svg" alt="" class="icon">
+					<div class="button"><input type="submit" value="검색"></div>
 					<input type="text" class="input" placeholder="원하시는 학교 정보를 쉽게 만나보세요." required>
 					<button type="button" class="del_btn">
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_delete.svg" alt="" class="icon">
@@ -20,12 +20,14 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="cm_popup univsch_popup">
 					<ul class="linkbox">
-						<li><a href="<?php echo G5_URL ?>/page/?pid=faq" class="link tit">자주 받는 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info01&tab=12&from=search" class="link">말레이시아 국제학교 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=23&from=search" class="link">싱가포르 대학 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=22&from=search" class="link">말레이시아 대학 상담</a></li>
-						<li><a href="#none" class="link"  onclick="showToast('학교 정보 준비중입니다', 'emoji1')">한국 국제학교 배치 상담</a></li>
-						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_info02&tab=25&from=search" class="link">송도 글로벌 캠퍼스</a></li>
+						<li><a class="link tit">자주 찾는 학교</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=National%20University%20of%20Singapore" class="link">National University of Singapore (NUS)</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=가든%20국제학교" class="link">가든 국제학교</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Kaplan%20Singapore" class="link">Kaplan Singapore</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Lasalle%20College%20of%20the%20Arts" class="link">Lasalle College of the Arts</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=세인트조셉%20국제학교" class="link">세인트조셉 국제학교</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Taylors%20University" class="link">Taylors University</a></li>
+						<li><a href="<?php echo G5_URL ?>/page/?pid=univ_result&kw=Monash%20University" class="link">Monash University</a></li>
 					</ul>
 				</div>
 			</div>
@@ -93,39 +95,165 @@ if (!defined('_EYOOM_')) exit;
 									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
 								</div>
 							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_univmain4.jpg" alt="" class="img">
+								<div class="flagbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
+								</div>
+							</div>
 						</div>						
 						<div class="swiper-button-next next_btn"></div>
 						<div class="swiper-button-prev prev_btn"></div>
 						<div class="swiper-pagination pagination"></div>
 					</div>
-					<div class="text_area">
-						<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
-						<span>
-							싱가포르 NO.1 사립대학교 SIM</br/>
-							수능/내신 점수로 전세계 TOP100대학 입학
-						</span>
-						<ul>
-							<li>
-								<span>설립년도</span>
-								<p>1964년</p>
-							</li>
-							<li>
-								<span>재학생 수</span>
-								<p>약 17,000여 명</p>
-							</li>
-							<li>
-								<span>평가</span>
-								<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
-							</li>
-							<li>
-								<span>대표전공</span>
-								<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
-							</li>
-							<li>
-								<span>평균학비(연간)</span>
-								<p>약 3,500~8,000만원</p>
-							</li>
-						</ul>
+					<div class="text_area swiper univ_txtswiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide item">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/img_univlogo.png" alt="말레이시아 국제학교">
+								<span>
+									싱가포르 NO.1 사립대학교 SIM</br/>
+									수능/내신 점수로 전세계 TOP100대학 입학
+								</span>
+								<ul>
+									<li>
+										<span>설립년도</span>
+										<p>1964년</p>
+									</li>
+									<li>
+										<span>재학생 수</span>
+										<p>약 17,000여 명</p>
+									</li>
+									<li>
+										<span>평가</span>
+										<p>EduTrust 4년 인증기관(1등급) / 선호도 2위(Singapore Job Central)</p>
+									</li>
+									<li>
+										<span>대표전공</span>
+										<p>경영학, 경제학, 국제경영학, 회계, 경영분석, 컴퓨터공학</p>
+									</li>
+									<li>
+										<span>평균학비(연간)</span>
+										<p>약 3,500~8,000만원</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
             </div>
