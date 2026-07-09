@@ -1677,3 +1677,25 @@ function line_popup() {
 	$("body").addClass('modal_open');
 	$("#line_popup").addClass('show');
 }
+
+
+// 260709 추가작업
+// main mobile popup
+const main_mobpopup_swiper = new Swiper('.main_mobpopup_swiper', {
+	observer: true,
+	observeParents: true,
+	loop: true,
+	speed:500,
+	pagination: {
+		el: '.main_popup.mob_ver .paging',
+        type: 'custom',
+        clickable: true,
+        renderCustom: function (swiper, current, total) {
+            return '<span class="swiper-pagination-current current">' + current + '</span>' +  '<span class="swiper-pagination-bar bar"></span>' + '<span class="swiper-pagination-total total">' + total + '</span>';
+        }
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+})
