@@ -25,10 +25,7 @@
 								<img src="<?php echo $path ?>img/mob_main_popup1.jpg" alt="" class="img">
 							</a>
 							<a href="" class="swiper-slide item">
-								<img src="<?php echo $path ?>img/mob_main_popup1.jpg" alt="" class="img">
-							</a>
-							<a href="" class="swiper-slide item">
-								<img src="<?php echo $path ?>img/mob_main_popup1.jpg" alt="" class="img">
+								<img src="<?php echo $path ?>img/mob_main_popup2.jpg" alt="" class="img">
 							</a>
 						</div>						
 					</div>	
