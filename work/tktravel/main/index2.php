@@ -3084,8 +3084,9 @@
 							<div class="tab_nav on">
 								<span class="link">강원도</span>
 							</div>
+							<!-- 260716 수정2 -->
 							<div class="tab_nav">
-								<span class="link">서울/경기/인천</span>
+								<span class="link">서울</span>
 							</div>
 							<div class="tab_nav">
 								<span class="link">충청북도</span>
@@ -3111,11 +3112,19 @@
 							<div class="tab_nav">
 								<span class="link">부산광역시</span>
 							</div>
+							<!-- 260716 수정 -->
 							<div class="tab_nav">
-								<span class="link">울산광역시</span>
+								<span class="link">강릉시</span>
 							</div>
 							<div class="tab_nav">
 								<span class="link">제주도</span>
+							</div>
+							<!-- 260716 수정2 -->
+							<div class="tab_nav">
+								<span class="link">경기도</span>
+							</div>
+							<div class="tab_nav">
+								<span class="link">인천시</span>
 							</div>
 						</div>
 						<div class="tab_contbox">
@@ -3388,7 +3397,8 @@
 										</a>
 									</div>
 								</div>	
-							</div><div class="tab_cont">
+							</div>
+							<div class="tab_cont">
 								<div class="map">
 									<img src="<?php echo $path?>img/ms14_map7.png" alt="" class="img">
 								</div>
@@ -3522,7 +3532,8 @@
 										</a>
 									</div>
 								</div>	
-							</div><div class="tab_cont">
+							</div>
+							<div class="tab_cont">
 								<div class="map">
 									<img src="<?php echo $path?>img/ms14_map10.png" alt="" class="img">
 								</div>
@@ -3615,6 +3626,97 @@
 							<div class="tab_cont">
 								<div class="map">
 									<img src="<?php echo $path?>img/ms14_map12.png" alt="" class="img">
+								</div>
+								<div class="swiper ms14_swiper">					
+									<div class="swiper-wrapper">
+										<a href="<?php echo $path ?>product/view.php" class="swiper-slide item">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic6.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="ori">1,358,000원</p>
+													<p class="price">1,018,500원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="swiper-slide item">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic7.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="ori">1,358,000원</p>
+													<p class="price">1,018,500원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="swiper-slide item">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic8.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="ori">1,358,000원</p>
+													<p class="price">1,018,500원</p>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>	
+							</div>
+							<!-- 260716 수정2 -->
+							<div class="tab_cont">
+								<div class="map">
+									<img src="<?php echo $path?>img/ms14_map13.png" alt="" class="img">
+								</div>
+								<div class="swiper ms14_swiper">					
+									<div class="swiper-wrapper">
+										<a href="<?php echo $path ?>product/view.php" class="swiper-slide item">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic6.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="ori">1,358,000원</p>
+													<p class="price">1,018,500원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="swiper-slide item">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic7.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="ori">1,358,000원</p>
+													<p class="price">1,018,500원</p>
+												</div>
+											</div>
+										</a>
+										<a href="<?php echo $path ?>product/view.php" class="swiper-slide item">
+											<div class="imgbox">
+												<img src="<?php echo $path ?>img/prd_pic8.jpg" alt="" class="img">
+											</div>
+											<div class="txtbox">
+												<p class="tit">튀르키예 일주 9일 YP</p>
+												<div class="pricebox">
+													<p class="ori">1,358,000원</p>
+													<p class="price">1,018,500원</p>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>	
+							</div>
+							<div class="tab_cont">
+								<div class="map">
+									<img src="<?php echo $path?>img/ms14_map14.png" alt="" class="img">
 								</div>
 								<div class="swiper ms14_swiper">					
 									<div class="swiper-wrapper">
