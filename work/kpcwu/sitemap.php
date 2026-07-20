@@ -80,7 +80,13 @@
             <ul class="sitemap_nav">
 
                 <!------------ 01 메인 ----------->
-                <li><a href="index.php" class="tit">01 메인</a></li>
+                <li>
+                    <p class="tit">01 메인</p>
+                    <ul class="site_sub_menu wid3">
+						<li><a href="index.php">01 메인</a></li>
+						<li><a href="index2.php">02 메인 (풀페이지)</a></li>
+					</ul>
+                </li>
 
 
                 <!------------ 02 소개 ----------->
