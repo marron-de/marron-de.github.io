@@ -84,7 +84,7 @@
                     <p class="tit">01 메인</p>
                     <ul class="site_sub_menu wid3">
 						<li><a href="index.php">01 메인</a></li>
-						<li><a href="index2.php">02 메인 (풀페이지)</a></li>
+						<li><a href="main/index_full.php">02 메인 (풀페이지)</a></li>
 					</ul>
                 </li>
 
