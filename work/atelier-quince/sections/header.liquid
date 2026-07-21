@@ -156,16 +156,23 @@
 {%- endcapture -%}
 
 {%- capture account_icon -%}
-  <a
+
+  {% comment %} <a
     class="header__icon-touch header__icon-touch--account"
     href="{{ routes.account_url }}"
     aria-label="{{ 'general.accessibility.go_account' | t }}"
   >
     {% render 'icon-button', icon: 'header-account' %}
-  </a>     
+  </a> {% endcomment %}
+
+  <shopify-store store-domain="https://{{ shop.domain }}" country="{{ localization.country.iso_code }}" language="{{ localization.language.iso_code }}"></shopify-store>
+  <shopify-account menu="customer-account-main-menu">
+  	<div slot="signed-out-avatar" style="cursor: pointer;">
+  		{% render 'icon-button', icon: 'header-account' %}
+  	</div>
+  </shopify-account>
+  
 {%- endcapture -%}
-
-
 
 {%- capture cart_icon -%}
   <a
