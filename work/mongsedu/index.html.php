@@ -108,7 +108,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div> -->
-					<div class="swiper-slide item item2">
+					<!-- <div class="swiper-slide item item2">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg_mob.jpg" alt="" class="bg tablet">
@@ -126,8 +126,8 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=35" class="btn typeB">설명회 바로가기</a>
 							</div>
 						</div>
-					</div>
-					<div class="swiper-slide item item4">
+					</div> -->
+					<!-- <div class="swiper-slide item item4">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner4_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner4_bg_mob.jpg" alt="" class="bg tablet">
@@ -146,7 +146,7 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=34" class="btn typeE">설명회 바로가기</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- <div class="swiper-slide item item6">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner6_bg.jpg" alt="" class="bg pc">
