@@ -100,8 +100,9 @@
 			<p class="tit">home</p>
 		</a>
 	</div>
+	<div class="navbar"></div>
 	<div class="navitem">
-		<a href="tel:+10-8114-9003" class="link">
+		<a href="tel:02-6052-9003" class="link">
 			<div class="iconbox">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon2_off.png" alt="" class="icon off">
 				<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/nav_icon2_on.png" alt="" class="icon on">
@@ -109,6 +110,7 @@
 			<p class="tit">전화상담</p>
 		</a>
 	</div>
+	<div class="navbar"></div>
 	<div class="navitem">
 		<a href="https://pf.kakao.com/_fxmxmWV" class="link" target="_blank">
 			<div class="iconbox">
@@ -118,6 +120,7 @@
 			<p class="tit">카톡상담</p>
 		</a>
 	</div>
+	<div class="navbar"></div>
 	<div class="navitem">
 		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission" class="link">
 			<div class="iconbox">
@@ -127,6 +130,7 @@
 			<p class="tit">설명회</p>
 		</a>
 	</div>
+	<div class="navbar"></div>
 	<div class="navitem">
 		<a href="https://www.youtube.com/channel/UCbxH8_UgfZNjiyVJsWHaFDg" class="link" target="_blank">
 			<div class="iconbox">

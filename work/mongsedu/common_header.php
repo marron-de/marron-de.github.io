@@ -402,7 +402,7 @@
 					<p class="txt">전화상담</p>
 				</a>
 			</div>
-			<div class="item">
+			<!-- <div class="item">
 				<a href="sms:010-8114-9003" class="link">
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon2.png" class="icon" alt="">
 					<p class="txt">문자상담</p>
@@ -419,6 +419,18 @@
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon4.png" class="icon" alt="">
 					<p class="txt">자료요청</p>
 				</a>
+			</div> -->
+			<div class="item">
+				<a href="<?php echo G5_URL ?>/page/?pid=counsel" class="link">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon5.png" class="icon" alt="">
+					<p class="txt">상담신청</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission" class="link">
+					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_icon6.png" class="icon" alt="">
+					<p class="txt">설명회</p>
+				</a>
 			</div>
 			<div class="line"></div>
 		</div>
@@ -431,11 +443,11 @@
 				<ul class="acc_cont">
 					<li>
 						<div class="snslist">
-							<a href="https://blog.naver.com/mongssing" class="link" target="_blank">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_blog.png" class="icon" alt="">
-							</a>
 							<a href="https://www.youtube.com/@%EB%AA%BD%EC%84%A0%EC%83%9D" class="link" target="_blank">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_youtube.png" class="icon" alt="">
+							</a>
+							<a href="https://blog.naver.com/mongssing" class="link" target="_blank">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_blog.png" class="icon" alt="">
 							</a>
 							<a href="https://www.instagram.com/mongsedu/" class="link" target="_blank">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/sticky_insta.png" class="icon" alt="">

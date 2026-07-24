@@ -15,7 +15,7 @@ if (!defined('_EYOOM_')) exit;
                 <div class="frame-d">
                     <span class="sosok-hagi-e">상담받기 >
                     </span >
-                    <span class="dapsa">베트남/태국 국제학교 입학시험 상담</span>
+                    <span class="dapsa">태국 국제학교 입학상담</span>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@ if (!defined('_EYOOM_')) exit;
                     <div class="frame-17">
                         <div class="frame-18">
                             <div class="frame-19">
-                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">베트남/태국 국제학교 입학시험 상담</span >
+                                <span class="dapsa-jeong-mi-deul-i-deul-eo-gap-ni-da">태국 국제학교 입학상담</span >
                             </div>
                             <div class="frame-1a">
                                 <div class="tooltip">
@@ -44,7 +44,7 @@ if (!defined('_EYOOM_')) exit;
                             </div>
                         </div>
                         <span
-                            class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong">베트남, 태국 등 주요 국제학교 10개 대상</span >
+                            class="muryo-yuhag-seobiseu-wa-ibsi-keon-sel-ting-kkaji-dayang-han-seobiseu-je-gong wrap">현지 거주 15년 · 국제학교 학부모가 직접 안내하는 태국 유학</span >
                     </div>
                     <!-- <div class="frame-1d">
                         <div class="tags-1e">
@@ -73,7 +73,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">대표 상담사</p>
 												<p class="desc">
 													<span class="txt">
-														김연수 실장
+														최승일 방콕 현지 상담사
 													</span>
 												</p>
 											</div>
@@ -84,7 +84,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">상담방식</p>
 												<p class="desc">
 													<span class="txt">
-														서울강남 (방문) 혹은 비대면 온라인
+														비대면 온라인 / 방콕 현지 방문·학교투어 동행
 													</span>
 												</p>
 											</div>
@@ -95,9 +95,8 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">상담장소</p>
 												<p class="desc">
 													<span class="txt">
-														강남역 도보 1분거리
+														방콕 현지 방문·학교투어 동행
 													</span>
-													<a href="https://naver.me/Ix0CWeKc" class="tag" target="_blank">지도보기</a>
 												</p>
 											</div>
 										</div>
@@ -107,7 +106,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">상담비용</p>
 												<p class="desc">
 													<span class="txt">
-														0원 무료 (1시간 상담보장)
+														0원 무료 (1시간 상담 보장)
 													</span>
 												</p>
 											</div>
@@ -117,10 +116,86 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="line-2a"></div>	
 								<div class="frame-section ver2">
 									<div class="frame-titbox gap2">
-										<p class="frame-title">상담안내</p>
+										<p class="frame-title">상담학교 리스트(태국 전 지역)</p>
 										<p class="frame-desc3">
-											테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 테스트 내용입니다. 
+											태국 국제학교에 직접 아이를 보낸 전문가를 통해, 방콕/치앙마이/푸켓 등 약 50여개 이상의 주요 국제학교를 커리큘럼 <br class="pc">(IB·영국식·미국식)별로 비교하고, 추천 주거지와 유학 예산까지 현지에서 직접 안내해 드립니다.
 										</p>
+									</div>
+									<div class="counselingwrap">
+										<div class="counselingbox">
+											<div class="box_tit">방콕 상담 가능학교</div>
+											<div class="box_list">
+												<div class="item">
+													<p class="tit">1 티어</p>
+													<p class="desc">
+														<span class="txt"> ISB, NIST, 파타나</span>
+													</p>
+												</div>
+												<div class="item">
+													<p class="tit">2~3 티어</p>
+													<p class="desc">
+														<span class="txt">ASB 스쿰빗, ASB 그린밸리, 방콕프렙, 세인트앤드류(71·에까마이), 세인트앤드류 107캠퍼스, 리젠트방콕,  루암루디방콕 등</span>
+													</p>
+												</div>
+												<div class="item">
+													<p class="tit">영국 본교 계열</p>
+													<p class="desc">
+														<span class="txt">해로우, 슐스베리, 킹스 칼리지, 덜위치 칼리지, 위컴 애비</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="counselingbox">
+											<div class="box_tit">파타야 상담 가능학교</div>
+											<div class="box_list">
+												<div class="item">
+													<p class="tit">1 티어</p>
+													<p class="desc">
+														<span class="txt">리젠트 파타야, 럭비, 하이게이트</span>
+													</p>
+												</div>
+												<div class="item">
+													<p class="tit">2~3 티어</p>
+													<p class="desc">
+														<span class="txt">타라 파타나, MIS</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="counselingbox">
+											<div class="box_tit">푸켓 상담 가능학교</div>
+											<div class="box_list">
+												<div class="item">
+													<p class="tit">1 티어</p>
+													<p class="desc">
+														<span class="txt">British International School Phuket, UWC, BCIS Phuket</span>
+													</p>
+												</div>
+												<div class="item">
+													<p class="tit">2티어</p>
+													<p class="desc">
+														<span class="txt">Headstart국제학교, 루암루디 푸켓</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="counselingbox">
+											<div class="box_tit">치앙마이 상담 가능학교</div>
+											<div class="box_list">
+												<div class="item">
+													<p class="tit">1 티어</p>
+													<p class="desc">
+														<span class="txt">CMIS, 란나(LANNA), 프렘(PREM), 판야덴(PANYADEN)</span>
+													</p>
+												</div>
+												<div class="item">
+													<p class="tit">2~3 티어</p>
+													<p class="desc">
+														<span class="txt">NIS, GRACE, SISB</span>
+													</p>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
                                 <div class="line-2a"></div>	
@@ -131,18 +206,10 @@ if (!defined('_EYOOM_')) exit;
 									<div class="counselingbox2">
 										<div class="item">
 											<div class="imgbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img1.jpg" alt="" class="img">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img27.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												테스트 내용입니다. 테스트 내용입니다.
-											</p>
-										</div>
-										<div class="item">
-											<div class="imgbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img2.jpg" alt="" class="img">
-											</div>
-											<p class="tit">
-												테스트 내용입니다. 테스트 내용입니다.
+												태국 국제학교 비교 및 연령대별 추천 (방콕·파타야·푸껫·치앙마이)
 											</p>
 										</div>
 										<div class="item">
@@ -150,7 +217,7 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img3.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												테스트 내용입니다. 테스트 내용입니다.
+												유학 비용 및 예산 설계 (학비·생활비·비자)
 											</p>
 										</div>
 										<div class="item">
@@ -158,15 +225,23 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img4.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												테스트 내용입니다. 테스트 내용입니다.
+												콘도·주거지 및 정착 상담
 											</p>
 										</div>
 										<div class="item">
 											<div class="imgbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img5.jpg" alt="" class="img">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img28.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												테스트 내용입니다. 테스트 내용입니다.
+												IB, A레벨, AP 등 커리큘럼 비교
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img29.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												학교투어 동행 및 현지 케어
 											</p>
 										</div>
 										<div class="item">
@@ -174,7 +249,15 @@ if (!defined('_EYOOM_')) exit;
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img6.jpg" alt="" class="img">
 											</div>
 											<p class="tit">
-												테스트 내용입니다. 테스트 내용입니다.
+												여름·겨울 영어캠프 및 단기 스쿨링 안내
+											</p>
+										</div>
+										<div class="item">
+											<div class="imgbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/counseling_cont_img5.jpg" alt="" class="img">
+											</div>
+											<p class="tit">
+												대입 로드맵 및 진로 방향
 											</p>
 										</div>
 									</div>
@@ -188,14 +271,16 @@ if (!defined('_EYOOM_')) exit;
                                                 <span>HOT 인기멘토</span>
                                             </div>
                                         </div>
+										<span class="frame-desc">태국에서 15년 이상 거주하며, 두 자녀를 8년째 방콕 국제학교에 보내고 있는 학부모이자, 현지 유학 지원, 국제학교 영어캠프·단기 스쿨링·학교투어를 직접 운영하는 현지 상담사 최승일 입니다.</span>
                                     </div>
                                     <div class="frame-140">
                                         <div class="frame-141">
                                             <div class="frame-142">
-                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit21.png" alt="" class="img">
+                                                <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit26.png" alt="" class="img">
                                             </div>
                                             <div class="frame-145">
-                                                <span class="span-mentor">김연수 실장</span >
+                                                <span class="span-mentor">최승일 멘토</span>
+												<span class="span-residence">현지 거주 15년 이상</span>
                                             </div>
                                         </div>
 										<div class="frame-titbox mob_show">
@@ -205,7 +290,7 @@ if (!defined('_EYOOM_')) exit;
 													<span>HOT 인기멘토</span>
 												</div>
 											</div>
-											<span class="frame-desc">몽선생생에서는 오로지 현지 체류경험이 있고, 오랫동안 교육업에 종사한 경험자들로만 구성하여 확실하고 믿을 수 있는 유학수속 서비스를 제공합니다.</span >
+											<span class="frame-desc">태국에서 15년 이상 거주하며, 두 자녀를 8년째 방콕 국제학교에 보내고 있는 학부모이자, 현지 유학 지원, 국제학교 영어캠프·단기 스쿨링·학교투어를 직접 운영하는 현지 상담사 최승일 입니다.</span >
 										</div>
                                         <div class="frame-146">
                                             <div class="frame-147">
@@ -213,24 +298,22 @@ if (!defined('_EYOOM_')) exit;
                                                     <span class="span-career">주요이력</span>
 													<div class="tagbox-149">
 														<div class="tags-149">
-															<span class="span-location">베트남</span>
-														</div>
-														<div class="tags-149">
-															<span class="span-location">태국 </span>
+															<span class="span-location">태국</span>
 														</div>
 													</div>
                                                 </div>
                                                 <div class="frame-14a">
-                                                    <span class="span-education">‧ 테스트 이력</span >
-                                                    <span class="span-education">‧ 테스트 이력</span >
-                                                    <span class="span-education">‧ 테스트 이력</span >
+                                                    <span class="span-education">‧ 태국(방콕) 현지 거주 15년</span >
+                                                    <span class="span-education">‧ 방콕 국제학교 학부모 8년 (두 자녀 재학 중)</span >
+                                                    <span class="span-education">‧ 태국 정규 유학 상담(초·중·고) 및 영어캠프·단기 스쿨링·학교투어 운영 4년</span >
                                                 </div>
                                             </div>
                                             <div class="line-14c"></div>
                                             <div class="frame-14d">
                                                 <span class="span-comment">멘토 코멘트</span>
                                                 <div class="frame-14e">
-                                                    <span class="span-text">코멘트 내용입니다. 코멘트 내용입니다. 코멘트 내용입니다. 코멘트 내용입니다. 코멘트 내용입니다. 코멘트 내용입니다. 코멘트 내용입니다. 코멘트 내용입니다. ㄴ</span >
+                                                    <span class="span-text">저는 상담사이기 전에, 방콕에서 두 아이를 국제학교에 보내는 학부모입니다. 
+														<br class="pc">학교를 고르고, 입학시키고, 아이가 적응하는 과정까지 제가 직접 겪었습니다. <br class="pc">저 역시 중국과 영국에서 유학하며 낯선 나라에 홀로 정착하는 일이 어떤 것인지 몸으로 아는 사람입니다. <br class="pc">브로셔에 없는 현실 학교의 진짜 분위기, 한국 아이가 적응하며 겪는 것들, 부모가 놓치기 쉬운 것들까지 현지에서 직접 보고 겪은 이야기로 안내해 드리겠습니다. <br class="pc">태국 조기유학의 첫걸음을, 가장 솔직하게 함께하겠습니다.</span >
                                                 </div>
                                             </div>
                                         </div>
@@ -251,9 +334,9 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">김연수 실장</span>
+                                        <span class="span-text-15a">최승일 멘토</span>
                                         <div class="frame-15b">
-                                            <span class="time-15c">-</span>
+                                            <span class="time-15c">현지 거주 15년 경력자</span>
                                         </div>
                                     </div>
                                 </div>
@@ -267,11 +350,11 @@ if (!defined('_EYOOM_')) exit;
                                             </li>
                                             <li>
                                                 <span>상담장소</span>
-                                                <p>서울 강남 혹은 온라인 상담</p>
+                                                <p>비대면 온라인 / 방콕 현지 투어 동행</p>
                                             </li>
                                             <li>
                                                 <span>주요 상담분야</span>
-                                                <p>-</p>
+                                                <p>국제학교 특징비교 및 진로 로드맵</p>
                                             </li>
                                         </ul>
                                     </div>

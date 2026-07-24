@@ -22,6 +22,49 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="swiper banner_swiper">
 				<div class="swiper-wrapper">
+					<div class="swiper-slide item item7">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_img.png" alt="" class="img">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">서울 강남</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">8월7일(금) 10:00~17:00</p>
+								<p class="tit">
+									<span class="color">싱가포르 국립대</span>
+									<br>
+									진로 컨설팅 체험하기(1회)
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=41" class="btn typeE">세션 예약하기</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide item item8">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_img.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_img_m.png" alt="" class="img tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">쿠알라룸프</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">8월10일(월) 10:00 | 선착순 20명</p>
+								<p class="tit">
+									말레이시아 국제학교 <br>
+									쿠알라룸프 현지 설명회
+								</p>
+								<p class="desc">17년 경력자 직접설명</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=40" class="btn typeB">세션 예약하기</a>
+							</div>
+						</div>
+					</div>
 					<!-- <div class="swiper-slide item item1">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg.jpg" alt="" class="bg pc">

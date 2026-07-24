@@ -92,17 +92,17 @@ if (!defined('_EYOOM_')) exit;
 						</div>
 						<p class="tit">홍콩 <br class="tablet">대학</p>
 					</a>
-					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.', 'emoji1')">
+					<a class="link swiper-slide" onclick="showToast('컨설팅 준비중입니다.', 'emoji1')">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon7.png" alt="" class="icon">
 						</div>
 						<p class="tit">싱가폴 <br class="tablet">국제학교</p>
 					</a>
-					<a class="link swiper-slide" onclick="showToast('수속 서비스 준비중입니다.', 'emoji1')">
+					<a class="link swiper-slide" onclick="pro_modal(5)">
 						<div class="imgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/procedure_tab_icon9.png" alt="" class="icon">
 						</div>
-						<p class="tit">UC 계열 <br class="tablet">주립대</p>
+						<p class="tit">아시아+미국 <br class="tablet">대학</p>
 					</a>
 				</div>
 				<div class="swiper-scrollbar scrollbar"></div>
@@ -116,7 +116,7 @@ if (!defined('_EYOOM_')) exit;
 				<div class="title">
 					<span class="tit">국제학교 <span class="color1">입학/수속 서비스</span></span>
 				</div>
-                <div class="tab">
+                <div class="tab" style="display: none;">
                     <ul class="tab_tit">
                         <li><a href="#" class="show" id="tab-11">말레이시아</a></li>
                         <li><a href="#" id="tab-12">싱가포르</a></li>
@@ -128,7 +128,247 @@ if (!defined('_EYOOM_')) exit;
                 <ul class="panel">
                     <li id="content-11">
                         <ul>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail03'">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail06'">
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">수속 서비스</p>
+                                    	<p class="badge typeB">말레이시아</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure06.jpg" alt="말레이시아 쿠알라룸프">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="title">쿠알라룸프</p>
+											<P class="subtitle">국제학교 무료수속</P>
+										</div>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>국제학교 무료수속</p>
+                                        <span class="title">말레이시아 쿠알라룸프</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail07'">
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">수속 서비스</p>
+                                    	<p class="badge typeB">말레이시아</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure07.jpg" alt="말레이시아 조호바루">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="title">조호바루</p>
+											<P class="subtitle">국제학교 무료수속</P>
+										</div>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>국제학교 무료수속</p>
+                                        <span class="title">말레이시아 조호바루</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail08'">
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">수속 서비스</p>
+                                    	<p class="badge typeC">태국</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure08.jpg" alt="태국 방콕/치앙마이">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="title">방콕/치앙마이</p>
+											<P class="subtitle">국제학교 무료수속</P>
+										</div>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>국제학교 무료수속</p>
+                                        <span class="title">태국 방콕/치앙마이</span>
+                                    </a>
+                                </div>
+                            </li>                            
+                            <li onclick="showToast('수속 서비스 준비중입니다', 'emoji2')">
+                            <!-- <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail09'"> -->
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">수속 서비스</p>
+                                    	<p class="badge typeD">싱가포르</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure09.jpg" alt="싱가포르">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="title">싱가포르</p>
+											<P class="subtitle">국제학교 무료수속</P>
+										</div>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>국제학교 무료수속</p>
+                                        <span class="title">싱가포르</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="showToast('수속 서비스 준비중입니다', 'emoji2')">
+                            <!-- <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail10'"> -->
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">수속 서비스</p>
+                                    	<p class="badge typeE">베트남</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure10.jpg" alt="베트남 하노이/호치민">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="title">하노이/호치민</p>
+											<P class="subtitle">국제학교 무료수속</P>
+										</div>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>국제학교 무료수속</p>
+                                        <span class="title">베트남 하노이/호치민</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail02'">
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">입학 컨설팅</p>
+                                    	<p class="badge typeB">말레이시아</p>
+                                    	<p class="badge typeC">태국</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure03.jpg" alt="입학 수속 서비스">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="title">명문 국제학교</p>
+											<P class="subtitle">입학 컨설팅</P>
+										</div>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>말레이시아, 태국 등</p>
+                                        <span class="title">명문 국제학교 컨설팅</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail05'">
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">현지 서비스</p>
+                                    	<p class="badge typeB">말레이시아</p>
+                                    	<p class="badge typeC">태국</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure02.jpg" alt="현지 학교/거주지 답사">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="subtitle">국제학교</p>										
+											<p class="title">답사/투어</p>
+										</div>
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>말레이시아, 태국</p>
+                                        <span class="title">답사 프로그램</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail01'">
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">현지 서비스</p>
+                                    	<p class="badge typeB">말레이시아</p>
+                                    	<p class="badge typeC">태국</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure04.jpg" alt="초기정착 서비스">
+									<div class="img_bottom2">
+										<div class="top">
+											<div class="flagbox">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="bottom">
+											<p class="subtitle">말레이시아, 태국</p>
+											<p class="title">초기정착 서비스</p>
+										</div> 
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>숙소동행, 현지 생활 관리</p>
+                                        <span class="title">1개월 초기 정착서비스</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail04'">
+                                <div class="img_area">
+									<div class="badgebox">
+                                    	<p class="badge">입학시험 대비</p>
+                                    	<p class="badge typeA">전지역</p>
+									</div>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure05.jpg" alt="국제학교 입학시험 대비반">
+									<div class="img_bottom2">
+										<div class="top">
+										</div>
+										<div class="bottom">
+											<P class="subtitle">국제학교</P>
+											<p class="title">입학시험 대비반</p>
+										</div> 
+									</div>
+                                </div>
+                                <div class="text_area">
+                                    <a href="#none">
+                                        <p>CAT4, MAP, 인터뷰</p>
+                                        <span class="title">입학시험 대비반</span>
+                                    </a>
+                                </div>
+                            </li>
+
+							<!-- <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail03'">
                                 <div class="img_area">
                                     <p class="nation">수수료 0원</p>
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure01.jpg" alt="ZERO 무료 수속">
@@ -177,7 +417,7 @@ if (!defined('_EYOOM_')) exit;
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure02.jpg" alt="현지 학교/거주지 답사">
 									<div class="img_bottom2">
 										<div class="top">
-											<span class="tag color2">현지 지사장 동행</span>
+											<span class="subtitle">현지 지사장 동행</span>
 											<div class="flagbox">
 												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
 											</div>
@@ -198,7 +438,7 @@ if (!defined('_EYOOM_')) exit;
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_procedure04.jpg" alt="초기정착 서비스">
 									<div class="img_bottom2">
 										<div class="top">
-											<span class="tag color2">1달 관리</span>
+											<span class="subtitle">1달 관리</span>
 											<div class="flagbox">
 												<img  src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
 											</div>
@@ -230,7 +470,7 @@ if (!defined('_EYOOM_')) exit;
                                         <span class="title">국제학교 입학시험 대비반</span>
                                     </a>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li id="content-12">
@@ -429,7 +669,7 @@ if (!defined('_EYOOM_')) exit;
                                 </div>
                             </li>
                             <!-- <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=procedure_detail30'"> -->
-                            <li onclick="showToast()">
+                            <li onclick="showToast('컨설팅 준비중입니다.', 'emoji1')">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counseln10.jpg" alt="송도,서강 글로벌캠퍼스 수속 서비스 안내">
 									<div class="img_txtbox">
@@ -466,7 +706,7 @@ if (!defined('_EYOOM_')) exit;
                 <ul class="panel">
                     <li>
                         <ul class="mentor_list">
-                            <li onclick="showToast()">
+                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=special_sogang'">
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb2_procedure01.jpg" alt="한국에서 미국대학 편입준비">
 									<div class="img_txtbox">

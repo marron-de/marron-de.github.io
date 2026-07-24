@@ -80,16 +80,13 @@
 										RISE에듀 본사팀장
 									</p>
 									<p class="desc">
-										영유아 교육상담 10년 
-									</p>
-									<p class="desc">
 										이화여대 학사 졸업
 									</p>
 									<p class="desc">
 										칭화대 국제관계 석사
 									</p>
 									<p class="desc">
-										영우아 주니어 교육 상담 10년 경력
+										영유아 주니어 교육 상담 10년 경력
 									</p>
 								</div>
 							</div>
@@ -1072,7 +1069,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item" data-num="24"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="24">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit23.png" alt="" class="img">
@@ -1117,7 +1114,7 @@
 							</div>
 						</div>
 					</div>	
-					<div class="swiper-slide item" data-num="25"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="25">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit24.png" alt="" class="img">
@@ -1128,7 +1125,7 @@
 								</div>
 								<p class="title">
 									<span class="name">이승연 멘토</span>
-									<span class="desc">국제학교 출신 교포 강사</span>
+									<span class="desc">드로잉·페인팅 포트폴리오</span>
 								</p>
 							</div>
 						</div>
@@ -1143,7 +1140,13 @@
 								<p class="career_tit">주요이력</p>
 								<div class="career_descbox">
 									<p class="desc">
-										업데이트 예정입니다.
+										입시 강사 경력 5년
+									</p>
+									<p class="desc">
+										해외 미술대학 포트폴리오 전문 지도
+									</p>
+									<p class="desc">
+										싱가포르 예술대학(College) 출신
 									</p>
 								</div>
 							</div>
@@ -1151,13 +1154,13 @@
 							<div class="cmtbox">
 								<p class="cmt_tit"><span class="icon"></span><span class="txt">멘토 코멘트</span></p>
 								<p class="cmt_desc">
-									업데이트 예정입니다.
+									해외와 국내 미술 입시를 모두 경험한 바탕으로, 학생 개개인의 강점과 개성을 살린 포트폴리오를 지도합니다. 단순한 실기 능력 향상을 넘어 작품의 완성도와 표현력, 창의적인 사고를 함께 키울 수 있도록 맞춤형 피드백을 제공하며, 해외 예술대학 입시에 필요한 포트폴리오 준비 과정을 체계적으로 지원합니다.
 								</p>
 							</div>
 						</div>
 
 					</div>	
-					<div class="swiper-slide item" data-num="26"> <!-- 수정 예정 -->
+					<div class="swiper-slide item" data-num="26">
 						<div class="infobox">
 							<div class="thumbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit25.png" alt="" class="img">
@@ -1168,7 +1171,7 @@
 								</div>
 								<p class="title">
 									<span class="name">박주인 멘토</span>
-									<span class="desc">국제학교 출신 교포 강사</span>
+									<span class="desc">3D·렌더링·그래픽 포트폴리오</span>
 								</p>
 							</div>
 						</div>
@@ -1183,7 +1186,13 @@
 								<p class="career_tit">주요이력</p>
 								<div class="career_descbox">
 									<p class="desc">
-										업데이트 예정입니다.
+										3D·렌더링·그래픽 포트폴리오 전문 멘토
+									</p>
+									<p class="desc">
+										디자인 포트폴리오 제작 및 프로젝트 지도
+									</p>
+									<p class="desc">
+										학생 맞춤형 포트폴리오 컨설팅
 									</p>
 								</div>
 							</div>
@@ -1191,12 +1200,58 @@
 							<div class="cmtbox">
 								<p class="cmt_tit"><span class="icon"></span><span class="txt">멘토 코멘트</span></p>
 								<p class="cmt_desc">
-									업데이트 예정입니다.
+									3D 모델링, 렌더링, 그래픽 디자인을 기반으로 학생의 개성과 강점이 드러나는 포트폴리오를 함께 완성합니다. 단순히 결과물을 만드는 것을 넘어 기획 과정부터 시각적 완성도, 작품 구성, 프레젠테이션까지 체계적으로 지도하여 국내외 디자인·예술대학 입시에 경쟁력 있는 포트폴리오를 제작할 수 있도록 지원합니다.
 								</p>
 							</div>
 						</div>
 
 					</div>	
+					<!-- <div class="swiper-slide item" data-num="27">
+						<div class="infobox">
+							<div class="thumbox">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/img_cls_benefit26.png" alt="" class="img">
+							</div>
+							<div class="txtbox">
+								<div class="tagbox">
+									<span class="tag">말레이시아</span>
+								</div>
+								<p class="title">
+									<span class="name">박주인 멘토</span>
+									<span class="desc">3D·렌더링·그래픽 포트폴리오</span>
+								</p>
+							</div>
+						</div>
+						<div class="btnbox">
+							<button type="button" class="btn share_btn">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_share.svg" alt="" class="icon">
+							</button>
+							<a href="<?php echo G5_BBS_URL ?>/write.php?bo_table=qa" class="btn inq_btn">1:1 상담신청</a>
+						</div>
+						<div class="contbox">
+							<div class="careerbox">
+								<p class="career_tit">주요이력</p>
+								<div class="career_descbox">
+									<p class="desc">
+										태국(방콕) 현지 거주 15년
+									</p>
+									<p class="desc">
+										방콕 국제학교 학부모 8년 (두 자녀 재학 중)
+									</p>
+									<p class="desc">
+										태국 정규 유학 상담(초·중·고) 및 영어캠프·단기 스쿨링·학교투어 운영 4년
+									</p>
+								</div>
+							</div>
+							<div class="line"></div>
+							<div class="cmtbox">
+								<p class="cmt_tit"><span class="icon"></span><span class="txt">멘토 코멘트</span></p>
+								<p class="cmt_desc">
+									저는 상담사이기 전에, 방콕에서 두 아이를 국제학교에 보내는 학부모입니다. 학교를 고르고, 입학시키고, 아이가 적응하는 과정까지 제가 직접 겪었습니다. 저 역시 중국과 영국에서 유학하며 낯선 나라에 홀로 정착하는 일이 어떤 것인지 몸으로 아는 사람입니다. 브로셔에 없는 현실 학교의 진짜 분위기, 한국 아이가 적응하며 겪는 것들, 부모가 놓치기 쉬운 것들까지 현지에서 직접 보고 겪은 이야기로 안내해 드리겠습니다. 태국 조기유학의 첫걸음을, 가장 솔직하게 함께하겠습니다.
+								</p>
+							</div>
+						</div>
+
+					</div>	 -->
 				</div>
 				<div class="swiper-button-prev prev_btn"></div>
 				<div class="swiper-button-next next_btn"></div>

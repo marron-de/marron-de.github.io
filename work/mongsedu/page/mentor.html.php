@@ -507,7 +507,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="txtbox">
 									<div class="top">
 										<p class="name">이승연 멘토</p>
-										<p class="desc">라셀 예술대 순수미술 전공</p>
+										<p class="desc">드로잉·페인팅 포트폴리오</p>
 									</div>
 									<div class="bottom">
 										<p class="tag">예술대 수업 (순수미술)</p>
@@ -525,7 +525,7 @@ if (!defined('_EYOOM_')) exit;
 								<div class="txtbox">
 									<div class="top">
 										<p class="name">박주인 멘토</p>
-										<p class="desc">라셀 예술대 그래픽 전공</p>
+										<p class="desc">3D·렌더링·그래픽 포트폴리오</p>
 									</div>
 									<div class="bottom">
 										<p class="tag">예술대 수업 (제품/패션)</p>
@@ -534,6 +534,24 @@ if (!defined('_EYOOM_')) exit;
 									<div class="btn">자세히 보기</div>
 								</div>
 							</li>
+							<!-- <li class="item" onclick="mentor_modal(27);">
+								<div class="imgbox">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor2_csl_t26.png" alt="" class="img pc">
+									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t26.jpg" alt="" class="img tablet">
+									<div class="class_tag">class</div>
+								</div>
+								<div class="txtbox">
+									<div class="top">
+										<p class="name">최승일 멘토</p>
+										<p class="desc">3D·렌더링·그래픽 포트폴리오</p>
+									</div>
+									<div class="bottom">
+										<p class="tag">예술대 수업 (제품/패션)</p>
+										<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt="" class="more">
+									</div>
+									<div class="btn">자세히 보기</div>
+								</div>
+							</li> -->
 						</ul>
 					</li>
 					<li id="content-2">

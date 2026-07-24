@@ -204,7 +204,8 @@ if (!defined('_EYOOM_')) exit;
                                     </a>
                                 </div>
                             </li>
-                            <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail09'">
+                            <li  onclick="showToast('클래스 준비중입니다', 'emoji1')">
+                            <!-- <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=class_detail09'"> -->
                                 <div class="img_area">
                                     <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_classl09_1.jpg" alt="1달안에 잡아주는 영어 기초 훈련반">
                                 </div>

@@ -137,21 +137,20 @@ if (!defined('_EYOOM_')) exit;
                             </li>
                             <li onclick="location.href='<?php echo G5_URL ?>/page/?pid=counsel_detail11'">	
                                 <div class="img_area">
-                                    <p class="nation">태국/베트남</p>
-                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel04.jpg" alt="베트남/태국 국제학교" class="img">
+                                    <p class="nation">태국</p>
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thumb_counsel04.jpg" alt="태국 국제학교" class="img">
 									<div class="shape color4"></div>
 									<div class="img_bottom">
 										<div class="flagbox">
                                     		<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_thai.svg" alt="태국">
-                                    		<img class="flag" src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_biet.svg" alt="베트남">
 										</div>
-										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher4.png" alt="">
+										<img class="teacher" src="<?php echo EYOOM_THEME_URL; ?>/img/sub/thum_teacher12.png" alt="">
 									</div>
                                 </div>
                                 <div class="text_area">
                                     <a href="#none">
-                                        <span class="title">태국 / 베트남 국제학교</span>
-                                        <p>주요 국제학교 100여개</p>
+                                        <span class="title">태국 국제학교</span>
+                                        <p>주요 국제학교 50여개</p>
                                     </a>
                                 </div>
                             </li>
@@ -340,34 +339,36 @@ if (!defined('_EYOOM_')) exit;
             </div>
 			<div class="mentor_slidebox onlyPC">
 				<div class="tab_wrap">
-					<div class="tab_navbox swiper tab_swiper" data-gappc="0" data-gapmob="0">
-						<div class="swiper-wrapper">
-							<div class="tab_nav on swiper-slide">
-								<span class="txt">ALL</span>
-								<span class="arrow"></span>
+					<div class="tab_navwrap">
+						<div class="tab_navbox swiper tab_swiper" data-gappc="0" data-gapmob="0">
+							<div class="swiper-wrapper">
+								<div class="tab_nav on swiper-slide">
+									<span class="txt">ALL</span>
+									<span class="arrow"></span>
+								</div>
+								<div class="tab_nav swiper-slide">
+									<span class="txt">국제학교 전문</span>
+									<span class="arrow"></span>
+								</div>
+								<div class="tab_nav swiper-slide">
+									<span class="txt">대학입시 전문</span>
+									<span class="arrow"></span>
+								</div>
+								<div class="tab_nav swiper-slide last">
+									<span class="txt">유학수업 전문</span>
+									<span class="arrow"></span>
+								</div>
 							</div>
-							<div class="tab_nav swiper-slide">
-								<span class="txt">국제학교 전문</span>
-								<span class="arrow"></span>
-							</div>
-							<div class="tab_nav swiper-slide">
-								<span class="txt">대학입시 전문</span>
-								<span class="arrow"></span>
-							</div>
-							<div class="tab_nav swiper-slide last">
-								<span class="txt">대학입시 전문</span>
-								<span class="arrow"></span>
-							</div>
-							<div class="btn_box">
-								<a href="#none" class="btn">
-									<p class="txt">대표원장 상담</p>
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_blue.png" alt="" class="icon">
-								</a>
-								<a href="https://pf.kakao.com/_fxmxmWV" class="btn" target="_blank">
-									<p class="txt">빠른 상담</p>
-									<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_kakao.png" alt="" class="icon">
-								</a>
-							</div>
+						</div>
+						<div class="btn_box">
+							<!-- <a href="#none" class="btn">
+								<p class="txt">대표원장 상담</p>
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_blue.png" alt="" class="icon">
+							</a> -->
+							<a href="https://pf.kakao.com/_fxmxmWV" class="btn" target="_blank">
+								<p class="txt">빠른 상담</p>
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_kakao.png" alt="" class="icon">
+							</a>
 						</div>
 					</div>
 					<div class="tab_contbox">
@@ -441,27 +442,6 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(4);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t4.jpg" alt=""
-												class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt=""
-													class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="top">
-												<p class="name">이진영 멘토</p>
-												<p class="desc">홍콩대 의대 출신</p>
-											</div>
-											<div class="bottom">
-												<p class="tag">홍콩대학 전문</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
-													class="more">
-											</div>
-										</div>
-									</div>
 									<div class="swiper-slide item" onclick="mentor_modal(5);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t5.jpg" alt=""
@@ -483,12 +463,13 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
+
 									<div class="swiper-slide item" onclick="mentor_modal(6);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t6.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt=""
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt=""
 													class="flag">
 											</div>
 										</div>
@@ -499,6 +480,26 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 											<div class="bottom">
 												<p class="tag">해외대학 입학수속 전문</p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item" onclick="mentor_modal(9);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t9.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<div class="class_tag">class</div>
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">홍수진 실장</p>
+												<p class="desc">교육업 경력 10년</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">CLASS 통합관리</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -546,24 +547,63 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(9);">
+
+									<div class="swiper-slide item" onclick="mentor_modal(21);">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t9.jpg" alt=""
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t21.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt=""
-													class="flag">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt=""
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">김연수 실장</p>
+												<p class="desc">영유아 교육 행정경력 8년</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">국제학교 전문 코디네이터</p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item" onclick="mentor_modal(11);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t11.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<div class="class_tag">class</div>
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">Dennis 멘토</p>
+												<p class="desc">연세대학교 컴퓨터과학</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">해외대학 대비반</p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item" onclick="mentor_modal(4);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t4.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_hk.svg" alt=""
 													class="flag">
 											</div>
 										</div>
 										<div class="txtbox">
 											<div class="top">
-												<p class="name">홍수진 실장</p>
-												<p class="desc">교육업 경력 10년</p>
+												<p class="name">이진영 멘토</p>
+												<p class="desc">홍콩대 의대 출신</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">CLASS 통합관리</p>
+												<p class="tag">홍콩대학 전문</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -590,64 +630,22 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(11);">
+
+									<div class="swiper-slide item" onclick="mentor_modal(17);">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t11.jpg" alt=""
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t17.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_science.png" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
 											<div class="top">
-												<p class="name">Dennis 멘토</p>
-												<p class="desc">연세대학교 컴퓨터과학</p>
+												<p class="name">이은빈 멘토</p>
+												<p class="desc">듀오링고 만점에 가까운 실력자</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">해외대학 대비반</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
-													class="more">
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(12);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t12.jpg" alt=""
-												class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt=""
-													class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="top">
-												<p class="name">조수호 멘토</p>
-												<p class="desc">라셀 예술대 그래픽</p>
-											</div>
-											<div class="bottom">
-												<p class="tag">예술대 수업 (통합)</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
-													class="more">
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(13);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t13.jpg" alt=""
-												class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt=""
-													class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="top">
-												<p class="name">이희재 멘토</p>
-												<p class="desc">미국 UC 버클리대학 출신</p>
-											</div>
-											<div class="bottom">
-												<p class="tag">미국 유학 전문</p>
+												<p class="tag">라이팅 & 스피킹 전문</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -695,55 +693,54 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div> -->
-									<div class="swiper-slide item" onclick="mentor_modal(16);">
+									<div class="swiper-slide item" onclick="mentor_modal(12);">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t16.jpg" alt=""
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t12.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_uk.svg" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
 											<div class="top">
-												<p class="name">조서연 멘토</p>
-												<p class="desc">LSE 런던정경대 출신</p>
+												<p class="name">조수호 멘토</p>
+												<p class="desc">라셀 예술대 그래픽</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">영국 유학 전문</p>
+												<p class="tag">예술대 수업 (통합)</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(17);">
+									<div class="swiper-slide item" onclick="mentor_modal(13);">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t17.jpg" alt=""
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t13.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_canada.svg" alt=""
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt=""
 													class="flag">
 											</div>
 										</div>
 										<div class="txtbox">
 											<div class="top">
-												<p class="name">이은빈 멘토</p>
-												<p class="desc">듀오링고 만점에 가까운 실력자</p>
+												<p class="name">이희재 멘토</p>
+												<p class="desc">미국 UC 버클리대학 출신</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">라이팅 & 스피킹 전문</p>
+												<p class="tag">미국 유학 전문</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
 										</div>
 									</div>
+
 									<div class="swiper-slide item" onclick="mentor_modal(18);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t18.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
@@ -779,13 +776,33 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div> -->
+									<div class="swiper-slide item" onclick="mentor_modal(16);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t16.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_uk.svg" alt=""
+													class="flag">
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">조서연 멘토</p>
+												<p class="desc">LSE 런던정경대 출신</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">영국 유학 전문</p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
 									<div class="swiper-slide item" onclick="mentor_modal(20);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t20.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
@@ -800,33 +817,12 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(21);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t21.jpg" alt=""
-												class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="top">
-												<p class="name">김연수 실장</p>
-												<p class="desc">영유아 교육 행정경력 8년</p>
-											</div>
-											<div class="bottom">
-												<p class="tag">국제학교 전문 코디네이터</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
-													class="more">
-											</div>
-										</div>
-									</div>
 									<div class="swiper-slide item" onclick="mentor_modal(22);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t22.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
@@ -836,6 +832,67 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 											<div class="bottom">
 												<p class="tag">아이엘츠 수업 </p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide item" onclick="mentor_modal(24);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t23.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<div class="class_tag">class</div>
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">이찬빈 멘토</p>
+												<p class="desc">라셀 예술대 디자인 전공</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">예술대 수업 (그래픽)</p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item" onclick="mentor_modal(25);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t24.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<div class="class_tag">class</div>
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">이승연 멘토</p>
+												<p class="desc">드로잉·페인팅 포트폴리오</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">예술대 수업 (순수미술)</p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item" onclick="mentor_modal(26);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t25.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<div class="class_tag">class</div>
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">박주인 멘토</p>
+												<p class="desc">3D·렌더링·그래픽 포트폴리오</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">예술대 수업 (제품/패션)</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -898,7 +955,7 @@ if (!defined('_EYOOM_')) exit;
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t21.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_kr.svg" alt="" class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
@@ -944,7 +1001,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper mentor_swiper">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="mentor_modal(6);">
+									<!-- <div class="swiper-slide item" onclick="mentor_modal(6);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t6.jpg" alt=""
 												class="img">
@@ -964,7 +1021,7 @@ if (!defined('_EYOOM_')) exit;
 													class="more">
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="swiper-slide item" onclick="mentor_modal(3);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t3.jpg" alt=""
@@ -986,7 +1043,7 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(5);">
+									<!-- <div class="swiper-slide item" onclick="mentor_modal(5);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t5.jpg" alt=""
 												class="img">
@@ -1027,7 +1084,7 @@ if (!defined('_EYOOM_')) exit;
 													class="more">
 											</div>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -1038,36 +1095,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="swiper mentor_swiper">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item" onclick="mentor_modal(1);">
-										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t1.jpg" alt=""
-												class="img">
-											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_world.svg" alt=""
-													class="flag">
-											</div>
-										</div>
-										<div class="txtbox">
-											<div class="top">
-												<p class="name">대표원장 몽선생</p>
-												<p class="desc">아시아 교육 전문가</p>
-											</div>
-											<div class="bottom">
-												<p class="tag">해외대학 입시 전체</p>
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
-													class="more">
-											</div>
-										</div>
-									</div>
 									<div class="swiper-slide item" onclick="mentor_modal(9);">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t9.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt=""
-													class="flag">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
@@ -1082,43 +1115,61 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(7);">
+									<div class="swiper-slide item" onclick="mentor_modal(17);">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t7.jpg" alt=""
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t17.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
 											<div class="top">
-												<p class="name">이수연 실장</p>
-												<p class="desc">말레이시아 사립대 교직원 출신</p>
+												<p class="name">이은빈 멘토</p>
+												<p class="desc">듀오링고 만점에 가까운 실력자</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">말레이시아 대학 전문</p>
+												<p class="tag">라이팅 & 스피킹 전문</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
 										</div>
 									</div>
-									<div class="swiper-slide item" onclick="mentor_modal(8);">
+									<div class="swiper-slide item" onclick="mentor_modal(12);">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t8.jpg" alt=""
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t12.jpg" alt=""
 												class="img">
 											<div class="flagbox">
-												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt=""
-													class="flag">
+												<div class="class_tag">class</div>
 											</div>
 										</div>
 										<div class="txtbox">
 											<div class="top">
-												<p class="name">김소연 실장</p>
-												<p class="desc">kaplan 재단 교직원 출신</p>
+												<p class="name">조수호 멘토</p>
+												<p class="desc">라셀 예술대 그래픽</p>
 											</div>
 											<div class="bottom">
-												<p class="tag">미국/아시아 전문</p>
+												<p class="tag">예술대 수업 (통합)</p>
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
+													class="more">
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item" onclick="mentor_modal(24);">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/mentor_csl_t23.jpg" alt=""
+												class="img">
+											<div class="flagbox">
+												<div class="class_tag">class</div>
+											</div>
+										</div>
+										<div class="txtbox">
+											<div class="top">
+												<p class="name">이찬빈 멘토</p>
+												<p class="desc">라셀 예술대 디자인 전공</p>
+											</div>
+											<div class="bottom">
+												<p class="tag">예술대 수업 (그래픽)</p>
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/ic_more.svg" alt=""
 													class="more">
 											</div>
@@ -1130,10 +1181,10 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 				</div>
 				<div class="btn_box bottom">
-					<a href="#none" class="btn">
+					<!-- <a href="#none" class="btn">
 						<p class="txt">대표원장 상담</p>
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_go_blue.png" alt="" class="icon">
-					</a>
+					</a> -->
 					<a href="https://pf.kakao.com/_fxmxmWV" class="btn" target="_blank">
 						<p class="txt">빠른 상담</p>
 						<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/ico_kakao.png" alt="" class="icon">

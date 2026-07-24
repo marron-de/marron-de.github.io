@@ -395,7 +395,7 @@ if (!defined('_EYOOM_')) exit;
                             <div class="frame-157 default_ver">
                                 <div class="frame-158">
                                     <div class="frame-159">
-                                        <span class="span-text-15a">2,500,000원</span>
+                                        <span class="span-text-15a">4,300,000원</span>
                                         <div class="frame-15b">
                                             <span class="time-15c">* 비자 수속 시 추가비용 납부필요</span>
                                         </div>

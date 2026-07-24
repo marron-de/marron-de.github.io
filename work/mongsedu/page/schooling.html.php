@@ -278,6 +278,70 @@ if (!defined('_EYOOM_')) exit;
 											</div>
 										</div>
 									</div>
+									<div class="swiper-slide item ALL2 LNG asia1" data-end="2027-02-29" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail10'">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum10.jpg" alt="" class="img">
+											<div class="flagbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+											<div class="bottom"></div>
+										</div>
+										<div class="txtbox">
+											<div class="hashtag">
+												<p class="tag">말레이시아</p>
+												<p class="tag state">모집중</p>
+											</div>
+											<div class="titbox">
+												<p class="tit">말레이시아 GLC 4주 캠프, 몽키아라</p>
+												<p class="desc">2027년 1월, 한달살기/영어캠프</p>
+											</div>
+											<div class="infobox">
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
+														<span class="txt">기간</span>
+													</div>
+													<p class="desc">2027/1/01 ~ 2/29</p>
+												</div>
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
+														<span class="txt">대상</span>
+													</div>
+													<p class="desc">초등~중등 2학년</p>
+												</div>
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
+														<span class="txt">숙소</span>
+													</div>
+													<p class="desc">몽키아라 레지던스 또는 호텔 추천 가능</p>
+												</div>
+											</div>
+											<div class="bottom">
+												<div class="pricebox">
+													<p class="price ori">
+														<span class="tit">정상가</span>
+														<span class="desc">6,600,000원</span>
+													</p>
+													<p class="price total">
+														<span class="tit">할인가</span>
+														<span class="desc">
+															<span class="number">6,600,000원</span>
+															<!-- <span class="sale">
+																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+																<span class="percent">6%</span>
+															</span> -->
+														</span>
+													</p>
+												</div>
+												<a href="#none" class="more">
+													<span class="txt">상세보기</span>
+													<span class="icon"></span>
+												</a>
+											</div>
+										</div>
+									</div>
 									<div class="swiper-slide item ALL2 RES asia1" data-end="2026-08-02" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail03'">
 										<div class="imgbox">
 											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum3.jpg" alt="" class="img">
@@ -335,7 +399,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -403,7 +467,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -471,7 +535,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -537,7 +601,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -601,7 +665,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -669,7 +733,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -733,7 +797,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>
@@ -742,7 +806,7 @@ if (!defined('_EYOOM_')) exit;
 									</div>
 									<div class="swiper-slide item ALL2 LNG end" data-end="2026-07-31" onclick="showToast('마감된 스쿨링/캠프입니다', 'emoji2')">
 										<div class="imgbox">
-											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum10.jpg" alt="" class="img">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum0.jpg" alt="" class="img">
 											<div class="flagbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_singapore.svg" alt="" class="flag">
 											</div>
@@ -797,7 +861,7 @@ if (!defined('_EYOOM_')) exit;
 														</span>
 													</p>
 												</div>
-												<a href="#none" class="more" onclick="showToast('스쿨링/캠프 준비중입니다', 'emoji1')">
+												<a href="#none" class="more">
 													<span class="txt">상세보기</span>
 													<span class="icon"></span>
 												</a>

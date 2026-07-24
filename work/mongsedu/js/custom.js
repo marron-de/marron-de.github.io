@@ -767,32 +767,27 @@ function pro2_modal(i) {
 	$("#pro2_modal"+i).addClass('show');
 }
 // 상담학교 리스트 타이틀 너비
-$(window).on("load", function(){
-
-  $(".page-detail .counselingbox").each(function(){
-
-    const box = $(this);
-    const titElements = box.find(".tit");
-    if (!titElements.length) return;
+$(window).on("load", function () {
+    const boxes = $(".page-detail .counselingbox");
+    if (!boxes.length) return;
 
     let maxWidth = 0;
 
-    titElements.each(function(){
-      const width = this.getBoundingClientRect().width;
-      if (width > maxWidth) {
-        maxWidth = width;
-      }
+    boxes.find(".tit").each(function () {
+        const width = this.getBoundingClientRect().width;
+        if (width > maxWidth) {
+            maxWidth = width;
+        }
     });
 
+    if (maxWidth === 0) return;
     const rootSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
     const maxWidthRem = maxWidth / rootSize;
 
-    box[0].style.setProperty("--title-width", maxWidthRem + "rem");
-
-  });
-
+    boxes.each(function () {
+        this.style.setProperty("--title-width", maxWidthRem + "rem");
+    });
 });
-
 
 
 // 학교 리스트
@@ -1500,7 +1495,6 @@ const room_piclist = new Swiper('.room_piclist', {
 })
 
 
-
 /* 모바일 */
 // header nav
 $(document).on('click', '.h_bottom .h_nav > li > a.link', function (e) {
@@ -1719,3 +1713,14 @@ function nocontent_modal() {
 	$("body").addClass('hidden');
 	$("#nocontent_modal").addClass('show');
 }
+
+// 전화번호 복사
+$(document).on('click', 'a[href^="tel:"]', function (e) {
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+        e.preventDefault();
+        const telNum = $(this).attr('href').replace('tel:', '');
+        
+        navigator.clipboard.writeText(telNum);
+		showToast('전화번호가 복사되었습니다.', 'emoji1')
+    }
+});
