@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TK TRAVEL | ADMIN</title>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- Phosphor Icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body data-theme="light">
+
+
+	<div id="wrap" class="layout setting_wrap sideopen" data-title="앱푸시 관리" data-icon="ph-gear">
+
+		<!-- sidenav -->
+		<div id="sidenav"></div>
+
+		<!-- container -->
+		<div id="container" class="container">
+
+			<!-- header -->
+			<div id="sub_header"></div>
+
+			<!-- contents -->
+			<div id="contents" class="contents">				
+				<div class="content_title  ">
+					<p class="page_title">
+						<i class="ph-fill ph-gear icon"></i>
+						앱푸시 관리
+					</p>
+				</div>
+				
+				<div class="content_list_wrap">
+					<div class="content_list_box talk_full">
+						<div class="content_search content_tbl">
+							<form name="search_fm" id="search_fm" method="get">
+								<div class="tbl_box">
+									<table class="tbl">
+										<colgroup>
+											<col style="width: 150px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th data-th="검색어">검색조건</th>
+												<td data-th="검색어">
+													<div class="tbl_inline">
+														<div class="select_box search_select">
+															<select class="select size_md" aria-label="사이트/카테고리" name="search_key_s">
+																<option value="">전체</option>
+																<option value="">가입인사</option>
+																<option value="">예약완료(미입금)</option>
+																<option value="">결제완료</option>
+																<option value="">확정대기</option>
+																<option value="">예약취소</option>
+															</select>
+														</div>												
+														<div class="input_box search_input" style="
+			">
+															<input type="text" class="input_text size_md" id="input_key" name="input_key" placeholder="검색어를 입력해주세요">
+														</div>
+														<div class="tbl_btnbox search_btns">
+															<button type="button" class="button size_sm typeE auto">검색</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="content_list content_tbl">
+							<form name="frm_list" id="frm_list" method="POST">
+								<div class="tbl_top">
+									<div class="leftbox">
+										<p class="total">Total <span class="color">10</span></p>
+									</div>
+									<div class="rightbox">
+										<button type="button" class="button size_sm auto typeE" onclick="appWrite_modal()">등록</button>
+										<button type="button" class="button size_sm auto typeE">삭제</button>
+									</div>
+								</div>
+								<div class="bo_list tbl_box mobtbl2">
+									<table class="tbl setting_list" id="setting_list_tbl">
+										<colgroup>
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+											<col style="width: 50px;">
+											<col style="width: 100px;">
+											<col style="width: 130px;">
+											<col style="width: 180px;">
+											<col style="width: 292px;">
+											<col style="width: 240px;">
+											<col style="width: 56px;">
+											<col style="width: 90px;">
+											<col style="width: 120px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th data-th="checkbox">
+													<div class="check_box size_md">
+														<input type="checkbox" class="input_check all_check">
+													</div>
+												</th>
+												<th data-th="사용">사용</th>
+												<th data-th="No">No</th>
+												<th data-th="구분">구분</th>
+												<th data-th="앱푸시명">앱푸시명</th>
+												<th data-th="제목">제목</th>
+												<th data-th="내용">내용</th>
+												<th data-th="연결 URL">연결 URL</th>	
+												<th data-th="이미지">이미지</th>
+												<th data-th="수정">수정</th>
+												<th data-th="미리보기">미리보기</th>
+											</tr>
+										</thead>
+										<tbody>		
+											<tr>
+												<td data-th="checkbox">
+													<div class="check_box size_md">
+														<input type="checkbox" class="input_check">
+													</div>
+												</td>
+												<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+												<td data-th="No">1</td>
+												<td data-th="구분">결제</td>		
+												<td data-th="앱푸시명">앱푸시명</td>
+												<td data-th="제목">앱푸시 제목</td>
+												<td data-th="내용" class="align_left">앱푸시 내용입니다.</td>
+												<td data-th="연결 URL"><a href="https://www.tktravelkorea.com/" class="link" target="_blank">https://www.tktravelkorea.com/</a></td>
+												<td data-th="이미지">
+													<div class="tbl_img"><img src="../img/app_img1.png" alt="" class="img"></div>
+												</td>
+												<td data-th="수정">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appEdit_modal()">수정</button>
+													</div>
+												</td>
+												<td data-th="미리보기">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appPreview_modal()">미리보기</button>
+													</div>
+												</td>
+											</tr>													
+											<tr>
+												<td data-th="checkbox">
+													<div class="check_box size_md">
+														<input type="checkbox" class="input_check">
+													</div>
+												</td>
+												<td data-th="사용"><span class="iconbadge error size_md"></span></td>
+												<td data-th="No">2</td>
+												<td data-th="구분">취소</td>		
+												<td data-th="앱푸시명">앱푸시명</td>
+												<td data-th="제목">앱푸시 제목</td>
+												<td data-th="내용" class="align_left">앱푸시 내용입니다.</td>
+												<td data-th="연결 URL"><a href="https://www.tktravelkorea.com/" class="link" target="_blank">https://www.tktravelkorea.com/</a></td>
+												<td data-th="이미지">
+													<div class="tbl_img"><img src="../img/app_img1.png" alt="" class="img"></div>
+												</td>
+												<td data-th="수정">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appEdit_modal()">수정</button>
+													</div>
+												</td>
+												<td data-th="미리보기">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appPreview_modal()">미리보기</button>
+													</div>
+												</td>
+											</tr>													
+											<tr>
+												<td data-th="checkbox">
+													<div class="check_box size_md">
+														<input type="checkbox" class="input_check">
+													</div>
+												</td>
+												<td data-th="사용"><span class="iconbadge error size_md"></span></td>
+												<td data-th="No">3</td>
+												<td data-th="구분">광고</td>		
+												<td data-th="앱푸시명">앱푸시명</td>
+												<td data-th="제목">앱푸시 제목</td>
+												<td data-th="내용" class="align_left">앱푸시 내용입니다.</td>
+												<td data-th="연결 URL"><a href="https://www.tktravelkorea.com/" class="link" target="_blank">https://www.tktravelkorea.com/</a></td>
+												<td data-th="이미지">
+													<div class="tbl_img"><img src="../img/app_img1.png" alt="" class="img"></div>
+												</td>
+												<td data-th="수정">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appEdit_modal()">수정</button>
+													</div>
+												</td>
+												<td data-th="미리보기">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appPreview_modal()">미리보기</button>
+													</div>
+												</td>
+											</tr>													
+											<tr>
+												<td data-th="checkbox">
+													<div class="check_box size_md">
+														<input type="checkbox" class="input_check">
+													</div>
+												</td>
+												<td data-th="사용"><span class="iconbadge success size_md"></span></td>
+												<td data-th="No">4</td>
+												<td data-th="구분">이벤트</td>		
+												<td data-th="앱푸시명">앱푸시명</td>
+												<td data-th="제목">앱푸시 제목</td>
+												<td data-th="내용" class="align_left">앱푸시 내용입니다.</td>
+												<td data-th="연결 URL"><a href="https://www.tktravelkorea.com/" class="link" target="_blank">https://www.tktravelkorea.com/</a></td>
+												<td data-th="이미지">
+													<div class="tbl_img"><img src="../img/app_img1.png" alt="" class="img"></div>
+												</td>
+												<td data-th="수정">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appEdit_modal()">수정</button>
+													</div>
+												</td>
+												<td data-th="미리보기">
+													<div class="tbl_btnbox center">
+														<button type="button" class="button typeE auto size_sm" onclick="appPreview_modal()">미리보기</button>
+													</div>
+												</td>
+											</tr>													
+										</tbody>
+									</table>
+								</div>
+							</form>
+							<div class="pagination mt">
+								<button type="button" class="page page_btn start"></button>
+								<button type="button" class="page page_btn prev"></button>
+								<a href="#none" class="page page_link">1</a>
+								<a href="#none" class="page page_link active">2</a>
+								<a href="#none" class="page page_link">3</a>
+								<a href="#none" class="page page_link">4</a>
+								<button type="button" class="page page_btn next"></button>
+								<button type="button" class="page page_btn end"></button>
+							</div>
+						</div>
+					</div>
+
+					<div id="appPreview_modal" class="content_list_box talk_ver">
+						<div class="talk_preview">
+							<div class="apppush_preview">
+								<div class="titbox">
+									<p class="preview_tit">앱푸시 미리보기</p>
+									<button type="button" class="close_btn"></button>
+								</div>
+								<div class="frame">
+									<div class="apppush">
+										<div class="pushitem">
+											<div class="itemtop">
+												<div class="imgbox">
+													<img src="../img/logo_funkr.png" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<div class="top">
+														<span class="txt">펀코리아</span>
+														<span class="txt">오전 9:00</span>
+													</div>
+													<p class="tit">앱푸시 제목</p>
+													<p class="desc">
+														앱푸시 내용입니다. <br>
+														앱푸시 내용입니다. 앱푸시 내용입니다.
+													</p>
+												</div>
+												<div class="thumbox">
+													<img src="../img/app_img1.png" alt="" class="img">
+												</div>
+												<button type="button" class="arrow">
+													<i class="ph-bold ph-caret-up"></i>
+												</button>
+											</div>
+											<div class="itembottom">
+												<div class="imgbox">
+													<img src="../img/app_img2.png" alt="" class="img">
+												</div>
+											</div>
+										</div>
+										<div class="pushitem open">
+											<div class="itemtop">
+												<div class="imgbox">
+													<img src="../img/logo_funkr.png" alt="" class="img">
+												</div>
+												<div class="txtbox">
+													<div class="top">
+														<span class="txt">펀코리아</span>
+														<span class="txt">오전 9:00</span>
+													</div>
+													<p class="tit">앱푸시 제목</p>
+													<p class="desc">
+														앱푸시 내용입니다. <br>
+														앱푸시 내용입니다. 
+													</p>
+												</div>
+												<div class="thumbox">
+													<img src="../img/app_img1.png" alt="" class="img">
+												</div>
+												<button type="button" class="arrow">
+													<i class="ph-bold ph-caret-up"></i>
+												</button>
+											</div>
+											<div class="itembottom">
+												<div class="imgbox">
+													<img src="../img/app_img2.png" alt="" class="img">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="uibar"></div>
+									<div class="sidebtn"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div id="footer"></div>
+
+		</div>
+		
+		<!-- 앱푸시 등록 모달 -->
+		<div id="appWrite_modal" class="modal apppush_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">앱푸시 등록</p>
+					<button type="button" class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="rule_frm" id="rule_frm" method="POST" class="form">
+						<div class="tbl_box mobtbl">
+							<table class="tbl board_list min_auto">
+								<colgroup>
+									<col style="width: 140px;">
+									<col style="width: 500px;">
+									<col style="width: 300px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>구분</th>
+										<td colspan="2">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType1_1" type="radio" name="templateType1" checked>
+													<label class="label_radio" for="templateType1_1">결제</label>
+												</div>
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType1_2" type="radio" name="templateType1">
+													<label class="label_radio" for="templateType1_2">취소</label>
+												</div>
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType1_3" type="radio" name="templateType1">
+													<label class="label_radio" for="templateType1_3">광고</label>
+												</div>
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType1_4" type="radio" name="templateType1">
+													<label class="label_radio" for="templateType1_4">이벤트</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>앱푸시명</th>
+										<td colspan="2">
+											<div class="input_box">
+												<input class="input_text size_md" placeholder="앱푸시명을 입력해주세요.">
+											</div>
+										</td>
+									</tr>
+									<tr class="reverse">
+										<th>제목</th>
+										<td>
+											<div class="input_box">
+												<input class="input_text size_md" placeholder="제목을 입력해주세요.">
+											</div>
+										</td>
+										<!-- 미리보기-->
+										<td rowspan="999" class="preview_td">
+											<div class="apppush_preview">
+												<div class="frame">
+													<div class="apppush">
+														<div class="pushitem">
+															<div class="itemtop">
+																<div class="imgbox">
+																	<img src="../img/logo_funkr.png" alt="" class="img">
+																</div>
+																<div class="txtbox">
+																	<div class="top">
+																		<span class="txt">펀코리아</span>
+																		<span class="txt">오전 9:00</span>
+																	</div>
+																	<p class="tit">앱푸시 제목</p>
+																	<p class="desc">
+																		앱푸시 내용입니다. <br>
+																		앱푸시 내용입니다. 앱푸시 내용입니다.
+																	</p>
+																</div>
+																<div class="thumbox">
+																	<img src="../img/app_img1.png" alt="" class="img">
+																</div>
+																<button type="button" class="arrow">
+																	<i class="ph-bold ph-caret-up"></i>
+																</button>
+															</div>
+															<div class="itembottom">
+																<div class="imgbox">
+																	<img src="../img/app_img2.png" alt="" class="img">
+																</div>
+															</div>
+														</div>
+														<div class="pushitem open">
+															<div class="itemtop">
+																<div class="imgbox">
+																	<img src="../img/logo_funkr.png" alt="" class="img">
+																</div>
+																<div class="txtbox">
+																	<div class="top">
+																		<span class="txt">펀코리아</span>
+																		<span class="txt">오전 9:00</span>
+																	</div>
+																	<p class="tit">앱푸시 제목</p>
+																	<p class="desc">
+																		앱푸시 내용입니다. <br>
+																		앱푸시 내용입니다.  
+																	</p>
+																</div>
+																<div class="thumbox">
+																	<img src="../img/app_img1.png" alt="" class="img">
+																</div>
+																<button type="button" class="arrow">
+																	<i class="ph-bold ph-caret-up"></i>
+																</button>
+															</div>
+															<div class="itembottom">
+																<div class="imgbox">
+																	<img src="../img/app_img2.png" alt="" class="img">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="uibar"></div>
+													<div class="sidebtn"></div>
+												</div>
+											</div>
+										</td>
+										<!-- 미리보기-->
+									</tr>
+									<tr>
+										<th>내용</th>
+										<td>
+											<div class="input_box h100">
+												<textarea class="input_text size_md h_auto" rows="16" placeholder="내용을 입력해주세요."></textarea>
+											</div>
+										</td>
+									</tr>									
+									<tr>
+										<th>연결 URL</th>
+										<td>
+											<div class="input_box">
+												<input class="input_text size_md" type="text" placeholder="연결 URL을 입력해주세요.">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>이미지 (기본화면)</th>
+										<td>
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="UserFile1" name="UserFile1">
+													<label for="UserFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<th>이미지 (펼친화면)</th>
+										<td>
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="UserFile1" name="UserFile1">
+													<label for="UserFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>					
+								</tbody>
+							</table>
+						</div>
+						<div class="modal_btnbox">
+							<button class="modal_btn button auto typeE" onclick="onClickSave();">등록</button>
+							<button class="modal_btn button auto typeF modal_close" onclick="onClickReset();">다시작성</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- 앱푸시 수정 모달 -->
+		<div id="appEdit_modal" class="modal apppush_modal mobtbl">
+			<div class="modal_box ver2">
+				<div class="modal_head">
+					<p class="tit">앱푸시 수정</p>
+					<button type="button" class="modal_close"></button>
+				</div>
+				<div class="modal_body">
+					<form name="rule_frm" id="rule_frm" method="POST" class="form">
+						<div class="tbl_box mobtbl">
+							<table class="tbl board_list min_auto">
+								<colgroup>
+									<col style="width: 140px;">
+									<col style="width: 500px;">
+									<col style="width: 300px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>구분</th>
+										<td colspan="2">
+											<div class="radio_wrap">
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType2_1" type="radio" name="templateType2" checked>
+													<label class="label_radio" for="templateType2_1">결제</label>
+												</div>
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType2_2" type="radio" name="templateType2">
+													<label class="label_radio" for="templateType2_2">취소</label>
+												</div>
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType2_3" type="radio" name="templateType2">
+													<label class="label_radio" for="templateType2_3">광고</label>
+												</div>
+												<div class="radio_box size_md">
+													<input class="input_radio" id="templateType2_4" type="radio" name="templateType2">
+													<label class="label_radio" for="templateType2_4">이벤트</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>앱푸시명</th>
+										<td colspan="2">
+											<div class="input_box">
+												<input class="input_text size_md" placeholder="앱푸시명을 입력해주세요." value="앱푸시명">
+											</div>
+										</td>
+									</tr>
+									<tr class="reverse">
+										<th>제목</th>
+										<td>
+											<div class="input_box">
+												<input class="input_text size_md" placeholder="제목을 입력해주세요." value="앱푸시 제목">
+											</div>
+										</td>
+										<!-- 미리보기-->
+										<td rowspan="999" class="preview_td">
+											<div class="apppush_preview">
+												<div class="frame">
+													<div class="apppush">
+														<div class="pushitem">
+															<div class="itemtop">
+																<div class="imgbox">
+																	<img src="../img/logo_funkr.png" alt="" class="img">
+																</div>
+																<div class="txtbox">
+																	<div class="top">
+																		<span class="txt">펀코리아</span>
+																		<span class="txt">오전 9:00</span>
+																	</div>
+																	<p class="tit">앱푸시 제목</p>
+																	<p class="desc">
+																		앱푸시 내용입니다. <br>
+																		앱푸시 내용입니다. 앱푸시 내용입니다.
+																	</p>
+																</div>
+																<div class="thumbox">
+																	<img src="../img/app_img1.png" alt="" class="img">
+																</div>
+																<button type="button" class="arrow">
+																	<i class="ph-bold ph-caret-up"></i>
+																</button>
+															</div>
+															<div class="itembottom">
+																<div class="imgbox">
+																	<img src="../img/app_img2.png" alt="" class="img">
+																</div>
+															</div>
+														</div>
+														<div class="pushitem open">
+															<div class="itemtop">
+																<div class="imgbox">
+																	<img src="../img/logo_funkr.png" alt="" class="img">
+																</div>
+																<div class="txtbox">
+																	<div class="top">
+																		<span class="txt">펀코리아</span>
+																		<span class="txt">오전 9:00</span>
+																	</div>
+																	<p class="tit">앱푸시 제목</p>
+																	<p class="desc">
+																		앱푸시 내용입니다. <br>
+																		앱푸시 내용입니다.  
+																	</p>
+																</div>
+																<div class="thumbox">
+																	<img src="../img/app_img1.png" alt="" class="img">
+																</div>
+																<button type="button" class="arrow">
+																	<i class="ph-bold ph-caret-up"></i>
+																</button>
+															</div>
+															<div class="itembottom">
+																<div class="imgbox">
+																	<img src="../img/app_img2.png" alt="" class="img">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="uibar"></div>
+													<div class="sidebtn"></div>
+												</div>
+											</div>
+										</td>
+										<!-- 미리보기-->
+									</tr>
+									<tr>
+										<th>내용</th>
+										<td>
+											<div class="input_box h100">
+												<textarea class="input_text size_md h_auto" rows="16" placeholder="내용을 입력해주세요.">앱푸시 내용입니다.&#13;&#10;앱푸시 내용입니다. 앱푸시 내용입니다.</textarea>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>연결 URL</th>
+										<td>
+											<div class="input_box">
+												<input class="input_text size_md" type="text" placeholder="연결 URL을 입력해주세요." value="https://www.tktravelkorea.com/">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>이미지 (기본화면)</th>
+										<td>
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="UserFile1" name="UserFile1">
+													<label for="UserFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 파일.jpg</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+											</div>
+										</td>
+									</tr>	
+									<tr>
+										<th>이미지 (펼친화면)</th>
+										<td>
+											<div class="input_box input_file_box">
+												<div class="input_flex">
+													<input type="file" class="input_file" id="UserFile1" name="UserFile1">
+													<label for="UserFile1" class="label_file size_md">선택된 파일 없음</label>
+													<button type="button" class="input_btn fileSelect_btn size_md">파일 선택</button>
+												</div>
+												<div class="file_data">
+													<img src="../img/ic_filedown.png" alt="" class="icon">
+													<a href="" class="txt">테스트 파일.jpg</a>
+													<button type="button" class="delete_btn">
+														<i class="ph-fill ph-x-circle"></i>
+													</button>
+												</div>
+											</div>
+										</td>
+									</tr>						
+								</tbody>
+							</table>
+						</div>
+						<div class="modal_btnbox">
+							<button class="modal_btn button auto typeE">등록</button>
+							<button class="modal_btn button auto typeF modal_close">다시작성</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<!-- 공통요소 추가 -->
+	<script>
+		function replaceModule(url, selector) {
+			fetch(url)
+				.then(res => res.text())
+				.then(html => {
+					const container = document.querySelector(selector);
+					const tempDiv = document.createElement('div');
+					tempDiv.innerHTML = html.trim();
+					const newElement = tempDiv.firstElementChild;
+
+					if (container && newElement) {
+						container.replaceWith(newElement);
+					}
+				});
+		}
+
+		replaceModule('../common/sub_header.html', '#sub_header');
+		replaceModule('../common/footer.html', '#footer');
+		replaceModule('../common/sidenav_setting.html', '#sidenav');
+
+		$(window).on("load", function () {
+			setTimeout(() => {
+				$(".header .h_bottom .gnb .gnb_item").eq(10).addClass("active");
+				$(".sidenav .side_cont .side_submenubox .menu_list .side_item").eq(15).addClass("active");
+			}, 100);
+		});
+	</script>	
+	<script src="../js/common.js"></script>
+
+
+	<!-- modal button -->
+	<script>
+		// appWrite modal
+		function appWrite_modal() {
+			$("#appWrite_modal").addClass("show");
+		}
+		
+		// appEdit modal
+		function appEdit_modal() {
+			$("#appEdit_modal").addClass("show");
+		}
+
+	
+		// appEdit modal
+		function appPreview_modal() {
+			if ($(window).width() <= 1080) {
+				$("#appPreview_modal").addClass("show");
+			}			
+		}
+
+		$(document).on('click', '#appPreview_modal .titbox  .close_btn', function () {
+			$("#appPreview_modal").removeClass("show");
+		});
+		
+		$(document).mouseup(function (e) {
+			if ($('.content_list_wrap .content_list_box.talk_ver .talk_preview').has(e.target).length === 0) {
+				$("#appPreview_modal").removeClass("show");
+			}
+		});
+
+	</script>
+
+
+
+</body>
+
+</html>
