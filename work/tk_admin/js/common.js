@@ -575,7 +575,6 @@ $(document).ready(function() {
 
 
 // 260224 작업
-
 // sidenav accordion
 (function ($) {
 	const lnbUI = {
