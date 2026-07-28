@@ -150,6 +150,26 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
     </ul>
 </div>
 
+<div class="top_banner">
+	<div class="cont">
+		<div class="item">
+			<!-- <img src="<?=G5_THEME_IMG_URL?>/car_icon.png" class="icon"> -->
+			<img src="<?=G5_THEME_URL?>/newimg/tb_icon1.png" class="icon">
+			<span class="txt">전국 무료 설치</span>
+		</div> 
+		<div class="item pc">
+			<!-- <img src="<?=G5_THEME_IMG_URL?>/box_icon.png" class="icon"> -->
+			<img src="<?=G5_THEME_URL?>/newimg/tb_icon2.png" class="icon">
+			<span class="txt">빠른 배송</span>
+		</div> 
+		<div class="item">
+			<!-- <img src="<?=G5_THEME_IMG_URL?>/phone_icon.png" class="icon"> -->
+			<img src="<?=G5_THEME_URL?>/newimg/tb_icon3.png" class="icon">
+			<span class="txt">010-5405-1955</span>
+		</div> 
+	</div>
+</div>
+
 <header id="hd">
     <?php if ((!$bo_table || $w == 's' ) && defined('_INDEX_')) { ?><h1><?php echo $config['cf_title'] ?></h1><?php } ?>
 
@@ -172,25 +192,6 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
     <!--    <li><a href="--><?php //echo G5_BBS_URL ?><!--/logout.php">로그아웃</a></li>-->
     <!---->
     <!--</ul>-->
-	<div class="top_banner">
-		<div class="cont">
-			<div class="item">
-				<!-- <img src="<?=G5_THEME_IMG_URL?>/car_icon.png" class="icon"> -->
-				<img src="<?=G5_THEME_URL?>/newimg/tb_icon1.png" class="icon">
-				<span class="txt">전국 무료 설치</span>
-			</div> 
-			<div class="item pc">
-				<!-- <img src="<?=G5_THEME_IMG_URL?>/box_icon.png" class="icon"> -->
-				<img src="<?=G5_THEME_URL?>/newimg/tb_icon2.png" class="icon">
-				<span class="txt">빠른 배송</span>
-			</div> 
-			<div class="item">
-				<!-- <img src="<?=G5_THEME_IMG_URL?>/phone_icon.png" class="icon"> -->
-				<img src="<?=G5_THEME_URL?>/newimg/tb_icon3.png" class="icon">
-				<span class="txt">010-5405-1955</span>
-			</div> 
-		</div>
-	</div>
 
 	<style>
 		.top_search_wrap { position: relative; width: 350px; margin-right: 40px;margin-left:10px; }
@@ -299,458 +300,468 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 		#mega_cat_btn:hover{color:#1a7f8d;}
 
 		/* 드롭다운 컨테이너 */
-		#mega_drop{display:none;position:absolute;top:100%;left:0;z-index:9999;width:440px;background:#fff;border:1px solid #ddd;border-top:3px solid #ed9417;box-shadow:0 8px 24px rgba(0,0,0,.13);}
+		#mega_drop{display:none;position:absolute; top: calc(100% + 10px);left:0;z-index:9999;width:440px;background:#fff;border:1px solid #ddd;border-top:3px solid var(--brand-primary);border-top: 0; box-shadow: 0 8px 24px rgba(0, 0, 0, .13); border-radius: 16px; overflow: hidden;}		
+		#mega_drop .cf {display: flex;}
 
 		/* 1차 카테고리 리스트 */
-		#mega_drop .cat1_list{width:215px;float:left;border-right:1px solid #ececec;min-height:462px;}
+		#mega_drop .cat1_list{width:220px;border-right:1px solid #ececec;height:464px;}
 		#mega_drop .cat1_list li{list-style:none;}
-		#mega_drop .cat1_list li > a{display:flex;align-items:center;justify-content:space-between;padding:18px 16px;color:#111;text-decoration:none;font-size:16px;border-bottom:1px solid #f5f5f5;transition:background .12s,color .12s;}
-		#mega_drop .cat1_list li > a:hover,#mega_drop .cat1_list li > a.on{background:#f9f3e9;color:#ed9417;font-weight:bold;}
+		#mega_drop .cat1_list li > a { display: flex;  align-items: center;  justify-content: space-between; padding: 0 16px;  height: 50px;  color: #111;  text-decoration: none;  font-size: 16px; border-bottom: 1px solid #f5f5f5;  transition: background .12s, color .12s;}
+		
+		#mega_drop .cat1_list li > a:hover,#mega_drop .cat1_list li > a.on{background:rgba(223, 237, 255, 0.5);color: var(--brand-primary);font-weight:bold;}
 		#mega_drop .cat1_list li > a .arr{font-size:11px;color:#ccc;}
-		#mega_drop .cat1_list li > a.on .arr{color:#ed9417;}
+		#mega_drop .cat1_list li > a.on .arr{color: var(--brand-primary);}
 
 		/* 2차 서브 패널 */
-		#mega_drop .sub_panel{display:none;float:left;width:215px;padding:0px 0px;min-height:340px;}
+		#mega_drop .sub_panel{display:none;width:220px;padding:0px 0px;height:464px; padding-right: 8px;}
 		#mega_drop .sub_panel.on{display:block;}
 		#mega_drop .sub_panel h4{font-size:16px;font-weight:bold;color:#2196a6;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid #e8e8e8;}
-		#mega_drop .sub_panel ul{display:flex;flex-direction: column;list-style:none;}
+		#mega_drop .sub_panel ul{display:flex;flex-direction: column;list-style:none; height: 100%; overflow: auto;}
+		#mega_drop .sub_panel ul::-webkit-scrollbar {display: block; width: 4px; height: 4px;}
+		#mega_drop .sub_panel ul::-webkit-scrollbar-thumb {display: block; background: #073260; border-radius: 10px;}
+		#mega_drop .sub_panel ul::-webkit-scrollbar-track {display: block; background: #ececec; border-radius: 10px; margin: 8px 0;}
 		#mega_drop .sub_panel ul li{float:left;width:100%;}
-		#mega_drop .sub_panel ul li a{display:block;padding:10px 10px;text-align:left;font-size:16px;color:#111;text-decoration:none;transition:color .12s;}
-		#mega_drop .sub_panel ul li a:hover{color:#ed9417;text-decoration:underline;}
+		#mega_drop .sub_panel ul li a { display: flex;  align-items: center; height: 50px;  padding: 0 16px; text-align: left;  font-size: 16px; color: #111;  text-decoration: none; transition: all .12s;}
+		#mega_drop .sub_panel ul li a .txt {flex: 1;}
+		#mega_drop .sub_panel ul li a .arr {transition: all .12s; opacity: 0; font-size:11px; color: var(--brand-primary);}
+		#mega_drop .sub_panel ul li a:hover {color: var(--brand-primary);}
+		#mega_drop .sub_panel ul li a:hover .arr {opacity: 1; }
 		#mega_drop .cf::after{content:'';display:table;clear:both;}
 	</style>
-		<div class="hd_all_wr">
-			<div class="hd_wr">
-                <div class="top_menu mob_menu">
-                    <?php include_once(G5_THEME_MSHOP_PATH.'/category.php'); // 분류 ?>
-                </div>
+</header>
 
-					<div id="navi_wrap" class="navi_wrap">
-						<div class="pc">
-						<ul class="cate topcate">
-							<li id="mega_cat_btn"><a href="javascript:void(0)" >
-								<span class="ico_bar">
-								<span></span><span></span><span></span>
-								</span>
-								전체 카테고리</a>
+<div class="hd_all_wr">
+	<div class="hd_wr">
+		<div class="top_menu mob_menu">
+			<?php include_once(G5_THEME_MSHOP_PATH.'/category.php'); // 분류 ?>
+		</div>
+		<div id="navi_wrap" class="navi_wrap">
+			<div class="pc">
+				<ul class="cate topcate">
+					<li id="mega_cat_btn"><a href="javascript:void(0)" >
+						<span class="ico_bar">
+						<span></span><span></span><span></span>
+						</span>
+						전체 카테고리</a>
 
-                        <!-- ▼ 메가 드롭다운 패널 -->
-                        <div id="mega_drop">
-                            <div class="cf">
-                                <!-- 1차 카테고리 -->
-<?php
-$cate1_data=array();
-$sql="select * from g5_shop_category where ca_use='1' and length(ca_id)=2 order by ca_order, ca_id";
-$tmp_result=sql_query($sql);
-while($tmp_row=sql_fetch_array($tmp_result)){
-	$cate1_data[]=$tmp_row;
-}
-?>
+					<!-- ▼ 메가 드롭다운 패널 -->
+					<div id="mega_drop">
+						<div class="cf">
+							<!-- 1차 카테고리 -->
+							<?php
+								$cate1_data=array();
+								$sql="select * from g5_shop_category where ca_use='1' and length(ca_id)=2 order by ca_order, ca_id";
+								$tmp_result=sql_query($sql);
+								while($tmp_row=sql_fetch_array($tmp_result)){
+									$cate1_data[]=$tmp_row;
+								}
+							?>
 
-                                <ul class="cat1_list">
+							<ul class="cat1_list">
+							<?php
+							for($i=0;$i<count($cate1_data);$i++){
+							?>
+								<li>
+									<a href="https://dnbnmall.com/shop/list.php?ca_id=<?=$cate1_data[$i]['ca_id']?>" data-sub="<?=$cate1_data[$i]['ca_id']?>">
+										<span class="txt"><?=$cate1_data[$i]['ca_name']?> </span>
+										<span class="arr"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+									</a>
+								</li>
+							<?php
+							}
+							?>
+								<!--<li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">업체소개</a></li>
+								<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php" data-sub="99">노인복지용구란 <span class="arr">▶</span></a></li>
+								<li><a href="<?php echo G5_BBS_URL; ?>/faq.php">자주 묻는 질문</a></li>-->
+							</ul>
+
+							<!-- 2차 서브 패널 -->
+							<?php
+							for($i=0;$i<count($cate1_data);$i++){
+								$sql="select * from g5_shop_category where ca_use='1' and length(ca_id)=4 and ca_id like '".$cate1_data[$i]['ca_id']."__'";
+								$cate2_result=sql_query($sql);
+							?>
+							<div class="sub_panel" id="sub_<?=$cate1_data[$i]['ca_id']?>">
+								<ul>
 								<?php
-								for($i=0;$i<count($cate1_data);$i++){
+								for($j=0;$cate2_data=sql_fetch_array($cate2_result);$j++){
 								?>
-                                    <li><a href="https://dnbnmall.com/shop/list.php?ca_id=<?=$cate1_data[$i]['ca_id']?>" data-sub="<?=$cate1_data[$i]['ca_id']?>"><?=$cate1_data[$i]['ca_name']?> <span class="arr"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a></li>
+									<li>
+										<a href="https://dnbnmall.com/shop/list.php?ca_id=<?=$cate2_data['ca_id']?>">
+											<span class="txt"><?=$cate2_data['ca_name']?></span>
+											<span class="arr"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+										</a>
+									</li>
 								<?php
 								}
-								?>
-									<!--<li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">업체소개</a></li>
-									<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php" data-sub="99">노인복지용구란 <span class="arr">▶</span></a></li>
-									<li><a href="<?php echo G5_BBS_URL; ?>/faq.php">자주 묻는 질문</a></li>-->
-                                </ul>
-
-                                <!-- 2차 서브 패널 -->
-								<?php
-								for($i=0;$i<count($cate1_data);$i++){
-									$sql="select * from g5_shop_category where ca_use='1' and length(ca_id)=4 and ca_id like '".$cate1_data[$i]['ca_id']."__'";
-									$cate2_result=sql_query($sql);
-								?>
-                                <div class="sub_panel" id="sub_<?=$cate1_data[$i]['ca_id']?>">
-                                    <ul>
-									<?php
-									for($j=0;$cate2_data=sql_fetch_array($cate2_result);$j++){
-									?>
-                                        <li><a href="https://dnbnmall.com/shop/list.php?ca_id=<?=$cate2_data['ca_id']?>"><?=$cate2_data['ca_name']?></a></li>
-									<?php
-									}
-									?>
-                                    </ul>
-                                </div>
-								<?php
-								}
-								?>
-								<div class="sub_panel" id="sub_99">
-									<ul>
-										<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php">복지용구 급여안내</a></li>
-										<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse2.php">복지용구 사용 가능 개수</a></li>
-									</ul>
-								</div>
-                            </div><!-- .cf -->
-                        </div><!-- #mega_drop -->
-<!-- ═══════════════════════════════════════════════
-     메가 드롭다운 jQuery 핵심 스크립트
-═══════════════════════════════════════════════ -->
-<script>
-$(function(){
-    var $catBtn   = $('#mega_cat_btn');
-    var $megaDrop = $('#mega_drop');
-    var $cat1     = $('.cat1_list a');
-    var $panels   = $('.sub_panel');
-    var hideTimer;
-
-    /* 첫 번째 1차 항목 활성화 */
-    function activateFirst(){
-        if($cat1.filter('.on').length===0){
-            switchSub($cat1.first());
-        }
-    }
-
-    /* 서브 패널 전환 */
-    function switchSub($el){
-        $cat1.removeClass('on');
-        $panels.removeClass('on');
-        $el.addClass('on');
-        $('#sub_'+$el.data('sub')).addClass('on');
-    }
-
-    /* 전체 카테고리 버튼 hover */
-    $catBtn.on('mouseenter',function(){
-        clearTimeout(hideTimer);
-        $megaDrop.stop(true,true).fadeIn(150);
-        activateFirst();
-    });
-
-    /* 버튼 영역 벗어날 때 - drop으로 이동이면 유지 */
-    $catBtn.on('mouseleave',function(e){
-        var to=e.relatedTarget||e.toElement;
-        if($megaDrop.is(to)||$megaDrop.find(to).length){return;}
-        hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
-    });
-
-    /* 드롭다운 안으로 들어오면 유지 */
-    $megaDrop.on('mouseenter',function(){
-        clearTimeout(hideTimer);
-    });
-
-    /* 드롭다운 완전히 벗어나면 닫기 */
-    $megaDrop.on('mouseleave',function(){
-        hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
-    });
-
-    /* 1차 카테고리 hover → 서브 전환 */
-    $cat1.on('mouseenter',function(){
-        switchSub($(this));
-    });
-
-    /* 1차 링크 클릭: 페이지 이동 허용 */
-    $cat1.on('click',function(){
-        /* href 기본 동작 */
-    });
-});
-</script>
-
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=10">복지용구 대여품목</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '10' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate1">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=20">복지용구 구입품목</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '20' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate2">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-									<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
 								?>
 								</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=30">산소발생기</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '30' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate3">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=40">중고제품</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '40' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate1">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=50">비급여(요양용품)</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '50' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate1">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-						</ul>
-						</div>
-				<?php if(false && defined('_INDEX_')) { ?>
-<style>
-#sct_ct_1 ul{text-align:left;display:flex;flex-wrap:wrap;}
-#sct_ct_1 ul li{width:200px;border:1px solid #ccc;padding:5px 0px;margin:5px;text-align:center;color:#000;}
-@media (max-width: 970px){
-	#sct_ct_1 ul{text-align:center;}
-	#sct_ct_1 ul li{width:auto;font-size: 14px;letter-spacing: 0px;/*margin:-1px 0px 0px -1px;*/margin:5px;padding:0px 20px !important;background:#f1f1f1;border-radius:10px;border:none;}
-}
-@media (max-width:  640px){
-	/*#sct_ct_1 ul li{width:33.3%;font-size: 14px;letter-spacing: 0px;margin:-1px 0px 0px -1px;}*/
-}</style>
-						<div id="cate_slide" class="mobile" style="overflow:hidden;">
-						<ul class="cate topcate">
-						<?php
-						$cate_arr=array("1010"=>"전동침대","1020"=>"수동휠체어","1030"=>"실외경사로","2010"=>"이동변기","2020"=>"보행기&middot;워커","2030"=>"목욕의자","2040"=>"욕창예방매트리스","2050"=>"욕창예방방석","2060"=>"안전손잡이","2070"=>"미끄럼방지매트","2080"=>"자세변환용구","2090"=>"실내경사로","20a0"=>"지팡이","20b0"=>"간이변기","20c0"=>"요실금팬티","20d0"=>"미끄럼방지양말","30"=>"산소발생기","40"=>"중고제품","60"=>"재활CPM","50"=>"비급여(요양용품)");
-						foreach($cate_arr as $ca_id=>$ca_name){
-						?>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$ca_id?>"><?=$ca_name?></a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '{$ca_id}' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate1">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-						<?php
-						}
-						?>
-						</ul>
-						</div>
-
-						<div class="navi_wrap_btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-				<?php
-					}
-				?>
-					<?php if(!defined('_INDEX_') && ($mNum=="2" || $mNum=="2")) {?>
-						<div class="neromap mob">
-							<? include_once(G5_THEME_MSHOP_PATH.'/neromap.php'); ?>
-						</div>
-					<?php }?>
-					</div>
-					<div id="navi_wrap2" class="navi_wrap2">
-						<ul class="cate">
-							<li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">업체소개</a>
-								<ul class="sub_cate sub_cate1">
-									<li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">소개</a></li>
-<!--									<li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=info">원메디의 차별화</a></li>--->
-								</ul>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=10">복지용구 대여품목</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '10' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate1">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=20">복지용구 구입품목</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '20' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate2">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=30">산소발생기</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '30' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate3">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=50">비급여(요양용품)</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '50' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate1">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=40">중고제품</a>
-								<?php
-								$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '40' and ca_use = '1' order by ca_order, ca_id ";
-								$result2 = sql_query($sql2);
-								$count = sql_num_rows($result2);
-								if($count>0){
-								?>
-								<ul class="sub_cate sub_cate1">
-								<?php
-									for ($j=0; $row2=sql_fetch_array($result2); $j++){
-								?>
-														<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
-								<?php
-									}
-								?>
-												</ul>
-								<?php
-								}
-								?>
-							</li>
-							<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php">노인복지용구란</a>
-								<ul class="sub_cate sub_cate1">
+							</div>
+							<?php
+							}
+							?>
+							<div class="sub_panel" id="sub_99">
+								<ul>
 									<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php">복지용구 급여안내</a></li>
 									<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse2.php">복지용구 사용 가능 개수</a></li>
 								</ul>
-							</li>
-							<li>
-								<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=60">재활CPM</a>
-							</li>
-							<li><a href="<?php echo G5_BBS_URL; ?>/faq.php">자주 묻는 질문</a></li>
+							</div>
+						</div><!-- .cf -->
+					</div><!-- #mega_drop -->
+					<!-- ═══════════════════════════════════════════════
+						메가 드롭다운 jQuery 핵심 스크립트
+					═══════════════════════════════════════════════ -->
+					<script>
+					$(function(){
+						var $catBtn   = $('#mega_cat_btn');
+						var $megaDrop = $('#mega_drop');
+						var $cat1     = $('.cat1_list a');
+						var $panels   = $('.sub_panel');
+						var hideTimer;
+
+						/* 첫 번째 1차 항목 활성화 */
+						function activateFirst(){
+							if($cat1.filter('.on').length===0){
+								switchSub($cat1.first());
+							}
+						}
+
+						/* 서브 패널 전환 */
+						function switchSub($el){
+							$cat1.removeClass('on');
+							$panels.removeClass('on');
+							$el.addClass('on');
+							$('#sub_'+$el.data('sub')).addClass('on');
+						}
+
+						/* 전체 카테고리 버튼 hover */
+						$catBtn.on('mouseenter',function(){
+							clearTimeout(hideTimer);
+							$megaDrop.stop(true,true).fadeIn(150);
+							activateFirst();
+						});
+
+						/* 버튼 영역 벗어날 때 - drop으로 이동이면 유지 */
+						$catBtn.on('mouseleave',function(e){
+							var to=e.relatedTarget||e.toElement;
+							if($megaDrop.is(to)||$megaDrop.find(to).length){return;}
+							hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
+						});
+
+						/* 드롭다운 안으로 들어오면 유지 */
+						$megaDrop.on('mouseenter',function(){
+							clearTimeout(hideTimer);
+						});
+
+						/* 드롭다운 완전히 벗어나면 닫기 */
+						$megaDrop.on('mouseleave',function(){
+							hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
+						});
+
+						/* 1차 카테고리 hover → 서브 전환 */
+						$cat1.on('mouseenter',function(){
+							switchSub($(this));
+						});
+
+						/* 1차 링크 클릭: 페이지 이동 허용 */
+						$cat1.on('click',function(){
+							/* href 기본 동작 */
+						});
+					});
+					</script>
+
+					</li>
+					<li>
+						<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=10">복지용구 대여품목</a>
+						<?php
+						$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '10' and ca_use = '1' order by ca_order, ca_id ";
+						$result2 = sql_query($sql2);
+						$count = sql_num_rows($result2);
+						if($count>0){
+						?>
+						<ul class="sub_cate sub_cate1">
+						<?php
+							for ($j=0; $row2=sql_fetch_array($result2); $j++){
+						?>
+												<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+						<?php
+							}
+						?>
+										</ul>
+						<?php
+						}
+						?>
+					</li>
+					<li>
+						<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=20">복지용구 구입품목</a>
+						<?php
+						$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '20' and ca_use = '1' order by ca_order, ca_id ";
+						$result2 = sql_query($sql2);
+						$count = sql_num_rows($result2);
+						if($count>0){
+						?>
+						<ul class="sub_cate sub_cate2">
+						<?php
+							for ($j=0; $row2=sql_fetch_array($result2); $j++){
+						?>
+							<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+						<?php
+							}
+						?>
 						</ul>
-
-					</div>
-					<div class="mob_menu">
-						<!--<button type="button" id="hd_ct"><i class="ri-menu-line"></i></button>-->
-
-				<!-- <img src="<?php echo G5_THEME_IMG_URL; ?>/tel.png" class="tel"> -->
-
-
-					</div>
-
-	    </div>
+						<?php
+						}
+						?>
+					</li>
+					<li>
+						<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=30">산소발생기</a>
+						<?php
+						$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '30' and ca_use = '1' order by ca_order, ca_id ";
+						$result2 = sql_query($sql2);
+						$count = sql_num_rows($result2);
+						if($count>0){
+						?>
+						<ul class="sub_cate sub_cate3">
+						<?php
+							for ($j=0; $row2=sql_fetch_array($result2); $j++){
+						?>
+												<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+						<?php
+							}
+						?>
+										</ul>
+						<?php
+						}
+						?>
+					</li>
+					<li>
+						<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=40">중고제품</a>
+						<?php
+						$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '40' and ca_use = '1' order by ca_order, ca_id ";
+						$result2 = sql_query($sql2);
+						$count = sql_num_rows($result2);
+						if($count>0){
+						?>
+						<ul class="sub_cate sub_cate1">
+						<?php
+							for ($j=0; $row2=sql_fetch_array($result2); $j++){
+						?>
+												<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+						<?php
+							}
+						?>
+										</ul>
+						<?php
+						}
+						?>
+					</li>
+					<li>
+						<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=50">비급여(요양용품)</a>
+						<?php
+						$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '50' and ca_use = '1' order by ca_order, ca_id ";
+						$result2 = sql_query($sql2);
+						$count = sql_num_rows($result2);
+						if($count>0){
+						?>
+						<ul class="sub_cate sub_cate1">
+						<?php
+							for ($j=0; $row2=sql_fetch_array($result2); $j++){
+						?>
+												<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+						<?php
+							}
+						?>
+										</ul>
+						<?php
+						}
+						?>
+					</li>
+				</ul>
+			</div>
+			<?php if(false && defined('_INDEX_')) { ?>
+			<style>
+			#sct_ct_1 ul{text-align:left;display:flex;flex-wrap:wrap;}
+			#sct_ct_1 ul li{width:200px;border:1px solid #ccc;padding:5px 0px;margin:5px;text-align:center;color:#000;}
+			@media (max-width: 970px){
+				#sct_ct_1 ul{text-align:center;}
+				#sct_ct_1 ul li{width:auto;font-size: 14px;letter-spacing: 0px;/*margin:-1px 0px 0px -1px;*/margin:5px;padding:0px 20px !important;background:#f1f1f1;border-radius:10px;border:none;}
+			}
+			@media (max-width:  640px){
+				/*#sct_ct_1 ul li{width:33.3%;font-size: 14px;letter-spacing: 0px;margin:-1px 0px 0px -1px;}*/
+			}</style>
+			<div id="cate_slide" class="mobile" style="overflow:hidden;">
+				<ul class="cate topcate">
+				<?php
+				$cate_arr=array("1010"=>"전동침대","1020"=>"수동휠체어","1030"=>"실외경사로","2010"=>"이동변기","2020"=>"보행기&middot;워커","2030"=>"목욕의자","2040"=>"욕창예방매트리스","2050"=>"욕창예방방석","2060"=>"안전손잡이","2070"=>"미끄럼방지매트","2080"=>"자세변환용구","2090"=>"실내경사로","20a0"=>"지팡이","20b0"=>"간이변기","20c0"=>"요실금팬티","20d0"=>"미끄럼방지양말","30"=>"산소발생기","40"=>"중고제품","60"=>"재활CPM","50"=>"비급여(요양용품)");
+				foreach($cate_arr as $ca_id=>$ca_name){
+				?>
+					<li>
+						<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$ca_id?>"><?=$ca_name?></a>
+						<?php
+						$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '{$ca_id}' and ca_use = '1' order by ca_order, ca_id ";
+						$result2 = sql_query($sql2);
+						$count = sql_num_rows($result2);
+						if($count>0){
+						?>
+						<ul class="sub_cate sub_cate1">
+						<?php
+							for ($j=0; $row2=sql_fetch_array($result2); $j++){
+						?>
+												<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+						<?php
+							}
+						?>
+										</ul>
+						<?php
+						}
+						?>
+					</li>
+				<?php
+				}
+				?>
+				</ul>
+			</div>
+			<div class="navi_wrap_btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+			<?php } ?>
+			<?php if(!defined('_INDEX_') && ($mNum=="2" || $mNum=="2")) {?>
+				<div class="neromap mob">
+					<? include_once(G5_THEME_MSHOP_PATH.'/neromap.php'); ?>
+				</div>
+			<?php }?>
 		</div>
+		<div id="navi_wrap2" class="navi_wrap2">
+			<ul class="cate">
+				<li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">업체소개</a>
+					<ul class="sub_cate sub_cate1">
+						<li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">소개</a></li>
+						<!-- <li><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=info">원메디의 차별화</a></li>--->
+					</ul>
+				</li>
+				<li>
+					<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=10">복지용구 대여품목</a>
+					<?php
+					$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '10' and ca_use = '1' order by ca_order, ca_id ";
+					$result2 = sql_query($sql2);
+					$count = sql_num_rows($result2);
+					if($count>0){
+					?>
+					<ul class="sub_cate sub_cate1">
+					<?php
+						for ($j=0; $row2=sql_fetch_array($result2); $j++){
+					?>
+											<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+					<?php
+						}
+					?>
+									</ul>
+					<?php
+					}
+					?>
+				</li>
+				<li>
+					<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=20">복지용구 구입품목</a>
+					<?php
+					$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '20' and ca_use = '1' order by ca_order, ca_id ";
+					$result2 = sql_query($sql2);
+					$count = sql_num_rows($result2);
+					if($count>0){
+					?>
+					<ul class="sub_cate sub_cate2">
+					<?php
+						for ($j=0; $row2=sql_fetch_array($result2); $j++){
+					?>
+											<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+					<?php
+						}
+					?>
+									</ul>
+					<?php
+					}
+					?>
+				</li>
+				<li>
+					<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=30">산소발생기</a>
+					<?php
+					$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '30' and ca_use = '1' order by ca_order, ca_id ";
+					$result2 = sql_query($sql2);
+					$count = sql_num_rows($result2);
+					if($count>0){
+					?>
+					<ul class="sub_cate sub_cate3">
+					<?php
+						for ($j=0; $row2=sql_fetch_array($result2); $j++){
+					?>
+											<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+					<?php
+						}
+					?>
+									</ul>
+					<?php
+					}
+					?>
+				</li>
+				<li>
+					<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=50">비급여(요양용품)</a>
+					<?php
+					$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '50' and ca_use = '1' order by ca_order, ca_id ";
+					$result2 = sql_query($sql2);
+					$count = sql_num_rows($result2);
+					if($count>0){
+					?>
+					<ul class="sub_cate sub_cate1">
+					<?php
+						for ($j=0; $row2=sql_fetch_array($result2); $j++){
+					?>
+											<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+					<?php
+						}
+					?>
+									</ul>
+					<?php
+					}
+					?>
+				</li>
+				<li>
+					<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=40">중고제품</a>
+					<?php
+					$sql2 = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '40' and ca_use = '1' order by ca_order, ca_id ";
+					$result2 = sql_query($sql2);
+					$count = sql_num_rows($result2);
+					if($count>0){
+					?>
+					<ul class="sub_cate sub_cate1">
+					<?php
+						for ($j=0; $row2=sql_fetch_array($result2); $j++){
+					?>
+											<li><a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$row2['ca_id']?>"><?=$row2['ca_name']?></a></li>
+					<?php
+						}
+					?>
+									</ul>
+					<?php
+					}
+					?>
+				</li>
+				<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php">노인복지용구란</a>
+					<ul class="sub_cate sub_cate1">
+						<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php">복지용구 급여안내</a></li>
+						<li><a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse2.php">복지용구 사용 가능 개수</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=60">재활CPM</a>
+				</li>
+				<li><a href="<?php echo G5_BBS_URL; ?>/faq.php">자주 묻는 질문</a></li>
+			</ul>
+		</div>
+		<div class="mob_menu">
+			<!--<button type="button" id="hd_ct"><i class="ri-menu-line"></i></button>-->
+			<!-- <img src="<?php echo G5_THEME_IMG_URL; ?>/tel.png" class="tel"> -->
+		</div>
+	</div>
+</div>
+<?// php include_once(G5_MSHOP_SKIN_PATH.'/boxcategory.skin.php'); // 상품분류 ?>
 
-    <?// php include_once(G5_MSHOP_SKIN_PATH.'/boxcategory.skin.php'); // 상품분류 ?>
-</header>
 <script>
 $( document ).ready( function() {
         var jbOffset = $( '.hd_all_wr' ).offset();

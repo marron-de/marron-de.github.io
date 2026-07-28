@@ -132,110 +132,45 @@ if (!$_COOKIE['ck_top_banner_close']){
 		});
   	  </script>
 </div>
-<style>
-.main_search{max-width:900px;margin:0 auto;padding:40px 20px 40px;box-sizing:border-box;width:100%;}
-.main_search .search_box{display:flex;align-items:center;background:#fff;border-radius:10px;padding:10px 10px 10px 26px;border:1px solid #ccc;box-sizing:border-box;width:100%;}
-.main_search .search_box .ico_search{width:20px;height:20px;flex-shrink:0;margin-right:12px;}
-.main_search .search_box input[type="text"]{flex:1;min-width:0;border:none;outline:none;font-size:16px;background:transparent;height:40px;}
-.main_search .search_box input[type="text"]::placeholder{color:#999;}
-.main_search .search_box .btn_search{border:none;background:#1a3d7c;color:#fff;font-size:15px;font-weight:700;padding:12px 34px;border-radius:50px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
-.main_search .search_box .btn_search:hover{background:#14305f;}
-.main_search .search_keyword{display:flex;align-items:center;gap:14px;margin-top:16px;flex-wrap:wrap;}
-.main_search .search_keyword .kw_title{font-size:14px;font-weight:700;color:#333;}
-.main_search .search_keyword a{font-size:14px;color:#555;text-decoration:none;background: #f0f1f5;padding: 5px 10px;border-radius: 20px;}
-@media (max-width: 950px){
-	.main_search .search_box{padding: 5px 5px 5px 13px;border-radius:8px;}
-	.main_search .search_box input[type="text"]{height: 30px;}
-	.main_search .search_box .btn_search{padding:10px 16px;font-size:13px;}
-}
-@media (max-width:419px){
-	.main_search{padding:24px 16px 30px;}
-	.main_search .search_box .ico_search{width:16px;height:16px;margin-right:6px;}
-	.main_search .search_keyword{gap:8px;}
-	.main_search .search_keyword .kw_title{font-size:13px;}
-	.main_search .search_keyword a{font-size:12px;padding:4px 8px;}
-}
-</style>
-<div class="main_search">
-    <form name="fsearch" id="fsearch" method="get" action="<?php echo G5_SHOP_URL; ?>/search.php">
-        <div class="search_box">
-            <svg class="ico_search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="7" stroke="#999" stroke-width="2"/>
-                <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#999" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <input type="text" name="q" id="main_q" placeholder="제품명을 검색하세요" autocomplete="off">
-            <button type="submit" class="btn_search">검색</button>
-        </div>
-        <div class="search_keyword">
-            <span class="kw_title">인기검색어</span>
-            <a href="#" data-kw="전동침대">#전동침대</a>
-            <a href="#" data-kw="욕창">#욕창</a>
-            <a href="#" data-kw="안전손잡이">#안전손잡이</a>
-			<span class="pc">
-            <a href="#" data-kw="이동변기">#이동변기</a>
-            <a href="#" data-kw="보행기">#보행기</a>
-			</span>
-        </div>
-    </form>
-</div>
-<script>
-$(document).ready(function(){
-    $('#fsearch').on('submit', function(){
-        var kw = $.trim($('#main_q').val());
-        if(kw === ''){
-            alert('검색어를 입력해 주세요.');
-            $('#main_q').focus();
-            return false;
-        }
-    });
-
-    $('.main_search .search_keyword a').on('click', function(e){
-        e.preventDefault();
-        $('#main_q').val($(this).data('kw'));
-        $('#fsearch').trigger('submit');
-    });
-});
-</script>
-
-
 
 
 <section>
-<style>
-.maincate_wrap{width:100%;max-width:1300px;margin:0 auto;}
-.maincate{display:flex;flex-wrap:wrap;height:96px;overflow:hidden;}
-.maincate_wrap.active .maincate{height:auto;}
-.maincate li{width:170px;/*border:1px solid #f6f6f6;*/text-align:center;padding:12px 0;}
-.maincate li a{font-size:15px;}
-.maincate li p{margin-bottom:10px;}
-.maincate_wrap_btn{position:relative;padding:5px;text-align:center;background:#fff;}
-.maincate_wrap.hmob .maincate_wrap_btn{position:relative;padding:10px;text-align:center;background:#fff;border:2px solid #ccc;border-radius:10px;margin:10px;}
+	<style>
+	.maincate_wrap{width:100%;max-width:1300px;margin:0 auto;}
+	.maincate{display:flex;flex-wrap:wrap;height:96px;overflow:hidden;}
+	.maincate_wrap.active .maincate{height:auto;}
+	.maincate li{width:170px;/*border:1px solid #f6f6f6;*/text-align:center;padding:12px 0;}
+	.maincate li a{font-size:15px;}
+	.maincate li p{margin-bottom:10px;}
+	.maincate_wrap_btn{position:relative;padding:5px;text-align:center;background:#fff;}
+	.maincate_wrap.hmob .maincate_wrap_btn{position:relative;padding:10px;text-align:center;background:#fff;border:2px solid #ccc;border-radius:10px;margin:10px;}
 
-.maincate li img{height:30px;}
-.hpc .maincate{gap: 7px 1%;}
-.hpc .maincate li{border: none; border-radius: 30px; padding: 12px 0; background: #f9f9f9;}
-.hpc .maincate{padding: 12px 0px;}
-@media (max-width: 1270px) {
-	.maincate_wrap{padding-top:50px;}
-	.maincate li{width:20%;}
-}
-@media (max-width: 950px) {
-	.maincate_wrap{padding-top:0px;}
-	.maincate_wrap h2{text-align:center;color:#06194e;font-size:18px;padding:10px;}
-	.maincate li{width:25%;}
-	.maincate li a{font-size:14px;}
-	.maincate_box{width:52px;height:52px;padding:10px;background:#fafafc;border:1px solid #f4f5f8;border-radius:50%;margin:0 auto;}
-}
-.hpc{display: block !important;}
-.hmob{display: none !important;}
+	.maincate li img{height:30px;}
+	.hpc .maincate{gap: 7px 1%;}
+	.hpc .maincate li{border: none; border-radius: 30px; padding: 12px 0; background: #f9f9f9;}
+	.hpc .maincate{padding: 12px 0px;}
+	@media (max-width: 1270px) {
+		.maincate_wrap{padding-top:50px;}
+		.maincate li{width:20%;}
+	}
+	@media (max-width: 950px) {
+		.maincate_wrap{padding-top:0px;}
+		.maincate_wrap h2{text-align:center;color:#06194e;font-size:18px;padding:10px;}
+		.maincate li{width:25%;}
+		.maincate li a{font-size:14px;}
+		.maincate_box{width:52px;height:52px;padding:10px;background:#fafafc;border:1px solid #f4f5f8;border-radius:50%;margin:0 auto;}
+	}
+	.hpc{display: block !important;}
+	.hmob{display: none !important;}
 
-@media all and (max-width: 950px){
-    .hpc{display: none !important;}
-    .hmob{display: block !important;}
-}
-</style>
+	@media all and (max-width: 950px){
+		.hpc{display: none !important;}
+		.hmob{display: block !important;}
+	}
+	</style>
 
 	<div class="maincate_wrap active hpc">
+		<h2>복지용구 한눈에 보기</h2>
 		<ul class="maincate">
 		<?php
 		// $cate_arr = array(
@@ -297,116 +232,192 @@ $(document).ready(function(){
 		}
 		?>
 		</ul>
-		<div class="maincate_wrap_btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+		<div class="maincate_wrap_btnbox">
+			<div class="maincate_wrap_btn">
+				<i class="fa fa-chevron-up" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="maincate_wrap active hmob">
+			<h2>복지용구 한눈에 보기</h2>
+			<ul class="maincate">
+				<?php
+				// $cate_arr = array(
+				// 	"1010" => array("name" => "전동침대",         "icon" => "icon_1010.png"),
+				// 	"1020" => array("name" => "수동휠체어",       "icon" => "icon_1020.png"),
+				// 	"1040" => array("name" => "실외경사로",       "icon" => "icon_1040.png"),
+				// 	"2010" => array("name" => "이동변기",         "icon" => "icon_2010.png"),
+				// 	"2020" => array("name" => "보행기&middot;워커", "icon" => "icon_2020.png"),
+				// 	"2030" => array("name" => "목욕의자",         "icon" => "icon_2030.png"),
+				// 	"2040" => array("name" => "욕창예방매트",     "icon" => "icon_2040.png"),
+				// 	"2050" => array("name" => "욕창예방방석",     "icon" => "icon_2050.png"),
+				// 	"2060" => array("name" => "안전손잡이",       "icon" => "icon_2060.png"),
+				// 	"2070" => array("name" => "미끄럼방지매트",   "icon" => "icon_2070.png"),
+				// 	"2080" => array("name" => "자세변환용구",     "icon" => "icon_2080.png"),
+				// 	"2090" => array("name" => "실내경사로",       "icon" => "icon_2090.png"),
+				// 	"20a0" => array("name" => "지팡이",           "icon" => "icon_20a0.png"),
+				// 	"20b0" => array("name" => "간이변기",         "icon" => "icon_20b0.png"),
+				// 	"20c0" => array("name" => "요실금팬티",       "icon" => "icon_20c0.png"),
+				// 	"20d0" => array("name" => "미끄럼방지양말",   "icon" => "icon_20d0.png"),
+				// 	"20e0" => array("name" => "구강세척기",       "icon" => "icon_20e0.png"),
+				// 	"30"   => array("name" => "산소발생기",       "icon" => "icon_30.png"),
+				// 	"40"   => array("name" => "중고제품",         "icon" => "icon_40.png"),
+				// 	"50"   => array("name" => "비급여요양용품",   "icon" => "icon_50.png"),
+				// );
+				$cate_arr = array(
+					"1010" => array("name" => "전동침대",         "icon" => "cate_icon1.png"),
+					"1020" => array("name" => "수동휠체어",       "icon" => "cate_icon2.png"),
+					"1040" => array("name" => "실외경사로",       "icon" => "cate_icon3.png"),
+					"2010" => array("name" => "이동변기",         "icon" => "cate_icon4.png"),
+					"2020" => array("name" => "보행기&middot;워커", "icon" => "cate_icon5.png"),
+					"2030" => array("name" => "목욕의자",         "icon" => "cate_icon6.png"),
+					"2040" => array("name" => "욕창예방매트",     "icon" => "cate_icon7.png"),
+					"2050" => array("name" => "욕창예방방석",     "icon" => "cate_icon8.png"),
+					"2060" => array("name" => "안전손잡이",       "icon" => "cate_icon9.png"),
+					"2070" => array("name" => "미끄럼방지매트",   "icon" => "cate_icon10.png"),
+					"2080" => array("name" => "자세변환용구",     "icon" => "cate_icon11.png"),
+					"2090" => array("name" => "실내경사로",       "icon" => "cate_icon12.png"),
+					"20a0" => array("name" => "지팡이",           "icon" => "cate_icon13.png"),
+					"20b0" => array("name" => "간이변기",         "icon" => "cate_icon14.png"),
+					"20c0" => array("name" => "요실금팬티",       "icon" => "cate_icon15.png"),
+					"20d0" => array("name" => "미끄럼방지양말",   "icon" => "cate_icon16.png"),
+					"20e0" => array("name" => "구강세척기",       "icon" => "cate_icon17.png"),
+					"30"   => array("name" => "산소발생기",       "icon" => "cate_icon18.png"),
+					"40"   => array("name" => "중고제품",         "icon" => "cate_icon19.png"),
+					"50"   => array("name" => "비급여요양용품",   "icon" => "cate_icon20.png"),
+				);
+				foreach($cate_arr as $ca_id=>$ca_name){
+					?>
+					<li>
+						<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$ca_id?>">
+							<div class="imgbox">
+								<!-- <img src="<?=G5_THEME_URL?>/<?=$ca_name['icon']?>?ver=26071901"> -->
+								<img src="<?=G5_THEME_URL?>/newimg/<?=$ca_name['icon']?>?ver=26071901">
+							</div>
+							<p class="tit"><?=$ca_name['name']?></p>
+						</a>
+					</li>
+					<?php
+				}
+				?>
+			</ul>
+			<div class="maincate_wrap_btnbox">
+				<div class="maincate_wrap_btn">
+					<!-- 전체 카테고리 보기  -->
+					<i class="fa fa-chevron-up" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 </section>
 
-<div>
-    <div class="maincate_wrap active hmob">
-		<h2>복지용구 한눈에 보기</h2>
-        <ul class="maincate">
-            <?php
-			// $cate_arr = array(
-			// 	"1010" => array("name" => "전동침대",         "icon" => "icon_1010.png"),
-			// 	"1020" => array("name" => "수동휠체어",       "icon" => "icon_1020.png"),
-			// 	"1040" => array("name" => "실외경사로",       "icon" => "icon_1040.png"),
-			// 	"2010" => array("name" => "이동변기",         "icon" => "icon_2010.png"),
-			// 	"2020" => array("name" => "보행기&middot;워커", "icon" => "icon_2020.png"),
-			// 	"2030" => array("name" => "목욕의자",         "icon" => "icon_2030.png"),
-			// 	"2040" => array("name" => "욕창예방매트",     "icon" => "icon_2040.png"),
-			// 	"2050" => array("name" => "욕창예방방석",     "icon" => "icon_2050.png"),
-			// 	"2060" => array("name" => "안전손잡이",       "icon" => "icon_2060.png"),
-			// 	"2070" => array("name" => "미끄럼방지매트",   "icon" => "icon_2070.png"),
-			// 	"2080" => array("name" => "자세변환용구",     "icon" => "icon_2080.png"),
-			// 	"2090" => array("name" => "실내경사로",       "icon" => "icon_2090.png"),
-			// 	"20a0" => array("name" => "지팡이",           "icon" => "icon_20a0.png"),
-			// 	"20b0" => array("name" => "간이변기",         "icon" => "icon_20b0.png"),
-			// 	"20c0" => array("name" => "요실금팬티",       "icon" => "icon_20c0.png"),
-			// 	"20d0" => array("name" => "미끄럼방지양말",   "icon" => "icon_20d0.png"),
-			// 	"20e0" => array("name" => "구강세척기",       "icon" => "icon_20e0.png"),
-			// 	"30"   => array("name" => "산소발생기",       "icon" => "icon_30.png"),
-			// 	"40"   => array("name" => "중고제품",         "icon" => "icon_40.png"),
-			// 	"50"   => array("name" => "비급여요양용품",   "icon" => "icon_50.png"),
-			// );
-			$cate_arr = array(
-				"1010" => array("name" => "전동침대",         "icon" => "cate_icon1.png"),
-				"1020" => array("name" => "수동휠체어",       "icon" => "cate_icon2.png"),
-				"1040" => array("name" => "실외경사로",       "icon" => "cate_icon3.png"),
-				"2010" => array("name" => "이동변기",         "icon" => "cate_icon4.png"),
-				"2020" => array("name" => "보행기&middot;워커", "icon" => "cate_icon5.png"),
-				"2030" => array("name" => "목욕의자",         "icon" => "cate_icon6.png"),
-				"2040" => array("name" => "욕창예방매트",     "icon" => "cate_icon7.png"),
-				"2050" => array("name" => "욕창예방방석",     "icon" => "cate_icon8.png"),
-				"2060" => array("name" => "안전손잡이",       "icon" => "cate_icon9.png"),
-				"2070" => array("name" => "미끄럼방지매트",   "icon" => "cate_icon10.png"),
-				"2080" => array("name" => "자세변환용구",     "icon" => "cate_icon11.png"),
-				"2090" => array("name" => "실내경사로",       "icon" => "cate_icon12.png"),
-				"20a0" => array("name" => "지팡이",           "icon" => "cate_icon13.png"),
-				"20b0" => array("name" => "간이변기",         "icon" => "cate_icon14.png"),
-				"20c0" => array("name" => "요실금팬티",       "icon" => "cate_icon15.png"),
-				"20d0" => array("name" => "미끄럼방지양말",   "icon" => "cate_icon16.png"),
-				"20e0" => array("name" => "구강세척기",       "icon" => "cate_icon17.png"),
-				"30"   => array("name" => "산소발생기",       "icon" => "cate_icon18.png"),
-				"40"   => array("name" => "중고제품",         "icon" => "cate_icon19.png"),
-				"50"   => array("name" => "비급여요양용품",   "icon" => "cate_icon20.png"),
-			);
-            foreach($cate_arr as $ca_id=>$ca_name){
-                ?>
-                <li>
-					<a href="<?php echo G5_SHOP_URL; ?>/list.php?ca_id=<?=$ca_id?>">
-						<div class="imgbox">
-							<!-- <img src="<?=G5_THEME_URL?>/<?=$ca_name['icon']?>?ver=26071901"> -->
-							<img src="<?=G5_THEME_URL?>/newimg/<?=$ca_name['icon']?>?ver=26071901">
-						</div>
-                    	<p class="tit"><?=$ca_name['name']?></p>
-					</a>
-                </li>
-                <?php
-            }
-            ?>
-        </ul>
-        <div class="maincate_wrap_btn">전체 카테고리 보기 <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-    </div>
 
+<style>
+	.main_search{max-width:900px;margin:0 auto;padding:12px 20px 40px;box-sizing:border-box;width:100%;}
+	.main_search .search_box{display:flex;align-items:center;background:#fff;border-radius:10px;padding:10px 10px 10px 26px;border:1px solid #ccc;box-sizing:border-box;width:100%;}
+	.main_search .search_box .ico_search{width:20px;height:20px;flex-shrink:0;margin-right:12px;}
+	.main_search .search_box input[type="text"]{flex:1;min-width:0;border:none;outline:none;font-size:16px;background:transparent;height:40px;}
+	.main_search .search_box input[type="text"]::placeholder{color:#999;}
+	.main_search .search_box .btn_search{border:none;background:#1a3d7c;color:#fff;font-size:15px;font-weight:700;padding:12px 34px;border-radius:50px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+	.main_search .search_box .btn_search:hover{background:#14305f;}
+	.main_search .search_keyword{display:flex;align-items:center;gap:14px;margin-top:16px;flex-wrap:wrap;}
+	.main_search .search_keyword .kw_title{font-size:14px;font-weight:700;color:#333;}
+	.main_search .search_keyword a{font-size:14px;color:#555;text-decoration:none;background: #f0f1f5;padding: 5px 10px;border-radius: 20px;}
+	@media (max-width: 950px){
+		.main_search .search_box{padding: 5px 5px 5px 13px;border-radius:8px;}
+		.main_search .search_box input[type="text"]{height: 30px;}
+		.main_search .search_box .btn_search{padding:10px 16px;font-size:13px;}
+	}
+	@media (max-width:419px){
+		.main_search{padding:24px 16px 30px;}
+		.main_search .search_box .ico_search{width:16px;height:16px;margin-right:6px;}
+		.main_search .search_keyword{gap:8px;}
+		.main_search .search_keyword .kw_title{font-size:13px;}
+		.main_search .search_keyword a{font-size:12px;padding:4px 8px;}
+	}
+</style>
+<div class="main_search">
+	<form name="fsearch" id="fsearch" method="get" action="<?php echo G5_SHOP_URL; ?>/search.php">
+		<div class="search_box">
+			<svg class="ico_search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="7" stroke="#999" stroke-width="2"/>
+				<line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#999" stroke-width="2" stroke-linecap="round"/>
+			</svg>
+			<input type="text" name="q" id="main_q" placeholder="제품명을 검색하세요" autocomplete="off">
+			<button type="submit" class="btn_search">검색</button>
+		</div>
+		<div class="search_keyword">
+			<span class="kw_title">인기검색어</span>
+			<a href="#" data-kw="전동침대">#전동침대</a>
+			<a href="#" data-kw="욕창">#욕창</a>
+			<a href="#" data-kw="안전손잡이">#안전손잡이</a>
+			<span class="pc">
+			<a href="#" data-kw="이동변기">#이동변기</a>
+			<a href="#" data-kw="보행기">#보행기</a>
+			</span>
+		</div>
+	</form>
 </div>
-<div id="list_wrap">
+<script>
+$(document).ready(function(){
+    $('#fsearch').on('submit', function(){
+        var kw = $.trim($('#main_q').val());
+        if(kw === ''){
+            alert('검색어를 입력해 주세요.');
+            $('#main_q').focus();
+            return false;
+        }
+    });
 
+    $('.main_search .search_keyword a').on('click', function(e){
+        e.preventDefault();
+        $('#main_q').val($(this).data('kw'));
+        $('#fsearch').trigger('submit');
+    });
+});
+</script>
+
+
+<div id="list_wrap">
 	<div class="mid_banner width">
 		<a href="tel:01054051955" class="mid_box">
-      <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb1.png" alt=""></span>
-      <span>
-        <h2>제품상담문의</h2>
-        <h5><b>010-5405-1955</b></h5>
-        <p><b>365일 연중무휴</b> 친절히 상담해
-드리겠습니다.</p>
-      </span>
-    </a>
+			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb1.png" alt=""></span>
+			<span>
+				<h2>제품상담문의</h2>
+				<h5><b>010-5405-1955</b></h5>
+				<p><b>365일 연중무휴</b> 친절히 상담해
+					드리겠습니다.</p>
+			</span>
+		</a>
 		<a href="https://blog.naver.com/euro_feel" target="_blank" class="mid_box">
-      <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb2.png" alt=""></span>
-      <span>
-        <h2>원누리케어 블로그</h2>
-        <p>복지용구 전국지점 운영
-<b>원누리케어 블로그</b> 바로가기</p>
-      </span>
-    </a>
-    <a href="<?php echo G5_BBS_URL ?>/faq.php" class="mid_box">
-      <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb3.png" alt=""></span>
-      <span>
-        <h2>자주묻는 질문</h2>
-        <p>이용하면서 궁금한 내용들을
-모아두었습니다.</p>
-      </span>
-    </a>
+			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb2.png" alt=""></span>
+			<span>
+				<h2>원누리케어 블로그</h2>
+				<p>복지용구 전국지점 운영
+					<b>원누리케어 블로그</b> 바로가기</p>
+			</span>
+		</a>
+		<a href="<?php echo G5_BBS_URL ?>/faq.php" class="mid_box">
+			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb3.png" alt=""></span>
+			<span>
+				<h2>자주묻는 질문</h2>
+				<p>이용하면서 궁금한 내용들을
+					모아두었습니다.</p>
+			</span>
+		</a>
 		<a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php" class="mid_box">
-      <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb4_2.png" alt="" style="width: 65px;"></span>
-      <span>
-        <h2>노인복지용구란?</h2>
-        <p>복지용구에 대한 자세한 설명을 확인하세요 </p>
-      </span>
-    </a>
+			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb4_2.png" alt=""
+					style="width: 65px;"></span>
+			<span>
+				<h2>노인복지용구란?</h2>
+				<p>복지용구에 대한 자세한 설명을 확인하세요 </p>
+			</span>
+		</a>
 	</div>
-
 
     <?php include_once(G5_MSHOP_SKIN_PATH.'/main.event.skin.php'); // 이벤트 ?>
 
@@ -518,8 +529,7 @@ $(document).ready(function(){
               <div class="mid_box">
                 <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL ?>/adv3.png" alt=""></span>
                 <span>
-                  <h2>전국 무료설치 및<br>
-전제품 무료배송</h2>
+                  <h2>전국 무료설치 및<br>				  전제품 무료배송</h2>
                   <p>전국침대, 이동욕조, 안전손잡이</p>
                 </span>
               </div>
