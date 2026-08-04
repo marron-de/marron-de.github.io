@@ -129,6 +129,42 @@
 									</div>
 								</div>
 							</div>
+							<!-- 260804 추가작업 start -->
+							 <div class="infoitem">
+								<p class="title">결제 수단</p>
+								<div class="listbox">
+									<div class="item full">
+										<div class="radio_wrap">
+											<div class="radio_box">
+												<input type="radio" name="frm_benepia" id="frm_benepia1" class="input_radio" checked="">
+												<label for="frm_benepia1" class="label_radio">베네피아 포인트로만 결제</label>
+											</div>
+											<div class="radio_box">
+												<input type="radio" name="frm_benepia" id="frm_benepia2" class="input_radio">
+												<label for="frm_benepia2" class="label_radio">베니피아 포인트 + 카드(간편)로 결제</label>
+											</div>
+											<div class="radio_box">
+												<input type="radio" name="frm_benepia" id="frm_benepia3" class="input_radio">
+												<label for="frm_benepia3" class="label_radio">카드(간편)결제만 사용하여 결제</label>
+											</div>
+										</div>
+									</div>
+									<div class="item full">
+										<div class="input_box m_full">
+											<div class="input_item m_column">
+												<input type="text" class="input_text" placeholder="아이디를 입력해주세요">
+												<input type="password" class="input_text" placeholder="비밀번호를 입력해주세요">
+												<button type="button" class="input_btn">조회 및 결제</button>
+											</div>
+											<div class="input_status">
+												<span class="bold">사용한 포인트 <span class="point">100 P</span></span>
+												 / 잔여 포인트 173,929 P
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 260804 추가작업 end -->
 							<div class="infoitem">
 								<p class="title">결제 수단</p>
 								<div class="paybox">
