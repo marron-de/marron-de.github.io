@@ -317,25 +317,21 @@ if (!$_COOKIE['ck_top_banner_close']){
 
 
 <style>
-	.main_search{max-width:900px;margin:0 auto;padding:12px 20px 40px;box-sizing:border-box;width:100%;}
-	.main_search .search_box{display:flex;align-items:center;background:#fff;border-radius:10px;padding:10px 10px 10px 26px;border:1px solid #ccc;box-sizing:border-box;width:100%;}
-	.main_search .search_box .ico_search{width:20px;height:20px;flex-shrink:0;margin-right:12px;}
-	.main_search .search_box input[type="text"]{flex:1;min-width:0;border:none;outline:none;font-size:16px;background:transparent;height:40px;}
+	.main_search{max-width:900px;margin:0 auto;padding:12px 20px 64px;box-sizing:border-box;width:100%;}
+	.main_search .search_box{display:flex;align-items:center;background:#fff;box-sizing:border-box;width:100%;}
+	.main_search .search_box input[type="text"]{flex:1;min-width:0;border:none;outline:none;background:transparent;height:40px;}
 	.main_search .search_box input[type="text"]::placeholder{color:#999;}
-	.main_search .search_box .btn_search{border:none;background:#1a3d7c;color:#fff;font-size:15px;font-weight:700;padding:12px 34px;border-radius:50px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+	.main_search .search_box .btn_search{border:none;color:#fff;border-radius:100px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
 	.main_search .search_box .btn_search:hover{background:#14305f;}
-	.main_search .search_keyword{display:flex;align-items:center;gap:14px;margin-top:16px;flex-wrap:wrap;}
-	.main_search .search_keyword .kw_title{font-size:14px;font-weight:700;color:#333;}
+	.main_search .search_keyword{display:flex;align-items:center;gap:10px;margin-top:16px;flex-wrap:wrap;}
+	.main_search .search_keyword .kw_title{font-size:14px;font-weight:700;color:#333; margin-right: 10px;}
 	.main_search .search_keyword a{font-size:14px;color:#555;text-decoration:none;background: #f0f1f5;padding: 5px 10px;border-radius: 20px;}
 	@media (max-width: 950px){
-		.main_search .search_box{padding: 5px 5px 5px 13px;border-radius:8px;}
 		.main_search .search_box input[type="text"]{height: 30px;}
-		.main_search .search_box .btn_search{padding:10px 16px;font-size:13px;}
 	}
 	@media (max-width:419px){
-		.main_search{padding:24px 16px 30px;}
-		.main_search .search_box .ico_search{width:16px;height:16px;margin-right:6px;}
-		.main_search .search_keyword{gap:8px;}
+		.main_search{padding:24px 16px 50px;}
+		.main_search .search_keyword{gap:8px; margin-top: 12px;}
 		.main_search .search_keyword .kw_title{font-size:13px;}
 		.main_search .search_keyword a{font-size:12px;padding:4px 8px;}
 	}
@@ -343,10 +339,13 @@ if (!$_COOKIE['ck_top_banner_close']){
 <div class="main_search">
 	<form name="fsearch" id="fsearch" method="get" action="<?php echo G5_SHOP_URL; ?>/search.php">
 		<div class="search_box">
-			<svg class="ico_search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<div class="ico_search">
+				<i data-lucide="search" class="svgicon"></i>
+			</div>
+			<!-- <svg class="ico_search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<circle cx="11" cy="11" r="7" stroke="#999" stroke-width="2"/>
 				<line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#999" stroke-width="2" stroke-linecap="round"/>
-			</svg>
+			</svg> -->
 			<input type="text" name="q" id="main_q" placeholder="제품명을 검색하세요" autocomplete="off">
 			<button type="submit" class="btn_search">검색</button>
 		</div>
@@ -383,40 +382,64 @@ $(document).ready(function(){
 
 
 <div id="list_wrap">
-	<div class="mid_banner width">
-		<a href="tel:01054051955" class="mid_box">
-			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb1.png" alt=""></span>
-			<span>
-				<h2>제품상담문의</h2>
-				<h5><b>010-5405-1955</b></h5>
-				<p><b>365일 연중무휴</b> 친절히 상담해
-					드리겠습니다.</p>
-			</span>
-		</a>
-		<a href="https://blog.naver.com/euro_feel" target="_blank" class="mid_box">
-			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb2.png" alt=""></span>
-			<span>
-				<h2>원누리케어 블로그</h2>
-				<p>복지용구 전국지점 운영
-					<b>원누리케어 블로그</b> 바로가기</p>
-			</span>
-		</a>
-		<a href="<?php echo G5_BBS_URL ?>/faq.php" class="mid_box">
-			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb3.png" alt=""></span>
-			<span>
-				<h2>자주묻는 질문</h2>
-				<p>이용하면서 궁금한 내용들을
-					모아두었습니다.</p>
-			</span>
-		</a>
-		<a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php" class="mid_box">
-			<span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL; ?>/midb4_2.png" alt=""
-					style="width: 65px;"></span>
-			<span>
-				<h2>노인복지용구란?</h2>
-				<p>복지용구에 대한 자세한 설명을 확인하세요 </p>
-			</span>
-		</a>
+	<div class="mid_bannerbox">
+		<div class="mid_banner width">
+			<a href="tel:01054051955" class="mid_box">
+				<span class="mid_icon">
+					<img src="<?php echo G5_THEME_URL; ?>/newimg/midb1.png" alt="">
+					<!-- <img src="<?php echo G5_THEME_IMG_URL; ?>/midb1.png" alt=""></span> -->
+				</span>
+				<span>
+					<h2>제품상담문의</h2>
+					<h5><b>010-5405-1955</b></h5>
+					<p>
+						<b>365일 연중무휴</b>  <br class="tablet">
+						친절히 상담해
+						드리겠습니다.
+					</p>
+				</span>
+			</a>
+			<a href="https://blog.naver.com/euro_feel" target="_blank" class="mid_box">
+				<span class="mid_icon">
+					<img src="<?php echo G5_THEME_URL; ?>/newimg/midb2.png" alt="">
+					<!-- <img src="<?php echo G5_THEME_IMG_URL; ?>/midb2.png" alt=""></span> -->
+				</span>
+				<span>
+					<h2>원누리케어 블로그</h2>
+					<p>
+						복지용구 전국지점 운영 <br class="tablet">
+						<b>원누리케어 블로그</b> 
+						바로가기
+					</p>
+				</span>
+			</a>
+			<a href="<?php echo G5_BBS_URL ?>/faq.php" class="mid_box">
+				<span class="mid_icon">
+					<img src="<?php echo G5_THEME_URL; ?>/newimg/midb3.png" alt="">
+					<!-- <img src="<?php echo G5_THEME_IMG_URL; ?>/midb3.png" alt=""></span> -->
+				</span>
+				<span>
+					<h2>자주묻는 질문</h2>
+					<p>
+						이용하면서 궁금한  <br class="tablet">
+						내용들을 모아두었습니다.
+					</p>
+				</span>
+			</a>
+			<a href="<?php echo G5_THEME_URL ?>/mobile/shop/olduse1.php" class="mid_box">
+				<span class="mid_icon">
+					<img src="<?php echo G5_THEME_URL; ?>/newimg/midb4.png" alt="">
+					<!-- <img src="<?php echo G5_THEME_IMG_URL; ?>/midb4_2.png" alt="" style="width: 65px;"> -->
+				</span>
+				<span>
+					<h2>노인복지용구란?</h2>
+					<p>
+						복지용구에 대한 <br class="tablet">
+						자세한 설명을 확인하세요 
+					</p>
+				</span>
+			</a>
+		</div>
 	</div>
 
     <?php include_once(G5_MSHOP_SKIN_PATH.'/main.event.skin.php'); // 이벤트 ?>
@@ -509,39 +532,43 @@ $(document).ready(function(){
               복지 용구사업에 초점을 두고 체계적으로 <br>
               운영하고 있습니다.
               </p>
-              <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company"><img src="<?php echo G5_THEME_IMG_URL ?>/adbtn.png" alt=""></a>
+              <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company" class="more_btn">
+				<span class="txt">업체소개 바로가기</span>
+				<i data-lucide="chevron-right" class="svgicon"></i>
+				<!-- <img src="<?php echo G5_THEME_IMG_URL ?>/adbtn.png" alt=""> -->
+			</a>
             </div>
             <div class="adv_box_wrap">
               <div class="mid_box">
-                <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL ?>/adv1.png" alt=""></span>
+                <span class="mid_icon"><img src="<?php echo G5_THEME_URL ?>/newimg/adv1.png" alt=""></span>
                 <span>
                   <p>전국침대, 이동욕조, 안전손잡이</p>
                   <h2>전국 설치가능</h2>
                 </span>
               </div>
               <div class="mid_box">
-                <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL ?>/adv2.png" alt=""></span>
+                <span class="mid_icon"><img src="<?php echo G5_THEME_URL ?>/newimg/adv2.png" alt=""></span>
                 <span>
-                  <h2>가구형 고급 수입 침대 보유</h2>
+                  <h2>가구형 고급 수입 <br class="tablet"> 침대 보유</h2>
                   <p>4모터, 사이드업 기능</p>
                 </span>
               </div>
               <div class="mid_box">
-                <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL ?>/adv3.png" alt=""></span>
+                <span class="mid_icon"><img src="<?php echo G5_THEME_URL ?>/newimg/adv3.png" alt=""></span>
                 <span>
                   <h2>전국 무료설치 및<br>				  전제품 무료배송</h2>
                   <p>전국침대, 이동욕조, 안전손잡이</p>
                 </span>
               </div>
               <div class="mid_box">
-                <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL ?>/adv4.png" alt=""></span>
+                <span class="mid_icon"><img src="<?php echo G5_THEME_URL ?>/newimg/adv4.png" alt=""></span>
                 <span>
                   <h2>산소발생기 전국 당일설치</h2>
-                  <p>산소방, 응급환자 빠른 설치</p>
+                  <p>산소방, 응급환자 <br class="tablet">빠른 설치</p>
                 </span>
               </div>
               <div class="mid_box">
-                <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL ?>/adv5.png" alt=""></span>
+                <span class="mid_icon"><img src="<?php echo G5_THEME_URL ?>/newimg/adv5.png" alt=""></span>
                 <span>
                   <h2>중고 의료용 침대</h2>
                   <p>3모터, 무상 A/S</p>
@@ -549,7 +576,7 @@ $(document).ready(function(){
                 </span>
               </div>
               <div class="mid_box">
-                <span class="mid_icon"><img src="<?php echo G5_THEME_IMG_URL ?>/adv6.png" alt=""></span>
+                <span class="mid_icon"><img src="<?php echo G5_THEME_URL ?>/newimg/adv6.png" alt=""></span>
                 <span>
                   <p>무릎, 어깨 재활 치료기</p>
                   <h2>CPM 전국 대여 가능</h2>

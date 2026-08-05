@@ -59,14 +59,15 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 	.quickswiper .swiper-slide .slide-item {width: 130px;height: 130px;display: flex;justify-content: center;align-items: center;}
 	.quickswiper .swiper-slide .slide-item a {display: block;width: 100%;height: 100%;}
 	.quickswiper .swiper-slide .slide-item img {width: 100%;height: 100%;object-fit: cover;}
-	.quickswiper-controls {position: absolute;bottom: 10px;left: 30px;display: flex;justify-content: center;gap: 5px;margin-top: 12px;}
-	.quickswiper-controls .swiper-button-prev,.quickswiper-controls .swiper-button-next {position: static !important;color: #000;width: 27px;height: 27px !important;font-size: 14px;cursor: pointer;font-weight: bold;background-size: 16px 16px !important;border:1px solid #ccc;margin-top:0px;}
+	.quickswiper-controls {position: relative;display: flex;align-items:center;    justify-content: space-between; gap: 5px;margin: 12px 0;}
+	.quickswiper-controls .swiper-button-prev,
+	.quickswiper-controls .swiper-button-next {position: static !important;color: #000;width: 24px;height: 24px !important;font-size: 14px;cursor: pointer;font-weight: bold;background-size: 16px 16px !important; margin: 0; filter: brightness(0.2); }
 	.quickswiper-controls .swiper-button-prev::after,.swiper-button-next::after {content: none;}
-	.quickswiper-controls .swiper-pagination {position: static !important;width: auto !important;font-size: 14px;font-weight: bold;color: #000;margin: 3px auto;}
+	.quickswiper-controls .swiper-pagination {position: static !important;width: auto !important;font-size: 14px;font-weight: 600;color: var(--brand-primary);margin: 0;}
 </style>
 
   <!-- Swiper 구조 -->
-  <div class="slider-container" style="padding-bottom:30px;">
+  <div class="slider-container">
     <div class="quickswiper">
       <div class="swiper-wrapper">
 		<?php
@@ -266,7 +267,7 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 							<span>장바구니</span>
 							<span class="num"><?php echo get_cart_count($tmp_cart_id); ?></span>
 						</a>
-						<a href="<?php echo G5_MSHOP_URL; ?>/mypage.php" class="icon_menu_wrap">
+						<a href="<?php echo G5_MSHOP_URL; ?>/wishlist.php" class="icon_menu_wrap">
 							<!-- <img src="<?php echo G5_THEME_IMG_URL; ?>/icon_zzim.png" class=""> -->
 							<i data-lucide="heart" class="svgicon"></i>
 							<span>찜</span>
@@ -285,6 +286,7 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 							<!-- <img src="<?=G5_THEME_IMG_URL?>/icon_cart.png" class=""> -->
 							<i data-lucide="shopping-bag" class="svgicon"></i>
 							<span>장바구니</span>
+							<span class="num"><?php echo get_cart_count($tmp_cart_id); ?></span>
 						</a>
 						<?php }?>
 					</li>
@@ -300,7 +302,7 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 		#mega_cat_btn:hover{color:#1a7f8d;}
 
 		/* 드롭다운 컨테이너 */
-		#mega_drop{display:none;position:absolute; top: calc(100% + 10px);left:0;z-index:9999;width:440px;background:#fff;border:1px solid #ddd;border-top:3px solid var(--brand-primary);border-top: 0; box-shadow: 0 8px 24px rgba(0, 0, 0, .13); border-radius: 16px; overflow: hidden;}		
+		#mega_drop{display:none;position:absolute; top: calc(100% - 10px);left:0;z-index:9999;width:440px;background:#fff;border:1px solid #ddd; box-shadow: 0 8px 24px rgba(0, 0, 0, .13); border-radius: 16px; overflow: hidden;}		
 		#mega_drop .cf {display: flex;}
 
 		/* 1차 카테고리 리스트 */
@@ -412,62 +414,73 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 						메가 드롭다운 jQuery 핵심 스크립트
 					═══════════════════════════════════════════════ -->
 					<script>
-					$(function(){
-						var $catBtn   = $('#mega_cat_btn');
-						var $megaDrop = $('#mega_drop');
-						var $cat1     = $('.cat1_list a');
-						var $panels   = $('.sub_panel');
-						var hideTimer;
+						$(function(){
+							var $catBtn   = $('#mega_cat_btn');
+							var $megaDrop = $('#mega_drop');
+							var $cat1     = $('.cat1_list a');
+							var $panels   = $('.sub_panel');
+							var hideTimer;
 
-						/* 첫 번째 1차 항목 활성화 */
-						function activateFirst(){
-							if($cat1.filter('.on').length===0){
-								switchSub($cat1.first());
+							/* 첫 번째 1차 항목 활성화 */
+							function activateFirst(){
+								if($cat1.filter('.on').length===0){
+									switchSub($cat1.first());
+								}
 							}
-						}
 
-						/* 서브 패널 전환 */
-						function switchSub($el){
-							$cat1.removeClass('on');
-							$panels.removeClass('on');
-							$el.addClass('on');
-							$('#sub_'+$el.data('sub')).addClass('on');
-						}
+							/* 서브 패널 전환 */
+							function switchSub($el){
+								$cat1.removeClass('on');
+								$panels.removeClass('on');
+								$el.addClass('on');
+								$('#sub_'+$el.data('sub')).addClass('on');
+							}
 
-						/* 전체 카테고리 버튼 hover */
-						$catBtn.on('mouseenter',function(){
-							clearTimeout(hideTimer);
-							$megaDrop.stop(true,true).fadeIn(150);
-							activateFirst();
+							/* 전체 카테고리 버튼 hover */
+							$catBtn.on('mouseenter',function(){
+								clearTimeout(hideTimer);
+								$megaDrop.stop(true,true).fadeIn(150);
+								activateFirst();
+							});
+
+							/* 버튼 영역 벗어날 때 - drop으로 이동이면 유지 */
+							$catBtn.on('mouseleave',function(e){
+								var to=e.relatedTarget||e.toElement;
+								if($megaDrop.is(to)||$megaDrop.find(to).length){return;}
+								hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
+							});
+
+							/* 드롭다운 안으로 들어오면 유지 */
+							$megaDrop.on('mouseenter',function(){
+								clearTimeout(hideTimer);
+							});
+
+							/* 드롭다운 완전히 벗어나면 닫기 */
+							// $megaDrop.on('mouseleave',function(){
+							// 	hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
+							// });
+							$megaDrop.on('mouseleave', function(e){
+								const to = e.relatedTarget || e.toElement;
+								if(catBtn.is(to) || catBtn.find(to).length){
+									return;
+								}
+
+								clearTimeout(hideTimer);
+								hideTimer = setTimeout(function(){
+									$megaDrop.fadeOut(150);
+								}, 120);
+							});
+
+							/* 1차 카테고리 hover → 서브 전환 */
+							$cat1.on('mouseenter',function(){
+								switchSub($(this));
+							});
+
+							/* 1차 링크 클릭: 페이지 이동 허용 */
+							$cat1.on('click',function(){
+								/* href 기본 동작 */
+							});
 						});
-
-						/* 버튼 영역 벗어날 때 - drop으로 이동이면 유지 */
-						$catBtn.on('mouseleave',function(e){
-							var to=e.relatedTarget||e.toElement;
-							if($megaDrop.is(to)||$megaDrop.find(to).length){return;}
-							hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
-						});
-
-						/* 드롭다운 안으로 들어오면 유지 */
-						$megaDrop.on('mouseenter',function(){
-							clearTimeout(hideTimer);
-						});
-
-						/* 드롭다운 완전히 벗어나면 닫기 */
-						$megaDrop.on('mouseleave',function(){
-							hideTimer=setTimeout(function(){$megaDrop.fadeOut(150);},120);
-						});
-
-						/* 1차 카테고리 hover → 서브 전환 */
-						$cat1.on('mouseenter',function(){
-							switchSub($(this));
-						});
-
-						/* 1차 링크 클릭: 페이지 이동 허용 */
-						$cat1.on('click',function(){
-							/* href 기본 동작 */
-						});
-					});
 					</script>
 
 					</li>
@@ -842,7 +855,7 @@ $( document ).ready( function() {
 .btn_search_close svg { width: 22px; height: 22px; }
 .search_input_wrap { display: flex; align-items: center; flex: 1; gap: 8px; }
 .search_input_box { display: flex; align-items: center; flex: 1; height: 46px; border: 1px solid #ddd; border-radius: 8px; padding: 0 14px; gap: 8px; }
-.search_input_box svg { width: 18px; height: 18px; flex-shrink: 0; }
+.search_input_box svg { width: 20px; height: 20px; flex-shrink: 0; stroke: var(--brand-primary); }
 .search_input_box input { border: none; outline: none; flex: 1; font-size: 15px; height:35px;}
 .search_input_box input::placeholder { color: #aaa; }
 .search_input_box input:focus{border:none !important;}
@@ -866,6 +879,7 @@ $( document ).ready( function() {
 .recent_empty svg { width: 56px; height: 56px; margin-bottom: 16px; }
 .recent_empty .tit { font-size: 15px; font-weight: 700; color: #333; margin-bottom: 6px; }
 .recent_empty .desc { font-size: 13px; color: #999; }
+.search_section + .search_section { border-top: 2px solid #f5f6f8;}
 </style>
 <script>
 $(function () {
