@@ -38,7 +38,7 @@ $admin = get_admin("super");
 		<div class="ft_info">
 			<li><a href="<?php echo get_pretty_url('content', 'provision'); ?>">이용약관</a></li>
 			<li><a href="<?php echo get_pretty_url('content', 'privacy'); ?>"><b>개인정보처리방침</b></a></li>
-			<li><a href="<?php echo get_pretty_url('content', 'company'); ?>">이용안내</a></li>
+			<li><a href="<?php echo get_pretty_url('content', 'company'); ?>">회사소개</a></li>
 		</div>
 		<div class="fsns">
 			<a href="https://pf.kakao.com/_mxbxaMb/chat" target="_blank"><img

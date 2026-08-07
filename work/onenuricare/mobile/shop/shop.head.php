@@ -256,7 +256,7 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 							<i class="fa fa-lock" aria-hidden="true"></i>
 							<span>로그아웃</span>
 						</a>-->
-						<a href="<?php echo G5_SHOP_URL; ?>/orderinquiry.php" class="icon_menu_wrap">
+						<a href="<?php echo G5_SHOP_URL; ?>/mypage.php" class="icon_menu_wrap">
 							<!-- <img src="<?=G5_THEME_IMG_URL?>/icon_mypage.png" class=""> -->
 							<i data-lucide="user-round" class="svgicon"></i>
 							<span>마이페이지</span>
@@ -277,7 +277,7 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 							<i class="fa fa-lock" aria-hidden="true" style="display:block;font-size:29px;"></i>
 							<span>로그인</span>
 						</a>-->
-						<a href="<?php echo G5_SHOP_URL; ?>/orderinquiry.php" class="icon_menu_wrap">
+						<a href="<?php echo G5_SHOP_URL; ?>/mypage.php" class="icon_menu_wrap">
 							<!-- <img src="<?=G5_THEME_IMG_URL?>/icon_mypage.png" class=""> -->
 							<i data-lucide="user-round" class="svgicon"></i>
 							<span>마이페이지</span>
