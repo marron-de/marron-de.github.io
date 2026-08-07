@@ -22,7 +22,7 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="swiper banner_swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide item item7">
+					<!-- <div class="swiper-slide item item7">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg_mob.jpg" alt="" class="bg tablet">
@@ -40,6 +40,28 @@ if (!defined('_EYOOM_')) exit;
 									진로 컨설팅 체험하기(1회)
 								</p>
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=41" class="btn typeE">세션 예약하기</a>
+							</div>
+						</div>
+					</div> -->
+					<div class="swiper-slide item item9">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner9_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner9_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner9_img.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner9_img_m.png" alt="" class="img tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">서울 강남</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">9월5일~6일 | 11:00</p>
+								<p class="tit">
+									말레이시아  <br>
+									국제학교 대면설명회
+								</p>
+								<p class="desc">EATON 초청, 입학시험 모의테스트</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=42" class="btn typeH">설명회 바로가기</a>
 							</div>
 						</div>
 					</div>

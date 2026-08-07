@@ -297,7 +297,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">Harrow Bangkok</p>
 											</div>
 										</div>								
-										<div class="item">
+										<!-- <div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo58.png" alt="" class="img">
 											</div>
@@ -305,8 +305,8 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">킹스 칼리지 방콕</p>
 												<p class="desc">King's College Bangkok</p>
 											</div>
-										</div>								
-										<div class="item">
+										</div>								 -->
+										<!-- <div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo59.png" alt="" class="img">
 											</div>
@@ -314,7 +314,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">슈루즈베리 방콕</p>
 												<p class="desc">Shrewsbury Bangkok</p>
 											</div>
-										</div>								
+										</div>								 -->
 										<div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo60.png" alt="" class="img">
@@ -351,7 +351,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">Anglo Singapore</p>
 											</div>
 										</div>								
-										<div class="item">
+										<!-- <div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo64.png" alt="" class="img">
 											</div>
@@ -359,7 +359,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">AISB (호주 국제학교 방콕)</p>
 												<p class="desc">Australian International School Bangkok</p>
 											</div>
-										</div>									
+										</div>									 -->
 									</div>
                                 </div>
 								<div class="frame-section sec">
@@ -480,7 +480,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="desc">United World College (Phuket)</p>
 											</div>
 										</div>	
-										<div class="item">
+										<!-- <div class="item">
 											<div class="imgbox">
 												<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_logo76.png" alt="" class="img">
 											</div>
@@ -488,7 +488,7 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tit">헤드 스타트 푸켓</p>
 												<p class="desc">Head Start Phuket</p>
 											</div>
-										</div>							
+										</div>							 -->
 									</div>
 								</div>
                                 <div class="line-2a"></div>

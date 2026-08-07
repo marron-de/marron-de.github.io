@@ -235,7 +235,7 @@ if (!defined('_EYOOM_')) exit;
 						<div class="td">
 							<span class="bold">
 								1월 최소 등록 4주 : 
-								<span class="gray">660만원대 (2월 최소 등록 2주)</span>
+								<span class="gray">590만원대 (2월 최소 등록 2주)</span>
 							</span>
 						</div>
 					</div>
