@@ -244,9 +244,11 @@ https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css
 					<?php if ($is_member) { ?>
 					<!-- <a href="#" class="tnb_cart tnb_mob">예치금 <b><?=number_format($member['mb_point'])?></b>원</a> -->
 					<a href="<?php echo G5_BBS_URL ?>/logout.php" class="tnb_cart "><span></span>로그아웃</a>
+					<a href="<?php echo G5_SHOP_URL ?>/orderinquiry.php" class="tnb_cart "><span></span>주문조회</a>
 					<?php } else { ?>
 					<a href="<?php echo G5_BBS_URL ?>/login.php" class="tnb_cart "><span></span>로그인</a>
 					<a href="<?php echo G5_BBS_URL ?>/register.php" class="tnb_cart "><span></span>회원가입</a>
+					<a href="<?php echo G5_SHOP_URL ?>/orderinquiry.php" class="tnb_cart "><span></span>주문조회</a>
 					<?php }?>
 				</div>
 				<ul class="hour_call">

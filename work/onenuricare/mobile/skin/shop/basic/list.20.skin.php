@@ -24,8 +24,12 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
 	.assist_wrap td{padding-left:10px;}
 }
 </style>
+<!-- <div class="sct-size"> 
+    <button type="button" class="btn-size" id="btn-big">이미지크게보기</button>
+    <button type="button" class="btn-size active" id="btn-small">이미지작게보기</button>
+</div> -->
 <!-- 상품진열 10 시작 { -->
-<div class="sct_wrap nomargin">
+<div class="sct_wrap nomargin" >
 <?php
 $li_width = intval(100 / $this->list_mod);
 $li_width_style = ' style="width:'.$li_width.'%;"';
@@ -35,7 +39,7 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
         if ($this->css) {
             echo "<ul id=\"sct_wrap\" class=\"{$this->css}\">\n";
         } else {
-            echo "<ul id=\"sct_wrap\" class=\"sct sct_10\">\n";
+            echo "<ul id=\"sct_wrap\" class=\"sct sct_20\">\n";
         }
     }
 
@@ -73,7 +77,8 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 	// if($member['mb_id']){
 	echo "<div class=\"sct_wish_btn\"><button type=\"button\" class=\"btn_wish\" data-it_id=\"{$row['it_id']}\"><i data-lucide=\"heart\" class=\"svgicon\"></i></button></div>";
 	// }
-	
+
+
 	echo "
             </div>
         </div>\n";
@@ -81,9 +86,8 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
     echo "</div>";
 
         echo "<div class=\"sct_cartop\"></div>\n";
-		echo "<div class=\"sct_txt\"><div class=\"sct_icon_wr\">".item_icon2($row)."</div>\n";
     if ($this->href) {
-        echo "<a href=\"{$this->href}{$row['it_id']}\" class=\"sct_a\">\n";
+        echo "<div class=\"sct_txt\"><a href=\"{$this->href}{$row['it_id']}\" class=\"sct_a\">\n";
     }
 
     if ($this->view_it_name) {
@@ -94,14 +98,15 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 	}
 
     if ($this->href) {
-        echo "</a>\n";
+        echo "</a></div>\n";
     }
-        echo "</div>\n";
     if ($this->view_it_price) {
         echo "<div class=\"sct_cost\">\n";
         echo display_price(get_price($row), $row['it_tel_inq'])."\n";
         echo "</div>\n";
     }
+
+    echo "<div class=\"sct_icon_wr\">".item_icon2($row)."</div>\n";
 
 	if((substr($row['ca_id'],0,2)=="10" || substr($row['ca_id'],0,2)=="20")){
 		$it_price=get_price($row);
@@ -124,12 +129,12 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 			echo '<div class="it_txt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="circle-alert" aria-hidden="true" class="lucide lucide-circle-alert svgicon"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg><span class="txt">'.$row['it_1'].'</span></div>';
 		}
 	}else{
-		echo '<div class="assist_wrap">';
-		echo '<table>';
+		// echo '<div class="assist_wrap">';
+		// echo '<table>';
         // if($row['it_1']){
         //     echo '<tr><td class="it_1" colspan=2><img src="'.G5_THEME_IMG_URL.'/new_260225.png" alt="">'.$row['it_1'].'</td></tr>';
         // }
-		echo '</table></div>';
+		// echo '</table></div>';
 		if($row['it_1']){
 			echo '<div class="it_txt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="circle-alert" aria-hidden="true" class="lucide lucide-circle-alert svgicon"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg><span class="txt">'.$row['it_1'].'</span></div>';
 		}
@@ -144,4 +149,18 @@ if($i == 0) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\
 ?>
 
 </div>
+<script>
+
+    $(".sct-size button").click(function () {
+        $(".sct-size button").removeClass("active");
+        $(this).addClass("active");
+    });
+    $("#btn-small").click(function () {
+        $(".sct_wrap").removeClass("big").addClass("small");
+    });
+    $("#btn-big").click(function () {
+        $(".sct_wrap").removeClass("small").addClass("big");
+    });
+
+</script>
 <!-- } 상품진열 10 끝 -->

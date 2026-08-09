@@ -79,7 +79,7 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
         }
 
         if ($this->view_it_name) {
-            echo stripslashes($row['it_name'])."\n";
+        	echo '<div class="it_name">'.stripslashes($row['it_name']).'</div>';
         }
 		if($row['it_name_sub']){
 			echo '<div class="it_basic">'.$row['it_name_sub'].'</div>';
@@ -101,7 +101,7 @@ if((substr($row['ca_id'],0,2)=="10" || substr($row['ca_id'],0,2)=="20")){
 		echo '<div class="assist_wrap">';
 		echo '<table>';
 		echo '<tr><th>공단고시가</th><td class="price1">'.display_price($it_price).'</td></tr>';
-		echo '<tr><th>본인부담금(15%)</th><td class="price2">'.display_price($it_price2).'</td></tr>';
+		echo '<tr><th>본인부담금(15% 기준)</th><td class="price2">'.display_price($it_price2).'</td></tr>';
 		echo '</table>';
 }
 
