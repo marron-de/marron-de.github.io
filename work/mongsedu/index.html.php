@@ -65,7 +65,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide item item8">
+					<!-- <div class="swiper-slide item item8">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg_mob.jpg" alt="" class="bg tablet">
@@ -86,7 +86,7 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=40" class="btn typeB">세션 예약하기</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- <div class="swiper-slide item item1">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg.jpg" alt="" class="bg pc">
