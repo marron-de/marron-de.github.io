@@ -485,7 +485,9 @@ if(substr($it['ca_id'],0,2)!="30" && substr($it['ca_id'],0,2)!="40"){
 	  }
 	  ?>
 	  	<!-- <img src="<?=G5_THEME_IMG_URL?>/calling.png?ver=1" title="24시간 연중무휴 야간상담 가능"></a> -->
-	  	<img src="<?=G5_THEME_URL?>/newimg/calling.jpg" title="24시간 연중무휴 야간상담 가능"></a>
+	  		<img src="<?=G5_THEME_URL?>/newimg/calling.jpg" title="24시간 연중무휴 야간상담 가능" class="pc">
+	  		<img src="<?=G5_THEME_URL?>/newimg/calling_m.jpg" title="24시간 연중무휴 야간상담 가능" class="tablet">
+		</a>
         <!--<h3>24시간 연중무휴 야간상담 가능</h3>-->
         <!--<p><b>주문하기</b> - 홈페이지로 바로 주문하기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>-->
         <!--<p><b>전화상담</b> - 담당자와 전화 상담 후 주문하기</p>-->
