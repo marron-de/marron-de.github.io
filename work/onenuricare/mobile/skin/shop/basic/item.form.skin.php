@@ -484,7 +484,8 @@ if(substr($it['ca_id'],0,2)!="30" && substr($it['ca_id'],0,2)!="40"){
 		  echo '<a href="http://pf.kakao.com/_DxgkxbX/chat">';
 	  }
 	  ?>
-	  	<img src="<?=G5_THEME_IMG_URL?>/calling.png?ver=1" title="24시간 연중무휴 야간상담 가능"></a>
+	  	<!-- <img src="<?=G5_THEME_IMG_URL?>/calling.png?ver=1" title="24시간 연중무휴 야간상담 가능"></a> -->
+	  	<img src="<?=G5_THEME_URL?>/newimg/calling.jpg" title="24시간 연중무휴 야간상담 가능"></a>
         <!--<h3>24시간 연중무휴 야간상담 가능</h3>-->
         <!--<p><b>주문하기</b> - 홈페이지로 바로 주문하기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>-->
         <!--<p><b>전화상담</b> - 담당자와 전화 상담 후 주문하기</p>-->
