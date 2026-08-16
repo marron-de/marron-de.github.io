@@ -19,6 +19,15 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
 <input type="hidden" name="sw_direct">
 <input type="hidden" name="url">
 
+
+<style>
+	@media screen and (max-width: 1024px) {
+		#ft { padding-bottom: 100px;}
+		.quick {bottom:80px;}		
+	}
+</style>
+	
+
 <div id="sit_ov_wrap">
     <?php
     // 이미지(중) 썸네일
