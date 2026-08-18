@@ -22,27 +22,6 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="swiper banner_swiper">
 				<div class="swiper-wrapper">
-					<!-- <div class="swiper-slide item item7">
-						<div class="bgbox">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg.jpg" alt="" class="bg pc">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg_mob.jpg" alt="" class="bg tablet">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_img.png" alt="" class="img">
-						</div>
-						<div class="txtbox">
-							<div class="topbox">
-								<span class="badge">서울 강남</span>
-							</div>
-							<div class="bottombox">
-								<p class="sub">8월7일(금) 10:00~17:00</p>
-								<p class="tit">
-									<span class="color">싱가포르 국립대</span>
-									<br>
-									진로 컨설팅 체험하기(1회)
-								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=41" class="btn typeE">세션 예약하기</a>
-							</div>
-						</div>
-					</div> -->
 					<div class="swiper-slide item item9">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner9_bg.jpg" alt="" class="bg pc">
@@ -60,33 +39,72 @@ if (!defined('_EYOOM_')) exit;
 									말레이시아  <br>
 									국제학교 대면설명회
 								</p>
-								<p class="desc">EATON 초청, 입학시험 모의테스트</p>
+								<p class="desc ver2">EATON 초청, 입학시험 모의테스트</p>
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=42" class="btn typeH">설명회 바로가기</a>
 							</div>
 						</div>
 					</div>
-					<!-- <div class="swiper-slide item item8">
+					<div class="swiper-slide item item5">
 						<div class="bgbox">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg.jpg" alt="" class="bg pc">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg_mob.jpg" alt="" class="bg tablet">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_img.png" alt="" class="img pc">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_img_m.png" alt="" class="img tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg_mob.jpg" alt="" class="bg tablet">
 						</div>
 						<div class="txtbox">
 							<div class="topbox">
-								<span class="badge">쿠알라룸프</span>
+								<span class="badge">온라인</span>
 							</div>
 							<div class="bottombox">
-								<p class="sub">8월10일(월) 10:00 | 선착순 20명</p>
+								<p class="sub">9월12일(토) 11:00</p>
 								<p class="tit">
-									말레이시아 국제학교 <br>
-									쿠알라룸프 현지 설명회
+									싱가포르 TOP4 <br>
+									사립대 입학설명회
 								</p>
-								<p class="desc">17년 경력자 직접설명</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=40" class="btn typeB">세션 예약하기</a>
+								<p class="desc ver2">교직원 출신 직접 설명</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=45" class="btn typeI">설명회 바로가기</a>
 							</div>
 						</div>
-					</div> -->
+					</div>
+					<div class="swiper-slide item item2">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg_mob.jpg" alt="" class="bg tablet">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">온라인</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">9월12일(토) 12:00</p>
+								<p class="tit">
+									싱가포르 LASALLE <br>
+									예술대 입학설명회
+								</p>
+								<p class="desc ver2">포트폴리오 샘플 공개</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=44" class="btn typeB">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide item item7">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner7_img.png" alt="" class="img">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">온라인</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">9월12일(토) 17:30</p>
+								<p class="tit">
+									<span class="color">NUS 출신 성준쌤의</span>
+									<br>
+									싱가포르‧홍콩 입학설명회
+								</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=43" class="btn typeE">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
 					<!-- <div class="swiper-slide item item1">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg.jpg" alt="" class="bg pc">
@@ -110,42 +128,22 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div> -->
-					<!-- <div class="swiper-slide item item5">
+					<!-- <div class="swiper-slide item item3">
 						<div class="bgbox">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg.jpg" alt="" class="bg pc">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg_mob.jpg" alt="" class="bg tablet">
 						</div>
 						<div class="txtbox">
-							<div class="topbox">
-								<span class="badge">온라인 설명회</span>
-							</div>
+							<div class="topbox"></div>
 							<div class="bottombox">
-								<p class="sub">6월27일(토) 11:00</p>
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_talk.png" alt="" class="talk_img">
 								<p class="tit">
-									<span class="color">싱가포르 | 말레이시아</span>
-									<br>
-									명문 사립대 입학설명회
+									몽선생의 클래스 매칭
 								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=36" class="btn typeF">설명회 바로가기</a>
-							</div>
-						</div>
-					</div> -->
-					<!-- <div class="swiper-slide item item2">
-						<div class="bgbox">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg.jpg" alt="" class="bg pc">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner2_bg_mob.jpg" alt="" class="bg tablet">
-						</div>
-						<div class="txtbox">
-							<div class="topbox">
-								<span class="badge">온라인 설명회</span>
-							</div>
-							<div class="bottombox">
-								<p class="sub">7월25일(토) 11:00</p>
-								<p class="tit">
-									아시아 TOP 예술대 <br>
-									LASALLE 입학설명회
+								<p class="desc">
+									검증된 선생님과 <span class="color">완벽한 유학</span>을 준비하고 싶다면?
 								</p>
-								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=35" class="btn typeB">설명회 바로가기</a>
+								<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="btn typeC">클래스 바로가기</a>
 							</div>
 						</div>
 					</div> -->
@@ -194,25 +192,28 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div> -->
-					<div class="swiper-slide item item3">
+					<!-- <div class="swiper-slide item item8">
 						<div class="bgbox">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg.jpg" alt="" class="bg pc">
-							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_img.png" alt="" class="img pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner8_img_m.png" alt="" class="img tablet">
 						</div>
 						<div class="txtbox">
-							<div class="topbox"></div>
+							<div class="topbox">
+								<span class="badge">쿠알라룸프</span>
+							</div>
 							<div class="bottombox">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner3_talk.png" alt="" class="talk_img">
+								<p class="sub">8월10일(월) 10:00 | 선착순 20명</p>
 								<p class="tit">
-									몽선생의 클래스 매칭
+									말레이시아 국제학교 <br>
+									쿠알라룸프 현지 설명회
 								</p>
-								<p class="desc">
-									검증된 선생님과 <span class="color">완벽한 유학</span>을 준비하고 싶다면?
-								</p>
-								<a href="<?php echo G5_URL ?>/page/?pid=class_intro" class="btn typeC">클래스 바로가기</a>
+								<p class="desc ver2">17년 경력자 직접설명</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=40" class="btn typeB">세션 예약하기</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="banner_controls">
 					<div class="swiper-button-prev prev_btn"></div>
