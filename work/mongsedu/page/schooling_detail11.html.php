@@ -587,16 +587,16 @@ if (!defined('_EYOOM_')) exit;
         <div class="container" data-aos="fade-up">
             <div class="sub_titbox">
 				<p class="sub_txt1 pc">
-					한눈에 보는 캘리포니아 사립학교 겨울 스쿨링 특징
+					한눈에 보는 <span class="color">캘리포니아 사립학교</span> 겨울 스쿨링 특징
 				</p>
 				<p class="sub_txt1 tablet">
-					<span class="color">GLC 어학원 </span> 캠프 프로그램 특징
+					<span class="color">캘리포니아 사립학교 </span> 겨울 스쿨링 특징
 				</p>
 			</div>
 			<div class="contbox">
 				<div class="item">
 					<div class="img">
-						<i data-lucide="message-circle" class="icon"></i>
+						<i data-lucide="school" class="icon"></i>
 					</div>
 					<p class="tit">
 						캘리포니아 코비나 지역, 50년 전통의 명문 사립학교에서 학생들이 안전하고 쾌적하게 미국 교육을 경험해요.
@@ -604,7 +604,7 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="item">
 					<div class="img">
-						<i data-lucide="megaphone" class="icon"></i>
+						<i data-lucide="blend" class="icon"></i>
 					</div>
 					<p class="tit">
 						현지 학교 정규수업에 학년 배정으로 참여해 현지 교사진의 살아있는 수업과 미국 친구들과의 진짜 교류를 경험해요.
@@ -612,7 +612,7 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="item">
 					<div class="img">
-						<i data-lucide="brain" class="icon"></i>
+						<i data-lucide="house-plus" class="icon"></i>
 					</div>
 					<p class="tit">
 						경험 많은 현지인 홈스테이 가정(1~2인 1가정 배정)에서 생활하며 미국 문화와 생활영어를 자연스럽게 체험하고 자신감을 키워요.
@@ -620,7 +620,7 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="item">
 					<div class="img">
-						<i data-lucide="trees" class="icon"></i>
+						<i data-lucide="drum" class="icon"></i>
 					</div>
 					<p class="tit">
 						디즈니랜드 필드트립과 다양한 방과후 액티비티로 즐겁게 참여하며 자연스럽게 영어를 사용하는 환경을 제공해요.
@@ -628,7 +628,7 @@ if (!defined('_EYOOM_')) exit;
 				</div>
 				<div class="item">
 					<div class="img">
-						<i data-lucide="broccoli" class="icon"></i>
+						<i data-lucide="file-up" class="icon"></i>
 					</div>
 					<p class="tit">
 						한국에서 인솔선생님이 전 여정을 동행하고 학부모 밴드로 생활 소식을 공유해,  안심하고 참여할 수 있는 스쿨링을 경험할 수 있어요.
