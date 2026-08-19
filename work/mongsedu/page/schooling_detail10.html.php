@@ -6,7 +6,7 @@ if (!defined('_EYOOM_')) exit;
 ?>
 
 
-<div class="sub-page page-schdetail color2 page-schdetail3">
+<div class="sub-page page-schdetail color2 page-schdetail10">
 
 	<div class="msection sch_sec1 slide_ver">
         <div class="container contbox" data-aos="fade">

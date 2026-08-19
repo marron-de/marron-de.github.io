@@ -113,6 +113,17 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</a>
 					</div>
+					<div class="swiper-slide item">
+						<a href="#none" class="link" data-cate="usa1">
+							<div class="imgbox">
+								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/campflag_usa.png" alt="" class="img">
+							</div>
+							<div class="txtbox">
+								<p class="tit">스쿨링</p>
+								<p class="desc">미국</p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -328,6 +339,70 @@ if (!defined('_EYOOM_')) exit;
 														<span class="tit">할인가</span>
 														<span class="desc">
 															<span class="number">6,600,000원</span>
+															<!-- <span class="sale">
+																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+																<span class="percent">6%</span>
+															</span> -->
+														</span>
+													</p>
+												</div>
+												<a href="#none" class="more">
+													<span class="txt">상세보기</span>
+													<span class="icon"></span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item ALL2 SCH usa1" data-end="2027-02-29" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail11'">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum11.jpg" alt="" class="img">
+											<div class="flagbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_usa.svg" alt="" class="flag">
+											</div>
+											<div class="bottom"></div>
+										</div>
+										<div class="txtbox">
+											<div class="hashtag">
+												<p class="tag">미국</p>
+												<p class="tag state">모집중</p>
+											</div>
+											<div class="titbox">
+												<p class="tit">캘리포니아 사립학교 겨울 스쿨링</p>
+												<p class="desc">2027년 1월 겨울방학 스쿨링</p>
+											</div>
+											<div class="infobox">
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
+														<span class="txt">기간</span>
+													</div>
+													<p class="desc">2027/1/11 ~ 2/05</p>
+												</div>
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
+														<span class="txt">대상</span>
+													</div>
+													<p class="desc">초등 4학년~고등 1학년</p>
+												</div>
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
+														<span class="txt">숙소</span>
+													</div>
+													<p class="desc">미국 현지 홈스테이 가정</p>
+												</div>
+											</div>
+											<div class="bottom">
+												<div class="pricebox">
+													<p class="price ori">
+														<span class="tit">정상가</span>
+														<span class="desc">5,700~5,700$ </span>
+													</p>
+													<p class="price total">
+														<span class="tit">할인가</span>
+														<span class="desc">
+															<span class="number">5,700~6,600$ </span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">6%</span>
