@@ -352,7 +352,7 @@ if (!$_COOKIE['ck_top_banner_close']){
 		<div class="search_keyword">
 			<span class="kw_title">인기검색어</span>
 			<a href="#" data-kw="전동침대">#전동침대</a>
-			<a href="#" data-kw="욕창">#욕창</a>
+			<a href="#" data-kw="욕창">#욕창매트</a>
 			<a href="#" data-kw="안전손잡이">#안전손잡이</a>
 			<span class="pc">
 			<a href="#" data-kw="이동변기">#이동변기</a>

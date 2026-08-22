@@ -825,7 +825,7 @@ $( document ).ready( function() {
 			</h3>
 			<div class="keyword_list" id="popularKeywords">
 				<button type="button">전동침대</button>
-				<button type="button">욕창</button>
+				<button type="button">욕창매트</button>
 				<button type="button">안전손잡이</button>
 			</div>
 		</div>

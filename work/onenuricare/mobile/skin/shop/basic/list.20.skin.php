@@ -86,8 +86,9 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
     echo "</div>";
 
         echo "<div class=\"sct_cartop\"></div>\n";
+		echo "<div class=\"sct_txt\"><div class=\"sct_icon_wr\">".item_icon2($row)."</div>\n";
     if ($this->href) {
-        echo "<div class=\"sct_txt\"><a href=\"{$this->href}{$row['it_id']}\" class=\"sct_a\">\n";
+        echo "<a href=\"{$this->href}{$row['it_id']}\" class=\"sct_a\">\n";
     }
 
     if ($this->view_it_name) {
@@ -98,15 +99,16 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 	}
 
     if ($this->href) {
-        echo "</a></div>\n";
+        echo "</a>\n";
     }
+        echo "</div>\n";
     if ($this->view_it_price) {
         echo "<div class=\"sct_cost\">\n";
         echo display_price(get_price($row), $row['it_tel_inq'])."\n";
         echo "</div>\n";
     }
 
-    echo "<div class=\"sct_icon_wr\">".item_icon2($row)."</div>\n";
+    // echo "<div class=\"sct_icon_wr\">".item_icon2($row)."</div>\n";
 
 	if((substr($row['ca_id'],0,2)=="10" || substr($row['ca_id'],0,2)=="20")){
 		$it_price=get_price($row);
@@ -117,7 +119,7 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 		echo '<div class="assist_wrap">';
 		echo '<p>본인부담금</p>';
 		echo '<table>';
-		echo '<tr><th>공단고시가</th><td class="price1">'.display_price($it_price).'</td></tr>';
+		echo '<tr><!--<th>공단고시가</th>--><td class="price1">'.display_price($it_price).'</td></tr>';
 		echo '<tr><th>본인부담금(15% 기준)</th><td class="price2">'.display_price($it_price2).'</td></tr>';
 		echo '<tr><th>본인부담금(9%)</th><td>'.display_price($it_price3).'</td></tr>';
 		echo '<tr><th>본인부담금(6%)</th><td>'.display_price($it_price4).'</td></tr>';

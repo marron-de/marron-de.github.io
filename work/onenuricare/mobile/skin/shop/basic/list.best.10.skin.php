@@ -65,7 +65,7 @@ if($this->total_count > 0) {
             //echo '<div class="sct_cost">'.display_price(get_price($row), $row['it_tel_inq']).'</div>'.PHP_EOL;
 			echo '<div class="assist_wrap">'.PHP_EOL;
 			echo '<table>';
-			echo '<tr><th>공단고시가</th><td class="price1">'.display_price($it_price).'</td></tr>';
+			echo '<tr><!--<th>공단고시가</th>--><td class="price1">'.display_price($it_price).'</td></tr>';
 			echo '<tr><th>본인부담금(15% 기준)</th><td class="price2">'.display_price($it_price2).'</td></tr>';
 			echo '</table>';
 			echo '</div>'.PHP_EOL;
