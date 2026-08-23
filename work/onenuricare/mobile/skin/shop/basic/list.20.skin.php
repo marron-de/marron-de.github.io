@@ -120,9 +120,9 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 		echo '<p>본인부담금</p>';
 		echo '<table>';
 		echo '<tr><!--<th>공단고시가</th>--><td class="price1">'.display_price($it_price).'</td></tr>';
-		echo '<tr><th>본인부담금(15% 기준)</th><td class="price2">'.display_price($it_price2).'</td></tr>';
-		echo '<tr><th>본인부담금(9%)</th><td>'.display_price($it_price3).'</td></tr>';
-		echo '<tr><th>본인부담금(6%)</th><td>'.display_price($it_price4).'</td></tr>';
+		echo '<tr><th>본인부담금 (15% 기준)</th><td class="price2">'.display_price($it_price2).'</td></tr>';
+		echo '<tr><th>본인부담금 (9%)</th><td>'.display_price($it_price3).'</td></tr>';
+		echo '<tr><th>본인부담금 (6%)</th><td>'.display_price($it_price4).'</td></tr>';
         // if($row['it_1']){
         //     echo '<tr><td class="it_1" colspan=2><img src="'.G5_THEME_IMG_URL.'/new_260225.png" alt="">'.$row['it_1'].'</td></tr>';
         // }
