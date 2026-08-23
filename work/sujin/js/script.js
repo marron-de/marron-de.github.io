@@ -52,47 +52,47 @@ $(document).ready(function () {
 
 // countdown
 function updateCountdown() {
-	let targetDate = new Date("2026-04-25T12:00:00");
+	let targetDate = new Date("2026-12-19T11:30:00");
 	let now = new Date();
 	let timeDifference = targetDate - now;
 
 	let days, hours, minutes, seconds;
 
 	if (timeDifference < 0) {
-		$(".ms4 .numberbox #days").text("00");
-		$(".ms4 .numberbox #hours").text("00");
-		$(".ms4 .numberbox #minutes").text("00");
-		$(".ms4 .numberbox #seconds").text("00");
+		$(".ms3 .numberbox #days").text("00");
+		$(".ms3 .numberbox #hours").text("00");
+		$(".ms3 .numberbox #minutes").text("00");
+		$(".ms3 .numberbox #seconds").text("00");
 
-		$(".ms4 .msgbox .msg.before").removeClass("on");
-		$(".ms4 .msgbox .msg.after").addClass("on");
+		$(".ms3 .msgbox .msg.before").removeClass("on");
+		$(".ms3 .msgbox .msg.after").addClass("on");
 
 		let daysPassed = Math.floor(Math.abs(timeDifference) / (1000 * 60 * 60 * 24));
-		$(".ms4 .msgbox .msg.after .day").text(daysPassed + "일");
+		$(".ms3 .msgbox .msg.after .day").text(daysPassed + "일");
 
 	} else {
 
-		$(".ms4 .msgbox .msg.before").addClass("on");
-		$(".ms4 .msgbox .msg.after").removeClass("on");
+		$(".ms3 .msgbox .msg.before").addClass("on");
+		$(".ms3 .msgbox .msg.after").removeClass("on");
 
 		days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 		hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 		minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 		seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-		$(".ms4 .numberbox #days").text(String(days).padStart(2, "0"));
-		$(".ms4 .numberbox #hours").text(String(hours).padStart(2, "0"));
-		$(".ms4 .numberbox #minutes").text(String(minutes).padStart(2, "0"));
-		$(".ms4 .numberbox #seconds").text(String(seconds).padStart(2, "0"));
+		$(".ms3 .numberbox #days").text(String(days).padStart(2, "0"));
+		$(".ms3 .numberbox #hours").text(String(hours).padStart(2, "0"));
+		$(".ms3 .numberbox #minutes").text(String(minutes).padStart(2, "0"));
+		$(".ms3 .numberbox #seconds").text(String(seconds).padStart(2, "0"));
 
-		$(".ms4 .msgbox .msg.before .day").text(days + "일");
+		$(".ms3 .msgbox .msg.before .day").text(days + "일");
 	}
 }
 setInterval(updateCountdown, 1000);
 
 
 // main section3
-const ms3_thum = new Swiper(".ms3_thum", {
+const ms5_thum = new Swiper(".ms5_thum", {
 	spaceBetween: 8,
 	slidesPerView: 5,
 	slidesPerGroup: 5,
@@ -100,28 +100,28 @@ const ms3_thum = new Swiper(".ms3_thum", {
 	loop: true,
 
 	pagination: {
-		el: '.ms3_thum .pagination',
+		el: '.ms5_thum .pagination',
 		clickable: true,
 	},
 });
 
-const ms3_swiper = new Swiper(".ms3_swiper", {
+const ms5_swiper = new Swiper(".ms5_swiper", {
 	spaceBetween: 10,
 	speed: 500,
 	loop: true,
 
 	pagination: {
-		el: '.ms3_swiper .pagination',
+		el: '.ms5_swiper .pagination',
 		type: "fraction",
 	},
 
 	navigation: {
-		nextEl: ".ms3_swiper .next_btn",
-		prevEl: ".ms3_swiper .prev_btn",
+		nextEl: ".ms5_swiper .next_btn",
+		prevEl: ".ms5_swiper .prev_btn",
 	},
 
 	thumbs: {
-		swiper: ms3_thum
+		swiper: ms5_thum
 	},
 });
 
@@ -141,39 +141,8 @@ const gall_swiper = new Swiper(".gall_swiper", {
 	},
 
 	thumbs: {
-		swiper: ms3_swiper
+		swiper: ms5_swiper
 	},
-});
-
-
-// video banner
-$(document).ready(() => {
-    $('.vidbox').each(function() {
-        const vidBox = $(this);
-        const video = vidBox.find('video').get(0);
-        const playBtn = vidBox.find('.play_btn');
-
-        const togglePlay = () => {
-            if (video.paused) {
-                video.play();
-            } else {
-                video.pause();
-            }
-        };
-
-        playBtn.on('click', togglePlay);
-        $(video).on('click', togglePlay);
-
-        $(video).on('play', () => {
-            vidBox.addClass('play');
-        }).on('pause ended', () => {
-            vidBox.removeClass('play');
-        });
-
-        video.pause();
-        video.currentTime = 0;
-        vidBox.removeClass('play');
-    });
 });
 
 
@@ -258,20 +227,20 @@ document.getElementById("kakao_share").addEventListener("click", function () {
 	Kakao.Share.sendDefault({
 		objectType: "feed",
 		content: {
-			title: "❤️서율의 생일파티에 초대합니다❤️",
-			description: "작은 기적이 큰 사랑이 된 날, \n함께해 주시길 바랍니다.",
-			imageUrl: "http://marronde.com/seoyul/img/kakao_share_img.jpg", 
+			title: "명학❤️수진의 모바일청첩장",
+			description: "두 사람의 특별한 날, \n함께해 주시길 바랍니다.",
+			imageUrl: "http://marronde.com/sujin/img/kakao_share_img.jpg", 
 			link: {
-				mobileWebUrl: "http://marronde.com/seoyul/",
-				webUrl: "http://marronde.com/seoyul/"
+				mobileWebUrl: "http://marronde.com/sujin/",
+				webUrl: "http://marronde.com/sujin/"
 			}
 		},
 		buttons: [
 			{
-				title: "서율이 축하하기",
+				title: "결혼 축하하기",
 				link: {
-					mobileWebUrl: "http://marronde.com/seoyul/",
-					webUrl: "http://marronde.com/seoyul/"
+					mobileWebUrl: "http://marronde.com/sujin/",
+					webUrl: "http://marronde.com/sujin/"
 				}
 			}
 		],
@@ -282,7 +251,7 @@ document.getElementById("kakao_share").addEventListener("click", function () {
 // modal
 $(document).ready(function () {
 	// gallery modal
-	$(".ms3_swiper .swiper-slide").click(function () {
+	$(".ms5_swiper .swiper-slide").click(function () {
 		$("body").addClass("hidden");
 		$(".gall_modal").addClass("show");
 	});
