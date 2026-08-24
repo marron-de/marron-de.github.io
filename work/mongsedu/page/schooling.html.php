@@ -333,12 +333,12 @@ if (!defined('_EYOOM_')) exit;
 												<div class="pricebox">
 													<p class="price ori">
 														<span class="tit">정상가</span>
-														<span class="desc">6,600,000원</span>
+														<span class="desc">5,900,000원</span>
 													</p>
 													<p class="price total">
 														<span class="tit">할인가</span>
 														<span class="desc">
-															<span class="number">6,600,000원</span>
+															<span class="number">5,900,000원</span>
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">6%</span>

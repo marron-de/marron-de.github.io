@@ -234,8 +234,8 @@ if (!defined('_EYOOM_')) exit;
 						<div class="th">캠프 비용</div>
 						<div class="td">
 							<span class="bold">
-								1월 최소 등록 4주 : 
-								<span class="gray">590만원대 (2월 최소 등록 2주)</span>
+								1월 최소 등록 4주 : 590만원대
+								<span class="gray">(2월 최소 등록 2주)</span>
 							</span>
 						</div>
 					</div>
