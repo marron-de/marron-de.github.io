@@ -550,10 +550,10 @@ include_once('../project/lib/latest.lib.php');
                                 </li>
                                 <li>
                                     <div class="info">
-                                        <p class="account">농협은행 924-02-057513</p>
+                                        <p class="account">국민은행 112-21-0278-390 </p>
                                         <p class="name">조만제</p>
                                     </div>
-                                    <div class="copy_btn" data-copy="농협은행 924-02-057513">
+                                    <div class="copy_btn" data-copy="국민은행 112-21-0278-390 ">
                                         <span class="icon"></span>
                                         <span class="txt">복사</span>
                                     </div>
