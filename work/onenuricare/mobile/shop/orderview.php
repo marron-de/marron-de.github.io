@@ -480,7 +480,7 @@ table {clear:both;width:100%;border-collapse:collapse;border-spacing:0;}
 				<!--|-->
 				<!--주문일시 <strong>--><?php //echo substr($od['od_time'],0,16); ?><!-- (--><?php //echo get_yoil($od['od_time']); ?><!--)</strong>-->
 				<!--|-->
-				공단고시가 합계 <strong style="font-weight: 600;"><?php echo number_format($total_od_price); ?></strong>원
+				소비자가 합계 <strong style="font-weight: 600;"><?php echo number_format($total_od_price); ?></strong>원
 			</p>
 			<p class="txt">
 				본인부담금 합계 <strong style="font-weight: 600;"><?php echo number_format($nomal_tot_ct_price+$benefit_tot_ct_price); ?></strong>원

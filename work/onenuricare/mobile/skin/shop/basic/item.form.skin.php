@@ -147,8 +147,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
 									$it_price4=round($it_price*0.006)*10;
 
 									if(substr($it['ca_id'],0,2)=="10"){
-										$price_text="월 대여료";
-										$price_text2="월 대여료";
+										$price_text="소비자가 (월 대여료)";
+										$price_text2="소비자가 (월 대여료)";
 									}else{
 										if(substr($it['ca_id'],0,2)=="20"){
 											$price_text="소비자가";

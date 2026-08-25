@@ -270,8 +270,17 @@ where it_id = '{$cart_row['it_id']}'
 					</ul>
 				</div>
 				<div class="dl_wrap">
+					<?php
+						$ca_id = isset($cart_row['ca_id']) ? trim($cart_row['ca_id']) : '';
+						if (substr($ca_id, 0, 2) === "10") {
+							$price_text = "소비자가 (월 대여료)";
+						} else {
+							$price_text = "소비자가";
+						}
+					?>
 					<dl>
-						<dt>공단고시가</dt>
+						<dt><?php echo $price_text; ?></dt>
+						<!-- <dt>공단고시가</dt> -->
 						<dd><?=number_format($cart_row['ct_price'])?>원</dd>
 					</dl>
 					<dl>
@@ -300,7 +309,7 @@ where it_id = '{$cart_row['it_id']}'
 	?>
     <div class="sod_ta_wr" style="margin:20px 0 30px 0;">
         <dl id="m_sod_bsk_tot">
-            <dt>공단고시가 합계</dt>
+            <dt>소비자가 합계</dt>
             <dd><strong><?php echo number_format($benefit_tot_price); ?> 원</strong></dd>
             <dt class="sod_bsk_cnt">본인부담금 합계</dt>
             <dd class="sod_bsk_cnt"><strong><?php echo number_format($benefit_tot_ct_price); ?></strong> 원</dd>
