@@ -112,26 +112,26 @@
                     </li>
                   {% endif %} {% endcomment %}
 				   {% if account_visible -%}
-					<li class="drawer-menu__item drawer-menu__item--account-item" data-list-item>
-						<shopify-store
-						store-domain="https://{{ shop.domain }}"
-						country="{{ localization.country.iso_code }}"
-						language="{{ localization.language.iso_code }}"
-						></shopify-store>
+  <li class="drawer-menu__item drawer-menu__item--account-item" data-list-item>
+    <shopify-store
+      store-domain="https://{{ shop.domain }}"
+      country="{{ localization.country.iso_code }}"
+      language="{{ localization.language.iso_code }}"
+    ></shopify-store>
 
-						<shopify-account menu="customer-account-main-menu">
-						<div slot="signed-out-avatar" class="drawer-menu__link" style="cursor: pointer;">
-							{% render 'icon', icon: 'header-account' %}
-							{{ 'sections.drawer_menu.account.logged_out' | t }}
-						</div>
+    <shopify-account menu="customer-account-main-menu">
+      <div slot="signed-out-avatar" class="drawer-menu__link" style="cursor: pointer;">
+        {% render 'icon', icon: 'header-account' %}
+        {{ 'sections.drawer_menu.account.logged_out' | t }}
+      </div>
 
-						<div slot="signed-in-avatar" class="drawer-menu__link" style="cursor: pointer;">
-							{% render 'icon', icon: 'header-account' %}
-							{{ 'sections.drawer_menu.account.logged_in' | t }}
-						</div>
-						</shopify-account>
-					</li>
-					{% endif %}
+      <div slot="signed-in-avatar" class="drawer-menu__link" style="cursor: pointer;">
+        {% render 'icon', icon: 'header-account' %}
+        {{ 'sections.drawer_menu.account.logged_in' | t }}
+      </div>
+    </shopify-account>
+  </li>
+{% endif %}
                   {% if social_icons_mobile != blank %}
                     <li class="drawer-menu__item drawer-menu__item--social-icons" data-list-item>
                       {{ social_icons_mobile }}

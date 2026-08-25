@@ -63,8 +63,15 @@
           data-showing-vendor="{% if block_settings.show_vendor and product.vendor != blank %}true{% else %}false{% endif %}"
         >
           {%- if block_settings.show_vendor -%}
-            <div class="product__vendor fs-body-100 t-opacity-70">{{ product.vendor | link_to_vendor }}</div>
-          {%- endif -%}
+{% if block_settings.show_vendor %}
+  {% assign display_collection = product.metafields.custom.display_collection.value %}
+
+  {% if display_collection %}
+    <div class="product__vendor fs-body-100 t-opacity-70">
+      <a href="{{ display_collection.url }}">{{ display_collection.title }}</a>
+    </div>
+  {% endif %}
+{% endif %}          {%- endif -%}
           {%- if block_settings.show_sku -%}
             <div class="product__sku fs-body-25 t-opacity-60" data-product-sku>
               {%- if current_variant.sku != blank -%}
