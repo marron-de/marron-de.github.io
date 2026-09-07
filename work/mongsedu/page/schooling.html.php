@@ -1038,12 +1038,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="txtbox">
 								<div class="top">
-									<span class="cate">Q&A</span>
+									<span class="cate">비교분석</span>
 								</div>
 								<div class="bottom">
 									<div class="tit">
-										<p class="txt">말레이시아</p>
-										<p class="bg">스쿨링의 장점은?</p>
+										<p class="txt">말레이시아 방학캠프</p>
+										<p class="bg">한달비용 비교하기</p>
 									</div>
 									<div class="more">
 										<span class="txt">자세히보기</span>
@@ -1061,12 +1061,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="txtbox">
 								<div class="top">
-									<span class="cate">Q&A</span>
+									<span class="cate">스쿨링</span>
 								</div>
 								<div class="bottom">
 									<div class="tit">
-										<p class="txt">아시아 전역 캠프/스쿨링</p>
-										<p class="bg">가격 한번에 비교</p>
+										<p class="txt">소수정예 15명</p>
+										<p class="bg">ETAON 스쿨링 모집</p>
 									</div>
 									<div class="more">
 										<span class="txt">자세히보기</span>
@@ -1084,13 +1084,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="txtbox">
 								<div class="top">
-									<span class="cate">태국 캠프</span>
+									<span class="cate">비교분석</span>
 								</div>
 								<div class="bottom">
 									<div class="tit">
-										<p class="txt">태국은 어떨까?</p>
-										<p class="bg">3주 방학캠프 이런점이</p>
-										<p class="bg">좋아요</p>
+										<p class="bg">방학캠프 VS 스쿨링</p>
+										<p class="txt">엄청난 차이점 비교</p>
 									</div>
 									<div class="more">
 										<span class="txt">자세히보기</span>
@@ -1101,7 +1100,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="" class="link" target="_blank">
+						<a href="#none" class="link" onclick="showToast('컨텐츠 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/shorts_thum4.jpg" alt="" class="img">
 								<span class="play"></span>
@@ -1124,7 +1123,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="" class="link" target="_blank">
+						<a href="#none" class="link" onclick="showToast('컨텐츠 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/shorts_thum5.jpg" alt="" class="img">
 								<span class="play"></span>
@@ -1146,7 +1145,7 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</a>
 					</div>
-
+					
 					<div class="swiper-slide item">
 						<a href="" class="link" target="_blank">
 							<div class="imgbox">
@@ -1155,12 +1154,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="txtbox">
 								<div class="top">
-									<span class="cate">Q&A</span>
+									<span class="cate">비교분석</span>
 								</div>
 								<div class="bottom">
 									<div class="tit">
-										<p class="txt">말레이시아</p>
-										<p class="bg">스쿨링의 장점은?</p>
+										<p class="txt">말레이시아 방학캠프</p>
+										<p class="bg">한달비용 비교하기</p>
 									</div>
 									<div class="more">
 										<span class="txt">자세히보기</span>
@@ -1178,12 +1177,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="txtbox">
 								<div class="top">
-									<span class="cate">Q&A</span>
+									<span class="cate">스쿨링</span>
 								</div>
 								<div class="bottom">
 									<div class="tit">
-										<p class="txt">아시아 전역 캠프/스쿨링</p>
-										<p class="bg">가격 한번에 비교</p>
+										<p class="txt">소수정예 15명</p>
+										<p class="bg">ETAON 스쿨링 모집</p>
 									</div>
 									<div class="more">
 										<span class="txt">자세히보기</span>
@@ -1201,13 +1200,12 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 							<div class="txtbox">
 								<div class="top">
-									<span class="cate">태국 캠프</span>
+									<span class="cate">비교분석</span>
 								</div>
 								<div class="bottom">
 									<div class="tit">
-										<p class="txt">태국은 어떨까?</p>
-										<p class="bg">3주 방학캠프 이런점이</p>
-										<p class="bg">좋아요</p>
+										<p class="bg">방학캠프 VS 스쿨링</p>
+										<p class="txt">엄청난 차이점 비교</p>
 									</div>
 									<div class="more">
 										<span class="txt">자세히보기</span>
@@ -1218,7 +1216,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="" class="link" target="_blank">
+						<a href="#none" class="link" onclick="showToast('컨텐츠 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/shorts_thum4.jpg" alt="" class="img">
 								<span class="play"></span>
@@ -1241,7 +1239,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="" class="link" target="_blank">
+						<a href="#none" class="link" onclick="showToast('컨텐츠 준비중입니다', 'emoji1')">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/shorts_thum5.jpg" alt="" class="img">
 								<span class="play"></span>

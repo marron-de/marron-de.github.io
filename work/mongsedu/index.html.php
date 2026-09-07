@@ -22,7 +22,7 @@ if (!defined('_EYOOM_')) exit;
 		<div class="cm_modal_box">
 			<div class="swiper banner_swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide item item9">
+					<!-- <div class="swiper-slide item item9">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner9_bg.jpg" alt="" class="bg pc">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner9_bg_mob.jpg" alt="" class="bg tablet">
@@ -43,7 +43,7 @@ if (!defined('_EYOOM_')) exit;
 								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=42" class="btn typeH">설명회 바로가기</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="swiper-slide item item5">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner5_bg.jpg" alt="" class="bg pc">
