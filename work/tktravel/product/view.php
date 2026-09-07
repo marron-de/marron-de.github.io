@@ -27,32 +27,78 @@
 		<div class="container">
 
 			<section class="sub_section pr_sec view">
-				<div class="inner view_gallery">
-					<div class="gallbox box1">
-						<div class="gallitem">
-							<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
-							<button type="button" class="gallview_btn" onclick="gallery_popup()">
-								<img src="<?php echo $path ?>img/ic_pic_w.png" alt="" class="icon">
-								<span class="txt">전체보기</span>
-								<span class="count">1/24</span>
-							</button>
+				<!-- 260907 추가작업 start -->
+				<div class="inner view_gallery swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box2">
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box2">
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box2">
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
+							</div>
 						</div>
 					</div>
-					<div class="gallbox box2">
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
-						</div>
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
-						</div>
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
-						</div>
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
-						</div>
+					<button type="button" class="gallview_btn" onclick="gallery_popup()">
+						<img src="<?php echo $path ?>img/ic_pic_w.png" alt="" class="icon">
+						<span class="txt">전체보기</span>
+						<span class="count">1/24</span>
+					</button>
+					<div class="controls">
+						<div class="swiper-button-prev prev_btn"></div>      
+						<div class="swiper-button-next next_btn"></div>
 					</div>
-				</div>
+				</div>				
+				<!-- 260907 추가작업 end -->
 				<div class="inner layout">
 					<div class="cont_area">
 						<div class="view_top">		
@@ -1887,6 +1933,10 @@
 						</div>			
 					</div>
 				</div>
+				<!-- 260907 추가작업 -->
+				<div class="modal_btnbox tablet">
+					<button type="button" class="modal_close modal_btn typeA full"> 닫기</button>
+				</div>
 			</div>
         </div>
 
@@ -2033,6 +2083,10 @@
 							</div>							
 						</div>			
 					</div>
+				</div>
+				<!-- 260907 추가작업 -->
+				<div class="modal_btnbox tablet">
+					<button type="button" class="modal_close modal_btn typeA full"> 닫기</button>
 				</div>
 			</div>
         </div>

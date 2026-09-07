@@ -1756,3 +1756,24 @@ const main_mobpopup_swiper = new Swiper('.main_mobpopup_swiper', {
 		disableOnInteraction: false,
 	},
 })
+
+
+// 260907 추가작업
+const view_gallery = new Swiper('.view_gallery', {
+	observer: true,
+	observeParents: true,
+	freeMode: true,
+	speed: 500,
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+    navigation: {
+      nextEl: ".view_gallery .next_btn",
+      prevEl: ".view_gallery .prev_btn",
+    },
+	breakpoints: {
+		1080: {
+			freeMode: false,	
+			slidesPerView: 2,
+		},
+	},
+});

@@ -94,20 +94,11 @@
 					</ul>
 				</div>
 				<div class="rightbox">
+					<!-- 260907 추가작업 -->
 					<ul class="snsbox">
 						<li>
 							<a href="" class="link" target="_blank">
-								<img src="<?php echo $path?>img/f_sns_whatsapp.png" alt="">
-							</a>
-						</li>
-						<li>
-							<a href="" class="link" target="_blank">
-								<img src="<?php echo $path?>img/f_sns_line.png" alt="">
-							</a>
-						</li>
-						<li>
-							<a href="" class="link" target="_blank">
-								<img src="<?php echo $path?>img/f_sns_wechat.png" alt="">
+								<img src="<?php echo $path?>img/f_sns_kakao.png" alt="">
 							</a>
 						</li>
 						<li>
@@ -124,77 +115,95 @@
 							<a href="" class="link" target="_blank">
 								<img src="<?php echo $path?>img/f_sns_youtube.png" alt="">
 							</a>
-						</li>				
+						</li>	
+						<li>
+							<a href="" class="link" target="_blank">
+								<img src="<?php echo $path?>img/f_sns_naver.png" alt="">
+							</a>
+						</li>			
 					</ul>
 				</div>
 			</div>
+			<!-- 260907 추가작업 -->
 			<div class="f_box f_bottombox">
-				<ul class="accordion combox">
-					<li>
-						<span class="title acc_tit">
-							<span class="tit">(주)여행대장 사업자정보 및 법적고지</span><span class="icon"></span>
-						</span>
-						<ul class="acc_cont">
-							<li>
-								<div class="cominfo">
-									<div class="items">
-										<span class="item">
-											<span class="tit">상호명</span>
-											<span class="txt">여행대장</span>
-										</span>
-										<span class="bar"></span>
-										<span class="item">
-											<span class="tit">대표이사</span>
-											<span class="txt">강일구</span>
-										</span>
-										<br class="tablet">
-										<span class="bar pc"></span>
-										<span class="item">
-											<span class="tit">전화</span>
-											<span class="txt">070-8276-1919</span>
-										</span>
-										<span class="bar"></span>
-										<span class="item">
-											<span class="tit">팩스</span>
-											<span class="txt">02-6383-8003</span>
-										</span>
-										<br class="tablet">
-										<span class="bar pc"></span>
-										<span class="item">
-											<span class="tit">주소</span>
-											<span class="txt">서울특별시 동대문구 신이문로 39, 명경빌딩 5층 (02409)</span>
-										</span>
+				<div class="leftbox">
+					<ul class="accordion combox">
+						<li>
+							<span class="title acc_tit">
+								<span class="tit">(주)여행대장 사업자정보 및 법적고지</span><span class="icon"></span>
+							</span>
+							<ul class="acc_cont">
+								<li>
+									<div class="cominfo">
+										<div class="items">
+											<span class="item">
+												<span class="tit">상호명</span>
+												<span class="txt">여행대장</span>
+											</span>
+											<span class="bar"></span>
+											<span class="item">
+												<span class="tit">대표이사</span>
+												<span class="txt">강일구</span>
+											</span>
+											<br class="tablet">
+											<span class="bar pc"></span>
+											<span class="item">
+												<span class="tit">전화</span>
+												<span class="txt">070-8276-1919</span>
+											</span>
+											<span class="bar"></span>
+											<span class="item">
+												<span class="tit">팩스</span>
+												<span class="txt">02-6383-8003</span>
+											</span>
+											<br class="tablet">
+											<span class="bar pc"></span>
+											<span class="item">
+												<span class="tit">주소</span>
+												<span class="txt">서울특별시 동대문구 신이문로 39, 명경빌딩 5층 (02409)</span>
+											</span>
+										</div>
+										<div class="items">
+											<span class="item">
+												<span class="tit">사업자등록번호</span>
+												<span class="txt">417-70-01307</span>
+											</span>
+											<br class="tablet">
+											<span class="bar pc"></span>
+											<span class="item">
+												<span class="tit">전자상거래허가</span>
+												<span class="txt">제 2019 - 서울동대문 -1651호</span>
+											</span>
+											<br class="tablet">
+											<span class="bar pc"></span>
+											<span class="item">
+												<span class="tit">개인정보관리책임자</span>
+												<span class="txt">강일구</span>
+											</span>
+											<br class="tablet">
+											<span class="bar pc"></span>
+											<span class="item">
+												<span class="tit">이메일</span>
+												<span class="txt">cs@tktravelkorea.com</span>
+											</span>
+										</div>
 									</div>
-									<div class="items">
-										<span class="item">
-											<span class="tit">사업자등록번호</span>
-											<span class="txt">417-70-01307</span>
-										</span>
-										<br class="tablet">
-										<span class="bar pc"></span>
-										<span class="item">
-											<span class="tit">전자상거래허가</span>
-											<span class="txt">제 2019 - 서울동대문 -1651호</span>
-										</span>
-										<br class="tablet">
-										<span class="bar pc"></span>
-										<span class="item">
-											<span class="tit">개인정보관리책임자</span>
-											<span class="txt">강일구</span>
-										</span>
-										<br class="tablet">
-										<span class="bar pc"></span>
-										<span class="item">
-											<span class="tit">이메일</span>
-											<span class="txt">cs@tktravelkorea.com</span>
-										</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<p class="copyright">© 2025 여행대장 KOREA. ALL RIGHT RESERVED.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<p class="copyright">© 2025 여행대장 KOREA. ALL RIGHT RESERVED.</p>
+				</div>
+				<div class="rightbox">
+					<a href="" class="button typeD" target="_blank">
+						<img src="<?php echo $path?>img/f_google.png" alt="" class="icon">
+						<span class="txt">Google Play</span>
+					</a>
+					<a href="" class="button typeD" target="_blank">
+						<img src="<?php echo $path?>img/f_apple.png" alt="" class="icon">
+						<span class="txt">App Store</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
