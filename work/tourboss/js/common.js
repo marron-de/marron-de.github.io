@@ -1758,14 +1758,14 @@ const main_mobpopup_swiper = new Swiper('.main_mobpopup_swiper', {
 })
 
 
-// 260907 추가작업
+// 260908 추가작업3
 const view_gallery = new Swiper('.view_gallery', {
 	observer: true,
 	observeParents: true,
-	freeMode: true,
+	// freeMode: true, 
 	speed: 500,
 	slidesPerView: 'auto',
-	spaceBetween: 10,
+	spaceBetween: 0,
     navigation: {
       nextEl: ".view_gallery .next_btn",
       prevEl: ".view_gallery .prev_btn",
@@ -1773,6 +1773,7 @@ const view_gallery = new Swiper('.view_gallery', {
 	breakpoints: {
 		1080: {
 			freeMode: false,	
+			spaceBetween: 10,
 			slidesPerView: 2,
 		},
 	},
