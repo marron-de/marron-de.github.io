@@ -105,6 +105,27 @@ if (!defined('_EYOOM_')) exit;
 							</div>
 						</div>
 					</div>
+					<div class="swiper-slide item item10">
+						<div class="bgbox">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg.jpg" alt="" class="bg pc">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg_mob.jpg" alt="" class="bg tablet">
+							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_img.png" alt="" class="img">
+						</div>
+						<div class="txtbox">
+							<div class="topbox">
+								<span class="badge">온라인</span>
+							</div>
+							<div class="bottombox">
+								<p class="sub">09월 30일 | 20:00</p>
+								<p class="tit">
+									쿠알라룸프·조호바루 <br>
+									말레이시아 국제학교 설명회
+								</p>
+								<p class="desc ver2">2027년 입학, 프로모션제공</p>
+								<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=admission&wr_id=46" class="btn typeB">설명회 바로가기</a>
+							</div>
+						</div>
+					</div>
 					<!-- <div class="swiper-slide item item1">
 						<div class="bgbox">
 							<img src="<?php echo EYOOM_THEME_URL; ?>/img/main/main_banner1_bg.jpg" alt="" class="bg pc">
