@@ -170,18 +170,27 @@
 							</div>
 						</div>
 						<div class="view_content">
-							<div class="tab_navbox">
-								<div class="tab_nav">
-									<a href="#Options" class="link">예약</a>
-								</div>
-								<div class="tab_nav">
-									<a href="#Detail" class="link">소개</a>
-								</div>
-								<div class="tab_nav">
-									<a href="#Policy" class="link">취소/환불</a>
-								</div>
-								<div class="tab_nav">
-									<a href="#Review" class="link">리뷰</a>
+							<!-- 260908 추가작업2  -->
+							<div class="swiper tab_swiper tab_navbox">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide tab_nav">
+										<a href="#Options" class="link">예약</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Detail" class="link">소개</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#schedule" class="link">일정안내</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Policy" class="link">취소규정</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Map" class="link">지도보기</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Review" class="link">리뷰</a>
+									</div>
 								</div>
 							</div>
 							<div class="view_contbox">								
@@ -922,7 +931,9 @@
 											</div>	
 										</div>	
 									</div>
-
+								</section>
+																
+								<section id="schedule" class="vc_sec vc_sec_detail">
 									<div class="vc_box vc_box2">
 										<div class="vc_titbox">
 											<p class="vc_title">일정안내</p>
