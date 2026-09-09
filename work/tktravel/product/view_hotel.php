@@ -27,32 +27,116 @@
 		<div class="container">
 
 			<section class="sub_section pr_sec view">
-				<div class="inner view_gallery">
-					<div class="gallbox box1">
-						<div class="gallitem">
-							<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
-							<button type="button" class="gallview_btn" onclick="gallery_popup()">
-								<img src="<?php echo $path ?>img/ic_pic_w.png" alt="" class="icon">
-								<span class="txt">전체보기</span>
-								<span class="count">1/24</span>
-							</button>
+				<!-- 260908 추가작업3 start -->
+				<div class="inner view_gallery swiper pc">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box2">
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box2">
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box2">
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
+							</div>
+							<div class="gallitem">
+								<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
+							</div>
 						</div>
 					</div>
-					<div class="gallbox box2">
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic2.jpg" alt="" class="img">
+					<button type="button" class="gallview_btn" onclick="gallery_popup()">
+						<img src="<?php echo $path ?>img/ic_pic_w.png" alt="" class="icon">
+						<span class="txt">전체보기</span>
+						<span class="count">1/24</span>
+					</button>
+					<div class="controls">
+						<div class="swiper-button-prev prev_btn"></div>      
+						<div class="swiper-button-next next_btn"></div>
+					</div>
+				</div>				
+				<div class="inner view_gallery swiper tablet">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic1.jpg" alt="" class="img">
+							</div>
 						</div>
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic3.jpg" alt="" class="img">
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic2.jpg" alt="" class="img">
+							</div>
 						</div>
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic4.jpg" alt="" class="img">
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic3.jpg" alt="" class="img">
+							</div>
 						</div>
-						<div class="gallitem">
-							<img src="<?php echo $path ?>img/prd_view_pic5.jpg" alt="" class="img">
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic4.jpg" alt="" class="img">
+							</div>
+						</div>
+						<div class="swiper-slide gallbox box1">
+							<div class="gallitem">
+								<img src="<?php echo $path?>img/prd_view_pic5.jpg" alt="" class="img">
+							</div>
 						</div>
 					</div>
-				</div>
+					<button type="button" class="gallview_btn" onclick="gallery_popup()">
+						<img src="<?php echo $path ?>img/ic_pic_w.png" alt="" class="icon">
+						<span class="txt">전체보기</span>
+						<span class="count">1/24</span>
+					</button>
+					<div class="controls">
+						<div class="swiper-button-prev prev_btn"></div>      
+						<div class="swiper-button-next next_btn"></div>
+					</div>
+				</div>				
+				<!-- 260908 추가작업3 end -->
 				<div class="inner layout">
 					<div class="cont_area">
 						<div class="view_top">		
@@ -107,21 +191,27 @@
 							</div>
 						</div>
 						<div class="view_content">
-							<div class="tab_navbox">
-								<div class="tab_nav">
-									<a href="#Options" class="link">예약</a>
-								</div>
-								<div class="tab_nav">
-									<a href="#Detail" class="link">소개</a>
-								</div>
-								<div class="tab_nav">
-									<a href="#Policy" class="link">취소/환불</a>
-								</div>
-								<div class="tab_nav">
-									<a href="#Map" class="link">위치</a>
-								</div>
-								<div class="tab_nav">
-									<a href="#Review" class="link">리뷰</a>
+							<!-- 260908 추가작업2  -->
+							<div class="swiper tab_swiper tab_navbox">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide tab_nav">
+										<a href="#Options" class="link">예약</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Detail" class="link">소개</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#schedule" class="link">일정안내</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Policy" class="link">취소규정</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Map" class="link">지도보기</a>
+									</div>
+									<div class="swiper-slide tab_nav">
+										<a href="#Review" class="link">리뷰</a>
+									</div>
 								</div>
 							</div>
 							<div class="view_contbox">								
@@ -502,7 +592,7 @@
 										</div>
 										<div class="vc_contbox">
 											<div class="imgbox">
-												<img src="<?php echo $path ?>img/deatil_img2.jpg" alt="">				
+												<img src="<?php echo $path ?>img/deatil_img1.jpg" alt="">				
 											</div>			
 											<div class="view_morebox">
 												<button type="button" class="view_more">
@@ -510,6 +600,192 @@
 													<span class="arrow"></span>
 												</button>
 											</div>	
+										</div>	
+									</div>
+								</section>
+																
+								<section id="schedule" class="vc_sec vc_sec_detail">
+									<div class="vc_box vc_box2">
+										<div class="vc_titbox">
+											<p class="vc_title">일정안내</p>
+										</div>
+										<div class="vc_contbox">
+											<div class="item">
+												<div class="stepbox">
+													<div class="dot"></div>
+													<div class="line"></div>
+												</div>
+												<div class="contbox">
+													<p class="title">현청앞 현민광장</p>
+													<div class="info">
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_map.png" alt="" class="icon">
+															<a href="https://maps.app.goo.gl/JrKq3RDhZPYsPxN99" class="txt" target="_blank">현민광장</a>
+														</p>
+													</div>
+													<div class="descbox">
+														<p class="desc">
+															오키나와 국제거리 입구에 위치한 현청앞 현민광장(県庁前県民広場) <br>
+															&lt;승/하차지1&gt; <br>
+															출발시간 : 09:00 <br>
+															도착시간 : 19:00 <br>
+															* 도착시간은 현지 사정에 따라 변경되는 경우가 있습니다. <br>
+															* 승/하차지는 다르셔도 괜찮습니다. 당일 가이드님에게 전달후 자유롭게 하차를 해주시길 바라겠습니다.
+														</p>
+													</div>
+												</div>
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_view_img1.jpg" alt="" class="img">
+												</div>
+											</div>
+											<div class="item">
+												<div class="stepbox">
+													<div class="dot"></div>
+													<div class="line"></div>
+												</div>
+												<div class="contbox">
+													<p class="title">아메리칸빌리지</p>
+													<div class="info">
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_time.png" alt="" class="icon">
+															<span class="txt">60분 소요</span>
+														</p>
+														<span class="bar"></span>
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_map.png" alt="" class="icon">
+															<a href="https://maps.app.goo.gl/LvGVezEP3jDNTb39A" class="txt" target="_blank">챠탄쵸 관광협회</a>
+														</p>
+													</div>
+													<div class="descbox">
+														<p class="desc">
+															[ 아메리칸빌리지 탑승지]의 경우 중간 경유지의 특성상 당일 교통 상황에 따라서 늦어 지는 경우도 있습니다. ] <br>
+															출발시간 : 약09:30 <br>
+															도착시간 : 약17:30 <br>
+															* 도착시간은 현지 사정에 따라 변경 되는 경우가 있습니다. <br>
+															* 북부 관광후 제일 마지막 방문지이며, 약 1시간 자유시간후 개인적으로 하차(해산) 혹은 해당 투어버스를 이용하여 현청앞으로 이동 <br>
+															[ 아메리칸빌리지 탑승지]의 경우 중간 경유지의 특성상 당일 교통 상황에 따라서 늦어 지는 경우도 있습니다. ] <br>
+															출발시간 : 약09:30 <br>
+															도착시간 : 약17:30 <br>
+															* 도착시간은 현지 사정에 따라 변경 되는 경우가 있습니다. <br>
+															* 북부 관광후 제일 마지막 방문지이며, 약 1시간 자유시간후 개인적으로 하차(해산) 혹은 해당 투어버스를 이용하여 현청앞으로 이동
+														</p>
+														<button type="button" class="descmore">
+															<span class="txt">더보기</span>
+															<span class="icon"></span>
+														</button>
+													</div>
+												</div>
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_view_img2.jpg" alt="" class="img">
+												</div>
+											</div>
+											<div class="item">
+												<div class="stepbox">
+													<div class="dot"></div>
+													<div class="line"></div>
+												</div>
+												<div class="contbox">
+													<p class="title">현청앞 현민광장</p>
+													<div class="info">
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_time.png" alt="" class="icon">
+															<span class="txt">60분 소요</span>
+														</p>
+														<span class="bar"></span>
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_map.png" alt="" class="icon">
+															<a href="https://maps.app.goo.gl/JrKq3RDhZPYsPxN99" class="txt" target="_blank">현민광장</a>
+														</p>
+													</div>
+													<div class="descbox">
+														<p class="desc">
+															오키나와 국제거리 입구에 위치한 현청앞 현민광장(県庁前県民広場) <br>
+															&lt;승/하차지1&gt; <br>
+															출발시간 : 09:00 <br>
+															도착시간 : 19:00 <br>
+															* 도착시간은 현지 사정에 따라 변경되는 경우가 있습니다. <br>
+															* 승/하차지는 다르셔도 괜찮습니다. 당일 가이드님에게 전달후 자유롭게 하차를 해주시길 바라겠습니다.
+														</p>
+													</div>
+												</div>
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_view_img1.jpg" alt="" class="img">
+												</div>
+											</div>
+											<div class="item">
+												<div class="stepbox">
+													<div class="dot"></div>
+													<div class="line"></div>
+												</div>
+												<div class="contbox">
+													<p class="title">아메리칸빌리지</p>
+													<div class="info">
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_time.png" alt="" class="icon">
+															<span class="txt">60분 소요</span>
+														</p>
+														<span class="bar"></span>
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_map.png" alt="" class="icon">
+															<a href="https://maps.app.goo.gl/LvGVezEP3jDNTb39A" class="txt" target="_blank">챠탄쵸 관광협회</a>
+														</p>
+													</div>
+													<div class="descbox">
+														<p class="desc">
+															[ 아메리칸빌리지 탑승지]의 경우 중간 경유지의 특성상 당일 교통 상황에 따라서 늦어 지는 경우도 있습니다. ] <br>
+															출발시간 : 약09:30 <br>
+															도착시간 : 약17:30 <br>
+															* 도착시간은 현지 사정에 따라 변경 되는 경우가 있습니다. <br>
+															* 북부 관광후 제일 마지막 방문지이며, 약 1시간 자유시간후 개인적으로 하차(해산) 혹은 해당 투어버스를 이용하여 현청앞으로 이동 <br>
+															[ 아메리칸빌리지 탑승지]의 경우 중간 경유지의 특성상 당일 교통 상황에 따라서 늦어 지는 경우도 있습니다. ] <br>
+															출발시간 : 약09:30 <br>
+															도착시간 : 약17:30 <br>
+															* 도착시간은 현지 사정에 따라 변경 되는 경우가 있습니다. <br>
+															* 북부 관광후 제일 마지막 방문지이며, 약 1시간 자유시간후 개인적으로 하차(해산) 혹은 해당 투어버스를 이용하여 현청앞으로 이동
+														</p>
+														<button type="button" class="descmore">
+															<span class="txt">더보기</span>
+															<span class="icon"></span>
+														</button>
+													</div>
+												</div>
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_view_img2.jpg" alt="" class="img">
+												</div>
+											</div>
+											<div class="item">
+												<div class="stepbox">
+													<div class="dot"></div>
+													<div class="line"></div>
+												</div>
+												<div class="contbox">
+													<p class="title">현청앞 현민광장</p>
+													<div class="info">
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_time.png" alt="" class="icon">
+															<span class="txt">60분 소요</span>
+														</p>
+														<span class="bar"></span>
+														<p class="infotxt">
+															<img src="<?php echo $path ?>img/ic_min_map.png" alt="" class="icon">
+															<a href="https://maps.app.goo.gl/JrKq3RDhZPYsPxN99" class="txt" target="_blank">현민광장</a>
+														</p>
+													</div>
+													<div class="descbox">
+														<p class="desc">
+															오키나와 국제거리 입구에 위치한 현청앞 현민광장(県庁前県民広場) <br>
+															&lt;승/하차지1&gt; <br>
+															출발시간 : 09:00 <br>
+															도착시간 : 19:00 <br>
+															* 도착시간은 현지 사정에 따라 변경되는 경우가 있습니다. <br>
+															* 승/하차지는 다르셔도 괜찮습니다. 당일 가이드님에게 전달후 자유롭게 하차를 해주시길 바라겠습니다.
+														</p>
+													</div>
+												</div>
+												<div class="imgbox">
+													<img src="<?php echo $path ?>img/prd_view_img1.jpg" alt="" class="img">
+												</div>
+											</div>
 										</div>	
 									</div>
 								
@@ -523,27 +799,13 @@
 													<img src="<?php echo $path ?>img/ic_circle_icon1.png" alt="" class="icon">
 													<p class="tit">서비스 포함</p>
 												</div>
-												<div class="descbox ver2">
-													<p class="dot_txt">TV</p>
-													<p class="dot_txt">드라이기</p>
-													<p class="dot_txt">FREE WIFI</p>
-													<p class="dot_txt">헤어브러쉬</p>
-													<p class="dot_txt">린스</p>
-													<p class="dot_txt">미니바</p>
-													<p class="dot_txt">안전금고</p>
-													<p class="dot_txt">샴푸</p>
-													<p class="dot_txt">비누</p>
-													<p class="dot_txt">슬리퍼</p>
-													<p class="dot_txt">에어컨</p>
-													<p class="dot_txt">커피포트</p>
-													<p class="dot_txt">콘센트</p>
-													<p class="dot_txt">전화기</p>
-													<p class="dot_txt">타올</p>
-													<p class="dot_txt">세탁기</p>
-													<p class="dot_txt">테이블,의자</p>
-													<p class="dot_txt">알람시계</p>
-													<p class="dot_txt">여분베게</p>
-													<p class="dot_txt">온도조절기</p>
+												<div class="descbox">
+													<p class="dot_txt">
+														야간 스키 장비(스키, 폴, 스노슈) / 스키 리프트 허가
+													</p>
+													<p class="dot_txt">
+														개인 레슨
+													</p>
 												</div>
 											</div>
 											<div class="item">
@@ -551,22 +813,25 @@
 													<img src="<?php echo $path ?>img/ic_circle_icon2.png" alt="" class="icon">
 													<p class="tit">서비스 불포함</p>
 												</div>
-												<div class="descbox ver2">
-													<p class="dot_txt">발코니</p>
-													<p class="dot_txt">샤워캡</p>
-													<p class="dot_txt">욕조</p>
-													<p class="dot_txt">체중계</p>
-													<p class="dot_txt">치약&칫솔</p>
-													<p class="dot_txt">소파</p>
-													<p class="dot_txt">책상</p>
-													<p class="dot_txt">식기도구</p>
-													<p class="dot_txt">식기세척기</p>
-													<p class="dot_txt">키꽂이</p>
-													<p class="dot_txt">싱크대</p>
-													<p class="dot_txt">안내책자</p>
-													<p class="dot_txt">여분이불</p>
-													<p class="dot_txt">옷장</p>
-													<p class="dot_txt">욕실전화기</p>
+												<div class="descbox">
+													<p class="dot_txt">
+														개인 비용
+													</p>
+													<p class="dot_txt">
+														개인 보험
+													</p>
+													<p class="dot_txt">
+														<span class="txt">스카프, 장갑, 헬멧</span>
+														<span class="small">
+															(스키어는 헬멧을 착용해야 하며, 직접 가져오거나 현장에서 대여할 수 있습니다.)
+														</span>
+													</p>
+													<p class="dot_txt">
+														<span class="txt">케이블카 티켓</span>
+														<span class="small">
+															(관광을 위한 산 정상까지 왕복) 
+														</span>
+													</p>
 												</div>
 											</div>
 										</div>									
@@ -1365,6 +1630,10 @@
 						</div>			
 					</div>
 				</div>
+				<!-- 260907 추가작업 -->
+				<div class="modal_btnbox tablet">
+					<button type="button" class="modal_close modal_btn typeA full"> 닫기</button>
+				</div>
 			</div>
         </div>
 
@@ -1511,6 +1780,10 @@
 							</div>							
 						</div>			
 					</div>
+				</div>
+				<!-- 260907 추가작업 -->
+				<div class="modal_btnbox tablet">
+					<button type="button" class="modal_close modal_btn typeA full"> 닫기</button>
 				</div>
 			</div>
         </div>
