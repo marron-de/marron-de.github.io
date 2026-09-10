@@ -157,7 +157,7 @@ include_once('../project/lib/latest.lib.php');
                     <div class="ms3_contbox" data-aos="fade-up">
                         <div class="calendarbox">
                             <div class="titbox">
-                                <p class="date">2026.12.29</p>
+                                <p class="date">2026.12.19</p>
                                 <p class="time">토요일 오전 11시 30분</p>
                             </div>
                             <div class="calendar">
@@ -281,7 +281,7 @@ include_once('../project/lib/latest.lib.php');
                                     <img src="img/pic_1.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/pic_2.jpg" alt="">
+                                    <img src="img/pic_5.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="img/pic_3.jpg" alt="">
@@ -290,7 +290,7 @@ include_once('../project/lib/latest.lib.php');
                                     <img src="img/pic_4.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/pic_5.jpg" alt="">
+                                    <img src="img/pic_2.jpg" alt="">
                                 </div>
 
                                 <div class="swiper-slide">
@@ -349,7 +349,7 @@ include_once('../project/lib/latest.lib.php');
                                     <img src="img/pic_1.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/pic_2.jpg" alt="">
+                                    <img src="img/pic_5.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="img/pic_3.jpg" alt="">
@@ -358,7 +358,7 @@ include_once('../project/lib/latest.lib.php');
                                     <img src="img/pic_4.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/pic_5.jpg" alt="">
+                                    <img src="img/pic_2.jpg" alt="">
                                 </div>
 
                                 <div class="swiper-slide">
@@ -609,7 +609,7 @@ include_once('../project/lib/latest.lib.php');
                             <img src="img/pic_1.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/pic_2.jpg" alt="">
+                            <img src="img/pic_5.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
                             <img src="img/pic_3.jpg" alt="">
@@ -618,7 +618,7 @@ include_once('../project/lib/latest.lib.php');
                             <img src="img/pic_4.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/pic_5.jpg" alt="">
+                            <img src="img/pic_2.jpg" alt="">
                         </div>
 
                         <div class="swiper-slide">
