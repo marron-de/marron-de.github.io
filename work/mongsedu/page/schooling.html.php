@@ -1031,7 +1031,7 @@ if (!defined('_EYOOM_')) exit;
 			<div class="swiper shortclip_swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide item">
-						<a href="" class="link" target="_blank">
+						<a href="https://www.youtube.com/shorts/rYvn_BZOljY" class="link" target="_blank">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/shorts_thum1.jpg" alt="" class="img">
 								<span class="play"></span>
@@ -1054,7 +1054,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="" class="link" target="_blank">
+						<a href="https://www.youtube.com/shorts/TzDr-ZYnEJA" class="link" target="_blank">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/shorts_thum2.jpg" alt="" class="img">
 								<span class="play"></span>
@@ -1077,7 +1077,7 @@ if (!defined('_EYOOM_')) exit;
 						</a>
 					</div>
 					<div class="swiper-slide item">
-						<a href="" class="link" target="_blank">
+						<a href="https://www.youtube.com/shorts/PUhCescbdEs" class="link" target="_blank">
 							<div class="imgbox">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/shorts_thum3.jpg" alt="" class="img">
 								<span class="play"></span>
