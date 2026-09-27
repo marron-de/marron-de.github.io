@@ -10,7 +10,7 @@ if (!defined('_EYOOM_')) exit;
         <div class="container">
 			<div class="txtbox" data-aos="fade-up">
 				<p class="tit">
-					2026학년도 <br>
+					2027-2028학년도 <br>
 					<span class="gra">싱가포르 대학 입학생</span> <br>
 					3가지 특별 입학혜택!
 				</p>
@@ -183,8 +183,8 @@ if (!defined('_EYOOM_')) exit;
 						<div class="top">
 							<span class="tag">몽선생 혜택 2</span>
 							<p class="tit">
-								학습 가이드 <br class="pc">
-								<span class="color">무상 제공 1회</span>
+								학습가이드+ <br>
+								<span class="color">듀오링고/대비반 무료 수업 3회권</span>
 							</p>
 							<p class="desc">
 								영어 공인점수 준비와 해외대학 학습법 강의 <br>
@@ -206,38 +206,34 @@ if (!defined('_EYOOM_')) exit;
 							<p class="left">분야</p>
 							<p class="right">제공 내용</p>
 						</div>
-						<ul class="info_list">
+						<ul class="info_list ver2">
 							<li>
-								<p class="tit">영어 공인점수 <br class="tablet"> 준비법</p>
+								<p class="tit">학습가이드 <br class="tablet"> (공인점수 준비법) </p>
 								<p class="desc">듀오링고 ‧ 토플 ‧ 아이엘츠 차이점 및 선택 기준</p>
 							</li>
 							<li>
-								<p class="tit">한국에서 <br class="tablet"> 학습법</p>
+								<p class="tit">학습가이드 <br class="tablet"> (전공 준비법)</p>
 								<p class="desc">영어 준비, 라이팅 향상법, 대학 예습 방법</p>
 							</li>
 							<li>
-								<p class="tit">학점 평가 <br class="tablet"> 방식 이해</p>
+								<p class="tit">학습가이드 <br class="tablet"> (고학점 취득 법)</p>
 								<p class="desc">에세이 ‧ 퀴즈 ‧ 프레젠테이션 ‧ 그룹 프로젝트 구조 및 평가 비중</p>
 							</li>
 							<li>
-								<p class="tit">과제 <br class="tablet"> 작성법</p>
+								<p class="tit">학습가이드 <br class="tablet"> (과제 하는 방법)</p>
 								<p class="desc">논문 구조 / 참고문헌 / 표절 방지 / 자료 조사법 / 제출 기준</p>
 							</li>
-							<li>
-								<p class="tit">
-									<span class="pc">학습</span>
-									<span class="tablet">
-									전공별 <br>학습 팁
-									</span>
-								</p>
-								<p class="desc">경영 ‧ 심리 ‧ 미디어 ‧ 컴퓨터 ‧ 디자인 등 전공별 학습 전략</p>
+							<li class="point">
+								<p class="tit">원어민 듀오링고 <br class="tablet"> 
+								수업 청강(1회)</p>
+								<p class="desc">몽선생 클래스, 듀오링고 수업 1시간 무료 수업</p>
+							</li>
+							<li class="point">
+								<p class="tit">전공 대비반 <br class="tablet"> 수업 청강(1회)</p>
+								<p class="desc">몽선생 클래스, 사립대 이론 및 라이팅 1시간 무료 수업</p>
 							</li>
 							<li>
-								<p class="tit">학점관리 <br class="tablet"> 방법</p>
-								<p class="desc">시간 관리 ‧ 리포트 관리 ‧ 첫 학기 성적 유지 전략</p>
-							</li>
-							<li>
-								<p class="tit">전공별 <br class="tablet"> 취업진로</p>
+								<p class="tit">학습가이드 <br class="tablet"> (졸업 후 진로)</p>
 								<p class="desc">싱가포르에서의 유망 산업 및 전공별 커리어 로드맵</p>
 							</li>
 						</ul>

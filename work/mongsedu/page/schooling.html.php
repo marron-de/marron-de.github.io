@@ -239,8 +239,8 @@ if (!defined('_EYOOM_')) exit;
 												<p class="tag state">모집중</p>
 											</div>
 											<div class="titbox">
-												<p class="tit">말레이시아 EPSOM 국제학교, 쿠알라룸프</p>
-												<p class="desc">2027년 1월,  영국식 보딩 겨울방학캠프</p>
+												<p class="tit">말레이시아 Epsom 국제학교, 쿠알라룸프</p>
+												<p class="desc">2027년 1월 영국식 보딩/통학 겨울방학 캠프</p>
 											</div>
 											<div class="infobox">
 												<div class="infoitem">
@@ -248,28 +248,32 @@ if (!defined('_EYOOM_')) exit;
 														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
 														<span class="txt">기간</span>
 													</div>
-													<p class="desc">2027년 1월예정 (2주~4주)</p>
+													<p class="desc">2027/1/10 ~ 2/3</p>
 												</div>
 												<div class="infoitem">
 													<div class="tit">
 														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
 														<span class="txt">대상</span>
 													</div>
-													<p class="desc">초등고학년~중고등</p>
+													<p class="desc">만9세~14세</p>
 												</div>
 												<div class="infoitem">
 													<div class="tit">
 														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
 														<span class="txt">숙소</span>
 													</div>
-													<p class="desc">기숙사 포함</p>
+													<p class="desc">기숙사 또는 개별 숙소 가능</p>
 												</div>
 											</div>
 											<div class="bottom">
 												<div class="pricebox">
 													<p class="price ori">
 														<span class="tit">정상가</span>
-														<span class="desc">3,350,000원</span>
+														<span class="desc ver2">
+															<span class="desc_word">3,400,000</span>
+															<span class="desc_word">/</span>
+															<span class="desc_word">6,700,000</span>
+														</span>
 													</p>
 													<p class="price total">
 														<span class="tit">할인가</span>
@@ -278,6 +282,70 @@ if (!defined('_EYOOM_')) exit;
 															<!-- <span class="sale">
 																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
 																<span class="percent">20%</span>
+															</span> -->
+														</span>
+													</p>
+												</div>
+												<a href="#none" class="more">
+													<span class="txt">상세보기</span>
+													<span class="icon"></span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide item ALL2 LNG asia1" data-end="2027-02-28" onclick="location.href='<?php echo G5_URL ?>/page/?pid=schooling_detail12'">
+										<div class="imgbox">
+											<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_thum12.jpg" alt="" class="img">
+											<div class="flagbox">
+												<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="flag">
+											</div>
+											<div class="bottom"></div>
+										</div>
+										<div class="txtbox">
+											<div class="hashtag">
+												<p class="tag">말레이시아</p>
+												<p class="tag state">모집중</p>
+											</div>
+											<div class="titbox">
+												<p class="tit">말레이시아 몽키아라 포레스트 163어학원</p>
+												<p class="desc">2027년 1월, 한달살기/영어캠프</p>
+											</div>
+											<div class="infobox">
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon1.png" alt="" class="icon">
+														<span class="txt">기간</span>
+													</div>
+													<p class="desc">2027/1/01 ~ 2/28</p>
+												</div>
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon2.png" alt="" class="icon">
+														<span class="txt">대상</span>
+													</div>
+													<p class="desc">초등~중등 2학년</p>
+												</div>
+												<div class="infoitem">
+													<div class="tit">
+														<img src="<?php echo EYOOM_THEME_URL; ?>/img/sub/sch_info_icon3.png" alt="" class="icon">
+														<span class="txt">숙소</span>
+													</div>
+													<p class="desc">몽키아라 레지던스 또는 호텔 추천 가능</p>
+												</div>
+											</div>
+											<div class="bottom">
+												<div class="pricebox">
+													<p class="price ori">
+														<span class="tit">정상가</span>
+														<span class="desc">6,000,000원</span>
+													</p>
+													<p class="price total">
+														<span class="tit">할인가</span>
+														<span class="desc">
+															<span class="number">6,000,000원</span>
+															<!-- <span class="sale">
+																<img src="<?php echo EYOOM_THEME_URL; ?>/image/sub/ico_sale_c.svg" alt="" class="icon">
+																<span class="percent">6%</span>
 															</span> -->
 														</span>
 													</p>

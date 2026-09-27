@@ -39,7 +39,7 @@ if (!defined('_EYOOM_')) exit;
 					2~4주 보딩 캠프
 				</p>
 				<p class="sub_tit">
-					<span class="txt">영어캠프 2026-2027</span>
+					<span class="txt">영어캠프 2027</span>
 					<img src="<?php echo EYOOM_THEME_URL; ?>/img/common/flag_malay.svg" alt="" class="icon">
 				</p>
 				<div class="swiper-scrollbar scrollbar"></div>
@@ -208,15 +208,15 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="tr">
 						<div class="th">프로그램</div>
-						<div class="td">캠프 (보딩형)</div>
+						<div class="td">캠프(보딩형, 통학형 선택 가능)</div>
 					</div>
 					<div class="tr bg">
 						<div class="th">기간</div>
-						<div class="td">2027년 1월 예정 (2주~4주)</div>
+						<div class="td">2027년 1월~2월 </div>
 					</div>
 					<div class="tr">
 						<div class="th">대상</div>
-						<div class="td">초등 고학년~중‧고등</div>
+						<div class="td">만 9~14세 학생</div>
 					</div>
 					<div class="tr">
 						<div class="th">캠프특징</div>
@@ -226,20 +226,18 @@ if (!defined('_EYOOM_')) exit;
 						<div class="th">캠프 비용</div>
 						<div class="td">
 							<span class="bold">
-								2주 : 335만원~ <span class="gray">(2026년 기준)</span><br>
-								4주: 670만원 <span class="gray">(2026년 기준)</span>
+								1월10일~1월22일 보딩형 340만원~<br>
+								1월10일~2월3일 보딩형 670만원~
 							</span>
 						</div>
 					</div>
 					<div class="tr">
 						<div class="th">포함 내역</div>
-						<div class="td">
-							캠프 프로그램,기숙사, 식사, 왕복 항공권(인솔자동반) 등
-						</div>
+						<div class="td">캠프 프로그램,기숙사, 식사 등</div>
 					</div>
 					<div class="tr">
 						<div class="th">불포함 내역</div>
-						<div class="td">개인용돈, 보험료, 셔틀버스</div>
+						<div class="td">왕복항공권(인솔자동반), 개인용돈, 보험료 등</div>
 					</div>
 					<div class="tr">
 						<div class="th">커리큘럼</div>
@@ -247,7 +245,7 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 					<div class="tr">
 						<div class="th">숙소</div>
-						<div class="td">기숙사 </div>
+						<div class="td">기숙사 또는 개별 숙소 가능</div>
 					</div>
 				</div>
 			</div>
